@@ -34,9 +34,9 @@ struct StartView: View {
             Spacer()
             VStack(spacing: 16) {
                 Text("Phrasify")
-                    .apply(.bold, size: .H2, color: .black)
+                    .apply(.bold, size: .H2, color: .white)
                 Text("Manage and translate easily")
-                    .apply(.medium, size: .L, color: .black)
+                    .apply(.medium, size: .L, color: .white)
             }
             Spacer()
             VStack(spacing: 16) {
@@ -45,5 +45,10 @@ struct StartView: View {
             }
         }
         .padding(.horizontal, 16)
+        .background(appColor(.black))
     }
+}
+
+#Preview {
+    StartView(coordinator: StartCoordinator(parentCoordinator: MockCoordinator()))
 }
