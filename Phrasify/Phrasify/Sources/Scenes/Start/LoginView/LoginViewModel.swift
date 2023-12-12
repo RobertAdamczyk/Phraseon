@@ -9,7 +9,7 @@ import SwiftUI
 
 final class LoginViewModel: ObservableObject {
 
-    typealias LoginCoordinator = Coordinator
+    typealias LoginCoordinator = Coordinator & StartActions
 
     @Published var email: String = ""
     @Published var password: String = ""
@@ -25,7 +25,7 @@ final class LoginViewModel: ObservableObject {
     }
 
     func onForgetPasswordTapped() {
-
+        coordinator.showForgetPassword()
     }
 
     func onLoginWithGoogleTapped() {

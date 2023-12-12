@@ -30,7 +30,7 @@ struct AppTextField: View {
                 .apply(.medium, size: .L, color: .white)
                 .padding(8)
                 .background(makeBackground())
-        case .password:
+        case .password, .confirmPassword:
             HStack(spacing: 4) {
                 ZStack {
                     TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.darkGray)))
@@ -66,18 +66,20 @@ extension AppTextField {
     enum TType {
         case email
         case password
+        case confirmPassword
 
         var title: String {
             return switch self {
             case .email: "Email"
             case .password: "Password"
+            case .confirmPassword: "Confirm Password"
             }
         }
 
         var placeholder: String {
             return switch self {
             case .email: "hallo@phrasify.com"
-            case .password: "Your password"
+            case .password, .confirmPassword: "Your password"
             }
         }
     }

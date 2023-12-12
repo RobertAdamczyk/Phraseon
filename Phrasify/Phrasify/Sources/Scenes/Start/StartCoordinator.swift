@@ -11,6 +11,10 @@ protocol StartActions {
 
     func showLogin()
     func showRegister()
+    func showForgetPassword()
+    func showSetPassword()
+    func closeForgetPassword()
+    func popToRoot()
 }
 
 final class StartCoordinator: Coordinator, ObservableObject {
@@ -47,6 +51,31 @@ extension StartCoordinator: StartActions {
         let view: NavigationView = .register(viewModel: viewModel)
         navigationViews.append(view)
     }
+
+    func showForgetPassword() {
+        let viewModel = ForgetPasswordViewModel(coordinator: self)
+        let view: NavigationView = .forgetPassword(viewModel: viewModel)
+        navigationViews.append(view)
+    }
+
+    func showSetPassword() {
+        let viewModel = SetPasswordViewModel(coordinator: self)
+        let view: NavigationView = .setPassword(viewModel: viewModel)
+        navigationViews.append(view)
+    }
+
+    func closeForgetPassword() {
+        navigationViews.removeAll(where: {
+            if case .forgetPassword = $0 {
+                return true
+            }
+            return false
+        })
+    }
+
+    func popToRoot() {
+        navigationViews.removeAll()
+    }
 }
 
 extension StartCoordinator {
@@ -63,11 +92,15 @@ extension StartCoordinator {
 
         case login(viewModel: LoginViewModel)
         case register(viewModel: RegisterViewModel)
+        case forgetPassword(viewModel: ForgetPasswordViewModel)
+        case setPassword(viewModel: SetPasswordViewModel)
 
         var id: String {
             switch self {
             case .login: return "001"
             case .register: return "002"
+            case .forgetPassword: return "003"
+            case .setPassword: return "004"
             }
         }
     }

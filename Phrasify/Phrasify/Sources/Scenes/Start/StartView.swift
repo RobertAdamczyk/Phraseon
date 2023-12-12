@@ -24,6 +24,8 @@ struct StartView: View {
                     switch $0 {
                     case .login(let viewModel): LoginView(viewModel: viewModel)
                     case .register(let viewModel): RegisterView(viewModel: viewModel)
+                    case .forgetPassword(let viewModel): ForgetPasswordView(viewModel: viewModel)
+                    case .setPassword(let viewModel): SetPasswordView(viewModel: viewModel)
                     }
                 }
         }
@@ -46,7 +48,6 @@ struct StartView: View {
         }
         .padding(.horizontal, 16)
         .background(appColor(.black))
-        .navigationTitle("")
     }
 }
 
