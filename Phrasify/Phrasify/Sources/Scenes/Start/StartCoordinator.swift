@@ -43,7 +43,9 @@ extension StartCoordinator: StartActions {
     }
 
     func showRegister() {
-        navigationViews.append(.register)
+        let viewModel = RegisterViewModel(coordinator: self)
+        let view: NavigationView = .register(viewModel: viewModel)
+        navigationViews.append(view)
     }
 }
 
@@ -60,7 +62,7 @@ extension StartCoordinator {
         }
 
         case login(viewModel: LoginViewModel)
-        case register
+        case register(viewModel: RegisterViewModel)
 
         var id: String {
             switch self {

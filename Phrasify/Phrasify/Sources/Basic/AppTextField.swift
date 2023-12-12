@@ -26,17 +26,17 @@ struct AppTextField: View {
     private func makeTextField() -> some View {
         switch type {
         case .email:
-            TextField("", text: $text, prompt: Text(verbatim: type.placeholder))
+            TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.darkGray)))
                 .apply(.medium, size: .L, color: .white)
                 .padding(8)
                 .background(makeBackground())
         case .password:
             HStack(spacing: 4) {
                 ZStack {
-                    TextField("", text: $text, prompt: Text(verbatim: type.placeholder))
+                    TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.darkGray)))
                         .apply(.medium, size: .L, color: .white)
                         .opacity(showPassword ? 1 : 0)
-                    SecureField("", text: $text, prompt: Text(verbatim: type.placeholder))
+                    SecureField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.darkGray)))
                         .apply(.medium, size: .L, color: .white)
                         .opacity(showPassword ? 0 : 1)
                 }
@@ -53,7 +53,7 @@ struct AppTextField: View {
     private func makeBackground() -> some View {
         RoundedRectangle(cornerRadius: 8)
             .stroke(lineWidth: 1)
-            .foregroundStyle(appColor(.lightGray))
+            .foregroundStyle(appColor(.darkGray))
     }
 
     private func onShowPasswordTapped() {

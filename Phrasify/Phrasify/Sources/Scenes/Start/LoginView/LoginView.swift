@@ -2,7 +2,7 @@
 //  LoginView.swift
 //  Phrasify
 //
-//  Created by Robert Adamczyk on 11.12.23.
+//  Created by Robert Adamczyk on 12.12.23.
 //
 
 import SwiftUI
@@ -19,7 +19,7 @@ struct LoginView: View {
             AppTextField(type: .password, text: $viewModel.password)
             AppButton(style: .text("Forget Password?"), action: .main(viewModel.onForgetPasswordTapped))
             AppButton(style: .fill("Login", .lightBlue), action: .main(viewModel.onLoginTapped))
-            AppDivider()
+            AppDivider(with: "OR")
             Button(action: viewModel.onLoginWithGoogleTapped, label: {
                 Image(.iosDarkRdCtn)
                     .frame(maxWidth: .infinity, alignment: .center)

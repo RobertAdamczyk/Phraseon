@@ -14,6 +14,10 @@
 		553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */; };
 		553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCD2B28FD890071A099 /* AppTextField.swift */; };
 		553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCF2B28FDD70071A099 /* AppDivider.swift */; };
+		553F1BDD2B2907C10071A099 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BDC2B2907C10071A099 /* RegisterView.swift */; };
+		553F1BDF2B2907F20071A099 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BDE2B2907F20071A099 /* RegisterViewModel.swift */; };
+		553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BE02B2907FD0071A099 /* LoginView.swift */; };
+		553F1BE32B29080B0071A099 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BE22B29080B0071A099 /* LoginViewModel.swift */; };
 		55C762212B27A8B2008CBF30 /* RethinkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C7621D2B27A8B2008CBF30 /* RethinkSans-SemiBold.ttf */; };
 		55C762222B27A8B2008CBF30 /* RethinkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C7621E2B27A8B2008CBF30 /* RethinkSans-Medium.ttf */; };
 		55C762232B27A8B2008CBF30 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C7621F2B27A8B2008CBF30 /* RethinkSans-Regular.ttf */; };
@@ -25,8 +29,6 @@
 		55C762322B27AB7C008CBF30 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762312B27AB7C008CBF30 /* StartViewModel.swift */; };
 		55C762342B27AD18008CBF30 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762332B27AD18008CBF30 /* AppButton.swift */; };
 		55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762352B27B52A008CBF30 /* StartCoordinator.swift */; };
-		55C762392B27BFF5008CBF30 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762382B27BFF5008CBF30 /* LoginView.swift */; };
-		55C7623B2B27BFFE008CBF30 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7623A2B27BFFE008CBF30 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,10 @@
 		553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
 		553F1BCD2B28FD890071A099 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 		553F1BCF2B28FDD70071A099 /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
+		553F1BDC2B2907C10071A099 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		553F1BDE2B2907F20071A099 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = ../../../../../../../../.Trash/RegisterViewModel.swift; sourceTree = "<group>"; };
+		553F1BE02B2907FD0071A099 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		553F1BE22B29080B0071A099 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		55C7621D2B27A8B2008CBF30 /* RethinkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RethinkSans-SemiBold.ttf"; path = "../../../../../../Downloads/Rethink_Sans/static/RethinkSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		55C7621E2B27A8B2008CBF30 /* RethinkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RethinkSans-Medium.ttf"; path = "../../../../../../Downloads/Rethink_Sans/static/RethinkSans-Medium.ttf"; sourceTree = "<group>"; };
 		55C7621F2B27A8B2008CBF30 /* RethinkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RethinkSans-Regular.ttf"; path = "../../../../../../Downloads/Rethink_Sans/static/RethinkSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -51,8 +57,6 @@
 		55C762312B27AB7C008CBF30 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		55C762332B27AD18008CBF30 /* AppButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppButton.swift; path = ../../../../../../Downloads/AppButton.swift; sourceTree = "<group>"; };
 		55C762352B27B52A008CBF30 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
-		55C762382B27BFF5008CBF30 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		55C7623A2B27BFFE008CBF30 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,15 @@
 				553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		553F1BD12B28FE700071A099 /* RegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				553F1BDE2B2907F20071A099 /* RegisterViewModel.swift */,
+				553F1BDC2B2907C10071A099 /* RegisterView.swift */,
+			);
+			path = RegisterView;
 			sourceTree = "<group>";
 		};
 		55C762162B27A5FC008CBF30 /* Resources */ = {
@@ -182,6 +195,7 @@
 		55C7622E2B27AB20008CBF30 /* Start */ = {
 			isa = PBXGroup;
 			children = (
+				553F1BD12B28FE700071A099 /* RegisterView */,
 				55C762372B27BFEA008CBF30 /* LoginView */,
 				55C7622F2B27AB72008CBF30 /* StartView.swift */,
 				55C762312B27AB7C008CBF30 /* StartViewModel.swift */,
@@ -193,8 +207,8 @@
 		55C762372B27BFEA008CBF30 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
-				55C762382B27BFF5008CBF30 /* LoginView.swift */,
-				55C7623A2B27BFFE008CBF30 /* LoginViewModel.swift */,
+				553F1BE02B2907FD0071A099 /* LoginView.swift */,
+				553F1BE22B29080B0071A099 /* LoginViewModel.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -274,9 +288,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C762322B27AB7C008CBF30 /* StartViewModel.swift in Sources */,
+				553F1BDF2B2907F20071A099 /* RegisterViewModel.swift in Sources */,
 				55C7622C2B27AAFD008CBF30 /* Localized.swift in Sources */,
+				553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */,
+				553F1BE32B29080B0071A099 /* LoginViewModel.swift in Sources */,
 				553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */,
-				55C7623B2B27BFFE008CBF30 /* LoginViewModel.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
 				552785C42B27A5120098FE95 /* ContentView.swift in Sources */,
 				55C7622A2B27AA7D008CBF30 /* AppColor.swift in Sources */,
@@ -285,7 +301,7 @@
 				553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */,
 				55C762282B27A9B9008CBF30 /* FontStyle.swift in Sources */,
 				55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */,
-				55C762392B27BFF5008CBF30 /* LoginView.swift in Sources */,
+				553F1BDD2B2907C10071A099 /* RegisterView.swift in Sources */,
 				55C762342B27AD18008CBF30 /* AppButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

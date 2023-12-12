@@ -23,7 +23,7 @@ struct StartView: View {
                 .navigationDestination(for: StartCoordinator.NavigationView.self) {
                     switch $0 {
                     case .login(let viewModel): LoginView(viewModel: viewModel)
-                    case .register: Text("REGISTER")
+                    case .register(let viewModel): RegisterView(viewModel: viewModel)
                     }
                 }
         }
@@ -46,6 +46,7 @@ struct StartView: View {
         }
         .padding(.horizontal, 16)
         .background(appColor(.black))
+        .navigationTitle("")
     }
 }
 
