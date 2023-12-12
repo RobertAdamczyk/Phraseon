@@ -11,6 +11,20 @@
 		552785C42B27A5120098FE95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552785C32B27A5120098FE95 /* ContentView.swift */; };
 		552785C62B27A5140098FE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C52B27A5140098FE95 /* Assets.xcassets */; };
 		552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C92B27A5140098FE95 /* Preview Assets.xcassets */; };
+		553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */; };
+		55C762212B27A8B2008CBF30 /* RethinkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C7621D2B27A8B2008CBF30 /* RethinkSans-SemiBold.ttf */; };
+		55C762222B27A8B2008CBF30 /* RethinkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C7621E2B27A8B2008CBF30 /* RethinkSans-Medium.ttf */; };
+		55C762232B27A8B2008CBF30 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C7621F2B27A8B2008CBF30 /* RethinkSans-Regular.ttf */; };
+		55C762242B27A8B2008CBF30 /* RethinkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C762202B27A8B2008CBF30 /* RethinkSans-Bold.ttf */; };
+		55C762282B27A9B9008CBF30 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762272B27A9B9008CBF30 /* FontStyle.swift */; };
+		55C7622A2B27AA7D008CBF30 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762292B27AA7D008CBF30 /* AppColor.swift */; };
+		55C7622C2B27AAFD008CBF30 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7622B2B27AAFD008CBF30 /* Localized.swift */; };
+		55C762302B27AB72008CBF30 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7622F2B27AB72008CBF30 /* StartView.swift */; };
+		55C762322B27AB7C008CBF30 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762312B27AB7C008CBF30 /* StartViewModel.swift */; };
+		55C762342B27AD18008CBF30 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762332B27AD18008CBF30 /* AppButton.swift */; };
+		55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762352B27B52A008CBF30 /* StartCoordinator.swift */; };
+		55C762392B27BFF5008CBF30 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762382B27BFF5008CBF30 /* LoginView.swift */; };
+		55C7623B2B27BFFE008CBF30 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7623A2B27BFFE008CBF30 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +34,21 @@
 		552785C52B27A5140098FE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		552785C72B27A5140098FE95 /* Phrasify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phrasify.entitlements; sourceTree = "<group>"; };
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
+		55C7621D2B27A8B2008CBF30 /* RethinkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RethinkSans-SemiBold.ttf"; path = "../../../../../../Downloads/Rethink_Sans/static/RethinkSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		55C7621E2B27A8B2008CBF30 /* RethinkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RethinkSans-Medium.ttf"; path = "../../../../../../Downloads/Rethink_Sans/static/RethinkSans-Medium.ttf"; sourceTree = "<group>"; };
+		55C7621F2B27A8B2008CBF30 /* RethinkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RethinkSans-Regular.ttf"; path = "../../../../../../Downloads/Rethink_Sans/static/RethinkSans-Regular.ttf"; sourceTree = "<group>"; };
+		55C762202B27A8B2008CBF30 /* RethinkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RethinkSans-Bold.ttf"; path = "../../../../../../Downloads/Rethink_Sans/static/RethinkSans-Bold.ttf"; sourceTree = "<group>"; };
+		55C762252B27A8E2008CBF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		55C762272B27A9B9008CBF30 /* FontStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FontStyle.swift; path = ../../../../../../Downloads/FontStyle.swift; sourceTree = "<group>"; };
+		55C762292B27AA7D008CBF30 /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppColor.swift; path = ../../../../../../Downloads/AppColor.swift; sourceTree = "<group>"; };
+		55C7622B2B27AAFD008CBF30 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Localized.swift; path = ../../../../../Downloads/Localized.swift; sourceTree = "<group>"; };
+		55C7622F2B27AB72008CBF30 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		55C762312B27AB7C008CBF30 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		55C762332B27AD18008CBF30 /* AppButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppButton.swift; path = ../../../../../../Downloads/AppButton.swift; sourceTree = "<group>"; };
+		55C762352B27B52A008CBF30 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
+		55C762382B27BFF5008CBF30 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		55C7623A2B27BFFE008CBF30 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +81,7 @@
 		552785C02B27A5120098FE95 /* Phrasify */ = {
 			isa = PBXGroup;
 			children = (
+				55C762252B27A8E2008CBF30 /* Info.plist */,
 				55C762182B27A607008CBF30 /* Sources */,
 				55C762162B27A5FC008CBF30 /* Resources */,
 				55C7621B2B27A622008CBF30 /* Domain */,
@@ -67,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				552785C92B27A5140098FE95 /* Preview Assets.xcassets */,
+				553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -74,6 +105,7 @@
 		55C762162B27A5FC008CBF30 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				55C7621C2B27A886008CBF30 /* Fonts */,
 				552785C52B27A5140098FE95 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -82,6 +114,8 @@
 		55C762182B27A607008CBF30 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				55C7622D2B27AB1A008CBF30 /* Scenes */,
+				55C762262B27A99A008CBF30 /* Basic */,
 				552785C12B27A5120098FE95 /* PhrasifyApp.swift */,
 				552785C32B27A5120098FE95 /* ContentView.swift */,
 			);
@@ -98,6 +132,7 @@
 		55C7621A2B27A61D008CBF30 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55C7622B2B27AAFD008CBF30 /* Localized.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -107,6 +142,55 @@
 			children = (
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		55C7621C2B27A886008CBF30 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				55C762202B27A8B2008CBF30 /* RethinkSans-Bold.ttf */,
+				55C7621E2B27A8B2008CBF30 /* RethinkSans-Medium.ttf */,
+				55C7621F2B27A8B2008CBF30 /* RethinkSans-Regular.ttf */,
+				55C7621D2B27A8B2008CBF30 /* RethinkSans-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		55C762262B27A99A008CBF30 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				55C762332B27AD18008CBF30 /* AppButton.swift */,
+				55C762292B27AA7D008CBF30 /* AppColor.swift */,
+				55C762272B27A9B9008CBF30 /* FontStyle.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		55C7622D2B27AB1A008CBF30 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				55C7622E2B27AB20008CBF30 /* Start */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		55C7622E2B27AB20008CBF30 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				55C762372B27BFEA008CBF30 /* LoginView */,
+				55C7622F2B27AB72008CBF30 /* StartView.swift */,
+				55C762312B27AB7C008CBF30 /* StartViewModel.swift */,
+				55C762352B27B52A008CBF30 /* StartCoordinator.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		55C762372B27BFEA008CBF30 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				55C762382B27BFF5008CBF30 /* LoginView.swift */,
+				55C7623A2B27BFFE008CBF30 /* LoginViewModel.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */,
+				55C762212B27A8B2008CBF30 /* RethinkSans-SemiBold.ttf in Resources */,
+				55C762222B27A8B2008CBF30 /* RethinkSans-Medium.ttf in Resources */,
+				55C762232B27A8B2008CBF30 /* RethinkSans-Regular.ttf in Resources */,
+				55C762242B27A8B2008CBF30 /* RethinkSans-Bold.ttf in Resources */,
 				552785C62B27A5140098FE95 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,8 +267,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C762322B27AB7C008CBF30 /* StartViewModel.swift in Sources */,
+				55C7622C2B27AAFD008CBF30 /* Localized.swift in Sources */,
+				553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */,
+				55C7623B2B27BFFE008CBF30 /* LoginViewModel.swift in Sources */,
 				552785C42B27A5120098FE95 /* ContentView.swift in Sources */,
+				55C7622A2B27AA7D008CBF30 /* AppColor.swift in Sources */,
+				55C762302B27AB72008CBF30 /* StartView.swift in Sources */,
 				552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */,
+				55C762282B27A9B9008CBF30 /* FontStyle.swift in Sources */,
+				55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */,
+				55C762392B27BFF5008CBF30 /* LoginView.swift in Sources */,
+				55C762342B27AD18008CBF30 /* AppButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +412,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Phrasify/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -352,6 +451,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Phrasify/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
