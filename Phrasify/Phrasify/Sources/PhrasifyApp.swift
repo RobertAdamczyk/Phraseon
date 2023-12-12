@@ -26,6 +26,7 @@ struct PhrasifyApp: App {
     var body: some Scene {
         WindowGroup {
             rootCoordinator.createRootView()
+                .tint(appColor(.paleOrange))
         }
     }
 }
