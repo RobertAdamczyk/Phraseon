@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552785C12B27A5120098FE95 /* PhrasifyApp.swift */; };
-		552785C42B27A5120098FE95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552785C32B27A5120098FE95 /* ContentView.swift */; };
 		552785C62B27A5140098FE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C52B27A5140098FE95 /* Assets.xcassets */; };
 		552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C92B27A5140098FE95 /* Preview Assets.xcassets */; };
 		553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */; };
@@ -29,6 +28,38 @@
 		55C278D72B2A2E36005144F1 /* RethinkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D32B2A2E36005144F1 /* RethinkSans-Medium.ttf */; };
 		55C278D82B2A2E36005144F1 /* RethinkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D42B2A2E36005144F1 /* RethinkSans-SemiBold.ttf */; };
 		55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278D92B2A2F99005144F1 /* AppColor.swift */; };
+		55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BEA2B2914700071A099 /* SetPasswordView.swift */; };
+		55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278D92B2A2F99005144F1 /* AppColor.swift */; };
+		55C278DF2B2A3F3A005144F1 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762312B27AB7C008CBF30 /* StartViewModel.swift */; };
+		55C278E02B2A3F3A005144F1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BDE2B2907F20071A099 /* RegisterViewModel.swift */; };
+		55C278E12B2A3F3A005144F1 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7622B2B27AAFD008CBF30 /* Localized.swift */; };
+		55C278E22B2A3F3A005144F1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BE02B2907FD0071A099 /* LoginView.swift */; };
+		55C278E32B2A3F3A005144F1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BE22B29080B0071A099 /* LoginViewModel.swift */; };
+		55C278E42B2A3F3A005144F1 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */; };
+		55C278E52B2A3F3A005144F1 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCD2B28FD890071A099 /* AppTextField.swift */; };
+		55C278E72B2A3F3A005144F1 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7622F2B27AB72008CBF30 /* StartView.swift */; };
+		55C278E82B2A3F3A005144F1 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BE72B2911770071A099 /* ForgetPasswordViewModel.swift */; };
+		55C278E92B2A3F3A005144F1 /* PhrasifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552785C12B27A5120098FE95 /* PhrasifyApp.swift */; };
+		55C278EA2B2A3F3A005144F1 /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCF2B28FDD70071A099 /* AppDivider.swift */; };
+		55C278EB2B2A3F3A005144F1 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CE2B2A2DBA005144F1 /* FontStyle.swift */; };
+		55C278EC2B2A3F3A005144F1 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762352B27B52A008CBF30 /* StartCoordinator.swift */; };
+		55C278ED2B2A3F3A005144F1 /* SetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */; };
+		55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BE52B2911500071A099 /* ForgetPasswordView.swift */; };
+		55C278EF2B2A3F3A005144F1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BDC2B2907C10071A099 /* RegisterView.swift */; };
+		55C278F02B2A3F3A005144F1 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CC2B2A2DA1005144F1 /* AppButton.swift */; };
+		55C278F32B2A3F3A005144F1 /* RethinkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D22B2A2E36005144F1 /* RethinkSans-Bold.ttf */; };
+		55C278F42B2A3F3A005144F1 /* RethinkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D32B2A2E36005144F1 /* RethinkSans-Medium.ttf */; };
+		55C278F52B2A3F3A005144F1 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */; };
+		55C278F62B2A3F3A005144F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C92B27A5140098FE95 /* Preview Assets.xcassets */; };
+		55C278F72B2A3F3A005144F1 /* RethinkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D42B2A2E36005144F1 /* RethinkSans-SemiBold.ttf */; };
+		55C278F82B2A3F3A005144F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C52B27A5140098FE95 /* Assets.xcassets */; };
+		55C279002B2A3FF7005144F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55C278FF2B2A3FF7005144F1 /* GoogleService-Info.plist */; };
+		55C279032B2A451A005144F1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 55C279022B2A451A005144F1 /* FirebaseAuth */; };
+		55C279052B2A451A005144F1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 55C279042B2A451A005144F1 /* FirebaseFirestore */; };
+		55C279072B2A451A005144F1 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 55C279062B2A451A005144F1 /* FirebaseFirestoreSwift */; };
+		55C2790A2B2A4556005144F1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 55C279092B2A4556005144F1 /* FirebaseAuth */; };
+		55C2790C2B2A455D005144F1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 55C2790B2B2A455D005144F1 /* FirebaseFirestore */; };
+		55C2790E2B2A4562005144F1 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 55C2790D2B2A4562005144F1 /* FirebaseFirestoreSwift */; };
 		55C7622C2B27AAFD008CBF30 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7622B2B27AAFD008CBF30 /* Localized.swift */; };
 		55C762302B27AB72008CBF30 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7622F2B27AB72008CBF30 /* StartView.swift */; };
 		55C762322B27AB7C008CBF30 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762312B27AB7C008CBF30 /* StartViewModel.swift */; };
@@ -38,7 +69,6 @@
 /* Begin PBXFileReference section */
 		552785BE2B27A5120098FE95 /* Phrasify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phrasify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		552785C12B27A5120098FE95 /* PhrasifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasifyApp.swift; sourceTree = "<group>"; };
-		552785C32B27A5120098FE95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		552785C52B27A5140098FE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		552785C72B27A5140098FE95 /* Phrasify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phrasify.entitlements; sourceTree = "<group>"; };
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -60,7 +90,10 @@
 		55C278D32B2A2E36005144F1 /* RethinkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Medium.ttf"; sourceTree = "<group>"; };
 		55C278D42B2A2E36005144F1 /* RethinkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		55C278D92B2A2F99005144F1 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
-		55C762252B27A8E2008CBF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		55C278FC2B2A3F3A005144F1 /* Phrasify_InHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phrasify_InHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C278FD2B2A3F3A005144F1 /* Phrasify_InHouse-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Phrasify_InHouse-Info.plist"; path = "/Users/radamczyk/Fork/Phrasify/Phrasify/Phrasify_InHouse-Info.plist"; sourceTree = "<absolute>"; };
+		55C278FF2B2A3FF7005144F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		55C762252B27A8E2008CBF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55C7622B2B27AAFD008CBF30 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Localized.swift; path = ../../../../../Downloads/Localized.swift; sourceTree = "<group>"; };
 		55C7622F2B27AB72008CBF30 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		55C762312B27AB7C008CBF30 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
@@ -72,6 +105,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C279032B2A451A005144F1 /* FirebaseAuth in Frameworks */,
+				55C279052B2A451A005144F1 /* FirebaseFirestore in Frameworks */,
+				55C279072B2A451A005144F1 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55C278F12B2A3F3A005144F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C2790A2B2A4556005144F1 /* FirebaseAuth in Frameworks */,
+				55C2790C2B2A455D005144F1 /* FirebaseFirestore in Frameworks */,
+				55C2790E2B2A4562005144F1 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				552785C02B27A5120098FE95 /* Phrasify */,
+				55C278FE2B2A3F80005144F1 /* Phrasify_InHouse */,
 				552785BF2B27A5120098FE95 /* Products */,
+				55C279082B2A4556005144F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				552785BE2B27A5120098FE95 /* Phrasify.app */,
+				55C278FC2B2A3F3A005144F1 /* Phrasify_InHouse.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +205,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		55C278FE2B2A3F80005144F1 /* Phrasify_InHouse */ = {
+			isa = PBXGroup;
+			children = (
+				55C278FD2B2A3F3A005144F1 /* Phrasify_InHouse-Info.plist */,
+				55C278FF2B2A3FF7005144F1 /* GoogleService-Info.plist */,
+			);
+			path = Phrasify_InHouse;
+			sourceTree = "<group>";
+		};
+		55C279082B2A4556005144F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		55C762162B27A5FC008CBF30 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +236,6 @@
 				55C7622D2B27AB1A008CBF30 /* Scenes */,
 				55C762262B27A99A008CBF30 /* Basic */,
 				552785C12B27A5120098FE95 /* PhrasifyApp.swift */,
-				552785C32B27A5120098FE95 /* ContentView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -257,8 +321,35 @@
 			dependencies = (
 			);
 			name = Phrasify;
+			packageProductDependencies = (
+				55C279022B2A451A005144F1 /* FirebaseAuth */,
+				55C279042B2A451A005144F1 /* FirebaseFirestore */,
+				55C279062B2A451A005144F1 /* FirebaseFirestoreSwift */,
+			);
 			productName = Phrasify;
 			productReference = 552785BE2B27A5120098FE95 /* Phrasify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55C278DB2B2A3F3A005144F1 /* Phrasify_InHouse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55C278F92B2A3F3A005144F1 /* Build configuration list for PBXNativeTarget "Phrasify_InHouse" */;
+			buildPhases = (
+				55C278DC2B2A3F3A005144F1 /* Sources */,
+				55C278F12B2A3F3A005144F1 /* Frameworks */,
+				55C278F22B2A3F3A005144F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Phrasify_InHouse;
+			packageProductDependencies = (
+				55C279092B2A4556005144F1 /* FirebaseAuth */,
+				55C2790B2B2A455D005144F1 /* FirebaseFirestore */,
+				55C2790D2B2A4562005144F1 /* FirebaseFirestoreSwift */,
+			);
+			productName = Phrasify;
+			productReference = 55C278FC2B2A3F3A005144F1 /* Phrasify_InHouse.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,11 +376,15 @@
 				Base,
 			);
 			mainGroup = 552785B52B27A5120098FE95;
+			packageReferences = (
+				55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 552785BF2B27A5120098FE95 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				552785BD2B27A5120098FE95 /* Phrasify */,
+				55C278DB2B2A3F3A005144F1 /* Phrasify_InHouse */,
 			);
 		};
 /* End PBXProject section */
@@ -305,6 +400,20 @@
 				552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */,
 				55C278D82B2A2E36005144F1 /* RethinkSans-SemiBold.ttf in Resources */,
 				552785C62B27A5140098FE95 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55C278F22B2A3F3A005144F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C278F32B2A3F3A005144F1 /* RethinkSans-Bold.ttf in Resources */,
+				55C278F42B2A3F3A005144F1 /* RethinkSans-Medium.ttf in Resources */,
+				55C278F52B2A3F3A005144F1 /* RethinkSans-Regular.ttf in Resources */,
+				55C278F62B2A3F3A005144F1 /* Preview Assets.xcassets in Resources */,
+				55C278F72B2A3F3A005144F1 /* RethinkSans-SemiBold.ttf in Resources */,
+				55C278F82B2A3F3A005144F1 /* Assets.xcassets in Resources */,
+				55C279002B2A3FF7005144F1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +433,6 @@
 				553F1BE32B29080B0071A099 /* LoginViewModel.swift in Sources */,
 				553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
-				552785C42B27A5120098FE95 /* ContentView.swift in Sources */,
 				55C762302B27AB72008CBF30 /* StartView.swift in Sources */,
 				553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */,
 				552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */,
@@ -335,6 +443,32 @@
 				553F1BE62B2911500071A099 /* ForgetPasswordView.swift in Sources */,
 				553F1BDD2B2907C10071A099 /* RegisterView.swift in Sources */,
 				55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55C278DC2B2A3F3A005144F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
+				55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */,
+				55C278DF2B2A3F3A005144F1 /* StartViewModel.swift in Sources */,
+				55C278E02B2A3F3A005144F1 /* RegisterViewModel.swift in Sources */,
+				55C278E12B2A3F3A005144F1 /* Localized.swift in Sources */,
+				55C278E22B2A3F3A005144F1 /* LoginView.swift in Sources */,
+				55C278E32B2A3F3A005144F1 /* LoginViewModel.swift in Sources */,
+				55C278E42B2A3F3A005144F1 /* MockCoordinator.swift in Sources */,
+				55C278E52B2A3F3A005144F1 /* AppTextField.swift in Sources */,
+				55C278E72B2A3F3A005144F1 /* StartView.swift in Sources */,
+				55C278E82B2A3F3A005144F1 /* ForgetPasswordViewModel.swift in Sources */,
+				55C278E92B2A3F3A005144F1 /* PhrasifyApp.swift in Sources */,
+				55C278EA2B2A3F3A005144F1 /* AppDivider.swift in Sources */,
+				55C278EB2B2A3F3A005144F1 /* FontStyle.swift in Sources */,
+				55C278EC2B2A3F3A005144F1 /* StartCoordinator.swift in Sources */,
+				55C278ED2B2A3F3A005144F1 /* SetPasswordViewModel.swift in Sources */,
+				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,
+				55C278EF2B2A3F3A005144F1 /* RegisterView.swift in Sources */,
+				55C278F02B2A3F3A005144F1 /* AppButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +667,84 @@
 			};
 			name = Release;
 		};
+		55C278FA2B2A3F3A005144F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Phrasify/Phrasify.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Phrasify/Preview Content\"";
+				DEVELOPMENT_TEAM = 38Q6TG2KG3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Phrasify_InHouse-Info.plist";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = robert.adamczyk.phrasify.inhouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55C278FB2B2A3F3A005144F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Phrasify/Phrasify.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Phrasify/Preview Content\"";
+				DEVELOPMENT_TEAM = 38Q6TG2KG3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Phrasify_InHouse-Info.plist";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = robert.adamczyk.phrasify.inhouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -554,7 +766,60 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		55C278F92B2A3F3A005144F1 /* Build configuration list for PBXNativeTarget "Phrasify_InHouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55C278FA2B2A3F3A005144F1 /* Debug */,
+				55C278FB2B2A3F3A005144F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55C279022B2A451A005144F1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		55C279042B2A451A005144F1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		55C279062B2A451A005144F1 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		55C279092B2A4556005144F1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		55C2790B2B2A455D005144F1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		55C2790D2B2A4562005144F1 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 552785B62B27A5120098FE95 /* Project object */;
 }
