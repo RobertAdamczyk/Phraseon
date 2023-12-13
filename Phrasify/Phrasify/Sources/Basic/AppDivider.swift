@@ -21,7 +21,7 @@ struct AppDivider: View {
             .foregroundStyle(appColor(.darkGray))
             .overlay {
                 if let text {
-                    Text("OR")
+                    Text(text)
                         .padding(.horizontal, 4)
                         .apply(.semibold, size: .L, color: .darkGray)
                         .background(appColor(.black))
