@@ -28,7 +28,7 @@
 		55C278D62B2A2E36005144F1 /* RethinkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D22B2A2E36005144F1 /* RethinkSans-Bold.ttf */; };
 		55C278D72B2A2E36005144F1 /* RethinkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D32B2A2E36005144F1 /* RethinkSans-Medium.ttf */; };
 		55C278D82B2A2E36005144F1 /* RethinkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D42B2A2E36005144F1 /* RethinkSans-SemiBold.ttf */; };
-		55C7622A2B27AA7D008CBF30 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762292B27AA7D008CBF30 /* AppColor.swift */; };
+		55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278D92B2A2F99005144F1 /* AppColor.swift */; };
 		55C7622C2B27AAFD008CBF30 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7622B2B27AAFD008CBF30 /* Localized.swift */; };
 		55C762302B27AB72008CBF30 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7622F2B27AB72008CBF30 /* StartView.swift */; };
 		55C762322B27AB7C008CBF30 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762312B27AB7C008CBF30 /* StartViewModel.swift */; };
@@ -59,8 +59,8 @@
 		55C278D22B2A2E36005144F1 /* RethinkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Bold.ttf"; sourceTree = "<group>"; };
 		55C278D32B2A2E36005144F1 /* RethinkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Medium.ttf"; sourceTree = "<group>"; };
 		55C278D42B2A2E36005144F1 /* RethinkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		55C278D92B2A2F99005144F1 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		55C762252B27A8E2008CBF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		55C762292B27AA7D008CBF30 /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppColor.swift; path = ../../../../../../Downloads/AppColor.swift; sourceTree = "<group>"; };
 		55C7622B2B27AAFD008CBF30 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Localized.swift; path = ../../../../../Downloads/Localized.swift; sourceTree = "<group>"; };
 		55C7622F2B27AB72008CBF30 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		55C762312B27AB7C008CBF30 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
@@ -201,11 +201,11 @@
 		55C762262B27A99A008CBF30 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				55C762292B27AA7D008CBF30 /* AppColor.swift */,
 				553F1BCD2B28FD890071A099 /* AppTextField.swift */,
 				553F1BCF2B28FDD70071A099 /* AppDivider.swift */,
 				55C278CC2B2A2DA1005144F1 /* AppButton.swift */,
 				55C278CE2B2A2DBA005144F1 /* FontStyle.swift */,
+				55C278D92B2A2F99005144F1 /* AppColor.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -316,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				553F1BEB2B2914700071A099 /* SetPasswordView.swift in Sources */,
+				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
 				55C762322B27AB7C008CBF30 /* StartViewModel.swift in Sources */,
 				553F1BDF2B2907F20071A099 /* RegisterViewModel.swift in Sources */,
 				55C7622C2B27AAFD008CBF30 /* Localized.swift in Sources */,
@@ -324,7 +325,6 @@
 				553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
 				552785C42B27A5120098FE95 /* ContentView.swift in Sources */,
-				55C7622A2B27AA7D008CBF30 /* AppColor.swift in Sources */,
 				55C762302B27AB72008CBF30 /* StartView.swift in Sources */,
 				553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */,
 				552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */,
