@@ -11,7 +11,7 @@ import SwiftUI
 
 final class MockCoordinator: Coordinator, StartActions {
 
-    var dependencies: Dependencies = .init(repository: "")
+    var dependencies: Dependencies = .init(authenticationRepository: .init())
 
     func createRootView() -> AnyView {
         .init(EmptyView())

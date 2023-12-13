@@ -22,7 +22,7 @@ final class RootCoordinator: ObservableObject, Coordinator {
     }
 
     init() {
-        dependencies = .init(repository: "")
+        dependencies = .init(authenticationRepository: .init())
     }
 
 }

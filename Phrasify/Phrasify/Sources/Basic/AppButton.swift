@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct AppButton: View {
 
@@ -38,9 +39,12 @@ struct AppButton: View {
             ZStack {
                 Text(text)
                     .opacity(loading ? 0 : 1)
-                ProgressView()
-                    .tint(appColor(.white))
-                    .opacity(loading ? 1 : 0)
+                if loading {
+                    LottieView(animation: .named("buttonLoadingAnimation"))
+                        .playing(loopMode: .loop)
+                        .scaleEffect(3)
+                        .transition(.opacity)
+                }
             }
             .apply(.semibold, size: .L, color: .black)
             .frame(height: 54)
@@ -89,4 +93,10 @@ extension AppButton {
         case main(() -> Void)
         case async(() async -> Void)
     }
+}
+
+#Preview {
+    AppButton(style: .fill("TEST 1", .lightBlue), action: .async({
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
+    }))
 }

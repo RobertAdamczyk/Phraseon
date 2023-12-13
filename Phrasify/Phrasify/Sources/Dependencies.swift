@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Dependencies { // TODO: Make done
-    var repository: String
+struct Dependencies {
+    var authenticationRepository: AuthenticationRepository
 }
