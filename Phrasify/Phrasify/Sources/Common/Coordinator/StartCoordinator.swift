@@ -48,8 +48,8 @@ extension StartCoordinator: StartActions {
         navigationViews.append(view)
     }
 
-    func showSetPassword() {
-        let viewModel = SetPasswordViewModel(coordinator: self)
+    func showSetPassword(email: String) {
+        let viewModel = SetPasswordViewModel(email: email, coordinator: self)
         let view: NavigationView = .setPassword(viewModel: viewModel)
         navigationViews.append(view)
     }

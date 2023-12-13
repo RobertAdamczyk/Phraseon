@@ -12,7 +12,7 @@ protocol StartActions {
     func showLogin()
     func showRegister()
     func showForgetPassword()
-    func showSetPassword()
+    func showSetPassword(email: String)
     func closeForgetPassword()
     func popToRoot()
 }

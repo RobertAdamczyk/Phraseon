@@ -27,6 +27,8 @@ struct AppTextField: View {
         switch type {
         case .email:
             TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.darkGray)))
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
                 .apply(.medium, size: .L, color: .white)
                 .padding(8)
                 .background(makeBackground())

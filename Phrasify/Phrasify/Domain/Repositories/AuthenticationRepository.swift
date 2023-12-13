@@ -12,15 +12,11 @@ final class AuthenticationRepository {
 
     // MARK: Public properties
 
-    var isLoggedIn: Bool {
-        auth.currentUser != nil
-    }
+    @Published private(set) var isLoggedIn: Bool?
 
     var currentUser: Firebase.User? {
         auth.currentUser
     }
-
-    private let publisher: CurrentValueSubject<Bool, Never> = .init(false)
 
     // MARK: Private properties
 
@@ -30,6 +26,7 @@ final class AuthenticationRepository {
 
     init() {
         auth.useAppLanguage() // TODO: Check this
+        setupStateDidChangeListener()
     }
 
     // MARK: Public functions
@@ -54,9 +51,9 @@ final class AuthenticationRepository {
         try await auth.currentUser?.delete()
     }
 
-    func stateDidChangeListener(completion: @escaping (Firebase.User?) -> Void) {
+    private func setupStateDidChangeListener() {
         auth.addStateDidChangeListener { [weak self] _, user in
-            self?.publisher.send(user != nil)
+            self?.isLoggedIn = user != nil
         }
     }
 }

@@ -20,8 +20,12 @@ final class LoginViewModel: ObservableObject {
         self.coordinator = coordinator
     }
 
-    func onLoginTapped() {
-
+    func onLoginTapped() async {
+        do {
+            try await coordinator.dependencies.authenticationRepository.login(email: email, password: password)
+        } catch {
+            print("ERROR: \(error)")
+        }
     }
 
     func onForgetPasswordTapped() {

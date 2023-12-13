@@ -17,7 +17,7 @@ struct SetPasswordView: View {
                 .apply(.bold, size: .H1, color: .white)
             AppTextField(type: .password, text: $viewModel.password)
             AppTextField(type: .confirmPassword, text: $viewModel.confirmPassword)
-            AppButton(style: .fill("Create an Account", .lightBlue), action: .main(viewModel.onCreateAccountTapped))
+            AppButton(style: .fill("Create an Account", .lightBlue), action: .async(viewModel.onCreateAccountTapped))
             Spacer()
         }
         .padding(16)
@@ -26,5 +26,5 @@ struct SetPasswordView: View {
 }
 
 #Preview {
-    SetPasswordView(viewModel: .init(coordinator: MockCoordinator()))
+    SetPasswordView(viewModel: .init(email: "", coordinator: MockCoordinator()))
 }

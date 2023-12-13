@@ -15,12 +15,23 @@ final class SetPasswordViewModel: ObservableObject {
     @Published var confirmPassword: String = ""
 
     private let coordinator: SetPasswordCoordinator
+    private let email: String
 
-    init(coordinator: SetPasswordCoordinator) {
+    init(email: String, coordinator: SetPasswordCoordinator) {
         self.coordinator = coordinator
+        self.email = email
     }
 
-    func onCreateAccountTapped() {
+    func onCreateAccountTapped() async {
+        do {
+            try await coordinator.dependencies.authenticationRepository.signUp(email: email, password: password)
+            print("SUCCESS Account Created")
+        } catch {
+            print("MAKE ERROR: \(error)") // TODO: ERROR
+        }
+    }
+
+    private func close() {
         coordinator.popToRoot()
     }
 }

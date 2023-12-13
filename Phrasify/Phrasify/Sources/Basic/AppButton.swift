@@ -42,7 +42,7 @@ struct AppButton: View {
                 if loading {
                     LottieView(animation: .named("buttonLoadingAnimation"))
                         .playing(loopMode: .loop)
-                        .scaleEffect(3)
+                        .scaleEffect(2)
                         .transition(.opacity)
                 }
             }

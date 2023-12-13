@@ -23,7 +23,7 @@ final class MockCoordinator: Coordinator, StartActions {
 
     func showForgetPassword() { /*empty*/ }
 
-    func showSetPassword() { /*empty*/ }
+    func showSetPassword(email: String) { /*empty*/ }
 
     func closeForgetPassword() { /*empty*/ }
 
