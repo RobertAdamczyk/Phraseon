@@ -7,16 +7,6 @@
 
 import SwiftUI
 
-protocol StartActions {
-
-    func showLogin()
-    func showRegister()
-    func showForgetPassword()
-    func showSetPassword()
-    func closeForgetPassword()
-    func popToRoot()
-}
-
 final class StartCoordinator: Coordinator, ObservableObject {
 
     typealias ParentCoordinator = Coordinator
