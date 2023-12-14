@@ -22,12 +22,12 @@ final class SetPasswordViewModel: ObservableObject {
         self.email = email
     }
 
+    @MainActor
     func onCreateAccountTapped() async {
         do {
             try await coordinator.dependencies.authenticationRepository.signUp(email: email, password: password)
-            print("SUCCESS Account Created")
         } catch {
-            print("MAKE ERROR: \(error)") // TODO: ERROR
+            ToastView.showError(message: error.localizedDescription)
         }
     }
 
