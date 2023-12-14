@@ -33,26 +33,6 @@ final class RootCoordinator: ObservableObject, Coordinator {
 
 extension RootCoordinator {
 
-    struct RootView: View {
-
-        @StateObject private var rootCoordinator: RootCoordinator = .init()
-
-        var body: some View {
-            ZStack {
-                if rootCoordinator.isLoggedIn == true {
-                    NavigationStack(path: $rootCoordinator.navigationViews) {
-                        HomeView(coordinator: rootCoordinator)
-                    }
-                } else if rootCoordinator.isLoggedIn == false {
-                    StartCoordinator.RootView(parentCoordinator: rootCoordinator)
-                }
-            }
-        }
-    }
-}
-
-extension RootCoordinator {
-
     enum NavigationView {
         case empty
     }

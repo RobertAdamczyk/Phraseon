@@ -86,6 +86,10 @@
 		55FF42662B2B912B00F4D523 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF42642B2B912B00F4D523 /* HomeView.swift */; };
 		55FF42682B2B914000F4D523 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF42672B2B914000F4D523 /* HomeViewModel.swift */; };
 		55FF42692B2B914100F4D523 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF42672B2B914000F4D523 /* HomeViewModel.swift */; };
+		55FF426C2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF426B2B2B923900F4D523 /* RootCoordinator+RootView.swift */; };
+		55FF426D2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF426B2B2B923900F4D523 /* RootCoordinator+RootView.swift */; };
+		55FF426F2B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF426E2B2B925400F4D523 /* StartCoordinator+RootView.swift */; };
+		55FF42702B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF426E2B2B925400F4D523 /* StartCoordinator+RootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +134,8 @@
 		55FF42602B2B7E3400F4D523 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		55FF42642B2B912B00F4D523 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		55FF42672B2B914000F4D523 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		55FF426B2B2B923900F4D523 /* RootCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootCoordinator+RootView.swift"; sourceTree = "<group>"; };
+		55FF426E2B2B925400F4D523 /* StartCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StartCoordinator+RootView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +272,7 @@
 		55C279202B2A4CE9005144F1 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				55FF426A2B2B922300F4D523 /* RootViews */,
 				55C279212B2A4D08005144F1 /* Actions */,
 				55C279102B2A4B38005144F1 /* RootCoordinator.swift */,
 				55C762352B27B52A008CBF30 /* StartCoordinator.swift */,
@@ -395,6 +402,15 @@
 				55FF42672B2B914000F4D523 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		55FF426A2B2B922300F4D523 /* RootViews */ = {
+			isa = PBXGroup;
+			children = (
+				55FF426B2B2B923900F4D523 /* RootCoordinator+RootView.swift */,
+				55FF426E2B2B925400F4D523 /* StartCoordinator+RootView.swift */,
+			);
+			path = RootViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,10 +549,12 @@
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
 				55C762302B27AB72008CBF30 /* StartView.swift in Sources */,
 				553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */,
+				55FF426F2B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */,
 				55C279112B2A4B38005144F1 /* RootCoordinator.swift in Sources */,
 				55FF42612B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */,
+				55FF426C2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
 				55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */,
 				55C279172B2A4BE7005144F1 /* Localized.swift in Sources */,
 				55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */,
@@ -568,10 +586,12 @@
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
 				55C278E52B2A3F3A005144F1 /* AppTextField.swift in Sources */,
 				55C278E72B2A3F3A005144F1 /* StartView.swift in Sources */,
+				55FF42702B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				55C278E82B2A3F3A005144F1 /* ForgetPasswordViewModel.swift in Sources */,
 				55C278E92B2A3F3A005144F1 /* PhrasifyApp.swift in Sources */,
 				55FF42622B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				55C2791A2B2A4C11005144F1 /* RootCoordinator.swift in Sources */,
+				55FF426D2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
 				55C278EA2B2A3F3A005144F1 /* AppDivider.swift in Sources */,
 				55C2791B2B2A4C17005144F1 /* Localized.swift in Sources */,
 				55C278EB2B2A3F3A005144F1 /* FontStyle.swift in Sources */,
