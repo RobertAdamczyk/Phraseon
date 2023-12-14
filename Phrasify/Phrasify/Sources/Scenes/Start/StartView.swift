@@ -10,28 +10,12 @@ import SwiftUI
 struct StartView: View {
 
     @StateObject private var viewModel: StartViewModel
-    @ObservedObject private var coordinator: StartCoordinator
 
-    init(coordinator: StartCoordinator) {
+    init(coordinator: StartViewModel.StartCoordinator) {
         self._viewModel = .init(wrappedValue: .init(coordinator: coordinator))
-        self.coordinator = coordinator
     }
 
     var body: some View {
-        NavigationStack(path: $coordinator.navigationViews) {
-            content
-                .navigationDestination(for: StartCoordinator.NavigationView.self) {
-                    switch $0 {
-                    case .login(let viewModel): LoginView(viewModel: viewModel)
-                    case .register(let viewModel): RegisterView(viewModel: viewModel)
-                    case .forgetPassword(let viewModel): ForgetPasswordView(viewModel: viewModel)
-                    case .setPassword(let viewModel): SetPasswordView(viewModel: viewModel)
-                    }
-                }
-        }
-    }
-
-    private var content: some View {
         VStack {
             Spacer()
             VStack(spacing: 16) {

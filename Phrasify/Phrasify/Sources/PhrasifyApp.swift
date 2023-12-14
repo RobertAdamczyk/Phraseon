@@ -9,13 +9,12 @@ import SwiftUI
 
 @main
 struct PhrasifyApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
-    @StateObject private var rootCoordinator: RootCoordinator = .init()
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
         WindowGroup {
-            rootCoordinator.createRootView()
+            RootCoordinator.RootView()
                 .tint(appColor(.paleOrange))
         }
     }

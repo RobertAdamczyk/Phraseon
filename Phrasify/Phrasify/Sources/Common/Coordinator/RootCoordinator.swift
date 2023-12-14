@@ -10,18 +10,13 @@ import Combine
 
 final class RootCoordinator: ObservableObject, Coordinator {
 
+    @Published var navigationViews: [NavigationView] = []
+
+    var isLoggedIn: Bool? { dependencies.authenticationRepository.isLoggedIn }
+
     var dependencies: Dependencies
 
     private var cancelBag = CancelBag()
-
-    func createRootView() -> AnyView {
-        let startCoordinator: StartCoordinator = .init(parentCoordinator: self)
-        if dependencies.authenticationRepository.isLoggedIn == true {
-            return .init(Text("XD"))
-        } else {
-            return .init(startCoordinator.createRootView())
-        }
-    }
 
     init() {
         dependencies = .init(authenticationRepository: .init())
@@ -33,5 +28,32 @@ final class RootCoordinator: ObservableObject, Coordinator {
             self.objectWillChange.send()
         }
         .store(in: cancelBag)
+    }
+}
+
+extension RootCoordinator {
+
+    struct RootView: View {
+
+        @StateObject private var rootCoordinator: RootCoordinator = .init()
+
+        var body: some View {
+            ZStack {
+                if rootCoordinator.isLoggedIn == true {
+                    NavigationStack(path: $rootCoordinator.navigationViews) {
+                        HomeView(coordinator: rootCoordinator)
+                    }
+                } else if rootCoordinator.isLoggedIn == false {
+                    StartCoordinator.RootView(parentCoordinator: rootCoordinator)
+                }
+            }
+        }
+    }
+}
+
+extension RootCoordinator {
+
+    enum NavigationView {
+        case empty
     }
 }

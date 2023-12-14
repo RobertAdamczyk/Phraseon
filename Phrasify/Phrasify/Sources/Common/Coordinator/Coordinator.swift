@@ -6,11 +6,8 @@
 //
 
 import Foundation
-import SwiftUI
 
 protocol Coordinator: AnyObject {
 
     var dependencies: Dependencies { get }
-
-    func createRootView() -> AnyView
 }
