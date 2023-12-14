@@ -30,7 +30,7 @@ struct StartView: View {
                 AppButton(style: .fill("Sign up", .lightBlue), action: .main(viewModel.onSignUpTapped))
             }
         }
-        .padding(.horizontal, 16)
+        .padding(16)
         .background(appColor(.black))
     }
 }
