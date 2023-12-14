@@ -18,7 +18,7 @@ struct ForgetPasswordView: View {
             Text("Type your email address and we will send you a link to reset your password.")
                 .apply(.regular, size: .M, color: .white)
             AppTextField(type: .email, text: $viewModel.email)
-            AppButton(style: .fill("Send Email", .lightBlue), action: .main(viewModel.onSendEmailTapped))
+            AppButton(style: .fill("Send Email", .lightBlue), action: .async(viewModel.onSendEmailTapped))
             Spacer()
         }
         .padding(16)

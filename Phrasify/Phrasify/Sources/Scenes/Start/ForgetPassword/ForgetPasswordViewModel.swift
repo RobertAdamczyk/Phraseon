@@ -19,7 +19,17 @@ final class ForgetPasswordViewModel: ObservableObject {
         self.coordinator = coordinator
     }
 
-    func onSendEmailTapped() {
+    @MainActor
+    func onSendEmailTapped() async {
+        do {
+            try await coordinator.dependencies.authenticationRepository.sendResetPassword(email: email)
+            close()
+        } catch {
+            print("ERROR \(error)")
+        }
+    }
+
+    private func close() {
         coordinator.closeForgetPassword()
     }
 }
