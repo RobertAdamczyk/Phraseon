@@ -90,6 +90,10 @@
 		55FF426D2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF426B2B2B923900F4D523 /* RootCoordinator+RootView.swift */; };
 		55FF426F2B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF426E2B2B925400F4D523 /* StartCoordinator+RootView.swift */; };
 		55FF42702B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF426E2B2B925400F4D523 /* StartCoordinator+RootView.swift */; };
+		55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF428B2B2BB2DD00F4D523 /* ToastView.swift */; };
+		55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF428B2B2BB2DD00F4D523 /* ToastView.swift */; };
+		55FF42902B2BB34D00F4D523 /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF428F2B2BB34D00F4D523 /* ToastView+Show.swift */; };
+		55FF42912B2BB34D00F4D523 /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF428F2B2BB34D00F4D523 /* ToastView+Show.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +140,8 @@
 		55FF42672B2B914000F4D523 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		55FF426B2B2B923900F4D523 /* RootCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		55FF426E2B2B925400F4D523 /* StartCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StartCoordinator+RootView.swift"; sourceTree = "<group>"; };
+		55FF428B2B2BB2DD00F4D523 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		55FF428F2B2BB34D00F4D523 /* ToastView+Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Show.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +270,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55FF428E2B2BB34200F4D523 /* Toast */,
 				55C279202B2A4CE9005144F1 /* Coordinator */,
 			);
 			path = Common;
@@ -413,6 +420,15 @@
 			path = RootViews;
 			sourceTree = "<group>";
 		};
+		55FF428E2B2BB34200F4D523 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				55FF428B2B2BB2DD00F4D523 /* ToastView.swift */,
+				55FF428F2B2BB34D00F4D523 /* ToastView+Show.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -539,6 +555,7 @@
 			files = (
 				55FF42652B2B912B00F4D523 /* HomeView.swift in Sources */,
 				553F1BEB2B2914700071A099 /* SetPasswordView.swift in Sources */,
+				55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
 				553F1BDF2B2907F20071A099 /* RegisterViewModel.swift in Sources */,
 				553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */,
@@ -553,6 +570,7 @@
 				552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */,
 				55C279112B2A4B38005144F1 /* RootCoordinator.swift in Sources */,
 				55FF42612B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
+				55FF42902B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
 				553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */,
 				55FF426C2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
 				55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */,
@@ -576,6 +594,7 @@
 			files = (
 				55FF42662B2B912B00F4D523 /* HomeView.swift in Sources */,
 				55C279182B2A4C0C005144F1 /* Dependencies.swift in Sources */,
+				55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
 				55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */,
 				55C278E02B2A3F3A005144F1 /* RegisterViewModel.swift in Sources */,
@@ -590,6 +609,7 @@
 				55C278E82B2A3F3A005144F1 /* ForgetPasswordViewModel.swift in Sources */,
 				55C278E92B2A3F3A005144F1 /* PhrasifyApp.swift in Sources */,
 				55FF42622B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
+				55FF42912B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
 				55C2791A2B2A4C11005144F1 /* RootCoordinator.swift in Sources */,
 				55FF426D2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
 				55C278EA2B2A3F3A005144F1 /* AppDivider.swift in Sources */,

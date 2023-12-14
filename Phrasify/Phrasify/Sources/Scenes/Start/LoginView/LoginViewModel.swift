@@ -20,11 +20,12 @@ final class LoginViewModel: ObservableObject {
         self.coordinator = coordinator
     }
 
+    @MainActor
     func onLoginTapped() async {
         do {
             try await coordinator.dependencies.authenticationRepository.login(email: email, password: password)
         } catch {
-            print("ERROR: \(error)")
+            ToastView.showError(message: error.localizedDescription)
         }
     }
 

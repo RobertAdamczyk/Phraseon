@@ -16,7 +16,7 @@ struct HomeView: View {
     }
 
     var body: some View {
-        ZStack {
+        VStack {
             Text("Home").onTapGesture(perform: viewModel.testLogout)
         }
     }
