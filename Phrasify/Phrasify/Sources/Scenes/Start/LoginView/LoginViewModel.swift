@@ -16,6 +16,10 @@ final class LoginViewModel: ObservableObject {
 
     private let coordinator: LoginCoordinator
 
+    private lazy var googleUseCase: GoogleUseCase = {
+        .init(authenticationRepository: coordinator.dependencies.authenticationRepository)
+    }()
+
     init(coordinator: LoginCoordinator) {
         self.coordinator = coordinator
     }
@@ -34,17 +38,23 @@ final class LoginViewModel: ObservableObject {
     }
 
     func onLoginWithGoogleTapped() {
-        guard let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene),
-              let viewController = windowScene.windows.first?.rootViewController else { return }
         Task {
             do {
-                try await coordinator.dependencies.authenticationRepository.loginWithGoogle(with: viewController)
+                try await googleUseCase.getGoogleAuthCredential() // Currently no error handling needed
+                await loginWithGoogleCredentials()
             } catch {
-                print("ERROR: \(error.localizedDescription)")
-                //ToastView.showError(message: error.localizedDescription)
+                return
             }
         }
     }
-}
 
-import GoogleSignIn
+    @MainActor
+    private func loginWithGoogleCredentials() async {
+        do {
+            try await googleUseCase.loginWithGoogleCredentials()
+        } catch {
+            ToastView.showError(message: error.localizedDescription)
+        }
+    }
+
+}

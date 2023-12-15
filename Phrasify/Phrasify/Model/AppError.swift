@@ -11,4 +11,6 @@ enum AppError: Error, LocalizedError {
 
     case idTokenNil
     case idClientNil
+    case googleAuthNil
+    case viewControllerNil
 }
