@@ -46,7 +46,7 @@ struct AppButton: View {
                         .transition(.opacity)
                 }
             }
-            .apply(.semibold, size: .L, color: .black)
+            .apply(.medium, size: .L, color: .black)
             .frame(height: 54)
             .frame(maxWidth: .infinity, alignment: .center)
             .background {

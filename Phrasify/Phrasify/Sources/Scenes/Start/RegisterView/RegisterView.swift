@@ -15,10 +15,7 @@ struct RegisterView: View {
         VStack(alignment: .leading, spacing: 32) {
             Text("Get your free account")
                 .apply(.bold, size: .H1, color: .white)
-            Button(action: viewModel.onLoginWithGoogleTapped, label: {
-                Image(.iosDarkRdCtn)
-                    .frame(maxWidth: .infinity, alignment: .center)
-            })
+            GoogleButton(action: viewModel.onLoginWithGoogleTapped)
             AppDivider(with: "OR")
             AppTextField(type: .email, text: $viewModel.email)
             AppButton(style: .fill("Continue with Email", .lightBlue), action: .main(viewModel.onRegisterWithEmailTapped))

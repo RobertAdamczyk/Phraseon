@@ -27,6 +27,10 @@
 		558074382B2CDF220041160B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 558074372B2CDF220041160B /* GoogleSignInSwift */; };
 		5580743A2B2CE6650041160B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074392B2CE6650041160B /* AppError.swift */; };
 		5580743B2B2CE6930041160B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074392B2CE6650041160B /* AppError.swift */; };
+		558074412B2CF08E0041160B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
+		558074422B2CF08E0041160B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
+		558074452B2CF2780041160B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074442B2CF2780041160B /* GoogleButton.swift */; };
+		558074462B2CF2780041160B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074442B2CF2780041160B /* GoogleButton.swift */; };
 		55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CC2B2A2DA1005144F1 /* AppButton.swift */; };
 		55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CE2B2A2DBA005144F1 /* FontStyle.swift */; };
 		55C278D52B2A2E36005144F1 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */; };
@@ -120,6 +124,8 @@
 		553F1BEA2B2914700071A099 /* SetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordView.swift; sourceTree = "<group>"; };
 		553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
 		558074392B2CE6650041160B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		558074402B2CF08E0041160B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		558074442B2CF2780041160B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		55C278CC2B2A2DA1005144F1 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		55C278CE2B2A2DBA005144F1 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -251,9 +257,26 @@
 			path = SetPassword;
 			sourceTree = "<group>";
 		};
+		558074432B2CF2640041160B /* GoogleSDK */ = {
+			isa = PBXGroup;
+			children = (
+				558074442B2CF2780041160B /* GoogleButton.swift */,
+			);
+			path = GoogleSDK;
+			sourceTree = "<group>";
+		};
+		558074472B2CF28F0041160B /* GoogleSDK */ = {
+			isa = PBXGroup;
+			children = (
+				558074402B2CF08E0041160B /* Roboto-Medium.ttf */,
+			);
+			path = GoogleSDK;
+			sourceTree = "<group>";
+		};
 		55C278D02B2A2E25005144F1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				558074472B2CF28F0041160B /* GoogleSDK */,
 				55C278D22B2A2E36005144F1 /* RethinkSans-Bold.ttf */,
 				55C278D32B2A2E36005144F1 /* RethinkSans-Medium.ttf */,
 				55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */,
@@ -281,6 +304,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				558074432B2CF2640041160B /* GoogleSDK */,
 				55FF428E2B2BB34200F4D523 /* Toast */,
 				55C279202B2A4CE9005144F1 /* Coordinator */,
 			);
@@ -545,6 +569,7 @@
 				552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */,
 				55C278D82B2A2E36005144F1 /* RethinkSans-SemiBold.ttf in Resources */,
 				552785C62B27A5140098FE95 /* Assets.xcassets in Resources */,
+				558074412B2CF08E0041160B /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +577,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558074422B2CF08E0041160B /* Roboto-Medium.ttf in Resources */,
 				55C278F32B2A3F3A005144F1 /* RethinkSans-Bold.ttf in Resources */,
 				55C278F42B2A3F3A005144F1 /* RethinkSans-Medium.ttf in Resources */,
 				55C278F52B2A3F3A005144F1 /* RethinkSans-Regular.ttf in Resources */,
@@ -598,6 +624,7 @@
 				553F1BED2B2914910071A099 /* SetPasswordViewModel.swift in Sources */,
 				553F1BE62B2911500071A099 /* ForgetPasswordView.swift in Sources */,
 				55C279232B2A4D18005144F1 /* StartActions.swift in Sources */,
+				558074452B2CF2780041160B /* GoogleButton.swift in Sources */,
 				55FF42682B2B914000F4D523 /* HomeViewModel.swift in Sources */,
 				55FF425E2B2A674A00F4D523 /* CancelBag.swift in Sources */,
 				55C279132B2A4B48005144F1 /* AppDelegate.swift in Sources */,
@@ -638,6 +665,7 @@
 				55C278EC2B2A3F3A005144F1 /* StartCoordinator.swift in Sources */,
 				55C278ED2B2A3F3A005144F1 /* SetPasswordViewModel.swift in Sources */,
 				55C279242B2A4D18005144F1 /* StartActions.swift in Sources */,
+				558074462B2CF2780041160B /* GoogleButton.swift in Sources */,
 				55FF42692B2B914100F4D523 /* HomeViewModel.swift in Sources */,
 				55FF425F2B2A677800F4D523 /* CancelBag.swift in Sources */,
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,

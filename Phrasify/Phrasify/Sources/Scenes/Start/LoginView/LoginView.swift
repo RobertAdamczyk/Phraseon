@@ -18,12 +18,9 @@ struct LoginView: View {
             AppTextField(type: .email, text: $viewModel.email)
             AppTextField(type: .password, text: $viewModel.password)
             AppButton(style: .text("Forget Password?"), action: .main(viewModel.onForgetPasswordTapped))
-            AppButton(style: .fill("Login", .lightBlue), action: .async(viewModel.onLoginTapped))
+            AppButton(style: .fill("Login", .lightBlue), action:  .async(viewModel.onLoginTapped))
             AppDivider(with: "OR")
-            Button(action: viewModel.onLoginWithGoogleTapped, label: {
-                Image(.iosDarkRdCtn)
-                    .frame(maxWidth: .infinity, alignment: .center)
-            })
+            GoogleButton(action: viewModel.onLoginWithGoogleTapped)
             Spacer()
         }
         .padding(16)
