@@ -34,7 +34,17 @@ final class LoginViewModel: ObservableObject {
     }
 
     func onLoginWithGoogleTapped() {
-
+        guard let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene),
+              let viewController = windowScene.windows.first?.rootViewController else { return }
+        Task {
+            do {
+                try await coordinator.dependencies.authenticationRepository.loginWithGoogle(with: viewController)
+            } catch {
+                print("ERROR: \(error.localizedDescription)")
+                //ToastView.showError(message: error.localizedDescription)
+            }
+        }
     }
 }
 
+import GoogleSignIn

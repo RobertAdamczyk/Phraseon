@@ -21,6 +21,12 @@
 		553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BE72B2911770071A099 /* ForgetPasswordViewModel.swift */; };
 		553F1BEB2B2914700071A099 /* SetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BEA2B2914700071A099 /* SetPasswordView.swift */; };
 		553F1BED2B2914910071A099 /* SetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */; };
+		558074322B2CDF130041160B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 558074312B2CDF130041160B /* GoogleSignIn */; };
+		558074342B2CDF130041160B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 558074332B2CDF130041160B /* GoogleSignInSwift */; };
+		558074362B2CDF1E0041160B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 558074352B2CDF1E0041160B /* GoogleSignIn */; };
+		558074382B2CDF220041160B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 558074372B2CDF220041160B /* GoogleSignInSwift */; };
+		5580743A2B2CE6650041160B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074392B2CE6650041160B /* AppError.swift */; };
+		5580743B2B2CE6930041160B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074392B2CE6650041160B /* AppError.swift */; };
 		55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CC2B2A2DA1005144F1 /* AppButton.swift */; };
 		55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CE2B2A2DBA005144F1 /* FontStyle.swift */; };
 		55C278D52B2A2E36005144F1 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */; };
@@ -113,6 +119,7 @@
 		553F1BE72B2911770071A099 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
 		553F1BEA2B2914700071A099 /* SetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordView.swift; sourceTree = "<group>"; };
 		553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
+		558074392B2CE6650041160B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		55C278CC2B2A2DA1005144F1 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		55C278CE2B2A2DBA005144F1 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -149,8 +156,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558074362B2CDF1E0041160B /* GoogleSignIn in Frameworks */,
 				55C279032B2A451A005144F1 /* FirebaseAuth in Frameworks */,
 				55C279052B2A451A005144F1 /* FirebaseFirestore in Frameworks */,
+				558074382B2CDF220041160B /* GoogleSignInSwift in Frameworks */,
 				55C279072B2A451A005144F1 /* FirebaseFirestoreSwift in Frameworks */,
 				55C2792D2B2A553F005144F1 /* Lottie in Frameworks */,
 			);
@@ -160,8 +169,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558074322B2CDF130041160B /* GoogleSignIn in Frameworks */,
 				55C2790A2B2A4556005144F1 /* FirebaseAuth in Frameworks */,
 				55C2790C2B2A455D005144F1 /* FirebaseFirestore in Frameworks */,
+				558074342B2CDF130041160B /* GoogleSignInSwift in Frameworks */,
 				55C2790E2B2A4562005144F1 /* FirebaseFirestoreSwift in Frameworks */,
 				55C2792B2B2A5538005144F1 /* Lottie in Frameworks */,
 			);
@@ -338,6 +349,7 @@
 		55C762192B27A618008CBF30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				558074392B2CE6650041160B /* AppError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +462,8 @@
 				55C279042B2A451A005144F1 /* FirebaseFirestore */,
 				55C279062B2A451A005144F1 /* FirebaseFirestoreSwift */,
 				55C2792C2B2A553F005144F1 /* Lottie */,
+				558074352B2CDF1E0041160B /* GoogleSignIn */,
+				558074372B2CDF220041160B /* GoogleSignInSwift */,
 			);
 			productName = Phrasify;
 			productReference = 552785BE2B27A5120098FE95 /* Phrasify.app */;
@@ -473,6 +487,8 @@
 				55C2790B2B2A455D005144F1 /* FirebaseFirestore */,
 				55C2790D2B2A4562005144F1 /* FirebaseFirestoreSwift */,
 				55C2792A2B2A5538005144F1 /* Lottie */,
+				558074312B2CDF130041160B /* GoogleSignIn */,
+				558074332B2CDF130041160B /* GoogleSignInSwift */,
 			);
 			productName = Phrasify;
 			productReference = 55C278FC2B2A3F3A005144F1 /* Phrasify_InHouse.app */;
@@ -505,6 +521,7 @@
 			packageReferences = (
 				55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				55C279292B2A5525005144F1 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 552785BF2B27A5120098FE95 /* Products */;
 			projectDirPath = "";
@@ -561,6 +578,7 @@
 				553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */,
 				55C279152B2A4BB0005144F1 /* Dependencies.swift in Sources */,
 				553F1BE32B29080B0071A099 /* LoginViewModel.swift in Sources */,
+				5580743A2B2CE6650041160B /* AppError.swift in Sources */,
 				553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */,
 				55C279272B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
@@ -600,6 +618,7 @@
 				55C278E02B2A3F3A005144F1 /* RegisterViewModel.swift in Sources */,
 				55C278E22B2A3F3A005144F1 /* LoginView.swift in Sources */,
 				55C278E32B2A3F3A005144F1 /* LoginViewModel.swift in Sources */,
+				5580743B2B2CE6930041160B /* AppError.swift in Sources */,
 				55C278E42B2A3F3A005144F1 /* MockCoordinator.swift in Sources */,
 				55C279282B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
@@ -933,6 +952,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = exactVersion;
+				version = 7.0.0;
+			};
+		};
 		55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -952,6 +979,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		558074312B2CDF130041160B /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		558074332B2CDF130041160B /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		558074352B2CDF1E0041160B /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		558074372B2CDF220041160B /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
 		55C279022B2A451A005144F1 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

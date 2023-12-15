@@ -7,6 +7,7 @@
 
 import Firebase
 import Combine
+import GoogleSignIn
 
 final class AuthenticationRepository {
 
@@ -49,6 +50,24 @@ final class AuthenticationRepository {
 
     func deleteUser() async throws {
         try await auth.currentUser?.delete()
+    }
+
+    @MainActor
+    func loginWithGoogle(with viewController: UIViewController) async throws {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { throw AppError.idClientNil }
+
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+
+        // Start the sign in flow!
+        let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: viewController)
+        guard let idToken = result.user.idToken?.tokenString else { throw AppError.idTokenNil }
+
+        let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                       accessToken: result.user.accessToken.tokenString)
+
+        try await auth.signIn(with: credential)
     }
 
     private func setupStateDidChangeListener() {
