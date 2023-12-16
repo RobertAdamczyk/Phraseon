@@ -28,6 +28,7 @@ struct RegisterView: View {
         }
         .padding(16)
         .background(appColor(.black))
+        .activitable(viewModel.shouldShowActivityView)
     }
 }
 

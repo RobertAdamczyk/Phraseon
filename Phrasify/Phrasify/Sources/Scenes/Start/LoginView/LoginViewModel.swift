@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-final class LoginViewModel: ObservableObject {
+final class LoginViewModel: ObservableObject, Activitable {
 
     typealias LoginCoordinator = Coordinator & StartActions
 
     @Published var email: String = ""
     @Published var password: String = ""
+    @Published var shouldShowActivityView: Bool = false
 
     private let coordinator: LoginCoordinator
 
@@ -50,11 +51,13 @@ final class LoginViewModel: ObservableObject {
 
     @MainActor
     private func loginWithGoogleCredentials() async {
+        startActivity()
         do {
             try await googleUseCase.loginWithGoogleCredentials()
         } catch {
             ToastView.showError(message: error.localizedDescription)
         }
+        stopActivity()
     }
 
 }

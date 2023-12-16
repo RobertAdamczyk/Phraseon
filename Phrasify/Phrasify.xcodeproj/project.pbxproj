@@ -33,6 +33,10 @@
 		558074462B2CF2780041160B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074442B2CF2780041160B /* GoogleButton.swift */; };
 		5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074492B2D12B80041160B /* GoogleUseCase.swift */; };
 		5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074492B2D12B80041160B /* GoogleUseCase.swift */; };
+		5580744E2B2E341B0041160B /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
+		5580744F2B2E341B0041160B /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
+		558074512B2E38110041160B /* Activitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074502B2E38110041160B /* Activitable.swift */; };
+		558074522B2E38110041160B /* Activitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074502B2E38110041160B /* Activitable.swift */; };
 		55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CC2B2A2DA1005144F1 /* AppButton.swift */; };
 		55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CE2B2A2DBA005144F1 /* FontStyle.swift */; };
 		55C278D52B2A2E36005144F1 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */; };
@@ -129,6 +133,8 @@
 		558074402B2CF08E0041160B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		558074442B2CF2780041160B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		558074492B2D12B80041160B /* GoogleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleUseCase.swift; sourceTree = "<group>"; };
+		5580744D2B2E341B0041160B /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		558074502B2E38110041160B /* Activitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activitable.swift; sourceTree = "<group>"; };
 		55C278CC2B2A2DA1005144F1 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		55C278CE2B2A2DBA005144F1 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -284,6 +290,15 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		5580744C2B2E340C0041160B /* ActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				5580744D2B2E341B0041160B /* ActivityView.swift */,
+				558074502B2E38110041160B /* Activitable.swift */,
+			);
+			path = ActivityView;
+			sourceTree = "<group>";
+		};
 		55C278D02B2A2E25005144F1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +330,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5580744C2B2E340C0041160B /* ActivityView */,
 				558074432B2CF2640041160B /* GoogleSDK */,
 				55FF428E2B2BB34200F4D523 /* Toast */,
 				55C279202B2A4CE9005144F1 /* Coordinator */,
@@ -613,6 +629,7 @@
 				55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
 				553F1BDF2B2907F20071A099 /* RegisterViewModel.swift in Sources */,
+				5580744E2B2E341B0041160B /* ActivityView.swift in Sources */,
 				553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */,
 				55C279152B2A4BB0005144F1 /* Dependencies.swift in Sources */,
 				553F1BE32B29080B0071A099 /* LoginViewModel.swift in Sources */,
@@ -622,6 +639,7 @@
 				5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
 				55C762302B27AB72008CBF30 /* StartView.swift in Sources */,
+				558074512B2E38110041160B /* Activitable.swift in Sources */,
 				553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */,
 				55FF426F2B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */,
@@ -655,6 +673,7 @@
 				55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
 				55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */,
+				5580744F2B2E341B0041160B /* ActivityView.swift in Sources */,
 				55C278E02B2A3F3A005144F1 /* RegisterViewModel.swift in Sources */,
 				55C278E22B2A3F3A005144F1 /* LoginView.swift in Sources */,
 				55C278E32B2A3F3A005144F1 /* LoginViewModel.swift in Sources */,
@@ -664,6 +683,7 @@
 				5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
 				55C278E52B2A3F3A005144F1 /* AppTextField.swift in Sources */,
+				558074522B2E38110041160B /* Activitable.swift in Sources */,
 				55C278E72B2A3F3A005144F1 /* StartView.swift in Sources */,
 				55FF42702B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				55C278E82B2A3F3A005144F1 /* ForgetPasswordViewModel.swift in Sources */,
