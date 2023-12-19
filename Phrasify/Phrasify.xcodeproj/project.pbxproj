@@ -37,6 +37,10 @@
 		5580744F2B2E341B0041160B /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
 		558074512B2E38110041160B /* Activitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074502B2E38110041160B /* Activitable.swift */; };
 		558074522B2E38110041160B /* Activitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074502B2E38110041160B /* Activitable.swift */; };
+		558074542B2E3C8F0041160B /* RootActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074532B2E3C8F0041160B /* RootActions.swift */; };
+		558074552B2E3C8F0041160B /* RootActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074532B2E3C8F0041160B /* RootActions.swift */; };
+		558074572B2E56E50041160B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074562B2E56E50041160B /* Project.swift */; };
+		558074582B2E56E50041160B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074562B2E56E50041160B /* Project.swift */; };
 		55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CC2B2A2DA1005144F1 /* AppButton.swift */; };
 		55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CE2B2A2DBA005144F1 /* FontStyle.swift */; };
 		55C278D52B2A2E36005144F1 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */; };
@@ -135,6 +139,8 @@
 		558074492B2D12B80041160B /* GoogleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleUseCase.swift; sourceTree = "<group>"; };
 		5580744D2B2E341B0041160B /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		558074502B2E38110041160B /* Activitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activitable.swift; sourceTree = "<group>"; };
+		558074532B2E3C8F0041160B /* RootActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootActions.swift; sourceTree = "<group>"; };
+		558074562B2E56E50041160B /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		55C278CC2B2A2DA1005144F1 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		55C278CE2B2A2DBA005144F1 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -354,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				55C279222B2A4D18005144F1 /* StartActions.swift */,
+				558074532B2E3C8F0041160B /* RootActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -401,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				558074392B2CE6650041160B /* AppError.swift */,
+				558074562B2E56E50041160B /* Project.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -625,9 +633,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FF42652B2B912B00F4D523 /* HomeView.swift in Sources */,
+				558074542B2E3C8F0041160B /* RootActions.swift in Sources */,
 				553F1BEB2B2914700071A099 /* SetPasswordView.swift in Sources */,
 				55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
+				558074572B2E56E50041160B /* Project.swift in Sources */,
 				553F1BDF2B2907F20071A099 /* RegisterViewModel.swift in Sources */,
 				5580744E2B2E341B0041160B /* ActivityView.swift in Sources */,
 				553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */,
@@ -669,9 +679,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				55FF42662B2B912B00F4D523 /* HomeView.swift in Sources */,
+				558074552B2E3C8F0041160B /* RootActions.swift in Sources */,
 				55C279182B2A4C0C005144F1 /* Dependencies.swift in Sources */,
 				55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
+				558074582B2E56E50041160B /* Project.swift in Sources */,
 				55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */,
 				5580744F2B2E341B0041160B /* ActivityView.swift in Sources */,
 				55C278E02B2A3F3A005144F1 /* RegisterViewModel.swift in Sources */,

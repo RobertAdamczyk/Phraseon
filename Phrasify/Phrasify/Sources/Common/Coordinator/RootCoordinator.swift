@@ -11,6 +11,7 @@ import Combine
 final class RootCoordinator: ObservableObject, Coordinator {
 
     @Published var navigationViews: [NavigationView] = []
+    @Published var presentedFullScreenCover: FullScreenCover?
 
     var isLoggedIn: Bool? { dependencies.authenticationRepository.isLoggedIn }
 
@@ -31,9 +32,29 @@ final class RootCoordinator: ObservableObject, Coordinator {
     }
 }
 
+extension RootCoordinator: RootActions {
+
+    func showProfile() {
+        navigationViews.append(.profile)
+    }
+    func showNewProject() {
+        presentedFullScreenCover = .newProject
+    }
+    func showProjectDetails() {
+        navigationViews.append(.projectDetails)
+    }
+}
+
 extension RootCoordinator {
 
     enum NavigationView {
-        case empty
+        case profile
+        case projectDetails
+    }
+
+    enum FullScreenCover: String, Identifiable {
+        case newProject
+
+        var id: String { self.rawValue }
     }
 }

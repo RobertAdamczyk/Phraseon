@@ -9,7 +9,7 @@ import SwiftUI
 
 final class HomeViewModel: ObservableObject {
 
-    typealias HomeCoordinator = Coordinator
+    typealias HomeCoordinator = Coordinator & RootActions
 
     private let coordinator: HomeCoordinator
 
@@ -19,5 +19,17 @@ final class HomeViewModel: ObservableObject {
 
     func testLogout() {
         try? coordinator.dependencies.authenticationRepository.logout()
+    }
+
+    func onProfileTapped() {
+        coordinator.showProfile()
+    }
+
+    func onProjectTapped() {
+        coordinator.showProjectDetails()
+    }
+
+    func onAddProjectTapped() {
+        coordinator.showNewProject()
     }
 }
