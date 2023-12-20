@@ -15,9 +15,7 @@ struct HomeView: View {
         self._viewModel = .init(wrappedValue: .init(coordinator: coordinator))
     }
 
-    let data = (1...100).map { "\($0)" }
-
-    let columns = [
+    private let columns = [
             GridItem(.flexible(), spacing: 16),
             GridItem(.flexible())
         ]
@@ -28,8 +26,8 @@ struct HomeView: View {
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: columns, spacing: 16) {
                     AddProjectCellView(action: viewModel.onAddProjectTapped)
-                    ForEach(data, id: \.self) { item in
-                        ProjectCellView(project: .init(name: "\(item)"), action: viewModel.onProjectTapped)
+                    ForEach(viewModel.projects, id: \.self) { project in
+                        ProjectCellView(project: project, action: viewModel.onProjectTapped)
                     }
                 }
             }
@@ -65,6 +63,7 @@ struct ProjectCellView: View {
                 Spacer()
             }
             .padding(16)
+            .frame(height: 128)
             .background {
                 appColor(.darkGray).opacity(0.5)
             }
@@ -90,7 +89,7 @@ struct AddProjectCellView: View {
                 Spacer()
             }
             .padding(16)
-            .padding(.vertical, 24)
+            .frame(height: 128)
             .background {
                 appColor(.darkGray).opacity(0.5)
             }

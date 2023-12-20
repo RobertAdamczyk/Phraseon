@@ -26,9 +26,11 @@ final class SelectLanguageViewModel: ObservableObject {
     }
 
     private let coordinator: SelectLanguageCoordinator
+    private let name: String
 
-    init(coordinator: SelectLanguageCoordinator) {
+    init(coordinator: SelectLanguageCoordinator, name: String) {
         self.coordinator = coordinator
+        self.name = name
     }
 
     func onLanguageTapped(_ language: Language) {
@@ -44,6 +46,6 @@ final class SelectLanguageViewModel: ObservableObject {
     }
 
     func onPrimaryButtonTapped() {
-        coordinator.showSelectTechnology()
+        coordinator.showSelectTechnology(name: name, languages: selectedLanguages)
     }
 }

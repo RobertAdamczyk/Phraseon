@@ -26,9 +26,13 @@ final class SelectTechnologyViewModel: ObservableObject {
     }
 
     private let coordinator: SelectTechnologyCoordinator
+    private let name: String
+    private let languages: [Language]
 
-    init(coordinator: SelectTechnologyCoordinator) {
+    init(coordinator: SelectTechnologyCoordinator, name: String, languages: [Language]) {
         self.coordinator = coordinator
+        self.name = name
+        self.languages = languages
     }
 
     func onTechnologyTapped(_ technology: Technology) {
@@ -43,8 +47,16 @@ final class SelectTechnologyViewModel: ObservableObject {
         }
     }
 
-    func onPrimaryButtonTapped() {
-
+    @MainActor
+    func onPrimaryButtonTapped() async {
+        guard let userId = coordinator.dependencies.authenticationRepository.currentUser?.uid else { return }
+        do {
+            _ = try await coordinator.dependencies.firestoreRepository.createProject(userId: userId, name: name, languages: languages,
+                                                                                     technologies: selectedTechnologies)
+            coordinator.dismiss()
+        } catch {
+            ToastView.showError(message: error.localizedDescription)
+        }
     }
 }
 

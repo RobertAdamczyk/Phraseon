@@ -30,14 +30,18 @@ extension NewProjectCoordinator: NewProjectActions {
         parentCoordinator.dismissFullScreenCover()
     }
 
-    func showSelectLanguage() {
-        let viewModel = SelectLanguageViewModel(coordinator: self)
+    func popToRoot() {
+        navigationViews.removeAll()
+    }
+
+    func showSelectLanguage(name: String) {
+        let viewModel = SelectLanguageViewModel(coordinator: self, name: name)
         let view: NavigationView = .selectLanguage(viewModel: viewModel)
         navigationViews.append(view)
     }
 
-    func showSelectTechnology() {
-        let viewModel = SelectTechnologyViewModel(coordinator: self)
+    func showSelectTechnology(name: String, languages: [Language]) {
+        let viewModel = SelectTechnologyViewModel(coordinator: self, name: name, languages: languages)
         let view: NavigationView = .selectTechnology(viewModel: viewModel)
         navigationViews.append(view)
     }

@@ -27,6 +27,7 @@ extension NewProjectCoordinator {
                         }
                     }
             }
+            .onDisappear(perform: coordinator.popToRoot)
         }
     }
 }

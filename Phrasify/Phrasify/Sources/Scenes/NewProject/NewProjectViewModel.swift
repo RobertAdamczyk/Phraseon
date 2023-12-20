@@ -28,7 +28,7 @@ final class NewProjectViewModel: ObservableObject {
     }
 
     func onContinueButtonTapped() {
-        coordinator.showSelectLanguage()
+        coordinator.showSelectLanguage(name: projectName)
     }
 }
 

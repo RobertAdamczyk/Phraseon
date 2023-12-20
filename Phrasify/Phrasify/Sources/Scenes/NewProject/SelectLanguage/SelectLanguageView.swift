@@ -119,6 +119,6 @@ struct SelectLanguageView: View {
 }
 
 #Preview {
-    SelectLanguageView(viewModel: .init(coordinator: MockCoordinator()))
+    SelectLanguageView(viewModel: .init(coordinator: MockCoordinator(), name: ""))
 }
 

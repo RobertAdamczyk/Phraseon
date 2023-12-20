@@ -10,6 +10,7 @@ import Foundation
 protocol NewProjectActions {
 
     func dismiss()
-    func showSelectLanguage()
-    func showSelectTechnology()
+    func popToRoot()
+    func showSelectLanguage(name: String)
+    func showSelectTechnology(name: String, languages: [Language])
 }

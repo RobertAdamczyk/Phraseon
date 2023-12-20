@@ -84,7 +84,7 @@ struct SelectTechnologyView: View {
 
     @ViewBuilder
     private var buttonView: some View {
-        AppButton(style: .fill("Continue", .paleOrange), action: .main(viewModel.onPrimaryButtonTapped),
+        AppButton(style: .fill("Create", .paleOrange), action: .async(viewModel.onPrimaryButtonTapped),
                   disabled: viewModel.shouldPrimaryButtonDisabled)
         .padding(.top, 16)
     }
@@ -119,7 +119,7 @@ struct SelectTechnologyView: View {
 }
 
 #Preview {
-    SelectTechnologyView(viewModel: .init(coordinator: MockCoordinator()))
+    SelectTechnologyView(viewModel: .init(coordinator: MockCoordinator(), name: "", languages: []))
 }
 
 

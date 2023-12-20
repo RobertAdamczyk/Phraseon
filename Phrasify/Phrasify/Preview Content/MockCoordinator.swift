@@ -11,7 +11,7 @@ import SwiftUI
 
 final class MockCoordinator: Coordinator, StartActions, RootActions, NewProjectActions {
 
-    var dependencies: Dependencies = .init(authenticationRepository: .init())
+    var dependencies: Dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init())
 
     func showLogin() { /*empty*/ }
 
@@ -29,8 +29,8 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, NewProjectA
     func presentNewProject() { /*empty*/ }
     func dismissFullScreenCover() { /*empty*/ }
     func showProjectDetails() { /*empty*/ }
-    func showSelectLanguage() { /*empty*/ }
-    func showSelectTechnology() { /*empty*/ }
+    func showSelectLanguage(name: String) { /*empty*/ }
+    func showSelectTechnology(name: String, languages: [Language]) { /*empty*/ }
     func dismiss() { /*empty*/ }
 
 }

@@ -17,9 +17,9 @@ final class StartCoordinator: Coordinator, ObservableObject {
         parentCoordinator.dependencies
     }
 
-    private let parentCoordinator: any ParentCoordinator
+    private let parentCoordinator: ParentCoordinator
 
-    init(parentCoordinator: any ParentCoordinator) {
+    init(parentCoordinator: ParentCoordinator) {
         self.parentCoordinator = parentCoordinator
     }
 }

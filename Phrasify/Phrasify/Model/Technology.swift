@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Technology: String, CaseIterable {
+enum Technology: String, CaseIterable, Codable {
     case swift
     case kotlin
 }
