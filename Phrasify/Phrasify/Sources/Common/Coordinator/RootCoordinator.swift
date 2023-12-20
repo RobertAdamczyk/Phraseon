@@ -37,11 +37,17 @@ extension RootCoordinator: RootActions {
     func showProfile() {
         navigationViews.append(.profile)
     }
-    func showNewProject() {
+
+    func presentNewProject() {
         presentedFullScreenCover = .newProject
     }
+
     func showProjectDetails() {
         navigationViews.append(.projectDetails)
+    }
+
+    func dismissFullScreenCover() {
+        presentedFullScreenCover = nil
     }
 }
 

@@ -36,7 +36,7 @@ struct HomeView: View {
             }
             .ignoresSafeArea(edges: .bottom)
         }
-        .padding(.horizontal, 16)
+        .padding(16)
         .background(appColor(.black))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {

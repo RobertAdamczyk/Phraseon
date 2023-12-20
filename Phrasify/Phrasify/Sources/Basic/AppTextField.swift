@@ -25,7 +25,7 @@ struct AppTextField: View {
     @ViewBuilder
     private func makeTextField() -> some View {
         switch type {
-        case .email:
+        case .email, .projectName:
             TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.darkGray)))
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
@@ -69,12 +69,14 @@ extension AppTextField {
         case email
         case password
         case confirmPassword
+        case projectName
 
         var title: String {
             return switch self {
             case .email: "Email"
             case .password: "Password"
             case .confirmPassword: "Confirm Password"
+            case .projectName: "Project Name"
             }
         }
 
@@ -82,6 +84,7 @@ extension AppTextField {
             return switch self {
             case .email: "hallo@phrasify.com"
             case .password, .confirmPassword: "Your password"
+            case .projectName: "Your project name"
             }
         }
     }

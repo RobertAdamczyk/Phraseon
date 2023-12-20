@@ -13,7 +13,7 @@ extension StartCoordinator {
 
         @StateObject private var coordinator: StartCoordinator
 
-        init(parentCoordinator: Coordinator) {
+        init(parentCoordinator: StartCoordinator.ParentCoordinator) {
             self._coordinator = .init(wrappedValue: .init(parentCoordinator: parentCoordinator))
         }
 

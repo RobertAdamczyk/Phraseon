@@ -17,10 +17,6 @@ final class HomeViewModel: ObservableObject {
         self.coordinator = coordinator
     }
 
-    func testLogout() {
-        try? coordinator.dependencies.authenticationRepository.logout()
-    }
-
     func onProfileTapped() {
         coordinator.showProfile()
     }
@@ -30,6 +26,6 @@ final class HomeViewModel: ObservableObject {
     }
 
     func onAddProjectTapped() {
-        coordinator.showNewProject()
+        coordinator.presentNewProject()
     }
 }

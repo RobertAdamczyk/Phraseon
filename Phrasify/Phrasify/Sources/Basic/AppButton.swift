@@ -12,8 +12,15 @@ struct AppButton: View {
 
     let style: Style
     let action: Action
+    let disabled: Bool
 
     @State private var loading: Bool = false
+
+    init(style: Style, action: Action, disabled: Bool = false) {
+        self.style = style
+        self.action = action
+        self.disabled = disabled
+    }
 
     var body: some View {
         SwiftUI.Button {
@@ -30,6 +37,7 @@ struct AppButton: View {
         } label: {
             makeBody()
         }
+        .disabled(disabled)
     }
 
     @ViewBuilder
@@ -62,8 +70,13 @@ struct AppButton: View {
     private func makeBackground() -> some View {
         switch style {
         case .fill(_, let color):
-            RoundedRectangle(cornerRadius: 16)
-                .foregroundColor(color.rawValue)
+            if disabled {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(appColor(.darkGray))
+            } else {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(color.rawValue.gradient)
+            }
         default:
             EmptyView()
         }
@@ -96,7 +109,12 @@ extension AppButton {
 }
 
 #Preview {
-    AppButton(style: .fill("TEST 1", .lightBlue), action: .async({
-        try? await Task.sleep(nanoseconds: 2_000_000_000)
-    }))
+    VStack(spacing: 16) {
+        AppButton(style: .fill("TEST 1", .lightBlue), action: .async({
+            try? await Task.sleep(nanoseconds: 2_000_000_000)
+        }))
+        AppButton(style: .fill("TEST 1", .lightBlue), action: .async({
+            try? await Task.sleep(nanoseconds: 2_000_000_000)
+        }), disabled: true)
+    }
 }
