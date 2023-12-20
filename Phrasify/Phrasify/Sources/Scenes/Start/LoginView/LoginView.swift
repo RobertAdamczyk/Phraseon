@@ -13,8 +13,7 @@ struct LoginView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 32) {
-            Text("Login in to Phrasify")
-                .apply(.bold, size: .H1, color: .white)
+            AppTitle(title: "Login in to Phrasify")
             AppTextField(type: .email, text: $viewModel.email)
             AppTextField(type: .password, text: $viewModel.password)
             AppButton(style: .text("Forget Password?"), action: .main(viewModel.onForgetPasswordTapped))

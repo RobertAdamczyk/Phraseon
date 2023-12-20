@@ -25,6 +25,14 @@
 		551AA4172B33612500F0B1E2 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4152B33612500F0B1E2 /* Language.swift */; };
 		551AA41A2B33667100F0B1E2 /* TagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4192B33667100F0B1E2 /* TagLayout.swift */; };
 		551AA41B2B33667100F0B1E2 /* TagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4192B33667100F0B1E2 /* TagLayout.swift */; };
+		551AA41D2B3379B700F0B1E2 /* Technology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA41C2B3379B700F0B1E2 /* Technology.swift */; };
+		551AA41E2B3379B700F0B1E2 /* Technology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA41C2B3379B700F0B1E2 /* Technology.swift */; };
+		551AA4212B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4202B337A8A00F0B1E2 /* SelectTechnologyView.swift */; };
+		551AA4222B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4202B337A8A00F0B1E2 /* SelectTechnologyView.swift */; };
+		551AA4242B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4232B337A9200F0B1E2 /* SelectTechnologyViewModel.swift */; };
+		551AA4252B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4232B337A9200F0B1E2 /* SelectTechnologyViewModel.swift */; };
+		551AA4272B337D2900F0B1E2 /* AppTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4262B337D2900F0B1E2 /* AppTitle.swift */; };
+		551AA4282B337D2900F0B1E2 /* AppTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4262B337D2900F0B1E2 /* AppTitle.swift */; };
 		552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552785C12B27A5120098FE95 /* PhrasifyApp.swift */; };
 		552785C62B27A5140098FE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C52B27A5140098FE95 /* Assets.xcassets */; };
 		552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C92B27A5140098FE95 /* Preview Assets.xcassets */; };
@@ -144,6 +152,10 @@
 		551AA4122B335D2400F0B1E2 /* SelectLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewModel.swift; sourceTree = "<group>"; };
 		551AA4152B33612500F0B1E2 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		551AA4192B33667100F0B1E2 /* TagLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLayout.swift; sourceTree = "<group>"; };
+		551AA41C2B3379B700F0B1E2 /* Technology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Technology.swift; sourceTree = "<group>"; };
+		551AA4202B337A8A00F0B1E2 /* SelectTechnologyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyView.swift; sourceTree = "<group>"; };
+		551AA4232B337A9200F0B1E2 /* SelectTechnologyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyViewModel.swift; sourceTree = "<group>"; };
+		551AA4262B337D2900F0B1E2 /* AppTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTitle.swift; sourceTree = "<group>"; };
 		552785BE2B27A5120098FE95 /* Phrasify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phrasify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		552785C12B27A5120098FE95 /* PhrasifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasifyApp.swift; sourceTree = "<group>"; };
 		552785C52B27A5140098FE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -232,6 +244,7 @@
 		5513C24D2B325E1C004C1933 /* NewProject */ = {
 			isa = PBXGroup;
 			children = (
+				551AA41F2B337A7500F0B1E2 /* SelectTechnology */,
 				551AA40E2B335CE700F0B1E2 /* SelectLanguage */,
 				5513C24E2B325E2F004C1933 /* NewProjectView.swift */,
 				5513C2512B325E7A004C1933 /* NewProjectViewModel.swift */,
@@ -254,6 +267,15 @@
 				551AA4192B33667100F0B1E2 /* TagLayout.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		551AA41F2B337A7500F0B1E2 /* SelectTechnology */ = {
+			isa = PBXGroup;
+			children = (
+				551AA4202B337A8A00F0B1E2 /* SelectTechnologyView.swift */,
+				551AA4232B337A9200F0B1E2 /* SelectTechnologyViewModel.swift */,
+			);
+			path = SelectTechnology;
 			sourceTree = "<group>";
 		};
 		552785B52B27A5120098FE95 = {
@@ -467,6 +489,7 @@
 				558074392B2CE6650041160B /* AppError.swift */,
 				558074562B2E56E50041160B /* Project.swift */,
 				551AA4152B33612500F0B1E2 /* Language.swift */,
+				551AA41C2B3379B700F0B1E2 /* Technology.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -497,6 +520,7 @@
 				55C278CC2B2A2DA1005144F1 /* AppButton.swift */,
 				55C278CE2B2A2DBA005144F1 /* FontStyle.swift */,
 				55C278D92B2A2F99005144F1 /* AppColor.swift */,
+				551AA4262B337D2900F0B1E2 /* AppTitle.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -712,6 +736,7 @@
 				55C279272B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
+				551AA4242B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				55C2DAC72B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
 				551AA4102B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */,
 				55C762302B27AB72008CBF30 /* StartView.swift in Sources */,
@@ -727,12 +752,15 @@
 				55FF426C2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
 				55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */,
 				5513C24F2B325E2F004C1933 /* NewProjectView.swift in Sources */,
+				551AA4272B337D2900F0B1E2 /* AppTitle.swift in Sources */,
 				55C279172B2A4BE7005144F1 /* Localized.swift in Sources */,
 				55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */,
 				55C2791D2B2A4C60005144F1 /* Coordinator.swift in Sources */,
+				551AA41D2B3379B700F0B1E2 /* Technology.swift in Sources */,
 				553F1BED2B2914910071A099 /* SetPasswordViewModel.swift in Sources */,
 				553F1BE62B2911500071A099 /* ForgetPasswordView.swift in Sources */,
 				55C279232B2A4D18005144F1 /* StartActions.swift in Sources */,
+				551AA4212B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				551AA4162B33612500F0B1E2 /* Language.swift in Sources */,
 				558074452B2CF2780041160B /* GoogleButton.swift in Sources */,
 				55FF42682B2B914000F4D523 /* HomeViewModel.swift in Sources */,
@@ -767,6 +795,7 @@
 				55C279282B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
+				551AA4252B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				55C2DAC82B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
 				551AA4112B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */,
 				55C278E52B2A3F3A005144F1 /* AppTextField.swift in Sources */,
@@ -782,12 +811,15 @@
 				55FF426D2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
 				55C278EA2B2A3F3A005144F1 /* AppDivider.swift in Sources */,
 				5513C2502B325E2F004C1933 /* NewProjectView.swift in Sources */,
+				551AA4282B337D2900F0B1E2 /* AppTitle.swift in Sources */,
 				55C2791B2B2A4C17005144F1 /* Localized.swift in Sources */,
 				55C278EB2B2A3F3A005144F1 /* FontStyle.swift in Sources */,
 				55C2791E2B2A4CB8005144F1 /* Coordinator.swift in Sources */,
+				551AA41E2B3379B700F0B1E2 /* Technology.swift in Sources */,
 				55C278EC2B2A3F3A005144F1 /* StartCoordinator.swift in Sources */,
 				55C278ED2B2A3F3A005144F1 /* SetPasswordViewModel.swift in Sources */,
 				55C279242B2A4D18005144F1 /* StartActions.swift in Sources */,
+				551AA4222B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				551AA4172B33612500F0B1E2 /* Language.swift in Sources */,
 				558074462B2CF2780041160B /* GoogleButton.swift in Sources */,
 				55FF42692B2B914100F4D523 /* HomeViewModel.swift in Sources */,

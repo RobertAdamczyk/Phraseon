@@ -13,8 +13,7 @@ struct RegisterView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 32) {
-            Text("Get your free account")
-                .apply(.bold, size: .H1, color: .white)
+            AppTitle(title: "Get your free account")
             GoogleButton(action: viewModel.onLoginWithGoogleTapped)
             AppDivider(with: "OR")
             AppTextField(type: .email, text: $viewModel.email)

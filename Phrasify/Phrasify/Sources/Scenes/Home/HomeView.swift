@@ -24,8 +24,7 @@ struct HomeView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Projects")
-                .apply(.bold, size: .H1, color: .white)
+            AppTitle(title: "Projects")
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: columns, spacing: 16) {
                     AddProjectCellView(action: viewModel.onAddProjectTapped)

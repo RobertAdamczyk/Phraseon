@@ -30,7 +30,9 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, NewProjectA
     func dismissFullScreenCover() { /*empty*/ }
     func showProjectDetails() { /*empty*/ }
     func showSelectLanguage() { /*empty*/ }
+    func showSelectTechnology() { /*empty*/ }
     func dismiss() { /*empty*/ }
+
 }
 
 #endif

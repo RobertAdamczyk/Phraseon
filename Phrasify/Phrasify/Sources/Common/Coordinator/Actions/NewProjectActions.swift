@@ -11,4 +11,5 @@ protocol NewProjectActions {
 
     func dismiss()
     func showSelectLanguage()
+    func showSelectTechnology()
 }

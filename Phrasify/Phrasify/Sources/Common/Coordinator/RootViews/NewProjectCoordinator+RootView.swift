@@ -23,6 +23,7 @@ extension NewProjectCoordinator {
                     .navigationDestination(for: NewProjectCoordinator.NavigationView.self) {
                         switch $0 {
                         case .selectLanguage(let viewModel): SelectLanguageView(viewModel: viewModel)
+                        case .selectTechnology(let viewModel): SelectTechnologyView(viewModel: viewModel)
                         }
                     }
             }

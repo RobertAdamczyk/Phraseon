@@ -35,6 +35,12 @@ extension NewProjectCoordinator: NewProjectActions {
         let view: NavigationView = .selectLanguage(viewModel: viewModel)
         navigationViews.append(view)
     }
+
+    func showSelectTechnology() {
+        let viewModel = SelectTechnologyViewModel(coordinator: self)
+        let view: NavigationView = .selectTechnology(viewModel: viewModel)
+        navigationViews.append(view)
+    }
 }
 
 extension NewProjectCoordinator {
@@ -42,6 +48,7 @@ extension NewProjectCoordinator {
     enum NavigationView: Identifiable, Equatable, Hashable {
 
         case selectLanguage(viewModel: SelectLanguageViewModel)
+        case selectTechnology(viewModel: SelectTechnologyViewModel)
 
         static func == (lhs: NewProjectCoordinator.NavigationView, rhs: NewProjectCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -54,6 +61,7 @@ extension NewProjectCoordinator {
         var id: String {
             switch self {
             case .selectLanguage: return "001"
+            case .selectTechnology: return "002"
             }
         }
     }

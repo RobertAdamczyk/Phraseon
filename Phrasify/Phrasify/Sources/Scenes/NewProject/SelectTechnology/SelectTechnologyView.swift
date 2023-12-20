@@ -1,5 +1,5 @@
 //
-//  SelectLanguageView.swift
+//  SelectTechnologyView.swift
 //  Phrasify
 //
 //  Created by Robert Adamczyk on 20.12.23.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct SelectLanguageView: View {
+struct SelectTechnologyView: View {
 
-    @ObservedObject var viewModel: SelectLanguageViewModel
+    @ObservedObject var viewModel: SelectTechnologyViewModel
 
     @Namespace private var animation
 
@@ -32,8 +32,8 @@ struct SelectLanguageView: View {
 
     @ViewBuilder
     private var titleView: some View {
-        AppTitle(title: "Languages",
-                 subtitle: "Choose supported languages – remember, you can change it at any time.")
+        AppTitle(title: "Technologies",
+                 subtitle: "Choose the technology in which the project is created – remember, you can change it at any time.")
         .padding(.bottom, 16)
         .background(appColor(.black))
     }
@@ -44,16 +44,16 @@ struct SelectLanguageView: View {
             HStack(spacing: 8) {
                 if viewModel.shouldShowPlaceholder {
                     ZStack(alignment: .leading) {
-                        Text("Select language")
+                        Text("Select technology")
                             .apply(.regular, size: .M, color: .darkGray)
-                        makeSelectedLanguageView(title: "PLACEHOLDER").opacity(0)
+                        makeSelectedTechnologyView(title: "PLACEHOLDER").opacity(0)
                     }
                 }
-                ForEach(viewModel.selectedLanguages, id: \.self) { language in
-                    makeSelectedLanguageView(title: language.localizedTitle)
-                        .matchedGeometryEffect(id: language, in: animation)
+                ForEach(viewModel.selectedTechnologies, id: \.self) { technology in
+                    makeSelectedTechnologyView(title: technology.title)
+                        .matchedGeometryEffect(id: technology, in: animation)
                         .onTapGesture {
-                            viewModel.onLanguageDeleteTapped(language)
+                            viewModel.onTechnologyDeleteTapped(technology)
                         }
                 }
             }
@@ -67,11 +67,11 @@ struct SelectLanguageView: View {
     private var verticalScrollView: some View {
         ScrollView(.vertical, showsIndicators: false) {
             TagLayout(alignment: .center) {
-                ForEach(viewModel.availableLanguages, id: \.self) { language in
-                    makeLanguageView(title: language.localizedTitle)
-                        .matchedGeometryEffect(id: language, in: animation)
+                ForEach(viewModel.availableTechnologies, id: \.self) { technology in
+                    makeTechnologyView(title: technology.title)
+                        .matchedGeometryEffect(id: technology, in: animation)
                         .onTapGesture {
-                            viewModel.onLanguageTapped(language)
+                            viewModel.onTechnologyTapped(technology)
                         }
                  }
             }
@@ -90,7 +90,7 @@ struct SelectLanguageView: View {
     }
 
     @ViewBuilder
-    private func makeSelectedLanguageView(title: String) -> some View {
+    private func makeSelectedTechnologyView(title: String) -> some View {
         HStack(spacing: 8) {
             Text(title)
             Image(systemName: "checkmark")
@@ -104,7 +104,7 @@ struct SelectLanguageView: View {
     }
 
     @ViewBuilder
-    private func makeLanguageView(title: String) -> some View {
+    private func makeTechnologyView(title: String) -> some View {
         HStack(spacing: 8) {
             Text(title)
             Image(systemName: "plus")
@@ -119,6 +119,7 @@ struct SelectLanguageView: View {
 }
 
 #Preview {
-    SelectLanguageView(viewModel: .init(coordinator: MockCoordinator()))
+    SelectTechnologyView(viewModel: .init(coordinator: MockCoordinator()))
 }
+
 

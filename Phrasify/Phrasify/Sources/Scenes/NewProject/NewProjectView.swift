@@ -17,10 +17,8 @@ struct NewProjectView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Create a new project")
-                .apply(.bold, size: .H1, color: .white)
-            Text("Enter the project name – remember, you can change it at any time.")
-                .apply(.regular, size: .M, color: .white)
+            AppTitle(title: "Create a new project",
+                     subtitle: "Enter the project name – remember, you can change it at any time.")
             AppTextField(type: .projectName, text: $viewModel.projectName)
                 .padding(.top, 32)
             Spacer()

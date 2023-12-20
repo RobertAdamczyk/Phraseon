@@ -13,8 +13,7 @@ struct SetPasswordView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 32) {
-            Text("Set your password")
-                .apply(.bold, size: .H1, color: .white)
+            AppTitle(title: "Set your password")
             AppTextField(type: .password, text: $viewModel.password)
             AppTextField(type: .confirmPassword, text: $viewModel.confirmPassword)
             AppButton(style: .fill("Create an Account", .lightBlue), action: .async(viewModel.onCreateAccountTapped))

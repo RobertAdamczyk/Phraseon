@@ -44,6 +44,6 @@ final class SelectLanguageViewModel: ObservableObject {
     }
 
     func onPrimaryButtonTapped() {
-
+        coordinator.showSelectTechnology()
     }
 }

@@ -13,10 +13,8 @@ struct ForgetPasswordView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 32) {
-            Text("Forget Password?")
-                .apply(.bold, size: .H1, color: .white)
-            Text("Type your email address and we will send you a link to reset your password.")
-                .apply(.regular, size: .M, color: .white)
+            AppTitle(title: "Forget Password?",
+                     subtitle: "Type your email address and we will send you a link to reset your password.")
             AppTextField(type: .email, text: $viewModel.email)
             AppButton(style: .fill("Send Email", .lightBlue), action: .async(viewModel.onSendEmailTapped))
             Spacer()
