@@ -84,7 +84,7 @@ struct SelectTechnologyView: View {
 
     @ViewBuilder
     private var buttonView: some View {
-        AppButton(style: .fill("Create", .paleOrange), action: .async(viewModel.onPrimaryButtonTapped),
+        AppButton(style: .fill("Create", .lightBlue), action: .async(viewModel.onPrimaryButtonTapped),
                   disabled: viewModel.shouldPrimaryButtonDisabled)
         .padding(.top, 16)
     }

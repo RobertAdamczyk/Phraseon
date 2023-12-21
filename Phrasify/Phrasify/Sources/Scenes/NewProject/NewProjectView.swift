@@ -22,7 +22,7 @@ struct NewProjectView: View {
             AppTextField(type: .projectName, text: $viewModel.projectName)
                 .padding(.top, 32)
             Spacer()
-            AppButton(style: .fill("Continue", .paleOrange), action: .main(viewModel.onContinueButtonTapped),
+            AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped),
                       disabled: viewModel.shouldPrimaryButtonDisabled)
         }
         .padding(16)

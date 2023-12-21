@@ -8,8 +8,8 @@
 import Foundation
 
 enum Technology: String, CaseIterable, Codable {
-    case swift
-    case kotlin
+    case swift = "SWIFT"
+    case kotlin = "KOTLIN"
 }
 
 extension Technology {
