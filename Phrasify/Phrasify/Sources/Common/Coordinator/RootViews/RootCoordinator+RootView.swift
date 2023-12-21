@@ -28,6 +28,7 @@ extension RootCoordinator {
                     .fullScreenCover(item: $rootCoordinator.presentedFullScreenCover) {
                         switch $0 {
                         case .createProject: CreateProjectCoordinator.RootView(parentCoordinator: rootCoordinator)
+                        case .createKey(let project): CreateKeyCoordinator.RootView(parentCoordinator: rootCoordinator, project: project)
                         }
                     }
                 } else if rootCoordinator.isLoggedIn == false {

@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ProjectDetailViewModel: ObservableObject {
 
-    typealias ProjectDetailCoordinator = Coordinator
+    typealias ProjectDetailCoordinator = Coordinator & RootActions
 
     @Published var selectedBar: ProjectDetailBar = .all
     @Published var searchText = ""
@@ -24,6 +24,6 @@ final class ProjectDetailViewModel: ObservableObject {
     }
 
     func onAddButtonTapped() {
-
+        coordinator.presentCreateKey(project: project)
     }
 }

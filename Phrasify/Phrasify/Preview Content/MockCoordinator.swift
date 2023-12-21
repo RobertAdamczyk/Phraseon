@@ -27,6 +27,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, CreateProje
 
     func showProfile() { /*empty*/ }
     func presentCreateProject() { /*empty*/ }
+    func presentCreateKey(project: Project) { /*empty*/ }
     func dismissFullScreenCover() { /*empty*/ }
     func showProjectDetails(project: Project) { /*empty*/ }
     func showSelectLanguage(name: String) { /*empty*/ }

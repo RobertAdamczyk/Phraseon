@@ -25,8 +25,8 @@ struct AppTextField: View {
     @ViewBuilder
     private func makeTextField() -> some View {
         switch type {
-        case .email, .projectName:
-            TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.darkGray)))
+        case .email, .projectName, .keyId, .translation:
+            TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.darkGray)), axis: type.axis)
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
                 .apply(.medium, size: .L, color: .white)
@@ -70,6 +70,8 @@ extension AppTextField {
         case password
         case confirmPassword
         case projectName
+        case keyId
+        case translation(String)
 
         var title: String {
             return switch self {
@@ -77,6 +79,8 @@ extension AppTextField {
             case .password: "Password"
             case .confirmPassword: "Confirm Password"
             case .projectName: "Project Name"
+            case .keyId: "Key Identifier"
+            case .translation(let baseLanguage): "Translation into base language (\(baseLanguage))"
             }
         }
 
@@ -85,6 +89,15 @@ extension AppTextField {
             case .email: "hallo@phrasify.com"
             case .password, .confirmPassword: "Your password"
             case .projectName: "Your project name"
+            case .keyId: "this_is_my_phrase"
+            case .translation: "Translated text"
+            }
+        }
+
+        var axis: Axis {
+            return switch self {
+            case .email, .password, .confirmPassword: .horizontal
+            case .projectName, .keyId, .translation: .vertical
             }
         }
     }

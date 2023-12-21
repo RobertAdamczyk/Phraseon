@@ -42,6 +42,10 @@ extension RootCoordinator: RootActions {
         presentedFullScreenCover = .createProject
     }
 
+    func presentCreateKey(project: Project) {
+        presentedFullScreenCover = .createKey(project)
+    }
+
     func showProjectDetails(project: Project) {
         let viewModel = ProjectDetailViewModel(coordinator: self, project: project)
         let view: NavigationView = .projectDetails(viewModel: viewModel)
@@ -75,9 +79,15 @@ extension RootCoordinator {
         }
     }
 
-    enum FullScreenCover: String, Identifiable {
+    enum FullScreenCover: Identifiable {
         case createProject
+        case createKey(Project)
 
-        var id: String { self.rawValue }
+        var id: String {
+            switch self {
+            case .createProject: "001"
+            case .createKey: "002"
+            }
+        }
     }
 }
