@@ -18,7 +18,7 @@ final class HomeViewModel: ObservableObject {
 
     private var cancelBag = Set<AnyCancellable>()
 
-    private var userId: String? {
+    private var userId: UserID? {
         coordinator.dependencies.authenticationRepository.currentUser?.uid
     }
 
@@ -33,8 +33,8 @@ final class HomeViewModel: ObservableObject {
         try? coordinator.dependencies.authenticationRepository.logout()
     }
 
-    func onProjectTapped() {
-        coordinator.showProjectDetails()
+    func onProjectTapped(project: Project) {
+        coordinator.showProjectDetails(project: project)
     }
 
     func onAddProjectTapped() {

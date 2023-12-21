@@ -49,16 +49,20 @@ struct HomeView: View {
 struct ProjectCellView: View {
 
     let project: Project
-    let action: () -> Void
+    let action: (Project) -> Void
+
+    private var technologies: String {
+        project.technologies.compactMap { $0.title }.joined(separator: "/")
+    }
 
     var body: some View {
-        Button(action: action, label: {
+        Button(action: executeAction, label: {
             HStack {
                 VStack(alignment: .leading, spacing: 64) {
                     Text(project.name)
                         .apply(.bold, size: .M, color: .white)
-                    Text(project.id ?? "")
-                        .apply(.regular, size: .S, color: .white)
+                    Text(technologies)
+                        .apply(.regular, size: .S, color: .lightGray)
                 }
                 Spacer()
             }
@@ -69,6 +73,10 @@ struct ProjectCellView: View {
             }
             .clipShape(RoundedRectangle(cornerRadius: 8))
         })
+    }
+
+    private func executeAction() {
+        action(project)
     }
 }
 

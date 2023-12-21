@@ -14,11 +14,15 @@ struct Project: Codable, Hashable {
     var name: String
     var technologies: [Technology]
     var languages: [Language]
+    var members: [UserID]
+    var owner: UserID
 
     enum CodingKeys: String, CodingKey {
         case id
         case name
         case technologies
         case languages
+        case members
+        case owner
     }
 }

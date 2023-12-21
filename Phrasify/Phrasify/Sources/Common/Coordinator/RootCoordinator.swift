@@ -42,8 +42,10 @@ extension RootCoordinator: RootActions {
         presentedFullScreenCover = .newProject
     }
 
-    func showProjectDetails() {
-        navigationViews.append(.projectDetails)
+    func showProjectDetails(project: Project) {
+        let viewModel = ProjectDetailViewModel(coordinator: self, project: project)
+        let view: NavigationView = .projectDetails(viewModel: viewModel)
+        navigationViews.append(view)
     }
 
     func dismissFullScreenCover() {
@@ -53,9 +55,24 @@ extension RootCoordinator: RootActions {
 
 extension RootCoordinator {
 
-    enum NavigationView {
+    enum NavigationView: Identifiable, Hashable, Equatable {
         case profile
-        case projectDetails
+        case projectDetails(viewModel: ProjectDetailViewModel)
+
+        static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
+            lhs.id == rhs.id
+        }
+
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
+
+        var id: String {
+            switch self {
+            case .profile: return "001"
+            case .projectDetails: return "002"
+            }
+        }
     }
 
     enum FullScreenCover: String, Identifiable {

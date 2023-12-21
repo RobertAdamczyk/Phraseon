@@ -21,7 +21,7 @@ extension RootCoordinator {
                             .navigationDestination(for: RootCoordinator.NavigationView.self) {
                                 switch $0 {
                                 case .profile: Text("Profile")
-                                case .projectDetails: Text("projectDetails")
+                                case .projectDetails(let viewModel): ProjectDetailView(viewModel: viewModel)
                                 }
                             }
                     }

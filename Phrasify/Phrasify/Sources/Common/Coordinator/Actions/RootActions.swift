@@ -10,7 +10,7 @@ import Foundation
 protocol RootActions {
 
     func showProfile()
-    func showProjectDetails()
+    func showProjectDetails(project: Project)
 
     func presentNewProject()
     func dismissFullScreenCover()

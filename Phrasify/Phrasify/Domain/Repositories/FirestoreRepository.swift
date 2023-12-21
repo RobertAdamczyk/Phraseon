@@ -22,28 +22,18 @@ final class FirestoreRepository {
         case projects
     }
 
-    // MARK: Babies
+    // MARK: Projects
 
-    func getProjects(userId: String) async throws -> [Project] {
-        let snapshot = try await db.collection(Collections.users.rawValue).document(userId)
-                                   .collection(Collections.projects.rawValue).getDocuments()
-        let projects: [Project] = try snapshot.documents.map { document in
-            return try document.data(as: Project.self)
-        }
-        return projects
-    }
-
-    func createProject(userId: String, name: String, languages: [Language], technologies: [Technology]) async throws -> String {
-        let ref =  db.collection(Collections.users.rawValue).document(userId)
-                     .collection(Collections.projects.rawValue).document()
-        let project: Project = .init(name: name, technologies: technologies, languages: languages)
+    func createProject(userId: UserID, name: String, languages: [Language], technologies: [Technology]) async throws -> String {
+        let ref =  db.collection(Collections.projects.rawValue).document()
+        let project: Project = .init(name: name, technologies: technologies, languages: languages, 
+                                     members: [userId], owner: userId)
         try await ref.setData(from: project)
         return ref.documentID
     }
 
-    func getProjectsPublisher(userId: String) -> AnyPublisher<[Project], Never> {
-        return db.collection(Collections.users.rawValue).document(userId)
-                 .collection(Collections.projects.rawValue)
+    func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Never> {
+        return db.collection(Collections.projects.rawValue).whereField(Project.CodingKeys.members.rawValue, arrayContains: userId)
                  .snapshotPublisher()
                  .map { snapshot in
                      snapshot.documents.compactMap { document -> Project? in
