@@ -1,5 +1,5 @@
 //
-//  NewProjectViewModel.swift
+//  CreateProjectViewModel.swift
 //  Phrasify
 //
 //  Created by Robert Adamczyk on 20.12.23.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-final class NewProjectViewModel: ObservableObject {
+final class CreateProjectViewModel: ObservableObject {
 
-    typealias NewProjectCoordinator = Coordinator & NewProjectActions
+    typealias CreateProjectCoordinator = Coordinator & CreateProjectActions
 
     @Published var projectName: String = ""
 
@@ -17,9 +17,9 @@ final class NewProjectViewModel: ObservableObject {
         projectName.count < 3
     }
 
-    private let coordinator: NewProjectCoordinator
+    private let coordinator: CreateProjectCoordinator
 
-    init(coordinator: NewProjectCoordinator) {
+    init(coordinator: CreateProjectCoordinator) {
         self.coordinator = coordinator
     }
 

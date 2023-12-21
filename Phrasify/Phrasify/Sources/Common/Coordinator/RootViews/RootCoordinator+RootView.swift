@@ -27,7 +27,7 @@ extension RootCoordinator {
                     }
                     .fullScreenCover(item: $rootCoordinator.presentedFullScreenCover) {
                         switch $0 {
-                        case .newProject: NewProjectCoordinator.RootView(parentCoordinator: rootCoordinator)
+                        case .createProject: CreateProjectCoordinator.RootView(parentCoordinator: rootCoordinator)
                         }
                     }
                 } else if rootCoordinator.isLoggedIn == false {

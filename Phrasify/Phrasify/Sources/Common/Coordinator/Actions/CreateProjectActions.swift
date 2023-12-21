@@ -1,5 +1,5 @@
 //
-//  NewProjectActions.swift
+//  CreateProjectActions.swift
 //  Phrasify
 //
 //  Created by Robert Adamczyk on 20.12.23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol NewProjectActions {
+protocol CreateProjectActions {
 
     func dismiss()
     func popToRoot()

@@ -9,7 +9,7 @@ import SwiftUI
 
 #if DEBUG
 
-final class MockCoordinator: Coordinator, StartActions, RootActions, NewProjectActions {
+final class MockCoordinator: Coordinator, StartActions, RootActions, CreateProjectActions {
 
     var dependencies: Dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init())
 
@@ -26,7 +26,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, NewProjectA
     func popToRoot() { /*empty*/ }
 
     func showProfile() { /*empty*/ }
-    func presentNewProject() { /*empty*/ }
+    func presentCreateProject() { /*empty*/ }
     func dismissFullScreenCover() { /*empty*/ }
     func showProjectDetails(project: Project) { /*empty*/ }
     func showSelectLanguage(name: String) { /*empty*/ }

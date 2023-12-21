@@ -1,5 +1,5 @@
 //
-//  NewProjectCoordinator.swift
+//  CreateProjectCoordinator.swift
 //  Phrasify
 //
 //  Created by Robert Adamczyk on 20.12.23.
@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-extension NewProjectCoordinator {
+extension CreateProjectCoordinator {
 
     struct RootView: View {
 
-        @StateObject private var coordinator: NewProjectCoordinator
+        @StateObject private var coordinator: CreateProjectCoordinator
 
-        init(parentCoordinator: NewProjectCoordinator.ParentCoordinator) {
+        init(parentCoordinator: CreateProjectCoordinator.ParentCoordinator) {
             self._coordinator = .init(wrappedValue: .init(parentCoordinator: parentCoordinator))
         }
 
         var body: some View {
             NavigationStack(path: $coordinator.navigationViews) {
-                NewProjectView(coordinator: coordinator)
-                    .navigationDestination(for: NewProjectCoordinator.NavigationView.self) {
+                CreateProjectView(coordinator: coordinator)
+                    .navigationDestination(for: CreateProjectCoordinator.NavigationView.self) {
                         switch $0 {
                         case .selectLanguage(let viewModel): SelectLanguageView(viewModel: viewModel)
                         case .selectTechnology(let viewModel): SelectTechnologyView(viewModel: viewModel)

@@ -12,6 +12,6 @@ protocol RootActions {
     func showProfile()
     func showProjectDetails(project: Project)
 
-    func presentNewProject()
+    func presentCreateProject()
     func dismissFullScreenCover()
 }

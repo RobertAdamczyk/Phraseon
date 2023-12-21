@@ -1,5 +1,5 @@
 //
-//  NewProjectView.swift
+//  CreateProjectView.swift
 //  Phrasify
 //
 //  Created by Robert Adamczyk on 20.12.23.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct NewProjectView: View {
+struct CreateProjectView: View {
 
-    @StateObject private var viewModel: NewProjectViewModel
+    @StateObject private var viewModel: CreateProjectViewModel
 
-    init(coordinator: NewProjectViewModel.NewProjectCoordinator) {
+    init(coordinator: CreateProjectViewModel.CreateProjectCoordinator) {
         self._viewModel = .init(wrappedValue: .init(coordinator: coordinator))
     }
 

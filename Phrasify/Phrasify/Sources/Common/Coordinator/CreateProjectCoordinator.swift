@@ -1,5 +1,5 @@
 //
-//  NewProjectCoordinator.swift
+//  CreateProjectCoordinator.swift
 //  Phrasify
 //
 //  Created by Robert Adamczyk on 20.12.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class NewProjectCoordinator: Coordinator, ObservableObject {
+final class CreateProjectCoordinator: Coordinator, ObservableObject {
 
     typealias ParentCoordinator = Coordinator & RootActions
 
@@ -24,7 +24,7 @@ final class NewProjectCoordinator: Coordinator, ObservableObject {
     }
 }
 
-extension NewProjectCoordinator: NewProjectActions {
+extension CreateProjectCoordinator: CreateProjectActions {
 
     func dismiss() {
         parentCoordinator.dismissFullScreenCover()
@@ -47,14 +47,14 @@ extension NewProjectCoordinator: NewProjectActions {
     }
 }
 
-extension NewProjectCoordinator {
+extension CreateProjectCoordinator {
 
     enum NavigationView: Identifiable, Equatable, Hashable {
 
         case selectLanguage(viewModel: SelectLanguageViewModel)
         case selectTechnology(viewModel: SelectTechnologyViewModel)
 
-        static func == (lhs: NewProjectCoordinator.NavigationView, rhs: NewProjectCoordinator.NavigationView) -> Bool {
+        static func == (lhs: CreateProjectCoordinator.NavigationView, rhs: CreateProjectCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
         }
 

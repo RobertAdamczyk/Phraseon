@@ -38,7 +38,7 @@ final class HomeViewModel: ObservableObject {
     }
 
     func onAddProjectTapped() {
-        coordinator.presentNewProject()
+        coordinator.presentCreateProject()
     }
 
     @MainActor

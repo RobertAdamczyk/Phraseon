@@ -9,7 +9,7 @@ import SwiftUI
 
 final class SelectTechnologyViewModel: ObservableObject {
 
-    typealias SelectTechnologyCoordinator = Coordinator & NewProjectActions
+    typealias SelectTechnologyCoordinator = Coordinator & CreateProjectActions
 
     @Published var selectedTechnologies: [Technology] = []
 

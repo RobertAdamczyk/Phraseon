@@ -9,7 +9,7 @@ import SwiftUI
 
 final class SelectLanguageViewModel: ObservableObject {
 
-    typealias SelectLanguageCoordinator = Coordinator & NewProjectActions
+    typealias SelectLanguageCoordinator = Coordinator & CreateProjectActions
 
     @Published var selectedLanguages: [Language] = []
 

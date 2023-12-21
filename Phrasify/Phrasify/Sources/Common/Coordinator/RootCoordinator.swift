@@ -38,8 +38,8 @@ extension RootCoordinator: RootActions {
         navigationViews.append(.profile)
     }
 
-    func presentNewProject() {
-        presentedFullScreenCover = .newProject
+    func presentCreateProject() {
+        presentedFullScreenCover = .createProject
     }
 
     func showProjectDetails(project: Project) {
@@ -76,7 +76,7 @@ extension RootCoordinator {
     }
 
     enum FullScreenCover: String, Identifiable {
-        case newProject
+        case createProject
 
         var id: String { self.rawValue }
     }
