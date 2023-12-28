@@ -14,6 +14,7 @@ struct Project: Codable, Hashable {
     var name: String
     var technologies: [Technology]
     var languages: [Language]
+    var baseLanguage: Language
     var members: [UserID]
     var owner: UserID
 
@@ -22,6 +23,7 @@ struct Project: Codable, Hashable {
         case name
         case technologies
         case languages
+        case baseLanguage
         case members
         case owner
     }

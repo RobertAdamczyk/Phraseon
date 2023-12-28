@@ -21,10 +21,10 @@ struct CreateKeyView: View {
                      subtitle: "Enter the key identifier – remember, this must be unique.")
             AppTextField(type: .keyId, text: $viewModel.keyId)
                 .padding(.top, 32)
-            AppTextField(type: .translation(viewModel.project.languages.first?.localizedTitle ?? ""), text: $viewModel.translation)
+            AppTextField(type: .translation(viewModel.project.baseLanguage.localizedTitle), text: $viewModel.translation)
                 .padding(.top, 32)
             Spacer()
-            AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped))
+            AppButton(style: .fill("Continue", .lightBlue), action: .async(viewModel.onContinueButtonTapped))
         }
         .padding(16)
         .background {

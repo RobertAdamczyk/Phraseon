@@ -38,7 +38,6 @@ struct ScrollingAnimator: ViewModifier {
     private func geometryReader() -> some View {
         GeometryReader { reader -> AnyView in
             let offset = reader.frame(in: .named(coordinateSpace)).minY
-            print("TEST: \(offset)")
             // Guard statement prevents the view from constantly refreshing.
             // Once we have the right state for this offset, we don't want to
             // set the variable again, which would cause the view to be refreshed.

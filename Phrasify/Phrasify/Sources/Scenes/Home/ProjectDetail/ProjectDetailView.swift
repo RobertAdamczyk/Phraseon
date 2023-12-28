@@ -9,15 +9,15 @@ import SwiftUI
 
 // TODO: Move
 enum ProjectDetailBar: String, CaseIterable {
-    case all
+    case alphabetically
     case recent
-    case lastAdded
+    case alert
 
     var title: String {
         switch self {
-        case .all: return "All"
+        case .alphabetically: return "A-Z"
         case .recent: return "Recent"
-        case .lastAdded: return "Last added"
+        case .alert: return "Alert"
         }
     }
 }
@@ -40,16 +40,35 @@ struct ProjectDetailView: View {
             .pickerStyle(.segmented)
 
             ScrollView {
-                Text("key_key_key")
+                ForEach(viewModel.keys, id: \.self) { key in
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(key.id ?? "")
+                            .apply(.medium, size: .M, color: .white)
+                        HStack(spacing: 4) {
+                            Image(systemName: "clock")
+                            Text(key.lastUpdatedAt.timeAgo)
+                        }
+                        .apply(.medium, size: .S, color: .lightGray)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(8)
+                    .background {
+                        RoundedRectangle(cornerRadius: 8)
+                            .fill(appColor(.darkGray))
+                    }
+                    .padding(.vertical, 4)
+                }
                 .animate($scrollState)
             }
             .scrollSpace()
+            .scrollIndicators(.hidden)
         }
         .padding(16)
         .background(appColor(.black))
-        .overlay(alignment: .bottomTrailing, content: makeAddButton)
         .onAppear(perform: setupSegmentedControlAppearance)
         .searchable(text: $viewModel.searchText)
+        .ignoresSafeArea(edges: .bottom)
+        .overlay(alignment: .bottomTrailing, content: makeAddButton)
     }
 
     @ViewBuilder
@@ -83,6 +102,11 @@ struct ProjectDetailView: View {
 }
 
 #Preview {
-    ProjectDetailView(viewModel: .init(coordinator: MockCoordinator(), project: .init(name: "", technologies: [],
-                                                                                      languages: [], members: [], owner: "")))
+    ProjectDetailView(viewModel: .init(coordinator: MockCoordinator(), 
+                                       project: .init(name: "",
+                                                      technologies: [],
+                                                      languages: [],
+                                                      baseLanguage: .english,
+                                                      members: [],
+                                                      owner: "")))
 }

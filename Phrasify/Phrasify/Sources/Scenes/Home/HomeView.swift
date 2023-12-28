@@ -69,7 +69,7 @@ struct ProjectCellView: View {
             .padding(16)
             .frame(height: 128)
             .background {
-                appColor(.darkGray).opacity(0.5)
+                appColor(.darkGray)
             }
             .clipShape(RoundedRectangle(cornerRadius: 8))
         })
@@ -99,7 +99,7 @@ struct AddProjectCellView: View {
             .padding(16)
             .frame(height: 128)
             .background {
-                appColor(.darkGray).opacity(0.5)
+                appColor(.darkGray)
             }
             .clipShape(RoundedRectangle(cornerRadius: 8))
         })

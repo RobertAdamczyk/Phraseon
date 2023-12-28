@@ -11,7 +11,7 @@ import SwiftUI
 
 final class MockCoordinator: Coordinator, StartActions, RootActions, CreateProjectActions {
 
-    var dependencies: Dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init())
+    var dependencies: Dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init(), cloudRepository: .init())
 
     func showLogin() { /*empty*/ }
 

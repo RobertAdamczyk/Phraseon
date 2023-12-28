@@ -27,7 +27,15 @@ final class CreateKeyViewModel: ObservableObject {
         coordinator.dismiss()
     }
 
-    func onContinueButtonTapped() {
-
+    @MainActor
+    func onContinueButtonTapped() async {
+        guard let projectId = project.id else { return }
+        do {
+            try await coordinator.dependencies.cloudRepository.createKey(projectId: projectId, keyId: keyId,
+                                                                         translation: [project.baseLanguage.rawValue: translation])
+            coordinator.dismiss()
+        } catch {
+            ToastView.showError(message: error.localizedDescription)
+        }
     }
 }

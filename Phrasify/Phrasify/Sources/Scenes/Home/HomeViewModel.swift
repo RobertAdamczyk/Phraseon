@@ -16,7 +16,7 @@ final class HomeViewModel: ObservableObject {
 
     private let coordinator: HomeCoordinator
 
-    private var cancelBag = Set<AnyCancellable>()
+    private var cancelBag = CancelBag()
 
     private var userId: UserID? {
         coordinator.dependencies.authenticationRepository.currentUser?.uid
@@ -49,6 +49,6 @@ final class HomeViewModel: ObservableObject {
             .sink(receiveValue: { [weak self] projects in
                 self?.projects = projects
             })
-            .store(in: &cancelBag)
+            .store(in: cancelBag)
     }
 }

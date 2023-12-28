@@ -10,4 +10,5 @@ import Foundation
 struct Dependencies {
     var authenticationRepository: AuthenticationRepository
     var firestoreRepository: FirestoreRepository
+    var cloudRepository: CloudRepository
 }

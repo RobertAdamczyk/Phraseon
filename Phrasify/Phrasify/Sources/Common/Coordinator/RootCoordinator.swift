@@ -20,7 +20,7 @@ final class RootCoordinator: ObservableObject, Coordinator {
     private var cancelBag = CancelBag()
 
     init() {
-        dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init())
+        dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init(), cloudRepository: .init())
         setupLoginSubscription()
     }
 
