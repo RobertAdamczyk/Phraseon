@@ -14,11 +14,13 @@ struct Key: Codable, Hashable {
     var translation: [String: String]
     var createdAt: Date
     var lastUpdatedAt: Date
+    var status: KeyStatus
 
     enum CodingKeys: String, CodingKey {
         case id
         case translation
         case createdAt
         case lastUpdatedAt
+        case status
     }
 }

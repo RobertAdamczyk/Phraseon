@@ -41,22 +41,7 @@ struct ProjectDetailView: View {
 
             ScrollView {
                 ForEach(viewModel.keys, id: \.self) { key in
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(key.id ?? "")
-                            .apply(.medium, size: .M, color: .white)
-                        HStack(spacing: 4) {
-                            Image(systemName: "clock")
-                            Text(key.lastUpdatedAt.timeAgo)
-                        }
-                        .apply(.medium, size: .S, color: .lightGray)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(8)
-                    .background {
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(appColor(.darkGray))
-                    }
-                    .padding(.vertical, 4)
+                    KeyRow(key: key)
                 }
                 .animate($scrollState)
             }
@@ -79,7 +64,7 @@ struct ProjectDetailView: View {
                     Text("Add phrase")
                         .apply(.medium, size: .L, color: .black)
                 }
-                Text("X")
+                Text("X") // Placeholder
                     .apply(.medium, size: .L, color: .black)
                     .opacity(0)
                 Image(systemName: "plus")
