@@ -13,7 +13,17 @@ final class ProjectDetailViewModel: ObservableObject {
 
     @Published var selectedKeysOrder: KeysOrder = .alphabetically
     @Published var searchText = ""
-    @Published var keys: [Key] = []
+    @Published private var keys: [Key] = []
+
+    var searchKeys: [Key] {
+        if searchText.isEmpty {
+            return keys
+        } else {
+            return keys.filter { key in
+                key.id?.lowercased().contains(searchText.lowercased()) == true
+            }
+        }
+    }
 
     let project: Project
 

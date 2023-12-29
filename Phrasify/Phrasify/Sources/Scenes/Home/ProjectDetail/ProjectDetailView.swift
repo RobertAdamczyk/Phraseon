@@ -25,7 +25,7 @@ struct ProjectDetailView: View {
                 .pickerStyle(.segmented)
                 .padding(.bottom, 16)
 
-                ForEach(viewModel.keys, id: \.self) { key in
+                ForEach(viewModel.searchKeys, id: \.self) { key in
                     KeyRow(key: key)
                 }
             }
