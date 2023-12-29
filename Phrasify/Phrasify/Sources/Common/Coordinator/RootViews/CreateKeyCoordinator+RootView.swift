@@ -25,7 +25,7 @@ extension CreateKeyCoordinator {
                 CreateKeyView(coordinator: coordinator, project: project)
                     .navigationDestination(for: CreateKeyCoordinator.NavigationView.self) {
                         switch $0 {
-                        case .empty: Text("XD")
+                        case .enterContentKey(let viewModel): EnterContentKeyView(viewModel: viewModel)
                         }
                     }
             }

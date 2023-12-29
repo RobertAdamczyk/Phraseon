@@ -12,7 +12,10 @@ final class CreateKeyViewModel: ObservableObject {
     typealias CreateKeyCoordinator = Coordinator & CreateKeyActions
 
     @Published var keyId: String = ""
-    @Published var translation: String = ""
+
+    var shouldDisablePrimaryButton: Bool {
+        keyId.count < 3 || keyId.contains(" ")
+    }
 
     let project: Project
 
@@ -27,15 +30,7 @@ final class CreateKeyViewModel: ObservableObject {
         coordinator.dismiss()
     }
 
-    @MainActor
-    func onContinueButtonTapped() async {
-        guard let projectId = project.id else { return }
-        do {
-            try await coordinator.dependencies.cloudRepository.createKey(projectId: projectId, keyId: keyId,
-                                                                         translation: [project.baseLanguage.rawValue: translation])
-            coordinator.dismiss()
-        } catch {
-            ToastView.showError(message: error.localizedDescription)
-        }
+    func onContinueButtonTapped() {
+        coordinator.showEnterContentKey(keyId: keyId, project: project)
     }
 }

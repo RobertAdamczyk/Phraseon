@@ -29,6 +29,10 @@
 		5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBBB2B3F33B000C558B1 /* KeysOrder+UI.swift */; };
 		5516EBC02B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */; };
 		5516EBC12B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */; };
+		5516EBC42B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */; };
+		5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */; };
+		5516EBC72B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */; };
+		5516EBC82B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */; };
 		551AA40C2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */; };
 		551AA40D2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */; };
 		551AA4102B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */; };
@@ -203,6 +207,8 @@
 		5516EBB82B3F339E00C558B1 /* KeysOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysOrder.swift; sourceTree = "<group>"; };
 		5516EBBB2B3F33B000C558B1 /* KeysOrder+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeysOrder+UI.swift"; sourceTree = "<group>"; };
 		5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeysOrder+FieldPath.swift"; sourceTree = "<group>"; };
+		5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyView.swift; sourceTree = "<group>"; };
+		5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyViewModel.swift; sourceTree = "<group>"; };
 		551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectActions.swift; sourceTree = "<group>"; };
 		551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageView.swift; sourceTree = "<group>"; };
 		551AA4122B335D2400F0B1E2 /* SelectLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewModel.swift; sourceTree = "<group>"; };
@@ -352,6 +358,15 @@
 				5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		5516EBC22B3F6AB500C558B1 /* EnterContentKey */ = {
+			isa = PBXGroup;
+			children = (
+				5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */,
+				5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */,
+			);
+			path = EnterContentKey;
 			sourceTree = "<group>";
 		};
 		551AA40E2B335CE700F0B1E2 /* SelectLanguage */ = {
@@ -504,6 +519,7 @@
 		55826A9D2B34FAEB00233D90 /* CreateKey */ = {
 			isa = PBXGroup;
 			children = (
+				5516EBC22B3F6AB500C558B1 /* EnterContentKey */,
 				55826A9E2B34FCDF00233D90 /* CreateKeyView.swift */,
 				55826AA12B34FD1600233D90 /* CreateKeyViewModel.swift */,
 			);
@@ -890,6 +906,7 @@
 				553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */,
 				5513C24B2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55C279272B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
+				5516EBC42B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
 				5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
 				551AA4242B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
@@ -900,6 +917,7 @@
 				55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */,
 				55826A8D2B34C83A00233D90 /* ProjectMember.swift in Sources */,
 				55826A972B34D5F700233D90 /* ProjectDetailViewModel.swift in Sources */,
+				5516EBC72B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */,
 				558074512B2E38110041160B /* Activitable.swift in Sources */,
 				553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */,
 				55FF426F2B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
@@ -972,6 +990,7 @@
 				55C278E42B2A3F3A005144F1 /* MockCoordinator.swift in Sources */,
 				5513C24C2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55C279282B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
+				5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
 				5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
 				551AA4252B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
@@ -982,6 +1001,7 @@
 				55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */,
 				55826A8E2B34C83A00233D90 /* ProjectMember.swift in Sources */,
 				55826A982B34D5F700233D90 /* ProjectDetailViewModel.swift in Sources */,
+				5516EBC82B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */,
 				558074522B2E38110041160B /* Activitable.swift in Sources */,
 				55C278E72B2A3F3A005144F1 /* StartView.swift in Sources */,
 				55FF42702B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,

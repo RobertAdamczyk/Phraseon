@@ -35,7 +35,7 @@ extension ProjectDetailView {
                     .overlay(alignment: .topTrailing) {
                         key.status.image
                             .apply(.medium, size: .M, color: .black)
-                            .padding([.top, .trailing], 6)
+                            .padding([.top, .trailing], 5)
                     }
             }
             .background() {

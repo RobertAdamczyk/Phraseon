@@ -33,13 +33,19 @@ extension CreateKeyCoordinator: CreateKeyActions {
     func popToRoot() {
         navigationViews.removeAll()
     }
+
+    func showEnterContentKey(keyId: String, project: Project) {
+        let viewModel = EnterContentKeyViewModel(coordinator: self, keyId: keyId, project: project)
+        let view: NavigationView = .enterContentKey(viewModel: viewModel)
+        navigationViews.append(view)
+    }
 }
 
 extension CreateKeyCoordinator {
 
     enum NavigationView: Identifiable, Equatable, Hashable {
 
-        case empty
+        case enterContentKey(viewModel: EnterContentKeyViewModel)
 
         static func == (lhs: CreateKeyCoordinator.NavigationView, rhs: CreateKeyCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -51,7 +57,7 @@ extension CreateKeyCoordinator {
 
         var id: String {
             switch self {
-            case .empty: return "001"
+            case .enterContentKey: return "001"
             }
         }
     }

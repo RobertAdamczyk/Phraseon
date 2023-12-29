@@ -71,7 +71,7 @@ extension AppTextField {
         case confirmPassword
         case projectName
         case keyId
-        case translation(String)
+        case translation
 
         var title: String {
             return switch self {
@@ -79,8 +79,8 @@ extension AppTextField {
             case .password: "Password"
             case .confirmPassword: "Confirm Password"
             case .projectName: "Project Name"
-            case .keyId: "Key Identifier"
-            case .translation(let baseLanguage): "Translation into base language (\(baseLanguage))"
+            case .keyId: "Phrase Identifier"
+            case .translation: "Translation into base language"
             }
         }
 

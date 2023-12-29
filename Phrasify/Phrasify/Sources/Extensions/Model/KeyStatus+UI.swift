@@ -11,7 +11,7 @@ extension KeyStatus {
 
     var color: Color {
         switch self {
-        case .approved: appColor(.green)
+        case .approved: appColor(.paleOrange)
         case .review: appColor(.paleOrange)
         }
     }
@@ -19,7 +19,7 @@ extension KeyStatus {
     var image: Image {
         switch self {
         case .approved: Image(systemName: "checkmark")
-        case .review: Image(systemName: "questionmark")
+        case .review: Image(systemName: "magnifyingglass")
         }
     }
 
