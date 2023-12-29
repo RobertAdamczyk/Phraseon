@@ -47,16 +47,9 @@ final class FirestoreRepository {
 
     // MARK: Keys
 
-    func getKeysPublisher(projectId: String, order: ProjectDetailBar) -> AnyPublisher<[Key], Never> {
-        let keyToOrder: (field: FieldPath, descending: Bool) = {
-            switch order {
-            case .alphabetically: return (field: FieldPath.documentID(), descending: false)
-            case .recent: return (field: FieldPath.init([Key.CodingKeys.lastUpdatedAt.rawValue]), descending: true)
-            case .alert: return (field: FieldPath.documentID(), descending: false)
-            }
-        }()
+    func getKeysPublisher(projectId: String, keysOrder: KeysOrder) -> AnyPublisher<[Key], Never> {
         return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.keys.rawValue)
-                 .order(by: keyToOrder.field, descending: keyToOrder.descending)
+                 .order(by: keysOrder.value.field, descending: keysOrder.value.descending)
                  .snapshotPublisher()
                  .map { snapshot in
                      snapshot.documents.compactMap { document -> Key? in

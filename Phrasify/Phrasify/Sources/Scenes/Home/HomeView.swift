@@ -21,9 +21,8 @@ struct HomeView: View {
         ]
 
     var body: some View {
-        VStack(alignment: .leading) {
-            AppTitle(title: "Projects")
-            ScrollView(showsIndicators: false) {
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 16) {
                 LazyVGrid(columns: columns, spacing: 16) {
                     AddProjectCellView(action: viewModel.onAddProjectTapped)
                     ForEach(viewModel.projects, id: \.self) { project in
@@ -31,9 +30,9 @@ struct HomeView: View {
                     }
                 }
             }
-            .ignoresSafeArea(edges: .bottom)
+            .padding(16)
         }
-        .padding(16)
+        .ignoresSafeArea(edges: .bottom)
         .background(appColor(.black))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -43,6 +42,7 @@ struct HomeView: View {
                 })
             }
         }
+        .navigationTitle("Projects")
     }
 }
 

@@ -11,7 +11,7 @@ final class ProjectDetailViewModel: ObservableObject {
 
     typealias ProjectDetailCoordinator = Coordinator & RootActions
 
-    @Published var selectedBar: ProjectDetailBar = .alphabetically
+    @Published var selectedKeysOrder: KeysOrder = .alphabetically
     @Published var searchText = ""
     @Published var keys: [Key] = []
 
@@ -25,17 +25,17 @@ final class ProjectDetailViewModel: ObservableObject {
         self.coordinator = coordinator
         self.project = project
         setupKeysSubscriber()
-        setupSelectedBarSubscriber()
+        setupSelectedKeysOrderSubscriber()
     }
 
     func onAddButtonTapped() {
         coordinator.presentCreateKey(project: project)
     }
 
-    private func setupSelectedBarSubscriber() {
-        $selectedBar
+    private func setupSelectedKeysOrderSubscriber() {
+        $selectedKeysOrder
             .receive(on: RunLoop.main)
-            .sink { selectedBar in
+            .sink { selectedKeysOrder in
                 self.setupKeysSubscriber()
             }
             .store(in: cancelBag)
@@ -43,7 +43,7 @@ final class ProjectDetailViewModel: ObservableObject {
 
     private func setupKeysSubscriber() {
         guard let projectId = project.id else { return }
-        coordinator.dependencies.firestoreRepository.getKeysPublisher(projectId: projectId, order: selectedBar)
+        coordinator.dependencies.firestoreRepository.getKeysPublisher(projectId: projectId, keysOrder: selectedKeysOrder)
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] keys in
                 self?.keys = keys

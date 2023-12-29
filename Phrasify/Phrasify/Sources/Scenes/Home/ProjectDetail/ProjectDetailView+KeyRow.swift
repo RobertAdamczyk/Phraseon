@@ -48,7 +48,6 @@ extension ProjectDetailView {
                 }
             }
             .clipShape(RoundedRectangle(cornerRadius: 8))
-            .padding(.vertical, 4)
         }
     }
 }

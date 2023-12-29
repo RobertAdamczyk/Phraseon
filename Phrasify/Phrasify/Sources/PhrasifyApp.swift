@@ -16,6 +16,7 @@ struct PhrasifyApp: App {
         WindowGroup {
             RootCoordinator.RootView()
                 .tint(appColor(.paleOrange))
+                .preferredColorScheme(.dark)
         }
     }
 }

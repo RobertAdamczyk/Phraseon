@@ -7,53 +7,38 @@
 
 import SwiftUI
 
-// TODO: Move
-enum ProjectDetailBar: String, CaseIterable {
-    case alphabetically
-    case recent
-    case alert
-
-    var title: String {
-        switch self {
-        case .alphabetically: return "A-Z"
-        case .recent: return "Recent"
-        case .alert: return "Alert"
-        }
-    }
-}
-
 struct ProjectDetailView: View {
 
     @ObservedObject var viewModel: ProjectDetailViewModel
     @State private var scrollState: ScrollingAnimator.State = .scrollView
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 32) {
-            AppTitle(title: viewModel.project.name)
-            Picker("", selection: $viewModel.selectedBar) {
-                ForEach(ProjectDetailBar.allCases, id: \.self) { bar in
-                    Text(bar.title)
-                        .tag(bar)
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .leading, spacing: 16) {
+                Picker("", selection: $viewModel.selectedKeysOrder) {
+                    ForEach(KeysOrder.allCases, id: \.self) { bar in
+                        Text(bar.title)
+                            .tag(bar)
+                    }
                 }
-            }
-            .labelsHidden()
-            .pickerStyle(.segmented)
+                .labelsHidden()
+                .pickerStyle(.segmented)
+                .padding(.bottom, 16)
 
-            ScrollView {
                 ForEach(viewModel.keys, id: \.self) { key in
                     KeyRow(key: key)
                 }
-                .animate($scrollState)
             }
-            .scrollSpace()
-            .scrollIndicators(.hidden)
+            .animate($scrollState)
+            .padding(16)
         }
-        .padding(16)
+        .scrollSpace()
         .background(appColor(.black))
         .onAppear(perform: setupSegmentedControlAppearance)
         .searchable(text: $viewModel.searchText)
         .ignoresSafeArea(edges: .bottom)
         .overlay(alignment: .bottomTrailing, content: makeAddButton)
+        .navigationTitle(viewModel.project.name)
     }
 
     @ViewBuilder
