@@ -16,18 +16,17 @@ struct CreateProjectView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            AppTitle(title: "Create a new project",
-                     subtitle: "Enter the project name – remember, you can change it at any time.")
-            AppTextField(type: .projectName, text: $viewModel.projectName)
-                .padding(.top, 32)
-            Spacer()
+        VStack(spacing: 0) {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 48) {
+                    AppTitle(subtitle: "Enter the project name – remember, you can change it at any time.")
+                    AppTextField(type: .projectName, text: $viewModel.projectName)
+                }
+                .padding([.horizontal, .top], 16)
+            }
             AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped),
                       disabled: viewModel.shouldPrimaryButtonDisabled)
-        }
-        .padding(16)
-        .background {
-            appColor(.black).ignoresSafeArea()
+            .padding(16)
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -36,5 +35,6 @@ struct CreateProjectView: View {
                 })
             }
         }
+        .navigationTitle("Create a new project")
     }
 }

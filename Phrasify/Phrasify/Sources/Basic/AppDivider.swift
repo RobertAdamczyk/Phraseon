@@ -18,12 +18,12 @@ struct AppDivider: View {
     var body: some View {
         Rectangle()
             .frame(height: 2)
-            .foregroundStyle(appColor(.darkGray))
+            .foregroundStyle(appColor(.lightGray))
             .overlay {
                 if let text {
                     Text(text)
                         .padding(.horizontal, 4)
-                        .apply(.semibold, size: .L, color: .darkGray)
+                        .apply(.semibold, size: .L, color: .lightGray)
                         .background(appColor(.black))
                 }
             }

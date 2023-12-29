@@ -25,15 +25,12 @@ struct SelectLanguageView: View {
                 .zIndex(3)
         }
         .padding(16)
-        .background {
-            appColor(.black).ignoresSafeArea()
-        }
+        .navigationTitle("Languages")
     }
 
     @ViewBuilder
     private var titleView: some View {
-        AppTitle(title: "Languages",
-                 subtitle: "Choose supported languages – remember, you can change it at any time.")
+        AppTitle(subtitle: "Choose supported languages – remember, you can change it at any time.")
         .padding(.bottom, 16)
         .background(appColor(.black))
     }

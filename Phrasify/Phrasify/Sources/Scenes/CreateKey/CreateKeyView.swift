@@ -16,19 +16,17 @@ struct CreateKeyView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            AppTitle(title: "Create a new phrase",
-                     subtitle: "Enter the key identifier – remember, this must be unique.")
-            AppTextField(type: .keyId, text: $viewModel.keyId)
-                .padding(.top, 32)
-            AppTextField(type: .translation(viewModel.project.baseLanguage.localizedTitle), text: $viewModel.translation)
-                .padding(.top, 32)
-            Spacer()
+        VStack(spacing: 0) {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 48) {
+                    AppTitle(subtitle: "Enter the key identifier – remember, this must be unique.")
+                    AppTextField(type: .keyId, text: $viewModel.keyId)
+                    AppTextField(type: .translation(viewModel.project.baseLanguage.localizedTitle), text: $viewModel.translation)
+                }
+                .padding([.horizontal, .top], 16)
+            }
             AppButton(style: .fill("Continue", .lightBlue), action: .async(viewModel.onContinueButtonTapped))
-        }
-        .padding(16)
-        .background {
-            appColor(.black).ignoresSafeArea()
+                .padding(16)
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -37,6 +35,7 @@ struct CreateKeyView: View {
                 })
             }
         }
+        .navigationTitle("Create a new phrase")
     }
 }
 

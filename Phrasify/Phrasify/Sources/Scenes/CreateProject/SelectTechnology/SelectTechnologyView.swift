@@ -25,15 +25,12 @@ struct SelectTechnologyView: View {
                 .zIndex(3)
         }
         .padding(16)
-        .background {
-            appColor(.black).ignoresSafeArea()
-        }
+        .navigationTitle("Technologies")
     }
 
     @ViewBuilder
     private var titleView: some View {
-        AppTitle(title: "Technologies",
-                 subtitle: "Choose the technology in which the project is created – remember, you can change it at any time.")
+        AppTitle(subtitle: "Choose the technology in which the project is created – remember, you can change it at any time.")
         .padding(.bottom, 16)
         .background(appColor(.black))
     }

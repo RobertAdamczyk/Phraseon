@@ -26,7 +26,7 @@ struct AppTextField: View {
     private func makeTextField() -> some View {
         switch type {
         case .email, .projectName, .keyId, .translation:
-            TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.darkGray)), axis: type.axis)
+            TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.lightGray)), axis: type.axis)
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(.never)
                 .apply(.medium, size: .L, color: .white)
@@ -35,10 +35,10 @@ struct AppTextField: View {
         case .password, .confirmPassword:
             HStack(spacing: 4) {
                 ZStack {
-                    TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.darkGray)))
+                    TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.lightGray)))
                         .apply(.medium, size: .L, color: .white)
                         .opacity(showPassword ? 1 : 0)
-                    SecureField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.darkGray)))
+                    SecureField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.lightGray)))
                         .apply(.medium, size: .L, color: .white)
                         .opacity(showPassword ? 0 : 1)
                 }
@@ -55,7 +55,7 @@ struct AppTextField: View {
     private func makeBackground() -> some View {
         RoundedRectangle(cornerRadius: 8)
             .stroke(lineWidth: 1)
-            .foregroundStyle(appColor(.darkGray))
+            .foregroundStyle(appColor(.lightGray))
     }
 
     private func onShowPasswordTapped() {
