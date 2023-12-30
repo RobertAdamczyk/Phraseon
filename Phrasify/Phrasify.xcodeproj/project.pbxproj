@@ -33,6 +33,8 @@
 		5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */; };
 		5516EBC72B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */; };
 		5516EBC82B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */; };
+		5516EBCB2B40CF7F00C558B1 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBCA2B40CF7F00C558B1 /* Triangle.swift */; };
+		5516EBCC2B40CF7F00C558B1 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBCA2B40CF7F00C558B1 /* Triangle.swift */; };
 		551AA40C2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */; };
 		551AA40D2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */; };
 		551AA4102B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */; };
@@ -209,6 +211,7 @@
 		5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeysOrder+FieldPath.swift"; sourceTree = "<group>"; };
 		5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyView.swift; sourceTree = "<group>"; };
 		5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyViewModel.swift; sourceTree = "<group>"; };
+		5516EBCA2B40CF7F00C558B1 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectActions.swift; sourceTree = "<group>"; };
 		551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageView.swift; sourceTree = "<group>"; };
 		551AA4122B335D2400F0B1E2 /* SelectLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewModel.swift; sourceTree = "<group>"; };
@@ -367,6 +370,14 @@
 				5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */,
 			);
 			path = EnterContentKey;
+			sourceTree = "<group>";
+		};
+		5516EBC92B40CF7500C558B1 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				5516EBCA2B40CF7F00C558B1 /* Triangle.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 		551AA40E2B335CE700F0B1E2 /* SelectLanguage */ = {
@@ -557,6 +568,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5516EBC92B40CF7500C558B1 /* Shapes */,
 				55826A992B34E20D00233D90 /* ScrollingAnimator */,
 				551AA4182B33664800F0B1E2 /* Layout */,
 				5580744C2B2E340C0041160B /* ActivityView */,
@@ -908,6 +920,7 @@
 				55C279272B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5516EBC42B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
 				5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
+				5516EBCB2B40CF7F00C558B1 /* Triangle.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
 				551AA4242B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				55C2DAC72B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
@@ -992,6 +1005,7 @@
 				55C279282B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
 				5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
+				5516EBCC2B40CF7F00C558B1 /* Triangle.swift in Sources */,
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
 				551AA4252B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				55C2DAC82B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
