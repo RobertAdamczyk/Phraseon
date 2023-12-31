@@ -35,6 +35,12 @@
 		5516EBC82B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */; };
 		5516EBCB2B40CF7F00C558B1 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBCA2B40CF7F00C558B1 /* Triangle.swift */; };
 		5516EBCC2B40CF7F00C558B1 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBCA2B40CF7F00C558B1 /* Triangle.swift */; };
+		5516EBCF2B40D2F500C558B1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBCE2B40D2F500C558B1 /* ProfileView.swift */; };
+		5516EBD02B40D2F500C558B1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBCE2B40D2F500C558B1 /* ProfileView.swift */; };
+		5516EBD22B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBD12B40D2FD00C558B1 /* ProfileViewModel.swift */; };
+		5516EBD32B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBD12B40D2FD00C558B1 /* ProfileViewModel.swift */; };
+		5516EBD52B40E1E300C558B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBD42B40E1E300C558B1 /* User.swift */; };
+		5516EBD62B40E1E300C558B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBD42B40E1E300C558B1 /* User.swift */; };
 		551AA40C2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */; };
 		551AA40D2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */; };
 		551AA4102B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */; };
@@ -212,6 +218,9 @@
 		5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyView.swift; sourceTree = "<group>"; };
 		5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyViewModel.swift; sourceTree = "<group>"; };
 		5516EBCA2B40CF7F00C558B1 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		5516EBCE2B40D2F500C558B1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5516EBD12B40D2FD00C558B1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		5516EBD42B40E1E300C558B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectActions.swift; sourceTree = "<group>"; };
 		551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageView.swift; sourceTree = "<group>"; };
 		551AA4122B335D2400F0B1E2 /* SelectLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewModel.swift; sourceTree = "<group>"; };
@@ -378,6 +387,15 @@
 				5516EBCA2B40CF7F00C558B1 /* Triangle.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		5516EBCD2B40D2EA00C558B1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5516EBCE2B40D2F500C558B1 /* ProfileView.swift */,
+				5516EBD12B40D2FD00C558B1 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		551AA40E2B335CE700F0B1E2 /* SelectLanguage */ = {
@@ -657,6 +675,7 @@
 				551AA4152B33612500F0B1E2 /* Language.swift */,
 				551AA41C2B3379B700F0B1E2 /* Technology.swift */,
 				55826AAD2B35046F00233D90 /* Key.swift */,
+				5516EBD42B40E1E300C558B1 /* User.swift */,
 				55FB5F622B3E409B004D3720 /* KeyStatus.swift */,
 				5516EBB82B3F339E00C558B1 /* KeysOrder.swift */,
 			);
@@ -732,6 +751,7 @@
 		55FF42632B2B912300F4D523 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5516EBCD2B40D2EA00C558B1 /* Profile */,
 				55826A922B34D5D600233D90 /* ProjectDetail */,
 				55FF42642B2B912B00F4D523 /* HomeView.swift */,
 				55FF42672B2B914000F4D523 /* HomeViewModel.swift */,
@@ -907,6 +927,7 @@
 				558074572B2E56E50041160B /* Project.swift in Sources */,
 				5580744E2B2E341B0041160B /* ActivityView.swift in Sources */,
 				5513C2522B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
+				5516EBD22B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */,
 				55C279152B2A4BB0005144F1 /* Dependencies.swift in Sources */,
 				553F1BE32B29080B0071A099 /* LoginViewModel.swift in Sources */,
@@ -951,6 +972,7 @@
 				55C279172B2A4BE7005144F1 /* Localized.swift in Sources */,
 				55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */,
 				55C2791D2B2A4C60005144F1 /* Coordinator.swift in Sources */,
+				5516EBD52B40E1E300C558B1 /* User.swift in Sources */,
 				551AA41D2B3379B700F0B1E2 /* Technology.swift in Sources */,
 				55826AAB2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift in Sources */,
 				553F1BED2B2914910071A099 /* SetPasswordViewModel.swift in Sources */,
@@ -969,6 +991,7 @@
 				55C279132B2A4B48005144F1 /* AppDelegate.swift in Sources */,
 				553F1BDD2B2907C10071A099 /* RegisterView.swift in Sources */,
 				55826AA22B34FD1600233D90 /* CreateKeyViewModel.swift in Sources */,
+				5516EBCF2B40D2F500C558B1 /* ProfileView.swift in Sources */,
 				55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */,
 				5516EBB92B3F339E00C558B1 /* KeysOrder.swift in Sources */,
 			);
@@ -992,6 +1015,7 @@
 				558074582B2E56E50041160B /* Project.swift in Sources */,
 				55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */,
 				5580744F2B2E341B0041160B /* ActivityView.swift in Sources */,
+				5516EBD32B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				5513C2532B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				55C278E22B2A3F3A005144F1 /* LoginView.swift in Sources */,
 				55C278E32B2A3F3A005144F1 /* LoginViewModel.swift in Sources */,
@@ -1036,6 +1060,7 @@
 				55C2791B2B2A4C17005144F1 /* Localized.swift in Sources */,
 				55C278EB2B2A3F3A005144F1 /* FontStyle.swift in Sources */,
 				55C2791E2B2A4CB8005144F1 /* Coordinator.swift in Sources */,
+				5516EBD62B40E1E300C558B1 /* User.swift in Sources */,
 				551AA41E2B3379B700F0B1E2 /* Technology.swift in Sources */,
 				55826AAC2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift in Sources */,
 				55C278EC2B2A3F3A005144F1 /* StartCoordinator.swift in Sources */,
@@ -1054,6 +1079,7 @@
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,
 				55C278EF2B2A3F3A005144F1 /* RegisterView.swift in Sources */,
 				55826AA32B34FD1600233D90 /* CreateKeyViewModel.swift in Sources */,
+				5516EBD02B40D2F500C558B1 /* ProfileView.swift in Sources */,
 				55C278F02B2A3F3A005144F1 /* AppButton.swift in Sources */,
 				5516EBBA2B3F339E00C558B1 /* KeysOrder.swift in Sources */,
 			);

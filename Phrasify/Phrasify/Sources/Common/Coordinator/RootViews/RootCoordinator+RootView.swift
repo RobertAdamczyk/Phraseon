@@ -20,7 +20,7 @@ extension RootCoordinator {
                         HomeView(coordinator: rootCoordinator)
                             .navigationDestination(for: RootCoordinator.NavigationView.self) {
                                 switch $0 {
-                                case .profile: Text("Profile")
+                                case .profile(let viewModel): ProfileView(viewModel: viewModel)
                                 case .projectDetails(let viewModel): ProjectDetailView(viewModel: viewModel)
                                 }
                             }

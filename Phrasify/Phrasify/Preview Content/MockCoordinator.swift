@@ -33,7 +33,6 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, CreateProje
     func showSelectLanguage(name: String) { /*empty*/ }
     func showSelectTechnology(name: String, languages: [Language]) { /*empty*/ }
     func dismiss() { /*empty*/ }
-
 }
 
 #endif

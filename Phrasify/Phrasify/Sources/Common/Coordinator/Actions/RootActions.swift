@@ -15,4 +15,6 @@ protocol RootActions {
     func presentCreateProject()
     func presentCreateKey(project: Project)
     func dismissFullScreenCover()
+
+    func popToRoot()
 }

@@ -35,7 +35,9 @@ final class RootCoordinator: ObservableObject, Coordinator {
 extension RootCoordinator: RootActions {
 
     func showProfile() {
-        navigationViews.append(.profile)
+        let viewModel = ProfileViewModel(coordinator: self)
+        let view: NavigationView = .profile(viewModel: viewModel)
+        navigationViews.append(view)
     }
 
     func presentCreateProject() {
@@ -55,12 +57,16 @@ extension RootCoordinator: RootActions {
     func dismissFullScreenCover() {
         presentedFullScreenCover = nil
     }
+
+    func popToRoot() {
+        navigationViews.removeAll()
+    }
 }
 
 extension RootCoordinator {
 
     enum NavigationView: Identifiable, Hashable, Equatable {
-        case profile
+        case profile(viewModel: ProfileViewModel)
         case projectDetails(viewModel: ProjectDetailViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {

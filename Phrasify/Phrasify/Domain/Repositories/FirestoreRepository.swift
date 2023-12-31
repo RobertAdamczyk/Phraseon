@@ -59,6 +59,18 @@ final class FirestoreRepository {
                  .catch { _ in Just<[Key]>([])}
                  .eraseToAnyPublisher()
     }
+
+    // MARK: User
+
+    func getUserPublisher(userId: UserID) -> AnyPublisher<User?, Never> {
+        return db.collection(Collections.users.rawValue).document(userId)
+                 .snapshotPublisher()
+                 .map { snapshot in
+                     try? snapshot.data(as: User.self)
+                 }
+                 .catch { _ in Just<User?>(nil)}
+                 .eraseToAnyPublisher()
+    }
 }
 
 extension DocumentReference {
