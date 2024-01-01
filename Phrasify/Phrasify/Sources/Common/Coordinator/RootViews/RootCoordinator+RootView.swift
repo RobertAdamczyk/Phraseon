@@ -23,6 +23,7 @@ extension RootCoordinator {
                                 case .profile(let viewModel): ProfileView(viewModel: viewModel)
                                 case .profileName(let viewModel): ProfileNameView(viewModel: viewModel)
                                 case .projectDetails(let viewModel): ProjectDetailView(viewModel: viewModel)
+                                case .changePassword(let viewModel): ChangePasswordView(viewModel: viewModel)
                                 }
                             }
                     }

@@ -36,7 +36,7 @@ struct AppTextField: View {
                     .textInputAutocapitalization(.never)
                     .apply(.medium, size: .L, color: .white)
 
-            case .password, .confirmPassword:
+            case .password, .confirmPassword, .currentPassword, .newPassword:
                 image
                 ZStack {
                     TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.lightGray)))
@@ -78,6 +78,8 @@ extension AppTextField {
         case email
         case password
         case confirmPassword
+        case currentPassword
+        case newPassword
         case projectName
         case keyId
         case translation
@@ -88,7 +90,9 @@ extension AppTextField {
             return switch self {
             case .email: "Email"
             case .password: "Password"
+            case .currentPassword: "Current Password"
             case .confirmPassword: "Confirm Password"
+            case .newPassword: "New Password"
             case .projectName: "Project Name"
             case .keyId: "Phrase Identifier"
             case .translation: "Translation into base language"
@@ -100,7 +104,7 @@ extension AppTextField {
         var placeholder: String {
             return switch self {
             case .email: "hallo@phrasify.com"
-            case .password, .confirmPassword: "Your password"
+            case .password, .confirmPassword, .currentPassword, .newPassword: "Your password"
             case .projectName: "Your project name"
             case .keyId: "this_is_my_phrase"
             case .translation: "Translated text"
@@ -111,7 +115,7 @@ extension AppTextField {
 
         var axis: Axis {
             return switch self {
-            case .email, .password, .confirmPassword, .name, .surname: .horizontal
+            case .email, .password, .confirmPassword, .currentPassword, .name, .surname, .newPassword: .horizontal
             case .projectName, .keyId, .translation: .vertical
             }
         }
@@ -119,7 +123,7 @@ extension AppTextField {
         var imageView: some View {
             switch self {
             case .email: Image(systemName: "envelope.fill").resizable().frame(width: 24, height: 16)
-            case .password, .confirmPassword: Image(systemName: "lock.fill").resizable().frame(width: 14, height: 20)
+            case .password, .confirmPassword, .currentPassword, .newPassword: Image(systemName: "lock.fill").resizable().frame(width: 14, height: 20)
             case .projectName: Image(systemName: "folder.fill").resizable().frame(width: 20, height: 16)
             case .keyId: Image(systemName: "grid").resizable().frame(width: 16, height: 16)
             case .translation: Image(systemName: "globe").resizable().frame(width: 20, height: 20)

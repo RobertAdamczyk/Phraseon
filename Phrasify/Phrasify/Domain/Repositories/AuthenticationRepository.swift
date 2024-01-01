@@ -55,6 +55,14 @@ final class AuthenticationRepository {
         try await auth.currentUser?.delete()
     }
 
+    func reauthenticate(email: String, password: String) async throws {
+        try await auth.currentUser?.reauthenticate(with: EmailAuthProvider.credential(withEmail: email, password: password))
+    }
+
+    func updatePassword(to password: String) async throws {
+        try await auth.currentUser?.updatePassword(to: password)
+    }
+
     private func setupStateDidChangeListener() {
         auth.addStateDidChangeListener { [weak self] _, user in
             self?.isLoggedIn = user != nil

@@ -23,6 +23,8 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, CreateProje
 
     func closeForgetPassword() { /*empty*/ }
 
+    func showChangePassword(authenticationProvider: AuthenticationProvider) { /*empty*/ }
+
     func popToRoot() { /*empty*/ }
     func popView() { /*empty*/ }
 

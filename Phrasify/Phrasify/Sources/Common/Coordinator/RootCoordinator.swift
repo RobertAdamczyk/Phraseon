@@ -70,6 +70,12 @@ extension RootCoordinator: ProfileActions {
         let view: NavigationView = .profileName(viewModel: viewModel)
         navigationViews.append(view)
     }
+
+    func showChangePassword(authenticationProvider: AuthenticationProvider) {
+        let viewModel = ChangePasswordViewModel(authenticationProvider: authenticationProvider, coordinator: self)
+        let view: NavigationView = .changePassword(viewModel: viewModel)
+        navigationViews.append(view)
+    }
 }
 
 extension RootCoordinator: ProjectActions {
@@ -84,6 +90,7 @@ extension RootCoordinator {
     enum NavigationView: Identifiable, Hashable, Equatable {
         case profile(viewModel: ProfileViewModel)
         case profileName(viewModel: ProfileNameViewModel)
+        case changePassword(viewModel: ChangePasswordViewModel)
         case projectDetails(viewModel: ProjectDetailViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
@@ -99,6 +106,7 @@ extension RootCoordinator {
             case .profile: return "001"
             case .projectDetails: return "002"
             case .profileName: return "003"
+            case .changePassword: return "004"
             }
         }
     }
