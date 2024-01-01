@@ -19,21 +19,25 @@ struct AppTextField: View {
             Text(type.title)
                 .apply(.regular, size: .M, color: .white)
             makeTextField()
+                .padding(12)
+                .background(makeBackground())
         }
     }
 
     @ViewBuilder
     private func makeTextField() -> some View {
-        switch type {
-        case .email, .projectName, .keyId, .translation, .name, .surname:
-            TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.lightGray)), axis: type.axis)
-                .autocorrectionDisabled()
-                .textInputAutocapitalization(.never)
-                .apply(.medium, size: .L, color: .white)
-                .padding(8)
-                .background(makeBackground())
-        case .password, .confirmPassword:
-            HStack(spacing: 4) {
+        HStack(spacing: 8) {
+
+            switch type {
+            case .email, .projectName, .keyId, .translation, .name, .surname:
+                image
+                TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.lightGray)), axis: type.axis)
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.never)
+                    .apply(.medium, size: .L, color: .white)
+
+            case .password, .confirmPassword:
+                image
                 ZStack {
                     TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.lightGray)))
                         .apply(.medium, size: .L, color: .white)
@@ -47,9 +51,14 @@ struct AppTextField: View {
                         .foregroundStyle(appColor(.white))
                 })
             }
-            .padding(8)
-            .background(makeBackground())
         }
+    }
+
+    private var image: some View {
+        ZStack {
+            type.imageView
+        }
+        .frame(width: 24)
     }
 
     private func makeBackground() -> some View {
@@ -104,6 +113,17 @@ extension AppTextField {
             return switch self {
             case .email, .password, .confirmPassword, .name, .surname: .horizontal
             case .projectName, .keyId, .translation: .vertical
+            }
+        }
+
+        var imageView: some View {
+            switch self {
+            case .email: Image(systemName: "envelope.fill").resizable().frame(width: 24, height: 16)
+            case .password, .confirmPassword: Image(systemName: "lock.fill").resizable().frame(width: 14, height: 20)
+            case .projectName: Image(systemName: "folder.fill").resizable().frame(width: 20, height: 16)
+            case .keyId: Image(systemName: "grid").resizable().frame(width: 16, height: 16)
+            case .translation: Image(systemName: "globe").resizable().frame(width: 20, height: 20)
+            case .name, .surname: Image(systemName: "person.fill").resizable().frame(width: 16, height: 16)
             }
         }
     }

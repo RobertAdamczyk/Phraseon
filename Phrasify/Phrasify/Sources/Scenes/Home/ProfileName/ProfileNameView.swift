@@ -22,7 +22,7 @@ struct ProfileNameView: View {
                     AppTextField(type: .surname, text: $viewModel.surname)
                         .focused($focusedTextField, equals: .surname)
                 }
-                .padding(.horizontal, 16)
+                .padding(16)
             }
             AppButton(style: .fill("Save", .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
                 .padding(16)
