@@ -10,11 +10,13 @@ import Foundation
 protocol RootActions {
 
     func showProfile()
+    
     func showProjectDetails(project: Project)
 
     func presentCreateProject()
-    func presentCreateKey(project: Project)
+    
     func dismissFullScreenCover()
 
     func popToRoot()
+    func popView()
 }

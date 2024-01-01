@@ -71,6 +71,12 @@ final class FirestoreRepository {
                  .catch { _ in Just<User?>(nil)}
                  .eraseToAnyPublisher()
     }
+
+    func setProfileName(userId: UserID, name: String, surname: String) async throws {
+        let ref =  db.collection(Collections.users.rawValue).document(userId)
+        try await ref.updateData(["name": name,
+                                  "surname": surname])
+    }
 }
 
 extension DocumentReference {

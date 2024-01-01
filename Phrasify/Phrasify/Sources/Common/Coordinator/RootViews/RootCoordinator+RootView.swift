@@ -21,6 +21,7 @@ extension RootCoordinator {
                             .navigationDestination(for: RootCoordinator.NavigationView.self) {
                                 switch $0 {
                                 case .profile(let viewModel): ProfileView(viewModel: viewModel)
+                                case .profileName(let viewModel): ProfileNameView(viewModel: viewModel)
                                 case .projectDetails(let viewModel): ProjectDetailView(viewModel: viewModel)
                                 }
                             }

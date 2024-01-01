@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ProfileViewModel: ObservableObject {
 
-    typealias ProfileCoordinator = Coordinator & RootActions
+    typealias ProfileCoordinator = Coordinator & ProfileActions & RootActions
 
     @Published var user: User?
 
@@ -47,7 +47,8 @@ final class ProfileViewModel: ObservableObject {
     }
 
     func onNameTapped() {
-
+        guard let user else { return }
+        coordinator.showProfileName(name: user.name, surname: user.surname)
     }
 
     func onPasswordTapped() {

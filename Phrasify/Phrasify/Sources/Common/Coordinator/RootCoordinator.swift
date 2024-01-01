@@ -44,10 +44,6 @@ extension RootCoordinator: RootActions {
         presentedFullScreenCover = .createProject
     }
 
-    func presentCreateKey(project: Project) {
-        presentedFullScreenCover = .createKey(project)
-    }
-
     func showProjectDetails(project: Project) {
         let viewModel = ProjectDetailViewModel(coordinator: self, project: project)
         let view: NavigationView = .projectDetails(viewModel: viewModel)
@@ -61,12 +57,33 @@ extension RootCoordinator: RootActions {
     func popToRoot() {
         navigationViews.removeAll()
     }
+
+    func popView() {
+        navigationViews.removeLast()
+    }
+}
+
+extension RootCoordinator: ProfileActions {
+
+    func showProfileName(name: String, surname: String) {
+        let viewModel = ProfileNameViewModel(name: name, surname: surname, coordinator: self)
+        let view: NavigationView = .profileName(viewModel: viewModel)
+        navigationViews.append(view)
+    }
+}
+
+extension RootCoordinator: ProjectActions {
+
+    func presentCreateKey(project: Project) {
+        presentedFullScreenCover = .createKey(project)
+    }
 }
 
 extension RootCoordinator {
 
     enum NavigationView: Identifiable, Hashable, Equatable {
         case profile(viewModel: ProfileViewModel)
+        case profileName(viewModel: ProfileNameViewModel)
         case projectDetails(viewModel: ProjectDetailViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
@@ -81,6 +98,7 @@ extension RootCoordinator {
             switch self {
             case .profile: return "001"
             case .projectDetails: return "002"
+            case .profileName: return "003"
             }
         }
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ProjectDetailViewModel: ObservableObject {
 
-    typealias ProjectDetailCoordinator = Coordinator & RootActions
+    typealias ProjectDetailCoordinator = Coordinator & ProjectActions
 
     @Published var selectedKeysOrder: KeysOrder = .alphabetically
     @Published var searchText = ""
