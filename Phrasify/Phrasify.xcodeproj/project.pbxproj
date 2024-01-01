@@ -41,6 +41,8 @@
 		5516EBD32B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBD12B40D2FD00C558B1 /* ProfileViewModel.swift */; };
 		5516EBD52B40E1E300C558B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBD42B40E1E300C558B1 /* User.swift */; };
 		5516EBD62B40E1E300C558B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBD42B40E1E300C558B1 /* User.swift */; };
+		5516EBD82B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBD72B419EBD00C558B1 /* SubscriptionStatus.swift */; };
+		5516EBD92B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBD72B419EBD00C558B1 /* SubscriptionStatus.swift */; };
 		551AA40C2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */; };
 		551AA40D2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */; };
 		551AA4102B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */; };
@@ -221,6 +223,7 @@
 		5516EBCE2B40D2F500C558B1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5516EBD12B40D2FD00C558B1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		5516EBD42B40E1E300C558B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5516EBD72B419EBD00C558B1 /* SubscriptionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionStatus.swift; sourceTree = "<group>"; };
 		551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectActions.swift; sourceTree = "<group>"; };
 		551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageView.swift; sourceTree = "<group>"; };
 		551AA4122B335D2400F0B1E2 /* SelectLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewModel.swift; sourceTree = "<group>"; };
@@ -668,6 +671,7 @@
 			isa = PBXGroup;
 			children = (
 				558074392B2CE6650041160B /* AppError.swift */,
+				5516EBD72B419EBD00C558B1 /* SubscriptionStatus.swift */,
 				55826A892B34C63900233D90 /* UserID.swift */,
 				558074562B2E56E50041160B /* Project.swift */,
 				55826A8F2B34C85800233D90 /* Role.swift */,
@@ -921,6 +925,7 @@
 				558074542B2E3C8F0041160B /* RootActions.swift in Sources */,
 				553F1BEB2B2914700071A099 /* SetPasswordView.swift in Sources */,
 				551AA41A2B33667100F0B1E2 /* TagLayout.swift in Sources */,
+				5516EBD82B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */,
 				55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
 				5516EBBC2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
@@ -1009,6 +1014,7 @@
 				558074552B2E3C8F0041160B /* RootActions.swift in Sources */,
 				55C279182B2A4C0C005144F1 /* Dependencies.swift in Sources */,
 				551AA41B2B33667100F0B1E2 /* TagLayout.swift in Sources */,
+				5516EBD92B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */,
 				55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
 				5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,

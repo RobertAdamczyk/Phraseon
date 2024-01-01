@@ -30,7 +30,7 @@ struct ProfileView: View {
                     Text("Subscription")
                         .apply(.medium, size: .M, color: .lightGray)
                     Button(action: viewModel.onMembershipTapped, label: {
-                        makeProfileRow(for: .membership, value: "24.10.2024")
+                        makeProfileRow(for: .membership, value: viewModel.subscriptionValidUntil)
                     })
                 }
                 VStack(spacing: 16) {

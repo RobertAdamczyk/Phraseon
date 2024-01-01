@@ -15,4 +15,6 @@ struct User: Codable, Hashable {
     var name: String
     var surname: String
     var createdAt: Date
+    var subscriptionStatus: SubscriptionStatus
+    var subscriptionValidUntil: Date
 }

@@ -22,6 +22,13 @@ final class ProfileViewModel: ObservableObject {
         return user.name + " " + user.surname
     }
 
+    var subscriptionValidUntil: String {
+        guard let user else { return "-" }
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter.string(from: user.subscriptionValidUntil)
+    }
+
     private let coordinator: ProfileCoordinator
 
     private var userId: UserID? {
