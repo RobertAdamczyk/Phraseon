@@ -12,6 +12,7 @@ final class RootCoordinator: ObservableObject, Coordinator {
 
     @Published var navigationViews: [NavigationView] = []
     @Published var presentedFullScreenCover: FullScreenCover?
+    @Published var confirmationDialog: ConfirmationDialog.Model?
 
     var isLoggedIn: Bool? { dependencies.authenticationRepository.isLoggedIn }
 
@@ -40,6 +41,13 @@ extension RootCoordinator: NavigationActions {
 
     func popView() {
         navigationViews.removeLast()
+    }
+}
+
+extension RootCoordinator: ConfirmationDialogActions {
+
+    func showUploadPhotoDialog(galleryAction: @escaping () -> Void) {
+        confirmationDialog = .selectImage(galleryAction)
     }
 }
 

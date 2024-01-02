@@ -33,6 +33,7 @@ extension RootCoordinator {
                         case .createKey(let project): CreateKeyCoordinator.RootView(parentCoordinator: rootCoordinator, project: project)
                         }
                     }
+                    .confirmationDialog(item: $rootCoordinator.confirmationDialog)
                 } else if rootCoordinator.isLoggedIn == false {
                     StartCoordinator.RootView(parentCoordinator: rootCoordinator)
                 }

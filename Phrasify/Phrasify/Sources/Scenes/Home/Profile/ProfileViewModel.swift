@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ProfileViewModel: ObservableObject {
 
-    typealias ProfileCoordinator = Coordinator & ProfileActions & RootActions & NavigationActions
+    typealias ProfileCoordinator = Coordinator & ProfileActions & RootActions & NavigationActions & ConfirmationDialogActions
 
     @Published var user: User?
 
@@ -43,7 +43,9 @@ final class ProfileViewModel: ObservableObject {
     }
 
     func onEditProfileImageTapped() {
-
+        coordinator.showUploadPhotoDialog {
+            print("XD")
+        }
     }
 
     func onNameTapped() {
@@ -85,4 +87,3 @@ final class ProfileViewModel: ObservableObject {
             .store(in: cancelBag)
     }
 }
-
