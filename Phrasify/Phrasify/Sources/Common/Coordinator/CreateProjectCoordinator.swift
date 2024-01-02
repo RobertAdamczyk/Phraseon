@@ -24,14 +24,21 @@ final class CreateProjectCoordinator: Coordinator, ObservableObject {
     }
 }
 
+extension CreateProjectCoordinator: NavigationActions {
+
+    func popToRoot() {
+        navigationViews.removeAll()
+    }
+
+    func popView() {
+        navigationViews.removeLast()
+    }
+}
+
 extension CreateProjectCoordinator: CreateProjectActions {
 
     func dismiss() {
         parentCoordinator.dismissFullScreenCover()
-    }
-
-    func popToRoot() {
-        navigationViews.removeAll()
     }
 
     func showSelectLanguage(name: String) {

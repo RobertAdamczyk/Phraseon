@@ -9,7 +9,7 @@ import SwiftUI
 
 final class SetPasswordViewModel: ObservableObject {
 
-    typealias SetPasswordCoordinator = Coordinator & StartActions
+    typealias SetPasswordCoordinator = Coordinator & StartActions & NavigationActions
 
     @Published var password: String = ""
     @Published var confirmPassword: String = ""

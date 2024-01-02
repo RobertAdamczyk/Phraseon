@@ -14,5 +14,4 @@ protocol StartActions {
     func showForgetPassword()
     func showSetPassword(email: String)
     func closeForgetPassword()
-    func popToRoot()
 }

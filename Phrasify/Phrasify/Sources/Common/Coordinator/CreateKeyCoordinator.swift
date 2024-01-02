@@ -24,14 +24,21 @@ final class CreateKeyCoordinator: Coordinator, ObservableObject {
     }
 }
 
+extension CreateKeyCoordinator: NavigationActions {
+
+    func popToRoot() {
+        navigationViews.removeAll()
+    }
+
+    func popView() {
+        navigationViews.removeLast()
+    }
+}
+
 extension CreateKeyCoordinator: CreateKeyActions {
 
     func dismiss() {
         parentCoordinator.dismissFullScreenCover()
-    }
-
-    func popToRoot() {
-        navigationViews.removeAll()
     }
 
     func showEnterContentKey(keyId: String, project: Project) {

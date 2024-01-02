@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ProfileViewModel: ObservableObject {
 
-    typealias ProfileCoordinator = Coordinator & ProfileActions & RootActions
+    typealias ProfileCoordinator = Coordinator & ProfileActions & RootActions & NavigationActions
 
     @Published var user: User?
 

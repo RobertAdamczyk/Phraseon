@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ChangePasswordViewModel: ObservableObject {
 
-    typealias ChangePasswordCoordinator = Coordinator & RootActions
+    typealias ChangePasswordCoordinator = Coordinator & RootActions & NavigationActions
 
     @Published private(set) var state: State
     @Published var currentPassword: String = ""

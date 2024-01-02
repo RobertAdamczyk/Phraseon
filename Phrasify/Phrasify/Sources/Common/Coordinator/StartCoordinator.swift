@@ -24,6 +24,17 @@ final class StartCoordinator: Coordinator, ObservableObject {
     }
 }
 
+extension StartCoordinator: NavigationActions {
+
+    func popToRoot() {
+        navigationViews.removeAll()
+    }
+
+    func popView() {
+        navigationViews.removeLast()
+    }
+}
+
 extension StartCoordinator: StartActions {
 
     func showLogin() {
@@ -57,10 +68,6 @@ extension StartCoordinator: StartActions {
             }
             return false
         })
-    }
-
-    func popToRoot() {
-        navigationViews.removeAll()
     }
 }
 

@@ -10,6 +10,5 @@ import Foundation
 protocol CreateKeyActions {
 
     func dismiss()
-    func popToRoot()
     func showEnterContentKey(keyId: String, project: Project)
 }

@@ -16,7 +16,4 @@ protocol RootActions {
     func presentCreateProject()
     
     func dismissFullScreenCover()
-
-    func popToRoot()
-    func popView()
 }

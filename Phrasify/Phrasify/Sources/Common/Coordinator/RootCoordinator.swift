@@ -32,6 +32,17 @@ final class RootCoordinator: ObservableObject, Coordinator {
     }
 }
 
+extension RootCoordinator: NavigationActions {
+
+    func popToRoot() {
+        navigationViews.removeAll()
+    }
+
+    func popView() {
+        navigationViews.removeLast()
+    }
+}
+
 extension RootCoordinator: RootActions {
 
     func showProfile() {
@@ -52,14 +63,6 @@ extension RootCoordinator: RootActions {
 
     func dismissFullScreenCover() {
         presentedFullScreenCover = nil
-    }
-
-    func popToRoot() {
-        navigationViews.removeAll()
-    }
-
-    func popView() {
-        navigationViews.removeLast()
     }
 }
 

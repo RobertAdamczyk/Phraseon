@@ -9,7 +9,7 @@ import SwiftUI
 
 #if DEBUG
 
-final class MockCoordinator: Coordinator, StartActions, RootActions, CreateProjectActions, ProjectActions, ProfileActions {
+final class MockCoordinator: Coordinator, StartActions, RootActions, CreateProjectActions, ProjectActions, ProfileActions, NavigationActions {
 
     var dependencies: Dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init(), cloudRepository: .init())
 
