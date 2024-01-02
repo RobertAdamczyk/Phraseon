@@ -46,7 +46,7 @@ struct ProfileView: View {
     }
 
     private var profileImageView: some View {
-        PhotoPickerView(width: 80, height: 80) { image in
+        PhotoPickerView(width: 80, height: 80, completion: viewModel.uploadProfileImage) { image in
             image
                 .resizable()
                 .clipShape(.circle)

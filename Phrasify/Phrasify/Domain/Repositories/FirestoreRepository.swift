@@ -77,6 +77,11 @@ final class FirestoreRepository {
         try await ref.updateData(["name": name,
                                   "surname": surname])
     }
+
+    func setProfilePhotoUrl(userId: UserID, photoUrl: String) async throws {
+        let ref =  db.collection(Collections.users.rawValue).document(userId)
+        try await ref.updateData(["photoUrl": photoUrl])
+    }
 }
 
 extension DocumentReference {

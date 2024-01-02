@@ -10,6 +10,7 @@ import PhotosUI
 
 struct ImageTransferable: Transferable {
     let image: Image
+    let uiImage: UIImage
 
     static var transferRepresentation: some TransferRepresentation {
         DataRepresentation(importedContentType: .image) { data in
@@ -17,7 +18,7 @@ struct ImageTransferable: Transferable {
                 throw AppError.imageNil
             }
             let image = Image(uiImage: uiImage)
-            return ImageTransferable(image: image)
+            return ImageTransferable(image: image, uiImage: uiImage)
         }
     }
 }

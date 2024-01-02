@@ -10,13 +10,23 @@ import PhotosUI
 
 struct PhotoPickerView<T1: View, T2: View>: View {
 
-    @StateObject var photoHandler: PhotoPickerHandler = .init()
+    @StateObject var photoHandler: PhotoPickerHandler
 
     let width: CGFloat
     let height: CGFloat
 
     @ViewBuilder var imageLabel: (Image) -> T1
     @ViewBuilder var emptyLabel: () -> T2
+
+    init(width: CGFloat, height: CGFloat, completion: ((UIImage) async throws -> Void)? = nil,
+         @ViewBuilder imageLabel: @escaping (Image) -> T1,
+         @ViewBuilder emptyLabel: @escaping () -> T2) {
+        self._photoHandler = .init(wrappedValue: .init(completion: completion))
+        self.width = width
+        self.height = height
+        self.imageLabel = imageLabel
+        self.emptyLabel = emptyLabel
+    }
 
     var body: some View {
         ZStack {

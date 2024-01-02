@@ -56,6 +56,13 @@ final class ProfileViewModel: ObservableObject {
 
     }
 
+    func uploadProfileImage(_ uiImage: UIImage) async throws {
+        guard let userId else { return }
+        _ = try await coordinator.dependencies.storageRepository.uploadImage(path: .userImage(fileName: userId), image: uiImage)
+        let url = try await coordinator.dependencies.storageRepository.downloadURL(for: .userImage(fileName: userId))
+        try await coordinator.dependencies.firestoreRepository.setProfilePhotoUrl(userId: userId, photoUrl: url.absoluteString)
+    }
+
     func onLogoutTapped() {
         do {
             try coordinator.dependencies.authenticationRepository.logout()

@@ -18,6 +18,8 @@ final class PhotoPickerHandler: ObservableObject {
 
     @Published var imageState: ImageState = .empty
 
+    var completion: ((UIImage) async throws -> Void)?
+
     var imageSelection: PhotosPickerItem? {
         didSet {
             if let imageSelection {
@@ -29,6 +31,10 @@ final class PhotoPickerHandler: ObservableObject {
         }
     }
 
+    init(completion: ((UIImage) async throws -> Void)? = nil) {
+        self.completion = completion
+    }
+
     private func loadTransferable(from imageSelection: PhotosPickerItem) -> Progress {
         return imageSelection.loadTransferable(type: ImageTransferable.self) { result in
             DispatchQueue.main.async {
@@ -38,7 +44,15 @@ final class PhotoPickerHandler: ObservableObject {
                 }
                 switch result {
                 case .success(let profileImage?):
-                    self.imageState = .success(profileImage.image)
+                    Task { [weak self] in
+                        do {
+                            try await self?.completion?(profileImage.uiImage)
+                            self?.imageState = .success(profileImage.image)
+                        } catch {
+                            ToastView.showError(message: error.localizedDescription)
+                            self?.imageState = .empty
+                        }
+                    }
                 case .success(nil):
                     self.imageState = .empty
                 case .failure(let error):

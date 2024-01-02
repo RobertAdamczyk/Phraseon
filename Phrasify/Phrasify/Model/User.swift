@@ -17,4 +17,5 @@ struct User: Codable, Hashable {
     var createdAt: Date
     var subscriptionStatus: SubscriptionStatus
     var subscriptionValidUntil: Date
+    var photoUrl: String?
 }
