@@ -47,14 +47,28 @@ struct ProfileView: View {
 
     private var profileImageView: some View {
         PhotoPickerView(width: 80, height: 80, completion: viewModel.uploadProfileImage) { image in
-            image
-                .resizable()
-                .clipShape(.circle)
+            makeImage(for: image)
         } emptyLabel: {
-            Image(systemName: "person.crop.circle.fill")
-                .resizable()
+            if let urlString = viewModel.user?.photoUrl, let url = URL(string: urlString) {
+                AsyncImage(url: url) { image in
+                    makeImage(for: image)
+                } placeholder: {
+                    ProgressView()
+                }
+            } else {
+                makeImage(for: Image(systemName: "person.crop.circle.fill"))
+            }
         }
+    }
 
+    private func makeImage(for image: Image) -> some View {
+        image
+            .resizable()
+            .clipShape(.circle)
+            .padding(4)
+            .background {
+                Circle().fill(appColor(.white))
+            }
     }
 }
 
