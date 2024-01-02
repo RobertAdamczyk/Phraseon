@@ -53,6 +53,8 @@ struct ChangePasswordView: View {
                 .apply(.bold, size: .L, color: .white)
             Text("Notice: As you're logged in using your Google account, the password for this app cannot be changed here. Your app login is linked to your Google account, and any password changes must be made through your Google account settings. Please visit Google's account management to update your password. We appreciate your understanding and are here to assist with any other account inquiries you may have.")
                 .apply(.regular, size: .S, color: .white)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(16)
     }
