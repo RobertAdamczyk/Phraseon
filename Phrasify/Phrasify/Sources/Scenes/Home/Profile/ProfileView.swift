@@ -46,20 +46,15 @@ struct ProfileView: View {
     }
 
     private var profileImageView: some View {
-        Image(systemName: "person.crop.circle.fill")
-            .resizable()
-            .frame(width: 80, height: 80)
-            .overlay(alignment: .bottomTrailing) {
-                Button(action: viewModel.onEditProfileImageTapped, label: {
-                    Image(systemName: "pencil")
-                        .apply(.bold, size: .M, color: .black)
-                        .padding(6)
-                        .background {
-                            Circle()
-                                .fill(appColor(.paleOrange))
-                        }
-                })
-            }
+        PhotoPickerView(width: 80, height: 80) { image in
+            image
+                .resizable()
+                .clipShape(.circle)
+        } emptyLabel: {
+            Image(systemName: "person.crop.circle.fill")
+                .resizable()
+        }
+
     }
 }
 

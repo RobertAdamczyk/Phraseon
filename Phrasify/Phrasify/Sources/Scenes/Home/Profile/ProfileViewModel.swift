@@ -42,12 +42,6 @@ final class ProfileViewModel: ObservableObject {
         setupUserSubscriber()
     }
 
-    func onEditProfileImageTapped() {
-        coordinator.showUploadPhotoDialog {
-            print("XD")
-        }
-    }
-
     func onNameTapped() {
         guard let user else { return }
         coordinator.showProfileName(name: user.name, surname: user.surname)

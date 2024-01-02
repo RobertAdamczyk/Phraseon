@@ -13,6 +13,12 @@
 		5505378B2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		5505378D2B4494610077912D /* ConfirmationDialogActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505378C2B4494610077912D /* ConfirmationDialogActions.swift */; };
 		5505378E2B4494610077912D /* ConfirmationDialogActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505378C2B4494610077912D /* ConfirmationDialogActions.swift */; };
+		550537912B44C0170077912D /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537902B44C0170077912D /* PhotoPickerView.swift */; };
+		550537922B44C0170077912D /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537902B44C0170077912D /* PhotoPickerView.swift */; };
+		550537942B44C0270077912D /* PhotoPickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537932B44C0270077912D /* PhotoPickerHandler.swift */; };
+		550537952B44C0270077912D /* PhotoPickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537932B44C0270077912D /* PhotoPickerHandler.swift */; };
+		550537972B44C0DE0077912D /* ImageTransferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537962B44C0DE0077912D /* ImageTransferable.swift */; };
+		550537982B44C0DE0077912D /* ImageTransferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537962B44C0DE0077912D /* ImageTransferable.swift */; };
 		5513C2482B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5513C2472B325DB1004C1933 /* CreateProjectCoordinator.swift */; };
 		5513C2492B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5513C2472B325DB1004C1933 /* CreateProjectCoordinator.swift */; };
 		5513C24B2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5513C24A2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift */; };
@@ -231,6 +237,9 @@
 		550537862B4488FA0077912D /* ConfirmationDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationDialog.swift; sourceTree = "<group>"; };
 		550537892B4492670077912D /* NavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActions.swift; sourceTree = "<group>"; };
 		5505378C2B4494610077912D /* ConfirmationDialogActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationDialogActions.swift; sourceTree = "<group>"; };
+		550537902B44C0170077912D /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		550537932B44C0270077912D /* PhotoPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerHandler.swift; sourceTree = "<group>"; };
+		550537962B44C0DE0077912D /* ImageTransferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransferable.swift; sourceTree = "<group>"; };
 		5513C2472B325DB1004C1933 /* CreateProjectCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectCoordinator.swift; sourceTree = "<group>"; };
 		5513C24A2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateProjectCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		5513C24E2B325E2F004C1933 /* CreateProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectView.swift; sourceTree = "<group>"; };
@@ -376,6 +385,16 @@
 				550537862B4488FA0077912D /* ConfirmationDialog.swift */,
 			);
 			path = ConfirmationDialog;
+			sourceTree = "<group>";
+		};
+		5505378F2B44C0080077912D /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				550537962B44C0DE0077912D /* ImageTransferable.swift */,
+				550537902B44C0170077912D /* PhotoPickerView.swift */,
+				550537932B44C0270077912D /* PhotoPickerHandler.swift */,
+			);
+			path = PhotoPicker;
 			sourceTree = "<group>";
 		};
 		5513C24D2B325E1C004C1933 /* CreateProject */ = {
@@ -649,6 +668,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5505378F2B44C0080077912D /* PhotoPicker */,
 				550537852B4488E40077912D /* ConfirmationDialog */,
 				5516EBC92B40CF7500C558B1 /* Shapes */,
 				55826A992B34E20D00233D90 /* ScrollingAnimator */,
@@ -989,6 +1009,7 @@
 				5516EBAF2B3F2D5700C558B1 /* KeyStatus+UI.swift in Sources */,
 				55FF42652B2B912B00F4D523 /* HomeView.swift in Sources */,
 				5505378D2B4494610077912D /* ConfirmationDialogActions.swift in Sources */,
+				550537942B44C0270077912D /* PhotoPickerHandler.swift in Sources */,
 				55826AA82B34FD9E00233D90 /* CreateKeyActions.swift in Sources */,
 				5516EBB32B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074542B2E3C8F0041160B /* RootActions.swift in Sources */,
@@ -1062,10 +1083,12 @@
 				5516EBB62B3F2EF900C558B1 /* Technology+UI.swift in Sources */,
 				55826A9F2B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
 				5516EBC02B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */,
+				550537972B44C0DE0077912D /* ImageTransferable.swift in Sources */,
 				5516EBDC2B4326B600C558B1 /* ProfileNameView.swift in Sources */,
 				550537872B4488FA0077912D /* ConfirmationDialog.swift in Sources */,
 				5516EBF22B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */,
 				55826A9B2B34E21F00233D90 /* ScrollingAnimator.swift in Sources */,
+				550537912B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4212B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FB5F632B3E409B004D3720 /* KeyStatus.swift in Sources */,
 				551AA4162B33612500F0B1E2 /* Language.swift in Sources */,
@@ -1089,6 +1112,7 @@
 				5516EBB02B3F2D5700C558B1 /* KeyStatus+UI.swift in Sources */,
 				55FF42662B2B912B00F4D523 /* HomeView.swift in Sources */,
 				5505378E2B4494610077912D /* ConfirmationDialogActions.swift in Sources */,
+				550537952B44C0270077912D /* PhotoPickerHandler.swift in Sources */,
 				55826AA92B34FD9E00233D90 /* CreateKeyActions.swift in Sources */,
 				5516EBB42B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074552B2E3C8F0041160B /* RootActions.swift in Sources */,
@@ -1162,10 +1186,12 @@
 				5516EBB72B3F2EF900C558B1 /* Technology+UI.swift in Sources */,
 				55826AA02B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
 				5516EBC12B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */,
+				550537982B44C0DE0077912D /* ImageTransferable.swift in Sources */,
 				5516EBDD2B4326B600C558B1 /* ProfileNameView.swift in Sources */,
 				550537882B4488FA0077912D /* ConfirmationDialog.swift in Sources */,
 				5516EBF32B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */,
 				55826A9C2B34E21F00233D90 /* ScrollingAnimator.swift in Sources */,
+				550537922B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4222B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FB5F642B3E409B004D3720 /* KeyStatus.swift in Sources */,
 				551AA4172B33612500F0B1E2 /* Language.swift in Sources */,
