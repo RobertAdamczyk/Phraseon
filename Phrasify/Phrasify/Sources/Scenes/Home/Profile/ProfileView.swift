@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct ProfileView: View {
 
@@ -50,7 +51,7 @@ struct ProfileView: View {
             makeImage(for: image)
         } emptyLabel: {
             if let urlString = viewModel.user?.photoUrl, let url = URL(string: urlString) {
-                AsyncImage(url: url) { image in
+                CachedAsyncImage(url: url) { image in
                     makeImage(for: image)
                 } placeholder: {
                     ProgressView()
