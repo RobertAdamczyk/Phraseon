@@ -8,24 +8,22 @@
 import SwiftUI
 import PhotosUI
 
-struct PhotoPickerView<T1: View, T2: View>: View {
+struct PhotoPickerView<T1: View, T2: View, T3: View>: View {
 
     @StateObject var photoHandler: PhotoPickerHandler
 
-    let width: CGFloat
-    let height: CGFloat
-
     @ViewBuilder var imageLabel: (Image) -> T1
-    @ViewBuilder var emptyLabel: () -> T2
+    @ViewBuilder var placeholderLabel: () -> T2
+    @ViewBuilder var progressLabel: () -> T3
 
-    init(width: CGFloat, height: CGFloat, completion: ((UIImage) async throws -> Void)? = nil,
+    init(completion: ((UIImage) async throws -> Void)? = nil,
          @ViewBuilder imageLabel: @escaping (Image) -> T1,
-         @ViewBuilder emptyLabel: @escaping () -> T2) {
+         @ViewBuilder placeholderLabel: @escaping () -> T2,
+         @ViewBuilder progressLabel: @escaping () -> T3) {
         self._photoHandler = .init(wrappedValue: .init(completion: completion))
-        self.width = width
-        self.height = height
         self.imageLabel = imageLabel
-        self.emptyLabel = emptyLabel
+        self.placeholderLabel = placeholderLabel
+        self.progressLabel = progressLabel
     }
 
     var body: some View {
@@ -33,13 +31,12 @@ struct PhotoPickerView<T1: View, T2: View>: View {
             switch photoHandler.imageState {
             case .success(let image):
                 imageLabel(image)
-            case .loading(let progress):
-                ProgressView(progress)
+            case .loading:
+                progressLabel()
             case .empty:
-                emptyLabel()
+                placeholderLabel()
             }
         }
-        .frame(width: width, height: height)
         .overlay(alignment: .bottomTrailing) {
             PhotosPicker(selection: $photoHandler.imageSelection, matching: .images) {
                 Image(systemName: "pencil")

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CachedAsyncImage
 
 struct ProfileView: View {
 
@@ -15,7 +14,7 @@ struct ProfileView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 32) {
-                profileImageView
+                ImageView(viewModel: viewModel)
                 VStack(alignment: .leading, spacing: 16) {
                     Text("Personal Info")
                         .apply(.medium, size: .M, color: .lightGray)
@@ -44,32 +43,6 @@ struct ProfileView: View {
             .padding(.horizontal, 16)
         }
         .navigationTitle("Profile")
-    }
-
-    private var profileImageView: some View {
-        PhotoPickerView(width: 80, height: 80, completion: viewModel.uploadProfileImage) { image in
-            makeImage(for: image)
-        } emptyLabel: {
-            if let urlString = viewModel.user?.photoUrl, let url = URL(string: urlString) {
-                CachedAsyncImage(url: url) { image in
-                    makeImage(for: image)
-                } placeholder: {
-                    ProgressView()
-                }
-            } else {
-                makeImage(for: Image(systemName: "person.crop.circle.fill"))
-            }
-        }
-    }
-
-    private func makeImage(for image: Image) -> some View {
-        image
-            .resizable()
-            .clipShape(.circle)
-            .padding(4)
-            .background {
-                Circle().fill(appColor(.white))
-            }
     }
 }
 
