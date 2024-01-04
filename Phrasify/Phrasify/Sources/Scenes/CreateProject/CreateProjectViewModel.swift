@@ -9,7 +9,7 @@ import SwiftUI
 
 final class CreateProjectViewModel: ObservableObject {
 
-    typealias CreateProjectCoordinator = Coordinator & CreateProjectActions
+    typealias CreateProjectCoordinator = Coordinator & FullScreenCoverActions & SelectLanguageActions
 
     @Published var projectName: String = ""
 
@@ -24,7 +24,7 @@ final class CreateProjectViewModel: ObservableObject {
     }
 
     func onCloseButtonTapped() {
-        coordinator.dismiss()
+        coordinator.dismissFullScreenCover()
     }
 
     func onContinueButtonTapped() {

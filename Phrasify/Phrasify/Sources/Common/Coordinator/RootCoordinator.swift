@@ -46,6 +46,13 @@ extension RootCoordinator: NavigationActions {
     }
 }
 
+extension RootCoordinator: FullScreenCoverActions {
+
+    func dismissFullScreenCover() {
+        presentedFullScreenCover = nil
+    }
+}
+
 extension RootCoordinator: ConfirmationDialogActions {
 
     func showUploadPhotoDialog(galleryAction: @escaping () -> Void) {
@@ -69,10 +76,6 @@ extension RootCoordinator: RootActions {
         let viewModel = ProjectDetailViewModel(coordinator: self, project: project)
         let view: NavigationView = .projectDetails(viewModel: viewModel)
         navigationViews.append(view)
-    }
-
-    func dismissFullScreenCover() {
-        presentedFullScreenCover = nil
     }
 }
 
@@ -114,6 +117,32 @@ extension RootCoordinator: ProjectActions {
     }
 }
 
+extension RootCoordinator: SelectLanguageActions {
+
+    func showSelectedLanguages(languages: [Language]) {
+        let viewModel = SelectLanguageViewModel(coordinator: self, context: .settings(languages: languages))
+        let view: NavigationView = .selectedLanguages(viewModel: viewModel)
+        navigationViews.append(view)
+    }
+
+    func showSelectLanguage(name: String) {
+        // empty implementation
+    }
+}
+
+extension RootCoordinator: SelectTechnologyActions {
+
+    func showSelectedTechnologies(technologies: [Technology]) {
+        let viewModel = SelectTechnologyViewModel(coordinator: self, context: .settings(technologies: technologies))
+        let view: NavigationView = .selectedTechnologies(viewModel: viewModel)
+        navigationViews.append(view)
+    }
+
+    func showSelectTechnology(name: String, languages: [Language]) {
+        // empty implementation
+    }
+}
+
 extension RootCoordinator {
 
     enum NavigationView: Identifiable, Hashable, Equatable {
@@ -122,6 +151,8 @@ extension RootCoordinator {
         case changePassword(viewModel: ChangePasswordViewModel)
         case projectDetails(viewModel: ProjectDetailViewModel)
         case projectSettings(viewModel: ProjectSettingsViewModel)
+        case selectedLanguages(viewModel: SelectLanguageViewModel)
+        case selectedTechnologies(viewModel: SelectTechnologyViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -138,6 +169,8 @@ extension RootCoordinator {
             case .profileName: return "003"
             case .changePassword: return "004"
             case .projectSettings: return "005"
+            case .selectedLanguages: return "006"
+            case .selectedTechnologies: return "007"
             }
         }
     }

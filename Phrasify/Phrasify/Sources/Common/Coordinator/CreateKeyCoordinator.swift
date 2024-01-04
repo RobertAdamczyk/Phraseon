@@ -9,7 +9,7 @@ import SwiftUI
 
 final class CreateKeyCoordinator: Coordinator, ObservableObject {
 
-    typealias ParentCoordinator = Coordinator & RootActions
+    typealias ParentCoordinator = Coordinator & RootActions & FullScreenCoverActions
 
     @Published var navigationViews: [NavigationView] = []
 
@@ -35,11 +35,14 @@ extension CreateKeyCoordinator: NavigationActions {
     }
 }
 
-extension CreateKeyCoordinator: CreateKeyActions {
+extension CreateKeyCoordinator: FullScreenCoverActions {
 
-    func dismiss() {
+    func dismissFullScreenCover() {
         parentCoordinator.dismissFullScreenCover()
     }
+}
+
+extension CreateKeyCoordinator: CreateKeyActions {
 
     func showEnterContentKey(keyId: String, project: Project) {
         let viewModel = EnterContentKeyViewModel(coordinator: self, keyId: keyId, project: project)

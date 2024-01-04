@@ -14,6 +14,4 @@ protocol RootActions {
     func showProjectDetails(project: Project)
 
     func presentCreateProject()
-    
-    func dismissFullScreenCover()
 }

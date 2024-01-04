@@ -9,7 +9,7 @@ import SwiftUI
 
 final class CreateProjectCoordinator: Coordinator, ObservableObject {
 
-    typealias ParentCoordinator = Coordinator & RootActions
+    typealias ParentCoordinator = Coordinator & RootActions & FullScreenCoverActions
 
     @Published var navigationViews: [NavigationView] = []
 
@@ -35,22 +35,36 @@ extension CreateProjectCoordinator: NavigationActions {
     }
 }
 
-extension CreateProjectCoordinator: CreateProjectActions {
+extension CreateProjectCoordinator: FullScreenCoverActions {
 
-    func dismiss() {
+    func dismissFullScreenCover() {
         parentCoordinator.dismissFullScreenCover()
     }
+}
+
+extension CreateProjectCoordinator: SelectTechnologyActions {
+
+    func showSelectTechnology(name: String, languages: [Language]) {
+        let viewModel = SelectTechnologyViewModel(coordinator: self, context: .createProject(projectName: name, languages: languages))
+        let view: NavigationView = .selectTechnology(viewModel: viewModel)
+        navigationViews.append(view)
+    }
+
+    func showSelectedTechnologies(technologies: [Technology]) {
+        // empty implementation
+    }
+}
+
+extension CreateProjectCoordinator: SelectLanguageActions {
 
     func showSelectLanguage(name: String) {
-        let viewModel = SelectLanguageViewModel(coordinator: self, name: name)
+        let viewModel = SelectLanguageViewModel(coordinator: self, context: .createProject(name: name))
         let view: NavigationView = .selectLanguage(viewModel: viewModel)
         navigationViews.append(view)
     }
 
-    func showSelectTechnology(name: String, languages: [Language]) {
-        let viewModel = SelectTechnologyViewModel(coordinator: self, name: name, languages: languages)
-        let view: NavigationView = .selectTechnology(viewModel: viewModel)
-        navigationViews.append(view)
+    func showSelectedLanguages(languages: [Language]) {
+        // empty implementation
     }
 }
 

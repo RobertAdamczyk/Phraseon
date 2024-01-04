@@ -25,6 +25,8 @@ extension RootCoordinator {
                                 case .projectDetails(let viewModel): ProjectDetailView(viewModel: viewModel)
                                 case .changePassword(let viewModel): ChangePasswordView(viewModel: viewModel)
                                 case .projectSettings(let viewModel): ProjectSettingsView(viewModel: viewModel)
+                                case .selectedLanguages(let viewModel): SelectLanguageView(viewModel: viewModel)
+                                case .selectedTechnologies(let viewModel): SelectTechnologyView(viewModel: viewModel)
                                 }
                             }
                     }

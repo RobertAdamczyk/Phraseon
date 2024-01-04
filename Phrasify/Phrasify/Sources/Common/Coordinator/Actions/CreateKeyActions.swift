@@ -9,6 +9,5 @@ import Foundation
 
 protocol CreateKeyActions {
 
-    func dismiss()
     func showEnterContentKey(keyId: String, project: Project)
 }

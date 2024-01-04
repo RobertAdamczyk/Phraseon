@@ -116,7 +116,7 @@ struct SelectTechnologyView: View {
 }
 
 #Preview {
-    SelectTechnologyView(viewModel: .init(coordinator: MockCoordinator(), name: "", languages: []))
+    SelectTechnologyView(viewModel: .init(coordinator: MockCoordinator(), context: .createProject(projectName: "", languages: [])))
 }
 
 

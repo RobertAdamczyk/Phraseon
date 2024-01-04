@@ -75,8 +75,8 @@
 		5516EBF02B436DAD00C558B1 /* AuthenticationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBEE2B436DAD00C558B1 /* AuthenticationProvider.swift */; };
 		5516EBF22B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBF12B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift */; };
 		5516EBF32B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBF12B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift */; };
-		551AA40C2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */; };
-		551AA40D2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */; };
+		551AA40C2B334FB800F0B1E2 /* FullScreenCoverActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* FullScreenCoverActions.swift */; };
+		551AA40D2B334FB800F0B1E2 /* FullScreenCoverActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* FullScreenCoverActions.swift */; };
 		551AA4102B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */; };
 		551AA4112B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */; };
 		551AA4132B335D2400F0B1E2 /* SelectLanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4122B335D2400F0B1E2 /* SelectLanguageViewModel.swift */; };
@@ -114,6 +114,10 @@
 		5569779C2B4747170022B675 /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779A2B4747170022B675 /* ProjectSettingsView.swift */; };
 		5569779E2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */; };
 		5569779F2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */; };
+		556977A12B47594A0022B675 /* SelectLanguageActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A02B47594A0022B675 /* SelectLanguageActions.swift */; };
+		556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A02B47594A0022B675 /* SelectLanguageActions.swift */; };
+		556977A42B475B440022B675 /* SelectTechnologyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A32B475B440022B675 /* SelectTechnologyActions.swift */; };
+		556977A52B475B440022B675 /* SelectTechnologyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A32B475B440022B675 /* SelectTechnologyActions.swift */; };
 		558074322B2CDF130041160B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 558074312B2CDF130041160B /* GoogleSignIn */; };
 		558074342B2CDF130041160B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 558074332B2CDF130041160B /* GoogleSignInSwift */; };
 		558074362B2CDF1E0041160B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 558074352B2CDF1E0041160B /* GoogleSignIn */; };
@@ -283,7 +287,7 @@
 		5516EBEB2B4360A000C558B1 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		5516EBEE2B436DAD00C558B1 /* AuthenticationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProvider.swift; sourceTree = "<group>"; };
 		5516EBF12B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseUser+AuthenticationProvider.swift"; sourceTree = "<group>"; };
-		551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectActions.swift; sourceTree = "<group>"; };
+		551AA40B2B334FB800F0B1E2 /* FullScreenCoverActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCoverActions.swift; sourceTree = "<group>"; };
 		551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageView.swift; sourceTree = "<group>"; };
 		551AA4122B335D2400F0B1E2 /* SelectLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewModel.swift; sourceTree = "<group>"; };
 		551AA4152B33612500F0B1E2 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 		553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
 		5569779A2B4747170022B675 /* ProjectSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsView.swift; sourceTree = "<group>"; };
 		5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsViewModel.swift; sourceTree = "<group>"; };
+		556977A02B47594A0022B675 /* SelectLanguageActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageActions.swift; sourceTree = "<group>"; };
+		556977A32B475B440022B675 /* SelectTechnologyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyActions.swift; sourceTree = "<group>"; };
 		558074392B2CE6650041160B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		558074402B2CF08E0041160B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		558074442B2CF2780041160B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
@@ -745,7 +751,9 @@
 			children = (
 				55C279222B2A4D18005144F1 /* StartActions.swift */,
 				558074532B2E3C8F0041160B /* RootActions.swift */,
-				551AA40B2B334FB800F0B1E2 /* CreateProjectActions.swift */,
+				551AA40B2B334FB800F0B1E2 /* FullScreenCoverActions.swift */,
+				556977A02B47594A0022B675 /* SelectLanguageActions.swift */,
+				556977A32B475B440022B675 /* SelectTechnologyActions.swift */,
 				55826AA72B34FD9E00233D90 /* CreateKeyActions.swift */,
 				5516EBE12B432D3F00C558B1 /* ProjectActions.swift */,
 				5516EBE42B432D4700C558B1 /* ProfileActions.swift */,
@@ -1063,6 +1071,7 @@
 				55FF42652B2B912B00F4D523 /* HomeView.swift in Sources */,
 				5505378D2B4494610077912D /* ConfirmationDialogActions.swift in Sources */,
 				550537942B44C0270077912D /* PhotoPickerHandler.swift in Sources */,
+				556977A42B475B440022B675 /* SelectTechnologyActions.swift in Sources */,
 				55826AA82B34FD9E00233D90 /* CreateKeyActions.swift in Sources */,
 				5516EBB32B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074542B2E3C8F0041160B /* RootActions.swift in Sources */,
@@ -1113,7 +1122,7 @@
 				55FF42612B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				55FF42902B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
 				553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */,
-				551AA40C2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */,
+				551AA40C2B334FB800F0B1E2 /* FullScreenCoverActions.swift in Sources */,
 				55FF426C2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
 				55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */,
 				5516EBEC2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
@@ -1153,6 +1162,7 @@
 				55FF42682B2B914000F4D523 /* HomeViewModel.swift in Sources */,
 				55FF425E2B2A674A00F4D523 /* CancelBag.swift in Sources */,
 				55C279132B2A4B48005144F1 /* AppDelegate.swift in Sources */,
+				556977A12B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				553F1BDD2B2907C10071A099 /* RegisterView.swift in Sources */,
 				55826AA22B34FD1600233D90 /* CreateKeyViewModel.swift in Sources */,
@@ -1172,6 +1182,7 @@
 				55FF42662B2B912B00F4D523 /* HomeView.swift in Sources */,
 				5505378E2B4494610077912D /* ConfirmationDialogActions.swift in Sources */,
 				550537952B44C0270077912D /* PhotoPickerHandler.swift in Sources */,
+				556977A52B475B440022B675 /* SelectTechnologyActions.swift in Sources */,
 				55826AA92B34FD9E00233D90 /* CreateKeyActions.swift in Sources */,
 				5516EBB42B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074552B2E3C8F0041160B /* RootActions.swift in Sources */,
@@ -1222,7 +1233,7 @@
 				55FF42622B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				55FF42912B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
 				55C2791A2B2A4C11005144F1 /* RootCoordinator.swift in Sources */,
-				551AA40D2B334FB800F0B1E2 /* CreateProjectActions.swift in Sources */,
+				551AA40D2B334FB800F0B1E2 /* FullScreenCoverActions.swift in Sources */,
 				55FF426D2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
 				55C278EA2B2A3F3A005144F1 /* AppDivider.swift in Sources */,
 				5516EBED2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
@@ -1262,6 +1273,7 @@
 				55FF42692B2B914100F4D523 /* HomeViewModel.swift in Sources */,
 				55FF425F2B2A677800F4D523 /* CancelBag.swift in Sources */,
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,
+				556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				55C278EF2B2A3F3A005144F1 /* RegisterView.swift in Sources */,
 				55826AA32B34FD1600233D90 /* CreateKeyViewModel.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 final class SelectTechnologyViewModel: ObservableObject {
 
-    typealias SelectTechnologyCoordinator = Coordinator & CreateProjectActions
+    typealias SelectTechnologyCoordinator = Coordinator & FullScreenCoverActions
 
     @Published var selectedTechnologies: [Technology] = []
 
@@ -26,13 +26,14 @@ final class SelectTechnologyViewModel: ObservableObject {
     }
 
     private let coordinator: SelectTechnologyCoordinator
-    private let name: String
-    private let languages: [Language]
+    private let context: Context
 
-    init(coordinator: SelectTechnologyCoordinator, name: String, languages: [Language]) {
+    init(coordinator: SelectTechnologyCoordinator, context: Context) {
         self.coordinator = coordinator
-        self.name = name
-        self.languages = languages
+        self.context = context
+        if case .settings(let technologies) = context {
+            selectedTechnologies = technologies
+        }
     }
 
     func onTechnologyTapped(_ technology: Technology) {
@@ -49,17 +50,28 @@ final class SelectTechnologyViewModel: ObservableObject {
 
     @MainActor
     func onPrimaryButtonTapped() async {
-        guard let userId = coordinator.dependencies.authenticationRepository.currentUser?.uid,
-              let baseLanguage = languages.last else { return }
+        guard let userId = coordinator.dependencies.authenticationRepository.currentUser?.uid else { return }
         do {
-            _ = try await coordinator.dependencies.firestoreRepository.createProject(userId: userId, name: name, 
-                                                                                     languages: languages,
-                                                                                     baseLanguage: baseLanguage,
-                                                                                     technologies: selectedTechnologies)
-            coordinator.dismiss()
+            switch context {
+            case .settings(let technologies):
+                print("TODO: Save technologies")
+            case .createProject(let projectName, let languages):
+                _ = try await coordinator.dependencies.firestoreRepository.createProject(userId: userId, name: projectName,
+                                                                                         languages: languages,
+                                                                                         baseLanguage: languages.last ?? .english,
+                                                                                         technologies: selectedTechnologies)
+                coordinator.dismissFullScreenCover()
+            }
         } catch {
             ToastView.showError(message: error.localizedDescription)
         }
     }
 }
 
+extension SelectTechnologyViewModel {
+
+    enum Context {
+        case settings(technologies: [Technology])
+        case createProject(projectName: String, languages: [Language])
+    }
+}

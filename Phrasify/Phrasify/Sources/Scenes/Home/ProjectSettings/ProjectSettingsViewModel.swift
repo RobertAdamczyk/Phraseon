@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ProjectSettingsViewModel: ObservableObject {
 
-    typealias ProjectSettingsCoordinator = Coordinator & ProjectActions
+    typealias ProjectSettingsCoordinator = Coordinator & SelectLanguageActions & SelectTechnologyActions
 
     @Published var project: Project
 
@@ -23,11 +23,11 @@ final class ProjectSettingsViewModel: ObservableObject {
     }
 
     func onLanguagesTapped() {
-
+        coordinator.showSelectedLanguages(languages: project.languages)
     }
 
     func onTechnologiesTapped() {
-
+        coordinator.showSelectedTechnologies(technologies: project.technologies)
     }
 
     func onMembersTapped() {

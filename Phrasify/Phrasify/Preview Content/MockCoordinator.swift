@@ -9,8 +9,8 @@ import SwiftUI
 
 #if DEBUG
 
-final class MockCoordinator: Coordinator, StartActions, RootActions, CreateProjectActions, ProjectActions, ProfileActions, 
-                             NavigationActions, ConfirmationDialogActions {
+final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenCoverActions, ProjectActions, ProfileActions,
+                             NavigationActions, ConfirmationDialogActions, SelectLanguageActions, SelectTechnologyActions {
 
     var dependencies: Dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init(), cloudRepository: .init(),
                                            storageRepository: .init())
@@ -44,6 +44,8 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, CreateProje
     func showUploadPhotoDialog(galleryAction: @escaping () -> Void) { /*empty*/ }
     func showProfileDeleteWarning() { /*empty*/ }
     func showProjectSettings(project: Project) { /*empty*/ }
+    func showSelectedLanguages(languages: [Language]) { /*empty*/ }
+    func showSelectedTechnologies(technologies: [Technology]) { }
 }
 
 #endif

@@ -9,7 +9,7 @@ import SwiftUI
 
 final class EnterContentKeyViewModel: ObservableObject {
 
-    typealias EnterContentKeyCoordinator = Coordinator & CreateKeyActions
+    typealias EnterContentKeyCoordinator = Coordinator & CreateKeyActions & FullScreenCoverActions
 
     @Published var translation: String = ""
 
@@ -29,7 +29,7 @@ final class EnterContentKeyViewModel: ObservableObject {
         do {
             try await coordinator.dependencies.cloudRepository.createKey(projectId: projectId, keyId: keyId,
                                                                          translation: [project.baseLanguage.rawValue: translation])
-            coordinator.dismiss()
+            coordinator.dismissFullScreenCover()
         } catch {
             ToastView.showError(message: error.localizedDescription)
         }

@@ -9,7 +9,7 @@ import SwiftUI
 
 final class CreateKeyViewModel: ObservableObject {
 
-    typealias CreateKeyCoordinator = Coordinator & CreateKeyActions
+    typealias CreateKeyCoordinator = Coordinator & CreateKeyActions & FullScreenCoverActions
 
     @Published var keyId: String = ""
 
@@ -27,7 +27,7 @@ final class CreateKeyViewModel: ObservableObject {
     }
 
     func onCloseButtonTapped() {
-        coordinator.dismiss()
+        coordinator.dismissFullScreenCover()
     }
 
     func onContinueButtonTapped() {
