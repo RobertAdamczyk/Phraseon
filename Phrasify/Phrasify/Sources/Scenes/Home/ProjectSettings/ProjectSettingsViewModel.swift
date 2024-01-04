@@ -22,6 +22,30 @@ final class ProjectSettingsViewModel: ObservableObject {
         setupProjectsSubscriber()
     }
 
+    func onLanguagesTapped() {
+
+    }
+
+    func onTechnologiesTapped() {
+
+    }
+
+    func onMembersTapped() {
+
+    }
+
+    func onOwnerTapped() {
+
+    }
+
+    func onLeaveProjectTapped() {
+
+    }
+
+    func onDeleteProjectTapped() {
+
+    }
+
     private func setupProjectsSubscriber() {
         guard let projectId = project.id else { return }
         coordinator.dependencies.firestoreRepository.getProjectPublisher(projectId: projectId)
