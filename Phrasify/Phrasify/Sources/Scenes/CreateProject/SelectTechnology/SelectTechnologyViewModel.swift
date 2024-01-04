@@ -9,7 +9,7 @@ import SwiftUI
 
 final class SelectTechnologyViewModel: ObservableObject {
 
-    typealias SelectTechnologyCoordinator = Coordinator & FullScreenCoverActions
+    typealias SelectTechnologyCoordinator = Coordinator & FullScreenCoverActions & NavigationActions
 
     @Published var selectedTechnologies: [Technology] = []
 
@@ -47,8 +47,8 @@ final class SelectTechnologyViewModel: ObservableObject {
     init(coordinator: SelectTechnologyCoordinator, context: Context) {
         self.coordinator = coordinator
         self.context = context
-        if case .settings(let technologies) = context {
-            selectedTechnologies = technologies
+        if case .settings(let project) = context {
+            selectedTechnologies = project.technologies
         }
     }
 
@@ -69,8 +69,10 @@ final class SelectTechnologyViewModel: ObservableObject {
         guard let userId = coordinator.dependencies.authenticationRepository.currentUser?.uid else { return }
         do {
             switch context {
-            case .settings(let technologies):
-                print("TODO: Save technologies")
+            case .settings(let project):
+                guard let projectId = project.id else { return }
+                try await coordinator.dependencies.firestoreRepository.setProjectTechnologies(projectId: projectId, technologies: selectedTechnologies)
+                coordinator.popView()
             case .createProject(let projectName, let languages):
                 _ = try await coordinator.dependencies.firestoreRepository.createProject(userId: userId, name: projectName,
                                                                                          languages: languages,
@@ -87,7 +89,7 @@ final class SelectTechnologyViewModel: ObservableObject {
 extension SelectTechnologyViewModel {
 
     enum Context {
-        case settings(technologies: [Technology])
+        case settings(project: Project)
         case createProject(projectName: String, languages: [Language])
     }
 }

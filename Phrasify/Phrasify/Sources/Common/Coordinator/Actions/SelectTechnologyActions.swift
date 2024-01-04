@@ -10,5 +10,5 @@ import Foundation
 protocol SelectTechnologyActions {
 
     func showSelectTechnology(name: String, languages: [Language])
-    func showSelectedTechnologies(technologies: [Technology])
+    func showSelectedTechnologies(project: Project)
 }

@@ -132,8 +132,8 @@ extension RootCoordinator: SelectLanguageActions {
 
 extension RootCoordinator: SelectTechnologyActions {
 
-    func showSelectedTechnologies(technologies: [Technology]) {
-        let viewModel = SelectTechnologyViewModel(coordinator: self, context: .settings(technologies: technologies))
+    func showSelectedTechnologies(project: Project) {
+        let viewModel = SelectTechnologyViewModel(coordinator: self, context: .settings(project: project))
         let view: NavigationView = .selectedTechnologies(viewModel: viewModel)
         navigationViews.append(view)
     }

@@ -50,7 +50,7 @@ extension CreateProjectCoordinator: SelectTechnologyActions {
         navigationViews.append(view)
     }
 
-    func showSelectedTechnologies(technologies: [Technology]) {
+    func showSelectedTechnologies(project: Project) {
         // empty implementation
     }
 }

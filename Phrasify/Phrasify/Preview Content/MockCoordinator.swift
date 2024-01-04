@@ -45,7 +45,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showProfileDeleteWarning() { /*empty*/ }
     func showProjectSettings(project: Project) { /*empty*/ }
     func showSelectedLanguages(languages: [Language]) { /*empty*/ }
-    func showSelectedTechnologies(technologies: [Technology]) { }
+    func showSelectedTechnologies(project: Project) { }
 }
 
 #endif

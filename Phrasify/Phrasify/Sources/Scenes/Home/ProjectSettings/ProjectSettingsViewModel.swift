@@ -27,7 +27,7 @@ final class ProjectSettingsViewModel: ObservableObject {
     }
 
     func onTechnologiesTapped() {
-        coordinator.showSelectedTechnologies(technologies: project.technologies)
+        coordinator.showSelectedTechnologies(project: project)
     }
 
     func onMembersTapped() {
