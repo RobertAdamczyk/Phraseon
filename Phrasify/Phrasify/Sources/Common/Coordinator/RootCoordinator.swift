@@ -12,7 +12,8 @@ final class RootCoordinator: ObservableObject, Coordinator {
 
     @Published var navigationViews: [NavigationView] = []
     @Published var presentedFullScreenCover: FullScreenCover?
-    @Published var confirmationDialog: ConfirmationDialog.Model?
+    @Published var presentedSheet: Sheet?
+    @Published var confirmationDialog: ConfirmationDialog.Model? // TODO: Delete?
 
     var isLoggedIn: Bool? { dependencies.authenticationRepository.isLoggedIn }
 
@@ -88,6 +89,16 @@ extension RootCoordinator: ProfileActions {
         let view: NavigationView = .changePassword(viewModel: viewModel)
         navigationViews.append(view)
     }
+
+    func showProfileDeleteWarning() {
+        let viewModel = ProfileDeleteWarningViewModel(coordinator: self)
+        let sheet: Sheet = .profileDeleteWarning(viewModel: viewModel)
+        presentedSheet = sheet
+    }
+
+    func dismissSheet() {
+        presentedSheet = nil
+    }
 }
 
 extension RootCoordinator: ProjectActions {
@@ -131,6 +142,16 @@ extension RootCoordinator {
             switch self {
             case .createProject: "001"
             case .createKey: "002"
+            }
+        }
+    }
+
+    enum Sheet: Identifiable {
+        case profileDeleteWarning(viewModel: ProfileDeleteWarningViewModel)
+
+        var id: String {
+            switch self {
+            case .profileDeleteWarning: "001"
             }
         }
     }

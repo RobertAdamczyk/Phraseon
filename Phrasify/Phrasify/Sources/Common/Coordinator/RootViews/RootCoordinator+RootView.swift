@@ -33,6 +33,11 @@ extension RootCoordinator {
                         case .createKey(let project): CreateKeyCoordinator.RootView(parentCoordinator: rootCoordinator, project: project)
                         }
                     }
+                    .sheet(item: $rootCoordinator.presentedSheet) {
+                        switch $0 {
+                        case .profileDeleteWarning(let viewModel): ProfileDeleteWarningView(viewModel: viewModel)
+                        }
+                    }
                     .confirmationDialog(item: $rootCoordinator.confirmationDialog)
                 } else if rootCoordinator.isLoggedIn == false {
                     StartCoordinator.RootView(parentCoordinator: rootCoordinator)

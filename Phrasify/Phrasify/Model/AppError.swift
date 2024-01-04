@@ -15,4 +15,5 @@ enum AppError: Error, LocalizedError {
     case viewControllerNil
     case imageNil
     case imageCompressionNil
+    case decodingError
 }

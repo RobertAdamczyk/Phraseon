@@ -11,4 +11,6 @@ protocol ProfileActions {
     
     func showProfileName(name: String, surname: String)
     func showChangePassword(authenticationProvider: AuthenticationProvider)
+    func showProfileDeleteWarning()
+    func dismissSheet()
 }

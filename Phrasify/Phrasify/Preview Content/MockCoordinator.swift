@@ -39,8 +39,10 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, CreateProje
     func showSelectLanguage(name: String) { /*empty*/ }
     func showSelectTechnology(name: String, languages: [Language]) { /*empty*/ }
     func dismiss() { /*empty*/ }
+    func dismissSheet() { /*empty*/ }
 
     func showUploadPhotoDialog(galleryAction: @escaping () -> Void) { /*empty*/ }
+    func showProfileDeleteWarning() { /*empty*/ }
 }
 
 #endif

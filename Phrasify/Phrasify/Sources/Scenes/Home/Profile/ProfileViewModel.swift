@@ -73,7 +73,7 @@ final class ProfileViewModel: ObservableObject {
     }
 
     func onDeleteAccountTapped() {
-
+        coordinator.showProfileDeleteWarning()
     }
 
     private func setupUserSubscriber() {
