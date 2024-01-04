@@ -10,4 +10,5 @@ import Foundation
 protocol ProjectActions {
 
     func presentCreateKey(project: Project)
+    func showProjectSettings(project: Project)
 }

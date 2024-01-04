@@ -106,6 +106,12 @@ extension RootCoordinator: ProjectActions {
     func presentCreateKey(project: Project) {
         presentedFullScreenCover = .createKey(project)
     }
+
+    func showProjectSettings(project: Project) {
+        let viewModel = ProjectSettingsViewModel(coordinator: self, project: project)
+        let view: NavigationView = .projectSettings(viewModel: viewModel)
+        navigationViews.append(view)
+    }
 }
 
 extension RootCoordinator {
@@ -115,6 +121,7 @@ extension RootCoordinator {
         case profileName(viewModel: ProfileNameViewModel)
         case changePassword(viewModel: ChangePasswordViewModel)
         case projectDetails(viewModel: ProjectDetailViewModel)
+        case projectSettings(viewModel: ProjectSettingsViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -130,6 +137,7 @@ extension RootCoordinator {
             case .projectDetails: return "002"
             case .profileName: return "003"
             case .changePassword: return "004"
+            case .projectSettings: return "005"
             }
         }
     }

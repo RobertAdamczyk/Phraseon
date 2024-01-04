@@ -43,6 +43,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, CreateProje
 
     func showUploadPhotoDialog(galleryAction: @escaping () -> Void) { /*empty*/ }
     func showProfileDeleteWarning() { /*empty*/ }
+    func showProjectSettings(project: Project) { /*empty*/ }
 }
 
 #endif

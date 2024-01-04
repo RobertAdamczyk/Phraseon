@@ -42,6 +42,10 @@ final class ProjectDetailViewModel: ObservableObject {
         coordinator.presentCreateKey(project: project)
     }
 
+    func onSettingsTapped() {
+        coordinator.showProjectSettings(project: project)
+    }
+
     private func setupSelectedKeysOrderSubscriber() {
         $selectedKeysOrder
             .receive(on: RunLoop.main)

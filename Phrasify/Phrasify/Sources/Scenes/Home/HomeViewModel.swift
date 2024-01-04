@@ -30,7 +30,6 @@ final class HomeViewModel: ObservableObject {
 
     func onProfileTapped() {
         coordinator.showProfile()
-        //try? coordinator.dependencies.authenticationRepository.logout()
     }
 
     func onProjectTapped(project: Project) {

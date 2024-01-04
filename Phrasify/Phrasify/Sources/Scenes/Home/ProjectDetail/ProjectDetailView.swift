@@ -39,6 +39,15 @@ struct ProjectDetailView: View {
         .ignoresSafeArea(edges: .bottom)
         .overlay(alignment: .bottomTrailing, content: makeAddButton)
         .navigationTitle(viewModel.project.name)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: viewModel.onSettingsTapped, label: {
+                    Image(systemName: "ellipsis")
+                        .apply(.bold, size: .L, color: .paleOrange)
+                        .rotationEffect(.degrees(90))
+                })
+            }
+        }
     }
 
     @ViewBuilder
