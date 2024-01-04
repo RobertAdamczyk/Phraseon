@@ -39,6 +39,7 @@ extension RootCoordinator {
                         }
                     }
                     .confirmationDialog(item: $rootCoordinator.confirmationDialog)
+                    .onDisappear(perform: rootCoordinator.popToRoot)
                 } else if rootCoordinator.isLoggedIn == false {
                     StartCoordinator.RootView(parentCoordinator: rootCoordinator)
                 }

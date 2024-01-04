@@ -66,7 +66,6 @@ final class ProfileViewModel: ObservableObject {
     func onLogoutTapped() {
         do {
             try coordinator.dependencies.authenticationRepository.logout()
-            coordinator.popToRoot()
         } catch {
             ToastView.showError(message: error.localizedDescription)
         }
