@@ -49,8 +49,8 @@ final class ProjectDetailViewModel: ObservableObject {
     private func setupSelectedKeysOrderSubscriber() {
         $selectedKeysOrder
             .receive(on: RunLoop.main)
-            .sink { selectedKeysOrder in
-                self.setupKeysSubscriber()
+            .sink { [weak self] selectedKeysOrder in
+                self?.setupKeysSubscriber()
             }
             .store(in: cancelBag)
     }
