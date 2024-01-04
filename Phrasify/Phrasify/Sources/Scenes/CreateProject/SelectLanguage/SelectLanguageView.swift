@@ -30,7 +30,7 @@ struct SelectLanguageView: View {
 
     @ViewBuilder
     private var titleView: some View {
-        AppTitle(subtitle: "Choose supported languages – remember, you can change it at any time.")
+        AppTitle(subtitle: viewModel.subtitle)
         .padding(.bottom, 16)
         .background(appColor(.black))
     }
@@ -81,7 +81,7 @@ struct SelectLanguageView: View {
 
     @ViewBuilder
     private var buttonView: some View {
-        AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onPrimaryButtonTapped),
+        AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .main(viewModel.onPrimaryButtonTapped),
                   disabled: viewModel.shouldPrimaryButtonDisabled)
         .padding(.top, 16)
     }

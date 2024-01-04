@@ -25,6 +25,22 @@ final class SelectLanguageViewModel: ObservableObject {
         selectedLanguages.isEmpty
     }
 
+    var subtitle: String {
+        switch context {
+        case .settings:
+            "Adjust your language settings – your choices can be modified at any time to better suit your project's needs."
+        case .createProject:
+            "Choose supported languages – remember, you can change it at any time."
+        }
+    }
+
+    var buttonText: String {
+        switch context {
+        case .settings: "Save"
+        case .createProject: "Continue"
+        }
+    }
+
     private let coordinator: SelectLanguageCoordinator
     private let context: Context
 

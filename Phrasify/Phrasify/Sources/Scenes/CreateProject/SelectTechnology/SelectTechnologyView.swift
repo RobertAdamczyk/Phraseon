@@ -30,7 +30,7 @@ struct SelectTechnologyView: View {
 
     @ViewBuilder
     private var titleView: some View {
-        AppTitle(subtitle: "Choose the technology in which the project is created – remember, you can change it at any time.")
+        AppTitle(subtitle: viewModel.subtitle)
         .padding(.bottom, 16)
         .background(appColor(.black))
     }
@@ -81,7 +81,7 @@ struct SelectTechnologyView: View {
 
     @ViewBuilder
     private var buttonView: some View {
-        AppButton(style: .fill("Create", .lightBlue), action: .async(viewModel.onPrimaryButtonTapped),
+        AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped),
                   disabled: viewModel.shouldPrimaryButtonDisabled)
         .padding(.top, 16)
     }

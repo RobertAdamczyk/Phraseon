@@ -25,6 +25,22 @@ final class SelectTechnologyViewModel: ObservableObject {
         selectedTechnologies.isEmpty
     }
 
+    var subtitle: String {
+        switch context {
+        case .settings:
+            "Modify your project's technology settings – feel free to adjust them at any time to align with your evolving project requirements."
+        case .createProject:
+            "Choose the technology in which the project is created – remember, you can change it at any time."
+        }
+    }
+
+    var buttonText: String {
+        switch context {
+        case .settings: "Save"
+        case .createProject: "Create Project"
+        }
+    }
+
     private let coordinator: SelectTechnologyCoordinator
     private let context: Context
 
