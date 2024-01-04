@@ -51,17 +51,13 @@ struct ProjectCellView: View {
     let project: Project
     let action: (Project) -> Void
 
-    private var technologies: String {
-        project.technologies.compactMap { $0.title }.joined(separator: "/")
-    }
-
     var body: some View {
         Button(action: executeAction, label: {
             HStack {
                 VStack(alignment: .leading, spacing: 64) {
                     Text(project.name)
                         .apply(.bold, size: .M, color: .white)
-                    Text(technologies)
+                    Text(project.technologies.joined)
                         .apply(.regular, size: .S, color: .lightGray)
                 }
                 Spacer()

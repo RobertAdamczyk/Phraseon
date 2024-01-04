@@ -24,3 +24,10 @@ extension Language {
         }
     }
 }
+
+extension Array where Element == Language {
+
+    var joined: String {
+        self.compactMap { $0.rawValue }.joined(separator: "/")
+    }
+}

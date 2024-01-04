@@ -18,10 +18,10 @@ struct ProjectSettingsView: View {
                     Text("General")
                         .apply(.medium, size: .M, color: .lightGray)
                     Button(action: viewModel.onLanguagesTapped, label: {
-                        makeSettingsRow(for: .languages, value: "DE EN PL")
+                        makeSettingsRow(for: .languages, value: viewModel.project.languages.joined)
                     })
                     Button(action: viewModel.onTechnologiesTapped, label: {
-                        makeSettingsRow(for: .technologies, value: "Kotlin/Swift")
+                        makeSettingsRow(for: .technologies, value: viewModel.project.technologies.joined)
                     })
                 }
                 VStack(alignment: .leading, spacing: 16) {

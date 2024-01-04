@@ -16,3 +16,10 @@ extension Technology {
         }
     }
 }
+
+extension Array where Element == Technology {
+
+    var joined: String {
+        self.compactMap { $0.title }.joined(separator: "/")
+    }
+}
