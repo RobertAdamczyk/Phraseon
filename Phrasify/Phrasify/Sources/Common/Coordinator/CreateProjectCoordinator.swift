@@ -63,7 +63,7 @@ extension CreateProjectCoordinator: SelectLanguageActions {
         navigationViews.append(view)
     }
 
-    func showSelectedLanguages(languages: [Language]) {
+    func showSelectedLanguages(project: Project) {
         // empty implementation
     }
 }

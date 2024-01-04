@@ -81,7 +81,7 @@ struct SelectLanguageView: View {
 
     @ViewBuilder
     private var buttonView: some View {
-        AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .main(viewModel.onPrimaryButtonTapped),
+        AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped),
                   disabled: viewModel.shouldPrimaryButtonDisabled)
         .padding(.top, 16)
     }

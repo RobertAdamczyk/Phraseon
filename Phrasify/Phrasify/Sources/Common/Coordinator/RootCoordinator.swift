@@ -119,8 +119,8 @@ extension RootCoordinator: ProjectActions {
 
 extension RootCoordinator: SelectLanguageActions {
 
-    func showSelectedLanguages(languages: [Language]) {
-        let viewModel = SelectLanguageViewModel(coordinator: self, context: .settings(languages: languages))
+    func showSelectedLanguages(project: Project) {
+        let viewModel = SelectLanguageViewModel(coordinator: self, context: .settings(project: project))
         let view: NavigationView = .selectedLanguages(viewModel: viewModel)
         navigationViews.append(view)
     }

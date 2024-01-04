@@ -23,7 +23,7 @@ final class ProjectSettingsViewModel: ObservableObject {
     }
 
     func onLanguagesTapped() {
-        coordinator.showSelectedLanguages(languages: project.languages)
+        coordinator.showSelectedLanguages(project: project)
     }
 
     func onTechnologiesTapped() {

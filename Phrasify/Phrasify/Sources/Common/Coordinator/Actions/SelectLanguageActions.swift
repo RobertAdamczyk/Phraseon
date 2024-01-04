@@ -10,5 +10,5 @@ import Foundation
 protocol SelectLanguageActions {
 
     func showSelectLanguage(name: String)
-    func showSelectedLanguages(languages: [Language])
+    func showSelectedLanguages(project: Project)
 }

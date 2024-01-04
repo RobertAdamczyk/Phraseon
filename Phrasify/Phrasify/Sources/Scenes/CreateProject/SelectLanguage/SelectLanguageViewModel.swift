@@ -9,7 +9,7 @@ import SwiftUI
 
 final class SelectLanguageViewModel: ObservableObject {
 
-    typealias SelectLanguageCoordinator = Coordinator & SelectLanguageActions & SelectTechnologyActions
+    typealias SelectLanguageCoordinator = Coordinator & SelectLanguageActions & SelectTechnologyActions &  NavigationActions
 
     @Published var selectedLanguages: [Language] = []
 
@@ -47,8 +47,8 @@ final class SelectLanguageViewModel: ObservableObject {
     init(coordinator: SelectLanguageCoordinator, context: Context) {
         self.coordinator = coordinator
         self.context = context
-        if case .settings(let languages) = context {
-            selectedLanguages = languages
+        if case .settings(let project) = context {
+            selectedLanguages = project.languages
         }
     }
 
@@ -64,10 +64,17 @@ final class SelectLanguageViewModel: ObservableObject {
         }
     }
 
-    func onPrimaryButtonTapped() {
+    @MainActor
+    func onPrimaryButtonTapped() async {
         switch context {
-        case .settings(let languages):
-            print("// TODO: Save languages")
+        case .settings(let project):
+            guard let projectId = project.id else { return }
+            do {
+                try await coordinator.dependencies.firestoreRepository.setProjectLanguages(projectId: projectId, languages: selectedLanguages)
+                coordinator.popView()
+            } catch {
+                ToastView.showError(message: error.localizedDescription)
+            }
         case .createProject(let name):
             coordinator.showSelectTechnology(name: name, languages: selectedLanguages)
         }
@@ -77,7 +84,7 @@ final class SelectLanguageViewModel: ObservableObject {
 extension SelectLanguageViewModel {
 
     enum Context {
-        case settings(languages: [Language])
+        case settings(project: Project)
         case createProject(name: String)
     }
 }

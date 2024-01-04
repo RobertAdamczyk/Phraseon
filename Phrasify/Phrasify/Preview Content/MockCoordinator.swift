@@ -44,7 +44,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showUploadPhotoDialog(galleryAction: @escaping () -> Void) { /*empty*/ }
     func showProfileDeleteWarning() { /*empty*/ }
     func showProjectSettings(project: Project) { /*empty*/ }
-    func showSelectedLanguages(languages: [Language]) { /*empty*/ }
+    func showSelectedLanguages(project: Project) { /*empty*/ }
     func showSelectedTechnologies(project: Project) { }
 }
 
