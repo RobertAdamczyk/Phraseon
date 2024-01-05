@@ -66,7 +66,6 @@ final class SelectTechnologyViewModel: ObservableObject {
 
     @MainActor
     func onPrimaryButtonTapped() async {
-        guard let userId = coordinator.dependencies.authenticationRepository.currentUser?.uid else { return }
         do {
             switch context {
             case .settings(let project):
@@ -74,10 +73,10 @@ final class SelectTechnologyViewModel: ObservableObject {
                 try await coordinator.dependencies.firestoreRepository.setProjectTechnologies(projectId: projectId, technologies: selectedTechnologies)
                 coordinator.popView()
             case .createProject(let projectName, let languages):
-                try await coordinator.dependencies.firestoreRepository.createProject(userId: userId, name: projectName,
-                                                                                     languages: languages,
-                                                                                     baseLanguage: languages.last ?? .english,
-                                                                                     technologies: selectedTechnologies)
+                try await coordinator.dependencies.cloudRepository.createProject(name: projectName,
+                                                                                 languages: languages,
+                                                                                 baseLanguage: languages.last ?? .english,
+                                                                                 technologies: selectedTechnologies)
                 coordinator.dismissFullScreenCover()
             }
         } catch {

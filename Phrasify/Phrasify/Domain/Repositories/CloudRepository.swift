@@ -12,6 +12,13 @@ final class CloudRepository {
 
     private let functions = Functions.functions()
 
+    func createProject(name: String, languages: [Language], baseLanguage: Language, technologies: [Technology]) async throws {
+        _ = try await functions.httpsCallable("createProject").call(["name": name,
+                                                                     "languages": languages.map{ $0.rawValue },
+                                                                     "baseLanguage": baseLanguage.rawValue,
+                                                                     "technologies": technologies.map{ $0.rawValue }] as [String : Any])
+    }
+
     func createKey(projectId: String, keyId: String, translation: [String: String]) async throws {
         _ = try await functions.httpsCallable("createKey").call(["projectId": projectId,
                                                                  "keyId": keyId,
