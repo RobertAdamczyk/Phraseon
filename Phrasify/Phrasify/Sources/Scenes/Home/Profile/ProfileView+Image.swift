@@ -28,7 +28,7 @@ extension ProfileView {
         @ViewBuilder
         private func makePlaceholderLabel() -> some View {
             if let urlString = viewModel.user?.photoUrl, let url = URL(string: urlString) {
-                CachedAsyncImage(url: url, content: makeImage, placeholder: makeProgressView)
+                CachedAsyncImage(url: url, urlCache: URLCache.imageCache, content: makeImage, placeholder: makeProgressView)
             } else {
                 makeImage(for: Image(systemName: "person.crop.circle.fill"))
             }
@@ -51,4 +51,9 @@ extension ProfileView {
                 .frame(width: width + 2 * padding, height: height + 2 * padding)
         }
     }
+}
+
+extension URLCache {
+    fileprivate static let imageCache = URLCache(memoryCapacity: 512*1000*1000,
+                                                 diskCapacity: 10*1000*1000*1000)
 }
