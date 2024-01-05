@@ -74,10 +74,10 @@ final class SelectTechnologyViewModel: ObservableObject {
                 try await coordinator.dependencies.firestoreRepository.setProjectTechnologies(projectId: projectId, technologies: selectedTechnologies)
                 coordinator.popView()
             case .createProject(let projectName, let languages):
-                _ = try await coordinator.dependencies.firestoreRepository.createProject(userId: userId, name: projectName,
-                                                                                         languages: languages,
-                                                                                         baseLanguage: languages.last ?? .english,
-                                                                                         technologies: selectedTechnologies)
+                try await coordinator.dependencies.firestoreRepository.createProject(userId: userId, name: projectName,
+                                                                                     languages: languages,
+                                                                                     baseLanguage: languages.last ?? .english,
+                                                                                     technologies: selectedTechnologies)
                 coordinator.dismissFullScreenCover()
             }
         } catch {

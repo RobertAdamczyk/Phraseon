@@ -20,17 +20,24 @@ final class FirestoreRepository {
         case users
         case projects
         case keys
+        case members
     }
 
     // MARK: Projects
 
     func createProject(userId: UserID, name: String, languages: [Language], baseLanguage: Language, 
-                       technologies: [Technology]) async throws -> String {
-        let ref =  db.collection(Collections.projects.rawValue).document()
+                       technologies: [Technology]) async throws {
+        let batch = db.batch()
+        let projectRef =  db.collection(Collections.projects.rawValue).document()
         let project: Project = .init(name: name, technologies: technologies, languages: languages, baseLanguage: baseLanguage,
                                      members: [userId], owner: userId)
-        try await ref.setData(from: project)
-        return ref.documentID
+        try batch.setData(from: project, forDocument: projectRef)
+
+        let memberRef =  db.collection(Collections.projects.rawValue).document(projectRef.documentID)
+                           .collection(Collections.members.rawValue).document(userId)
+        let member: Member = .init(role: .owner)
+        try batch.setData(from: member, forDocument: memberRef)
+        try await batch.commit()
     }
 
     func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Never> {
