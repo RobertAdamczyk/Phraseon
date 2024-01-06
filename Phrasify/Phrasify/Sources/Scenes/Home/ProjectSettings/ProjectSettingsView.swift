@@ -28,7 +28,7 @@ struct ProjectSettingsView: View {
                     Text("Users and permissions")
                         .apply(.medium, size: .M, color: .lightGray)
                     Button(action: viewModel.onMembersTapped, label: {
-                        makeSettingsRow(for: .members, value: "32 Members")
+                        makeSettingsRow(for: .members, value: "\(viewModel.project.members.count) Members")
                     })
                     Button(action: viewModel.onOwnerTapped, label: {
                         makeSettingsRow(for: .owner, value: "Robert Adamczyk")

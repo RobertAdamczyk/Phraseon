@@ -14,5 +14,6 @@ struct Member: Codable, Hashable {
     var role: Role
     var name: String
     var surname: String
+    var email: String
     var photoUrl: String?
 }

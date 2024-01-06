@@ -41,8 +41,10 @@ extension ProfileView {
                 .frame(width: width, height: height)
                 .clipShape(.circle)
                 .padding(padding)
-                .background {
-                    Circle().fill(appColor(.white))
+                .overlay {
+                    Circle()
+                        .stroke(lineWidth: 4)
+                        .fill(appColor(.white))
                 }
         }
 
