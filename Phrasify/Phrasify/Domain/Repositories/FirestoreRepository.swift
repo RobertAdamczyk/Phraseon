@@ -57,6 +57,20 @@ final class FirestoreRepository {
         try await ref.updateData(["technologies": technologies.map{$0.rawValue}] as [String: Any])
     }
 
+    // MARK: Members
+
+    func getMembersPublisher(projectId: String) -> AnyPublisher<[Member], Never> {
+        return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.members.rawValue)
+                 .snapshotPublisher()
+                 .map { snapshot in
+                     snapshot.documents.compactMap { document -> Member? in
+                         try? document.data(as: Member.self)
+                     }
+                 }
+                 .catch { _ in Just<[Member]>([])}
+                 .eraseToAnyPublisher()
+    }
+
     // MARK: Keys
 
     func getKeysPublisher(projectId: String, keysOrder: KeysOrder) -> AnyPublisher<[Key], Never> {

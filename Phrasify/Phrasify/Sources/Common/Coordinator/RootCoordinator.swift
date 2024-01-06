@@ -115,6 +115,12 @@ extension RootCoordinator: ProjectActions {
         let view: NavigationView = .projectSettings(viewModel: viewModel)
         navigationViews.append(view)
     }
+
+    func showProjectMembers(project: Project) {
+        let viewModel = ProjectMembersViewModel(coordinator: self, project: project)
+        let view: NavigationView = .projectMembers(viewModel: viewModel)
+        navigationViews.append(view)
+    }
 }
 
 extension RootCoordinator: SelectLanguageActions {
@@ -153,6 +159,7 @@ extension RootCoordinator {
         case projectSettings(viewModel: ProjectSettingsViewModel)
         case selectedLanguages(viewModel: SelectLanguageViewModel)
         case selectedTechnologies(viewModel: SelectTechnologyViewModel)
+        case projectMembers(viewModel: ProjectMembersViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -171,6 +178,7 @@ extension RootCoordinator {
             case .projectSettings: return "005"
             case .selectedLanguages: return "006"
             case .selectedTechnologies: return "007"
+            case .projectMembers: return "008"
             }
         }
     }

@@ -46,6 +46,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showProjectSettings(project: Project) { /*empty*/ }
     func showSelectedLanguages(project: Project) { /*empty*/ }
     func showSelectedTechnologies(project: Project) { }
+    func showProjectMembers(project: Project) { }
 }
 
 #endif

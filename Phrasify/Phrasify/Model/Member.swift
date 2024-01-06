@@ -12,4 +12,6 @@ struct Member: Codable, Hashable {
 
     @DocumentID var id: String?
     var role: Role
+    var name: String
+    var surname: String
 }

@@ -230,6 +230,10 @@
 		55C2DAC82B3342F500435CD4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C2DAC62B3342F500435CD4 /* RegisterViewModel.swift */; };
 		55C762302B27AB72008CBF30 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7622F2B27AB72008CBF30 /* StartView.swift */; };
 		55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762352B27B52A008CBF30 /* StartCoordinator.swift */; };
+		55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10222B48D016001CB87F /* ProjectMembersView.swift */; };
+		55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10222B48D016001CB87F /* ProjectMembersView.swift */; };
+		55DE10262B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */; };
+		55DE10272B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */; };
 		55E960D72B3CD8D40016DA23 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 55E960D62B3CD8D40016DA23 /* FirebaseFunctions */; };
 		55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
 		55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
@@ -364,6 +368,8 @@
 		55C762252B27A8E2008CBF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55C7622F2B27AB72008CBF30 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		55C762352B27B52A008CBF30 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
+		55DE10222B48D016001CB87F /* ProjectMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersView.swift; sourceTree = "<group>"; };
+		55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersViewModel.swift; sourceTree = "<group>"; };
 		55E960D82B3CD8E50016DA23 /* CloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRepository.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FB5F622B3E409B004D3720 /* KeyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatus.swift; sourceTree = "<group>"; };
@@ -896,9 +902,19 @@
 			path = LoginView;
 			sourceTree = "<group>";
 		};
+		55DE10212B48D002001CB87F /* ProjectMembers */ = {
+			isa = PBXGroup;
+			children = (
+				55DE10222B48D016001CB87F /* ProjectMembersView.swift */,
+				55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */,
+			);
+			path = ProjectMembers;
+			sourceTree = "<group>";
+		};
 		55FF42632B2B912300F4D523 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				55DE10212B48D002001CB87F /* ProjectMembers */,
 				556977992B4746F60022B675 /* ProjectSettings */,
 				55A7B3522B45DB750051BCF0 /* ProfileDeleteWarningView */,
 				5516EBE72B43608500C558B1 /* ChangePassword */,
@@ -1076,6 +1092,7 @@
 				5505378D2B4494610077912D /* ConfirmationDialogActions.swift in Sources */,
 				550537942B44C0270077912D /* PhotoPickerHandler.swift in Sources */,
 				556977A42B475B440022B675 /* SelectTechnologyActions.swift in Sources */,
+				55DE10262B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */,
 				55826AA82B34FD9E00233D90 /* CreateKeyActions.swift in Sources */,
 				5516EBB32B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074542B2E3C8F0041160B /* RootActions.swift in Sources */,
@@ -1086,6 +1103,7 @@
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
 				5516EBBC2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
 				558074572B2E56E50041160B /* Project.swift in Sources */,
+				55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */,
 				5580744E2B2E341B0041160B /* ActivityView.swift in Sources */,
 				5513C2522B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				5516EBD22B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
@@ -1188,6 +1206,7 @@
 				5505378E2B4494610077912D /* ConfirmationDialogActions.swift in Sources */,
 				550537952B44C0270077912D /* PhotoPickerHandler.swift in Sources */,
 				556977A52B475B440022B675 /* SelectTechnologyActions.swift in Sources */,
+				55DE10272B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */,
 				55826AA92B34FD9E00233D90 /* CreateKeyActions.swift in Sources */,
 				5516EBB42B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074552B2E3C8F0041160B /* RootActions.swift in Sources */,
@@ -1198,6 +1217,7 @@
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
 				5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
 				558074582B2E56E50041160B /* Project.swift in Sources */,
+				55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */,
 				55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */,
 				5580744F2B2E341B0041160B /* ActivityView.swift in Sources */,
 				5516EBD32B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,

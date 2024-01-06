@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ProjectSettingsViewModel: ObservableObject {
 
-    typealias ProjectSettingsCoordinator = Coordinator & SelectLanguageActions & SelectTechnologyActions
+    typealias ProjectSettingsCoordinator = Coordinator & SelectLanguageActions & SelectTechnologyActions & ProjectActions
 
     @Published var project: Project
 
@@ -19,7 +19,7 @@ final class ProjectSettingsViewModel: ObservableObject {
     init(coordinator: ProjectSettingsCoordinator, project: Project) {
         self.coordinator = coordinator
         self.project = project
-        setupProjectsSubscriber()
+        setupProjectSubscriber()
     }
 
     func onLanguagesTapped() {
@@ -31,7 +31,7 @@ final class ProjectSettingsViewModel: ObservableObject {
     }
 
     func onMembersTapped() {
-
+        coordinator.showProjectMembers(project: project)
     }
 
     func onOwnerTapped() {
@@ -46,7 +46,7 @@ final class ProjectSettingsViewModel: ObservableObject {
 
     }
 
-    private func setupProjectsSubscriber() {
+    private func setupProjectSubscriber() {
         guard let projectId = project.id else { return }
         coordinator.dependencies.firestoreRepository.getProjectPublisher(projectId: projectId)
             .receive(on: RunLoop.main)
