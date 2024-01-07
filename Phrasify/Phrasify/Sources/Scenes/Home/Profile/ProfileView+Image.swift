@@ -23,6 +23,9 @@ extension ProfileView {
                             imageLabel: makeImage,
                             placeholderLabel: makePlaceholderLabel,
                             progressLabel: makeProgressView)
+            .background {
+                makePlaceholderLabel().opacity(0) // WORKAROUND FOR IMAGE CACHING BY CachedAsyncImage
+            }
         }
 
         @ViewBuilder
@@ -53,9 +56,4 @@ extension ProfileView {
                 .frame(width: width + 2 * padding, height: height + 2 * padding)
         }
     }
-}
-
-extension URLCache {
-    fileprivate static let imageCache = URLCache(memoryCapacity: 512*1000*1000,
-                                                 diskCapacity: 10*1000*1000*1000)
 }

@@ -28,7 +28,7 @@ struct UserDetailView: View {
         HStack(spacing: 16) {
             ZStack {
                 if let photoUrl = photoUrl {
-                    CachedAsyncImage(url: .init(string: photoUrl), content: makeImage) {
+                    CachedAsyncImage(url: .init(string: photoUrl), urlCache: URLCache.imageCache, content: makeImage) {
                         makeImage()
                     }
                 } else {

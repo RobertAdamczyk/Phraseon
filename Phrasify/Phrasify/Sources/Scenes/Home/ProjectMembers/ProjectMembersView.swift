@@ -26,7 +26,6 @@ struct ProjectMembersView: View {
                         UserDetailView(email: member.email, name: member.name, surname: member.surname, photoUrl: member.photoUrl)
                     }
                     Spacer()
-
                 }
                 .padding(16)
             }

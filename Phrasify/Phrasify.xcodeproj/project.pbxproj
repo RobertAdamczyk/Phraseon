@@ -254,6 +254,8 @@
 		55DE10452B4AD0D8001CB87F /* Role+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10432B4AD0D8001CB87F /* Role+UI.swift */; };
 		55DE10472B4AD118001CB87F /* Role+SortIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10462B4AD118001CB87F /* Role+SortIndex.swift */; };
 		55DE10482B4AD118001CB87F /* Role+SortIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10462B4AD118001CB87F /* Role+SortIndex.swift */; };
+		55DE104A2B4AFA07001CB87F /* URLCache+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10492B4AFA07001CB87F /* URLCache+ImageCache.swift */; };
+		55DE104B2B4AFA07001CB87F /* URLCache+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10492B4AFA07001CB87F /* URLCache+ImageCache.swift */; };
 		55E960D72B3CD8D40016DA23 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 55E960D62B3CD8D40016DA23 /* FirebaseFunctions */; };
 		55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
 		55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
@@ -400,6 +402,7 @@
 		55DE10402B4ABFC1001CB87F /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		55DE10432B4AD0D8001CB87F /* Role+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Role+UI.swift"; sourceTree = "<group>"; };
 		55DE10462B4AD118001CB87F /* Role+SortIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Role+SortIndex.swift"; sourceTree = "<group>"; };
+		55DE10492B4AFA07001CB87F /* URLCache+ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLCache+ImageCache.swift"; sourceTree = "<group>"; };
 		55E960D82B3CD8E50016DA23 /* CloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRepository.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FB5F622B3E409B004D3720 /* KeyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatus.swift; sourceTree = "<group>"; };
@@ -483,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				5516EBB12B3F2ED100C558B1 /* Model */,
+				55DE10492B4AFA07001CB87F /* URLCache+ImageCache.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1161,6 +1165,7 @@
 				5516EBB32B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074542B2E3C8F0041160B /* RootActions.swift in Sources */,
 				553F1BEB2B2914700071A099 /* SetPasswordView.swift in Sources */,
+				55DE104A2B4AFA07001CB87F /* URLCache+ImageCache.swift in Sources */,
 				551AA41A2B33667100F0B1E2 /* TagLayout.swift in Sources */,
 				5516EBD82B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */,
 				55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
@@ -1285,6 +1290,7 @@
 				5516EBB42B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074552B2E3C8F0041160B /* RootActions.swift in Sources */,
 				55C279182B2A4C0C005144F1 /* Dependencies.swift in Sources */,
+				55DE104B2B4AFA07001CB87F /* URLCache+ImageCache.swift in Sources */,
 				551AA41B2B33667100F0B1E2 /* TagLayout.swift in Sources */,
 				5516EBD92B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */,
 				55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
