@@ -10,7 +10,8 @@ import SwiftUI
 #if DEBUG
 
 final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenCoverActions, ProjectActions, ProfileActions,
-                             NavigationActions, ConfirmationDialogActions, SelectLanguageActions, SelectTechnologyActions {
+                             NavigationActions, ConfirmationDialogActions, SelectLanguageActions, SelectTechnologyActions, 
+                             SelectMemberRoleActions {
 
     var dependencies: Dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init(), cloudRepository: .init(),
                                            storageRepository: .init())
@@ -48,6 +49,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showSelectedTechnologies(project: Project) { }
     func showProjectMembers(project: Project) { }
     func presentInviteMember(project: Project) { }
+    func showSelectMemberRole(email: String, project: Project, user: User) { }
 }
 
 #endif

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Role: String, Codable, Hashable {
+enum Role: String, Codable, Hashable, CaseIterable {
 
     case owner = "OWNER"
     case viewer = "VIEWER"

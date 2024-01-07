@@ -242,6 +242,14 @@
 		55DE10312B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE102F2B4AAE62001CB87F /* InviteMemberCoordinator.swift */; };
 		55DE10332B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10322B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift */; };
 		55DE10342B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10322B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift */; };
+		55DE10372B4AB3C3001CB87F /* SelectMemberRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10362B4AB3C3001CB87F /* SelectMemberRoleView.swift */; };
+		55DE10382B4AB3C3001CB87F /* SelectMemberRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10362B4AB3C3001CB87F /* SelectMemberRoleView.swift */; };
+		55DE103A2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10392B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift */; };
+		55DE103B2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10392B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift */; };
+		55DE103D2B4AB508001CB87F /* SelectMemberRoleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */; };
+		55DE103E2B4AB508001CB87F /* SelectMemberRoleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */; };
+		55DE10412B4ABFC1001CB87F /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10402B4ABFC1001CB87F /* UserDetailView.swift */; };
+		55DE10422B4ABFC1001CB87F /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10402B4ABFC1001CB87F /* UserDetailView.swift */; };
 		55E960D72B3CD8D40016DA23 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 55E960D62B3CD8D40016DA23 /* FirebaseFunctions */; };
 		55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
 		55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
@@ -382,6 +390,10 @@
 		55DE102C2B4A28E0001CB87F /* InviteMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteMemberViewModel.swift; sourceTree = "<group>"; };
 		55DE102F2B4AAE62001CB87F /* InviteMemberCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteMemberCoordinator.swift; sourceTree = "<group>"; };
 		55DE10322B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InviteMemberCoordinator+RootView.swift"; sourceTree = "<group>"; };
+		55DE10362B4AB3C3001CB87F /* SelectMemberRoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMemberRoleView.swift; sourceTree = "<group>"; };
+		55DE10392B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMemberRoleViewModel.swift; sourceTree = "<group>"; };
+		55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMemberRoleActions.swift; sourceTree = "<group>"; };
+		55DE10402B4ABFC1001CB87F /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		55E960D82B3CD8E50016DA23 /* CloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRepository.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FB5F622B3E409B004D3720 /* KeyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatus.swift; sourceTree = "<group>"; };
@@ -740,6 +752,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55DE103F2B4ABF8F001CB87F /* UserDetailView */,
 				5505378F2B44C0080077912D /* PhotoPicker */,
 				550537852B4488E40077912D /* ConfirmationDialog */,
 				5516EBC92B40CF7500C558B1 /* Shapes */,
@@ -775,6 +788,7 @@
 				558074532B2E3C8F0041160B /* RootActions.swift */,
 				551AA40B2B334FB800F0B1E2 /* FullScreenCoverActions.swift */,
 				556977A02B47594A0022B675 /* SelectLanguageActions.swift */,
+				55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */,
 				556977A32B475B440022B675 /* SelectTechnologyActions.swift */,
 				55826AA72B34FD9E00233D90 /* CreateKeyActions.swift */,
 				5516EBE12B432D3F00C558B1 /* ProjectActions.swift */,
@@ -933,9 +947,27 @@
 			path = InviteMember;
 			sourceTree = "<group>";
 		};
+		55DE10352B4AB3A0001CB87F /* SelectMemberRole */ = {
+			isa = PBXGroup;
+			children = (
+				55DE10362B4AB3C3001CB87F /* SelectMemberRoleView.swift */,
+				55DE10392B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift */,
+			);
+			path = SelectMemberRole;
+			sourceTree = "<group>";
+		};
+		55DE103F2B4ABF8F001CB87F /* UserDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				55DE10402B4ABFC1001CB87F /* UserDetailView.swift */,
+			);
+			path = UserDetailView;
+			sourceTree = "<group>";
+		};
 		55FF42632B2B912300F4D523 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				55DE10352B4AB3A0001CB87F /* SelectMemberRole */,
 				55DE10282B4A2898001CB87F /* InviteMember */,
 				55DE10212B48D002001CB87F /* ProjectMembers */,
 				556977992B4746F60022B675 /* ProjectSettings */,
@@ -1176,6 +1208,9 @@
 				5516EBEC2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
 				5516EBDF2B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
 				55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
+				55DE103A2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,
+				55DE103D2B4AB508001CB87F /* SelectMemberRoleActions.swift in Sources */,
+				55DE10412B4ABFC1001CB87F /* UserDetailView.swift in Sources */,
 				5513C24F2B325E2F004C1933 /* CreateProjectView.swift in Sources */,
 				551AA42A2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55826A8A2B34C63900233D90 /* UserID.swift in Sources */,
@@ -1185,6 +1220,7 @@
 				5516EBAB2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				55C279172B2A4BE7005144F1 /* Localized.swift in Sources */,
 				55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */,
+				55DE10372B4AB3C3001CB87F /* SelectMemberRoleView.swift in Sources */,
 				55C2791D2B2A4C60005144F1 /* Coordinator.swift in Sources */,
 				5516EBD52B40E1E300C558B1 /* User.swift in Sources */,
 				551AA41D2B3379B700F0B1E2 /* Technology.swift in Sources */,
@@ -1294,6 +1330,9 @@
 				5516EBED2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
 				5516EBE02B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
 				55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
+				55DE103B2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,
+				55DE103E2B4AB508001CB87F /* SelectMemberRoleActions.swift in Sources */,
+				55DE10422B4ABFC1001CB87F /* UserDetailView.swift in Sources */,
 				5513C2502B325E2F004C1933 /* CreateProjectView.swift in Sources */,
 				551AA42B2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55826A8B2B34C63900233D90 /* UserID.swift in Sources */,
@@ -1303,6 +1342,7 @@
 				5516EBAC2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				55C2791B2B2A4C17005144F1 /* Localized.swift in Sources */,
 				55C278EB2B2A3F3A005144F1 /* FontStyle.swift in Sources */,
+				55DE10382B4AB3C3001CB87F /* SelectMemberRoleView.swift in Sources */,
 				55C2791E2B2A4CB8005144F1 /* Coordinator.swift in Sources */,
 				5516EBD62B40E1E300C558B1 /* User.swift in Sources */,
 				551AA41E2B3379B700F0B1E2 /* Technology.swift in Sources */,

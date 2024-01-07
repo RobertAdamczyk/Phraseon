@@ -18,4 +18,15 @@ struct User: Codable, Hashable {
     var subscriptionStatus: SubscriptionStatus
     var subscriptionValidUntil: Date
     var photoUrl: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case email
+        case name
+        case surname
+        case createdAt
+        case subscriptionStatus
+        case subscriptionValidUntil
+        case photoUrl
+    }
 }

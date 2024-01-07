@@ -9,9 +9,9 @@ import SwiftUI
 
 final class InviteMemberViewModel: ObservableObject {
 
-    typealias InviteMemberCoordinator = Coordinator & FullScreenCoverActions
+    typealias InviteMemberCoordinator = Coordinator & FullScreenCoverActions & SelectMemberRoleActions
 
-    @Published var email: String = ""
+    @Published var email: String = "robert.adamczyk@ffw.com" // TODO: DELETE
 
     private let project: Project
     private let coordinator: InviteMemberCoordinator
@@ -21,8 +21,14 @@ final class InviteMemberViewModel: ObservableObject {
         self.project = project
     }
 
-    func onContinueTapped() {
-
+    @MainActor
+    func onContinueTapped() async {
+        do {
+            let user = try await coordinator.dependencies.firestoreRepository.getUser(email: email)
+            coordinator.showSelectMemberRole(email: email, project: project, user: user)
+        } catch {
+            ToastView.showError(message: error.localizedDescription)
+        }
     }
 
     func onCloseButtonTapped() {

@@ -25,7 +25,7 @@ extension InviteMemberCoordinator {
                 InviteMemberView(coordinator: coordinator, project: project)
                     .navigationDestination(for: InviteMemberCoordinator.NavigationView.self) {
                         switch $0 {
-                        case .view: EmptyView()
+                        case .selectMemberRole(let viewModel): SelectMemberRole(viewModel: viewModel)
                         }
                     }
             }

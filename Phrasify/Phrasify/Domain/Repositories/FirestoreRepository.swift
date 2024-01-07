@@ -98,6 +98,15 @@ final class FirestoreRepository {
                  .eraseToAnyPublisher()
     }
 
+    func getUser(email: String) async throws -> User {
+        let ref = db.collection(Collections.users.rawValue).whereField(User.CodingKeys.email.rawValue, isEqualTo: email)
+        let querySnapshot = try await ref.getDocuments()
+        if let document = querySnapshot.documents.first {
+            return try document.data(as: User.self)
+        }
+        throw AppError.notFound
+    }
+
     func setProfileName(userId: UserID, name: String, surname: String) async throws {
         let ref =  db.collection(Collections.users.rawValue).document(userId)
         try await ref.updateData(["name": name,

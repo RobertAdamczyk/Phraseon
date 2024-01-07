@@ -27,7 +27,7 @@ struct InviteMemberView: View {
                 }
                 .padding(16)
             }
-            AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueTapped))
+            AppButton(style: .fill("Continue", .lightBlue), action: .async(viewModel.onContinueTapped))
                 .padding(16)
         }
         .onAppear(perform: focusTextField)

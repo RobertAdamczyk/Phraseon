@@ -42,11 +42,20 @@ extension InviteMemberCoordinator: FullScreenCoverActions {
     }
 }
 
+extension InviteMemberCoordinator: SelectMemberRoleActions {
+
+    func showSelectMemberRole(email: String, project: Project, user: User) {
+        let viewModel = SelectMemberRoleViewModel(coordinator: self, project: project, context: .invite(user: user))
+        let view: NavigationView = .selectMemberRole(viewModel: viewModel)
+        navigationViews.append(view)
+    }
+}
+
 extension InviteMemberCoordinator {
 
     enum NavigationView: Identifiable, Equatable, Hashable {
 
-        case view
+        case selectMemberRole(viewModel: SelectMemberRoleViewModel)
 
         static func == (lhs: InviteMemberCoordinator.NavigationView, rhs: InviteMemberCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -58,7 +67,7 @@ extension InviteMemberCoordinator {
 
         var id: String {
             switch self {
-            case .view: return "001"
+            case .selectMemberRole: return "001"
             }
         }
     }
