@@ -28,6 +28,7 @@ struct AppButton: View {
             case .main(let mainThreadAction):
                 mainThreadAction()
             case .async(let asyncAction):
+                guard !loading else { return }
                 Task {
                     await MainActor.run { loading = true }
                     await asyncAction()
