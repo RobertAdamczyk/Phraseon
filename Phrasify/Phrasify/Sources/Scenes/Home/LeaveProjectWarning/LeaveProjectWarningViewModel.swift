@@ -14,20 +14,30 @@ final class LeaveProjectWarningViewModel: ObservableObject {
         case notOwner
     }
 
-    typealias LeaveProjectWarningCoordinator = Coordinator & SheetActions
+    typealias LeaveProjectWarningCoordinator = Coordinator & SheetActions & NavigationActions
 
     let context: Context
 
+    private let project: Project
     private let coordinator: LeaveProjectWarningCoordinator
 
-    init(coordinator: LeaveProjectWarningCoordinator, context: Context) {
+    init(coordinator: LeaveProjectWarningCoordinator, project: Project, context: Context) {
         self.coordinator = coordinator
         self.context = context
+        self.project = project
     }
 
     @MainActor
     func onLeaveProjectTapped() async {
-
+        guard let projectId = project.id else { return }
+        do {
+            try await coordinator.dependencies.cloudRepository.leaveProject(projectId: projectId)
+            coordinator.dismissSheet()
+            coordinator.popToRoot()
+        } catch {
+            ToastView.showError(message: error.localizedDescription)
+            coordinator.dismissSheet()
+        }
     }
 
     func onUnderstoodTapped() {

@@ -36,6 +36,10 @@ final class CloudRepository {
                                                                         "role": role.rawValue] as [String : Any])
     }
 
+    func leaveProject(projectId: String) async throws {
+        _ = try await functions.httpsCallable("leaveProject").call(["projectId": projectId] as [String : Any])
+    }
+
     func isUserProjectOwner() async throws -> Bool {
         let result = try await functions.httpsCallable("isUserProjectOwner").call()
 
