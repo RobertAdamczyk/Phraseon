@@ -15,6 +15,10 @@ struct UserDetailView: View {
     let surname: String
     let photoUrl: String?
 
+    private var hasName: Bool {
+        !name.isEmpty || !surname.isEmpty
+    }
+
     var body: some View {
         makeUserRow(email: email, name: name, surname: surname, photoUrl: photoUrl)
     }
@@ -32,10 +36,18 @@ struct UserDetailView: View {
                 }
             }
             VStack(alignment: .leading) {
-                Text(name + " " + surname)
-                    .apply(.regular, size: .S, color: .white)
-                Text(email)
-                    .apply(.medium, size: .S, color: .lightGray)
+                if hasName {
+                    Text(name + " " + surname)
+                        .apply(.regular, size: .S, color: .white)
+                    Text(email)
+                        .apply(.medium, size: .S, color: .lightGray)
+                } else {
+                    Text(email)
+                        .apply(.regular, size: .S, color: .white)
+                    Text("placeholder")
+                        .apply(.medium, size: .S, color: .lightGray)
+                        .opacity(0)
+                }
             }
             Spacer()
         }
