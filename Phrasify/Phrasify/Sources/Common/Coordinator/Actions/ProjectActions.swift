@@ -14,4 +14,5 @@ protocol ProjectActions {
     func showProjectMembers(project: Project, projectMemberUseCase: ProjectMemberUseCase)
     func presentInviteMember(project: Project)
     func showChangeProjectOwner(project: Project)
+    func showLeaveProjectWarning(context: LeaveProjectWarningViewModel.Context)
 }

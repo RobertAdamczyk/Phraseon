@@ -53,6 +53,13 @@ extension RootCoordinator: FullScreenCoverActions {
     }
 }
 
+extension RootCoordinator: SheetActions {
+
+    func dismissSheet() {
+        presentedSheet = nil
+    }
+}
+
 extension RootCoordinator: ConfirmationDialogActions {
 
     func showUploadPhotoDialog(galleryAction: @escaping () -> Void) {
@@ -98,10 +105,6 @@ extension RootCoordinator: ProfileActions {
         let sheet: Sheet = .profileDeleteWarning(viewModel: viewModel)
         presentedSheet = sheet
     }
-
-    func dismissSheet() {
-        presentedSheet = nil
-    }
 }
 
 extension RootCoordinator: ProjectActions {
@@ -131,6 +134,12 @@ extension RootCoordinator: ProjectActions {
         let viewModel = ChangeProjectOwnerViewModel(coordinator: self, project: project)
         let view: NavigationView = .changeProjectOwner(viewModel: viewModel)
         navigationViews.append(view)
+    }
+
+    func showLeaveProjectWarning(context: LeaveProjectWarningViewModel.Context) {
+        let viewModel = LeaveProjectWarningViewModel(coordinator: self, context: context)
+        let sheet: Sheet = .leaveProjectWarning(viewModel: viewModel)
+        self.presentedSheet = sheet
     }
 }
 
@@ -212,10 +221,12 @@ extension RootCoordinator {
 
     enum Sheet: Identifiable {
         case profileDeleteWarning(viewModel: ProfileDeleteWarningViewModel)
+        case leaveProjectWarning(viewModel: LeaveProjectWarningViewModel)
 
         var id: String {
             switch self {
             case .profileDeleteWarning: "001"
+            case .leaveProjectWarning: "002"
             }
         }
     }

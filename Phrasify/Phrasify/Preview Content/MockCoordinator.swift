@@ -11,7 +11,7 @@ import SwiftUI
 
 final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenCoverActions, ProjectActions, ProfileActions,
                              NavigationActions, ConfirmationDialogActions, SelectLanguageActions, SelectTechnologyActions, 
-                             SelectMemberRoleActions {
+                             SelectMemberRoleActions, SheetActions {
 
     var dependencies: Dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init(), cloudRepository: .init(),
                                            storageRepository: .init())
@@ -51,6 +51,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func presentInviteMember(project: Project) { }
     func showSelectMemberRole(email: String, project: Project, user: User) { }
     func showChangeProjectOwner(project: Project) { }
+    func showLeaveProjectWarning(context: LeaveProjectWarningViewModel.Context) { }
 }
 
 #endif

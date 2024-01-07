@@ -42,6 +42,7 @@ extension RootCoordinator {
                     .sheet(item: $rootCoordinator.presentedSheet) {
                         switch $0 {
                         case .profileDeleteWarning(let viewModel): ProfileDeleteWarningView(viewModel: viewModel)
+                        case .leaveProjectWarning(let viewModel): LeaveProjectWarningView(viewModel: viewModel)
                         }
                     }
                     .confirmationDialog(item: $rootCoordinator.confirmationDialog)

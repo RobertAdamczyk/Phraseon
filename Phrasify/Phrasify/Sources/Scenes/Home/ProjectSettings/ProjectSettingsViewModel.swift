@@ -51,7 +51,11 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberProtocol {
     }
 
     func onLeaveProjectTapped() {
-
+        if project.owner == coordinator.dependencies.authenticationRepository.currentUser?.uid {
+            coordinator.showLeaveProjectWarning(context: .owner)
+        } else {
+            coordinator.showLeaveProjectWarning(context: .notOwner)
+        }
     }
 
     func onDeleteProjectTapped() {
