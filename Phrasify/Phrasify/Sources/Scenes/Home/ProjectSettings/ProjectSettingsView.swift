@@ -12,36 +12,38 @@ struct ProjectSettingsView: View {
     @ObservedObject var viewModel: ProjectSettingsViewModel
 
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(spacing: 32) {
-                VStack(alignment: .leading, spacing: 16) {
-                    Text("General")
-                        .apply(.medium, size: .M, color: .lightGray)
-                    Button(action: viewModel.onLanguagesTapped, label: {
-                        makeSettingsRow(for: .languages, value: viewModel.project.languages.joined)
-                    })
-                    Button(action: viewModel.onTechnologiesTapped, label: {
-                        makeSettingsRow(for: .technologies, value: viewModel.project.technologies.joined)
-                    })
+        VStack(spacing: 0) {
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 32) {
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("General")
+                            .apply(.medium, size: .M, color: .lightGray)
+                        Button(action: viewModel.onLanguagesTapped, label: {
+                            makeSettingsRow(for: .languages, value: viewModel.project.languages.joined)
+                        })
+                        Button(action: viewModel.onTechnologiesTapped, label: {
+                            makeSettingsRow(for: .technologies, value: viewModel.project.technologies.joined)
+                        })
+                    }
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("Users and permissions")
+                            .apply(.medium, size: .M, color: .lightGray)
+                        Button(action: viewModel.onMembersTapped, label: {
+                            makeSettingsRow(for: .members, value: "\(viewModel.project.members.count) Members")
+                        })
+                        Button(action: viewModel.onOwnerTapped, label: {
+                            makeSettingsRow(for: .owner, value: "Robert Adamczyk")
+                        })
+                    }
+
                 }
-                VStack(alignment: .leading, spacing: 16) {
-                    Text("Users and permissions")
-                        .apply(.medium, size: .M, color: .lightGray)
-                    Button(action: viewModel.onMembersTapped, label: {
-                        makeSettingsRow(for: .members, value: "\(viewModel.project.members.count) Members")
-                    })
-                    Button(action: viewModel.onOwnerTapped, label: {
-                        makeSettingsRow(for: .owner, value: "Robert Adamczyk")
-                    })
-                }
-                VStack(spacing: 16) {
-                    AppButton(style: .text("Leave Project"), action: .main(viewModel.onLeaveProjectTapped))
-                    AppButton(style: .text("Delete Project"), action: .main(viewModel.onDeleteProjectTapped))
-                }
-                .padding(.top, 16)
+                .padding(16)
             }
-            .padding(.top, 16)
-            .padding(.horizontal, 16)
+            VStack(spacing: 16) {
+                AppButton(style: .fill("Leave Project", .lightBlue), action: .main(viewModel.onLeaveProjectTapped))
+                AppButton(style: .text("Delete Project"), action: .main(viewModel.onDeleteProjectTapped))
+            }
+            .padding(16)
         }
         .navigationTitle("Settings")
     }
