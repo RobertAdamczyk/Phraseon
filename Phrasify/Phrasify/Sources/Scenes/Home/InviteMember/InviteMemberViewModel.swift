@@ -11,7 +11,7 @@ final class InviteMemberViewModel: ObservableObject {
 
     typealias InviteMemberCoordinator = Coordinator & FullScreenCoverActions & SelectMemberRoleActions
 
-    @Published var email: String = "robert.adamczyk@ffw.com" // TODO: DELETE
+    @Published var email: String = ""
 
     private let project: Project
     private let coordinator: InviteMemberCoordinator
@@ -25,6 +25,7 @@ final class InviteMemberViewModel: ObservableObject {
     func onContinueTapped() async {
         do {
             let user = try await coordinator.dependencies.firestoreRepository.getUser(email: email)
+            try checkIsUserAlreadyProjectMember(userId: user.id)
             coordinator.showSelectMemberRole(email: email, project: project, user: user)
         } catch {
             ToastView.showError(message: error.localizedDescription)
@@ -33,5 +34,12 @@ final class InviteMemberViewModel: ObservableObject {
 
     func onCloseButtonTapped() {
         coordinator.dismissFullScreenCover()
+    }
+
+    private func checkIsUserAlreadyProjectMember(userId: UserID?) throws {
+        guard let userId else { throw AppError.notFound }
+        if project.members.contains(where: { $0 == userId }) {
+            throw AppError.alreadyMember
+        }
     }
 }

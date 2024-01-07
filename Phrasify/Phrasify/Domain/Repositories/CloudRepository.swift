@@ -25,6 +25,12 @@ final class CloudRepository {
                                                                  "translation": translation] as [String : Any])
     }
 
+    func addProjectMember(userId: UserID, projectId: String, role: Role) async throws {
+        _ = try await functions.httpsCallable("addProjectMember").call(["userId": userId,
+                                                                        "projectId": projectId,
+                                                                        "role": role.rawValue] as [String : Any])
+    }
+
     func isUserProjectOwner(userId: UserID) async throws -> Bool {
         let result = try await functions.httpsCallable("isUserProjectOwner").call(["userId": userId] as [String : Any])
 

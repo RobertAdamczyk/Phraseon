@@ -17,4 +17,5 @@ enum AppError: Error, LocalizedError {
     case imageCompressionNil
     case decodingError
     case notFound
+    case alreadyMember
 }

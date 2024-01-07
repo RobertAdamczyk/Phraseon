@@ -9,7 +9,7 @@ import SwiftUI
 
 final class SelectMemberRoleViewModel: ObservableObject {
 
-    typealias SelectMemberRoleCoordinator = Coordinator
+    typealias SelectMemberRoleCoordinator = Coordinator & FullScreenCoverActions
 
     @Published var selectedRole: Role?
 
@@ -18,6 +18,10 @@ final class SelectMemberRoleViewModel: ObservableObject {
         case .members: return nil
         case .invite(let user): return user
         }
+    }
+
+    var shouldButtonDisabled: Bool {
+        selectedRole == nil
     }
 
     private let project: Project
@@ -34,8 +38,15 @@ final class SelectMemberRoleViewModel: ObservableObject {
         selectedRole = role
     }
 
+    @MainActor
     func onSaveButtonTapped() async {
-
+        guard let userId = user?.id, let projectId = project.id, let selectedRole else { return }
+        do {
+            try await coordinator.dependencies.cloudRepository.addProjectMember(userId: userId, projectId: projectId, role: selectedRole)
+            coordinator.dismissFullScreenCover()
+        } catch {
+            ToastView.showError(message: error.localizedDescription)
+        }
     }
 }
 

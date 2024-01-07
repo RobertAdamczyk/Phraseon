@@ -31,7 +31,8 @@ struct SelectMemberRole: View {
                 }
                 .padding(16)
             }
-            AppButton(style: .fill("Invite member", .lightBlue), action: .async(viewModel.onSaveButtonTapped))
+            AppButton(style: .fill("Invite member", .lightBlue), action: .async(viewModel.onSaveButtonTapped), 
+                      disabled: viewModel.shouldButtonDisabled)
                 .padding(16)
         }
         .navigationTitle("Choose role")
