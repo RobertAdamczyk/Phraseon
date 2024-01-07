@@ -40,7 +40,7 @@ struct SelectMemberRole: View {
 
     private func makeRoleRow(for role: Role) -> some View {
         HStack {
-            Text(role.rawValue)
+            Text(role.title)
                 .apply(.medium, size: .L, color: viewModel.selectedRole == role ? .white : .lightGray)
             Spacer()
         }

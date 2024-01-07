@@ -33,7 +33,7 @@ final class ProjectMembersViewModel: ObservableObject {
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] members in
                 DispatchQueue.main.async {
-                    self?.members = members
+                    self?.members = members.sorted(by: { $0.role.sortIndex < $1.role.sortIndex })
                 }
             })
             .store(in: cancelBag)

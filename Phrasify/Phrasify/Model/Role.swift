@@ -10,7 +10,7 @@ import Foundation
 enum Role: String, Codable, Hashable, CaseIterable {
 
     case owner = "OWNER"
-    case viewer = "VIEWER"
-    case developer = "DEVELOPER"
     case admin = "ADMIN"
+    case developer = "DEVELOPER"
+    case viewer = "VIEWER"
 }

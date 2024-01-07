@@ -250,6 +250,10 @@
 		55DE103E2B4AB508001CB87F /* SelectMemberRoleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */; };
 		55DE10412B4ABFC1001CB87F /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10402B4ABFC1001CB87F /* UserDetailView.swift */; };
 		55DE10422B4ABFC1001CB87F /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10402B4ABFC1001CB87F /* UserDetailView.swift */; };
+		55DE10442B4AD0D8001CB87F /* Role+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10432B4AD0D8001CB87F /* Role+UI.swift */; };
+		55DE10452B4AD0D8001CB87F /* Role+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10432B4AD0D8001CB87F /* Role+UI.swift */; };
+		55DE10472B4AD118001CB87F /* Role+SortIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10462B4AD118001CB87F /* Role+SortIndex.swift */; };
+		55DE10482B4AD118001CB87F /* Role+SortIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10462B4AD118001CB87F /* Role+SortIndex.swift */; };
 		55E960D72B3CD8D40016DA23 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 55E960D62B3CD8D40016DA23 /* FirebaseFunctions */; };
 		55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
 		55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
@@ -394,6 +398,8 @@
 		55DE10392B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMemberRoleViewModel.swift; sourceTree = "<group>"; };
 		55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMemberRoleActions.swift; sourceTree = "<group>"; };
 		55DE10402B4ABFC1001CB87F /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		55DE10432B4AD0D8001CB87F /* Role+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Role+UI.swift"; sourceTree = "<group>"; };
+		55DE10462B4AD118001CB87F /* Role+SortIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Role+SortIndex.swift"; sourceTree = "<group>"; };
 		55E960D82B3CD8E50016DA23 /* CloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRepository.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FB5F622B3E409B004D3720 /* KeyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatus.swift; sourceTree = "<group>"; };
@@ -488,6 +494,8 @@
 				5516EBB22B3F2EE700C558B1 /* Language+UI.swift */,
 				5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */,
 				5516EBBB2B3F33B000C558B1 /* KeysOrder+UI.swift */,
+				55DE10432B4AD0D8001CB87F /* Role+UI.swift */,
+				55DE10462B4AD118001CB87F /* Role+SortIndex.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1165,6 +1173,7 @@
 				5513C2522B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				5516EBD22B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				5507D4072B48727600E14C63 /* Member.swift in Sources */,
+				55DE10472B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
 				553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */,
 				55C279152B2A4BB0005144F1 /* Dependencies.swift in Sources */,
 				553F1BE32B29080B0071A099 /* LoginViewModel.swift in Sources */,
@@ -1249,6 +1258,7 @@
 				55DE10302B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55FF425E2B2A674A00F4D523 /* CancelBag.swift in Sources */,
 				55C279132B2A4B48005144F1 /* AppDelegate.swift in Sources */,
+				55DE10442B4AD0D8001CB87F /* Role+UI.swift in Sources */,
 				556977A12B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				553F1BDD2B2907C10071A099 /* RegisterView.swift in Sources */,
@@ -1287,6 +1297,7 @@
 				5580744F2B2E341B0041160B /* ActivityView.swift in Sources */,
 				5516EBD32B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				5507D4082B48727600E14C63 /* Member.swift in Sources */,
+				55DE10482B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
 				5513C2532B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				55C278E22B2A3F3A005144F1 /* LoginView.swift in Sources */,
 				55C278E32B2A3F3A005144F1 /* LoginViewModel.swift in Sources */,
@@ -1371,6 +1382,7 @@
 				55DE10312B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55FF425F2B2A677800F4D523 /* CancelBag.swift in Sources */,
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,
+				55DE10452B4AD0D8001CB87F /* Role+UI.swift in Sources */,
 				556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				55C278EF2B2A3F3A005144F1 /* RegisterView.swift in Sources */,
