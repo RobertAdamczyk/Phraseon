@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ProjectMembersViewModel: ObservableObject {
 
-    typealias ProjectMembersCoordinator = Coordinator
+    typealias ProjectMembersCoordinator = Coordinator & ProjectActions
 
     @Published var members: [Member] = []
 
@@ -21,6 +21,10 @@ final class ProjectMembersViewModel: ObservableObject {
         self.coordinator = coordinator
         self.project = project
         setupMembersSubscriber()
+    }
+
+    func onInviteMemberTapped() {
+        coordinator.presentInviteMember(project: project)
     }
 
     private func setupMembersSubscriber() {

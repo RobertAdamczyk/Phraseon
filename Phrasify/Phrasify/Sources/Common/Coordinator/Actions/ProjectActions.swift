@@ -12,4 +12,5 @@ protocol ProjectActions {
     func presentCreateKey(project: Project)
     func showProjectSettings(project: Project)
     func showProjectMembers(project: Project)
+    func presentInviteMember(project: Project)
 }

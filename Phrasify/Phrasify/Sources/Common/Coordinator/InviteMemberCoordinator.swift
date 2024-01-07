@@ -1,0 +1,66 @@
+//
+//  InviteMemberCoordinator.swift
+//  Phrasify
+//
+//  Created by Robert Adamczyk on 07.01.24.
+//
+
+import SwiftUI
+
+final class InviteMemberCoordinator: Coordinator, ObservableObject {
+
+    typealias ParentCoordinator = Coordinator & FullScreenCoverActions
+
+    @Published var navigationViews: [NavigationView] = []
+
+    var dependencies: Dependencies {
+        parentCoordinator.dependencies
+    }
+
+    private let parentCoordinator: ParentCoordinator
+
+    init(parentCoordinator: ParentCoordinator) {
+        self.parentCoordinator = parentCoordinator
+    }
+}
+
+extension InviteMemberCoordinator: NavigationActions {
+
+    func popToRoot() {
+        navigationViews.removeAll()
+    }
+
+    func popView() {
+        navigationViews.removeLast()
+    }
+}
+
+extension InviteMemberCoordinator: FullScreenCoverActions {
+
+    func dismissFullScreenCover() {
+        parentCoordinator.dismissFullScreenCover()
+    }
+}
+
+extension InviteMemberCoordinator {
+
+    enum NavigationView: Identifiable, Equatable, Hashable {
+
+        case view
+
+        static func == (lhs: InviteMemberCoordinator.NavigationView, rhs: InviteMemberCoordinator.NavigationView) -> Bool {
+            lhs.id == rhs.id
+        }
+
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
+
+        var id: String {
+            switch self {
+            case .view: return "001"
+            }
+        }
+    }
+}
+

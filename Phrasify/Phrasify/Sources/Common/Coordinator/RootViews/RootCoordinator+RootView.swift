@@ -35,6 +35,7 @@ extension RootCoordinator {
                         switch $0 {
                         case .createProject: CreateProjectCoordinator.RootView(parentCoordinator: rootCoordinator)
                         case .createKey(let project): CreateKeyCoordinator.RootView(parentCoordinator: rootCoordinator, project: project)
+                        case .inviteMember(let project): InviteMemberCoordinator.RootView(parentCoordinator: rootCoordinator, project: project)
                         }
                     }
                     .sheet(item: $rootCoordinator.presentedSheet) {

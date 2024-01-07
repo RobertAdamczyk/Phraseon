@@ -234,6 +234,14 @@
 		55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10222B48D016001CB87F /* ProjectMembersView.swift */; };
 		55DE10262B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */; };
 		55DE10272B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */; };
+		55DE102A2B4A28B0001CB87F /* InviteMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10292B4A28B0001CB87F /* InviteMemberView.swift */; };
+		55DE102B2B4A28B0001CB87F /* InviteMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10292B4A28B0001CB87F /* InviteMemberView.swift */; };
+		55DE102D2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE102C2B4A28E0001CB87F /* InviteMemberViewModel.swift */; };
+		55DE102E2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE102C2B4A28E0001CB87F /* InviteMemberViewModel.swift */; };
+		55DE10302B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE102F2B4AAE62001CB87F /* InviteMemberCoordinator.swift */; };
+		55DE10312B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE102F2B4AAE62001CB87F /* InviteMemberCoordinator.swift */; };
+		55DE10332B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10322B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift */; };
+		55DE10342B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10322B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift */; };
 		55E960D72B3CD8D40016DA23 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 55E960D62B3CD8D40016DA23 /* FirebaseFunctions */; };
 		55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
 		55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
@@ -370,6 +378,10 @@
 		55C762352B27B52A008CBF30 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
 		55DE10222B48D016001CB87F /* ProjectMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersView.swift; sourceTree = "<group>"; };
 		55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersViewModel.swift; sourceTree = "<group>"; };
+		55DE10292B4A28B0001CB87F /* InviteMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteMemberView.swift; sourceTree = "<group>"; };
+		55DE102C2B4A28E0001CB87F /* InviteMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteMemberViewModel.swift; sourceTree = "<group>"; };
+		55DE102F2B4AAE62001CB87F /* InviteMemberCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteMemberCoordinator.swift; sourceTree = "<group>"; };
+		55DE10322B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InviteMemberCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		55E960D82B3CD8E50016DA23 /* CloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRepository.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FB5F622B3E409B004D3720 /* KeyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatus.swift; sourceTree = "<group>"; };
@@ -749,6 +761,7 @@
 				55C279102B2A4B38005144F1 /* RootCoordinator.swift */,
 				55C762352B27B52A008CBF30 /* StartCoordinator.swift */,
 				5513C2472B325DB1004C1933 /* CreateProjectCoordinator.swift */,
+				55DE102F2B4AAE62001CB87F /* InviteMemberCoordinator.swift */,
 				55826AA42B34FD5F00233D90 /* CreateKeyCoordinator.swift */,
 				55C2791C2B2A4C60005144F1 /* Coordinator.swift */,
 			);
@@ -911,9 +924,19 @@
 			path = ProjectMembers;
 			sourceTree = "<group>";
 		};
+		55DE10282B4A2898001CB87F /* InviteMember */ = {
+			isa = PBXGroup;
+			children = (
+				55DE10292B4A28B0001CB87F /* InviteMemberView.swift */,
+				55DE102C2B4A28E0001CB87F /* InviteMemberViewModel.swift */,
+			);
+			path = InviteMember;
+			sourceTree = "<group>";
+		};
 		55FF42632B2B912300F4D523 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				55DE10282B4A2898001CB87F /* InviteMember */,
 				55DE10212B48D002001CB87F /* ProjectMembers */,
 				556977992B4746F60022B675 /* ProjectSettings */,
 				55A7B3522B45DB750051BCF0 /* ProfileDeleteWarningView */,
@@ -933,6 +956,7 @@
 				55FF426B2B2B923900F4D523 /* RootCoordinator+RootView.swift */,
 				55FF426E2B2B925400F4D523 /* StartCoordinator+RootView.swift */,
 				5513C24A2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift */,
+				55DE10322B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift */,
 				55826AAA2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift */,
 			);
 			path = RootViews;
@@ -1101,6 +1125,7 @@
 				5516EBD82B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */,
 				55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
+				55DE102A2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				5516EBBC2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
 				558074572B2E56E50041160B /* Project.swift in Sources */,
 				55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */,
@@ -1156,6 +1181,7 @@
 				55826A8A2B34C63900233D90 /* UserID.swift in Sources */,
 				5516EBE92B43609300C558B1 /* ChangePasswordView.swift in Sources */,
 				551AA4272B337D2900F0B1E2 /* AppTitle.swift in Sources */,
+				55DE102D2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAB2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				55C279172B2A4BE7005144F1 /* Localized.swift in Sources */,
 				55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */,
@@ -1182,7 +1208,9 @@
 				55A7B3572B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				551AA4162B33612500F0B1E2 /* Language.swift in Sources */,
 				558074452B2CF2780041160B /* GoogleButton.swift in Sources */,
+				55DE10332B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,
 				55FF42682B2B914000F4D523 /* HomeViewModel.swift in Sources */,
+				55DE10302B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55FF425E2B2A674A00F4D523 /* CancelBag.swift in Sources */,
 				55C279132B2A4B48005144F1 /* AppDelegate.swift in Sources */,
 				556977A12B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
@@ -1215,6 +1243,7 @@
 				5516EBD92B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */,
 				55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
+				55DE102B2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
 				558074582B2E56E50041160B /* Project.swift in Sources */,
 				55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */,
@@ -1270,6 +1299,7 @@
 				55826A8B2B34C63900233D90 /* UserID.swift in Sources */,
 				5516EBEA2B43609300C558B1 /* ChangePasswordView.swift in Sources */,
 				551AA4282B337D2900F0B1E2 /* AppTitle.swift in Sources */,
+				55DE102E2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAC2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				55C2791B2B2A4C17005144F1 /* Localized.swift in Sources */,
 				55C278EB2B2A3F3A005144F1 /* FontStyle.swift in Sources */,
@@ -1296,7 +1326,9 @@
 				55A7B3582B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				551AA4172B33612500F0B1E2 /* Language.swift in Sources */,
 				558074462B2CF2780041160B /* GoogleButton.swift in Sources */,
+				55DE10342B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,
 				55FF42692B2B914100F4D523 /* HomeViewModel.swift in Sources */,
+				55DE10312B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55FF425F2B2A677800F4D523 /* CancelBag.swift in Sources */,
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,
 				556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */,

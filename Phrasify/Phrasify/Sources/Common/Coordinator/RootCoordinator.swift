@@ -121,6 +121,11 @@ extension RootCoordinator: ProjectActions {
         let view: NavigationView = .projectMembers(viewModel: viewModel)
         navigationViews.append(view)
     }
+
+    func presentInviteMember(project: Project) {
+        let fullScreenCover: FullScreenCover = .inviteMember(project)
+        presentedFullScreenCover = fullScreenCover
+    }
 }
 
 extension RootCoordinator: SelectLanguageActions {
@@ -186,11 +191,13 @@ extension RootCoordinator {
     enum FullScreenCover: Identifiable {
         case createProject
         case createKey(Project)
+        case inviteMember(Project)
 
         var id: String {
             switch self {
             case .createProject: "001"
             case .createKey: "002"
+            case .inviteMember: "003"
             }
         }
     }

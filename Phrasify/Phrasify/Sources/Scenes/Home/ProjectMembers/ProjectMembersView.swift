@@ -13,13 +13,21 @@ struct ProjectMembersView: View {
     @ObservedObject var viewModel: ProjectMembersViewModel
 
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(spacing: 16) {
-                ForEach(viewModel.members, id: \.self) { member in
-                    makeMemberRow(for: member)
+        VStack(spacing: 0) {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 16) {
+                    Text("Owner")
+                        .apply(.medium, size: .M, color: .lightGray)
+                    ForEach(viewModel.members, id: \.self) { member in
+                        makeMemberRow(for: member)
+                    }
+                    Spacer()
+
                 }
+                .padding(16)
             }
-            .padding(16)
+            AppButton(style: .fill("Invite member", .lightBlue), action: .main(viewModel.onInviteMemberTapped))
+                .padding(16)
         }
         .navigationTitle("Members")
     }
