@@ -260,6 +260,8 @@
 		55DE104F2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE104D2B4AFD36001CB87F /* ChangeProjectOwnerView.swift */; };
 		55DE10512B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10502B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift */; };
 		55DE10522B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10502B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift */; };
+		55DE10582B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */; };
+		55DE10592B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */; };
 		55E960D72B3CD8D40016DA23 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 55E960D62B3CD8D40016DA23 /* FirebaseFunctions */; };
 		55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
 		55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
@@ -409,6 +411,7 @@
 		55DE10492B4AFA07001CB87F /* URLCache+ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLCache+ImageCache.swift"; sourceTree = "<group>"; };
 		55DE104D2B4AFD36001CB87F /* ChangeProjectOwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerView.swift; sourceTree = "<group>"; };
 		55DE10502B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerViewModel.swift; sourceTree = "<group>"; };
+		55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMemberUseCase.swift; sourceTree = "<group>"; };
 		55E960D82B3CD8E50016DA23 /* CloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRepository.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FB5F622B3E409B004D3720 /* KeyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatus.swift; sourceTree = "<group>"; };
@@ -689,6 +692,7 @@
 			isa = PBXGroup;
 			children = (
 				558074492B2D12B80041160B /* GoogleUseCase.swift */,
+				55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1246,6 +1250,7 @@
 				5513C24F2B325E2F004C1933 /* CreateProjectView.swift in Sources */,
 				551AA42A2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55826A8A2B34C63900233D90 /* UserID.swift in Sources */,
+				55DE10582B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
 				5516EBE92B43609300C558B1 /* ChangePasswordView.swift in Sources */,
 				551AA4272B337D2900F0B1E2 /* AppTitle.swift in Sources */,
 				55DE102D2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
@@ -1373,6 +1378,7 @@
 				5513C2502B325E2F004C1933 /* CreateProjectView.swift in Sources */,
 				551AA42B2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55826A8B2B34C63900233D90 /* UserID.swift in Sources */,
+				55DE10592B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
 				5516EBEA2B43609300C558B1 /* ChangePasswordView.swift in Sources */,
 				551AA4282B337D2900F0B1E2 /* AppTitle.swift in Sources */,
 				55DE102E2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,

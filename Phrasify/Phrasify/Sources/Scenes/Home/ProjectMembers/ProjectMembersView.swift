@@ -29,8 +29,10 @@ struct ProjectMembersView: View {
                 }
                 .padding(16)
             }
-            AppButton(style: .fill("Invite member", .lightBlue), action: .main(viewModel.onInviteMemberTapped))
-                .padding(16)
+            if viewModel.shouldShowInviteMemberButton {
+                AppButton(style: .fill("Invite member", .lightBlue), action: .main(viewModel.onInviteMemberTapped))
+                    .padding(16)
+            }
         }
         .navigationTitle("Members")
     }

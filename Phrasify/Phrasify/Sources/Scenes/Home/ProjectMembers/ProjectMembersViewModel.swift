@@ -7,20 +7,28 @@
 
 import SwiftUI
 
-final class ProjectMembersViewModel: ObservableObject {
+final class ProjectMembersViewModel: ObservableObject, ProjectMemberProtocol {
 
     typealias ProjectMembersCoordinator = Coordinator & ProjectActions
 
     @Published var members: [Member] = []
+    @Published var member: Member?
+
+    var shouldShowInviteMemberButton: Bool {
+        isAdmin || isOwner
+    }
 
     private let project: Project
     private let coordinator: ProjectMembersCoordinator
-    private let cancelBag = CancelBag()
+    internal let cancelBag = CancelBag()
+    internal let projectMemberUseCase: ProjectMemberUseCase
 
-    init(coordinator: ProjectMembersCoordinator, project: Project) {
+    init(coordinator: ProjectMembersCoordinator, project: Project, projectMemberUseCase: ProjectMemberUseCase) {
         self.coordinator = coordinator
         self.project = project
+        self.projectMemberUseCase = projectMemberUseCase
         setupMembersSubscriber()
+        setupMemberSubscriber()
     }
 
     func onInviteMemberTapped() {

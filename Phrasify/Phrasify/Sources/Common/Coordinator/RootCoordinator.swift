@@ -110,14 +110,14 @@ extension RootCoordinator: ProjectActions {
         presentedFullScreenCover = .createKey(project)
     }
 
-    func showProjectSettings(project: Project) {
-        let viewModel = ProjectSettingsViewModel(coordinator: self, project: project)
+    func showProjectSettings(project: Project, projectMemberUseCase: ProjectMemberUseCase) {
+        let viewModel = ProjectSettingsViewModel(coordinator: self, project: project, projectMemberUseCase: projectMemberUseCase)
         let view: NavigationView = .projectSettings(viewModel: viewModel)
         navigationViews.append(view)
     }
 
-    func showProjectMembers(project: Project) {
-        let viewModel = ProjectMembersViewModel(coordinator: self, project: project)
+    func showProjectMembers(project: Project, projectMemberUseCase: ProjectMemberUseCase) {
+        let viewModel = ProjectMembersViewModel(coordinator: self, project: project, projectMemberUseCase: projectMemberUseCase)
         let view: NavigationView = .projectMembers(viewModel: viewModel)
         navigationViews.append(view)
     }

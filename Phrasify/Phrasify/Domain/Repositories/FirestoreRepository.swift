@@ -71,6 +71,16 @@ final class FirestoreRepository {
                  .eraseToAnyPublisher()
     }
 
+    func getMemberPublisher(userId: UserID, projectId: String) -> AnyPublisher<Member?, Never> {
+        return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.members.rawValue).document(userId)
+                 .snapshotPublisher()
+                 .map { snapshot in
+                     try? snapshot.data(as: Member.self)
+                 }
+                 .catch { _ in Just<Member?>(nil)}
+                 .eraseToAnyPublisher()
+    }
+
     // MARK: Keys
 
     func getKeysPublisher(projectId: String, keysOrder: KeysOrder) -> AnyPublisher<[Key], Never> {

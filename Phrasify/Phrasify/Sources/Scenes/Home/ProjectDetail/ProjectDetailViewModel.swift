@@ -8,13 +8,14 @@
 import SwiftUI
 import Combine
 
-final class ProjectDetailViewModel: ObservableObject {
+final class ProjectDetailViewModel: ObservableObject, ProjectMemberProtocol {
 
     typealias ProjectDetailCoordinator = Coordinator & ProjectActions
 
     @Published var selectedKeysOrder: KeysOrder = .alphabetically
     @Published var searchText = ""
     @Published private var keys: [Key] = []
+    @Published internal var member: Member?
 
     var searchKeys: [Key] {
         if searchText.isEmpty {
@@ -26,9 +27,19 @@ final class ProjectDetailViewModel: ObservableObject {
         }
     }
 
+    var shouldShowAddPhraseButton: Bool {
+        isAdmin || isOwner || isDeveloper
+    }
+
     let project: Project
 
-    private let cancelBag = CancelBag()
+    internal lazy var projectMemberUseCase: ProjectMemberUseCase = {
+        .init(firestoreRepository: coordinator.dependencies.firestoreRepository,
+              authenticationRepository: coordinator.dependencies.authenticationRepository,
+              project: project)
+    }()
+
+    internal let cancelBag = CancelBag()
     private var keysTask: AnyCancellable?
 
     private let coordinator: ProjectDetailCoordinator
@@ -38,6 +49,7 @@ final class ProjectDetailViewModel: ObservableObject {
         self.project = project
         setupKeysSubscriber()
         setupSelectedKeysOrderSubscriber()
+        setupMemberSubscriber()
     }
 
     func onAddButtonTapped() {
@@ -45,7 +57,7 @@ final class ProjectDetailViewModel: ObservableObject {
     }
 
     func onSettingsTapped() {
-        coordinator.showProjectSettings(project: project)
+        coordinator.showProjectSettings(project: project, projectMemberUseCase: projectMemberUseCase)
     }
 
     private func setupSelectedKeysOrderSubscriber() {

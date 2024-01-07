@@ -19,11 +19,15 @@ struct ProjectSettingsView: View {
                         Text("General")
                             .apply(.medium, size: .M, color: .lightGray)
                         Button(action: viewModel.onLanguagesTapped, label: {
-                            makeSettingsRow(for: .languages, value: viewModel.project.languages.joined)
+                            makeSettingsRow(for: .languages, value: viewModel.project.languages.joined,
+                                            showChevron: viewModel.shouldLanguagesInteractive)
                         })
+                        .disabled(!viewModel.shouldLanguagesInteractive)
                         Button(action: viewModel.onTechnologiesTapped, label: {
-                            makeSettingsRow(for: .technologies, value: viewModel.project.technologies.joined)
+                            makeSettingsRow(for: .technologies, value: viewModel.project.technologies.joined,
+                                            showChevron: viewModel.shouldTechnologiesInteractive)
                         })
+                        .disabled(!viewModel.shouldTechnologiesInteractive)
                     }
                     VStack(alignment: .leading, spacing: 16) {
                         Text("Users and permissions")
@@ -31,9 +35,11 @@ struct ProjectSettingsView: View {
                         Button(action: viewModel.onMembersTapped, label: {
                             makeSettingsRow(for: .members, value: "\(viewModel.project.members.count) Members")
                         })
-                        Button(action: viewModel.onOwnerTapped, label: {
-                            makeSettingsRow(for: .owner, value: "Robert Adamczyk")
-                        })
+                        if viewModel.isOwner {
+                            Button(action: viewModel.onOwnerTapped, label: {
+                                makeSettingsRow(for: .owner, value: "Robert Adamczyk")
+                            })
+                        }
                     }
 
                 }
@@ -41,7 +47,9 @@ struct ProjectSettingsView: View {
             }
             VStack(spacing: 16) {
                 AppButton(style: .fill("Leave Project", .lightBlue), action: .main(viewModel.onLeaveProjectTapped))
-                AppButton(style: .text("Delete Project"), action: .main(viewModel.onDeleteProjectTapped))
+                if viewModel.isOwner {
+                    AppButton(style: .text("Delete Project"), action: .main(viewModel.onDeleteProjectTapped))
+                }
             }
             .padding(16)
         }
@@ -86,16 +94,10 @@ extension ProjectSettingsView {
             case .owner: "Owner"
             }
         }
-
-        var showChevron: Bool {
-            switch self {
-            case .technologies, .languages, .members, .owner: true
-            }
-        }
     }
 
     @ViewBuilder
-    private func makeSettingsRow(for item: SettingsItem, value: String) -> some View {
+    private func makeSettingsRow(for item: SettingsItem, value: String, showChevron: Bool = true) -> some View {
         HStack(spacing: 16) {
             ZStack {
                 item.imageView
@@ -109,7 +111,7 @@ extension ProjectSettingsView {
                     .apply(.medium, size: .S, color: .lightGray)
             }
             Spacer()
-            if item.showChevron {
+            if showChevron {
                 Image(systemName: "chevron.forward")
                     .apply(.bold, size: .L, color: .paleOrange)
             }

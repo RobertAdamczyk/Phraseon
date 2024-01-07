@@ -71,6 +71,7 @@ struct ProjectDetailView: View {
             }
             .padding(.bottom, 32)
         })
+        .opacity(viewModel.shouldShowAddPhraseButton ? 1 : 0)
     }
 
     private func setupSegmentedControlAppearance() {

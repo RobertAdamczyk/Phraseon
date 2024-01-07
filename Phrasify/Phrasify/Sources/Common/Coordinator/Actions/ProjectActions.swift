@@ -10,8 +10,8 @@ import Foundation
 protocol ProjectActions {
 
     func presentCreateKey(project: Project)
-    func showProjectSettings(project: Project)
-    func showProjectMembers(project: Project)
+    func showProjectSettings(project: Project, projectMemberUseCase: ProjectMemberUseCase)
+    func showProjectMembers(project: Project, projectMemberUseCase: ProjectMemberUseCase)
     func presentInviteMember(project: Project)
     func showChangeProjectOwner(project: Project)
 }
