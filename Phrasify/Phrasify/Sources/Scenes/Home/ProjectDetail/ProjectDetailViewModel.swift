@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 final class ProjectDetailViewModel: ObservableObject {
 
@@ -27,7 +28,8 @@ final class ProjectDetailViewModel: ObservableObject {
 
     let project: Project
 
-    let cancelBag = CancelBag()
+    private let cancelBag = CancelBag()
+    private var keysTask: AnyCancellable?
 
     private let coordinator: ProjectDetailCoordinator
 
@@ -57,11 +59,11 @@ final class ProjectDetailViewModel: ObservableObject {
 
     private func setupKeysSubscriber() {
         guard let projectId = project.id else { return }
-        coordinator.dependencies.firestoreRepository.getKeysPublisher(projectId: projectId, keysOrder: selectedKeysOrder)
+        keysTask?.cancel()
+        keysTask = coordinator.dependencies.firestoreRepository.getKeysPublisher(projectId: projectId, keysOrder: selectedKeysOrder)
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] keys in
                 self?.keys = keys
             })
-            .store(in: cancelBag)
     }
 }
