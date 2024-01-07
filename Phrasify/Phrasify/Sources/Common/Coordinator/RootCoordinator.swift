@@ -136,8 +136,8 @@ extension RootCoordinator: ProjectActions {
         navigationViews.append(view)
     }
 
-    func showLeaveProjectWarning(context: LeaveProjectWarningViewModel.Context, project: Project) {
-        let viewModel = LeaveProjectWarningViewModel(coordinator: self, project: project, context: context)
+    func showLeaveProjectWarning(project: Project) {
+        let viewModel = LeaveProjectWarningViewModel(coordinator: self, project: project)
         let sheet: Sheet = .leaveProjectWarning(viewModel: viewModel)
         self.presentedSheet = sheet
     }

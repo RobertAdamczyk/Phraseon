@@ -21,10 +21,14 @@ final class LeaveProjectWarningViewModel: ObservableObject {
     private let project: Project
     private let coordinator: LeaveProjectWarningCoordinator
 
-    init(coordinator: LeaveProjectWarningCoordinator, project: Project, context: Context) {
+    init(coordinator: LeaveProjectWarningCoordinator, project: Project) {
         self.coordinator = coordinator
-        self.context = context
         self.project = project
+        if project.owner == coordinator.dependencies.authenticationRepository.currentUser?.uid {
+            self.context = .owner
+        } else {
+            self.context = .notOwner
+        }
     }
 
     @MainActor

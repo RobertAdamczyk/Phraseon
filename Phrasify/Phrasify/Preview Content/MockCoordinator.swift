@@ -51,7 +51,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func presentInviteMember(project: Project) { }
     func showSelectMemberRole(email: String, project: Project, user: User) { }
     func showChangeProjectOwner(project: Project) { }
-    func showLeaveProjectWarning(context: LeaveProjectWarningViewModel.Context, project: Project) { }
+    func showLeaveProjectWarning(project: Project) { }
 }
 
 #endif
