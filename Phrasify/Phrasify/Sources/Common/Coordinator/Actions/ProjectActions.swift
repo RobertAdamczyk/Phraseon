@@ -13,4 +13,5 @@ protocol ProjectActions {
     func showProjectSettings(project: Project)
     func showProjectMembers(project: Project)
     func presentInviteMember(project: Project)
+    func showChangeProjectOwner(project: Project)
 }

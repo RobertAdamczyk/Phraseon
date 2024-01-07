@@ -35,7 +35,7 @@ final class ProjectSettingsViewModel: ObservableObject {
     }
 
     func onOwnerTapped() {
-
+        coordinator.showChangeProjectOwner(project: project)
     }
 
     func onLeaveProjectTapped() {

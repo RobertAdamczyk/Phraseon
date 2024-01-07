@@ -50,6 +50,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showProjectMembers(project: Project) { }
     func presentInviteMember(project: Project) { }
     func showSelectMemberRole(email: String, project: Project, user: User) { }
+    func showChangeProjectOwner(project: Project) { }
 }
 
 #endif

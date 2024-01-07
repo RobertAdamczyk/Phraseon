@@ -256,6 +256,10 @@
 		55DE10482B4AD118001CB87F /* Role+SortIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10462B4AD118001CB87F /* Role+SortIndex.swift */; };
 		55DE104A2B4AFA07001CB87F /* URLCache+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10492B4AFA07001CB87F /* URLCache+ImageCache.swift */; };
 		55DE104B2B4AFA07001CB87F /* URLCache+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10492B4AFA07001CB87F /* URLCache+ImageCache.swift */; };
+		55DE104E2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE104D2B4AFD36001CB87F /* ChangeProjectOwnerView.swift */; };
+		55DE104F2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE104D2B4AFD36001CB87F /* ChangeProjectOwnerView.swift */; };
+		55DE10512B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10502B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift */; };
+		55DE10522B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10502B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift */; };
 		55E960D72B3CD8D40016DA23 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 55E960D62B3CD8D40016DA23 /* FirebaseFunctions */; };
 		55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
 		55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
@@ -403,6 +407,8 @@
 		55DE10432B4AD0D8001CB87F /* Role+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Role+UI.swift"; sourceTree = "<group>"; };
 		55DE10462B4AD118001CB87F /* Role+SortIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Role+SortIndex.swift"; sourceTree = "<group>"; };
 		55DE10492B4AFA07001CB87F /* URLCache+ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLCache+ImageCache.swift"; sourceTree = "<group>"; };
+		55DE104D2B4AFD36001CB87F /* ChangeProjectOwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerView.swift; sourceTree = "<group>"; };
+		55DE10502B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerViewModel.swift; sourceTree = "<group>"; };
 		55E960D82B3CD8E50016DA23 /* CloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRepository.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FB5F622B3E409B004D3720 /* KeyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatus.swift; sourceTree = "<group>"; };
@@ -976,9 +982,19 @@
 			path = UserDetailView;
 			sourceTree = "<group>";
 		};
+		55DE104C2B4AFCBA001CB87F /* ChangeProjectOwner */ = {
+			isa = PBXGroup;
+			children = (
+				55DE104D2B4AFD36001CB87F /* ChangeProjectOwnerView.swift */,
+				55DE10502B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift */,
+			);
+			path = ChangeProjectOwner;
+			sourceTree = "<group>";
+		};
 		55FF42632B2B912300F4D523 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				55DE104C2B4AFCBA001CB87F /* ChangeProjectOwner */,
 				55DE10352B4AB3A0001CB87F /* SelectMemberRole */,
 				55DE10282B4A2898001CB87F /* InviteMember */,
 				55DE10212B48D002001CB87F /* ProjectMembers */,
@@ -1178,6 +1194,7 @@
 				5513C2522B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				5516EBD22B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				5507D4072B48727600E14C63 /* Member.swift in Sources */,
+				55DE10512B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */,
 				55DE10472B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
 				553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */,
 				55C279152B2A4BB0005144F1 /* Dependencies.swift in Sources */,
@@ -1222,6 +1239,7 @@
 				5516EBEC2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
 				5516EBDF2B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
 				55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
+				55DE104E2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
 				55DE103A2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,
 				55DE103D2B4AB508001CB87F /* SelectMemberRoleActions.swift in Sources */,
 				55DE10412B4ABFC1001CB87F /* UserDetailView.swift in Sources */,
@@ -1303,6 +1321,7 @@
 				5580744F2B2E341B0041160B /* ActivityView.swift in Sources */,
 				5516EBD32B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				5507D4082B48727600E14C63 /* Member.swift in Sources */,
+				55DE10522B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */,
 				55DE10482B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
 				5513C2532B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				55C278E22B2A3F3A005144F1 /* LoginView.swift in Sources */,
@@ -1347,6 +1366,7 @@
 				5516EBED2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
 				5516EBE02B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
 				55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
+				55DE104F2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
 				55DE103B2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,
 				55DE103E2B4AB508001CB87F /* SelectMemberRoleActions.swift in Sources */,
 				55DE10422B4ABFC1001CB87F /* UserDetailView.swift in Sources */,

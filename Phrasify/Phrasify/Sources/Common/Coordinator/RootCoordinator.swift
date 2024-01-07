@@ -126,6 +126,12 @@ extension RootCoordinator: ProjectActions {
         let fullScreenCover: FullScreenCover = .inviteMember(project)
         presentedFullScreenCover = fullScreenCover
     }
+
+    func showChangeProjectOwner(project: Project) {
+        let viewModel = ChangeProjectOwnerViewModel(coordinator: self, project: project)
+        let view: NavigationView = .changeProjectOwner(viewModel: viewModel)
+        navigationViews.append(view)
+    }
 }
 
 extension RootCoordinator: SelectLanguageActions {
@@ -165,6 +171,7 @@ extension RootCoordinator {
         case selectedLanguages(viewModel: SelectLanguageViewModel)
         case selectedTechnologies(viewModel: SelectTechnologyViewModel)
         case projectMembers(viewModel: ProjectMembersViewModel)
+        case changeProjectOwner(viewModel: ChangeProjectOwnerViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -184,6 +191,7 @@ extension RootCoordinator {
             case .selectedLanguages: return "006"
             case .selectedTechnologies: return "007"
             case .projectMembers: return "008"
+            case .changeProjectOwner: return "009"
             }
         }
     }

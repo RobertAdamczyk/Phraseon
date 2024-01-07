@@ -28,6 +28,7 @@ extension RootCoordinator {
                                 case .selectedLanguages(let viewModel): SelectLanguageView(viewModel: viewModel)
                                 case .selectedTechnologies(let viewModel): SelectTechnologyView(viewModel: viewModel)
                                 case .projectMembers(let viewModel): ProjectMembersView(viewModel: viewModel)
+                                case .changeProjectOwner(let viewModel): ChangeProjectOwnerView(viewModel: viewModel)
                                 }
                             }
                     }
