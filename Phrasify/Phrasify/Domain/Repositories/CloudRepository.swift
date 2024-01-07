@@ -36,8 +36,8 @@ final class CloudRepository {
                                                                         "role": role.rawValue] as [String : Any])
     }
 
-    func isUserProjectOwner(userId: UserID) async throws -> Bool {
-        let result = try await functions.httpsCallable("isUserProjectOwner").call(["userId": userId] as [String : Any])
+    func isUserProjectOwner() async throws -> Bool {
+        let result = try await functions.httpsCallable("isUserProjectOwner").call()
 
         if let data = result.data as? [String: Any], // I need to refactor this to make code clear
            let isOwner = data["isOwner"] as? Bool {
