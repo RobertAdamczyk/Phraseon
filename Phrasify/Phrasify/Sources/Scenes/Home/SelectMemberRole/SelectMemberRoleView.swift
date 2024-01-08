@@ -31,7 +31,7 @@ struct SelectMemberRole: View {
                 }
                 .padding(16)
             }
-            AppButton(style: .fill("Invite member", .lightBlue), action: .async(viewModel.onSaveButtonTapped), 
+            AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onSaveButtonTapped),
                       disabled: viewModel.shouldButtonDisabled)
                 .padding(16)
         }
@@ -58,7 +58,7 @@ struct SelectMemberRole: View {
     }
 }
 #Preview {
-    SelectMemberRole(viewModel: .init(coordinator: .init(parentCoordinator: MockCoordinator()), 
+    SelectMemberRole(viewModel: .init(coordinator: MockCoordinator(),
                                       project: .init(name: "", technologies: [], languages: [], baseLanguage: .arabic, members: [], owner: ""),
                                       context: .invite(user: .init(email: "", name: "", surname: "", createdAt: .now, subscriptionStatus: .basic, subscriptionValidUntil: .now))))
     .preferredColorScheme(.dark)

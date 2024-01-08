@@ -178,6 +178,8 @@
 		55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
 		55B8414C2B4C9AFC007697AF /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8414B2B4C9AFC007697AF /* SwipeAction.swift */; };
 		55B8414D2B4C9AFC007697AF /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8414B2B4C9AFC007697AF /* SwipeAction.swift */; };
+		55B841502B4CB67B007697AF /* IdentifiableUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8414F2B4CB67B007697AF /* IdentifiableUser.swift */; };
+		55B841512B4CB67B007697AF /* IdentifiableUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8414F2B4CB67B007697AF /* IdentifiableUser.swift */; };
 		55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CC2B2A2DA1005144F1 /* AppButton.swift */; };
 		55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CE2B2A2DBA005144F1 /* FontStyle.swift */; };
 		55C278D52B2A2E36005144F1 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */; };
@@ -389,6 +391,7 @@
 		55B841442B4C7C9C007697AF /* DeleteProjectWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectWarningView.swift; sourceTree = "<group>"; };
 		55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectWarningViewModel.swift; sourceTree = "<group>"; };
 		55B8414B2B4C9AFC007697AF /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
+		55B8414F2B4CB67B007697AF /* IdentifiableUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableUser.swift; sourceTree = "<group>"; };
 		55C278CC2B2A2DA1005144F1 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		55C278CE2B2A2DBA005144F1 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -778,6 +781,16 @@
 			path = SwipeAction;
 			sourceTree = "<group>";
 		};
+		55B8414E2B4CB595007697AF /* User */ = {
+			isa = PBXGroup;
+			children = (
+				5516EBD42B40E1E300C558B1 /* User.swift */,
+				55B8414F2B4CB67B007697AF /* IdentifiableUser.swift */,
+				5507D4062B48727600E14C63 /* Member.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		55C278D02B2A2E25005144F1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,17 +917,16 @@
 		55C762192B27A618008CBF30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55B8414E2B4CB595007697AF /* User */,
 				558074392B2CE6650041160B /* AppError.swift */,
 				5516EBD72B419EBD00C558B1 /* SubscriptionStatus.swift */,
 				55826A892B34C63900233D90 /* UserID.swift */,
 				558074562B2E56E50041160B /* Project.swift */,
-				5507D4062B48727600E14C63 /* Member.swift */,
 				55826A8F2B34C85800233D90 /* Role.swift */,
 				55826A8C2B34C83A00233D90 /* ProjectMember.swift */,
 				551AA4152B33612500F0B1E2 /* Language.swift */,
 				551AA41C2B3379B700F0B1E2 /* Technology.swift */,
 				55826AAD2B35046F00233D90 /* Key.swift */,
-				5516EBD42B40E1E300C558B1 /* User.swift */,
 				55FB5F622B3E409B004D3720 /* KeyStatus.swift */,
 				5516EBB82B3F339E00C558B1 /* KeysOrder.swift */,
 				5516EBEE2B436DAD00C558B1 /* AuthenticationProvider.swift */,
@@ -1302,6 +1314,7 @@
 				5513C24F2B325E2F004C1933 /* CreateProjectView.swift in Sources */,
 				551AA42A2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55826A8A2B34C63900233D90 /* UserID.swift in Sources */,
+				55B841502B4CB67B007697AF /* IdentifiableUser.swift in Sources */,
 				55DE10582B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
 				5516EBE92B43609300C558B1 /* ChangePasswordView.swift in Sources */,
 				551AA4272B337D2900F0B1E2 /* AppTitle.swift in Sources */,
@@ -1436,6 +1449,7 @@
 				5513C2502B325E2F004C1933 /* CreateProjectView.swift in Sources */,
 				551AA42B2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55826A8B2B34C63900233D90 /* UserID.swift in Sources */,
+				55B841512B4CB67B007697AF /* IdentifiableUser.swift in Sources */,
 				55DE10592B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
 				5516EBEA2B43609300C558B1 /* ChangePasswordView.swift in Sources */,
 				551AA4282B337D2900F0B1E2 /* AppTitle.swift in Sources */,

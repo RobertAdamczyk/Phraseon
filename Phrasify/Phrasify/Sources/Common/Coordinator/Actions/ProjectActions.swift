@@ -16,4 +16,5 @@ protocol ProjectActions {
     func showChangeProjectOwner(project: Project)
     func showLeaveProjectWarning(project: Project)
     func showDeleteProjectWarning(project: Project)
+    func showSelectMemberRole(member: Member, project: Project)
 }

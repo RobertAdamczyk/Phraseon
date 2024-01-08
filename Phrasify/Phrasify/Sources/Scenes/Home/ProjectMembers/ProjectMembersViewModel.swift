@@ -44,7 +44,10 @@ final class ProjectMembersViewModel: ObservableObject, ProjectMemberProtocol {
     }
 
     func onMemberEdit(_ member: Member) {
-
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            coordinator.showSelectMemberRole(member: member, project: project)
+        }
     }
 
     private func setupMembersSubscriber() {

@@ -13,9 +13,9 @@ final class SelectMemberRoleViewModel: ObservableObject {
 
     @Published var selectedRole: Role?
 
-    var user: User? {
+    var user: IdentifiableUser? {
         switch context {
-        case .members: return nil
+        case .members(let member): return member
         case .invite(let user): return user
         }
     }
@@ -24,14 +24,24 @@ final class SelectMemberRoleViewModel: ObservableObject {
         selectedRole == nil
     }
 
+    var buttonText: String {
+        switch context {
+        case .members: "Confirm change"
+        case .invite: "Invite member"
+        }
+    }
+
     private let project: Project
     private let context: Context
-    private let coordinator: InviteMemberCoordinator
+    private let coordinator: SelectMemberRoleCoordinator
 
-    init(coordinator: InviteMemberCoordinator, project: Project, context: Context) {
+    init(coordinator: SelectMemberRoleCoordinator, project: Project, context: Context) {
         self.coordinator = coordinator
         self.project = project
         self.context = context
+        if case .members(let member) = context {
+            selectedRole = member.role
+        }
     }
 
     func onRoleTapped(_ role: Role) {
@@ -53,7 +63,7 @@ final class SelectMemberRoleViewModel: ObservableObject {
 extension SelectMemberRoleViewModel {
 
     enum Context {
-        case members
+        case members(member: Member)
         case invite(user: User)
     }
 }

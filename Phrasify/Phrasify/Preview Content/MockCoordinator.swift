@@ -53,6 +53,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showChangeProjectOwner(project: Project) { }
     func showLeaveProjectWarning(project: Project) { }
     func showDeleteProjectWarning(project: Project) { }
+    func showSelectMemberRole(member: Member, project: Project) { }
 }
 
 #endif

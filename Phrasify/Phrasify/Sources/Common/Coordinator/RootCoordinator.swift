@@ -147,6 +147,12 @@ extension RootCoordinator: ProjectActions {
         let sheet: Sheet = .deleteProjectWarning(viewModel: viewModel)
         self.presentedSheet = sheet
     }
+
+    func showSelectMemberRole(member: Member, project: Project) {
+        let viewModel = SelectMemberRoleViewModel(coordinator: self, project: project, context: .members(member: member))
+        let view: NavigationView = .selectMemberRole(viewModel: viewModel)
+        navigationViews.append(view)
+    }
 }
 
 extension RootCoordinator: SelectLanguageActions {
@@ -187,6 +193,7 @@ extension RootCoordinator {
         case selectedTechnologies(viewModel: SelectTechnologyViewModel)
         case projectMembers(viewModel: ProjectMembersViewModel)
         case changeProjectOwner(viewModel: ChangeProjectOwnerViewModel)
+        case selectMemberRole(viewModel: SelectMemberRoleViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -207,6 +214,7 @@ extension RootCoordinator {
             case .selectedTechnologies: return "007"
             case .projectMembers: return "008"
             case .changeProjectOwner: return "009"
+            case .selectMemberRole: return "010"
             }
         }
     }
