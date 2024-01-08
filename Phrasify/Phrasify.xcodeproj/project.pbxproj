@@ -784,6 +784,7 @@
 		55B8414E2B4CB595007697AF /* User */ = {
 			isa = PBXGroup;
 			children = (
+				55826A892B34C63900233D90 /* UserID.swift */,
 				5516EBD42B40E1E300C558B1 /* User.swift */,
 				55B8414F2B4CB67B007697AF /* IdentifiableUser.swift */,
 				5507D4062B48727600E14C63 /* Member.swift */,
@@ -920,7 +921,6 @@
 				55B8414E2B4CB595007697AF /* User */,
 				558074392B2CE6650041160B /* AppError.swift */,
 				5516EBD72B419EBD00C558B1 /* SubscriptionStatus.swift */,
-				55826A892B34C63900233D90 /* UserID.swift */,
 				558074562B2E56E50041160B /* Project.swift */,
 				55826A8F2B34C85800233D90 /* Role.swift */,
 				55826A8C2B34C83A00233D90 /* ProjectMember.swift */,
