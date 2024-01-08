@@ -20,7 +20,7 @@ struct SelectMemberRole: View {
                     }
                     AppTitle(subtitle: "Assign a role to define how users will interact with the project. Each role comes with different permissions and access levels.")
                     VStack(spacing: 12) {
-                        ForEach(Role.allCases, id: \.self) { role in
+                        ForEach(Role.allCases.filter({ $0 != .owner }), id: \.self) { role in
                             Button(action: {
                                 viewModel.onRoleTapped(role)
                             }, label: {
