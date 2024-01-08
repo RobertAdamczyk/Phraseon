@@ -14,6 +14,10 @@ final class ProjectMembersViewModel: ObservableObject, ProjectMemberProtocol {
     @Published var members: [Member] = []
     @Published var member: Member?
 
+    var groupedMembers: [Role: [Member]] {
+        Dictionary(grouping: members, by: { $0.role })
+    }
+
     var shouldShowInviteMemberButton: Bool {
         isAdmin || isOwner
     }
