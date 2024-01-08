@@ -141,6 +141,12 @@ extension RootCoordinator: ProjectActions {
         let sheet: Sheet = .leaveProjectWarning(viewModel: viewModel)
         self.presentedSheet = sheet
     }
+
+    func showDeleteProjectWarning(project: Project) {
+        let viewModel = DeleteProjectWarningViewModel(coordinator: self, project: project)
+        let sheet: Sheet = .deleteProjectWarning(viewModel: viewModel)
+        self.presentedSheet = sheet
+    }
 }
 
 extension RootCoordinator: SelectLanguageActions {
@@ -222,11 +228,13 @@ extension RootCoordinator {
     enum Sheet: Identifiable {
         case profileDeleteWarning(viewModel: ProfileDeleteWarningViewModel)
         case leaveProjectWarning(viewModel: LeaveProjectWarningViewModel)
+        case deleteProjectWarning(viewModel: DeleteProjectWarningViewModel)
 
         var id: String {
             switch self {
             case .profileDeleteWarning: "001"
             case .leaveProjectWarning: "002"
+            case .deleteProjectWarning: "003"
             }
         }
     }

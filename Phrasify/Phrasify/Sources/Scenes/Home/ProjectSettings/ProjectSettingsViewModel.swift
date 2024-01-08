@@ -55,7 +55,7 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberProtocol {
     }
 
     func onDeleteProjectTapped() {
-
+        coordinator.showDeleteProjectWarning(project: project)
     }
 
     private func setupProjectSubscriber() {
