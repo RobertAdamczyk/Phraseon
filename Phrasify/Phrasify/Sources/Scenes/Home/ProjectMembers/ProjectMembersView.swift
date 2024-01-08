@@ -21,7 +21,7 @@ struct ProjectMembersView: View {
                                 .apply(.medium, size: .M, color: .lightGray)
                                 .padding(.top, role == .owner ? 0 : 16)
 
-                            ForEach(membersOfRole, id: \.name) { member in
+                            ForEach(membersOfRole, id: \.self) { member in
                                 SwipeAction(cornerRadius: 8) {
                                     UserDetailView(email: member.email, name: member.name, surname: member.surname, photoUrl: member.photoUrl)
                                 } actions: {

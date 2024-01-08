@@ -36,6 +36,12 @@ final class CloudRepository {
                                                                         "role": role.rawValue] as [String : Any])
     }
 
+    func changeMemberRole(userId: UserID, projectId: String, role: Role) async throws {
+        _ = try await functions.httpsCallable("changeMemberRole").call(["userId": userId,
+                                                                        "projectId": projectId,
+                                                                        "role": role.rawValue] as [String : Any])
+    }
+
     func leaveProject(projectId: String) async throws {
         _ = try await functions.httpsCallable("leaveProject").call(["projectId": projectId] as [String : Any])
     }
