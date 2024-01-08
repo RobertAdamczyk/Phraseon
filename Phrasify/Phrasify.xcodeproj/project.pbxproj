@@ -176,6 +176,8 @@
 		55B841462B4C7C9C007697AF /* DeleteProjectWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841442B4C7C9C007697AF /* DeleteProjectWarningView.swift */; };
 		55B841482B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
 		55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
+		55B8414C2B4C9AFC007697AF /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8414B2B4C9AFC007697AF /* SwipeAction.swift */; };
+		55B8414D2B4C9AFC007697AF /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8414B2B4C9AFC007697AF /* SwipeAction.swift */; };
 		55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CC2B2A2DA1005144F1 /* AppButton.swift */; };
 		55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CE2B2A2DBA005144F1 /* FontStyle.swift */; };
 		55C278D52B2A2E36005144F1 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */; };
@@ -386,6 +388,7 @@
 		55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModel.swift; sourceTree = "<group>"; };
 		55B841442B4C7C9C007697AF /* DeleteProjectWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectWarningView.swift; sourceTree = "<group>"; };
 		55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectWarningViewModel.swift; sourceTree = "<group>"; };
+		55B8414B2B4C9AFC007697AF /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 		55C278CC2B2A2DA1005144F1 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		55C278CE2B2A2DBA005144F1 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -767,6 +770,14 @@
 			path = DeleteProjectWarning;
 			sourceTree = "<group>";
 		};
+		55B8414A2B4C9AF3007697AF /* SwipeAction */ = {
+			isa = PBXGroup;
+			children = (
+				55B8414B2B4C9AFC007697AF /* SwipeAction.swift */,
+			);
+			path = SwipeAction;
+			sourceTree = "<group>";
+		};
 		55C278D02B2A2E25005144F1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -798,6 +809,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55B8414A2B4C9AF3007697AF /* SwipeAction */,
 				55DE103F2B4ABF8F001CB87F /* UserDetailView */,
 				5505378F2B44C0080077912D /* PhotoPicker */,
 				550537852B4488E40077912D /* ConfirmationDialog */,
@@ -1260,6 +1272,7 @@
 				5569779B2B4747170022B675 /* ProjectSettingsView.swift in Sources */,
 				55826AA52B34FD5F00233D90 /* CreateKeyCoordinator.swift in Sources */,
 				5505378A2B4492670077912D /* NavigationActions.swift in Sources */,
+				55B8414C2B4C9AFC007697AF /* SwipeAction.swift in Sources */,
 				551AA4102B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */,
 				55C762302B27AB72008CBF30 /* StartView.swift in Sources */,
 				55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */,
@@ -1393,6 +1406,7 @@
 				5569779C2B4747170022B675 /* ProjectSettingsView.swift in Sources */,
 				55826AA62B34FD5F00233D90 /* CreateKeyCoordinator.swift in Sources */,
 				5505378B2B4492670077912D /* NavigationActions.swift in Sources */,
+				55B8414D2B4C9AFC007697AF /* SwipeAction.swift in Sources */,
 				551AA4112B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */,
 				55C278E52B2A3F3A005144F1 /* AppTextField.swift in Sources */,
 				55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */,

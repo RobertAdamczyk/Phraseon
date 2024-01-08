@@ -22,7 +22,16 @@ struct ProjectMembersView: View {
                                 .padding(.top, role == .owner ? 0 : 16)
 
                             ForEach(membersOfRole, id: \.name) { member in
-                                UserDetailView(email: member.email, name: member.name, surname: member.surname, photoUrl: member.photoUrl)
+                                SwipeAction(cornerRadius: 8) {
+                                    UserDetailView(email: member.email, name: member.name, surname: member.surname, photoUrl: member.photoUrl)
+                                } actions: {
+                                    Action(tint: appColor(.lightGray), icon: "pencil", isEnabled: viewModel.hasPermissionToManage) {
+                                        viewModel.onMemberEdit(member)
+                                    }
+                                    Action(tint: .red, icon: "trash.fill", isEnabled: viewModel.hasPermissionToManage) {
+                                        viewModel.onMemberDelete(member)
+                                    }
+                                }
                             }
                         }
                     }
@@ -30,7 +39,7 @@ struct ProjectMembersView: View {
                 }
                 .padding(16)
             }
-            if viewModel.shouldShowInviteMemberButton {
+            if viewModel.hasPermissionToManage {
                 AppButton(style: .fill("Invite member", .lightBlue), action: .main(viewModel.onInviteMemberTapped))
                     .padding(16)
             }

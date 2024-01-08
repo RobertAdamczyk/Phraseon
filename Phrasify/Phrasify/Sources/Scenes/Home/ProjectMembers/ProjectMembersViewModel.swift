@@ -18,7 +18,7 @@ final class ProjectMembersViewModel: ObservableObject, ProjectMemberProtocol {
         Dictionary(grouping: members, by: { $0.role })
     }
 
-    var shouldShowInviteMemberButton: Bool {
+    var hasPermissionToManage: Bool {
         isAdmin || isOwner
     }
 
@@ -37,6 +37,14 @@ final class ProjectMembersViewModel: ObservableObject, ProjectMemberProtocol {
 
     func onInviteMemberTapped() {
         coordinator.presentInviteMember(project: project)
+    }
+
+    func onMemberDelete(_ member: Member) {
+
+    }
+
+    func onMemberEdit(_ member: Member) {
+
     }
 
     private func setupMembersSubscriber() {
