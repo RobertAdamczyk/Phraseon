@@ -26,7 +26,12 @@ struct ProjectDetailView: View {
                 .padding(.bottom, 16)
 
                 ForEach(viewModel.searchKeys, id: \.self) { key in
-                    KeyRow(key: key)
+                    Button {
+                        viewModel.onKeyTapped(key)
+                    } label: {
+                        KeyRow(key: key)
+                    }
+
                 }
             }
             .animate($scrollState)

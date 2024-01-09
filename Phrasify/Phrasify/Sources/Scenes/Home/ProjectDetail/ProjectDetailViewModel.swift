@@ -60,6 +60,10 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberProtocol {
         coordinator.showProjectSettings(project: project, projectMemberUseCase: projectMemberUseCase)
     }
 
+    func onKeyTapped(_ key: Key) {
+
+    }
+
     private func setupSelectedKeysOrderSubscriber() {
         $selectedKeysOrder
             .receive(on: RunLoop.main)

@@ -11,42 +11,32 @@ extension ProjectDetailView {
 
     struct KeyRow: View {
 
-        @State private var rowHeight: CGFloat = .zero
-
         let key: Key
 
         var body: some View {
-            VStack(alignment: .leading, spacing: 8) {
-                Text(key.id ?? "")
-                    .apply(.medium, size: .M, color: .white)
-                HStack(spacing: 4) {
-                    Image(systemName: "clock")
-                    Text(key.lastUpdatedAt.timeAgo)
+            HStack {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(key.id ?? "")
+                        .apply(.medium, size: .M, color: .white)
+                    HStack(spacing: 4) {
+                        Image(systemName: "clock")
+                        Text(key.lastUpdatedAt.timeAgo)
+                        Rectangle()
+                            .frame(width: 2)
+                            .foregroundStyle(appColor(.lightGray))
+                            .padding(.horizontal, 8)
+                        Text(key.status.localizedTitle)
+                    }
+                    .apply(.medium, size: .S, color: .lightGray)
                 }
-                .apply(.medium, size: .S, color: .lightGray)
+                Spacer()
+                Image(systemName: "chevron.forward")
+                    .apply(.bold, size: .L, color: .paleOrange)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(8)
+            .padding(.horizontal, 8)
             .background { appColor(.darkGray) }
-            .overlay(alignment: .topTrailing) {
-                Triangle()
-                    .fill(key.status.color)
-                    .frame(width: rowHeight * 0.7, height: rowHeight * 0.7)
-                    .overlay(alignment: .topTrailing) {
-                        key.status.image
-                            .apply(.medium, size: .M, color: .black)
-                            .padding([.top, .trailing], 5)
-                    }
-            }
-            .background() {
-                GeometryReader { geometry in
-                    Path { path in
-                        DispatchQueue.main.async {
-                            rowHeight = geometry.size.height
-                        }
-                    }
-                }
-            }
             .clipShape(RoundedRectangle(cornerRadius: 8))
         }
     }
