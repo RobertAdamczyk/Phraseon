@@ -109,6 +109,7 @@ extension ProjectSettingsView {
                     .apply(.regular, size: .S, color: .white)
                 Text(value)
                     .apply(.medium, size: .S, color: .lightGray)
+                    .lineLimit(1)
             }
             Spacer()
             if showChevron {

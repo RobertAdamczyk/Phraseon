@@ -25,7 +25,7 @@ struct ProjectMembersView: View {
                                 SwipeAction(cornerRadius: 8) {
                                     UserDetailView(email: member.email, name: member.name, surname: member.surname, photoUrl: member.photoUrl)
                                 } actions: {
-                                    Action(tint: appColor(.lightGray), icon: "pencil",
+                                    Action(tint: appColor(.lightGray), icon: "square.and.pencil",
                                            isEnabled: viewModel.hasPermissionToManage && member.role != .owner) {
                                         viewModel.onMemberEdit(member)
                                     }
