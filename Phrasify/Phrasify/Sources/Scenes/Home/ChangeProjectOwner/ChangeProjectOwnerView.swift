@@ -23,6 +23,6 @@ struct ChangeProjectOwnerView: View {
             AppButton(style: .fill("Confirm change", .lightBlue), action: .async(viewModel.onProjectOwnerChangeTapped))
                 .padding(16)
         }
-        .navigationTitle("Change Project Owner")
+        .navigationTitle("Change Owner")
     }
 }
