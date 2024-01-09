@@ -40,7 +40,10 @@ final class ProjectMembersViewModel: ObservableObject, ProjectMemberProtocol {
     }
 
     func onMemberDelete(_ member: Member) {
-
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            coordinator.showDeleteMemberWarning(project: project, member: member)
+        }
     }
 
     func onMemberEdit(_ member: Member) {

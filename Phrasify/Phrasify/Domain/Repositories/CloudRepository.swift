@@ -46,6 +46,11 @@ final class CloudRepository {
         _ = try await functions.httpsCallable("leaveProject").call(["projectId": projectId] as [String : Any])
     }
 
+    func deleteMember(projectId: String, userId: UserID) async throws {
+        _ = try await functions.httpsCallable("deleteMember").call(["projectId": projectId,
+                                                                    "userId": userId] as [String : Any])
+    }
+
     func deleteProject(projectId: String) async throws {
         _ = try await functions.httpsCallable("deleteProject").call(["projectId": projectId] as [String : Any])
     }

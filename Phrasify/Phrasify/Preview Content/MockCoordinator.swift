@@ -54,6 +54,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showLeaveProjectWarning(project: Project) { }
     func showDeleteProjectWarning(project: Project) { }
     func showSelectMemberRole(member: Member, project: Project) { }
+    func showDeleteMemberWarning(project: Project, member: Member) {  }
 }
 
 #endif

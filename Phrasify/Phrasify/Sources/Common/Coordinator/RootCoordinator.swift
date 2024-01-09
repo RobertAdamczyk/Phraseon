@@ -147,6 +147,12 @@ extension RootCoordinator: ProjectActions {
         let sheet: Sheet = .deleteProjectWarning(viewModel: viewModel)
         self.presentedSheet = sheet
     }
+
+    func showDeleteMemberWarning(project: Project, member: Member) {
+        let viewModel = DeleteMemberWarningViewModel(coordinator: self, project: project, member: member)
+        let sheet: Sheet = .deleteMemberWarning(viewModel: viewModel)
+        self.presentedSheet = sheet
+    }
 }
 
 extension RootCoordinator: SelectMemberRoleActions {
@@ -244,12 +250,14 @@ extension RootCoordinator {
         case profileDeleteWarning(viewModel: ProfileDeleteWarningViewModel)
         case leaveProjectWarning(viewModel: LeaveProjectWarningViewModel)
         case deleteProjectWarning(viewModel: DeleteProjectWarningViewModel)
+        case deleteMemberWarning(viewModel: DeleteMemberWarningViewModel)
 
         var id: String {
             switch self {
             case .profileDeleteWarning: "001"
             case .leaveProjectWarning: "002"
             case .deleteProjectWarning: "003"
+            case .deleteMemberWarning: "004"
             }
         }
     }

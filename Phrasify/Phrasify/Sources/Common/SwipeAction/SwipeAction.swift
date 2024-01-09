@@ -94,7 +94,7 @@ struct SwipeAction<Content: View>: View {
                             }
                         }, label: {
                             Image(systemName: button.icon)
-                                .apply(button.iconFont, size: .H1, color: button.iconTint)
+                                .apply(button.iconFont, size: .L, color: button.iconTint)
                                 .frame(width: 80)
                                 .frame(maxHeight: .infinity)
                                 .contentShape(.rect)
