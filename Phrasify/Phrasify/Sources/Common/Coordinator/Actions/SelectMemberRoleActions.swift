@@ -10,4 +10,5 @@ import Foundation
 protocol SelectMemberRoleActions {
 
     func showSelectMemberRole(email: String, project: Project, user: User)
+    func showSelectMemberRole(member: Member, project: Project)
 }

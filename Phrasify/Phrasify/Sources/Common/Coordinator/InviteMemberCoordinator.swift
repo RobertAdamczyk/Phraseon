@@ -49,6 +49,10 @@ extension InviteMemberCoordinator: SelectMemberRoleActions {
         let view: NavigationView = .selectMemberRole(viewModel: viewModel)
         navigationViews.append(view)
     }
+
+    func showSelectMemberRole(member: Member, project: Project) {
+        // empty implementation
+    }
 }
 
 extension InviteMemberCoordinator {

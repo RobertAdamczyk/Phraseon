@@ -147,11 +147,18 @@ extension RootCoordinator: ProjectActions {
         let sheet: Sheet = .deleteProjectWarning(viewModel: viewModel)
         self.presentedSheet = sheet
     }
+}
+
+extension RootCoordinator: SelectMemberRoleActions {
 
     func showSelectMemberRole(member: Member, project: Project) {
         let viewModel = SelectMemberRoleViewModel(coordinator: self, project: project, context: .members(member: member))
         let view: NavigationView = .selectMemberRole(viewModel: viewModel)
         navigationViews.append(view)
+    }
+
+    func showSelectMemberRole(email: String, project: Project, user: User) {
+        // empty implementation
     }
 }
 

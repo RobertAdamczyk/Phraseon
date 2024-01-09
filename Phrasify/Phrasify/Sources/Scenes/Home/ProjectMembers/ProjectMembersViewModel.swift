@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ProjectMembersViewModel: ObservableObject, ProjectMemberProtocol {
 
-    typealias ProjectMembersCoordinator = Coordinator & ProjectActions
+    typealias ProjectMembersCoordinator = Coordinator & ProjectActions & SelectMemberRoleActions
 
     @Published var members: [Member] = []
     @Published var member: Member?
