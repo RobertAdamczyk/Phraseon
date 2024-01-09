@@ -17,4 +17,5 @@ protocol ProjectActions {
     func showLeaveProjectWarning(project: Project)
     func showDeleteProjectWarning(project: Project)
     func showDeleteMemberWarning(project: Project, member: Member)
+    func showKeyDetails(key: Key, project: Project)
 }

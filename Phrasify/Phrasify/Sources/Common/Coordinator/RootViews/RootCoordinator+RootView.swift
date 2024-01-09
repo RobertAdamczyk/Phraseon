@@ -30,6 +30,7 @@ extension RootCoordinator {
                                 case .projectMembers(let viewModel): ProjectMembersView(viewModel: viewModel)
                                 case .changeProjectOwner(let viewModel): ChangeProjectOwnerView(viewModel: viewModel)
                                 case .selectMemberRole(let viewModel): SelectMemberRole(viewModel: viewModel)
+                                case .keyDetail(let viewModel): KeyDetailView(viewModel: viewModel)
                                 }
                             }
                     }

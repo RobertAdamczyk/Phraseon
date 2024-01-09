@@ -153,6 +153,12 @@ extension RootCoordinator: ProjectActions {
         let sheet: Sheet = .deleteMemberWarning(viewModel: viewModel)
         self.presentedSheet = sheet
     }
+
+    func showKeyDetails(key: Key, project: Project) {
+        let viewModel = KeyDetailViewModel(coordinator: self, key: key, project: project)
+        let view: NavigationView = .keyDetail(viewModel: viewModel)
+        self.navigationViews.append(view)
+    }
 }
 
 extension RootCoordinator: SelectMemberRoleActions {
@@ -207,6 +213,7 @@ extension RootCoordinator {
         case projectMembers(viewModel: ProjectMembersViewModel)
         case changeProjectOwner(viewModel: ChangeProjectOwnerViewModel)
         case selectMemberRole(viewModel: SelectMemberRoleViewModel)
+        case keyDetail(viewModel: KeyDetailViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -228,6 +235,7 @@ extension RootCoordinator {
             case .projectMembers: return "008"
             case .changeProjectOwner: return "009"
             case .selectMemberRole: return "010"
+            case .keyDetail: return "011"
             }
         }
     }
