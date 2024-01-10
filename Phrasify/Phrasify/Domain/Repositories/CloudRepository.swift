@@ -25,6 +25,12 @@ final class CloudRepository {
                                                                  "translation": translation] as [String : Any])
     }
 
+    func changeContentKey(projectId: String, keyId: String, translation: [String: String]) async throws {
+        _ = try await functions.httpsCallable("changeContentKey").call(["projectId": projectId,
+                                                                        "keyId": keyId,
+                                                                        "translation": translation] as [String : Any])
+    }
+
     func changeProjectOwner(projectId: String, newOwnerEmail: String) async throws {
         _ = try await functions.httpsCallable("changeOwner").call(["projectId": projectId,
                                                                    "newOwnerEmail": newOwnerEmail] as [String : Any])

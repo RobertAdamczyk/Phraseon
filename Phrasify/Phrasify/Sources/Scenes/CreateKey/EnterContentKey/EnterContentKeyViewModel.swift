@@ -14,7 +14,7 @@ final class EnterContentKeyViewModel: ObservableObject {
         case edit(key: Key, language: Language)
     }
 
-    typealias EnterContentKeyCoordinator = Coordinator & FullScreenCoverActions
+    typealias EnterContentKeyCoordinator = Coordinator & FullScreenCoverActions & NavigationActions
 
     @Published var translation: String = ""
 
@@ -64,8 +64,11 @@ final class EnterContentKeyViewModel: ObservableObject {
                 try await coordinator.dependencies.cloudRepository.createKey(projectId: projectId, keyId: keyId,
                                                                              translation: [project.baseLanguage.rawValue: translation])
                 coordinator.dismissFullScreenCover()
-            case .edit:
-                print("XD")
+            case .edit(let key, _):
+                guard let keyId = key.id else { return }
+                try await coordinator.dependencies.cloudRepository.changeContentKey(projectId: projectId, keyId: keyId,
+                                                                                    translation: [language.rawValue: translation])
+                coordinator.popView()
             }
         } catch {
             ToastView.showError(message: error.localizedDescription)
