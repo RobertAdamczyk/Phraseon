@@ -43,7 +43,7 @@ struct EnterContentKeyView: View {
                 .padding(16)
         }
         .onAppear(perform: makeTextFieldFocused)
-        .navigationTitle("Enter content")
+        .navigationTitle("Content")
     }
 
     private func makeTextFieldFocused() {

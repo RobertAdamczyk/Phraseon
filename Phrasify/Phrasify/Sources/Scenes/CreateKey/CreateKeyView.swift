@@ -39,7 +39,7 @@ struct CreateKeyView: View {
                 })
             }
         }
-        .navigationTitle("Create a new phrase")
+        .navigationTitle("Phrase identifier")
     }
 
     private func makeTextFieldFocused() {
