@@ -9,7 +9,7 @@ import SwiftUI
 
 final class CreateKeyViewModel: ObservableObject {
 
-    typealias CreateKeyCoordinator = Coordinator & CreateKeyActions & FullScreenCoverActions
+    typealias CreateKeyCoordinator = Coordinator & FullScreenCoverActions & EnterContentKeyActions
 
     @Published var keyId: String = ""
 

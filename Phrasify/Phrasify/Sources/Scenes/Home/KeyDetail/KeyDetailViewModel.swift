@@ -9,7 +9,7 @@ import SwiftUI
 
 final class KeyDetailViewModel: ObservableObject {
 
-    typealias KeyDetailCoordinator = Coordinator
+    typealias KeyDetailCoordinator = Coordinator & EnterContentKeyActions
 
     let project: Project
     let key: Key
@@ -27,7 +27,7 @@ final class KeyDetailViewModel: ObservableObject {
     }
 
     func onEditTranslationTapped(language: Language) {
-
+        coordinator.showEditContentKey(language: language, key: key, project: project)
     }
 }
 

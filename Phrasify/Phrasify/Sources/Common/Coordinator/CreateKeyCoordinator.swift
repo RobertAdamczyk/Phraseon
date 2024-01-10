@@ -42,12 +42,16 @@ extension CreateKeyCoordinator: FullScreenCoverActions {
     }
 }
 
-extension CreateKeyCoordinator: CreateKeyActions {
+extension CreateKeyCoordinator: EnterContentKeyActions {
 
     func showEnterContentKey(keyId: String, project: Project) {
-        let viewModel = EnterContentKeyViewModel(coordinator: self, keyId: keyId, project: project)
+        let viewModel = EnterContentKeyViewModel(coordinator: self, project: project, context: .create(keyId: keyId))
         let view: NavigationView = .enterContentKey(viewModel: viewModel)
         navigationViews.append(view)
+    }
+
+    func showEditContentKey(language: Language, key: Key, project: Project) {
+        // empty implementation
     }
 }
 

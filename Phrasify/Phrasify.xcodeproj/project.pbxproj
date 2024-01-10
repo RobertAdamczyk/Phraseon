@@ -104,6 +104,8 @@
 		552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C92B27A5140098FE95 /* Preview Assets.xcassets */; };
 		552CA7402B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
 		552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
+		552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
+		552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
 		553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */; };
 		553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCD2B28FD890071A099 /* AppTextField.swift */; };
 		553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCF2B28FDD70071A099 /* AppDivider.swift */; };
@@ -160,8 +162,6 @@
 		55826AA32B34FD1600233D90 /* CreateKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AA12B34FD1600233D90 /* CreateKeyViewModel.swift */; };
 		55826AA52B34FD5F00233D90 /* CreateKeyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AA42B34FD5F00233D90 /* CreateKeyCoordinator.swift */; };
 		55826AA62B34FD5F00233D90 /* CreateKeyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AA42B34FD5F00233D90 /* CreateKeyCoordinator.swift */; };
-		55826AA82B34FD9E00233D90 /* CreateKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AA72B34FD9E00233D90 /* CreateKeyActions.swift */; };
-		55826AA92B34FD9E00233D90 /* CreateKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AA72B34FD9E00233D90 /* CreateKeyActions.swift */; };
 		55826AAB2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AAA2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift */; };
 		55826AAC2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AAA2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift */; };
 		55826AAE2B35046F00233D90 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AAD2B35046F00233D90 /* Key.swift */; };
@@ -362,6 +362,7 @@
 		552785C72B27A5140098FE95 /* Phrasify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phrasify.entitlements; sourceTree = "<group>"; };
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
+		552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyActions.swift; sourceTree = "<group>"; };
 		553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
 		553F1BCD2B28FD890071A099 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 		553F1BCF2B28FDD70071A099 /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
@@ -393,7 +394,6 @@
 		55826A9E2B34FCDF00233D90 /* CreateKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeyView.swift; sourceTree = "<group>"; };
 		55826AA12B34FD1600233D90 /* CreateKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeyViewModel.swift; sourceTree = "<group>"; };
 		55826AA42B34FD5F00233D90 /* CreateKeyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeyCoordinator.swift; sourceTree = "<group>"; };
-		55826AA72B34FD9E00233D90 /* CreateKeyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeyActions.swift; sourceTree = "<group>"; };
 		55826AAA2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateKeyCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		55826AAD2B35046F00233D90 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		558B74652B4DCE330041635A /* DeleteMemberWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberWarningView.swift; sourceTree = "<group>"; };
@@ -905,11 +905,11 @@
 				556977A02B47594A0022B675 /* SelectLanguageActions.swift */,
 				55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */,
 				556977A32B475B440022B675 /* SelectTechnologyActions.swift */,
-				55826AA72B34FD9E00233D90 /* CreateKeyActions.swift */,
 				5516EBE12B432D3F00C558B1 /* ProjectActions.swift */,
 				5516EBE42B432D4700C558B1 /* ProfileActions.swift */,
 				550537892B4492670077912D /* NavigationActions.swift */,
 				5505378C2B4494610077912D /* ConfirmationDialogActions.swift */,
+				552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -1285,7 +1285,6 @@
 				550537942B44C0270077912D /* PhotoPickerHandler.swift in Sources */,
 				556977A42B475B440022B675 /* SelectTechnologyActions.swift in Sources */,
 				55DE10262B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */,
-				55826AA82B34FD9E00233D90 /* CreateKeyActions.swift in Sources */,
 				5516EBB32B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074542B2E3C8F0041160B /* RootActions.swift in Sources */,
 				553F1BEB2B2914700071A099 /* SetPasswordView.swift in Sources */,
@@ -1300,6 +1299,7 @@
 				55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */,
 				5580744E2B2E341B0041160B /* ActivityView.swift in Sources */,
 				5513C2522B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
+				552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
 				5516EBD22B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				5507D4072B48727600E14C63 /* Member.swift in Sources */,
 				55DE10512B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */,
@@ -1425,7 +1425,6 @@
 				550537952B44C0270077912D /* PhotoPickerHandler.swift in Sources */,
 				556977A52B475B440022B675 /* SelectTechnologyActions.swift in Sources */,
 				55DE10272B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */,
-				55826AA92B34FD9E00233D90 /* CreateKeyActions.swift in Sources */,
 				5516EBB42B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074552B2E3C8F0041160B /* RootActions.swift in Sources */,
 				55C279182B2A4C0C005144F1 /* Dependencies.swift in Sources */,
@@ -1440,6 +1439,7 @@
 				55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */,
 				55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */,
 				5580744F2B2E341B0041160B /* ActivityView.swift in Sources */,
+				552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
 				5516EBD32B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				5507D4082B48727600E14C63 /* Member.swift in Sources */,
 				55DE10522B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */,

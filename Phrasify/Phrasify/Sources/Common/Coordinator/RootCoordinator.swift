@@ -161,6 +161,19 @@ extension RootCoordinator: ProjectActions {
     }
 }
 
+extension RootCoordinator: EnterContentKeyActions {
+
+    func showEditContentKey(language: Language, key: Key, project: Project) {
+        let viewModel = EnterContentKeyViewModel(coordinator: self, project: project, context: .edit(key: key, language: language))
+        let view: NavigationView = .editContentKey(viewModel: viewModel)
+        navigationViews.append(view)
+    }
+
+    func showEnterContentKey(keyId: String, project: Project) {
+        // empty implementation
+    }
+}
+
 extension RootCoordinator: SelectMemberRoleActions {
 
     func showSelectMemberRole(member: Member, project: Project) {
@@ -214,6 +227,7 @@ extension RootCoordinator {
         case changeProjectOwner(viewModel: ChangeProjectOwnerViewModel)
         case selectMemberRole(viewModel: SelectMemberRoleViewModel)
         case keyDetail(viewModel: KeyDetailViewModel)
+        case editContentKey(viewModel: EnterContentKeyViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -236,6 +250,7 @@ extension RootCoordinator {
             case .changeProjectOwner: return "009"
             case .selectMemberRole: return "010"
             case .keyDetail: return "011"
+            case .editContentKey: return "012"
             }
         }
     }

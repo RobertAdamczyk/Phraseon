@@ -13,17 +13,13 @@ struct EnterContentKeyView: View {
 
     @FocusState private var focusedTextField: Bool
 
-    private var subtitle: String {
-        "Enter the content of the phrase - remember, that the base language is \(viewModel.project.baseLanguage.localizedTitle)."
-    }
-
     var body: some View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 32) {
-                    AppTitle(subtitle: subtitle)
+                    AppTitle(subtitle: viewModel.subtitle)
                     VStack(alignment: .leading, spacing: 16) {
-                        LanguageView(language: viewModel.project.baseLanguage)
+                        LanguageView(language: viewModel.language)
                         TextField("", text: $viewModel.translation,
                                   prompt: Text(verbatim: "Content").foregroundStyle(appColor(.lightGray)), axis: .vertical)
                         .apply(.regular, size: .S, color: .white)
@@ -39,7 +35,7 @@ struct EnterContentKeyView: View {
                 }
                 .padding(16)
             }
-            AppButton(style: .fill("Create phrase", .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
+            AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
                 .padding(16)
         }
         .onAppear(perform: makeTextFieldFocused)
