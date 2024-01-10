@@ -102,6 +102,8 @@
 		552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552785C12B27A5120098FE95 /* PhrasifyApp.swift */; };
 		552785C62B27A5140098FE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C52B27A5140098FE95 /* Assets.xcassets */; };
 		552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C92B27A5140098FE95 /* Preview Assets.xcassets */; };
+		552CA7402B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
+		552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
 		553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */; };
 		553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCD2B28FD890071A099 /* AppTextField.swift */; };
 		553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCF2B28FDD70071A099 /* AppDivider.swift */; };
@@ -359,6 +361,7 @@
 		552785C52B27A5140098FE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		552785C72B27A5140098FE95 /* Phrasify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phrasify.entitlements; sourceTree = "<group>"; };
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
 		553F1BCD2B28FD890071A099 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 		553F1BCF2B28FDD70071A099 /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
@@ -669,6 +672,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		552CA73E2B4EFDFC00A6C3D2 /* LanguageView */ = {
+			isa = PBXGroup;
+			children = (
+				552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */,
+			);
+			path = LanguageView;
+			sourceTree = "<group>";
+		};
 		553F1BD12B28FE700071A099 /* RegisterView */ = {
 			isa = PBXGroup;
 			children = (
@@ -853,6 +864,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				552CA73E2B4EFDFC00A6C3D2 /* LanguageView */,
 				55B8414A2B4C9AF3007697AF /* SwipeAction */,
 				55DE103F2B4ABF8F001CB87F /* UserDetailView */,
 				5505378F2B44C0080077912D /* PhotoPicker */,
@@ -1355,6 +1367,7 @@
 				55DE102D2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAB2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				55C279172B2A4BE7005144F1 /* Localized.swift in Sources */,
+				552CA7402B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */,
 				55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */,
 				55DE10372B4AB3C3001CB87F /* SelectMemberRoleView.swift in Sources */,
 				55C2791D2B2A4C60005144F1 /* Coordinator.swift in Sources */,
@@ -1494,6 +1507,7 @@
 				55DE102E2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAC2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				55C2791B2B2A4C17005144F1 /* Localized.swift in Sources */,
+				552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */,
 				55C278EB2B2A3F3A005144F1 /* FontStyle.swift in Sources */,
 				55DE10382B4AB3C3001CB87F /* SelectMemberRoleView.swift in Sources */,
 				55C2791E2B2A4CB8005144F1 /* Coordinator.swift in Sources */,

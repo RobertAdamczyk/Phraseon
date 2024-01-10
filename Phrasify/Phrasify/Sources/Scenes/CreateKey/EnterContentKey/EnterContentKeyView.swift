@@ -20,12 +20,24 @@ struct EnterContentKeyView: View {
     var body: some View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: 48) {
+                VStack(alignment: .leading, spacing: 32) {
                     AppTitle(subtitle: subtitle)
-                    AppTextField(type: .translation, text: $viewModel.translation)
+                    VStack(alignment: .leading, spacing: 16) {
+                        LanguageView(language: viewModel.project.baseLanguage)
+                        TextField("", text: $viewModel.translation,
+                                  prompt: Text(verbatim: "Content").foregroundStyle(appColor(.lightGray)), axis: .vertical)
+                        .apply(.regular, size: .S, color: .white)
                         .focused($focusedTextField)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(12)
+                        .background {
+                            RoundedRectangle(cornerRadius: 16)
+                                .foregroundStyle(appColor(.darkGray))
+                        }
+                    }
                 }
-                .padding([.horizontal, .top], 16)
+                .padding(16)
             }
             AppButton(style: .fill("Create phrase", .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
                 .padding(16)

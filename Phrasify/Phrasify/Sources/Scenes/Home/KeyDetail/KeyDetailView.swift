@@ -29,24 +29,7 @@ struct KeyDetailView: View {
 
     private func makeLanguageRow(for language: Language, translation: String?) -> some View {
         VStack(alignment: .leading, spacing: 16) {
-            HStack(spacing: 16) {
-                Image(language.rawValue)
-                    .resizable()
-                    .frame(width: 24, height: 24)
-                    .padding(2)
-                    .background {
-                        Circle()
-                            .fill(appColor(.white))
-                    }
-                Text(language.localizedTitle)
-                    .apply(.medium, size: .L, color: .lightGray)
-            }
-            .padding(.vertical, 6)
-            .padding(.horizontal, 12)
-            .background {
-                RoundedRectangle(cornerRadius: 8)
-                    .foregroundStyle(appColor(.darkGray))
-            }
+            LanguageView(language: language)
             VStack(alignment: .trailing, spacing: 8) {
                 Text(translation ?? "No translation into the language.")
                     .apply(.regular, size: .S, color: .white)

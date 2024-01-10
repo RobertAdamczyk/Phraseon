@@ -29,7 +29,7 @@ struct AppTextField: View {
         HStack(spacing: 8) {
 
             switch type {
-            case .email, .projectName, .keyId, .translation, .name, .surname:
+            case .email, .projectName, .keyId, .name, .surname:
                 image
                 TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.lightGray)), axis: type.axis)
                     .autocorrectionDisabled()
@@ -82,7 +82,6 @@ extension AppTextField {
         case newPassword
         case projectName
         case keyId
-        case translation
         case name
         case surname
 
@@ -95,7 +94,6 @@ extension AppTextField {
             case .newPassword: "New Password"
             case .projectName: "Project Name"
             case .keyId: "Phrase Identifier"
-            case .translation: "Translation into base language"
             case .name: "Name"
             case .surname: "Surname"
             }
@@ -107,7 +105,6 @@ extension AppTextField {
             case .password, .confirmPassword, .currentPassword, .newPassword: "Your password"
             case .projectName: "Your project name"
             case .keyId: "this_is_my_phrase"
-            case .translation: "Translated text"
             case .name: "John"
             case .surname: "Doe"
             }
@@ -116,7 +113,7 @@ extension AppTextField {
         var axis: Axis {
             return switch self {
             case .email, .password, .confirmPassword, .currentPassword, .name, .surname, .newPassword: .horizontal
-            case .projectName, .keyId, .translation: .vertical
+            case .projectName, .keyId: .vertical
             }
         }
 
@@ -126,7 +123,6 @@ extension AppTextField {
             case .password, .confirmPassword, .currentPassword, .newPassword: Image(systemName: "lock.fill").resizable().frame(width: 14, height: 20)
             case .projectName: Image(systemName: "folder.fill").resizable().frame(width: 20, height: 16)
             case .keyId: Image(systemName: "grid").resizable().frame(width: 16, height: 16)
-            case .translation: Image(systemName: "globe").resizable().frame(width: 20, height: 20)
             case .name, .surname: Image(systemName: "person.fill").resizable().frame(width: 16, height: 16)
             }
         }
