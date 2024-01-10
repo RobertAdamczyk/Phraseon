@@ -30,7 +30,7 @@ final class EnterContentKeyViewModel: ObservableObject {
 
     var buttonText: String {
         switch context {
-        case .create: "Crate phrase"
+        case .create: "Create phrase"
         case .edit: "Confirm change"
         }
     }

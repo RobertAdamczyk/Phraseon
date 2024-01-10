@@ -11,14 +11,17 @@ final class KeyDetailViewModel: ObservableObject {
 
     typealias KeyDetailCoordinator = Coordinator & EnterContentKeyActions
 
+    @Published var key: Key
+
     let project: Project
-    let key: Key
     private let coordinator: KeyDetailCoordinator
+    private let cancelBag = CancelBag()
 
     init(coordinator: KeyDetailCoordinator, key: Key, project: Project) {
         self.coordinator = coordinator
         self.key = key
         self.project = project
+        setupKeySubscriber()
     }
 
     func onCopyTapped(_ text: String) {
@@ -28,6 +31,19 @@ final class KeyDetailViewModel: ObservableObject {
 
     func onEditTranslationTapped(language: Language) {
         coordinator.showEditContentKey(language: language, key: key, project: project)
+    }
+
+    private func setupKeySubscriber() {
+        guard let projectId = project.id, let keyId = key.id else { return }
+        coordinator.dependencies.firestoreRepository.getKeyPublisher(projectId: projectId, keyId: keyId)
+            .receive(on: RunLoop.main)
+            .sink { [weak self] key in
+                guard let key else { return }
+                DispatchQueue.main.async {
+                    self?.key = key
+                }
+            }
+            .store(in: cancelBag)
     }
 }
 
