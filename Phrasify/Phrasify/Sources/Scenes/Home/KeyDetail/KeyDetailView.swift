@@ -14,28 +14,7 @@ struct KeyDetailView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 32) {
-                VStack(alignment: .leading, spacing: 16) {
-                    HStack(spacing: 8) {
-                        Image(systemName: "grid")
-                            .foregroundStyle(appColor(.white))
-                        Text("Identifier")
-                            .apply(.medium, size: .L, color: .lightGray)
-                    }
-                    .padding(.vertical, 6)
-                    .padding(.horizontal, 12)
-                    .background(content: makeBackground)
-                    VStack(alignment: .trailing, spacing: 12) {
-                        Text(viewModel.key.id ?? "")
-                            .apply(.regular, size: .S, color: .white)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        copyButton
-                    }
-                    .padding(.vertical, 6)
-                    .padding(.horizontal, 12)
-                    .background(content: makeBackground)
-                    AppDivider(color: appColor(.darkGray))
-                        .padding(.top, 16)
-                }
+                makeIdentifierRow()
                 ForEach(viewModel.project.languages.reversed(), id: \.self) { language in
                     if let translation = viewModel.key.translation[language.rawValue] {
                         makeLanguageRow(for: language, translation: translation)
@@ -49,6 +28,33 @@ struct KeyDetailView: View {
         .navigationTitle("Phrase")
     }
 
+    private func makeIdentifierRow() -> some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(spacing: 8) {
+                Image(systemName: "grid")
+                    .foregroundStyle(appColor(.white))
+                Text("Identifier")
+                    .apply(.medium, size: .L, color: .lightGray)
+            }
+            .padding(.vertical, 6)
+            .padding(.horizontal, 12)
+            .background(content: makeBackground)
+            VStack(alignment: .trailing, spacing: 12) {
+                if let keyId = viewModel.key.id {
+                    Text(keyId)
+                        .apply(.regular, size: .S, color: .white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    makeCopyButton(for: keyId)
+                }
+            }
+            .padding(.vertical, 6)
+            .padding(.horizontal, 12)
+            .background(content: makeBackground)
+            AppDivider(color: appColor(.darkGray))
+                .padding(.top, 16)
+        }
+    }
+
     private func makeLanguageRow(for language: Language, translation: String?) -> some View {
         VStack(alignment: .leading, spacing: 16) {
             LanguageView(language: language)
@@ -58,8 +64,10 @@ struct KeyDetailView: View {
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 HStack(spacing: 16) {
-                    editButton
-                    copyButton
+                    makeEditButton(for: language)
+                    if let translation {
+                        makeCopyButton(for: translation)
+                    }
                 }
             }
             .padding(.vertical, 6)
@@ -68,9 +76,9 @@ struct KeyDetailView: View {
         }
     }
 
-    private var editButton: some View {
+    private func makeEditButton(for language: Language) -> some View {
         Button {
-            print("XD")
+            viewModel.onEditTranslationTapped(language: language)
         } label: {
             Image(systemName: "square.and.pencil")
                 .resizable()
@@ -79,9 +87,9 @@ struct KeyDetailView: View {
         }
     }
 
-    private var copyButton: some View {
+    private func makeCopyButton(for text: String) -> some View {
         Button {
-            print("XD")
+            viewModel.onCopyTapped(text)
         } label: {
             Image(systemName: "doc.on.doc")
                 .resizable()

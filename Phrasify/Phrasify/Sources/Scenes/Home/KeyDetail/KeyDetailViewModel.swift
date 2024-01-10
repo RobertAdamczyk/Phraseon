@@ -20,5 +20,14 @@ final class KeyDetailViewModel: ObservableObject {
         self.key = key
         self.project = project
     }
+
+    func onCopyTapped(_ text: String) {
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = text
+    }
+
+    func onEditTranslationTapped(language: Language) {
+
+    }
 }
 
