@@ -47,11 +47,6 @@ final class FirestoreRepository {
                  .eraseToAnyPublisher()
     }
 
-    func setProjectTechnologies(projectId: String, technologies: [Technology]) async throws {
-        let ref =  db.collection(Collections.projects.rawValue).document(projectId)
-        try await ref.updateData(["technologies": technologies.map{$0.rawValue}] as [String: Any])
-    }
-
     // MARK: Members
 
     func getMembersPublisher(projectId: String) -> AnyPublisher<[Member], Never> {

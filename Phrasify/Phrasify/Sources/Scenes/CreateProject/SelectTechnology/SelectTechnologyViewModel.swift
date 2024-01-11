@@ -70,7 +70,7 @@ final class SelectTechnologyViewModel: ObservableObject {
             switch context {
             case .settings(let project):
                 guard let projectId = project.id else { return }
-                try await coordinator.dependencies.firestoreRepository.setProjectTechnologies(projectId: projectId, technologies: selectedTechnologies)
+                try await coordinator.dependencies.cloudRepository.setProjectTechnologies(projectId: projectId, technologies: selectedTechnologies)
                 coordinator.popView()
             case .createProject(let projectName, let languages):
                 try await coordinator.dependencies.cloudRepository.createProject(name: projectName,
