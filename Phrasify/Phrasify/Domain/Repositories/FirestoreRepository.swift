@@ -47,11 +47,6 @@ final class FirestoreRepository {
                  .eraseToAnyPublisher()
     }
 
-    func setProjectLanguages(projectId: String, languages: [Language]) async throws {
-        let ref =  db.collection(Collections.projects.rawValue).document(projectId)
-        try await ref.updateData(["languages": languages.map{$0.rawValue}])
-    }
-
     func setProjectTechnologies(projectId: String, technologies: [Technology]) async throws {
         let ref =  db.collection(Collections.projects.rawValue).document(projectId)
         try await ref.updateData(["technologies": technologies.map{$0.rawValue}] as [String: Any])

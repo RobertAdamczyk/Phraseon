@@ -48,6 +48,11 @@ final class CloudRepository {
                                                                         "role": role.rawValue] as [String : Any])
     }
 
+    func setProjectLanguages(projectId: String, languages: [Language]) async throws {
+        _ = try await functions.httpsCallable("setProjectLanguages").call(["projectId": projectId,
+                                                                           "languages": languages.map({$0.rawValue})] as [String : Any])
+    }
+
     func leaveProject(projectId: String) async throws {
         _ = try await functions.httpsCallable("leaveProject").call(["projectId": projectId] as [String : Any])
     }

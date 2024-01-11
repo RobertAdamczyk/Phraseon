@@ -70,7 +70,7 @@ final class SelectLanguageViewModel: ObservableObject {
         case .settings(let project):
             guard let projectId = project.id else { return }
             do {
-                try await coordinator.dependencies.firestoreRepository.setProjectLanguages(projectId: projectId, languages: selectedLanguages)
+                try await coordinator.dependencies.cloudRepository.setProjectLanguages(projectId: projectId, languages: selectedLanguages)
                 coordinator.popView()
             } catch {
                 ToastView.showError(message: error.localizedDescription)
