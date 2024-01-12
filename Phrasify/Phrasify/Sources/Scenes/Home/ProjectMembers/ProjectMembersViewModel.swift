@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class ProjectMembersViewModel: ObservableObject, ProjectMemberProtocol {
+final class ProjectMembersViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
 
     typealias ProjectMembersCoordinator = Coordinator & ProjectActions & SelectMemberRoleActions
 

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-protocol ProjectMemberProtocol: AnyObject {
+protocol ProjectMemberUseCaseProtocol: AnyObject {
 
     var member: Member? { set get }
     var projectMemberUseCase: ProjectMemberUseCase { get }
@@ -20,7 +20,7 @@ protocol ProjectMemberProtocol: AnyObject {
     func setupMemberSubscriber()
 }
 
-extension ProjectMemberProtocol {
+extension ProjectMemberUseCaseProtocol {
 
     var isAdmin: Bool {
         [Role.admin].contains(member?.role)
