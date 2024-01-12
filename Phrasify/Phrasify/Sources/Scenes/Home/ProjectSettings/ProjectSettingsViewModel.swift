@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
+final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProtocol, ProjectUseCaseProtocol {
 
     typealias ProjectSettingsCoordinator = Coordinator & SelectLanguageActions & SelectTechnologyActions & ProjectActions
 
-    @Published var project: Project
+    @Published internal var project: Project
     @Published internal var member: Member?
 
     var shouldLanguagesInteractive: Bool {
@@ -24,12 +24,14 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProt
 
     private let coordinator: ProjectSettingsCoordinator
     internal let projectMemberUseCase: ProjectMemberUseCase
+    internal let projectUseCase: ProjectUseCase
     internal let cancelBag = CancelBag()
 
-    init(coordinator: ProjectSettingsCoordinator, project: Project, projectMemberUseCase: ProjectMemberUseCase) {
+    init(coordinator: ProjectSettingsCoordinator, projectUseCase: ProjectUseCase, projectMemberUseCase: ProjectMemberUseCase) {
         self.coordinator = coordinator
-        self.project = project
+        self.projectUseCase = projectUseCase
         self.projectMemberUseCase = projectMemberUseCase
+        self.project = projectUseCase.project
         setupProjectSubscriber()
         setupMemberSubscriber()
     }
@@ -56,19 +58,6 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProt
 
     func onDeleteProjectTapped() {
         coordinator.showDeleteProjectWarning(project: project)
-    }
-
-    private func setupProjectSubscriber() {
-        guard let projectId = project.id else { return }
-        coordinator.dependencies.firestoreRepository.getProjectPublisher(projectId: projectId)
-            .receive(on: RunLoop.main)
-            .sink(receiveValue: { [weak self] project in
-                guard let project else { return }
-                DispatchQueue.main.async {
-                    self?.project = project
-                }
-            })
-            .store(in: cancelBag)
     }
 }
 

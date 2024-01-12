@@ -113,8 +113,10 @@ extension RootCoordinator: ProjectActions {
         presentedFullScreenCover = .createKey(project)
     }
 
-    func showProjectSettings(project: Project, projectMemberUseCase: ProjectMemberUseCase) {
-        let viewModel = ProjectSettingsViewModel(coordinator: self, project: project, projectMemberUseCase: projectMemberUseCase)
+    func showProjectSettings(projectUseCase: ProjectUseCase, projectMemberUseCase: ProjectMemberUseCase) {
+        let viewModel = ProjectSettingsViewModel(coordinator: self, 
+                                                 projectUseCase: projectUseCase,
+                                                 projectMemberUseCase: projectMemberUseCase)
         let view: NavigationView = .projectSettings(viewModel: viewModel)
         navigationViews.append(view)
     }

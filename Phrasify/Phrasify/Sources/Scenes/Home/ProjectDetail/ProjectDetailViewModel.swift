@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
+final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol, ProjectUseCaseProtocol {
 
     typealias ProjectDetailCoordinator = Coordinator & ProjectActions
 
@@ -31,7 +31,9 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         isAdmin || isOwner || isDeveloper
     }
 
-    let project: Project
+    internal lazy var projectUseCase: ProjectUseCase = {
+        .init(firestoreRepository: coordinator.dependencies.firestoreRepository, project: project)
+    }()
 
     internal lazy var projectMemberUseCase: ProjectMemberUseCase = {
         .init(firestoreRepository: coordinator.dependencies.firestoreRepository,
@@ -39,6 +41,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
               project: project)
     }()
 
+    internal var project: Project
     internal let cancelBag = CancelBag()
     private var keysTask: AnyCancellable?
 
@@ -50,6 +53,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         setupKeysSubscriber()
         setupSelectedKeysOrderSubscriber()
         setupMemberSubscriber()
+        setupProjectSubscriber()
     }
 
     func onAddButtonTapped() {
@@ -57,7 +61,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     }
 
     func onSettingsTapped() {
-        coordinator.showProjectSettings(project: project, projectMemberUseCase: projectMemberUseCase)
+        coordinator.showProjectSettings(projectUseCase: projectUseCase, projectMemberUseCase: projectMemberUseCase)
     }
 
     func onKeyTapped(_ key: Key) {
