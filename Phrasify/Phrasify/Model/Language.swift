@@ -11,12 +11,12 @@ enum Language: String, CaseIterable, Codable {
 
     case english = "EN"
     case mandarinChinese = "ZH"
-    case hindi = "HI"
+    case polish = "PL"
     case spanish = "ES"
     case french = "FR"
-    case arabic = "AR"
-    case bengali = "BN"
+    case turkish = "TR"
+    case japanese = "JA"
     case russian = "RU"
-    case portuguese = "PT"
+    case portuguese = "PT-PT"
     case indonesian = "ID"
 }
