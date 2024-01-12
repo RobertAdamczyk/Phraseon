@@ -10,6 +10,7 @@ import SwiftUI
 struct LanguageView: View {
 
     let language: Language
+    let isBaseLanguage: Bool
 
     var body: some View {
         HStack(spacing: 16) {
@@ -21,7 +22,7 @@ struct LanguageView: View {
                     Circle()
                         .fill(appColor(.white))
                 }
-            Text(language.localizedTitle)
+            Text("\(language.localizedTitle) \(isBaseLanguage ? "(Base)" : "")")
                 .apply(.medium, size: .L, color: .lightGray)
         }
         .padding(.vertical, 6)

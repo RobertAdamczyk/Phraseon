@@ -19,7 +19,7 @@ struct EnterContentKeyView: View {
                 VStack(alignment: .leading, spacing: 32) {
                     AppTitle(subtitle: viewModel.subtitle)
                     VStack(alignment: .leading, spacing: 16) {
-                        LanguageView(language: viewModel.language)
+                        LanguageView(language: viewModel.language, isBaseLanguage: viewModel.isBaseLanguage)
                         TextField("", text: $viewModel.translation,
                                   prompt: Text(verbatim: "Content").foregroundStyle(appColor(.lightGray)), axis: .vertical)
                         .apply(.regular, size: .S, color: .white)

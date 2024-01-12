@@ -57,7 +57,7 @@ struct KeyDetailView: View {
 
     private func makeLanguageRow(for language: Language, translation: String?) -> some View {
         VStack(alignment: .leading, spacing: 16) {
-            LanguageView(language: language)
+            LanguageView(language: language, isBaseLanguage: viewModel.project.baseLanguage == language)
             VStack(alignment: .trailing, spacing: 12) {
                 Text(translation ?? "No translation into the language.")
                     .apply(.regular, size: .S, color: .white)

@@ -42,6 +42,13 @@ final class EnterContentKeyViewModel: ObservableObject {
         }
     }
 
+    var isBaseLanguage: Bool {
+        switch context {
+        case .create: return true
+        case .edit(_, let language): return language == project.baseLanguage
+        }
+    }
+
     private let project: Project
     private let coordinator: EnterContentKeyCoordinator
     private let context: Context
