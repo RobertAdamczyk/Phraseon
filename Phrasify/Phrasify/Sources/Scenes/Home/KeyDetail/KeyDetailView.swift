@@ -112,7 +112,7 @@ struct KeyDetailView: View {
                                               status: .approved),
                                    project: .init(name: "",
                                                   technologies: [],
-                                                  languages: [.english, .arabic],
+                                                  languages: [.english, .polish],
                                                   baseLanguage: .english,
                                                   members: [],
                                                   owner: "adasda")))
