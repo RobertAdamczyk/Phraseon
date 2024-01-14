@@ -50,7 +50,6 @@ extension RootCoordinator {
                         case .deleteMemberWarning(let viewModel): DeleteMemberWarningView(viewModel: viewModel)
                         }
                     }
-                    .confirmationDialog(item: $rootCoordinator.confirmationDialog)
                     .onDisappear(perform: rootCoordinator.popToRoot)
                 } else if rootCoordinator.isLoggedIn == false {
                     StartCoordinator.RootView(parentCoordinator: rootCoordinator)

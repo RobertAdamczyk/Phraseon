@@ -13,7 +13,6 @@ final class RootCoordinator: ObservableObject, Coordinator {
     @Published var navigationViews: [NavigationView] = []
     @Published var presentedFullScreenCover: FullScreenCover?
     @Published var presentedSheet: Sheet?
-    @Published var confirmationDialog: ConfirmationDialog.Model? // TODO: Delete?
 
     var isLoggedIn: Bool? { dependencies.authenticationRepository.isLoggedIn }
 
@@ -57,13 +56,6 @@ extension RootCoordinator: SheetActions {
 
     func dismissSheet() {
         presentedSheet = nil
-    }
-}
-
-extension RootCoordinator: ConfirmationDialogActions {
-
-    func showUploadPhotoDialog(galleryAction: @escaping () -> Void) {
-        confirmationDialog = .selectImage(galleryAction)
     }
 }
 
