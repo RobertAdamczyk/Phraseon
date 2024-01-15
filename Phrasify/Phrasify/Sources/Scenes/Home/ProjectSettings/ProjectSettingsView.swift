@@ -18,6 +18,9 @@ struct ProjectSettingsView: View {
                     VStack(alignment: .leading, spacing: 16) {
                         Text("General")
                             .apply(.medium, size: .M, color: .lightGray)
+                        Button(action: viewModel.onIntegrationTapped, label: {
+                            makeSettingsRow(for: .integration, value: "Export sync script")
+                        })
                         Button(action: viewModel.onLanguagesTapped, label: {
                             makeSettingsRow(for: .languages, value: viewModel.project.languages.joined,
                                             showChevron: viewModel.shouldLanguagesInteractive)
@@ -64,6 +67,7 @@ extension ProjectSettingsView {
         case languages
         case members
         case owner
+        case integration
 
         var imageView: some View {
             switch self {
@@ -83,6 +87,10 @@ extension ProjectSettingsView {
                 Image(systemName: "person.badge.key.fill")
                     .resizable()
                     .frame(width: 28, height: 28)
+            case .integration:
+                Image(systemName: "doc.badge.gearshape.fill")
+                    .resizable()
+                    .frame(width: 24, height: 28)
             }
         }
 
@@ -92,6 +100,7 @@ extension ProjectSettingsView {
             case .languages: "Languages"
             case .members: "Members"
             case .owner: "Owner"
+            case .integration: "Integration"
             }
         }
     }
