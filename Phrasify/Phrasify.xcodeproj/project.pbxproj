@@ -19,6 +19,10 @@
 		5505379C2B44C5B90077912D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5505379B2B44C5B90077912D /* FirebaseStorage */; };
 		5505379E2B44C5C30077912D /* StorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505379D2B44C5C30077912D /* StorageRepository.swift */; };
 		5505379F2B44C5C30077912D /* StorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505379D2B44C5C30077912D /* StorageRepository.swift */; };
+		5505C7DA2B55BAEB00806B4F /* syncScript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5505C7D92B55BAEB00806B4F /* syncScript.txt */; };
+		5505C7DB2B55BAEB00806B4F /* syncScript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5505C7D92B55BAEB00806B4F /* syncScript.txt */; };
+		5505C7DE2B55BE5900806B4F /* SyncScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7DD2B55BE5900806B4F /* SyncScript.swift */; };
+		5505C7DF2B55BE5900806B4F /* SyncScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7DD2B55BE5900806B4F /* SyncScript.swift */; };
 		5507D4072B48727600E14C63 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507D4062B48727600E14C63 /* Member.swift */; };
 		5507D4082B48727600E14C63 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507D4062B48727600E14C63 /* Member.swift */; };
 		5513C2482B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5513C2472B325DB1004C1933 /* CreateProjectCoordinator.swift */; };
@@ -315,6 +319,8 @@
 		550537932B44C0270077912D /* PhotoPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerHandler.swift; sourceTree = "<group>"; };
 		550537962B44C0DE0077912D /* ImageTransferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransferable.swift; sourceTree = "<group>"; };
 		5505379D2B44C5C30077912D /* StorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRepository.swift; sourceTree = "<group>"; };
+		5505C7D92B55BAEB00806B4F /* syncScript.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = syncScript.txt; sourceTree = "<group>"; };
+		5505C7DD2B55BE5900806B4F /* SyncScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncScript.swift; sourceTree = "<group>"; };
 		5507D4062B48727600E14C63 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		5513C2472B325DB1004C1933 /* CreateProjectCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectCoordinator.swift; sourceTree = "<group>"; };
 		5513C24A2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateProjectCoordinator+RootView.swift"; sourceTree = "<group>"; };
@@ -503,6 +509,14 @@
 				550537932B44C0270077912D /* PhotoPickerHandler.swift */,
 			);
 			path = PhotoPicker;
+			sourceTree = "<group>";
+		};
+		5505C7DC2B55BE4C00806B4F /* SyncScript */ = {
+			isa = PBXGroup;
+			children = (
+				5505C7DD2B55BE5900806B4F /* SyncScript.swift */,
+			);
+			path = SyncScript;
 			sourceTree = "<group>";
 		};
 		5513C24D2B325E1C004C1933 /* CreateProject */ = {
@@ -854,6 +868,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5505C7DC2B55BE4C00806B4F /* SyncScript */,
 				552CA73E2B4EFDFC00A6C3D2 /* LanguageView */,
 				55B8414A2B4C9AF3007697AF /* SwipeAction */,
 				55DE103F2B4ABF8F001CB87F /* UserDetailView */,
@@ -924,6 +939,7 @@
 		55C762162B27A5FC008CBF30 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5505C7D92B55BAEB00806B4F /* syncScript.txt */,
 				55C2792E2B2A5918005144F1 /* Animations */,
 				55C278D02B2A2E25005144F1 /* Fonts */,
 				552785C52B27A5140098FE95 /* Assets.xcassets */,
@@ -1240,6 +1256,7 @@
 				55C278D82B2A2E36005144F1 /* RethinkSans-SemiBold.ttf in Resources */,
 				552785C62B27A5140098FE95 /* Assets.xcassets in Resources */,
 				558074412B2CF08E0041160B /* Roboto-Medium.ttf in Resources */,
+				5505C7DA2B55BAEB00806B4F /* syncScript.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1251,6 +1268,7 @@
 				55C278F32B2A3F3A005144F1 /* RethinkSans-Bold.ttf in Resources */,
 				55C278F42B2A3F3A005144F1 /* RethinkSans-Medium.ttf in Resources */,
 				55C278F52B2A3F3A005144F1 /* RethinkSans-Regular.ttf in Resources */,
+				5505C7DB2B55BAEB00806B4F /* syncScript.txt in Resources */,
 				55C278F62B2A3F3A005144F1 /* Preview Assets.xcassets in Resources */,
 				55C278F72B2A3F3A005144F1 /* RethinkSans-SemiBold.ttf in Resources */,
 				55C279312B2A5922005144F1 /* buttonLoadingAnimation.json in Resources */,
@@ -1288,6 +1306,7 @@
 				5513C2522B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
 				5516EBD22B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
+				5505C7DE2B55BE5900806B4F /* SyncScript.swift in Sources */,
 				5507D4072B48727600E14C63 /* Member.swift in Sources */,
 				55DE10512B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */,
 				55DE10472B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
@@ -1427,6 +1446,7 @@
 				5580744F2B2E341B0041160B /* ActivityView.swift in Sources */,
 				552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
 				5516EBD32B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
+				5505C7DF2B55BE5900806B4F /* SyncScript.swift in Sources */,
 				5507D4082B48727600E14C63 /* Member.swift in Sources */,
 				55DE10522B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */,
 				55DE10482B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
