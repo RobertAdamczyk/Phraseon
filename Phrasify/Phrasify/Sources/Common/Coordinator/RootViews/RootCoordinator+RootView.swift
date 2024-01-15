@@ -49,6 +49,7 @@ extension RootCoordinator {
                         case .leaveProjectWarning(let viewModel): LeaveProjectWarningView(viewModel: viewModel)
                         case .deleteProjectWarning(let viewModel): DeleteProjectWarningView(viewModel: viewModel)
                         case .deleteMemberWarning(let viewModel): DeleteMemberWarningView(viewModel: viewModel)
+                        case .deleteKeyWarning(let viewModel): DeleteKeyWarningView(viewModel: viewModel)
                         }
                     }
                     .onDisappear(perform: rootCoordinator.popToRoot)

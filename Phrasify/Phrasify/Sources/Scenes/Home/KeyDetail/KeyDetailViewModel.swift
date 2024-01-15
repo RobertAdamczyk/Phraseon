@@ -9,7 +9,7 @@ import SwiftUI
 
 final class KeyDetailViewModel: ObservableObject {
 
-    typealias KeyDetailCoordinator = Coordinator & EnterContentKeyActions
+    typealias KeyDetailCoordinator = Coordinator & EnterContentKeyActions & ProjectActions
 
     @Published var key: Key
 
@@ -34,7 +34,7 @@ final class KeyDetailViewModel: ObservableObject {
     }
 
     func onDeleteTapped() {
-
+        coordinator.showDeleteKeyWarning(project: project, key: key)
     }
 
     private func setupKeySubscriber() {

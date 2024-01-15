@@ -1,15 +1,15 @@
 //
-//  DeleteMemberWarningView.swift
+//  DeleteKeyWarningView.swift
 //  Phrasify
 //
-//  Created by Robert Adamczyk on 09.01.24.
+//  Created by Robert Adamczyk on 15.01.24.
 //
 
 import SwiftUI
 
-struct DeleteMemberWarningView: View {
+struct DeleteKeyWarningView: View {
 
-    @ObservedObject var viewModel: DeleteMemberWarningViewModel
+    @ObservedObject var viewModel: DeleteKeyWarningViewModel
 
     @State private var contentHeight: CGFloat = .zero
 
@@ -41,13 +41,13 @@ struct DeleteMemberWarningView: View {
             Text("Are you sure ?")
                 .apply(.bold, size: .H1, color: .white)
             VStack(spacing: 8) {
-                Text("The member will lose all access to the project resources and data. Please confirm if you wish to proceed with the removal.")
+                Text("This action is irreversible and once deleted, the phrase cannot be recovered. Please confirm if you wish to proceed with deletion.")
                     .fixedSize(horizontal: false, vertical: true)
             }
             .multilineTextAlignment(.center)
             .apply(.regular, size: .S, color: .white)
             VStack(spacing: 16) {
-                AppButton(style: .fill("Delete member", .lightBlue), action: .async(viewModel.onDeleteMemberTapped))
+                AppButton(style: .fill("Delete phrase", .lightBlue), action: .async(viewModel.onDeleteKeyTapped))
                 AppButton(style: .text("Cancel"), action: .main(viewModel.onCancelTapped))
             }
         }

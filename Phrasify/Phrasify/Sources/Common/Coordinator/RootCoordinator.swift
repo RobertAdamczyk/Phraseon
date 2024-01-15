@@ -159,6 +159,12 @@ extension RootCoordinator: ProjectActions {
         let view: NavigationView = .projectIntegration(viewModel: viewModel)
         navigationViews.append(view)
     }
+
+    func showDeleteKeyWarning(project: Project, key: Key) {
+        let viewModel = DeleteKeyWarningViewModel(coordinator: self, project: project, key: key)
+        let sheet: Sheet = .deleteKeyWarning(viewModel: viewModel)
+        self.presentedSheet = sheet
+    }
 }
 
 extension RootCoordinator: EnterContentKeyActions {
@@ -276,6 +282,7 @@ extension RootCoordinator {
         case leaveProjectWarning(viewModel: LeaveProjectWarningViewModel)
         case deleteProjectWarning(viewModel: DeleteProjectWarningViewModel)
         case deleteMemberWarning(viewModel: DeleteMemberWarningViewModel)
+        case deleteKeyWarning(viewModel: DeleteKeyWarningViewModel)
 
         var id: String {
             switch self {
@@ -283,6 +290,7 @@ extension RootCoordinator {
             case .leaveProjectWarning: "002"
             case .deleteProjectWarning: "003"
             case .deleteMemberWarning: "004"
+            case .deleteKeyWarning: "005"
             }
         }
     }
