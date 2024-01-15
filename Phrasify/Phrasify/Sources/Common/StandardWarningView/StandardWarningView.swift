@@ -1,15 +1,15 @@
 //
-//  DeleteMemberWarningView.swift
+//  StandardWarningView.swift
 //  Phrasify
 //
-//  Created by Robert Adamczyk on 09.01.24.
+//  Created by Robert Adamczyk on 15.01.24.
 //
 
 import SwiftUI
 
-struct DeleteMemberWarningView: View {
+struct StandardWarningView<ViewModel: StandardWarningProtocol>: View {
 
-    @ObservedObject var viewModel: DeleteMemberWarningViewModel
+    @ObservedObject var viewModel: ViewModel
 
     @State private var contentHeight: CGFloat = .zero
 
@@ -29,6 +29,7 @@ struct DeleteMemberWarningView: View {
             }
         }
         .presentationDetents(contentHeight == .zero ? [.medium] : [.height(contentHeight)])
+        .interactiveDismissDisabled(viewModel.isLoading)
     }
 
     private var deletionPage: some View {
@@ -38,20 +39,22 @@ struct DeleteMemberWarningView: View {
                 .scaledToFit()
                 .frame(height: 80)
                 .foregroundStyle(appColor(.paleOrange))
-            Text("Are you sure ?")
+            Text(viewModel.title)
                 .apply(.bold, size: .H1, color: .white)
             VStack(spacing: 8) {
-                Text("The member will lose all access to the project resources and data. Please confirm if you wish to proceed with the removal.")
+                Text(viewModel.subtitle)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .multilineTextAlignment(.center)
             .apply(.regular, size: .S, color: .white)
             VStack(spacing: 16) {
-                AppButton(style: .fill("Delete member", .lightBlue), action: .async(viewModel.onDeleteMemberTapped))
+                AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
                 AppButton(style: .text("Cancel"), action: .main(viewModel.onCancelTapped))
+                    .opacity(viewModel.isLoading ? 0 : 1)
             }
         }
         .padding(16)
         .padding(.top, 16)
     }
 }
+

@@ -1,22 +1,22 @@
 //
-//  DeleteProjectWarningView.swift
+//  StandardInformationView.swift
 //  Phrasify
 //
-//  Created by Robert Adamczyk on 08.01.24.
+//  Created by Robert Adamczyk on 15.01.24.
 //
 
 import SwiftUI
 
-struct DeleteProjectWarningView: View {
+struct StandardInformationView<ViewModel: StandardInformationProtocol>: View {
 
-    @ObservedObject var viewModel: DeleteProjectWarningViewModel
+    var viewModel: ViewModel
 
     @State private var contentHeight: CGFloat = .zero
 
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                deletionPage
+                informationPage
             }
             .background() {
                 GeometryReader { geometry in
@@ -31,25 +31,23 @@ struct DeleteProjectWarningView: View {
         .presentationDetents(contentHeight == .zero ? [.medium] : [.height(contentHeight)])
     }
 
-    private var deletionPage: some View {
+    @ViewBuilder
+    private var informationPage: some View {
         VStack(spacing: 32) {
-            Image(systemName: "exclamationmark.triangle.fill")
+            Image(systemName: "info.square.fill")
                 .resizable()
                 .scaledToFit()
                 .frame(height: 80)
                 .foregroundStyle(appColor(.paleOrange))
-            Text("Are you sure ?")
+            Text(viewModel.title)
                 .apply(.bold, size: .H1, color: .white)
             VStack(spacing: 8) {
-                Text("Please be aware that deleting a project is a permanent action and cannot be undone. By proceeding with this action, the project will be permanently removed, and all members will lose access to it.")
+                Text(viewModel.subtitle)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .multilineTextAlignment(.center)
             .apply(.regular, size: .S, color: .white)
-            VStack(spacing: 16) {
-                AppButton(style: .fill("Delete project", .lightBlue), action: .async(viewModel.onDeleteProjectTapped))
-                AppButton(style: .text("Cancel"), action: .main(viewModel.onCancelTapped))
-            }
+            AppButton(style: .fill("Understood", .lightBlue), action: .main(viewModel.onUnderstoodTapped))
         }
         .padding(16)
         .padding(.top, 16)

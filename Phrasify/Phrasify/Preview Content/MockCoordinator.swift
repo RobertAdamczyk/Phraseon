@@ -60,6 +60,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showEditContentKey(language: Language, key: Key, project: Project) { }
     func showProjectIntegration(project: Project) { }
     func showDeleteKeyWarning(project: Project, key: Key) { }
+    func showLeaveProjectInformation() {}
 }
 
 #endif

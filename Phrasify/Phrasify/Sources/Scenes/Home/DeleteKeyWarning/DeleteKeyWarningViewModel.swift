@@ -7,9 +7,15 @@
 
 import SwiftUI
 
-final class DeleteKeyWarningViewModel: ObservableObject {
+final class DeleteKeyWarningViewModel: StandardWarningProtocol {
 
     typealias DeleteKeyWarningCoordinator = Coordinator & SheetActions & NavigationActions
+
+    @Published var isLoading: Bool = false
+
+    var title: String = "Are you sure ?"
+    var subtitle: String = "This action is irreversible and once deleted, the phrase cannot be recovered. Please confirm if you wish to proceed with deletion."
+    var buttonText: String = "Delete phrase"
 
     private let key: Key
     private let project: Project
@@ -22,8 +28,9 @@ final class DeleteKeyWarningViewModel: ObservableObject {
     }
 
     @MainActor
-    func onDeleteKeyTapped() async {
+    func onPrimaryButtonTapped() async {
         guard let projectId = project.id, let keyId = key.id else { return }
+        isLoading = true
         do {
             try await coordinator.dependencies.cloudRepository.deleteKey(projectId: projectId, keyId: keyId)
             coordinator.dismissSheet()

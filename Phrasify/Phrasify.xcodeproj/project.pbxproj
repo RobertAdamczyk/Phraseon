@@ -27,10 +27,18 @@
 		5505C7E32B55C32A00806B4F /* ProjectIntegrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */; };
 		5505C7E52B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E42B55C33100806B4F /* ProjectIntegrationViewModel.swift */; };
 		5505C7E62B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E42B55C33100806B4F /* ProjectIntegrationViewModel.swift */; };
-		5505C7E92B55DDA800806B4F /* DeleteKeyWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E82B55DDA800806B4F /* DeleteKeyWarningView.swift */; };
-		5505C7EA2B55DDA800806B4F /* DeleteKeyWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E82B55DDA800806B4F /* DeleteKeyWarningView.swift */; };
 		5505C7EC2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7EB2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift */; };
 		5505C7ED2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7EB2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift */; };
+		5505C7F02B55E6D800806B4F /* StandardWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7EF2B55E6D800806B4F /* StandardWarningView.swift */; };
+		5505C7F12B55E6D800806B4F /* StandardWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7EF2B55E6D800806B4F /* StandardWarningView.swift */; };
+		5505C7F32B55E6F100806B4F /* StandardWarningProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7F22B55E6F100806B4F /* StandardWarningProtocol.swift */; };
+		5505C7F42B55E6F100806B4F /* StandardWarningProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7F22B55E6F100806B4F /* StandardWarningProtocol.swift */; };
+		5505C7F72B55EEAA00806B4F /* StandardInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7F62B55EEAA00806B4F /* StandardInformationView.swift */; };
+		5505C7F82B55EEAA00806B4F /* StandardInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7F62B55EEAA00806B4F /* StandardInformationView.swift */; };
+		5505C7FA2B55EEB900806B4F /* StandardInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7F92B55EEB900806B4F /* StandardInformationProtocol.swift */; };
+		5505C7FB2B55EEB900806B4F /* StandardInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7F92B55EEB900806B4F /* StandardInformationProtocol.swift */; };
+		5505C7FD2B55F0AA00806B4F /* LeaveProjectInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7FC2B55F0AA00806B4F /* LeaveProjectInformationViewModel.swift */; };
+		5505C7FE2B55F0AA00806B4F /* LeaveProjectInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7FC2B55F0AA00806B4F /* LeaveProjectInformationViewModel.swift */; };
 		5507D4072B48727600E14C63 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507D4062B48727600E14C63 /* Member.swift */; };
 		5507D4082B48727600E14C63 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507D4062B48727600E14C63 /* Member.swift */; };
 		5513C2482B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5513C2472B325DB1004C1933 /* CreateProjectCoordinator.swift */; };
@@ -176,8 +184,6 @@
 		55826AAC2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AAA2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift */; };
 		55826AAE2B35046F00233D90 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AAD2B35046F00233D90 /* Key.swift */; };
 		55826AAF2B35046F00233D90 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AAD2B35046F00233D90 /* Key.swift */; };
-		558B74662B4DCE330041635A /* DeleteMemberWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74652B4DCE330041635A /* DeleteMemberWarningView.swift */; };
-		558B74672B4DCE330041635A /* DeleteMemberWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74652B4DCE330041635A /* DeleteMemberWarningView.swift */; };
 		558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
@@ -192,8 +198,6 @@
 		55A7B3552B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */; };
 		55A7B3572B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */; };
 		55A7B3582B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */; };
-		55B841452B4C7C9C007697AF /* DeleteProjectWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841442B4C7C9C007697AF /* DeleteProjectWarningView.swift */; };
-		55B841462B4C7C9C007697AF /* DeleteProjectWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841442B4C7C9C007697AF /* DeleteProjectWarningView.swift */; };
 		55B841482B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
 		55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
 		55B8414C2B4C9AFC007697AF /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8414B2B4C9AFC007697AF /* SwipeAction.swift */; };
@@ -290,8 +294,6 @@
 		55DE10522B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10502B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift */; };
 		55DE10582B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */; };
 		55DE10592B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */; };
-		55DE105C2B4B5435001CB87F /* LeaveProjectWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE105B2B4B5435001CB87F /* LeaveProjectWarningView.swift */; };
-		55DE105D2B4B5435001CB87F /* LeaveProjectWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE105B2B4B5435001CB87F /* LeaveProjectWarningView.swift */; };
 		55DE105F2B4B5465001CB87F /* LeaveProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE105E2B4B5465001CB87F /* LeaveProjectWarningViewModel.swift */; };
 		55DE10602B4B5465001CB87F /* LeaveProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE105E2B4B5465001CB87F /* LeaveProjectWarningViewModel.swift */; };
 		55DE10622B4B56D1001CB87F /* SheetActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10612B4B56D1001CB87F /* SheetActions.swift */; };
@@ -331,8 +333,12 @@
 		5505C7DD2B55BE5900806B4F /* SyncScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncScript.swift; sourceTree = "<group>"; };
 		5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationView.swift; sourceTree = "<group>"; };
 		5505C7E42B55C33100806B4F /* ProjectIntegrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationViewModel.swift; sourceTree = "<group>"; };
-		5505C7E82B55DDA800806B4F /* DeleteKeyWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteKeyWarningView.swift; sourceTree = "<group>"; };
 		5505C7EB2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteKeyWarningViewModel.swift; sourceTree = "<group>"; };
+		5505C7EF2B55E6D800806B4F /* StandardWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardWarningView.swift; sourceTree = "<group>"; };
+		5505C7F22B55E6F100806B4F /* StandardWarningProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardWarningProtocol.swift; sourceTree = "<group>"; };
+		5505C7F62B55EEAA00806B4F /* StandardInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardInformationView.swift; sourceTree = "<group>"; };
+		5505C7F92B55EEB900806B4F /* StandardInformationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardInformationProtocol.swift; sourceTree = "<group>"; };
+		5505C7FC2B55F0AA00806B4F /* LeaveProjectInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveProjectInformationViewModel.swift; sourceTree = "<group>"; };
 		5507D4062B48727600E14C63 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		5513C2472B325DB1004C1933 /* CreateProjectCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectCoordinator.swift; sourceTree = "<group>"; };
 		5513C24A2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateProjectCoordinator+RootView.swift"; sourceTree = "<group>"; };
@@ -411,14 +417,12 @@
 		55826AA42B34FD5F00233D90 /* CreateKeyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeyCoordinator.swift; sourceTree = "<group>"; };
 		55826AAA2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateKeyCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		55826AAD2B35046F00233D90 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		558B74652B4DCE330041635A /* DeleteMemberWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberWarningView.swift; sourceTree = "<group>"; };
 		558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberWarningViewModel.swift; sourceTree = "<group>"; };
 		559E2D552B4DEBB10009A25A /* KeyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailView.swift; sourceTree = "<group>"; };
 		559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewModel.swift; sourceTree = "<group>"; };
 		55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Image.swift"; sourceTree = "<group>"; };
 		55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningView.swift; sourceTree = "<group>"; };
 		55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModel.swift; sourceTree = "<group>"; };
-		55B841442B4C7C9C007697AF /* DeleteProjectWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectWarningView.swift; sourceTree = "<group>"; };
 		55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectWarningViewModel.swift; sourceTree = "<group>"; };
 		55B8414B2B4C9AFC007697AF /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 		55B8414F2B4CB67B007697AF /* IdentifiableUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableUser.swift; sourceTree = "<group>"; };
@@ -460,7 +464,6 @@
 		55DE104D2B4AFD36001CB87F /* ChangeProjectOwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerView.swift; sourceTree = "<group>"; };
 		55DE10502B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerViewModel.swift; sourceTree = "<group>"; };
 		55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMemberUseCase.swift; sourceTree = "<group>"; };
-		55DE105B2B4B5435001CB87F /* LeaveProjectWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveProjectWarningView.swift; sourceTree = "<group>"; };
 		55DE105E2B4B5465001CB87F /* LeaveProjectWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveProjectWarningViewModel.swift; sourceTree = "<group>"; };
 		55DE10612B4B56D1001CB87F /* SheetActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetActions.swift; sourceTree = "<group>"; };
 		55E960D82B3CD8E50016DA23 /* CloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRepository.swift; sourceTree = "<group>"; };
@@ -543,10 +546,27 @@
 		5505C7E72B55DD9600806B4F /* DeleteKeyWarning */ = {
 			isa = PBXGroup;
 			children = (
-				5505C7E82B55DDA800806B4F /* DeleteKeyWarningView.swift */,
 				5505C7EB2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift */,
 			);
 			path = DeleteKeyWarning;
+			sourceTree = "<group>";
+		};
+		5505C7EE2B55E6CC00806B4F /* StandardWarningView */ = {
+			isa = PBXGroup;
+			children = (
+				5505C7EF2B55E6D800806B4F /* StandardWarningView.swift */,
+				5505C7F22B55E6F100806B4F /* StandardWarningProtocol.swift */,
+			);
+			path = StandardWarningView;
+			sourceTree = "<group>";
+		};
+		5505C7F52B55EE9700806B4F /* StandardInformationView */ = {
+			isa = PBXGroup;
+			children = (
+				5505C7F62B55EEAA00806B4F /* StandardInformationView.swift */,
+				5505C7F92B55EEB900806B4F /* StandardInformationProtocol.swift */,
+			);
+			path = StandardInformationView;
 			sourceTree = "<group>";
 		};
 		5513C24D2B325E1C004C1933 /* CreateProject */ = {
@@ -815,7 +835,6 @@
 		558B74642B4DCE120041635A /* DeleteMemberWarning */ = {
 			isa = PBXGroup;
 			children = (
-				558B74652B4DCE330041635A /* DeleteMemberWarningView.swift */,
 				558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */,
 			);
 			path = DeleteMemberWarning;
@@ -842,7 +861,6 @@
 		55B841432B4C7C88007697AF /* DeleteProjectWarning */ = {
 			isa = PBXGroup;
 			children = (
-				55B841442B4C7C9C007697AF /* DeleteProjectWarningView.swift */,
 				55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */,
 			);
 			path = DeleteProjectWarning;
@@ -898,6 +916,8 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5505C7F52B55EE9700806B4F /* StandardInformationView */,
+				5505C7EE2B55E6CC00806B4F /* StandardWarningView */,
 				5505C7DC2B55BE4C00806B4F /* SyncScript */,
 				552CA73E2B4EFDFC00A6C3D2 /* LanguageView */,
 				55B8414A2B4C9AF3007697AF /* SwipeAction */,
@@ -1120,13 +1140,13 @@
 			path = ChangeProjectOwner;
 			sourceTree = "<group>";
 		};
-		55DE105A2B4B53E3001CB87F /* LeaveProjectWarning */ = {
+		55DE105A2B4B53E3001CB87F /* LeaveProject */ = {
 			isa = PBXGroup;
 			children = (
-				55DE105B2B4B5435001CB87F /* LeaveProjectWarningView.swift */,
 				55DE105E2B4B5465001CB87F /* LeaveProjectWarningViewModel.swift */,
+				5505C7FC2B55F0AA00806B4F /* LeaveProjectInformationViewModel.swift */,
 			);
-			path = LeaveProjectWarning;
+			path = LeaveProject;
 			sourceTree = "<group>";
 		};
 		55FF42632B2B912300F4D523 /* Home */ = {
@@ -1137,7 +1157,7 @@
 				559E2D542B4DEB920009A25A /* KeyDetail */,
 				558B74642B4DCE120041635A /* DeleteMemberWarning */,
 				55B841432B4C7C88007697AF /* DeleteProjectWarning */,
-				55DE105A2B4B53E3001CB87F /* LeaveProjectWarning */,
+				55DE105A2B4B53E3001CB87F /* LeaveProject */,
 				55DE104C2B4AFCBA001CB87F /* ChangeProjectOwner */,
 				55DE10352B4AB3A0001CB87F /* SelectMemberRole */,
 				55DE10282B4A2898001CB87F /* InviteMember */,
@@ -1329,12 +1349,13 @@
 				551AA41A2B33667100F0B1E2 /* TagLayout.swift in Sources */,
 				5516EBD82B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */,
 				55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
+				5505C7F72B55EEAA00806B4F /* StandardInformationView.swift in Sources */,
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
 				55DE102A2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				5516EBBC2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
 				558074572B2E56E50041160B /* Project.swift in Sources */,
 				55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */,
-				5505C7E92B55DDA800806B4F /* DeleteKeyWarningView.swift in Sources */,
+				5505C7F02B55E6D800806B4F /* StandardWarningView.swift in Sources */,
 				5580744E2B2E341B0041160B /* ActivityView.swift in Sources */,
 				5513C2522B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
@@ -1356,7 +1377,6 @@
 				5513C24B2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55C279272B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5516EBC42B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
-				55DE105C2B4B5435001CB87F /* LeaveProjectWarningView.swift in Sources */,
 				5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				5516EBCB2B40CF7F00C558B1 /* Triangle.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
@@ -1374,6 +1394,7 @@
 				55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */,
 				55826A8D2B34C83A00233D90 /* ProjectMember.swift in Sources */,
 				5516EBE52B432D4700C558B1 /* ProfileActions.swift in Sources */,
+				5505C7FA2B55EEB900806B4F /* StandardInformationProtocol.swift in Sources */,
 				55826A972B34D5F700233D90 /* ProjectDetailViewModel.swift in Sources */,
 				5516EBC72B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */,
 				555A7DE62B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */,
@@ -1396,6 +1417,7 @@
 				55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
 				55DE104E2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
 				55DE103A2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,
+				5505C7FD2B55F0AA00806B4F /* LeaveProjectInformationViewModel.swift in Sources */,
 				55DE103D2B4AB508001CB87F /* SelectMemberRoleActions.swift in Sources */,
 				55DE10412B4ABFC1001CB87F /* UserDetailView.swift in Sources */,
 				5513C24F2B325E2F004C1933 /* CreateProjectView.swift in Sources */,
@@ -1421,6 +1443,7 @@
 				5505379E2B44C5C30077912D /* StorageRepository.swift in Sources */,
 				5505C7E22B55C32A00806B4F /* ProjectIntegrationView.swift in Sources */,
 				55C279232B2A4D18005144F1 /* StartActions.swift in Sources */,
+				5505C7F32B55E6F100806B4F /* StandardWarningProtocol.swift in Sources */,
 				5516EBB62B3F2EF900C558B1 /* Technology+UI.swift in Sources */,
 				55826A9F2B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
 				5516EBC02B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */,
@@ -1439,9 +1462,7 @@
 				55FF42682B2B914000F4D523 /* HomeViewModel.swift in Sources */,
 				55DE10302B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55FF425E2B2A674A00F4D523 /* CancelBag.swift in Sources */,
-				558B74662B4DCE330041635A /* DeleteMemberWarningView.swift in Sources */,
 				55C279132B2A4B48005144F1 /* AppDelegate.swift in Sources */,
-				55B841452B4C7C9C007697AF /* DeleteProjectWarningView.swift in Sources */,
 				55B841482B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
 				5505C7E52B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */,
 				55DE10442B4AD0D8001CB87F /* Role+UI.swift in Sources */,
@@ -1473,12 +1494,13 @@
 				551AA41B2B33667100F0B1E2 /* TagLayout.swift in Sources */,
 				5516EBD92B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */,
 				55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
+				5505C7F82B55EEAA00806B4F /* StandardInformationView.swift in Sources */,
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
 				55DE102B2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
 				558074582B2E56E50041160B /* Project.swift in Sources */,
 				55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */,
-				5505C7EA2B55DDA800806B4F /* DeleteKeyWarningView.swift in Sources */,
+				5505C7F12B55E6D800806B4F /* StandardWarningView.swift in Sources */,
 				55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */,
 				5580744F2B2E341B0041160B /* ActivityView.swift in Sources */,
 				552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
@@ -1500,7 +1522,6 @@
 				5513C24C2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55C279282B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
-				55DE105D2B4B5435001CB87F /* LeaveProjectWarningView.swift in Sources */,
 				5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				5516EBCC2B40CF7F00C558B1 /* Triangle.swift in Sources */,
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
@@ -1518,6 +1539,7 @@
 				55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */,
 				55826A8E2B34C83A00233D90 /* ProjectMember.swift in Sources */,
 				5516EBE62B432D4700C558B1 /* ProfileActions.swift in Sources */,
+				5505C7FB2B55EEB900806B4F /* StandardInformationProtocol.swift in Sources */,
 				55826A982B34D5F700233D90 /* ProjectDetailViewModel.swift in Sources */,
 				5516EBC82B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */,
 				555A7DE72B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */,
@@ -1540,6 +1562,7 @@
 				55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
 				55DE104F2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
 				55DE103B2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,
+				5505C7FE2B55F0AA00806B4F /* LeaveProjectInformationViewModel.swift in Sources */,
 				55DE103E2B4AB508001CB87F /* SelectMemberRoleActions.swift in Sources */,
 				55DE10422B4ABFC1001CB87F /* UserDetailView.swift in Sources */,
 				5513C2502B325E2F004C1933 /* CreateProjectView.swift in Sources */,
@@ -1565,6 +1588,7 @@
 				5505379F2B44C5C30077912D /* StorageRepository.swift in Sources */,
 				5505C7E32B55C32A00806B4F /* ProjectIntegrationView.swift in Sources */,
 				55C279242B2A4D18005144F1 /* StartActions.swift in Sources */,
+				5505C7F42B55E6F100806B4F /* StandardWarningProtocol.swift in Sources */,
 				5516EBB72B3F2EF900C558B1 /* Technology+UI.swift in Sources */,
 				55826AA02B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
 				5516EBC12B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */,
@@ -1583,9 +1607,7 @@
 				55FF42692B2B914100F4D523 /* HomeViewModel.swift in Sources */,
 				55DE10312B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55FF425F2B2A677800F4D523 /* CancelBag.swift in Sources */,
-				558B74672B4DCE330041635A /* DeleteMemberWarningView.swift in Sources */,
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,
-				55B841462B4C7C9C007697AF /* DeleteProjectWarningView.swift in Sources */,
 				55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
 				5505C7E62B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */,
 				55DE10452B4AD0D8001CB87F /* Role+UI.swift in Sources */,

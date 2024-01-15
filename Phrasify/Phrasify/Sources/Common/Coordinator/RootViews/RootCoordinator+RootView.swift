@@ -46,10 +46,11 @@ extension RootCoordinator {
                     .sheet(item: $rootCoordinator.presentedSheet) {
                         switch $0 {
                         case .profileDeleteWarning(let viewModel): ProfileDeleteWarningView(viewModel: viewModel)
-                        case .leaveProjectWarning(let viewModel): LeaveProjectWarningView(viewModel: viewModel)
-                        case .deleteProjectWarning(let viewModel): DeleteProjectWarningView(viewModel: viewModel)
-                        case .deleteMemberWarning(let viewModel): DeleteMemberWarningView(viewModel: viewModel)
-                        case .deleteKeyWarning(let viewModel): DeleteKeyWarningView(viewModel: viewModel)
+                        case .leaveProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
+                        case .leaveProjectInformation(let viewModel): StandardInformationView(viewModel: viewModel)
+                        case .deleteProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
+                        case .deleteMemberWarning(let viewModel): StandardWarningView(viewModel: viewModel)
+                        case .deleteKeyWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                         }
                     }
                     .onDisappear(perform: rootCoordinator.popToRoot)

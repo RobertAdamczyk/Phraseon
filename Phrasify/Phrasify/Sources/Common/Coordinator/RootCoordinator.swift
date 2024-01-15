@@ -136,6 +136,12 @@ extension RootCoordinator: ProjectActions {
         self.presentedSheet = sheet
     }
 
+    func showLeaveProjectInformation() {
+        let viewModel = LeaveProjectInformationViewModel(coordinator: self)
+        let sheet: Sheet = .leaveProjectInformation(viewModel: viewModel)
+        self.presentedSheet = sheet
+    }
+
     func showDeleteProjectWarning(project: Project) {
         let viewModel = DeleteProjectWarningViewModel(coordinator: self, project: project)
         let sheet: Sheet = .deleteProjectWarning(viewModel: viewModel)
@@ -280,6 +286,7 @@ extension RootCoordinator {
     enum Sheet: Identifiable {
         case profileDeleteWarning(viewModel: ProfileDeleteWarningViewModel)
         case leaveProjectWarning(viewModel: LeaveProjectWarningViewModel)
+        case leaveProjectInformation(viewModel: LeaveProjectInformationViewModel)
         case deleteProjectWarning(viewModel: DeleteProjectWarningViewModel)
         case deleteMemberWarning(viewModel: DeleteMemberWarningViewModel)
         case deleteKeyWarning(viewModel: DeleteKeyWarningViewModel)
@@ -291,6 +298,7 @@ extension RootCoordinator {
             case .deleteProjectWarning: "003"
             case .deleteMemberWarning: "004"
             case .deleteKeyWarning: "005"
+            case .leaveProjectInformation: "006"
             }
         }
     }

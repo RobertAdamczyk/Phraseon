@@ -7,9 +7,17 @@
 
 import SwiftUI
 
-final class DeleteMemberWarningViewModel: ObservableObject {
+final class DeleteMemberWarningViewModel: StandardWarningProtocol {
 
     typealias DeleteMemberWarningCoordinator = Coordinator & SheetActions & NavigationActions
+
+    @Published var isLoading: Bool = false
+
+    var title: String = "Are you sure ?"
+
+    var subtitle: String = "The member will lose all access to the project resources and data. Please confirm if you wish to proceed with the removal."
+
+    var buttonText: String = "Delete member"
 
     private let member: Member
     private let project: Project
@@ -22,13 +30,15 @@ final class DeleteMemberWarningViewModel: ObservableObject {
     }
 
     @MainActor
-    func onDeleteMemberTapped() async {
+    func onPrimaryButtonTapped() async {
         guard let projectId = project.id, let memberId = member.id else { return }
+        isLoading = true
         do {
             try await coordinator.dependencies.cloudRepository.deleteMember(projectId: projectId, userId: memberId)
             coordinator.dismissSheet()
         } catch {
             ToastView.showError(message: error.localizedDescription)
+            coordinator.dismissSheet()
         }
     }
 
