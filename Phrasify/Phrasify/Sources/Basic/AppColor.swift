@@ -17,6 +17,7 @@ enum AppColor: String {
     case toastErrorFont
     case lightGray
     case green
+    case red
 }
 
 func appColor(_ color: AppColor) -> Color {

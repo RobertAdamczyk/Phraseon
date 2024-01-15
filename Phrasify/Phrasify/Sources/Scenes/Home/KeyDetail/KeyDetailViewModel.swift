@@ -33,6 +33,10 @@ final class KeyDetailViewModel: ObservableObject {
         coordinator.showEditContentKey(language: language, key: key, project: project)
     }
 
+    func onDeleteTapped() {
+
+    }
+
     private func setupKeySubscriber() {
         guard let projectId = project.id, let keyId = key.id else { return }
         coordinator.dependencies.firestoreRepository.getKeyPublisher(projectId: projectId, keyId: keyId)

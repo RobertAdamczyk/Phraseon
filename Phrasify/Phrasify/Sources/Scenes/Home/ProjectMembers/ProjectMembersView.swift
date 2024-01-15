@@ -29,7 +29,7 @@ struct ProjectMembersView: View {
                                            isEnabled: viewModel.hasPermissionToManage && member.role != .owner) {
                                         viewModel.onMemberEdit(member)
                                     }
-                                    Action(tint: .red, icon: "trash.fill",
+                                    Action(tint: appColor(.red), icon: "trash.fill",
                                            isEnabled: viewModel.hasPermissionToManage && member.role != .owner) {
                                         viewModel.onMemberDelete(member)
                                     }

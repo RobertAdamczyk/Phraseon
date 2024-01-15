@@ -26,6 +26,14 @@ struct KeyDetailView: View {
             .padding(16)
         }
         .navigationTitle("Phrase")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: viewModel.onDeleteTapped, label: {
+                    Image(systemName: "trash.fill")
+                        .apply(.bold, size: .L, color: .red)
+                })
+            }
+        }
     }
 
     private func makeIdentifierRow() -> some View {
