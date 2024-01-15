@@ -106,7 +106,7 @@ extension RootCoordinator: ProjectActions {
     }
 
     func showProjectSettings(projectUseCase: ProjectUseCase, projectMemberUseCase: ProjectMemberUseCase) {
-        let viewModel = ProjectSettingsViewModel(coordinator: self, 
+        let viewModel = ProjectSettingsViewModel(coordinator: self,
                                                  projectUseCase: projectUseCase,
                                                  projectMemberUseCase: projectMemberUseCase)
         let view: NavigationView = .projectSettings(viewModel: viewModel)
@@ -152,6 +152,12 @@ extension RootCoordinator: ProjectActions {
         let viewModel = KeyDetailViewModel(coordinator: self, key: key, project: project)
         let view: NavigationView = .keyDetail(viewModel: viewModel)
         self.navigationViews.append(view)
+    }
+
+    func showProjectIntegration(project: Project) {
+        let viewModel = ProjectIntegrationViewModel(coordinator: self, project: project)
+        let view: NavigationView = .projectIntegration(viewModel: viewModel)
+        navigationViews.append(view)
     }
 }
 
@@ -222,6 +228,7 @@ extension RootCoordinator {
         case selectMemberRole(viewModel: SelectMemberRoleViewModel)
         case keyDetail(viewModel: KeyDetailViewModel)
         case editContentKey(viewModel: EnterContentKeyViewModel)
+        case projectIntegration(viewModel: ProjectIntegrationViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -245,6 +252,7 @@ extension RootCoordinator {
             case .selectMemberRole: return "010"
             case .keyDetail: return "011"
             case .editContentKey: return "012"
+            case .projectIntegration: return "013"
             }
         }
     }

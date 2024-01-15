@@ -27,6 +27,8 @@ struct AppTitle: View {
             if let subtitle {
                 Text(subtitle)
                     .apply(.regular, size: .M, color: .white)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
     }

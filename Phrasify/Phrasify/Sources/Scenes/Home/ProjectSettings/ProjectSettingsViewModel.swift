@@ -41,7 +41,7 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProt
     }
 
     func onIntegrationTapped() {
-
+        coordinator.showProjectIntegration(project: project)
     }
 
     func onTechnologiesTapped() {

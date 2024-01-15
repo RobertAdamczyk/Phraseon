@@ -16,8 +16,8 @@ struct SyncScript: FileDocument {
     var script: String
 
     // a simple initializer that creates new, empty documents
-    init?(userId: UserID, projectId: String) {
-        guard let filePath = Bundle.main.path(forResource: "syncScript", ofType: "txt") else { return nil }
+    init?(userId: UserID?, projectId: String?) {
+        guard let userId, let projectId, let filePath = Bundle.main.path(forResource: "syncScript", ofType: "txt") else { return nil }
 
         do {
             let syncScript = try String(contentsOfFile: filePath, encoding: .utf8)

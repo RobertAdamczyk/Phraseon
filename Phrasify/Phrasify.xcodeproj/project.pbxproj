@@ -23,6 +23,10 @@
 		5505C7DB2B55BAEB00806B4F /* syncScript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5505C7D92B55BAEB00806B4F /* syncScript.txt */; };
 		5505C7DE2B55BE5900806B4F /* SyncScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7DD2B55BE5900806B4F /* SyncScript.swift */; };
 		5505C7DF2B55BE5900806B4F /* SyncScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7DD2B55BE5900806B4F /* SyncScript.swift */; };
+		5505C7E22B55C32A00806B4F /* ProjectIntegrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */; };
+		5505C7E32B55C32A00806B4F /* ProjectIntegrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */; };
+		5505C7E52B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E42B55C33100806B4F /* ProjectIntegrationViewModel.swift */; };
+		5505C7E62B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E42B55C33100806B4F /* ProjectIntegrationViewModel.swift */; };
 		5507D4072B48727600E14C63 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507D4062B48727600E14C63 /* Member.swift */; };
 		5507D4082B48727600E14C63 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507D4062B48727600E14C63 /* Member.swift */; };
 		5513C2482B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5513C2472B325DB1004C1933 /* CreateProjectCoordinator.swift */; };
@@ -321,6 +325,8 @@
 		5505379D2B44C5C30077912D /* StorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRepository.swift; sourceTree = "<group>"; };
 		5505C7D92B55BAEB00806B4F /* syncScript.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = syncScript.txt; sourceTree = "<group>"; };
 		5505C7DD2B55BE5900806B4F /* SyncScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncScript.swift; sourceTree = "<group>"; };
+		5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationView.swift; sourceTree = "<group>"; };
+		5505C7E42B55C33100806B4F /* ProjectIntegrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationViewModel.swift; sourceTree = "<group>"; };
 		5507D4062B48727600E14C63 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		5513C2472B325DB1004C1933 /* CreateProjectCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectCoordinator.swift; sourceTree = "<group>"; };
 		5513C24A2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateProjectCoordinator+RootView.swift"; sourceTree = "<group>"; };
@@ -517,6 +523,15 @@
 				5505C7DD2B55BE5900806B4F /* SyncScript.swift */,
 			);
 			path = SyncScript;
+			sourceTree = "<group>";
+		};
+		5505C7E02B55C30300806B4F /* ProjectIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */,
+				5505C7E42B55C33100806B4F /* ProjectIntegrationViewModel.swift */,
+			);
+			path = ProjectIntegration;
 			sourceTree = "<group>";
 		};
 		5513C24D2B325E1C004C1933 /* CreateProject */ = {
@@ -1102,6 +1117,7 @@
 		55FF42632B2B912300F4D523 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5505C7E02B55C30300806B4F /* ProjectIntegration */,
 				559E2D542B4DEB920009A25A /* KeyDetail */,
 				558B74642B4DCE120041635A /* DeleteMemberWarning */,
 				55B841432B4C7C88007697AF /* DeleteProjectWarning */,
@@ -1385,6 +1401,7 @@
 				553F1BED2B2914910071A099 /* SetPasswordViewModel.swift in Sources */,
 				553F1BE62B2911500071A099 /* ForgetPasswordView.swift in Sources */,
 				5505379E2B44C5C30077912D /* StorageRepository.swift in Sources */,
+				5505C7E22B55C32A00806B4F /* ProjectIntegrationView.swift in Sources */,
 				55C279232B2A4D18005144F1 /* StartActions.swift in Sources */,
 				5516EBB62B3F2EF900C558B1 /* Technology+UI.swift in Sources */,
 				55826A9F2B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
@@ -1408,6 +1425,7 @@
 				55C279132B2A4B48005144F1 /* AppDelegate.swift in Sources */,
 				55B841452B4C7C9C007697AF /* DeleteProjectWarningView.swift in Sources */,
 				55B841482B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
+				5505C7E52B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */,
 				55DE10442B4AD0D8001CB87F /* Role+UI.swift in Sources */,
 				556977A12B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
@@ -1525,6 +1543,7 @@
 				55C278EC2B2A3F3A005144F1 /* StartCoordinator.swift in Sources */,
 				55C278ED2B2A3F3A005144F1 /* SetPasswordViewModel.swift in Sources */,
 				5505379F2B44C5C30077912D /* StorageRepository.swift in Sources */,
+				5505C7E32B55C32A00806B4F /* ProjectIntegrationView.swift in Sources */,
 				55C279242B2A4D18005144F1 /* StartActions.swift in Sources */,
 				5516EBB72B3F2EF900C558B1 /* Technology+UI.swift in Sources */,
 				55826AA02B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
@@ -1548,6 +1567,7 @@
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,
 				55B841462B4C7C9C007697AF /* DeleteProjectWarningView.swift in Sources */,
 				55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
+				5505C7E62B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */,
 				55DE10452B4AD0D8001CB87F /* Role+UI.swift in Sources */,
 				556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,

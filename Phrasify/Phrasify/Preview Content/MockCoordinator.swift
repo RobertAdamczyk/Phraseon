@@ -58,6 +58,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showKeyDetails(key: Key, project: Project) { }
     func showEnterContentKey(keyId: String, project: Project) { }
     func showEditContentKey(language: Language, key: Key, project: Project) { }
+    func showProjectIntegration(project: Project) { }
 }
 
 #endif
