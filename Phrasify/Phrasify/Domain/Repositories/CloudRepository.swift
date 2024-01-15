@@ -67,6 +67,11 @@ final class CloudRepository {
                                                                     "userId": userId] as [String : Any])
     }
 
+    func deleteKey(projectId: String, keyId: String) async throws {
+        _ = try await functions.httpsCallable("deleteKey").call(["projectId": projectId,
+                                                                    "keyId": keyId] as [String : Any])
+    }
+
     func deleteProject(projectId: String) async throws {
         _ = try await functions.httpsCallable("deleteProject").call(["projectId": projectId] as [String : Any])
     }

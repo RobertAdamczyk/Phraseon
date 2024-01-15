@@ -25,10 +25,12 @@ final class DeleteKeyWarningViewModel: ObservableObject {
     func onDeleteKeyTapped() async {
         guard let projectId = project.id, let keyId = key.id else { return }
         do {
-
+            try await coordinator.dependencies.cloudRepository.deleteKey(projectId: projectId, keyId: keyId)
             coordinator.dismissSheet()
+            coordinator.popView()
         } catch {
             ToastView.showError(message: error.localizedDescription)
+            coordinator.dismissSheet()
         }
     }
 
