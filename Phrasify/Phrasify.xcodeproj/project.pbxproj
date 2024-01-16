@@ -188,6 +188,12 @@
 		55854F882B571D4000CC5480 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F862B571D4000CC5480 /* CloudService.swift */; };
 		55854F8B2B571DA100CC5480 /* CreateProjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F8A2B571DA100CC5480 /* CreateProjectService.swift */; };
 		55854F8C2B571DA100CC5480 /* CreateProjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F8A2B571DA100CC5480 /* CreateProjectService.swift */; };
+		55854F8E2B571FAB00CC5480 /* ChangeProjectOwnerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F8D2B571FAB00CC5480 /* ChangeProjectOwnerService.swift */; };
+		55854F8F2B571FAB00CC5480 /* ChangeProjectOwnerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F8D2B571FAB00CC5480 /* ChangeProjectOwnerService.swift */; };
+		55854F912B5720AC00CC5480 /* AddProjectMemberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F902B5720AC00CC5480 /* AddProjectMemberService.swift */; };
+		55854F922B5720AC00CC5480 /* AddProjectMemberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F902B5720AC00CC5480 /* AddProjectMemberService.swift */; };
+		55854F942B5721A600CC5480 /* ChangeMemberRoleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F932B5721A600CC5480 /* ChangeMemberRoleService.swift */; };
+		55854F952B5721A600CC5480 /* ChangeMemberRoleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F932B5721A600CC5480 /* ChangeMemberRoleService.swift */; };
 		558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
@@ -423,6 +429,9 @@
 		55826AAD2B35046F00233D90 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		55854F862B571D4000CC5480 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
 		55854F8A2B571DA100CC5480 /* CreateProjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectService.swift; sourceTree = "<group>"; };
+		55854F8D2B571FAB00CC5480 /* ChangeProjectOwnerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerService.swift; sourceTree = "<group>"; };
+		55854F902B5720AC00CC5480 /* AddProjectMemberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectMemberService.swift; sourceTree = "<group>"; };
+		55854F932B5721A600CC5480 /* ChangeMemberRoleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeMemberRoleService.swift; sourceTree = "<group>"; };
 		558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberWarningViewModel.swift; sourceTree = "<group>"; };
 		559E2D552B4DEBB10009A25A /* KeyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailView.swift; sourceTree = "<group>"; };
 		559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewModel.swift; sourceTree = "<group>"; };
@@ -851,6 +860,9 @@
 			isa = PBXGroup;
 			children = (
 				55854F8A2B571DA100CC5480 /* CreateProjectService.swift */,
+				55854F8D2B571FAB00CC5480 /* ChangeProjectOwnerService.swift */,
+				55854F902B5720AC00CC5480 /* AddProjectMemberService.swift */,
+				55854F932B5721A600CC5480 /* ChangeMemberRoleService.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -1377,8 +1389,10 @@
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
 				55DE102A2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				5516EBBC2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
+				55854F912B5720AC00CC5480 /* AddProjectMemberService.swift in Sources */,
 				558074572B2E56E50041160B /* Project.swift in Sources */,
 				55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */,
+				55854F942B5721A600CC5480 /* ChangeMemberRoleService.swift in Sources */,
 				5505C7F02B55E6D800806B4F /* StandardWarningView.swift in Sources */,
 				5580744E2B2E341B0041160B /* ActivityView.swift in Sources */,
 				5513C2522B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
@@ -1495,6 +1509,7 @@
 				556977A12B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				553F1BDD2B2907C10071A099 /* RegisterView.swift in Sources */,
+				55854F8E2B571FAB00CC5480 /* ChangeProjectOwnerService.swift in Sources */,
 				55826AA22B34FD1600233D90 /* CreateKeyViewModel.swift in Sources */,
 				5516EBCF2B40D2F500C558B1 /* ProfileView.swift in Sources */,
 				5569779E2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */,
@@ -1524,8 +1539,10 @@
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
 				55DE102B2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
+				55854F922B5720AC00CC5480 /* AddProjectMemberService.swift in Sources */,
 				558074582B2E56E50041160B /* Project.swift in Sources */,
 				55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */,
+				55854F952B5721A600CC5480 /* ChangeMemberRoleService.swift in Sources */,
 				5505C7F12B55E6D800806B4F /* StandardWarningView.swift in Sources */,
 				55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */,
 				5580744F2B2E341B0041160B /* ActivityView.swift in Sources */,
@@ -1642,6 +1659,7 @@
 				556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				55C278EF2B2A3F3A005144F1 /* RegisterView.swift in Sources */,
+				55854F8F2B571FAB00CC5480 /* ChangeProjectOwnerService.swift in Sources */,
 				55826AA32B34FD1600233D90 /* CreateKeyViewModel.swift in Sources */,
 				5516EBD02B40D2F500C558B1 /* ProfileView.swift in Sources */,
 				5569779F2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */,

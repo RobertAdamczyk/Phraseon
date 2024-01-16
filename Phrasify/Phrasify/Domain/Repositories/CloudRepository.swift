@@ -17,6 +17,21 @@ final class CloudRepository {
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
+    func changeProjectOwner(_ requestModel: ChangeProjectOwnerService.RequestModel) async throws {
+        let service: ChangeProjectOwnerService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
+    }
+
+    func addProjectMember(_ requestModel: AddProjectMemberService.RequestModel) async throws {
+        let service: AddProjectMemberService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
+    }
+
+    func changeMemberRole(_ requestModel: ChangeMemberRoleService.RequestModel) async throws {
+        let service: ChangeMemberRoleService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
+    }
+
     func createKey(projectId: String, keyId: String, translation: [String: String]) async throws {
         _ = try await functions.httpsCallable("createKey").call(["projectId": projectId,
                                                                  "keyId": keyId,
@@ -27,23 +42,6 @@ final class CloudRepository {
         _ = try await functions.httpsCallable("changeContentKey").call(["projectId": projectId,
                                                                         "keyId": keyId,
                                                                         "translation": translation] as [String : Any])
-    }
-
-    func changeProjectOwner(projectId: String, newOwnerEmail: String) async throws {
-        _ = try await functions.httpsCallable("changeOwner").call(["projectId": projectId,
-                                                                   "newOwnerEmail": newOwnerEmail] as [String : Any])
-    }
-
-    func addProjectMember(userId: UserID, projectId: String, role: Role) async throws {
-        _ = try await functions.httpsCallable("addProjectMember").call(["userId": userId,
-                                                                        "projectId": projectId,
-                                                                        "role": role.rawValue] as [String : Any])
-    }
-
-    func changeMemberRole(userId: UserID, projectId: String, role: Role) async throws {
-        _ = try await functions.httpsCallable("changeMemberRole").call(["userId": userId,
-                                                                        "projectId": projectId,
-                                                                        "role": role.rawValue] as [String : Any])
     }
 
     func setProjectLanguages(projectId: String, languages: [Language]) async throws {

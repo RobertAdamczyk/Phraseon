@@ -54,10 +54,14 @@ final class SelectMemberRoleViewModel: ObservableObject {
         do {
             switch context {
             case .members:
-                try await coordinator.dependencies.cloudRepository.changeMemberRole(userId: userId, projectId: projectId, role: selectedRole)
+                try await coordinator.dependencies.cloudRepository.changeMemberRole(.init(userId: userId,
+                                                                                          projectId: projectId,
+                                                                                          role: selectedRole))
                 coordinator.popView()
             case .invite:
-                try await coordinator.dependencies.cloudRepository.addProjectMember(userId: userId, projectId: projectId, role: selectedRole)
+                try await coordinator.dependencies.cloudRepository.addProjectMember(.init(userId: userId,
+                                                                                          projectId: projectId,
+                                                                                          role: selectedRole))
                 coordinator.dismissFullScreenCover()
             }
 

@@ -25,7 +25,8 @@ final class ChangeProjectOwnerViewModel: ObservableObject {
     func onProjectOwnerChangeTapped() async {
         guard let projectId = project.id else { return }
         do {
-            try await coordinator.dependencies.cloudRepository.changeProjectOwner(projectId: projectId, newOwnerEmail: newProjectOwnerEmail)
+            try await coordinator.dependencies.cloudRepository.changeProjectOwner(.init(projectId: projectId,
+                                                                                        newOwnerEmail: newProjectOwnerEmail))
             coordinator.popView()
         } catch {
             ToastView.showError(message: error.localizedDescription)
