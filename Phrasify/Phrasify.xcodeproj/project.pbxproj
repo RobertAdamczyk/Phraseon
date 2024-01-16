@@ -196,6 +196,10 @@
 		55854F952B5721A600CC5480 /* ChangeMemberRoleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F932B5721A600CC5480 /* ChangeMemberRoleService.swift */; };
 		55854F972B57235800CC5480 /* DeleteMemberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F962B57235800CC5480 /* DeleteMemberService.swift */; };
 		55854F982B57235800CC5480 /* DeleteMemberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F962B57235800CC5480 /* DeleteMemberService.swift */; };
+		55854F9A2B57250600CC5480 /* SetProjectLanguagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F992B57250600CC5480 /* SetProjectLanguagesService.swift */; };
+		55854F9B2B57250600CC5480 /* SetProjectLanguagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F992B57250600CC5480 /* SetProjectLanguagesService.swift */; };
+		55854F9D2B57259300CC5480 /* SetProjectTechnologiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F9C2B57259300CC5480 /* SetProjectTechnologiesService.swift */; };
+		55854F9E2B57259300CC5480 /* SetProjectTechnologiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F9C2B57259300CC5480 /* SetProjectTechnologiesService.swift */; };
 		558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
@@ -435,6 +439,8 @@
 		55854F902B5720AC00CC5480 /* AddProjectMemberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectMemberService.swift; sourceTree = "<group>"; };
 		55854F932B5721A600CC5480 /* ChangeMemberRoleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeMemberRoleService.swift; sourceTree = "<group>"; };
 		55854F962B57235800CC5480 /* DeleteMemberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberService.swift; sourceTree = "<group>"; };
+		55854F992B57250600CC5480 /* SetProjectLanguagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProjectLanguagesService.swift; sourceTree = "<group>"; };
+		55854F9C2B57259300CC5480 /* SetProjectTechnologiesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProjectTechnologiesService.swift; sourceTree = "<group>"; };
 		558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberWarningViewModel.swift; sourceTree = "<group>"; };
 		559E2D552B4DEBB10009A25A /* KeyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailView.swift; sourceTree = "<group>"; };
 		559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewModel.swift; sourceTree = "<group>"; };
@@ -867,6 +873,8 @@
 				55854F902B5720AC00CC5480 /* AddProjectMemberService.swift */,
 				55854F932B5721A600CC5480 /* ChangeMemberRoleService.swift */,
 				55854F962B57235800CC5480 /* DeleteMemberService.swift */,
+				55854F992B57250600CC5480 /* SetProjectLanguagesService.swift */,
+				55854F9C2B57259300CC5480 /* SetProjectTechnologiesService.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -1388,6 +1396,7 @@
 				55DE104A2B4AFA07001CB87F /* URLCache+ImageCache.swift in Sources */,
 				551AA41A2B33667100F0B1E2 /* TagLayout.swift in Sources */,
 				5516EBD82B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */,
+				55854F9A2B57250600CC5480 /* SetProjectLanguagesService.swift in Sources */,
 				55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				5505C7F72B55EEAA00806B4F /* StandardInformationView.swift in Sources */,
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
@@ -1445,6 +1454,7 @@
 				558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */,
 				558074512B2E38110041160B /* Activitable.swift in Sources */,
 				553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */,
+				55854F9D2B57259300CC5480 /* SetProjectTechnologiesService.swift in Sources */,
 				55FF426F2B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				5505C7EC2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,
 				552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */,
@@ -1539,6 +1549,7 @@
 				55DE104B2B4AFA07001CB87F /* URLCache+ImageCache.swift in Sources */,
 				551AA41B2B33667100F0B1E2 /* TagLayout.swift in Sources */,
 				5516EBD92B419EBD00C558B1 /* SubscriptionStatus.swift in Sources */,
+				55854F9B2B57250600CC5480 /* SetProjectLanguagesService.swift in Sources */,
 				55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				5505C7F82B55EEAA00806B4F /* StandardInformationView.swift in Sources */,
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
@@ -1596,6 +1607,7 @@
 				558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */,
 				558074522B2E38110041160B /* Activitable.swift in Sources */,
 				55C278E72B2A3F3A005144F1 /* StartView.swift in Sources */,
+				55854F9E2B57259300CC5480 /* SetProjectTechnologiesService.swift in Sources */,
 				55FF42702B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				5505C7ED2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,
 				55C278E82B2A3F3A005144F1 /* ForgetPasswordViewModel.swift in Sources */,

@@ -37,6 +37,16 @@ final class CloudRepository {
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
+    func setProjectLanguages(_ requestModel: SetProjectLanguagesService.RequestModel) async throws {
+        let service: SetProjectLanguagesService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
+    }
+
+    func setProjectTechnologies(_ requestModel: SetProjectTechnologiesService.RequestModel) async throws {
+        let service: SetProjectTechnologiesService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
+    }
+
     func createKey(projectId: String, keyId: String, translation: [String: String]) async throws {
         _ = try await functions.httpsCallable("createKey").call(["projectId": projectId,
                                                                  "keyId": keyId,
@@ -47,16 +57,6 @@ final class CloudRepository {
         _ = try await functions.httpsCallable("changeContentKey").call(["projectId": projectId,
                                                                         "keyId": keyId,
                                                                         "translation": translation] as [String : Any])
-    }
-
-    func setProjectLanguages(projectId: String, languages: [Language]) async throws {
-        _ = try await functions.httpsCallable("setProjectLanguages").call(["projectId": projectId,
-                                                                           "languages": languages.map({$0.rawValue})] as [String : Any])
-    }
-
-    func setProjectTechnologies(projectId: String, technologies: [Technology]) async throws {
-        _ = try await functions.httpsCallable("setProjectTechnologies").call(["projectId": projectId,
-                                                                              "technologies": technologies.map({$0.rawValue})] as [String : Any])
     }
 
     func leaveProject(projectId: String) async throws {
