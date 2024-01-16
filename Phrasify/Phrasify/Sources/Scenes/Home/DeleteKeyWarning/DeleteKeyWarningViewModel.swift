@@ -32,7 +32,7 @@ final class DeleteKeyWarningViewModel: StandardWarningProtocol {
         guard let projectId = project.id, let keyId = key.id else { return }
         isLoading = true
         do {
-            try await coordinator.dependencies.cloudRepository.deleteKey(projectId: projectId, keyId: keyId)
+            try await coordinator.dependencies.cloudRepository.deleteKey(.init(projectId: projectId, keyId: keyId))
             coordinator.dismissSheet()
             coordinator.popView()
         } catch {

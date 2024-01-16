@@ -57,21 +57,19 @@ final class CloudRepository {
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func createKey(projectId: String, keyId: String, translation: [String: String]) async throws {
-        _ = try await functions.httpsCallable("createKey").call(["projectId": projectId,
-                                                                 "keyId": keyId,
-                                                                 "translation": translation] as [String : Any])
+    func createKey(_ requestModel: CreateKeyService.RequestModel) async throws {
+        let service: CreateKeyService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func changeContentKey(projectId: String, keyId: String, translation: [String: String]) async throws {
-        _ = try await functions.httpsCallable("changeContentKey").call(["projectId": projectId,
-                                                                        "keyId": keyId,
-                                                                        "translation": translation] as [String : Any])
+    func changeContentKey(_ requestModel: ChangeContentKeyService.RequestModel) async throws {
+        let service: ChangeContentKeyService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func deleteKey(projectId: String, keyId: String) async throws {
-        _ = try await functions.httpsCallable("deleteKey").call(["projectId": projectId,
-                                                                    "keyId": keyId] as [String : Any])
+    func deleteKey(_ requestModel: DeleteKeyService.RequestModel) async throws {
+        let service: DeleteKeyService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
     func isUserProjectOwner() async throws -> Bool {

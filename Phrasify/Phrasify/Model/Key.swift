@@ -8,10 +8,12 @@
 import Foundation
 import FirebaseFirestoreSwift
 
+typealias Translation = [String: String]
+
 struct Key: Codable, Hashable {
 
     @DocumentID var id: String?
-    var translation: [String: String]
+    var translation: Translation
     var createdAt: Date
     var lastUpdatedAt: Date
     var status: KeyStatus

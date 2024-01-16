@@ -68,13 +68,15 @@ final class EnterContentKeyViewModel: ObservableObject {
         do {
             switch context {
             case .create(let keyId):
-                try await coordinator.dependencies.cloudRepository.createKey(projectId: projectId, keyId: keyId,
-                                                                             translation: [project.baseLanguage.rawValue: translation])
+                try await coordinator.dependencies.cloudRepository.createKey(.init(projectId: projectId, 
+                                                                                   keyId: keyId,
+                                                                                   translation: [project.baseLanguage.rawValue: translation]))
                 coordinator.dismissFullScreenCover()
             case .edit(let key, _):
                 guard let keyId = key.id else { return }
-                try await coordinator.dependencies.cloudRepository.changeContentKey(projectId: projectId, keyId: keyId,
-                                                                                    translation: [language.rawValue: translation])
+                try await coordinator.dependencies.cloudRepository.changeContentKey(.init(projectId: projectId, 
+                                                                                          keyId: keyId,
+                                                                                          translation: [language.rawValue: translation]))
                 coordinator.popView()
             }
         } catch {
