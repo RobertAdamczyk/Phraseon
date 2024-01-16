@@ -184,6 +184,10 @@
 		55826AAC2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AAA2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift */; };
 		55826AAE2B35046F00233D90 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AAD2B35046F00233D90 /* Key.swift */; };
 		55826AAF2B35046F00233D90 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AAD2B35046F00233D90 /* Key.swift */; };
+		55854F872B571D4000CC5480 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F862B571D4000CC5480 /* CloudService.swift */; };
+		55854F882B571D4000CC5480 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F862B571D4000CC5480 /* CloudService.swift */; };
+		55854F8B2B571DA100CC5480 /* CreateProjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F8A2B571DA100CC5480 /* CreateProjectService.swift */; };
+		55854F8C2B571DA100CC5480 /* CreateProjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F8A2B571DA100CC5480 /* CreateProjectService.swift */; };
 		558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
@@ -417,6 +421,8 @@
 		55826AA42B34FD5F00233D90 /* CreateKeyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeyCoordinator.swift; sourceTree = "<group>"; };
 		55826AAA2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateKeyCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		55826AAD2B35046F00233D90 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		55854F862B571D4000CC5480 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
+		55854F8A2B571DA100CC5480 /* CreateProjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectService.swift; sourceTree = "<group>"; };
 		558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberWarningViewModel.swift; sourceTree = "<group>"; };
 		559E2D552B4DEBB10009A25A /* KeyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailView.swift; sourceTree = "<group>"; };
 		559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewModel.swift; sourceTree = "<group>"; };
@@ -832,6 +838,23 @@
 			path = CreateKey;
 			sourceTree = "<group>";
 		};
+		55854F852B571D3000CC5480 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				55854F892B571D7000CC5480 /* Project */,
+				55854F862B571D4000CC5480 /* CloudService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		55854F892B571D7000CC5480 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				55854F8A2B571DA100CC5480 /* CreateProjectService.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
 		558B74642B4DCE120041635A /* DeleteMemberWarning */ = {
 			isa = PBXGroup;
 			children = (
@@ -970,6 +993,7 @@
 		55C279252B2A4DE7005144F1 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				55854F852B571D3000CC5480 /* Services */,
 				55C279262B2A4DFC005144F1 /* AuthenticationRepository.swift */,
 				5505379D2B44C5C30077912D /* StorageRepository.swift */,
 				55E960D82B3CD8E50016DA23 /* CloudRepository.swift */,
@@ -1377,6 +1401,7 @@
 				5513C24B2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55C279272B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5516EBC42B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
+				55854F8B2B571DA100CC5480 /* CreateProjectService.swift in Sources */,
 				5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				5516EBCB2B40CF7F00C558B1 /* Triangle.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
@@ -1460,6 +1485,7 @@
 				558074452B2CF2780041160B /* GoogleButton.swift in Sources */,
 				55DE10332B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,
 				55FF42682B2B914000F4D523 /* HomeViewModel.swift in Sources */,
+				55854F872B571D4000CC5480 /* CloudService.swift in Sources */,
 				55DE10302B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55FF425E2B2A674A00F4D523 /* CancelBag.swift in Sources */,
 				55C279132B2A4B48005144F1 /* AppDelegate.swift in Sources */,
@@ -1522,6 +1548,7 @@
 				5513C24C2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55C279282B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
+				55854F8C2B571DA100CC5480 /* CreateProjectService.swift in Sources */,
 				5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				5516EBCC2B40CF7F00C558B1 /* Triangle.swift in Sources */,
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
@@ -1605,6 +1632,7 @@
 				558074462B2CF2780041160B /* GoogleButton.swift in Sources */,
 				55DE10342B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,
 				55FF42692B2B914100F4D523 /* HomeViewModel.swift in Sources */,
+				55854F882B571D4000CC5480 /* CloudService.swift in Sources */,
 				55DE10312B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55FF425F2B2A677800F4D523 /* CancelBag.swift in Sources */,
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,

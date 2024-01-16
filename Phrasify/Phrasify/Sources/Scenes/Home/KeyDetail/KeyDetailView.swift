@@ -29,8 +29,8 @@ struct KeyDetailView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: viewModel.onDeleteTapped, label: {
-                    Image(systemName: "trash.fill")
-                        .apply(.bold, size: .L, color: .red)
+                    Image(systemName: "trash")
+                        .apply(.bold, size: .L, color: .paleOrange)
                 })
             }
         }
