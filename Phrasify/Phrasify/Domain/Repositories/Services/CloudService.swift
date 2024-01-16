@@ -15,3 +15,14 @@ protocol CloudService {
     var requestModel: Model { get }
     func getParameters() throws -> [String: Any]
 }
+
+extension CloudService {
+
+    func getParameters() throws -> [String: Any] {
+        let jsonData = try JSONEncoder().encode(requestModel)
+        if let parameters = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String : Any] {
+            return parameters
+        }
+        throw AppError.encodingError
+    }
+}
