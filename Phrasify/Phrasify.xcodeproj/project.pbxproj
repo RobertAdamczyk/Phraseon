@@ -194,6 +194,8 @@
 		55854F922B5720AC00CC5480 /* AddProjectMemberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F902B5720AC00CC5480 /* AddProjectMemberService.swift */; };
 		55854F942B5721A600CC5480 /* ChangeMemberRoleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F932B5721A600CC5480 /* ChangeMemberRoleService.swift */; };
 		55854F952B5721A600CC5480 /* ChangeMemberRoleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F932B5721A600CC5480 /* ChangeMemberRoleService.swift */; };
+		55854F972B57235800CC5480 /* DeleteMemberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F962B57235800CC5480 /* DeleteMemberService.swift */; };
+		55854F982B57235800CC5480 /* DeleteMemberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854F962B57235800CC5480 /* DeleteMemberService.swift */; };
 		558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
@@ -432,6 +434,7 @@
 		55854F8D2B571FAB00CC5480 /* ChangeProjectOwnerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerService.swift; sourceTree = "<group>"; };
 		55854F902B5720AC00CC5480 /* AddProjectMemberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectMemberService.swift; sourceTree = "<group>"; };
 		55854F932B5721A600CC5480 /* ChangeMemberRoleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeMemberRoleService.swift; sourceTree = "<group>"; };
+		55854F962B57235800CC5480 /* DeleteMemberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberService.swift; sourceTree = "<group>"; };
 		558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberWarningViewModel.swift; sourceTree = "<group>"; };
 		559E2D552B4DEBB10009A25A /* KeyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailView.swift; sourceTree = "<group>"; };
 		559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewModel.swift; sourceTree = "<group>"; };
@@ -863,6 +866,7 @@
 				55854F8D2B571FAB00CC5480 /* ChangeProjectOwnerService.swift */,
 				55854F902B5720AC00CC5480 /* AddProjectMemberService.swift */,
 				55854F932B5721A600CC5480 /* ChangeMemberRoleService.swift */,
+				55854F962B57235800CC5480 /* DeleteMemberService.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -1404,6 +1408,7 @@
 				55DE10472B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
 				553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */,
 				55DE10622B4B56D1001CB87F /* SheetActions.swift in Sources */,
+				55854F972B57235800CC5480 /* DeleteMemberService.swift in Sources */,
 				55C279152B2A4BB0005144F1 /* Dependencies.swift in Sources */,
 				553F1BE32B29080B0071A099 /* LoginViewModel.swift in Sources */,
 				5513C2482B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,
@@ -1554,6 +1559,7 @@
 				55DE10482B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
 				5513C2532B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				55DE10632B4B56D1001CB87F /* SheetActions.swift in Sources */,
+				55854F982B57235800CC5480 /* DeleteMemberService.swift in Sources */,
 				55C278E22B2A3F3A005144F1 /* LoginView.swift in Sources */,
 				55C278E32B2A3F3A005144F1 /* LoginViewModel.swift in Sources */,
 				5513C2492B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,

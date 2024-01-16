@@ -34,7 +34,8 @@ final class DeleteMemberWarningViewModel: StandardWarningProtocol {
         guard let projectId = project.id, let memberId = member.id else { return }
         isLoading = true
         do {
-            try await coordinator.dependencies.cloudRepository.deleteMember(projectId: projectId, userId: memberId)
+            try await coordinator.dependencies.cloudRepository.deleteMember(.init(projectId: projectId,
+                                                                                  userId: memberId))
             coordinator.dismissSheet()
         } catch {
             ToastView.showError(message: error.localizedDescription)
