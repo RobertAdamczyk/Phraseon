@@ -210,6 +210,8 @@
 		55854FAB2B572A8900CC5480 /* ChangeContentKeyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854FA92B572A8900CC5480 /* ChangeContentKeyService.swift */; };
 		55854FAD2B572B0800CC5480 /* DeleteKeyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854FAC2B572B0800CC5480 /* DeleteKeyService.swift */; };
 		55854FAE2B572B0800CC5480 /* DeleteKeyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854FAC2B572B0800CC5480 /* DeleteKeyService.swift */; };
+		55854FB12B572C5B00CC5480 /* IsUserProjectOwnerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854FB02B572C5B00CC5480 /* IsUserProjectOwnerService.swift */; };
+		55854FB22B572C5B00CC5480 /* IsUserProjectOwnerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854FB02B572C5B00CC5480 /* IsUserProjectOwnerService.swift */; };
 		558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
@@ -456,6 +458,7 @@
 		55854FA62B57285200CC5480 /* CreateKeyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeyService.swift; sourceTree = "<group>"; };
 		55854FA92B572A8900CC5480 /* ChangeContentKeyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeContentKeyService.swift; sourceTree = "<group>"; };
 		55854FAC2B572B0800CC5480 /* DeleteKeyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteKeyService.swift; sourceTree = "<group>"; };
+		55854FB02B572C5B00CC5480 /* IsUserProjectOwnerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsUserProjectOwnerService.swift; sourceTree = "<group>"; };
 		558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberWarningViewModel.swift; sourceTree = "<group>"; };
 		559E2D552B4DEBB10009A25A /* KeyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailView.swift; sourceTree = "<group>"; };
 		559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewModel.swift; sourceTree = "<group>"; };
@@ -874,6 +877,7 @@
 		55854F852B571D3000CC5480 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				55854FAF2B572C4F00CC5480 /* User */,
 				55854FA52B57284400CC5480 /* Keys */,
 				55854F892B571D7000CC5480 /* Project */,
 				55854F862B571D4000CC5480 /* CloudService.swift */,
@@ -905,6 +909,14 @@
 				55854FAC2B572B0800CC5480 /* DeleteKeyService.swift */,
 			);
 			path = Keys;
+			sourceTree = "<group>";
+		};
+		55854FAF2B572C4F00CC5480 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				55854FB02B572C5B00CC5480 /* IsUserProjectOwnerService.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		558B74642B4DCE120041635A /* DeleteMemberWarning */ = {
@@ -1516,6 +1528,7 @@
 				5516EBAB2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				55C279172B2A4BE7005144F1 /* Localized.swift in Sources */,
 				552CA7402B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */,
+				55854FB12B572C5B00CC5480 /* IsUserProjectOwnerService.swift in Sources */,
 				55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */,
 				55DE10372B4AB3C3001CB87F /* SelectMemberRoleView.swift in Sources */,
 				55C2791D2B2A4C60005144F1 /* Coordinator.swift in Sources */,
@@ -1674,6 +1687,7 @@
 				5516EBAC2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				55C2791B2B2A4C17005144F1 /* Localized.swift in Sources */,
 				552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */,
+				55854FB22B572C5B00CC5480 /* IsUserProjectOwnerService.swift in Sources */,
 				55C278EB2B2A3F3A005144F1 /* FontStyle.swift in Sources */,
 				55DE10382B4AB3C3001CB87F /* SelectMemberRoleView.swift in Sources */,
 				55C2791E2B2A4CB8005144F1 /* Coordinator.swift in Sources */,
