@@ -47,6 +47,16 @@ final class CloudRepository {
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
+    func leaveProject(_ requestModel: LeaveProjectService.RequestModel) async throws {
+        let service: LeaveProjectService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
+    }
+
+    func deleteProject(_ requestModel: DeleteProjectService.RequestModel) async throws {
+        let service: DeleteProjectService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
+    }
+
     func createKey(projectId: String, keyId: String, translation: [String: String]) async throws {
         _ = try await functions.httpsCallable("createKey").call(["projectId": projectId,
                                                                  "keyId": keyId,
@@ -59,17 +69,9 @@ final class CloudRepository {
                                                                         "translation": translation] as [String : Any])
     }
 
-    func leaveProject(projectId: String) async throws {
-        _ = try await functions.httpsCallable("leaveProject").call(["projectId": projectId] as [String : Any])
-    }
-
     func deleteKey(projectId: String, keyId: String) async throws {
         _ = try await functions.httpsCallable("deleteKey").call(["projectId": projectId,
                                                                     "keyId": keyId] as [String : Any])
-    }
-
-    func deleteProject(projectId: String) async throws {
-        _ = try await functions.httpsCallable("deleteProject").call(["projectId": projectId] as [String : Any])
     }
 
     func isUserProjectOwner() async throws -> Bool {

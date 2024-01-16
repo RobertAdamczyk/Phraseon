@@ -32,7 +32,7 @@ final class DeleteProjectWarningViewModel: StandardWarningProtocol {
         guard let projectId = project.id else { return }
         isLoading = true
         do {
-            try await coordinator.dependencies.cloudRepository.deleteProject(projectId: projectId)
+            try await coordinator.dependencies.cloudRepository.deleteProject(.init(projectId: projectId))
             coordinator.dismissSheet()
             coordinator.popToRoot()
         } catch {

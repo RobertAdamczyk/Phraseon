@@ -32,7 +32,7 @@ final class LeaveProjectWarningViewModel: StandardWarningProtocol {
         guard let projectId = project.id else { return }
         isLoading = true
         do {
-            try await coordinator.dependencies.cloudRepository.leaveProject(projectId: projectId)
+            try await coordinator.dependencies.cloudRepository.leaveProject(.init(projectId: projectId))
             coordinator.dismissSheet()
             coordinator.popToRoot()
         } catch {
