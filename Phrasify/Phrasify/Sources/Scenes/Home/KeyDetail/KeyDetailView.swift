@@ -28,10 +28,12 @@ struct KeyDetailView: View {
         .navigationTitle("Phrase")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button(action: viewModel.onDeleteTapped, label: {
-                    Image(systemName: "trash")
-                        .apply(.bold, size: .L, color: .paleOrange)
-                })
+                if viewModel.shouldShowDeleteButton {
+                    Button(action: viewModel.onDeleteTapped, label: {
+                        Image(systemName: "trash")
+                            .apply(.bold, size: .L, color: .paleOrange)
+                    })
+                }
             }
         }
     }
@@ -123,6 +125,10 @@ struct KeyDetailView: View {
                                                   languages: [.english, .polish],
                                                   baseLanguage: .english,
                                                   members: [],
-                                                  owner: "adasda")))
+                                                  owner: "adasda"),
+                                   projectMemberUseCase: .init(firestoreRepository: .init(), 
+                                                               authenticationRepository: .init(),
+                                                               project: .init(name: "", technologies: [], languages: [],
+                                                                              baseLanguage: .english, members: [], owner: ""))))
     .preferredColorScheme(.dark)
 }

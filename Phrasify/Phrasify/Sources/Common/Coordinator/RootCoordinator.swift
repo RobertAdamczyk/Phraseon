@@ -154,8 +154,8 @@ extension RootCoordinator: ProjectActions {
         self.presentedSheet = sheet
     }
 
-    func showKeyDetails(key: Key, project: Project) {
-        let viewModel = KeyDetailViewModel(coordinator: self, key: key, project: project)
+    func showKeyDetails(key: Key, project: Project, projectMemberUseCase: ProjectMemberUseCase) {
+        let viewModel = KeyDetailViewModel(coordinator: self, key: key, project: project, projectMemberUseCase: projectMemberUseCase)
         let view: NavigationView = .keyDetail(viewModel: viewModel)
         self.navigationViews.append(view)
     }

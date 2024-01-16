@@ -55,7 +55,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showDeleteProjectWarning(project: Project) { }
     func showSelectMemberRole(member: Member, project: Project) { }
     func showDeleteMemberWarning(project: Project, member: Member) {  }
-    func showKeyDetails(key: Key, project: Project) { }
+    func showKeyDetails(key: Key, project: Project, projectMemberUseCase: ProjectMemberUseCase) { }
     func showEnterContentKey(keyId: String, project: Project) { }
     func showEditContentKey(language: Language, key: Key, project: Project) { }
     func showProjectIntegration(project: Project) { }

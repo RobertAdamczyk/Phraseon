@@ -7,21 +7,29 @@
 
 import SwiftUI
 
-final class KeyDetailViewModel: ObservableObject {
+final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
 
     typealias KeyDetailCoordinator = Coordinator & EnterContentKeyActions & ProjectActions
 
     @Published var key: Key
+    @Published internal var member: Member?
+
+    var shouldShowDeleteButton: Bool {
+        isAdmin || isOwner || isDeveloper
+    }
 
     let project: Project
     private let coordinator: KeyDetailCoordinator
-    private let cancelBag = CancelBag()
+    internal let cancelBag = CancelBag()
+    internal let projectMemberUseCase: ProjectMemberUseCase
 
-    init(coordinator: KeyDetailCoordinator, key: Key, project: Project) {
+    init(coordinator: KeyDetailCoordinator, key: Key, project: Project, projectMemberUseCase: ProjectMemberUseCase) {
         self.coordinator = coordinator
         self.key = key
         self.project = project
+        self.projectMemberUseCase = projectMemberUseCase
         setupKeySubscriber()
+        setupMemberSubscriber()
     }
 
     func onCopyTapped(_ text: String) {

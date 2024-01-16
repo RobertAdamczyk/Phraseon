@@ -65,7 +65,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     }
 
     func onKeyTapped(_ key: Key) {
-        coordinator.showKeyDetails(key: key, project: project)
+        coordinator.showKeyDetails(key: key, project: project, projectMemberUseCase: projectMemberUseCase)
     }
 
     private func setupSelectedKeysOrderSubscriber() {
