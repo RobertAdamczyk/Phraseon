@@ -15,6 +15,7 @@ extension Role {
         case .viewer: return "Viewer"
         case .developer: return "Developer"
         case .admin: return "Admin"
+        case .marketing: return "Marketing"
         }
     }
 
@@ -24,6 +25,7 @@ extension Role {
         case .viewer: return "Viewers"
         case .developer: return "Developers"
         case .admin: return "Admins"
+        case .marketing: return "Marketing"
         }
     }
 }

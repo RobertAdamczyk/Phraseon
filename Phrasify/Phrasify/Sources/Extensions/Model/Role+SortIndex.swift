@@ -14,7 +14,8 @@ extension Role {
         case .owner: return 0
         case .admin: return 1
         case .developer: return 2
-        case .viewer: return 3
+        case .marketing: return 3
+        case .viewer: return 4
         }
     }
 }

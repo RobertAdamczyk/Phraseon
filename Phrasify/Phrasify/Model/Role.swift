@@ -13,4 +13,5 @@ enum Role: String, Codable, Hashable, CaseIterable {
     case admin = "ADMIN"
     case developer = "DEVELOPER"
     case viewer = "VIEWER"
+    case marketing = "MARKETING"
 }
