@@ -14,14 +14,6 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProt
     @Published internal var project: Project
     @Published internal var member: Member?
 
-    var shouldLanguagesInteractive: Bool {
-        isAdmin || isOwner
-    }
-
-    var shouldTechnologiesInteractive: Bool {
-        isAdmin || isOwner
-    }
-
     private let coordinator: ProjectSettingsCoordinator
     internal let projectMemberUseCase: ProjectMemberUseCase
     internal let projectUseCase: ProjectUseCase

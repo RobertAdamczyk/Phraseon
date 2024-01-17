@@ -26,11 +26,11 @@ struct ProjectMembersView: View {
                                     UserDetailView(email: member.email, name: member.name, surname: member.surname, photoUrl: member.photoUrl)
                                 } actions: {
                                     Action(tint: appColor(.lightGray), icon: "square.and.pencil",
-                                           isEnabled: viewModel.hasPermissionToManage && member.role != .owner) {
+                                           isEnabled: viewModel.member?.hasPermissionToManageMembers == true && member.role != .owner) {
                                         viewModel.onMemberEdit(member)
                                     }
                                     Action(tint: appColor(.red), icon: "trash.fill",
-                                           isEnabled: viewModel.hasPermissionToManage && member.role != .owner) {
+                                           isEnabled: viewModel.member?.hasPermissionToManageMembers == true && member.role != .owner) {
                                         viewModel.onMemberDelete(member)
                                     }
                                 }
@@ -41,7 +41,7 @@ struct ProjectMembersView: View {
                 }
                 .padding(16)
             }
-            if viewModel.hasPermissionToManage {
+            if viewModel.member?.hasPermissionToManageMembers == true {
                 AppButton(style: .fill("Invite member", .lightBlue), action: .main(viewModel.onInviteMemberTapped))
                     .padding(16)
             }

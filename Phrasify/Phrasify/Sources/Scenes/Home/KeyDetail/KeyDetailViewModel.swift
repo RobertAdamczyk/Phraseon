@@ -14,14 +14,6 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
     @Published var key: Key
     @Published internal var member: Member?
 
-    var shouldShowDeleteButton: Bool {
-        isAdmin || isOwner || isDeveloper
-    }
-
-    var shouldShowEditContentButton: Bool {
-        isAdmin || isOwner || isDeveloper
-    }
-
     let project: Project
     private let coordinator: KeyDetailCoordinator
     internal let cancelBag = CancelBag()

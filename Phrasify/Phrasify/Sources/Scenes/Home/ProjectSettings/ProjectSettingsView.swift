@@ -23,14 +23,14 @@ struct ProjectSettingsView: View {
                         })
                         Button(action: viewModel.onLanguagesTapped, label: {
                             makeSettingsRow(for: .languages, value: viewModel.project.languages.joined,
-                                            showChevron: viewModel.shouldLanguagesInteractive)
+                                            showChevron: viewModel.member?.hasPermissionToChangeLanguages == true)
                         })
-                        .disabled(!viewModel.shouldLanguagesInteractive)
+                        .disabled(!(viewModel.member?.hasPermissionToChangeLanguages == true))
                         Button(action: viewModel.onTechnologiesTapped, label: {
                             makeSettingsRow(for: .technologies, value: viewModel.project.technologies.joined,
-                                            showChevron: viewModel.shouldTechnologiesInteractive)
+                                            showChevron: viewModel.member?.hasPermissionToChangeTechnologies == true)
                         })
-                        .disabled(!viewModel.shouldTechnologiesInteractive)
+                        .disabled(!(viewModel.member?.hasPermissionToChangeTechnologies == true))
                     }
                     VStack(alignment: .leading, spacing: 16) {
                         Text("Users and permissions")
@@ -38,7 +38,7 @@ struct ProjectSettingsView: View {
                         Button(action: viewModel.onMembersTapped, label: {
                             makeSettingsRow(for: .members, value: "\(viewModel.project.members.count) Members")
                         })
-                        if viewModel.isOwner {
+                        if viewModel.member?.hasPermissionToChangeOwner == true {
                             Button(action: viewModel.onOwnerTapped, label: {
                                 makeSettingsRow(for: .owner, value: "Robert Adamczyk")
                             })
@@ -50,7 +50,7 @@ struct ProjectSettingsView: View {
             }
             VStack(spacing: 16) {
                 AppButton(style: .fill("Leave Project", .lightBlue), action: .main(viewModel.onLeaveProjectTapped))
-                if viewModel.isOwner {
+                if viewModel.member?.hasPermissionToDeleteProject == true {
                     AppButton(style: .text("Delete Project"), action: .main(viewModel.onDeleteProjectTapped))
                 }
             }

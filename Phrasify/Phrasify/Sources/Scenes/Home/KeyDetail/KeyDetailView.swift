@@ -28,7 +28,7 @@ struct KeyDetailView: View {
         .navigationTitle("Phrase")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                if viewModel.shouldShowDeleteButton {
+                if viewModel.member?.hasPermissionToDeleteKey == true {
                     Button(action: viewModel.onDeleteTapped, label: {
                         Image(systemName: "trash")
                             .apply(.bold, size: .L, color: .paleOrange)
@@ -76,7 +76,7 @@ struct KeyDetailView: View {
                 HStack(spacing: 16) {
                     ApproveButton(language: language, action: viewModel.onApproveTapped)
 
-                    if viewModel.shouldShowEditContentButton {
+                    if viewModel.member?.hasPermissionToEditContentKey == true {
                         makeEditButton(for: language)
                     }
                     if let translation {

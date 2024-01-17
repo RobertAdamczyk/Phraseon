@@ -27,10 +27,6 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         }
     }
 
-    var shouldShowAddPhraseButton: Bool {
-        isAdmin || isOwner || isDeveloper
-    }
-
     internal lazy var projectUseCase: ProjectUseCase = {
         .init(firestoreRepository: coordinator.dependencies.firestoreRepository, project: project)
     }()

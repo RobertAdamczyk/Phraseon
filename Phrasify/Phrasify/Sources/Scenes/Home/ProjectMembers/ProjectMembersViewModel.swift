@@ -18,10 +18,6 @@ final class ProjectMembersViewModel: ObservableObject, ProjectMemberUseCaseProto
         Dictionary(grouping: members, by: { $0.role })
     }
 
-    var hasPermissionToManage: Bool {
-        isAdmin || isOwner
-    }
-
     private let project: Project
     private let coordinator: ProjectMembersCoordinator
     internal let cancelBag = CancelBag()
