@@ -121,9 +121,9 @@ struct KeyDetailView: View {
 #Preview {
     KeyDetailView(viewModel: .init(coordinator: MockCoordinator(), 
                                    key: .init(translation: ["EN": "dasdasdasdadasd"],
-                                              createdAt: .now, 
+                                              createdAt: .now,
                                               lastUpdatedAt: .now,
-                                              status: .approved),
+                                              status: ["EN": KeyStatus.approved]),
                                    project: .init(name: "",
                                                   technologies: [],
                                                   languages: [.english, .polish],

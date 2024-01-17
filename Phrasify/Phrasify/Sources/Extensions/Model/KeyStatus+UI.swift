@@ -16,3 +16,10 @@ extension KeyStatus {
         }
     }
 }
+
+extension [String: KeyStatus] {
+
+    var localizedTitle: String {
+        self.values.contains(where: { $0 == KeyStatus.review}) ? KeyStatus.review.localizedTitle : KeyStatus.approved.localizedTitle
+    }
+}

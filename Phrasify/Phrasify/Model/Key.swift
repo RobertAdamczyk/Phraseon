@@ -9,6 +9,7 @@ import Foundation
 import FirebaseFirestoreSwift
 
 typealias Translation = [String: String]
+typealias Status = [String: KeyStatus]
 
 struct Key: Codable, Hashable {
 
@@ -16,7 +17,7 @@ struct Key: Codable, Hashable {
     var translation: Translation
     var createdAt: Date
     var lastUpdatedAt: Date
-    var status: KeyStatus
+    var status: Status
 
     enum CodingKeys: String, CodingKey {
         case id

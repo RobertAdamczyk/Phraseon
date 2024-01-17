@@ -45,7 +45,8 @@ extension ProjectDetailView {
 #Preview {
     ZStack {
         appColor(.black)
-        ProjectDetailView.KeyRow(key: .init(id: "test_key", translation: [:], createdAt: .now, lastUpdatedAt: .distantPast, status: .review))
+        ProjectDetailView.KeyRow(key: .init(id: "test_key", translation: [:], createdAt: .now, lastUpdatedAt: .distantPast,
+                                            status: ["EN": KeyStatus.approved]))
             .padding(16)
     }
 }

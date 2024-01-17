@@ -20,6 +20,7 @@ struct CreateKeyService: CloudService {
     struct RequestModel: Codable {
         let projectId: String
         let keyId: String
-        let translation: Translation
+        let language: Language
+        let translation: String
     }
 }
