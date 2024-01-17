@@ -214,6 +214,8 @@
 		55854FB22B572C5B00CC5480 /* IsUserProjectOwnerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854FB02B572C5B00CC5480 /* IsUserProjectOwnerService.swift */; };
 		558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
+		55909A202B58798D00A77F21 /* KeyDetailView+ApproveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A1F2B58798D00A77F21 /* KeyDetailView+ApproveButton.swift */; };
+		55909A212B58798D00A77F21 /* KeyDetailView+ApproveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A1F2B58798D00A77F21 /* KeyDetailView+ApproveButton.swift */; };
 		559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
 		559E2D572B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
 		559E2D592B4DEBBF0009A25A /* KeyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */; };
@@ -460,6 +462,7 @@
 		55854FAC2B572B0800CC5480 /* DeleteKeyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteKeyService.swift; sourceTree = "<group>"; };
 		55854FB02B572C5B00CC5480 /* IsUserProjectOwnerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsUserProjectOwnerService.swift; sourceTree = "<group>"; };
 		558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberWarningViewModel.swift; sourceTree = "<group>"; };
+		55909A1F2B58798D00A77F21 /* KeyDetailView+ApproveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyDetailView+ApproveButton.swift"; sourceTree = "<group>"; };
 		559E2D552B4DEBB10009A25A /* KeyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailView.swift; sourceTree = "<group>"; };
 		559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewModel.swift; sourceTree = "<group>"; };
 		55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Image.swift"; sourceTree = "<group>"; };
@@ -931,6 +934,7 @@
 			isa = PBXGroup;
 			children = (
 				559E2D552B4DEBB10009A25A /* KeyDetailView.swift */,
+				55909A1F2B58798D00A77F21 /* KeyDetailView+ApproveButton.swift */,
 				559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */,
 			);
 			path = KeyDetail;
@@ -1568,6 +1572,7 @@
 				5505C7E52B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */,
 				55DE10442B4AD0D8001CB87F /* Role+UI.swift in Sources */,
 				556977A12B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
+				55909A202B58798D00A77F21 /* KeyDetailView+ApproveButton.swift in Sources */,
 				55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				553F1BDD2B2907C10071A099 /* RegisterView.swift in Sources */,
 				55854F8E2B571FAB00CC5480 /* ChangeProjectOwnerService.swift in Sources */,
@@ -1727,6 +1732,7 @@
 				5505C7E62B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */,
 				55DE10452B4AD0D8001CB87F /* Role+UI.swift in Sources */,
 				556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
+				55909A212B58798D00A77F21 /* KeyDetailView+ApproveButton.swift in Sources */,
 				55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				55C278EF2B2A3F3A005144F1 /* RegisterView.swift in Sources */,
 				55854F8F2B571FAB00CC5480 /* ChangeProjectOwnerService.swift in Sources */,

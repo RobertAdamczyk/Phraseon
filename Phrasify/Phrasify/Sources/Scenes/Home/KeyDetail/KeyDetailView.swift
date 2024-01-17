@@ -74,7 +74,11 @@ struct KeyDetailView: View {
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 HStack(spacing: 16) {
-                    makeEditButton(for: language)
+                    ApproveButton(language: language, action: viewModel.onApproveTapped)
+
+                    if viewModel.shouldShowEditContentButton {
+                        makeEditButton(for: language)
+                    }
                     if let translation {
                         makeCopyButton(for: translation)
                     }

@@ -18,6 +18,10 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
         isAdmin || isOwner || isDeveloper
     }
 
+    var shouldShowEditContentButton: Bool {
+        isAdmin || isOwner || isDeveloper
+    }
+
     let project: Project
     private let coordinator: KeyDetailCoordinator
     internal let cancelBag = CancelBag()
@@ -43,6 +47,10 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
 
     func onDeleteTapped() {
         coordinator.showDeleteKeyWarning(project: project, key: key)
+    }
+
+    func onApproveTapped(language: Language) async {
+        try? await Task.sleep(nanoseconds: 1000000000)
     }
 
     private func setupKeySubscriber() {
