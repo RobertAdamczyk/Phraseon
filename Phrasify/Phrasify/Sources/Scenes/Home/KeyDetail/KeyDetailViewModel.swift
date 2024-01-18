@@ -42,7 +42,14 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
     }
 
     func onApproveTapped(language: Language) async {
-        try? await Task.sleep(nanoseconds: 1000000000)
+        guard let projectId = project.id, let keyId = key.id else { return }
+        do {
+            try await coordinator.dependencies.cloudRepository.approveTranslation(.init(projectId: projectId, 
+                                                                                        keyId: keyId,
+                                                                                        language: language))
+        } catch {
+            ToastView.showError(message: error.localizedDescription)
+        }
     }
 
     private func setupKeySubscriber() {

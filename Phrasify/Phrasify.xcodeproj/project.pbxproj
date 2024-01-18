@@ -134,6 +134,8 @@
 		553F1BED2B2914910071A099 /* SetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */; };
 		555A7DE62B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */; };
 		555A7DE72B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */; };
+		5560342F2B59C530000140BC /* ApproveTranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560342E2B59C530000140BC /* ApproveTranslationService.swift */; };
+		556034302B59C530000140BC /* ApproveTranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560342E2B59C530000140BC /* ApproveTranslationService.swift */; };
 		5569779B2B4747170022B675 /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779A2B4747170022B675 /* ProjectSettingsView.swift */; };
 		5569779C2B4747170022B675 /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779A2B4747170022B675 /* ProjectSettingsView.swift */; };
 		5569779E2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */; };
@@ -426,6 +428,7 @@
 		553F1BEA2B2914700071A099 /* SetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordView.swift; sourceTree = "<group>"; };
 		553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
 		555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUseCase.swift; sourceTree = "<group>"; };
+		5560342E2B59C530000140BC /* ApproveTranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveTranslationService.swift; sourceTree = "<group>"; };
 		5569779A2B4747170022B675 /* ProjectSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsView.swift; sourceTree = "<group>"; };
 		5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsViewModel.swift; sourceTree = "<group>"; };
 		556977A02B47594A0022B675 /* SelectLanguageActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageActions.swift; sourceTree = "<group>"; };
@@ -912,6 +915,7 @@
 			isa = PBXGroup;
 			children = (
 				55854FA62B57285200CC5480 /* CreateKeyService.swift */,
+				5560342E2B59C530000140BC /* ApproveTranslationService.swift */,
 				55854FA92B572A8900CC5480 /* ChangeContentKeyService.swift */,
 				55854FAC2B572B0800CC5480 /* DeleteKeyService.swift */,
 			);
@@ -1506,6 +1510,7 @@
 				558074512B2E38110041160B /* Activitable.swift in Sources */,
 				553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */,
 				55854F9D2B57259300CC5480 /* SetProjectTechnologiesService.swift in Sources */,
+				5560342F2B59C530000140BC /* ApproveTranslationService.swift in Sources */,
 				55909A232B58946400A77F21 /* Member+Permissions.swift in Sources */,
 				55FF426F2B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				5505C7EC2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,
@@ -1667,6 +1672,7 @@
 				558074522B2E38110041160B /* Activitable.swift in Sources */,
 				55C278E72B2A3F3A005144F1 /* StartView.swift in Sources */,
 				55854F9E2B57259300CC5480 /* SetProjectTechnologiesService.swift in Sources */,
+				556034302B59C530000140BC /* ApproveTranslationService.swift in Sources */,
 				55909A242B58946400A77F21 /* Member+Permissions.swift in Sources */,
 				55FF42702B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				5505C7ED2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,

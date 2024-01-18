@@ -25,7 +25,7 @@ extension ProjectDetailView {
                             .frame(width: 2)
                             .foregroundStyle(appColor(.lightGray))
                             .padding(.horizontal, 8)
-                        Text(key.status.localizedTitle)
+                        Text(key.keyStatus.localizedTitle)
                     }
                     .apply(.medium, size: .S, color: .lightGray)
                 }

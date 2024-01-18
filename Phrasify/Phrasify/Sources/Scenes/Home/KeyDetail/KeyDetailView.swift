@@ -74,7 +74,15 @@ struct KeyDetailView: View {
                     .multilineTextAlignment(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 HStack(spacing: 16) {
-                    ApproveButton(language: language, action: viewModel.onApproveTapped)
+
+                    if let keyStatus = viewModel.key.status[language.rawValue] {
+                        if keyStatus == .review && viewModel.member?.hasPermissionToApproveKey == true {
+                            ApproveButton(language: language, action: viewModel.onApproveTapped)
+                        } else {
+                            Text(keyStatus.localizedTitle)
+                                .apply(.regular, size: .S, color: .lightGray)
+                        }
+                    }
 
                     if viewModel.member?.hasPermissionToEditContentKey == true {
                         makeEditButton(for: language)

@@ -17,9 +17,9 @@ extension KeyStatus {
     }
 }
 
-extension [String: KeyStatus] {
+extension Key {
 
-    var localizedTitle: String {
-        self.values.contains(where: { $0 == KeyStatus.review}) ? KeyStatus.review.localizedTitle : KeyStatus.approved.localizedTitle
+    var keyStatus: KeyStatus {
+        self.status.values.contains(where: { $0 == KeyStatus.review}) ? KeyStatus.review : KeyStatus.approved
     }
 }

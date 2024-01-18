@@ -19,7 +19,6 @@ protocol ProjectUseCaseProtocol: AnyObject {
 extension ProjectUseCaseProtocol {
 
     func setupProjectSubscriber() {
-        guard let projectId = project.id else { return }
         projectUseCase.$project
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] project in
