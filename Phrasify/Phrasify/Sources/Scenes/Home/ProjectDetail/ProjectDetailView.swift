@@ -38,7 +38,6 @@ struct ProjectDetailView: View {
             .padding(16)
         }
         .scrollSpace()
-        .background(appColor(.black))
         .onAppear(perform: setupSegmentedControlAppearance)
         .searchable(text: $viewModel.searchText)
         .ignoresSafeArea(edges: .bottom)

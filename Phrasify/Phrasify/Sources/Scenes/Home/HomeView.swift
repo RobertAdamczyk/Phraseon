@@ -33,7 +33,6 @@ struct HomeView: View {
             .padding(16)
         }
         .ignoresSafeArea(edges: .bottom)
-        .background(appColor(.black))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: viewModel.onProfileTapped, label: {
@@ -104,4 +103,5 @@ struct AddProjectCellView: View {
 
 #Preview {
     HomeView(coordinator: MockCoordinator())
+        .preferredColorScheme(.dark)
 }
