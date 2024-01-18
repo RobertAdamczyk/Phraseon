@@ -6,7 +6,10 @@ echo "Synchronizing Phrase Localizations"
 ACCESS_TOKEN='ACCESS_TOKEN_VALUE'
 PROJECT_ID='PROJECT_ID_VALUE'
 
-# Check if Network is available 
+# Define base directory as the directory where the script is located
+BASE_DIR="$(dirname "$0")/YOUR_PATH/TO_FILES"
+
+# Check if Network is available
 echo "Checking Network connectivity..."
 if ping -q -c 1 -W 1 google.com >/dev/null; then
   echo "Network available; downloading localizations"
@@ -15,7 +18,7 @@ else
   exit 0
 fi
 
-# Get the data from Firebase Function
+# Get the data from project
 echo "Getting Data from Firebase Function..."
 RESPONSE=$(curl -s -H "x-access-key: ${ACCESS_TOKEN}" "https://us-central1-phrasify-inhouse.cloudfunctions.net//getKeys?projectId=${PROJECT_ID}")
 
@@ -25,18 +28,25 @@ if [ -z "$RESPONSE" ]; then
   exit 1
 fi
 
-# Remove existing translation files
-rm ./Localizable_*.strings 2> /dev/null
+# Remove existing translation files in each language directory
+find "$BASE_DIR" -name 'Localizable.strings' -exec rm {} \;
 
 # Extract and save each language's translations to a separate file
 echo "Extracting and saving translations..."
 echo "$RESPONSE" | jq -r 'to_entries[] | .key as $key | .value | to_entries[] | "\($key) \(.key) \(.value)"' | while read -r id lang text; do
+  # Convert language code to lowercase
+  lang=$(echo "$lang" | tr '[:upper:]' '[:lower:]')
+
   # Remove quotes from the beginning and end of the text
   text="${text%\"}"
   text="${text#\"}"
 
+  # Create language directory if it does not exist
+  DIRECTORY="$BASE_DIR/$lang.lproj"
+  mkdir -p "$DIRECTORY"
+
   # Create or update the file for the given language
-  echo "\"$id\" = \"$text\";" >> "./Localizable_$lang.strings"
+  echo "\"$id\" = \"$text\";" >> "$DIRECTORY/Localizable.strings"
 done
 
-echo "Localization files created."
+echo "Localization files created in $BASE_DIR."
