@@ -56,6 +56,7 @@ final class LoginViewModel: ObservableObject, Activitable {
         startActivity()
         do {
             try await googleUseCase.loginWithGoogleCredentials()
+            ToastView.showSuccess(message: "Login successful. Welcome !")
         } catch {
             let errorHandler: AuthenticationErrorHandler = .init(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)
