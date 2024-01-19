@@ -2,12 +2,22 @@
 
 echo "Synchronizing Phrase Localizations"
 
-# Project Credentials and local file setup
+# ============================
+# Configuration Section Start
+# ============================
+
+# Project Credentials
 ACCESS_TOKEN='ACCESS_TOKEN_VALUE'
 PROJECT_ID='PROJECT_ID_VALUE'
 
-# Define base directory as the directory where the script is located
-BASE_DIR="$(dirname "$0")/YOUR_PATH/TO_FILES"
+# Define the relative path to your files from the script location
+RELATIVE_PATH="/YOUR_PATH/TO_LOCALIZATIONS"
+
+# ==========================
+# Configuration Section End
+# ==========================
+
+BASE_DIR="$(dirname "$0")$RELATIVE_PATH"
 
 # Check if Network is available
 echo "Checking Network connectivity..."
