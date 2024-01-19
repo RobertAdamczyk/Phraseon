@@ -49,7 +49,8 @@ final class RegisterViewModel: ObservableObject, Activitable {
         do {
             try await googleUseCase.loginWithGoogleCredentials()
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler: AuthenticationErrorHandler = .init(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
         stopActivity()
     }

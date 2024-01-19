@@ -26,7 +26,17 @@ extension ToastView {
         }
     }
 
-    public static func showError(message: String) {
+    public static func showError(message: String?) {
+        guard let message else {
+            showGeneralError()
+            return
+        }
+        let toastToShow = ToastView(type: .error, message: message)
+        show(toast: toastToShow)
+    }
+
+    public static func showGeneralError() {
+        let message = "An unexpected error occurred. Please try again later. If the problem persists, contact our support team."
         let toastToShow = ToastView(type: .error, message: message)
         show(toast: toastToShow)
     }

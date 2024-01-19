@@ -30,7 +30,8 @@ final class LoginViewModel: ObservableObject, Activitable {
         do {
             try await coordinator.dependencies.authenticationRepository.login(email: email, password: password)
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler: AuthenticationErrorHandler = .init(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
     }
 
@@ -55,7 +56,8 @@ final class LoginViewModel: ObservableObject, Activitable {
         do {
             try await googleUseCase.loginWithGoogleCredentials()
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler: AuthenticationErrorHandler = .init(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
         stopActivity()
     }

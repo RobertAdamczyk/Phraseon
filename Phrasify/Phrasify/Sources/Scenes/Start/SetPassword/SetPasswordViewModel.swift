@@ -27,7 +27,8 @@ final class SetPasswordViewModel: ObservableObject {
         do {
             try await coordinator.dependencies.authenticationRepository.signUp(email: email, password: password)
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler: AuthenticationErrorHandler = .init(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
     }
 

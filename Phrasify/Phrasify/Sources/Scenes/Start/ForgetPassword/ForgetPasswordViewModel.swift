@@ -25,7 +25,8 @@ final class ForgetPasswordViewModel: ObservableObject {
             try await coordinator.dependencies.authenticationRepository.sendResetPassword(email: email)
             close()
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler: AuthenticationErrorHandler = .init(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
     }
 
