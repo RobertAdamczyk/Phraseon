@@ -35,8 +35,8 @@ final class ProfileDeleteWarningViewModel: ObservableObject {
     func onDeleteAccountTapped() async {
         state = .loading
         do {
-            let isOwner = try await coordinator.dependencies.cloudRepository.isUserProjectOwner()
-            if isOwner {
+            let response = try await coordinator.dependencies.cloudRepository.isUserProjectOwner()
+            if response.isOwner {
                 state = .information
             } else {
                 try await coordinator.dependencies.authenticationRepository.deleteUser()

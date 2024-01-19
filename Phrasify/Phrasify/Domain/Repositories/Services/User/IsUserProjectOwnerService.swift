@@ -20,4 +20,10 @@ struct IsUserProjectOwnerService: CloudService {
     struct RequestModel: Codable {
         // empty
     }
+
+    struct ResponseModel: CloudResponse {
+        typealias Model = Self
+
+        let isOwner: Bool
+    }
 }
