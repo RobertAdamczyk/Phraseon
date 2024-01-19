@@ -17,7 +17,7 @@ final class ProjectIntegrationViewModel: ObservableObject {
         .init(userId: coordinator.dependencies.authenticationRepository.currentUser?.uid, projectId: project.id)
     }()
 
-    let defaultFilename: String = "sync"
+    let defaultFilename: String = "syncPhrases"
 
     private let project: Project
     private let coordinator: ProjectIntegrationCoordinator

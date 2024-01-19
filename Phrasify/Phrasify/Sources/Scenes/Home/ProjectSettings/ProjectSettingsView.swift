@@ -19,7 +19,7 @@ struct ProjectSettingsView: View {
                         Text("General")
                             .apply(.medium, size: .M, color: .lightGray)
                         Button(action: viewModel.onIntegrationTapped, label: {
-                            makeSettingsRow(for: .integration, value: "Export sync script")
+                            makeSettingsRow(for: .integration, value: "How to integrate ?")
                         })
                         Button(action: viewModel.onLanguagesTapped, label: {
                             makeSettingsRow(for: .languages, value: viewModel.project.languages.joined,
