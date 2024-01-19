@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ForgetPasswordViewModel: ObservableObject {
 
-    typealias ForgetPasswordCoordinator = Coordinator & StartActions
+    typealias ForgetPasswordCoordinator = Coordinator & NavigationActions
 
     @Published var email: String = ""
 
@@ -23,15 +23,12 @@ final class ForgetPasswordViewModel: ObservableObject {
     func onSendEmailTapped() async {
         do {
             try await coordinator.dependencies.authenticationRepository.sendResetPassword(email: email)
-            close()
+            coordinator.popView()
+            ToastView.showSuccess(message: "An email with a password reset link has been sent. Please check your inbox.")
         } catch {
             let errorHandler: AuthenticationErrorHandler = .init(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)
         }
-    }
-
-    private func close() {
-        coordinator.closeForgetPassword()
     }
 }
 

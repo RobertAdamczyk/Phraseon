@@ -29,6 +29,7 @@ final class LoginViewModel: ObservableObject, Activitable {
     func onLoginTapped() async {
         do {
             try await coordinator.dependencies.authenticationRepository.login(email: email, password: password)
+            ToastView.showSuccess(message: "Login successful. Welcome back!")
         } catch {
             let errorHandler: AuthenticationErrorHandler = .init(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)

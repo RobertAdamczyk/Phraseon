@@ -63,9 +63,11 @@ final class ProfileViewModel: ObservableObject {
         try await coordinator.dependencies.firestoreRepository.setProfilePhotoUrl(userId: userId, photoUrl: url.absoluteString)
     }
 
+    @MainActor
     func onLogoutTapped() {
         do {
             try coordinator.dependencies.authenticationRepository.logout()
+            ToastView.showSuccess(message: "Logged out successfully. See you again soon!")
         } catch {
             ToastView.showError(message: error.localizedDescription)
         }

@@ -35,6 +35,11 @@ extension ToastView {
         show(toast: toastToShow)
     }
 
+    public static func showSuccess(message: String) {
+        let toastToShow = ToastView(type: .success, message: message)
+        show(toast: toastToShow)
+    }
+
     public static func showGeneralError() {
         let message = "An unexpected error occurred. Please try again later. If the problem persists, contact our support team."
         let toastToShow = ToastView(type: .error, message: message)

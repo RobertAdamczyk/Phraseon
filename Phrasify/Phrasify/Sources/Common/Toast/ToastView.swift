@@ -13,10 +13,17 @@ public struct ToastView: View {
         case error
         case success
 
-        var title: String {
+        var imageName: String {
             switch self {
-            case .error: return "Error"
-            case .success: return "Success"
+            case .error: return "exclamationmark.triangle.fill"
+            case .success: return "checkmark.circle.fill"
+            }
+        }
+
+        var color: AppColor {
+            switch self {
+            case .error: return .paleOrange
+            case .success: return .green
             }
         }
     }
@@ -26,31 +33,45 @@ public struct ToastView: View {
 
     @State private var startAnimation: Bool = false
     @State private var dragOffset: CGFloat = .zero
+    @State private var toastSize: CGSize = .zero
 
-    private var toastHeight: CGFloat {
-        UIScreen.main.bounds.height * 0.1
+    private var safeAreaInsets: UIEdgeInsets {
+        UIApplication.shared.keyWindow?.safeAreaInsets ?? .zero
     }
 
     internal static var toastDuration: CGFloat = 3
 
     public var body: some View {
         VStack {
-            HStack {
+            Spacer()
+            HStack(alignment: .bottom) {
                 VStack(alignment: .leading) {
-                    Text(type.title)
-                        .apply(.bold, size: .H1, color: .toastErrorFont)
-                    Text(message)
-                        .apply(.regular, size: .M, color: .toastErrorFont)
-                        .fixedSize(horizontal: false, vertical: true)
+                    Label {
+                        Text(message)
+                            .apply(.medium, size: .M, color: .white)
+                            .fixedSize(horizontal: false, vertical: true)
+                    } icon: {
+                        Image(systemName: type.imageName)
+                            .apply(.semibold, size: .H1, color: type.color)
+                    }
                 }
                 Spacer()
             }
-            .frame(height: toastHeight, alignment: .bottom)
             .padding(16)
-            .background(appColor(.toastErrorBackground))
-            .offset(y: startAnimation ? 0 : -UIScreen.main.bounds.height)
-            .animation(.easeInOut.speed(0.6), value: startAnimation)
+            .padding(.top, safeAreaInsets.top)
+            .background(appColor(.darkGray))
+            .clipShape(.rect(bottomLeadingRadius: 16, bottomTrailingRadius: 16))
+            .offset(y: startAnimation ? toastSize.height : 0)
+            .animation(.easeInOut, value: startAnimation)
             .offset(y: dragOffset)
+            .background {
+                GeometryReader { proxy in
+                    Color.clear
+                        .onAppear {
+                            toastSize = proxy.size
+                        }
+                }
+            }
             .gesture(
                 DragGesture()
                     .onChanged { gesture in
@@ -63,7 +84,6 @@ public struct ToastView: View {
                         }
                     }
             )
-            Spacer()
         }
         .onAppear {
             startAnimation = true
@@ -71,5 +91,14 @@ public struct ToastView: View {
                 startAnimation = false
             }
         }
+        .offset(y: -UIScreen.main.bounds.height)
+        .ignoresSafeArea()
+    }
+}
+
+#Preview {
+    ZStack {
+        appColor(.black)
+        ToastView(type: .error, message: "aklsdjalksjdlajksdkja")
     }
 }

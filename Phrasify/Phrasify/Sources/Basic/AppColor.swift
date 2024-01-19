@@ -13,8 +13,6 @@ enum AppColor: String {
     case white
     case black
     case darkGray
-    case toastErrorBackground
-    case toastErrorFont
     case lightGray
     case green
     case red

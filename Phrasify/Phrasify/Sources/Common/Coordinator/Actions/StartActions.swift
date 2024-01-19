@@ -13,5 +13,4 @@ protocol StartActions {
     func showRegister()
     func showForgetPassword()
     func showSetPassword(email: String)
-    func closeForgetPassword()
 }

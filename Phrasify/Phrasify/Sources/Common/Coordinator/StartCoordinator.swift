@@ -60,15 +60,6 @@ extension StartCoordinator: StartActions {
         let view: NavigationView = .setPassword(viewModel: viewModel)
         navigationViews.append(view)
     }
-
-    func closeForgetPassword() {
-        navigationViews.removeAll(where: {
-            if case .forgetPassword = $0 {
-                return true
-            }
-            return false
-        })
-    }
 }
 
 extension StartCoordinator {

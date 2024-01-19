@@ -26,6 +26,7 @@ final class SetPasswordViewModel: ObservableObject {
     func onCreateAccountTapped() async {
         do {
             try await coordinator.dependencies.authenticationRepository.signUp(email: email, password: password)
+            ToastView.showSuccess(message: "Account successfully created and you are now logged in.")
         } catch {
             let errorHandler: AuthenticationErrorHandler = .init(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)
