@@ -59,6 +59,8 @@ struct ProjectIntegrationView: View {
                 AppButton(style: .fill("Export Script", .lightBlue), action: .main(viewModel.onExportTapped))
                 Text("Currently the script only for macOS and Swift supported.")
                     .apply(.medium, size: .S, color: .lightGray)
+                    .frame(maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
             }
             .padding(16)
         }

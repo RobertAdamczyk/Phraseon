@@ -26,6 +26,11 @@ struct ProjectSettingsView: View {
                                             showChevron: viewModel.member?.hasPermissionToChangeLanguages == true)
                         })
                         .disabled(!(viewModel.member?.hasPermissionToChangeLanguages == true))
+                        Button(action: viewModel.onBaseLanguageTapped, label: {
+                            makeSettingsRow(for: .baseLanguage, value: viewModel.project.baseLanguage.localizedTitle,
+                                            showChevron: viewModel.member?.hasPermissionToChangeLanguages == true)
+                        })
+                        .disabled(!(viewModel.member?.hasPermissionToChangeLanguages == true))
                         Button(action: viewModel.onTechnologiesTapped, label: {
                             makeSettingsRow(for: .technologies, value: viewModel.project.technologies.joined,
                                             showChevron: viewModel.member?.hasPermissionToChangeTechnologies == true)
@@ -65,6 +70,7 @@ extension ProjectSettingsView {
     private enum SettingsItem {
         case technologies
         case languages
+        case baseLanguage
         case members
         case owner
         case integration
@@ -75,6 +81,10 @@ extension ProjectSettingsView {
                 Image(systemName: "swift")
                     .resizable()
                     .frame(width: 28, height: 24)
+            case .baseLanguage:
+                Image(systemName: "text.bubble.fill")
+                    .resizable()
+                    .frame(width: 24, height: 24)
             case .languages:
                 Image(systemName: "globe")
                     .resizable()
@@ -97,6 +107,7 @@ extension ProjectSettingsView {
         var title: String {
             switch self {
             case .technologies: "Technologies"
+            case .baseLanguage: "Base Language"
             case .languages: "Languages"
             case .members: "Members"
             case .owner: "Owner"
@@ -110,9 +121,14 @@ extension ProjectSettingsView {
         HStack(spacing: 16) {
             ZStack {
                 item.imageView
-                    .foregroundStyle(appColor(.white))
+                    .foregroundStyle(appColor(.black))
             }
-            .frame(width: 28)
+            .frame(width: 28, height: 28)
+            .padding(4)
+            .background {
+                appColor(.lightBlue)
+                    .clipShape(.rect(cornerRadius: 4))
+            }
             VStack(alignment: .leading) {
                 Text(item.title)
                     .apply(.regular, size: .S, color: .white)

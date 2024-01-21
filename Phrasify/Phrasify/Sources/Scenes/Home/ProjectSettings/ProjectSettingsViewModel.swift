@@ -32,6 +32,10 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProt
         coordinator.showSelectedLanguages(project: project)
     }
 
+    func onBaseLanguageTapped() {
+
+    }
+
     func onIntegrationTapped() {
         coordinator.showProjectIntegration(project: project)
     }
