@@ -34,14 +34,24 @@ struct ChangePasswordView: View {
                 .focused($focusedTextField, equals: .currentPassword)
                 .disabled(viewModel.state == .newPassword)
             ZStack {
-                if viewModel.state == .newPassword {
+                if viewModel.shouldShowNewPassword {
                     AppTextField(type: .newPassword, text: $viewModel.newPassword)
                         .focused($focusedTextField, equals: .newPassword)
                         .transition(.move(edge: .top))
                         .onAppear(perform: setNewPasswordFocus)
                 }
             }
-            .opacity(viewModel.state == .currentPassword ? 0 : 1)
+            .opacity(viewModel.shouldShowNewPassword ? 1 : 0)
+            ZStack {
+                if viewModel.shouldShowConfirmNewPassword {
+                    AppTextField(type: .confirmPassword, text: $viewModel.confirmNewPassword)
+                        .focused($focusedTextField, equals: .confirmPassword)
+                        .transition(.move(edge: .top))
+                        .onAppear(perform: setConfirmNewPasswordFocus)
+                }
+            }
+            .opacity(viewModel.shouldShowConfirmNewPassword ? 1 : 0)
+            PasswordValidationView(validationHandler: viewModel.passwordValidationHandler)
         }
         .animation(.easeInOut, value: viewModel.state)
         .padding(16)
@@ -65,6 +75,10 @@ struct ChangePasswordView: View {
 
     private func setNewPasswordFocus() {
         focusedTextField = .newPassword
+    }
+
+    private func setConfirmNewPasswordFocus() {
+        focusedTextField = .confirmPassword
     }
 }
 

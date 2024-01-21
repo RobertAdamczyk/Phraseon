@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 final class ChangePasswordViewModel: ObservableObject {
 
@@ -14,14 +15,25 @@ final class ChangePasswordViewModel: ObservableObject {
     @Published private(set) var state: State
     @Published var currentPassword: String = ""
     @Published var newPassword: String = ""
+    @Published var confirmNewPassword: String = ""
+
+    var shouldShowNewPassword: Bool {
+        state == .newPassword || state == .confirmNewPassword
+    }
+
+    var shouldShowConfirmNewPassword: Bool {
+        state == .confirmNewPassword
+    }
 
     var primaryButtonText: String {
         switch state {
-        case .currentPassword: return "Continue"
-        case .newPassword: return "Change password"
+        case .currentPassword, .newPassword: return "Continue"
+        case .confirmNewPassword: return "Change password"
         case .unavailable: return "Understood"
         }
     }
+
+    let passwordValidationHandler = PasswordValidationHandler()
 
     private let coordinator: ChangePasswordCoordinator
 
@@ -30,6 +42,7 @@ final class ChangePasswordViewModel: ObservableObject {
     }
 
     private let authenticationProvider: AuthenticationProvider
+    private let cancelBag = CancelBag()
 
     init(authenticationProvider: AuthenticationProvider, coordinator: ChangePasswordCoordinator) {
         self.coordinator = coordinator
@@ -40,6 +53,7 @@ final class ChangePasswordViewModel: ObservableObject {
             case .google: return .unavailable
             }
         }()
+        setupPasswordTextSubscriber()
     }
 
     @MainActor
@@ -51,14 +65,30 @@ final class ChangePasswordViewModel: ObservableObject {
                 try await coordinator.dependencies.authenticationRepository.reauthenticate(email: email, password: currentPassword)
                 state = .newPassword
             case .newPassword:
+                state = .confirmNewPassword
+            case .confirmNewPassword:
+                if case .failure = passwordValidationHandler.validate(password: newPassword, confirmPassword: confirmNewPassword) { return }
                 try await coordinator.dependencies.authenticationRepository.updatePassword(to: newPassword)
+                ToastView.showSuccess(message: "Your password has been successfully changed.")
                 coordinator.popView()
             case .unavailable:
                 coordinator.popView()
             }
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler: AuthenticationErrorHandler = .init(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
+    }
+
+    private func setupPasswordTextSubscriber() {
+        Publishers.MergeMany($newPassword, $confirmNewPassword, $currentPassword)
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: { [weak self] _ in
+                DispatchQueue.main.async {
+                    self?.passwordValidationHandler.resetValidation()
+                }
+            })
+            .store(in: cancelBag)
     }
 }
 
@@ -68,5 +98,6 @@ extension ChangePasswordViewModel {
         case unavailable // for example google login
         case currentPassword
         case newPassword
+        case confirmNewPassword
     }
 }

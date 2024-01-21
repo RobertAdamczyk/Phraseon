@@ -16,7 +16,7 @@ struct AuthenticationErrorHandler {
         guard let authError = error as? AuthErrorCode else { return nil }
         switch authError.code {
         case .wrongPassword, .invalidEmail, .invalidCredential:
-            return "The email address or password you entered is incorrect. Please check and try again."
+            return "The credentials you entered are incorrect. Please check and try again."
         case .userDisabled:
             return "Your account has been disabled. Please contact support for assistance."
         case .emailAlreadyInUse:
