@@ -29,11 +29,16 @@ private struct ActivityViewModifier: ViewModifier {
                         .frame(width: 160, height: 160)
                         .background {
                             RoundedRectangle(cornerRadius: 16)
-                                .fill(appColor(.white))
+                                .fill(appColor(.lightGray))
                         }
                 }
                 .ignoresSafeArea()
             }
         }
     }
+}
+
+#Preview {
+    appColor(.black).ignoresSafeArea()
+        .activitable(true)
 }
