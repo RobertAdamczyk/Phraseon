@@ -48,9 +48,10 @@ final class SelectBaseLanguageViewModel: ObservableObject {
 
     @MainActor
     func onSaveButtonTapped() async {
+        guard let selectedBaseLanguage else { return }
         switch context {
         case .settings(let project):
-            guard let selectedBaseLanguage, let projectId = project.id else { return }
+            guard let projectId = project.id else { return }
             do {
                 try await coordinator.dependencies.cloudRepository.setBaseLanguage(.init(projectId: projectId,
                                                                                          baseLanguage: selectedBaseLanguage))
@@ -59,7 +60,6 @@ final class SelectBaseLanguageViewModel: ObservableObject {
                 ToastView.showError(message: error.localizedDescription)
             }
         case .createProject(let name, let languages):
-            guard let selectedBaseLanguage else { return }
             coordinator.showSelectTechnology(name: name, languages: languages, baseLanguage: selectedBaseLanguage)
         }
 
