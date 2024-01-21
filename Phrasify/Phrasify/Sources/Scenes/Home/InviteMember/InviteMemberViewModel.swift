@@ -13,6 +13,10 @@ final class InviteMemberViewModel: ObservableObject {
 
     @Published var email: String = ""
 
+    var shouldPrimaryButtonDisabled: Bool {
+        email.isEmpty
+    }
+
     private let project: Project
     private let coordinator: InviteMemberCoordinator
 
@@ -28,7 +32,13 @@ final class InviteMemberViewModel: ObservableObject {
             try checkIsUserAlreadyProjectMember(userId: user.id)
             coordinator.showSelectMemberRole(email: email, project: project, user: user)
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            if let appError = error as? AppError {
+                switch appError {
+                case .alreadyMember: ToastView.showError(message: "This user is already a member of the project. Please add a different user or manage existing members.")
+                case .notFound: ToastView.showError(message: "We couldn't find a user with the provided email address. Please double-check the email and try again.")
+                default: ToastView.showGeneralError()
+                }
+            }
         }
     }
 
