@@ -41,6 +41,7 @@ final class ProfileDeleteWarningViewModel: ObservableObject {
             } else {
                 try await coordinator.dependencies.authenticationRepository.deleteUser()
                 coordinator.dismissSheet()
+                ToastView.showSuccess(message: "Your account has been successfully deleted. We're sorry to see you go.")
             }
         } catch {
             coordinator.dismissSheet()

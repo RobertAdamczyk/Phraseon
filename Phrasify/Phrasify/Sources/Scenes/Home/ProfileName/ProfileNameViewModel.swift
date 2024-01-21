@@ -31,6 +31,7 @@ final class ProfileNameViewModel: ObservableObject {
         guard let userId else { return }
         do {
             try await coordinator.dependencies.firestoreRepository.setProfileName(userId: userId, name: name, surname: surname)
+            ToastView.showSuccess(message: "Your profile has been successfully updated.")
             coordinator.popView()
         } catch {
             ToastView.showError(message: error.localizedDescription)
