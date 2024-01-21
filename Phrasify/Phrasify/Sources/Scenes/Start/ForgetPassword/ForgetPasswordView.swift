@@ -12,15 +12,20 @@ struct ForgetPasswordView: View {
     @ObservedObject var viewModel: ForgetPasswordViewModel
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 32) {
-            AppTitle(title: "Forget Password?",
-                     subtitle: "Type your email address and we will send you a link to reset your password.")
-            AppTextField(type: .email, text: $viewModel.email)
+        VStack(spacing: 0) {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 32) {
+                    AppTitle(title: "Forget Password?",
+                             subtitle: "Type your email address and we will send you a link to reset your password.")
+                    AppTextField(type: .email, text: $viewModel.email)
+                    ValidationView(validationHandler: viewModel.emailValidationHandler)
+                }
+                .padding(16)
+            }
             AppButton(style: .fill("Send Email", .lightBlue), action: .async(viewModel.onSendEmailTapped))
-            Spacer()
+                .padding(16)
         }
-        .padding(16)
-        .background(appColor(.black))
+        .toolbarRole(.editor)
     }
 }
 

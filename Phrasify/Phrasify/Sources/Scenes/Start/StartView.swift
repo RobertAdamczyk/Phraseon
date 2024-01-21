@@ -31,7 +31,6 @@ struct StartView: View {
             }
         }
         .padding(16)
-        .background(appColor(.black))
     }
 }
 

@@ -11,20 +11,33 @@ struct LoginView: View {
 
     @ObservedObject var viewModel: LoginViewModel
 
+    @FocusState private var focusedField: AppTextField.TType?
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 32) {
-            AppTitle(title: "Login in to Phrasify")
-            AppTextField(type: .email, text: $viewModel.email)
-            AppTextField(type: .password, text: $viewModel.password)
-            AppButton(style: .text("Forget Password?"), action: .main(viewModel.onForgetPasswordTapped))
-            AppButton(style: .fill("Login", .lightBlue), action:  .async(viewModel.onLoginTapped))
-            AppDivider(with: "OR")
-            GoogleButton(action: viewModel.onLoginWithGoogleTapped)
-            Spacer()
+        VStack(spacing: 0) {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 32) {
+                    AppTitle(title: "Login in to Phrasify")
+                    AppTextField(type: .email, text: $viewModel.email)
+                        .focused($focusedField, equals: .email)
+                    AppTextField(type: .password, text: $viewModel.password)
+                        .focused($focusedField, equals: .password)
+                    AppButton(style: .text("Forget Password?"), action: .main(viewModel.onForgetPasswordTapped))
+
+                }
+                .padding(16)
+            }
+            VStack(spacing: 32) {
+                if focusedField == nil {
+                    GoogleButton(action: viewModel.onLoginWithGoogleTapped)
+                    AppDivider(with: "OR")
+                }
+                AppButton(style: .fill("Login", .lightBlue), action:  .async(viewModel.onLoginTapped))
+            }
+            .padding(16)
         }
-        .padding(16)
-        .background(appColor(.black))
         .activitable(viewModel.shouldShowActivityView)
+        .toolbarRole(.editor)
     }
 }
 

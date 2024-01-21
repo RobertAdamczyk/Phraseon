@@ -13,14 +13,20 @@ final class ForgetPasswordViewModel: ObservableObject {
 
     @Published var email: String = ""
 
+    let emailValidationHandler = EmailValidationHandler()
+
     private let coordinator: ForgetPasswordCoordinator
+
+    private let cancelBag = CancelBag()
 
     init(coordinator: ForgetPasswordCoordinator) {
         self.coordinator = coordinator
+        setupEmailTextSubscriber()
     }
 
     @MainActor
     func onSendEmailTapped() async {
+        guard case .success = emailValidationHandler.validate(email: email) else { return }
         do {
             try await coordinator.dependencies.authenticationRepository.sendResetPassword(email: email)
             coordinator.popView()
@@ -29,6 +35,17 @@ final class ForgetPasswordViewModel: ObservableObject {
             let errorHandler: AuthenticationErrorHandler = .init(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)
         }
+    }
+
+    private func setupEmailTextSubscriber() {
+        $email
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: { [weak self] _ in
+                DispatchQueue.main.async {
+                    self?.emailValidationHandler.resetValidation()
+                }
+            })
+            .store(in: cancelBag)
     }
 }
 

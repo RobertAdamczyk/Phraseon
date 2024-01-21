@@ -26,6 +26,7 @@ struct SetPasswordView: View {
                       action: .async(viewModel.onCreateAccountTapped))
             .padding(16)
         }
+        .toolbarRole(.editor)
     }
 }
 
