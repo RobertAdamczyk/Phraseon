@@ -44,8 +44,10 @@ extension CreateProjectCoordinator: FullScreenCoverActions {
 
 extension CreateProjectCoordinator: SelectTechnologyActions {
 
-    func showSelectTechnology(name: String, languages: [Language]) {
-        let viewModel = SelectTechnologyViewModel(coordinator: self, context: .createProject(projectName: name, languages: languages))
+    func showSelectTechnology(name: String, languages: [Language], baseLanguage: Language) {
+        let viewModel = SelectTechnologyViewModel(coordinator: self, context: .createProject(projectName: name,
+                                                                                             languages: languages,
+                                                                                             baseLanguage: baseLanguage))
         let view: NavigationView = .selectTechnology(viewModel: viewModel)
         navigationViews.append(view)
     }
@@ -63,7 +65,17 @@ extension CreateProjectCoordinator: SelectLanguageActions {
         navigationViews.append(view)
     }
 
+    func showSelectBaseLanguage(name: String, languages: [Language]) {
+        let viewModel = SelectBaseLanguageViewModel(coordinator: self, context: .createProject(name: name, languages: languages))
+        let view: NavigationView = .selectBaseLanguage(viewModel: viewModel)
+        navigationViews.append(view)
+    }
+
     func showSelectedLanguages(project: Project) {
+        // empty implementation
+    }
+
+    func showSelectedBaseLanguage(project: Project) {
         // empty implementation
     }
 }
@@ -73,6 +85,7 @@ extension CreateProjectCoordinator {
     enum NavigationView: Identifiable, Equatable, Hashable {
 
         case selectLanguage(viewModel: SelectLanguageViewModel)
+        case selectBaseLanguage(viewModel: SelectBaseLanguageViewModel)
         case selectTechnology(viewModel: SelectTechnologyViewModel)
 
         static func == (lhs: CreateProjectCoordinator.NavigationView, rhs: CreateProjectCoordinator.NavigationView) -> Bool {
@@ -87,6 +100,7 @@ extension CreateProjectCoordinator {
             switch self {
             case .selectLanguage: return "001"
             case .selectTechnology: return "002"
+            case .selectBaseLanguage: return "003"
             }
         }
     }

@@ -73,10 +73,10 @@ final class SelectTechnologyViewModel: ObservableObject {
                 try await coordinator.dependencies.cloudRepository.setProjectTechnologies(.init(projectId: projectId, 
                                                                                                 technologies: selectedTechnologies))
                 coordinator.popView()
-            case .createProject(let projectName, let languages):
+            case .createProject(let projectName, let languages, let baseLanguage):
                 try await coordinator.dependencies.cloudRepository.createProject(.init(name: projectName,
                                                                                        languages: languages,
-                                                                                       baseLanguage: languages.last ?? .english,
+                                                                                       baseLanguage: baseLanguage,
                                                                                        technologies: selectedTechnologies))
                 coordinator.dismissFullScreenCover()
             }
@@ -90,6 +90,6 @@ extension SelectTechnologyViewModel {
 
     enum Context {
         case settings(project: Project)
-        case createProject(projectName: String, languages: [Language])
+        case createProject(projectName: String, languages: [Language], baseLanguage: Language)
     }
 }

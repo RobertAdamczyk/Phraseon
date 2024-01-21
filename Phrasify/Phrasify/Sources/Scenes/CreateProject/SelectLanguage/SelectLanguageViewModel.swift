@@ -77,7 +77,7 @@ final class SelectLanguageViewModel: ObservableObject {
                 ToastView.showError(message: error.localizedDescription)
             }
         case .createProject(let name):
-            coordinator.showSelectTechnology(name: name, languages: selectedLanguages)
+            coordinator.showSelectBaseLanguage(name: name, languages: selectedLanguages)
         }
     }
 }

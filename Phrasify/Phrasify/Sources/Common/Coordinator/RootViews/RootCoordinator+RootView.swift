@@ -33,6 +33,7 @@ extension RootCoordinator {
                                 case .keyDetail(let viewModel): KeyDetailView(viewModel: viewModel)
                                 case .editContentKey(let viewModel): EnterContentKeyView(viewModel: viewModel)
                                 case .projectIntegration(let viewModel): ProjectIntegrationView(viewModel: viewModel)
+                                case .selectBaseLanguage(let viewModel): SelectBaseLanguageView(viewModel: viewModel)
                                 }
                             }
                     }

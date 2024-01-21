@@ -38,7 +38,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func dismissFullScreenCover() { /*empty*/ }
     func showProjectDetails(project: Project) { /*empty*/ }
     func showSelectLanguage(name: String) { /*empty*/ }
-    func showSelectTechnology(name: String, languages: [Language]) { /*empty*/ }
+    func showSelectTechnology(name: String, languages: [Language], baseLanguage: Language) { /*empty*/ }
     func dismiss() { /*empty*/ }
     func dismissSheet() { /*empty*/ }
 
@@ -61,6 +61,8 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showProjectIntegration(project: Project) { }
     func showDeleteKeyWarning(project: Project, key: Key) { }
     func showLeaveProjectInformation() {}
+    func showSelectedBaseLanguage(project: Project) {}
+    func showSelectBaseLanguage(name: String, languages: [Language]) {}
 }
 
 #endif

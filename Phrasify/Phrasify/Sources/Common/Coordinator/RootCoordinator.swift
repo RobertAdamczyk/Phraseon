@@ -207,7 +207,17 @@ extension RootCoordinator: SelectLanguageActions {
         navigationViews.append(view)
     }
 
+    func showSelectedBaseLanguage(project: Project) {
+        let viewModel = SelectBaseLanguageViewModel(coordinator: self, context: .settings(project: project))
+        let view: NavigationView = .selectBaseLanguage(viewModel: viewModel)
+        navigationViews.append(view)
+    }
+
     func showSelectLanguage(name: String) {
+        // empty implementation
+    }
+
+    func showSelectBaseLanguage(name: String, languages: [Language]) {
         // empty implementation
     }
 }
@@ -220,7 +230,7 @@ extension RootCoordinator: SelectTechnologyActions {
         navigationViews.append(view)
     }
 
-    func showSelectTechnology(name: String, languages: [Language]) {
+    func showSelectTechnology(name: String, languages: [Language], baseLanguage: Language) {
         // empty implementation
     }
 }
@@ -241,6 +251,7 @@ extension RootCoordinator {
         case keyDetail(viewModel: KeyDetailViewModel)
         case editContentKey(viewModel: EnterContentKeyViewModel)
         case projectIntegration(viewModel: ProjectIntegrationViewModel)
+        case selectBaseLanguage(viewModel: SelectBaseLanguageViewModel)
 
         static func == (lhs: RootCoordinator.NavigationView, rhs: RootCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -265,6 +276,7 @@ extension RootCoordinator {
             case .keyDetail: return "011"
             case .editContentKey: return "012"
             case .projectIntegration: return "013"
+            case .selectBaseLanguage: return "014"
             }
         }
     }
