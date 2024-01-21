@@ -15,7 +15,7 @@ struct AuthenticationErrorHandler {
     var localizedDescription: String? {
         guard let authError = error as? AuthErrorCode else { return nil }
         switch authError.code {
-        case .wrongPassword, .invalidEmail, .invalidCredential:
+        case .wrongPassword, .invalidCredential:
             return "The credentials you entered are incorrect. Please check and try again."
         case .userDisabled:
             return "Your account has been disabled. Please contact support for assistance."
@@ -35,6 +35,8 @@ struct AuthenticationErrorHandler {
             return "The phone number you entered is invalid. Please enter a valid phone number and try again."
         case .invalidVerificationCode:
             return "The verification code entered is incorrect. Please check the code and try again."
+        case .invalidEmail:
+            return "The email address is incorrectly formatted. Please ensure it meets the standard email format requirements."
         default:
             return "An unexpected error occurred. Please try again later. If the problem persists, contact our support team."
         }

@@ -67,7 +67,8 @@ final class ChangePasswordViewModel: ObservableObject {
             case .newPassword:
                 state = .confirmNewPassword
             case .confirmNewPassword:
-                if case .failure = passwordValidationHandler.validate(password: newPassword, confirmPassword: confirmNewPassword) { return }
+                guard case .success = passwordValidationHandler.validate(password: newPassword,
+                                                                         confirmPassword: confirmNewPassword) else { return }
                 try await coordinator.dependencies.authenticationRepository.updatePassword(to: newPassword)
                 ToastView.showSuccess(message: "Your password has been successfully changed.")
                 coordinator.popView()

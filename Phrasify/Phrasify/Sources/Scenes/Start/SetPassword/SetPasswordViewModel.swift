@@ -29,9 +29,7 @@ final class SetPasswordViewModel: ObservableObject {
 
     @MainActor
     func onCreateAccountTapped() async {
-        if case .failure = passwordValidationHandler.validate(password: password, confirmPassword: confirmPassword) {
-            return
-        }
+        guard case .success = passwordValidationHandler.validate(password: password, confirmPassword: confirmPassword) else { return }
         do {
             try await coordinator.dependencies.authenticationRepository.signUp(email: email, password: password)
             ToastView.showSuccess(message: "Account successfully created. Welcome in Phrasify!")

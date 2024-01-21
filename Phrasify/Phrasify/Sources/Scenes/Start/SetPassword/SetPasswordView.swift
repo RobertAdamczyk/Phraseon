@@ -18,7 +18,7 @@ struct SetPasswordView: View {
                     AppTitle(title: "Set your password")
                     AppTextField(type: .password, text: $viewModel.password)
                     AppTextField(type: .confirmPassword, text: $viewModel.confirmPassword)
-                    PasswordValidationView(validationHandler: viewModel.passwordValidationHandler)
+                    ValidationView(validationHandler: viewModel.passwordValidationHandler)
                 }
                 .padding(16)
             }

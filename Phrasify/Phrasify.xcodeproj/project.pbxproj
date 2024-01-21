@@ -347,8 +347,14 @@
 		55FE51A02B5B30BF0084617F /* UIApplication+KeyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519E2B5B30BF0084617F /* UIApplication+KeyWindow.swift */; };
 		55FE51A42B5CA9B90084617F /* PasswordValidationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A32B5CA9B90084617F /* PasswordValidationHandler.swift */; };
 		55FE51A52B5CA9B90084617F /* PasswordValidationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A32B5CA9B90084617F /* PasswordValidationHandler.swift */; };
-		55FE51A72B5CA9D60084617F /* PasswordValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A62B5CA9D60084617F /* PasswordValidationView.swift */; };
-		55FE51A82B5CA9D60084617F /* PasswordValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A62B5CA9D60084617F /* PasswordValidationView.swift */; };
+		55FE51A72B5CA9D60084617F /* ValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A62B5CA9D60084617F /* ValidationView.swift */; };
+		55FE51A82B5CA9D60084617F /* ValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A62B5CA9D60084617F /* ValidationView.swift */; };
+		55FE51AD2B5D1C830084617F /* ValidationHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51AC2B5D1C830084617F /* ValidationHandlerProtocol.swift */; };
+		55FE51AE2B5D1C830084617F /* ValidationHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51AC2B5D1C830084617F /* ValidationHandlerProtocol.swift */; };
+		55FE51B02B5D1DB50084617F /* ValidationErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51AF2B5D1DB50084617F /* ValidationErrorProtocol.swift */; };
+		55FE51B12B5D1DB50084617F /* ValidationErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51AF2B5D1DB50084617F /* ValidationErrorProtocol.swift */; };
+		55FE51B32B5D1DE50084617F /* EmailValidationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51B22B5D1DE50084617F /* EmailValidationHandler.swift */; };
+		55FE51B42B5D1DE50084617F /* EmailValidationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51B22B5D1DE50084617F /* EmailValidationHandler.swift */; };
 		55FF425E2B2A674A00F4D523 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF425D2B2A674A00F4D523 /* CancelBag.swift */; };
 		55FF425F2B2A677800F4D523 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF425D2B2A674A00F4D523 /* CancelBag.swift */; };
 		55FF42612B2B7E3400F4D523 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF42602B2B7E3400F4D523 /* StartViewModel.swift */; };
@@ -534,7 +540,10 @@
 		55FE519B2B5B1AC20084617F /* AuthenticationErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorHandler.swift; sourceTree = "<group>"; };
 		55FE519E2B5B30BF0084617F /* UIApplication+KeyWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+KeyWindow.swift"; sourceTree = "<group>"; };
 		55FE51A32B5CA9B90084617F /* PasswordValidationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationHandler.swift; sourceTree = "<group>"; };
-		55FE51A62B5CA9D60084617F /* PasswordValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationView.swift; sourceTree = "<group>"; };
+		55FE51A62B5CA9D60084617F /* ValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationView.swift; sourceTree = "<group>"; };
+		55FE51AC2B5D1C830084617F /* ValidationHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationHandlerProtocol.swift; sourceTree = "<group>"; };
+		55FE51AF2B5D1DB50084617F /* ValidationErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrorProtocol.swift; sourceTree = "<group>"; };
+		55FE51B22B5D1DE50084617F /* EmailValidationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationHandler.swift; sourceTree = "<group>"; };
 		55FF425D2B2A674A00F4D523 /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		55FF42602B2B7E3400F4D523 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		55FF42642B2B912B00F4D523 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -1280,7 +1289,10 @@
 			isa = PBXGroup;
 			children = (
 				55FE51A32B5CA9B90084617F /* PasswordValidationHandler.swift */,
-				55FE51A62B5CA9D60084617F /* PasswordValidationView.swift */,
+				55FE51B22B5D1DE50084617F /* EmailValidationHandler.swift */,
+				55FE51AC2B5D1C830084617F /* ValidationHandlerProtocol.swift */,
+				55FE51AF2B5D1DB50084617F /* ValidationErrorProtocol.swift */,
+				55FE51A62B5CA9D60084617F /* ValidationView.swift */,
 			);
 			path = PasswordValidation;
 			sourceTree = "<group>";
@@ -1547,12 +1559,13 @@
 				558074512B2E38110041160B /* Activitable.swift in Sources */,
 				553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */,
 				55854F9D2B57259300CC5480 /* SetProjectTechnologiesService.swift in Sources */,
+				55FE51B02B5D1DB50084617F /* ValidationErrorProtocol.swift in Sources */,
 				5560342F2B59C530000140BC /* ApproveTranslationService.swift in Sources */,
 				55909A232B58946400A77F21 /* Member+Permissions.swift in Sources */,
 				55FF426F2B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				5505C7EC2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,
 				552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */,
-				55FE51A72B5CA9D60084617F /* PasswordValidationView.swift in Sources */,
+				55FE51A72B5CA9D60084617F /* ValidationView.swift in Sources */,
 				55C279112B2A4B38005144F1 /* RootCoordinator.swift in Sources */,
 				55FF42612B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				55FF42902B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
@@ -1575,8 +1588,10 @@
 				55826A8A2B34C63900233D90 /* UserID.swift in Sources */,
 				55B841502B4CB67B007697AF /* IdentifiableUser.swift in Sources */,
 				55DE10582B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
+				55FE51AD2B5D1C830084617F /* ValidationHandlerProtocol.swift in Sources */,
 				5516EBE92B43609300C558B1 /* ChangePasswordView.swift in Sources */,
 				551AA4272B337D2900F0B1E2 /* AppTitle.swift in Sources */,
+				55FE51B32B5D1DE50084617F /* EmailValidationHandler.swift in Sources */,
 				55DE102D2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAB2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				55C279172B2A4BE7005144F1 /* Localized.swift in Sources */,
@@ -1714,12 +1729,13 @@
 				558074522B2E38110041160B /* Activitable.swift in Sources */,
 				55C278E72B2A3F3A005144F1 /* StartView.swift in Sources */,
 				55854F9E2B57259300CC5480 /* SetProjectTechnologiesService.swift in Sources */,
+				55FE51B12B5D1DB50084617F /* ValidationErrorProtocol.swift in Sources */,
 				556034302B59C530000140BC /* ApproveTranslationService.swift in Sources */,
 				55909A242B58946400A77F21 /* Member+Permissions.swift in Sources */,
 				55FF42702B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				5505C7ED2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,
 				55C278E82B2A3F3A005144F1 /* ForgetPasswordViewModel.swift in Sources */,
-				55FE51A82B5CA9D60084617F /* PasswordValidationView.swift in Sources */,
+				55FE51A82B5CA9D60084617F /* ValidationView.swift in Sources */,
 				55C278E92B2A3F3A005144F1 /* PhrasifyApp.swift in Sources */,
 				55FF42622B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				55FF42912B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
@@ -1742,8 +1758,10 @@
 				55826A8B2B34C63900233D90 /* UserID.swift in Sources */,
 				55B841512B4CB67B007697AF /* IdentifiableUser.swift in Sources */,
 				55DE10592B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
+				55FE51AE2B5D1C830084617F /* ValidationHandlerProtocol.swift in Sources */,
 				5516EBEA2B43609300C558B1 /* ChangePasswordView.swift in Sources */,
 				551AA4282B337D2900F0B1E2 /* AppTitle.swift in Sources */,
+				55FE51B42B5D1DE50084617F /* EmailValidationHandler.swift in Sources */,
 				55DE102E2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAC2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				55C2791B2B2A4C17005144F1 /* Localized.swift in Sources */,

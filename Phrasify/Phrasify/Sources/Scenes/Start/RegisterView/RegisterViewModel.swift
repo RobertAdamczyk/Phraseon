@@ -14,7 +14,10 @@ final class RegisterViewModel: ObservableObject, Activitable {
     @Published var email: String = ""
     @Published var shouldShowActivityView: Bool = false
 
+    let emailValidationHandler = EmailValidationHandler()
+
     private let coordinator: RegisterCoordinator
+    private let cancelBag = CancelBag()
 
     private lazy var googleUseCase: GoogleUseCase = {
         .init(authenticationRepository: coordinator.dependencies.authenticationRepository)
@@ -22,6 +25,7 @@ final class RegisterViewModel: ObservableObject, Activitable {
 
     init(coordinator: RegisterCoordinator) {
         self.coordinator = coordinator
+        setupEmailTextSubscriber()
     }
 
     func onLoginTapped() {
@@ -29,6 +33,7 @@ final class RegisterViewModel: ObservableObject, Activitable {
     }
 
     func onRegisterWithEmailTapped() {
+        guard case .success = emailValidationHandler.validate(email: email) else { return }
         coordinator.showSetPassword(email: email)
     }
 
@@ -53,5 +58,16 @@ final class RegisterViewModel: ObservableObject, Activitable {
             ToastView.showError(message: errorHandler.localizedDescription)
         }
         stopActivity()
+    }
+
+    private func setupEmailTextSubscriber() {
+        $email
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: { [weak self] _ in
+                DispatchQueue.main.async {
+                    self?.emailValidationHandler.resetValidation()
+                }
+            })
+            .store(in: cancelBag)
     }
 }

@@ -51,7 +51,7 @@ struct ChangePasswordView: View {
                 }
             }
             .opacity(viewModel.shouldShowConfirmNewPassword ? 1 : 0)
-            PasswordValidationView(validationHandler: viewModel.passwordValidationHandler)
+            ValidationView(validationHandler: viewModel.passwordValidationHandler)
         }
         .animation(.easeInOut, value: viewModel.state)
         .padding(16)

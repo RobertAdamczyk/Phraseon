@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-final class PasswordValidationHandler: ObservableObject {
+final class PasswordValidationHandler: ValidationHandlerProtocol {
 
-    enum ValidationError: Error {
+    enum ValidationError: ValidationErrorProtocol {
         case passwordsNotTheSame
         case passwordTooShort
 
