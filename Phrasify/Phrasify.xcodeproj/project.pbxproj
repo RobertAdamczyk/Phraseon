@@ -345,6 +345,10 @@
 		55FE519D2B5B1AC20084617F /* AuthenticationErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519B2B5B1AC20084617F /* AuthenticationErrorHandler.swift */; };
 		55FE519F2B5B30BF0084617F /* UIApplication+KeyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519E2B5B30BF0084617F /* UIApplication+KeyWindow.swift */; };
 		55FE51A02B5B30BF0084617F /* UIApplication+KeyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519E2B5B30BF0084617F /* UIApplication+KeyWindow.swift */; };
+		55FE51A42B5CA9B90084617F /* PasswordValidationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A32B5CA9B90084617F /* PasswordValidationHandler.swift */; };
+		55FE51A52B5CA9B90084617F /* PasswordValidationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A32B5CA9B90084617F /* PasswordValidationHandler.swift */; };
+		55FE51A72B5CA9D60084617F /* PasswordValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A62B5CA9D60084617F /* PasswordValidationView.swift */; };
+		55FE51A82B5CA9D60084617F /* PasswordValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A62B5CA9D60084617F /* PasswordValidationView.swift */; };
 		55FF425E2B2A674A00F4D523 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF425D2B2A674A00F4D523 /* CancelBag.swift */; };
 		55FF425F2B2A677800F4D523 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF425D2B2A674A00F4D523 /* CancelBag.swift */; };
 		55FF42612B2B7E3400F4D523 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF42602B2B7E3400F4D523 /* StartViewModel.swift */; };
@@ -529,6 +533,8 @@
 		55FE51972B5B15420084617F /* CloudResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudResponse.swift; sourceTree = "<group>"; };
 		55FE519B2B5B1AC20084617F /* AuthenticationErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorHandler.swift; sourceTree = "<group>"; };
 		55FE519E2B5B30BF0084617F /* UIApplication+KeyWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+KeyWindow.swift"; sourceTree = "<group>"; };
+		55FE51A32B5CA9B90084617F /* PasswordValidationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationHandler.swift; sourceTree = "<group>"; };
+		55FE51A62B5CA9D60084617F /* PasswordValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationView.swift; sourceTree = "<group>"; };
 		55FF425D2B2A674A00F4D523 /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		55FF42602B2B7E3400F4D523 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		55FF42642B2B912B00F4D523 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -1026,6 +1032,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55FE51A22B5CA94E0084617F /* PasswordValidation */,
 				5505C7F52B55EE9700806B4F /* StandardInformationView */,
 				5505C7EE2B55E6CC00806B4F /* StandardWarningView */,
 				5505C7DC2B55BE4C00806B4F /* SyncScript */,
@@ -1267,6 +1274,15 @@
 				55FE519B2B5B1AC20084617F /* AuthenticationErrorHandler.swift */,
 			);
 			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		55FE51A22B5CA94E0084617F /* PasswordValidation */ = {
+			isa = PBXGroup;
+			children = (
+				55FE51A32B5CA9B90084617F /* PasswordValidationHandler.swift */,
+				55FE51A62B5CA9D60084617F /* PasswordValidationView.swift */,
+			);
+			path = PasswordValidation;
 			sourceTree = "<group>";
 		};
 		55FF42632B2B912300F4D523 /* Home */ = {
@@ -1536,6 +1552,7 @@
 				55FF426F2B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				5505C7EC2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,
 				552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */,
+				55FE51A72B5CA9D60084617F /* PasswordValidationView.swift in Sources */,
 				55C279112B2A4B38005144F1 /* RootCoordinator.swift in Sources */,
 				55FF42612B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				55FF42902B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
@@ -1543,6 +1560,7 @@
 				553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */,
 				551AA40C2B334FB800F0B1E2 /* FullScreenCoverActions.swift in Sources */,
 				55FF426C2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
+				55FE51A42B5CA9B90084617F /* PasswordValidationHandler.swift in Sources */,
 				55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */,
 				5516EBEC2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
 				5516EBDF2B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
@@ -1701,6 +1719,7 @@
 				55FF42702B2B925400F4D523 /* StartCoordinator+RootView.swift in Sources */,
 				5505C7ED2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,
 				55C278E82B2A3F3A005144F1 /* ForgetPasswordViewModel.swift in Sources */,
+				55FE51A82B5CA9D60084617F /* PasswordValidationView.swift in Sources */,
 				55C278E92B2A3F3A005144F1 /* PhrasifyApp.swift in Sources */,
 				55FF42622B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				55FF42912B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
@@ -1708,6 +1727,7 @@
 				55C2791A2B2A4C11005144F1 /* RootCoordinator.swift in Sources */,
 				551AA40D2B334FB800F0B1E2 /* FullScreenCoverActions.swift in Sources */,
 				55FF426D2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
+				55FE51A52B5CA9B90084617F /* PasswordValidationHandler.swift in Sources */,
 				55C278EA2B2A3F3A005144F1 /* AppDivider.swift in Sources */,
 				5516EBED2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
 				5516EBE02B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,

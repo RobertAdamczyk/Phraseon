@@ -12,15 +12,20 @@ struct SetPasswordView: View {
     @ObservedObject var viewModel: SetPasswordViewModel
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 32) {
-            AppTitle(title: "Set your password")
-            AppTextField(type: .password, text: $viewModel.password)
-            AppTextField(type: .confirmPassword, text: $viewModel.confirmPassword)
-            AppButton(style: .fill("Create an Account", .lightBlue), action: .async(viewModel.onCreateAccountTapped))
-            Spacer()
+        VStack(spacing: 0) {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 32) {
+                    AppTitle(title: "Set your password")
+                    AppTextField(type: .password, text: $viewModel.password)
+                    AppTextField(type: .confirmPassword, text: $viewModel.confirmPassword)
+                    PasswordValidationView(validationHandler: viewModel.passwordValidationHandler)
+                }
+                .padding(16)
+            }
+            AppButton(style: .fill("Create an Account", .lightBlue), 
+                      action: .async(viewModel.onCreateAccountTapped))
+            .padding(16)
         }
-        .padding(16)
-        .background(appColor(.black))
     }
 }
 
