@@ -9,7 +9,7 @@ import SwiftUI
 
 final class SelectBaseLanguageViewModel: ObservableObject {
 
-    typealias SelectBaseLanguageCoordinator = Coordinator & SelectTechnologyActions
+    typealias SelectBaseLanguageCoordinator = Coordinator & SelectTechnologyActions & NavigationActions
 
     @Published var selectedBaseLanguage: Language?
 
@@ -50,8 +50,11 @@ final class SelectBaseLanguageViewModel: ObservableObject {
     func onSaveButtonTapped() async {
         switch context {
         case .settings(let project):
+            guard let selectedBaseLanguage, let projectId = project.id else { return }
             do {
-                print("XD")
+                try await coordinator.dependencies.cloudRepository.setBaseLanguage(.init(projectId: projectId,
+                                                                                         baseLanguage: selectedBaseLanguage))
+                coordinator.popView()
             } catch {
                 ToastView.showError(message: error.localizedDescription)
             }

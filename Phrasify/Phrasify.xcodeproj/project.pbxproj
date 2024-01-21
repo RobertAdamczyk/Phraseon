@@ -359,6 +359,8 @@
 		55FE51B82B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51B62B5D95B20084617F /* SelectBaseLanguageView.swift */; };
 		55FE51BA2B5D95BA0084617F /* SelectBaseLanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51B92B5D95BA0084617F /* SelectBaseLanguageViewModel.swift */; };
 		55FE51BB2B5D95BA0084617F /* SelectBaseLanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51B92B5D95BA0084617F /* SelectBaseLanguageViewModel.swift */; };
+		55FE51BD2B5DAD240084617F /* SetBaseLanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51BC2B5DAD240084617F /* SetBaseLanguageService.swift */; };
+		55FE51BE2B5DAD240084617F /* SetBaseLanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51BC2B5DAD240084617F /* SetBaseLanguageService.swift */; };
 		55FF425E2B2A674A00F4D523 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF425D2B2A674A00F4D523 /* CancelBag.swift */; };
 		55FF425F2B2A677800F4D523 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF425D2B2A674A00F4D523 /* CancelBag.swift */; };
 		55FF42612B2B7E3400F4D523 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF42602B2B7E3400F4D523 /* StartViewModel.swift */; };
@@ -550,6 +552,7 @@
 		55FE51B22B5D1DE50084617F /* EmailValidationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidationHandler.swift; sourceTree = "<group>"; };
 		55FE51B62B5D95B20084617F /* SelectBaseLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBaseLanguageView.swift; sourceTree = "<group>"; };
 		55FE51B92B5D95BA0084617F /* SelectBaseLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBaseLanguageViewModel.swift; sourceTree = "<group>"; };
+		55FE51BC2B5DAD240084617F /* SetBaseLanguageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBaseLanguageService.swift; sourceTree = "<group>"; };
 		55FF425D2B2A674A00F4D523 /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		55FF42602B2B7E3400F4D523 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		55FF42642B2B912B00F4D523 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -940,6 +943,7 @@
 				55854F9C2B57259300CC5480 /* SetProjectTechnologiesService.swift */,
 				55854F9F2B5726F200CC5480 /* LeaveProjectService.swift */,
 				55854FA22B57276600CC5480 /* DeleteProjectService.swift */,
+				55FE51BC2B5DAD240084617F /* SetBaseLanguageService.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -1601,6 +1605,7 @@
 				55DE103D2B4AB508001CB87F /* SelectMemberRoleActions.swift in Sources */,
 				55DE10412B4ABFC1001CB87F /* UserDetailView.swift in Sources */,
 				5513C24F2B325E2F004C1933 /* CreateProjectView.swift in Sources */,
+				55FE51BD2B5DAD240084617F /* SetBaseLanguageService.swift in Sources */,
 				551AA42A2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55826A8A2B34C63900233D90 /* UserID.swift in Sources */,
 				55B841502B4CB67B007697AF /* IdentifiableUser.swift in Sources */,
@@ -1773,6 +1778,7 @@
 				55DE103E2B4AB508001CB87F /* SelectMemberRoleActions.swift in Sources */,
 				55DE10422B4ABFC1001CB87F /* UserDetailView.swift in Sources */,
 				5513C2502B325E2F004C1933 /* CreateProjectView.swift in Sources */,
+				55FE51BE2B5DAD240084617F /* SetBaseLanguageService.swift in Sources */,
 				551AA42B2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55826A8B2B34C63900233D90 /* UserID.swift in Sources */,
 				55B841512B4CB67B007697AF /* IdentifiableUser.swift in Sources */,

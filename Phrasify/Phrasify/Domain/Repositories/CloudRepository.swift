@@ -42,6 +42,11 @@ final class CloudRepository {
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
+    func setBaseLanguage(_ requestModel: SetBaseLanguageService.RequestModel) async throws {
+        let service: SetBaseLanguageService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
+    }
+
     func setProjectTechnologies(_ requestModel: SetProjectTechnologiesService.RequestModel) async throws {
         let service: SetProjectTechnologiesService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
