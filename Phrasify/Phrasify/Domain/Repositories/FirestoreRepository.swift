@@ -25,7 +25,7 @@ final class FirestoreRepository {
 
     // MARK: Projects
 
-    func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Never> {
+    func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Error> {
         return db.collection(Collections.projects.rawValue).whereField(Project.CodingKeys.members.rawValue, arrayContains: userId)
                  .snapshotPublisher()
                  .map { snapshot in
@@ -33,23 +33,27 @@ final class FirestoreRepository {
                          try? document.data(as: Project.self)
                      }
                  }
-                 .catch { _ in Just<[Project]>([])}
+                 .mapError { error -> Error in
+                     return error
+                 }
                  .eraseToAnyPublisher()
     }
 
-    func getProjectPublisher(projectId: String) -> AnyPublisher<Project?, Never> {
+    func getProjectPublisher(projectId: String) -> AnyPublisher<Project?, Error> {
         return db.collection(Collections.projects.rawValue).document(projectId)
                  .snapshotPublisher()
                  .map { snapshot in
                      try? snapshot.data(as: Project.self)
                  }
-                 .catch { _ in Just<Project?>(nil)}
+                 .mapError { error -> Error in
+                     return error
+                 }
                  .eraseToAnyPublisher()
     }
 
     // MARK: Members
 
-    func getMembersPublisher(projectId: String) -> AnyPublisher<[Member], Never> {
+    func getMembersPublisher(projectId: String) -> AnyPublisher<[Member], Error> {
         return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.members.rawValue)
                  .snapshotPublisher()
                  .map { snapshot in
@@ -57,23 +61,27 @@ final class FirestoreRepository {
                          try? document.data(as: Member.self)
                      }
                  }
-                 .catch { _ in Just<[Member]>([])}
+                 .mapError { error -> Error in
+                     return error
+                 }
                  .eraseToAnyPublisher()
     }
 
-    func getMemberPublisher(userId: UserID, projectId: String) -> AnyPublisher<Member?, Never> {
+    func getMemberPublisher(userId: UserID, projectId: String) -> AnyPublisher<Member?, Error> {
         return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.members.rawValue).document(userId)
                  .snapshotPublisher()
                  .map { snapshot in
                      try? snapshot.data(as: Member.self)
                  }
-                 .catch { _ in Just<Member?>(nil)}
+                 .mapError { error -> Error in
+                     return error
+                 }
                  .eraseToAnyPublisher()
     }
 
     // MARK: Keys
 
-    func getKeysPublisher(projectId: String, keysOrder: KeysOrder) -> AnyPublisher<[Key], Never> {
+    func getKeysPublisher(projectId: String, keysOrder: KeysOrder) -> AnyPublisher<[Key], Error> {
         return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.keys.rawValue)
                  .order(by: keysOrder.value.field, descending: keysOrder.value.descending)
                  .snapshotPublisher()
@@ -82,29 +90,35 @@ final class FirestoreRepository {
                          try? document.data(as: Key.self)
                      }
                  }
-                 .catch { _ in Just<[Key]>([])}
+                 .mapError { error -> Error in
+                     return error
+                 }
                  .eraseToAnyPublisher()
     }
 
-    func getKeyPublisher(projectId: String, keyId: String) -> AnyPublisher<Key?, Never> {
+    func getKeyPublisher(projectId: String, keyId: String) -> AnyPublisher<Key?, Error> {
         return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.keys.rawValue).document(keyId)
                  .snapshotPublisher()
                  .map { snapshot in
                      try? snapshot.data(as: Key.self)
                  }
-                 .catch { _ in Just<Key?>(nil)}
+                 .mapError { error -> Error in
+                     return error
+                 }
                  .eraseToAnyPublisher()
     }
 
     // MARK: User
 
-    func getUserPublisher(userId: UserID) -> AnyPublisher<User?, Never> {
+    func getUserPublisher(userId: UserID) -> AnyPublisher<User?, Error> {
         return db.collection(Collections.users.rawValue).document(userId)
                  .snapshotPublisher()
                  .map { snapshot in
                      try? snapshot.data(as: User.self)
                  }
-                 .catch { _ in Just<User?>(nil)}
+                 .mapError { error -> Error in
+                     return error
+                 }
                  .eraseToAnyPublisher()
     }
 

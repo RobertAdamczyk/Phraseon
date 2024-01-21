@@ -71,7 +71,11 @@ final class ProjectMemberUseCase {
         guard let projectId = project.id, let userId = authenticationRepository.currentUser?.uid else { return }
         firestoreRepository.getMemberPublisher(userId: userId, projectId: projectId)
             .receive(on: RunLoop.main)
-            .sink { [weak self] member in
+            .sink { completion in
+                if case .failure = completion {
+                    ToastView.showGeneralError()
+                }
+            } receiveValue: { [weak self] member in
                 self?.member = member
             }
             .store(in: cancelBag)

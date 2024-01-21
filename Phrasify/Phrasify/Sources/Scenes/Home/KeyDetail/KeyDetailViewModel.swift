@@ -56,7 +56,11 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
         guard let projectId = project.id, let keyId = key.id else { return }
         coordinator.dependencies.firestoreRepository.getKeyPublisher(projectId: projectId, keyId: keyId)
             .receive(on: RunLoop.main)
-            .sink { [weak self] key in
+            .sink { completion in
+                if case .failure = completion {
+                    ToastView.showGeneralError()
+                }
+            } receiveValue: { [weak self] key in
                 guard let key else { return }
                 DispatchQueue.main.async {
                     self?.key = key

@@ -78,8 +78,14 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         keysTask?.cancel()
         keysTask = coordinator.dependencies.firestoreRepository.getKeysPublisher(projectId: projectId, keysOrder: selectedKeysOrder)
             .receive(on: RunLoop.main)
-            .sink(receiveValue: { [weak self] keys in
-                self?.keys = keys
-            })
+            .sink { completion in
+                if case .failure = completion {
+                    ToastView.showGeneralError()
+                }
+            } receiveValue: { [weak self] keys in
+                DispatchQueue.main.async {
+                    self?.keys = keys
+                }
+            }
     }
 }

@@ -45,9 +45,13 @@ final class HomeViewModel: ObservableObject {
         guard let userId else { return }
         coordinator.dependencies.firestoreRepository.getProjectsPublisher(userId: userId)
             .receive(on: RunLoop.main)
-            .sink(receiveValue: { [weak self] projects in
+            .sink { completion in
+                if case .failure = completion {
+                    ToastView.showGeneralError()
+                }
+            } receiveValue: { [weak self] projects in
                 self?.projects = projects
-            })
+            }
             .store(in: cancelBag)
     }
 }

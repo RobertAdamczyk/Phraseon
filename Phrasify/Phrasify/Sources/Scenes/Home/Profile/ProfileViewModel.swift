@@ -81,11 +81,15 @@ final class ProfileViewModel: ObservableObject {
         guard let userId else { return }
         coordinator.dependencies.firestoreRepository.getUserPublisher(userId: userId)
             .receive(on: RunLoop.main)
-            .sink(receiveValue: { [weak self] user in
+            .sink { completion in
+                if case .failure = completion {
+                    ToastView.showGeneralError()
+                }
+            } receiveValue: { [weak self] user in
                 DispatchQueue.main.async {
                     self?.user = user
                 }
-            })
+            }
             .store(in: cancelBag)
     }
 }

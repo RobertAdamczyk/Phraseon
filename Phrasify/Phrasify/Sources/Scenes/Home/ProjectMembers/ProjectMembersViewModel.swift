@@ -53,11 +53,15 @@ final class ProjectMembersViewModel: ObservableObject, ProjectMemberUseCaseProto
         guard let projectId = project.id else { return }
         coordinator.dependencies.firestoreRepository.getMembersPublisher(projectId: projectId)
             .receive(on: RunLoop.main)
-            .sink(receiveValue: { [weak self] members in
+            .sink { completion in
+                if case .failure = completion {
+                    ToastView.showGeneralError()
+                }
+            } receiveValue: { [weak self] members in
                 DispatchQueue.main.async {
                     self?.members = members.sorted(by: { $0.role.sortIndex < $1.role.sortIndex })
                 }
-            })
+            }
             .store(in: cancelBag)
     }
 }
