@@ -49,14 +49,14 @@ final class PhotoPickerHandler: ObservableObject {
                             try await self?.completion?(profileImage.uiImage)
                             self?.imageState = .success(profileImage.image)
                         } catch {
-                            ToastView.showError(message: error.localizedDescription)
+                            ToastView.showGeneralError()
                             self?.imageState = .empty
                         }
                     }
                 case .success(nil):
                     self.imageState = .empty
                 case .failure(let error):
-                    ToastView.showError(message: error.localizedDescription)
+                    ToastView.showGeneralError()
                     self.imageState = .empty
                 }
             }

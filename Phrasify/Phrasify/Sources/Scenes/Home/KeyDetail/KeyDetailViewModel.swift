@@ -48,7 +48,8 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
                                                                                         keyId: keyId,
                                                                                         language: language))
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler = ErrorHandler(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
     }
 
