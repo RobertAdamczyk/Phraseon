@@ -37,8 +37,10 @@ final class DeleteMemberWarningViewModel: StandardWarningProtocol {
             try await coordinator.dependencies.cloudRepository.deleteMember(.init(projectId: projectId,
                                                                                   userId: memberId))
             coordinator.dismissSheet()
+            ToastView.showSuccess(message: "Member successfully removed from the project.")
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler = ErrorHandler(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
             coordinator.dismissSheet()
         }
     }

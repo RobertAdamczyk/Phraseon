@@ -73,8 +73,10 @@ final class SelectLanguageViewModel: ObservableObject {
                 try await coordinator.dependencies.cloudRepository.setProjectLanguages(.init(projectId: projectId,
                                                                                              languages: selectedLanguages))
                 coordinator.popView()
+                ToastView.showSuccess(message: "Project languages successfully updated.")
             } catch {
-                ToastView.showError(message: error.localizedDescription)
+                let errorHandler = ErrorHandler(error: error)
+                ToastView.showError(message: errorHandler.localizedDescription)
             }
         case .createProject(let name):
             coordinator.showSelectBaseLanguage(name: name, languages: selectedLanguages)

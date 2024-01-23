@@ -73,6 +73,7 @@ final class EnterContentKeyViewModel: ObservableObject {
                                                                                    language: language,
                                                                                    translation: translation))
                 coordinator.dismissFullScreenCover()
+                ToastView.showSuccess(message: "Phrase successfully created.")
             case .edit(let key, _):
                 guard let keyId = key.id else { return }
                 try await coordinator.dependencies.cloudRepository.changeContentKey(.init(projectId: projectId, 
@@ -80,9 +81,11 @@ final class EnterContentKeyViewModel: ObservableObject {
                                                                                           language: language,
                                                                                           translation: translation))
                 coordinator.popView()
+                ToastView.showSuccess(message: "Phrase content updated successfully.")
             }
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler = ErrorHandler(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
     }
 }

@@ -73,15 +73,18 @@ final class SelectTechnologyViewModel: ObservableObject {
                 try await coordinator.dependencies.cloudRepository.setProjectTechnologies(.init(projectId: projectId, 
                                                                                                 technologies: selectedTechnologies))
                 coordinator.popView()
+                ToastView.showSuccess(message: "Technologies successfully updated for the project.")
             case .createProject(let projectName, let languages, let baseLanguage):
                 try await coordinator.dependencies.cloudRepository.createProject(.init(name: projectName,
                                                                                        languages: languages,
                                                                                        baseLanguage: baseLanguage,
                                                                                        technologies: selectedTechnologies))
                 coordinator.dismissFullScreenCover()
+                ToastView.showSuccess(message: "Project '\(projectName)' successfully created.")
             }
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler = ErrorHandler(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
     }
 }

@@ -32,7 +32,7 @@ final class ForgetPasswordViewModel: ObservableObject {
             coordinator.popView()
             ToastView.showSuccess(message: "An email with a password reset link has been sent. Please check your inbox.")
         } catch {
-            let errorHandler: AuthenticationErrorHandler = .init(error: error)
+            let errorHandler: ErrorHandler = .init(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)
         }
     }

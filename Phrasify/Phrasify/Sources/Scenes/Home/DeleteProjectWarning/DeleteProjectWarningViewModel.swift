@@ -35,8 +35,10 @@ final class DeleteProjectWarningViewModel: StandardWarningProtocol {
             try await coordinator.dependencies.cloudRepository.deleteProject(.init(projectId: projectId))
             coordinator.dismissSheet()
             coordinator.popToRoot()
+            ToastView.showSuccess(message: "Project successfully deleted.")
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler = ErrorHandler(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
             coordinator.dismissSheet()
         }
     }

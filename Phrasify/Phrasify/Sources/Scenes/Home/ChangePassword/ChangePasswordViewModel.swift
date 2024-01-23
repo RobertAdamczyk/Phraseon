@@ -76,7 +76,7 @@ final class ChangePasswordViewModel: ObservableObject {
                 coordinator.popView()
             }
         } catch {
-            let errorHandler: AuthenticationErrorHandler = .init(error: error)
+            let errorHandler: ErrorHandler = .init(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)
         }
     }

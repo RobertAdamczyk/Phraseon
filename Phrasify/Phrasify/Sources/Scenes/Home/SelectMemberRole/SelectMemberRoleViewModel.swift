@@ -58,15 +58,18 @@ final class SelectMemberRoleViewModel: ObservableObject {
                                                                                           projectId: projectId,
                                                                                           role: selectedRole))
                 coordinator.popView()
+                ToastView.showSuccess(message: "Member role successfully changed to \(selectedRole.title).")
             case .invite:
                 try await coordinator.dependencies.cloudRepository.addProjectMember(.init(userId: userId,
                                                                                           projectId: projectId,
                                                                                           role: selectedRole))
                 coordinator.dismissFullScreenCover()
+                ToastView.showSuccess(message: "Member successfully invited with the role of \(selectedRole.title).")
             }
 
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler = ErrorHandler(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
     }
 }

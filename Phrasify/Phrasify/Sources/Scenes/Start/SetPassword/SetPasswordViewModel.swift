@@ -34,7 +34,7 @@ final class SetPasswordViewModel: ObservableObject {
             try await coordinator.dependencies.authenticationRepository.signUp(email: email, password: password)
             ToastView.showSuccess(message: "Account successfully created. Welcome in Phrasify!")
         } catch {
-            let errorHandler: AuthenticationErrorHandler = .init(error: error)
+            let errorHandler: ErrorHandler = .init(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)
         }
     }

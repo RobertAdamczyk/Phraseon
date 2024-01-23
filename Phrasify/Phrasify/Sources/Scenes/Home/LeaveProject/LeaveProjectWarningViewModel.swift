@@ -35,8 +35,10 @@ final class LeaveProjectWarningViewModel: StandardWarningProtocol {
             try await coordinator.dependencies.cloudRepository.leaveProject(.init(projectId: projectId))
             coordinator.dismissSheet()
             coordinator.popToRoot()
+            ToastView.showSuccess(message: "Successfully left the project.")
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler = ErrorHandler(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
             coordinator.dismissSheet()
         }
     }

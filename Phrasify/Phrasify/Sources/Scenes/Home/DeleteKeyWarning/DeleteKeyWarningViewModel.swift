@@ -35,8 +35,10 @@ final class DeleteKeyWarningViewModel: StandardWarningProtocol {
             try await coordinator.dependencies.cloudRepository.deleteKey(.init(projectId: projectId, keyId: keyId))
             coordinator.dismissSheet()
             coordinator.popView()
+            ToastView.showSuccess(message: "Key successfully deleted.")
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler = ErrorHandler(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
             coordinator.dismissSheet()
         }
     }

@@ -341,8 +341,8 @@
 		55FB5F642B3E409B004D3720 /* KeyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F622B3E409B004D3720 /* KeyStatus.swift */; };
 		55FE51982B5B15420084617F /* CloudResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51972B5B15420084617F /* CloudResponse.swift */; };
 		55FE51992B5B15420084617F /* CloudResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51972B5B15420084617F /* CloudResponse.swift */; };
-		55FE519C2B5B1AC20084617F /* AuthenticationErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519B2B5B1AC20084617F /* AuthenticationErrorHandler.swift */; };
-		55FE519D2B5B1AC20084617F /* AuthenticationErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519B2B5B1AC20084617F /* AuthenticationErrorHandler.swift */; };
+		55FE519C2B5B1AC20084617F /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519B2B5B1AC20084617F /* ErrorHandler.swift */; };
+		55FE519D2B5B1AC20084617F /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519B2B5B1AC20084617F /* ErrorHandler.swift */; };
 		55FE519F2B5B30BF0084617F /* UIApplication+KeyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519E2B5B30BF0084617F /* UIApplication+KeyWindow.swift */; };
 		55FE51A02B5B30BF0084617F /* UIApplication+KeyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519E2B5B30BF0084617F /* UIApplication+KeyWindow.swift */; };
 		55FE51A42B5CA9B90084617F /* PasswordValidationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A32B5CA9B90084617F /* PasswordValidationHandler.swift */; };
@@ -543,7 +543,7 @@
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FB5F622B3E409B004D3720 /* KeyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatus.swift; sourceTree = "<group>"; };
 		55FE51972B5B15420084617F /* CloudResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudResponse.swift; sourceTree = "<group>"; };
-		55FE519B2B5B1AC20084617F /* AuthenticationErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorHandler.swift; sourceTree = "<group>"; };
+		55FE519B2B5B1AC20084617F /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		55FE519E2B5B30BF0084617F /* UIApplication+KeyWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+KeyWindow.swift"; sourceTree = "<group>"; };
 		55FE51A32B5CA9B90084617F /* PasswordValidationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidationHandler.swift; sourceTree = "<group>"; };
 		55FE51A62B5CA9D60084617F /* ValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationView.swift; sourceTree = "<group>"; };
@@ -1291,7 +1291,7 @@
 		55FE519A2B5B1AAA0084617F /* ErrorHandling */ = {
 			isa = PBXGroup;
 			children = (
-				55FE519B2B5B1AC20084617F /* AuthenticationErrorHandler.swift */,
+				55FE519B2B5B1AC20084617F /* ErrorHandler.swift */,
 			);
 			path = ErrorHandling;
 			sourceTree = "<group>";
@@ -1642,7 +1642,7 @@
 				550537912B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4212B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FB5F632B3E409B004D3720 /* KeyStatus.swift in Sources */,
-				55FE519C2B5B1AC20084617F /* AuthenticationErrorHandler.swift in Sources */,
+				55FE519C2B5B1AC20084617F /* ErrorHandler.swift in Sources */,
 				55FE51B72B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
 				55A7B3572B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
@@ -1815,7 +1815,7 @@
 				550537922B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4222B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FB5F642B3E409B004D3720 /* KeyStatus.swift in Sources */,
-				55FE519D2B5B1AC20084617F /* AuthenticationErrorHandler.swift in Sources */,
+				55FE519D2B5B1AC20084617F /* ErrorHandler.swift in Sources */,
 				55FE51B82B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
 				55A7B3582B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				559E2D572B4DEBB10009A25A /* KeyDetailView.swift in Sources */,

@@ -28,8 +28,10 @@ final class ChangeProjectOwnerViewModel: ObservableObject {
             try await coordinator.dependencies.cloudRepository.changeProjectOwner(.init(projectId: projectId,
                                                                                         newOwnerEmail: newProjectOwnerEmail))
             coordinator.popView()
+            ToastView.showSuccess(message: "Project owner successfully changed to \(newProjectOwnerEmail).")
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler = ErrorHandler(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
     }
 }
