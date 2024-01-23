@@ -121,14 +121,9 @@ extension ProjectSettingsView {
         HStack(spacing: 16) {
             ZStack {
                 item.imageView
-                    .foregroundStyle(appColor(.black))
+                    .foregroundStyle(appColor(.white))
             }
             .frame(width: 28, height: 28)
-            .padding(4)
-            .background {
-                appColor(.lightBlue)
-                    .clipShape(.rect(cornerRadius: 4))
-            }
             VStack(alignment: .leading) {
                 Text(item.title)
                     .apply(.regular, size: .S, color: .white)
