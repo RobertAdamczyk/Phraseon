@@ -53,6 +53,8 @@ struct ErrorHandler {
                 return "The verification code entered is incorrect. Please check the code and try again."
             case .invalidEmail:
                 return "The email address is incorrectly formatted. Please ensure it meets the standard email format requirements."
+            case .requiresRecentLogin:
+                return "Your security is our priority. To ensure it's really you, please re-authenticate by logging in again."
             default:
                 return "An unexpected error occurred. Please try again later. If the problem persists, contact our support team."
             }

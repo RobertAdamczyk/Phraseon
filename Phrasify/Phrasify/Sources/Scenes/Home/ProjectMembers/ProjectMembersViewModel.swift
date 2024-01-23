@@ -54,9 +54,7 @@ final class ProjectMembersViewModel: ObservableObject, ProjectMemberUseCaseProto
         coordinator.dependencies.firestoreRepository.getMembersPublisher(projectId: projectId)
             .receive(on: RunLoop.main)
             .sink { completion in
-                if case .failure = completion {
-                    ToastView.showGeneralError()
-                }
+                // empty implementation
             } receiveValue: { [weak self] members in
                 DispatchQueue.main.async {
                     self?.members = members.sorted(by: { $0.role.sortIndex < $1.role.sortIndex })

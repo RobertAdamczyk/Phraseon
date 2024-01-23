@@ -34,7 +34,7 @@ final class ProfileNameViewModel: ObservableObject {
             ToastView.showSuccess(message: "Your profile has been successfully updated.")
             coordinator.popView()
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            ToastView.showGeneralError()
         }
     }
 }

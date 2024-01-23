@@ -48,10 +48,8 @@ final class ProjectUseCase {
         guard let projectId = project.id else { return }
         firestoreRepository.getProjectPublisher(projectId: projectId)
             .receive(on: RunLoop.main)
-            .sink { completion in
-                if case .failure = completion {
-                    ToastView.showGeneralError()
-                }
+            .sink { _ in
+                // empty implemenation
             } receiveValue: { [weak self] project in
                 guard let project else { return }
                 DispatchQueue.main.async {

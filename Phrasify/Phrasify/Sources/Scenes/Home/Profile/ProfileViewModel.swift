@@ -69,7 +69,8 @@ final class ProfileViewModel: ObservableObject {
             try coordinator.dependencies.authenticationRepository.logout()
             ToastView.showSuccess(message: "Logged out successfully. See you again soon!")
         } catch {
-            ToastView.showError(message: error.localizedDescription)
+            let errorHandler = ErrorHandler(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
     }
 
@@ -81,10 +82,8 @@ final class ProfileViewModel: ObservableObject {
         guard let userId else { return }
         coordinator.dependencies.firestoreRepository.getUserPublisher(userId: userId)
             .receive(on: RunLoop.main)
-            .sink { completion in
-                if case .failure = completion {
-                    ToastView.showGeneralError()
-                }
+            .sink { _ in
+                // empty implementation
             } receiveValue: { [weak self] user in
                 DispatchQueue.main.async {
                     self?.user = user
