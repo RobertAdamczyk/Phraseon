@@ -117,6 +117,7 @@
 		551AA42F2B339FE000F0B1E2 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 551AA42E2B339FE000F0B1E2 /* FirebaseFirestoreCombine-Community */; };
 		551CA5102B60717D001859CA /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 551CA50F2B60717D001859CA /* FirebaseFunctions */; };
 		551CA5152B6072CF001859CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 551CA5142B6072CF001859CA /* GoogleService-Info.plist */; };
+		551CA51A2B60759E001859CA /* Glassfy in Frameworks */ = {isa = PBXBuildFile; productRef = 551CA5192B60759E001859CA /* Glassfy */; };
 		552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552785C12B27A5120098FE95 /* PhrasifyApp.swift */; };
 		552785C62B27A5140098FE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C52B27A5140098FE95 /* Assets.xcassets */; };
 		552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C92B27A5140098FE95 /* Preview Assets.xcassets */; };
@@ -146,6 +147,16 @@
 		556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A02B47594A0022B675 /* SelectLanguageActions.swift */; };
 		556977A42B475B440022B675 /* SelectTechnologyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A32B475B440022B675 /* SelectTechnologyActions.swift */; };
 		556977A52B475B440022B675 /* SelectTechnologyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A32B475B440022B675 /* SelectTechnologyActions.swift */; };
+		5570FF492B61752D0011208F /* GlassfyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF482B61752D0011208F /* GlassfyRepository.swift */; };
+		5570FF4A2B61752D0011208F /* GlassfyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF482B61752D0011208F /* GlassfyRepository.swift */; };
+		5570FF4D2B61B13C0011208F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4C2B61B13C0011208F /* PaywallView.swift */; };
+		5570FF4E2B61B13C0011208F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4C2B61B13C0011208F /* PaywallView.swift */; };
+		5570FF502B61B1460011208F /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4F2B61B1460011208F /* PaywallViewModel.swift */; };
+		5570FF512B61B1460011208F /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4F2B61B1460011208F /* PaywallViewModel.swift */; };
+		5570FF532B61B1FF0011208F /* PaywallCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF522B61B1FF0011208F /* PaywallCoordinator.swift */; };
+		5570FF542B61B1FF0011208F /* PaywallCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF522B61B1FF0011208F /* PaywallCoordinator.swift */; };
+		5570FF562B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */; };
+		5570FF572B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */; };
 		558074322B2CDF130041160B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 558074312B2CDF130041160B /* GoogleSignIn */; };
 		558074342B2CDF130041160B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 558074332B2CDF130041160B /* GoogleSignInSwift */; };
 		558074362B2CDF1E0041160B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 558074352B2CDF1E0041160B /* GoogleSignIn */; };
@@ -435,6 +446,7 @@
 		551AA4262B337D2900F0B1E2 /* AppTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTitle.swift; sourceTree = "<group>"; };
 		551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepository.swift; sourceTree = "<group>"; };
 		551CA5142B6072CF001859CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		551CA5162B607516001859CA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		552785BE2B27A5120098FE95 /* Phrasify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phrasify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		552785C12B27A5120098FE95 /* PhrasifyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasifyApp.swift; sourceTree = "<group>"; };
 		552785C52B27A5140098FE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -458,6 +470,11 @@
 		5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsViewModel.swift; sourceTree = "<group>"; };
 		556977A02B47594A0022B675 /* SelectLanguageActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageActions.swift; sourceTree = "<group>"; };
 		556977A32B475B440022B675 /* SelectTechnologyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyActions.swift; sourceTree = "<group>"; };
+		5570FF482B61752D0011208F /* GlassfyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassfyRepository.swift; sourceTree = "<group>"; };
+		5570FF4C2B61B13C0011208F /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		5570FF4F2B61B1460011208F /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
+		5570FF522B61B1FF0011208F /* PaywallCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallCoordinator.swift; sourceTree = "<group>"; };
+		5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		558074392B2CE6650041160B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		558074402B2CF08E0041160B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		558074442B2CF2780041160B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
@@ -588,6 +605,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551CA51A2B60759E001859CA /* Glassfy in Frameworks */,
 				558074322B2CDF130041160B /* GoogleSignIn in Frameworks */,
 				55A7B34C2B45CF970051BCF0 /* CachedAsyncImage in Frameworks */,
 				55C2790A2B2A4556005144F1 /* FirebaseAuth in Frameworks */,
@@ -868,6 +886,15 @@
 			path = ProjectSettings;
 			sourceTree = "<group>";
 		};
+		5570FF4B2B61B1200011208F /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				5570FF4C2B61B13C0011208F /* PaywallView.swift */,
+				5570FF4F2B61B1460011208F /* PaywallViewModel.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
 		558074432B2CF2640041160B /* GoogleSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -1057,6 +1084,7 @@
 		55C279082B2A4556005144F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				551CA5162B607516001859CA /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1091,6 +1119,7 @@
 				55C279102B2A4B38005144F1 /* RootCoordinator.swift */,
 				55C762352B27B52A008CBF30 /* StartCoordinator.swift */,
 				5513C2472B325DB1004C1933 /* CreateProjectCoordinator.swift */,
+				5570FF522B61B1FF0011208F /* PaywallCoordinator.swift */,
 				55DE102F2B4AAE62001CB87F /* InviteMemberCoordinator.swift */,
 				55826AA42B34FD5F00233D90 /* CreateKeyCoordinator.swift */,
 				55C2791C2B2A4C60005144F1 /* Coordinator.swift */,
@@ -1124,6 +1153,7 @@
 				5505379D2B44C5C30077912D /* StorageRepository.swift */,
 				55E960D82B3CD8E50016DA23 /* CloudRepository.swift */,
 				551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */,
+				5570FF482B61752D0011208F /* GlassfyRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1218,6 +1248,7 @@
 		55C7622D2B27AB1A008CBF30 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5570FF4B2B61B1200011208F /* Paywall */,
 				55826A9D2B34FAEB00233D90 /* CreateKey */,
 				5513C24D2B325E1C004C1933 /* CreateProject */,
 				55FF42632B2B912300F4D523 /* Home */,
@@ -1363,6 +1394,7 @@
 				5513C24A2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift */,
 				55DE10322B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift */,
 				55826AAA2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift */,
+				5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */,
 			);
 			path = RootViews;
 			sourceTree = "<group>";
@@ -1432,6 +1464,7 @@
 				55E960D62B3CD8D40016DA23 /* FirebaseFunctions */,
 				550537992B44C5B20077912D /* FirebaseStorage */,
 				55A7B34B2B45CF970051BCF0 /* CachedAsyncImage */,
+				551CA5192B60759E001859CA /* Glassfy */,
 			);
 			productName = Phrasify;
 			productReference = 55C278FC2B2A3F3A005144F1 /* Phrasify_InHouse.app */;
@@ -1466,6 +1499,7 @@
 				55C279292B2A5525005144F1 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				55A7B34A2B45CF970051BCF0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				551CA5182B60759E001859CA /* XCRemoteSwiftPackageReference "ios-sdk" */,
 			);
 			productRefGroup = 552785BF2B27A5120098FE95 /* Products */;
 			projectDirPath = "";
@@ -1540,6 +1574,7 @@
 				55DE102A2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				5516EBBC2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
 				55854F912B5720AC00CC5480 /* AddProjectMemberService.swift in Sources */,
+				5570FF502B61B1460011208F /* PaywallViewModel.swift in Sources */,
 				558074572B2E56E50041160B /* Project.swift in Sources */,
 				55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */,
 				55854F942B5721A600CC5480 /* ChangeMemberRoleService.swift in Sources */,
@@ -1568,6 +1603,7 @@
 				5513C24B2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55C279272B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5516EBC42B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
+				5570FF4D2B61B13C0011208F /* PaywallView.swift in Sources */,
 				55854F8B2B571DA100CC5480 /* CreateProjectService.swift in Sources */,
 				5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				5516EBCB2B40CF7F00C558B1 /* Triangle.swift in Sources */,
@@ -1590,6 +1626,7 @@
 				5505C7FA2B55EEB900806B4F /* StandardInformationProtocol.swift in Sources */,
 				55826A972B34D5F700233D90 /* ProjectDetailViewModel.swift in Sources */,
 				5516EBC72B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */,
+				5570FF532B61B1FF0011208F /* PaywallCoordinator.swift in Sources */,
 				555A7DE62B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */,
 				558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */,
 				558074512B2E38110041160B /* Activitable.swift in Sources */,
@@ -1613,6 +1650,7 @@
 				55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */,
 				5516EBEC2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
 				5516EBDF2B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
+				5570FF492B61752D0011208F /* GlassfyRepository.swift in Sources */,
 				55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
 				55DE104E2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
 				55DE103A2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,
@@ -1648,6 +1686,7 @@
 				55C279232B2A4D18005144F1 /* StartActions.swift in Sources */,
 				5505C7F32B55E6F100806B4F /* StandardWarningProtocol.swift in Sources */,
 				5516EBB62B3F2EF900C558B1 /* Technology+UI.swift in Sources */,
+				5570FF562B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */,
 				55826A9F2B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
 				5516EBC02B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */,
 				550537972B44C0DE0077912D /* ImageTransferable.swift in Sources */,
@@ -1713,6 +1752,7 @@
 				55DE102B2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
 				55854F922B5720AC00CC5480 /* AddProjectMemberService.swift in Sources */,
+				5570FF512B61B1460011208F /* PaywallViewModel.swift in Sources */,
 				558074582B2E56E50041160B /* Project.swift in Sources */,
 				55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */,
 				55854F952B5721A600CC5480 /* ChangeMemberRoleService.swift in Sources */,
@@ -1741,6 +1781,7 @@
 				5513C24C2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55C279282B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
+				5570FF4E2B61B13C0011208F /* PaywallView.swift in Sources */,
 				55854F8C2B571DA100CC5480 /* CreateProjectService.swift in Sources */,
 				5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				5516EBCC2B40CF7F00C558B1 /* Triangle.swift in Sources */,
@@ -1763,6 +1804,7 @@
 				5505C7FB2B55EEB900806B4F /* StandardInformationProtocol.swift in Sources */,
 				55826A982B34D5F700233D90 /* ProjectDetailViewModel.swift in Sources */,
 				5516EBC82B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */,
+				5570FF542B61B1FF0011208F /* PaywallCoordinator.swift in Sources */,
 				555A7DE72B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */,
 				558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */,
 				558074522B2E38110041160B /* Activitable.swift in Sources */,
@@ -1786,6 +1828,7 @@
 				55C278EA2B2A3F3A005144F1 /* AppDivider.swift in Sources */,
 				5516EBED2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
 				5516EBE02B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
+				5570FF4A2B61752D0011208F /* GlassfyRepository.swift in Sources */,
 				55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
 				55DE104F2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
 				55DE103B2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,
@@ -1821,6 +1864,7 @@
 				55C279242B2A4D18005144F1 /* StartActions.swift in Sources */,
 				5505C7F42B55E6F100806B4F /* StandardWarningProtocol.swift in Sources */,
 				5516EBB72B3F2EF900C558B1 /* Technology+UI.swift in Sources */,
+				5570FF572B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */,
 				55826AA02B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
 				5516EBC12B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */,
 				550537982B44C0DE0077912D /* ImageTransferable.swift in Sources */,
@@ -2171,6 +2215,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		551CA5182B60759E001859CA /* XCRemoteSwiftPackageReference "ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/glassfy/ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
 		558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -2230,6 +2282,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFunctions;
+		};
+		551CA5192B60759E001859CA /* Glassfy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 551CA5182B60759E001859CA /* XCRemoteSwiftPackageReference "ios-sdk" */;
+			productName = Glassfy;
 		};
 		558074312B2CDF130041160B /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
