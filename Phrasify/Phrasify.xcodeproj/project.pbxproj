@@ -157,6 +157,7 @@
 		5570FF542B61B1FF0011208F /* PaywallCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF522B61B1FF0011208F /* PaywallCoordinator.swift */; };
 		5570FF562B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */; };
 		5570FF572B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */; };
+		5570FF5D2B61CF1C0011208F /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 5570FF5C2B61CF1C0011208F /* Shimmer */; };
 		558074322B2CDF130041160B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 558074312B2CDF130041160B /* GoogleSignIn */; };
 		558074342B2CDF130041160B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 558074332B2CDF130041160B /* GoogleSignInSwift */; };
 		558074362B2CDF1E0041160B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 558074352B2CDF1E0041160B /* GoogleSignIn */; };
@@ -605,6 +606,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5570FF5D2B61CF1C0011208F /* Shimmer in Frameworks */,
 				551CA51A2B60759E001859CA /* Glassfy in Frameworks */,
 				558074322B2CDF130041160B /* GoogleSignIn in Frameworks */,
 				55A7B34C2B45CF970051BCF0 /* CachedAsyncImage in Frameworks */,
@@ -1465,6 +1467,7 @@
 				550537992B44C5B20077912D /* FirebaseStorage */,
 				55A7B34B2B45CF970051BCF0 /* CachedAsyncImage */,
 				551CA5192B60759E001859CA /* Glassfy */,
+				5570FF5C2B61CF1C0011208F /* Shimmer */,
 			);
 			productName = Phrasify;
 			productReference = 55C278FC2B2A3F3A005144F1 /* Phrasify_InHouse.app */;
@@ -1500,6 +1503,7 @@
 				558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				55A7B34A2B45CF970051BCF0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 				551CA5182B60759E001859CA /* XCRemoteSwiftPackageReference "ios-sdk" */,
+				5570FF5B2B61CF1C0011208F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
 			);
 			productRefGroup = 552785BF2B27A5120098FE95 /* Products */;
 			projectDirPath = "";
@@ -2223,6 +2227,14 @@
 				minimumVersion = 1.4.0;
 			};
 		};
+		5570FF5B2B61CF1C0011208F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
 		558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -2287,6 +2299,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 551CA5182B60759E001859CA /* XCRemoteSwiftPackageReference "ios-sdk" */;
 			productName = Glassfy;
+		};
+		5570FF5C2B61CF1C0011208F /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5570FF5B2B61CF1C0011208F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
 		};
 		558074312B2CDF130041160B /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
