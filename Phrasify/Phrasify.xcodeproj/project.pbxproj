@@ -125,6 +125,10 @@
 		552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
 		552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
 		552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
+		553722AD2B631DA00061CF52 /* CellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AC2B631DA00061CF52 /* CellBackground.swift */; };
+		553722AE2B631DA00061CF52 /* CellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AC2B631DA00061CF52 /* CellBackground.swift */; };
+		553722B02B631DC40061CF52 /* ViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AF2B631DC40061CF52 /* ViewBackground.swift */; };
+		553722B12B631DC40061CF52 /* ViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AF2B631DC40061CF52 /* ViewBackground.swift */; };
 		553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */; };
 		553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCD2B28FD890071A099 /* AppTextField.swift */; };
 		553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCF2B28FDD70071A099 /* AppDivider.swift */; };
@@ -455,6 +459,8 @@
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyActions.swift; sourceTree = "<group>"; };
+		553722AC2B631DA00061CF52 /* CellBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackground.swift; sourceTree = "<group>"; };
+		553722AF2B631DC40061CF52 /* ViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBackground.swift; sourceTree = "<group>"; };
 		553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
 		553F1BCD2B28FD890071A099 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 		553F1BCF2B28FDD70071A099 /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
@@ -852,6 +858,15 @@
 			path = LanguageView;
 			sourceTree = "<group>";
 		};
+		553722AA2B631D880061CF52 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				553722AC2B631DA00061CF52 /* CellBackground.swift */,
+				553722AF2B631DC40061CF52 /* ViewBackground.swift */,
+			);
+			path = Backgrounds;
+			sourceTree = "<group>";
+		};
 		553F1BD12B28FE700071A099 /* RegisterView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1094,6 +1109,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				553722AA2B631D880061CF52 /* Backgrounds */,
 				55FE51A22B5CA94E0084617F /* PasswordValidation */,
 				5505C7F52B55EE9700806B4F /* StandardInformationView */,
 				5505C7EE2B55E6CC00806B4F /* StandardWarningView */,
@@ -1706,6 +1722,7 @@
 				559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
 				551AA4162B33612500F0B1E2 /* Language.swift in Sources */,
 				558074452B2CF2780041160B /* GoogleButton.swift in Sources */,
+				553722B02B631DC40061CF52 /* ViewBackground.swift in Sources */,
 				55DE10332B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,
 				55854FA02B5726F200CC5480 /* LeaveProjectService.swift in Sources */,
 				55FF42682B2B914000F4D523 /* HomeViewModel.swift in Sources */,
@@ -1720,6 +1737,7 @@
 				556977A12B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55FE519F2B5B30BF0084617F /* UIApplication+KeyWindow.swift in Sources */,
 				55909A202B58798D00A77F21 /* KeyDetailView+ApproveButton.swift in Sources */,
+				553722AD2B631DA00061CF52 /* CellBackground.swift in Sources */,
 				55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				553F1BDD2B2907C10071A099 /* RegisterView.swift in Sources */,
 				55854F8E2B571FAB00CC5480 /* ChangeProjectOwnerService.swift in Sources */,
@@ -1884,6 +1902,7 @@
 				559E2D572B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
 				551AA4172B33612500F0B1E2 /* Language.swift in Sources */,
 				558074462B2CF2780041160B /* GoogleButton.swift in Sources */,
+				553722B12B631DC40061CF52 /* ViewBackground.swift in Sources */,
 				55DE10342B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,
 				55854FA12B5726F200CC5480 /* LeaveProjectService.swift in Sources */,
 				55FF42692B2B914100F4D523 /* HomeViewModel.swift in Sources */,
@@ -1898,6 +1917,7 @@
 				556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55FE51A02B5B30BF0084617F /* UIApplication+KeyWindow.swift in Sources */,
 				55909A212B58798D00A77F21 /* KeyDetailView+ApproveButton.swift in Sources */,
+				553722AE2B631DA00061CF52 /* CellBackground.swift in Sources */,
 				55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				55C278EF2B2A3F3A005144F1 /* RegisterView.swift in Sources */,
 				55854F8F2B571FAB00CC5480 /* ChangeProjectOwnerService.swift in Sources */,

@@ -94,9 +94,7 @@ struct PaywallView: View {
                 })
             }
         }
-        .background {
-            Color.init(red: 28/255, green: 27/255, blue: 30/255).ignoresSafeArea()
-        }
+        .applyViewBackground()
     }
 }
 
@@ -112,27 +110,7 @@ extension PaywallView {
             }
             .frame(maxWidth: .infinity)
             .frame(height: 128)
-            .background {
-                LinearGradient(gradient: Gradient(colors: [.init(red: 39/255,
-                                                                 green: 39/255,
-                                                                 blue: 39/255),
-                                                           .init(red: 46/255,
-                                                                 green: 46/255,
-                                                                 blue: 46/255)]),
-                               startPoint: .bottom, endPoint: .top)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(lineWidth: 2)
-                        .fill(LinearGradient(gradient: Gradient(colors: [.init(red: 39/255,
-                                                                               green: 39/255,
-                                                                               blue: 39/255),
-                                                                         .init(red: 70/255,
-                                                                               green: 70/255,
-                                                                               blue: 70/255)]),
-                                             startPoint: .bottom, endPoint: .top))
-                }
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .applyCellBackground()
         }
     }
 }
