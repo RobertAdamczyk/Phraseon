@@ -129,6 +129,8 @@
 		553722AE2B631DA00061CF52 /* CellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AC2B631DA00061CF52 /* CellBackground.swift */; };
 		553722B02B631DC40061CF52 /* ViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AF2B631DC40061CF52 /* ViewBackground.swift */; };
 		553722B12B631DC40061CF52 /* ViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AF2B631DC40061CF52 /* ViewBackground.swift */; };
+		553722B32B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */; };
+		553722B42B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */; };
 		553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */; };
 		553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCD2B28FD890071A099 /* AppTextField.swift */; };
 		553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCF2B28FDD70071A099 /* AppDivider.swift */; };
@@ -461,6 +463,7 @@
 		552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyActions.swift; sourceTree = "<group>"; };
 		553722AC2B631DA00061CF52 /* CellBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackground.swift; sourceTree = "<group>"; };
 		553722AF2B631DC40061CF52 /* ViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBackground.swift; sourceTree = "<group>"; };
+		553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallView+SubscriptionCell.swift"; sourceTree = "<group>"; };
 		553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
 		553F1BCD2B28FD890071A099 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 		553F1BCF2B28FDD70071A099 /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
@@ -907,6 +910,7 @@
 			isa = PBXGroup;
 			children = (
 				5570FF4C2B61B13C0011208F /* PaywallView.swift */,
+				553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */,
 				5570FF4F2B61B1460011208F /* PaywallViewModel.swift */,
 			);
 			path = Paywall;
@@ -1689,6 +1693,7 @@
 				55FE51B32B5D1DE50084617F /* EmailValidationHandler.swift in Sources */,
 				55DE102D2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAB2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
+				553722B32B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */,
 				55C279172B2A4BE7005144F1 /* Localized.swift in Sources */,
 				552CA7402B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */,
 				55854FB12B572C5B00CC5480 /* IsUserProjectOwnerService.swift in Sources */,
@@ -1869,6 +1874,7 @@
 				55FE51B42B5D1DE50084617F /* EmailValidationHandler.swift in Sources */,
 				55DE102E2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAC2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
+				553722B42B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */,
 				55C2791B2B2A4C17005144F1 /* Localized.swift in Sources */,
 				552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */,
 				55854FB22B572C5B00CC5480 /* IsUserProjectOwnerService.swift in Sources */,

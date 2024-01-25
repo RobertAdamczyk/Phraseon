@@ -27,33 +27,9 @@ struct PaywallView: View {
                             Button(action: {
                                 viewModel.onPlanTapped(subscription)
                             }, label: {
-                                SubscriptionCell {
-                                    VStack(alignment: .leading) {
-                                        Text(viewModel.getInfo(for: subscription).headline)
-                                            .apply(.semibold, size: .M, color: .white)
-                                        Text(viewModel.getInfo(for: subscription).price)
-                                            .apply(.bold, size: .H1, color: .white)
-                                        Spacer()
-                                        Text("Billed Monthly")
-                                            .apply(.regular, size: .S, color: .lightGray)
-                                    }
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .padding(.horizontal, 16)
-                                    .padding(.vertical, 8)
-                                }
-                                .overlay(alignment: .topTrailing) {
-                                    Circle()
-                                        .stroke(lineWidth: 3)
-                                        .frame(width: 24, height: 24)
-                                        .foregroundStyle(appColor(viewModel.selectedSubscriptionPlan == subscription ? .white : .lightGray))
-                                        .background {
-                                            Circle()
-                                                .foregroundStyle(appColor(.paleOrange))
-                                                .padding(5)
-                                                .opacity(viewModel.selectedSubscriptionPlan == subscription ? 1 : 0)
-                                        }
-                                        .padding(8)
-                                }
+                                SubscriptionCell(headline: viewModel.getInfo(for: subscription).headline,
+                                                 price: viewModel.getInfo(for: subscription).price,
+                                                 isSelected: viewModel.selectedSubscriptionPlan == subscription)
                             })
                         }
                     }
@@ -95,23 +71,6 @@ struct PaywallView: View {
             }
         }
         .applyViewBackground()
-    }
-}
-
-extension PaywallView {
-
-    struct SubscriptionCell<Content: View>: View {
-
-        @ViewBuilder var content: Content
-
-        var body: some View {
-            VStack(spacing: 8) {
-                content
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 128)
-            .applyCellBackground()
-        }
     }
 }
 
