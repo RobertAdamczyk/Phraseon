@@ -42,6 +42,7 @@ struct HomeView: View {
             }
         }
         .navigationTitle("Projects")
+        .applyViewBackground()
     }
 }
 
@@ -63,10 +64,7 @@ struct ProjectCellView: View {
             }
             .padding(16)
             .frame(height: 128)
-            .background {
-                appColor(.darkGray)
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .applyCellBackground()
         })
     }
 
@@ -93,10 +91,7 @@ struct AddProjectCellView: View {
             }
             .padding(16)
             .frame(height: 128)
-            .background {
-                appColor(.darkGray)
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .applyCellBackground()
         })
     }
 }
