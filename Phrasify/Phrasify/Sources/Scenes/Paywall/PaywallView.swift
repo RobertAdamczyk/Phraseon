@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Shimmer
 
 struct PaywallView: View {
 
@@ -22,7 +23,7 @@ struct PaywallView: View {
                     Text("Choose the plan that best fits your needs.")
                         .apply(.medium, size: .M, color: .white)
                     HStack(spacing: 16) {
-                        ForEach(SubscriptionStatus.buyable, id: \.self) { subscription in
+                        ForEach(SubscriptionPlan.allCases, id: \.self) { subscription in
                             Button(action: {
                                 viewModel.onPlanTapped(subscription)
                             }, label: {
@@ -52,30 +53,46 @@ struct PaywallView: View {
                                                 .opacity(viewModel.selectedSubscriptionPlan == subscription ? 1 : 0)
                                         }
                                         .padding(8)
-
                                 }
                             })
                         }
                     }
                     VStack(alignment: .leading, spacing: 16) {
-                        ForEach(viewModel.getPlan(for: viewModel.selectedSubscriptionPlan), id: \.self) { text in
-                            Label(text, systemImage: "checkmark")
+                        ForEach(PaywallViewModel.PlanDescription.allCases, id: \.self) { plan in
+                            Label {
+                                Text(plan.text)
+                            } icon: {
+                                ZStack {
+                                    Image(systemName: "checkmark")
+                                        .opacity(viewModel.plans.contains(plan) ? 1 : 0)
+                                        .foregroundStyle(appColor(.green))
+                                    Image(systemName: "xmark")
+                                        .opacity(viewModel.plans.contains(plan) ? 0 : 1)
+                                        .foregroundStyle(appColor(.red))
+                                }
+                            }
                         }
                     }
-                    .apply(.medium, size: .L, color: .white)
+                    .apply(.medium, size: .M, color: .white)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(16)
             }
             VStack(spacing: 16) {
-                AppButton(style: .fill("Subscribe Now", .lightBlue), action: .main({
-                    print("XD")
-                }))
-                AppButton(style: .text("Not now"), action: .main({
-                    print("XD")
-                }))
+                AppButton(style: .fill("Subscribe Now", .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
+                AppButton(style: .text("Restore Purchase"), action: .main(viewModel.onRestorePurchaseButtonTapped))
             }
             .padding(16)
+        }
+        .navigationTitle("Subscription")
+        .redacted(reason: viewModel.isLoading ? .placeholder : .invalidated)
+        .shimmering(active: viewModel.isLoading)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(action: viewModel.onCloseButtonTapped, label: {
+                    Image(systemName: "xmark").bold()
+                })
+            }
         }
         .background {
             Color.init(red: 28/255, green: 27/255, blue: 30/255).ignoresSafeArea()
@@ -115,6 +132,7 @@ extension PaywallView {
                                              startPoint: .bottom, endPoint: .top))
                 }
             }
+            .clipShape(RoundedRectangle(cornerRadius: 8))
         }
     }
 }
@@ -122,7 +140,6 @@ extension PaywallView {
 #Preview {
     NavigationView {
         PaywallView(coordinator: MockCoordinator())
-            .navigationTitle("Subscription")
     }
     .preferredColorScheme(.dark)
 }

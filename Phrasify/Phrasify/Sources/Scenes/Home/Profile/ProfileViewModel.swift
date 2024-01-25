@@ -53,7 +53,7 @@ final class ProfileViewModel: ObservableObject {
     }
 
     func onMembershipTapped() {
-
+        coordinator.presentPaywall()
     }
 
     func uploadProfileImage(_ uiImage: UIImage) async throws {

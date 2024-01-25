@@ -10,13 +10,25 @@ import Foundation
 enum SubscriptionStatus: String, Codable, CaseIterable {
 
     case trial = "TRIAL"
-    case basic = "BASIC"
-    case gold = "GOLD"
+    case premium = "PREMIUM"
 }
 
-extension SubscriptionStatus {
+enum SubscriptionPlan: String, Codable, CaseIterable {
 
-    static var buyable: [SubscriptionStatus] {
-        SubscriptionStatus.allCases.filter { $0 != .trial }
+    case basic = "BASIC"
+    case gold = "GOLD"
+
+    var skuId: String {
+        switch self {
+        case .basic: return "robert.adamczyk.phrasify.inhouse.subscription.basic"
+        case .gold: return "robert.adamczyk.phrasify.inhouse.subscription.gold"
+        }
+    }
+
+    var title: String {
+        switch self {
+        case .basic: return "Basic"
+        case .gold: return "Gold"
+        }
     }
 }

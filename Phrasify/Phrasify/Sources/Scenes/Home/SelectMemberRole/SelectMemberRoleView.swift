@@ -60,6 +60,6 @@ struct SelectMemberRole: View {
 #Preview {
     SelectMemberRole(viewModel: .init(coordinator: MockCoordinator(),
                                       project: .init(name: "", technologies: [], languages: [], baseLanguage: .polish, members: [], owner: ""),
-                                      context: .invite(user: .init(email: "", name: "", surname: "", createdAt: .now, subscriptionStatus: .basic, subscriptionValidUntil: .now))))
+                                      context: .invite(user: .init(email: "", name: "", surname: "", createdAt: .now, subscriptionStatus: .trial, subscriptionValidUntil: .now))))
     .preferredColorScheme(.dark)
 }

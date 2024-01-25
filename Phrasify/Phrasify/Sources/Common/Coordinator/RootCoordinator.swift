@@ -97,6 +97,10 @@ extension RootCoordinator: ProfileActions {
         let sheet: Sheet = .profileDeleteWarning(viewModel: viewModel)
         presentedSheet = sheet
     }
+
+    func presentPaywall() {
+        presentedFullScreenCover = .paywall
+    }
 }
 
 extension RootCoordinator: ProjectActions {
@@ -285,12 +289,14 @@ extension RootCoordinator {
         case createProject
         case createKey(Project)
         case inviteMember(Project)
+        case paywall
 
         var id: String {
             switch self {
             case .createProject: "001"
             case .createKey: "002"
             case .inviteMember: "003"
+            case .paywall: "004"
             }
         }
     }

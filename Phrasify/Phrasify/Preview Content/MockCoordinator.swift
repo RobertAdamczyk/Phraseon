@@ -63,6 +63,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showLeaveProjectInformation() {}
     func showSelectedBaseLanguage(project: Project) {}
     func showSelectBaseLanguage(name: String, languages: [Language]) {}
+    func presentPaywall() {}
 }
 
 #endif

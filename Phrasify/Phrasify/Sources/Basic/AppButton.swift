@@ -104,7 +104,7 @@ extension AppButton {
     }
 
     enum Action {
-        case main(() -> Void)
+        case main(@MainActor () -> Void)
         case async(() async -> Void)
     }
 }
