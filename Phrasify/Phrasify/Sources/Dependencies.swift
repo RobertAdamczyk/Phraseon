@@ -8,8 +8,9 @@
 import Foundation
 
 struct Dependencies {
-    var authenticationRepository: AuthenticationRepository
-    var firestoreRepository: FirestoreRepository
-    var cloudRepository: CloudRepository
-    var storageRepository: StorageRepository
+    let authenticationRepository: AuthenticationRepository
+    let firestoreRepository: FirestoreRepository
+    let cloudRepository: CloudRepository
+    let storageRepository: StorageRepository
+    let glassfyRepository: GlassfyRepository
 }

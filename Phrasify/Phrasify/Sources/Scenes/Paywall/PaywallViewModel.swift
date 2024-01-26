@@ -42,11 +42,14 @@ final class PaywallViewModel: ObservableObject {
     }
 
     private let coordinator: PaywallCoordinator
-    private let repository: GlassfyRepository
+    private lazy var syncSubscriptionUseCase: SyncSubscriptionUseCase = {
+        .init(firestoreRepository: coordinator.dependencies.firestoreRepository,
+              glassfyRepository: coordinator.dependencies.glassfyRepository,
+              authenticationRepository: coordinator.dependencies.authenticationRepository)
+    }()
 
     init(coordinator: PaywallCoordinator) {
         self.coordinator = coordinator
-        self.repository = .init()
         getSkus()
     }
 
@@ -66,7 +69,8 @@ final class PaywallViewModel: ObservableObject {
     func onRestorePurchaseButtonTapped() {
         Task {
             do {
-                try await repository.restorePurchase()
+                try await coordinator.dependencies.glassfyRepository.restorePurchase()
+                syncSubscriptionUseCase.sync()
             } catch {
                 ToastView.showGeneralError()
             }
@@ -77,7 +81,8 @@ final class PaywallViewModel: ObservableObject {
     func onSubscribeButtonTapped() async {
         guard let selectedSku else { return }
         do {
-            _ = try await repository.purchase(product: selectedSku)
+            _ = try await coordinator.dependencies.glassfyRepository.purchase(product: selectedSku)
+            syncSubscriptionUseCase.sync()
         } catch {
             ToastView.showGeneralError()
         }
@@ -102,7 +107,7 @@ final class PaywallViewModel: ObservableObject {
     private func getSkus() {
         Task {
             do {
-                let skus = try await repository.getOffers()
+                let skus = try await coordinator.dependencies.glassfyRepository.getOffers()
                 await MainActor.run {
                     self.state = .idle(skus, .basic)
                 }

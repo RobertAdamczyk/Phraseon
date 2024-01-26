@@ -15,14 +15,11 @@ enum SubscriptionStatus: String, Codable, CaseIterable {
 
 enum SubscriptionPlan: String, Codable, CaseIterable {
 
-    case basic = "BASIC"
-    case gold = "GOLD"
+    case basic = "robert.adamczyk.phrasify.inhouse.subscription.basic"
+    case gold = "robert.adamczyk.phrasify.inhouse.subscription.gold"
 
     var skuId: String {
-        switch self {
-        case .basic: return "robert.adamczyk.phrasify.inhouse.subscription.basic"
-        case .gold: return "robert.adamczyk.phrasify.inhouse.subscription.gold"
-        }
+        self.rawValue
     }
 
     var title: String {
@@ -31,4 +28,12 @@ enum SubscriptionPlan: String, Codable, CaseIterable {
         case .gold: return "Gold"
         }
     }
+
+    var sortIndex: Int {
+        switch self {
+        case .basic: return 0
+        case .gold: return 1
+        }
+    }
 }
+

@@ -23,10 +23,10 @@ final class ProfileViewModel: ObservableObject {
     }
 
     var subscriptionValidUntil: String {
-        guard let user else { return "-" }
+        guard let user, let validUntil = user.subscriptionValidUntil else { return "-" }
         let formatter = DateFormatter()
         formatter.dateStyle = .long
-        return formatter.string(from: user.subscriptionValidUntil)
+        return formatter.string(from: validUntil)
     }
 
     private let coordinator: ProfileCoordinator

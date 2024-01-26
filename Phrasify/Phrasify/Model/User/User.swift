@@ -15,8 +15,9 @@ struct User: Codable, Hashable, IdentifiableUser {
     var name: String
     var surname: String
     var createdAt: Date
-    var subscriptionStatus: SubscriptionStatus
-    var subscriptionValidUntil: Date
+    var subscriptionStatus: SubscriptionStatus?
+    var subscriptionPlan: SubscriptionPlan?
+    var subscriptionValidUntil: Date?
     var photoUrl: String?
 
     enum CodingKeys: String, CodingKey {
@@ -26,6 +27,7 @@ struct User: Codable, Hashable, IdentifiableUser {
         case surname
         case createdAt
         case subscriptionStatus
+        case subscriptionPlan
         case subscriptionValidUntil
         case photoUrl
     }
