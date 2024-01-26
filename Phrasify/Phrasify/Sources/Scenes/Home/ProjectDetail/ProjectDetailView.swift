@@ -52,6 +52,7 @@ struct ProjectDetailView: View {
                 })
             }
         }
+        .applyViewBackground()
     }
 
     @ViewBuilder
@@ -71,7 +72,7 @@ struct ProjectDetailView: View {
             .padding(16)
             .background {
                 UnevenRoundedRectangle(topLeadingRadius: 32, bottomLeadingRadius: 32)
-                    .fill(appColor(.lightBlue))
+                    .fill(appColor(.lightBlue).gradient)
             }
             .padding(.bottom, 32)
         })

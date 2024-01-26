@@ -12,14 +12,14 @@ struct AppButton: View {
 
     let style: Style
     let action: Action
-    let disabled: Bool
 
     @State private var loading: Bool = false
 
-    init(style: Style, action: Action, disabled: Bool = false) {
+    @Environment(\.isEnabled) var isEnabled
+
+    init(style: Style, action: Action) {
         self.style = style
         self.action = action
-        self.disabled = disabled
     }
 
     var body: some View {
@@ -38,7 +38,7 @@ struct AppButton: View {
         } label: {
             makeBody()
         }
-        .disabled(disabled)
+        .disabled(!isEnabled)
     }
 
     @ViewBuilder
@@ -71,9 +71,9 @@ struct AppButton: View {
     private func makeBackground() -> some View {
         switch style {
         case .fill(_, let color):
-            if disabled {
+            if !isEnabled {
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(appColor(.darkGray))
+                    .fill(appColor(.lightGray))
             } else {
                 RoundedRectangle(cornerRadius: 16)
                     .fill(color.rawValue.gradient)
@@ -116,6 +116,7 @@ extension AppButton {
         }))
         AppButton(style: .fill("TEST 1", .lightBlue), action: .async({
             try? await Task.sleep(nanoseconds: 2_000_000_000)
-        }), disabled: true)
+        }))
+        .disabled(true)
     }
 }

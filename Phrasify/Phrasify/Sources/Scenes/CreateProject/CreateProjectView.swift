@@ -24,17 +24,18 @@ struct CreateProjectView: View {
                 }
                 .padding([.horizontal, .top], 16)
             }
-            AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped),
-                      disabled: viewModel.shouldPrimaryButtonDisabled)
-            .padding(16)
+            AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped))
+                .disabled(viewModel.shouldPrimaryButtonDisabled)
+                .padding(16)
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: viewModel.onCloseButtonTapped, label: {
-                    Image(systemName: "xmark")
+                    Image(systemName: "xmark").bold()
                 })
             }
         }
         .navigationTitle("Create a new project")
+        .applyViewBackground()
     }
 }

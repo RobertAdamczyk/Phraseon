@@ -36,8 +36,7 @@ extension ProjectDetailView {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(8)
             .padding(.horizontal, 8)
-            .background { appColor(.darkGray) }
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .applyCellBackground()
         }
     }
 }
