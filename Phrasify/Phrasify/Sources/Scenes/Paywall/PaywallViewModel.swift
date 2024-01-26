@@ -77,7 +77,7 @@ final class PaywallViewModel: ObservableObject {
     func onSubscribeButtonTapped() async {
         guard let selectedSku else { return }
         do {
-            try await repository.purchase(product: selectedSku)
+            _ = try await repository.purchase(product: selectedSku)
         } catch {
             ToastView.showGeneralError()
         }

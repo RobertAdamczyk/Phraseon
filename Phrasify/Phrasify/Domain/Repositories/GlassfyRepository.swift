@@ -18,10 +18,10 @@ final class GlassfyRepository {
         return []
     }
 
-    func purchase(product: Glassfy.Sku) async throws {
+    func purchase(product: Glassfy.Sku) async throws -> Glassfy.Permission {
         let response = try await Glassfy.purchase(sku: product)
         if let permission = response.permissions["PremiumAccess"], permission.isValid {
-            return
+            return permission
         } else {
             throw AppError.notFound
         }
@@ -31,7 +31,12 @@ final class GlassfyRepository {
         try await Glassfy.restorePurchases()
     }
 
-    func checkPermission() async throws -> Glassfy.Permissions {
-        return try await Glassfy.permissions()
+    func checkPermission() async throws -> Glassfy.Permission {
+        let permissions = try await Glassfy.permissions()
+        if let permission = permissions["PremiumAccess"] {
+            return permission
+        } else {
+            throw AppError.notFound
+        }
     }
 }
