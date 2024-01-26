@@ -27,10 +27,7 @@ struct EnterContentKeyView: View {
                         .multilineTextAlignment(.leading)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(12)
-                        .background {
-                            RoundedRectangle(cornerRadius: 16)
-                                .foregroundStyle(appColor(.darkGray))
-                        }
+                        .applyCellBackground()
                     }
                 }
                 .padding(16)
@@ -40,6 +37,7 @@ struct EnterContentKeyView: View {
         }
         .onAppear(perform: makeTextFieldFocused)
         .navigationTitle("Content")
+        .applyViewBackground()
     }
 
     private func makeTextFieldFocused() {

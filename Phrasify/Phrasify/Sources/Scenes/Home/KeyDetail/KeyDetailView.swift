@@ -36,6 +36,7 @@ struct KeyDetailView: View {
                 }
             }
         }
+        .applyViewBackground()
     }
 
     private func makeIdentifierRow() -> some View {
@@ -48,7 +49,7 @@ struct KeyDetailView: View {
             }
             .padding(.vertical, 6)
             .padding(.horizontal, 12)
-            .background(content: makeBackground)
+            .applyCellBackground()
             VStack(alignment: .trailing, spacing: 12) {
                 if let keyId = viewModel.key.id {
                     Text(keyId)
@@ -59,7 +60,7 @@ struct KeyDetailView: View {
             }
             .padding(.vertical, 6)
             .padding(.horizontal, 12)
-            .background(content: makeBackground)
+            .applyCellBackground()
             AppDivider(color: appColor(.darkGray))
                 .padding(.top, 16)
         }
@@ -94,7 +95,7 @@ struct KeyDetailView: View {
             }
             .padding(.vertical, 6)
             .padding(.horizontal, 12)
-            .background(content: makeBackground)
+            .applyCellBackground()
         }
     }
 
@@ -118,11 +119,6 @@ struct KeyDetailView: View {
                 .frame(width: 18, height: 22)
                 .apply(.medium, size: .M, color: .paleOrange)
         }
-    }
-
-    private func makeBackground() -> some View {
-        RoundedRectangle(cornerRadius: 8)
-            .foregroundStyle(appColor(.darkGray))
     }
 }
 

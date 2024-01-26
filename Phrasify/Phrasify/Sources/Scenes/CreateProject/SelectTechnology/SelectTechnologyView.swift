@@ -26,13 +26,13 @@ struct SelectTechnologyView: View {
         }
         .padding(16)
         .navigationTitle("Technologies")
+        .applyViewBackground()
     }
 
     @ViewBuilder
     private var titleView: some View {
         AppTitle(subtitle: viewModel.subtitle)
         .padding(.bottom, 16)
-        .background(appColor(.black))
     }
 
     @ViewBuilder
@@ -57,7 +57,6 @@ struct SelectTechnologyView: View {
         }
         .scrollClipDisabled(true)
         .padding(.vertical, 16)
-        .background(appColor(.black))
     }
 
     @ViewBuilder
@@ -75,8 +74,7 @@ struct SelectTechnologyView: View {
             .padding(16)
         }
         .scrollClipDisabled(true)
-        .background(appColor(.darkGray))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .applyCellBackground()
     }
 
     @ViewBuilder

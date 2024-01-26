@@ -40,6 +40,7 @@ struct CreateKeyView: View {
             }
         }
         .navigationTitle("Add phrase")
+        .applyViewBackground()
     }
 
     private func makeTextFieldFocused() {

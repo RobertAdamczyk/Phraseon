@@ -27,9 +27,6 @@ struct LanguageView: View {
         }
         .padding(.vertical, 6)
         .padding(.horizontal, 12)
-        .background {
-            RoundedRectangle(cornerRadius: 8)
-                .foregroundStyle(appColor(.darkGray))
-        }
+        .applyCellBackground()
     }
 }
