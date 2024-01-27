@@ -82,7 +82,9 @@ struct ErrorHandler {
                 return "Invalid language. Please choose a valid language."
             case .technologyNotValid:
                 return "Invalid technology. Please choose a valid technology option."
-            case .cannotDeleteSelf, .databaseError:
+            case .cannotDeleteSelf:
+                return "Can't remove yourself. Use 'Leave Project' instead."
+            case .databaseError:
                 return nil
             }
         }
