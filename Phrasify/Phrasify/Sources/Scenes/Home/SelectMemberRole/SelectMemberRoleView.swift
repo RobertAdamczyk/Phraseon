@@ -40,12 +40,13 @@ struct SelectMemberRole: View {
     }
 
     private func makeRoleRow(for role: Role) -> some View {
-        HStack {
+        HStack(spacing: 16) {
+            SelectableCircle(isSelected: viewModel.selectedRole == role)
             Text(role.title)
                 .apply(.medium, size: .L, color: viewModel.selectedRole == role ? .white : .lightGray)
             Spacer()
         }
-        .padding(12)
+        .padding(16)
         .applyCellBackground()
         .overlay {
             RoundedRectangle(cornerRadius: 8)

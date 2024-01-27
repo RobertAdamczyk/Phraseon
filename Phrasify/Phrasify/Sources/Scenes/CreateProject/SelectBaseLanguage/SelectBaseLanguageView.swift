@@ -38,19 +38,22 @@ struct SelectBaseLanguageView: View {
 
     private func makeLanguageRow(for language: Language) -> some View {
         HStack(spacing: 16) {
-            Image(language.rawValue)
-                .resizable()
-                .frame(width: 24, height: 24)
-                .padding(2)
-                .background {
-                    Circle()
-                        .fill(appColor(.white))
-                }
-            Text(language.localizedTitle)
-                .apply(.medium, size: .L, color: viewModel.selectedBaseLanguage == language ? .white : .lightGray)
+            SelectableCircle(isSelected: viewModel.selectedBaseLanguage == language)
+            HStack(spacing: 8) {
+                Image(language.rawValue)
+                    .resizable()
+                    .frame(width: 24, height: 24)
+                    .padding(2)
+                    .background {
+                        Circle()
+                            .fill(appColor(.white))
+                    }
+                Text(language.localizedTitle)
+                    .apply(.medium, size: .L, color: viewModel.selectedBaseLanguage == language ? .white : .lightGray)
+            }
             Spacer()
         }
-        .padding(12)
+        .padding(16)
         .applyCellBackground()
         .overlay {
             RoundedRectangle(cornerRadius: 8)

@@ -34,16 +34,7 @@ extension PaywallView {
             .frame(height: 128)
             .applyCellBackground()
             .overlay(alignment: .topTrailing) {
-                Circle()
-                    .stroke(lineWidth: 3)
-                    .frame(width: 24, height: 24)
-                    .foregroundStyle(appColor(isSelected ? .white : .lightGray))
-                    .background {
-                        Circle()
-                            .foregroundStyle(appColor(.paleOrange))
-                            .padding(5)
-                            .opacity(isSelected ? 1 : 0)
-                    }
+                SelectableCircle(isSelected: isSelected)
                     .padding(8)
             }
         }

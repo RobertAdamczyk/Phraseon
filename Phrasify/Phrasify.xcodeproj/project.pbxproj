@@ -147,6 +147,8 @@
 		555A7DE72B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */; };
 		5560342F2B59C530000140BC /* ApproveTranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560342E2B59C530000140BC /* ApproveTranslationService.swift */; };
 		556034302B59C530000140BC /* ApproveTranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560342E2B59C530000140BC /* ApproveTranslationService.swift */; };
+		5561C5C42B65A76500C815BC /* SelectableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561C5C32B65A76500C815BC /* SelectableCircle.swift */; };
+		5561C5C52B65A76500C815BC /* SelectableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561C5C32B65A76500C815BC /* SelectableCircle.swift */; };
 		5569779B2B4747170022B675 /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779A2B4747170022B675 /* ProjectSettingsView.swift */; };
 		5569779C2B4747170022B675 /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779A2B4747170022B675 /* ProjectSettingsView.swift */; };
 		5569779E2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */; };
@@ -479,6 +481,7 @@
 		553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
 		555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUseCase.swift; sourceTree = "<group>"; };
 		5560342E2B59C530000140BC /* ApproveTranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveTranslationService.swift; sourceTree = "<group>"; };
+		5561C5C32B65A76500C815BC /* SelectableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCircle.swift; sourceTree = "<group>"; };
 		5569779A2B4747170022B675 /* ProjectSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsView.swift; sourceTree = "<group>"; };
 		5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsViewModel.swift; sourceTree = "<group>"; };
 		556977A02B47594A0022B675 /* SelectLanguageActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageActions.swift; sourceTree = "<group>"; };
@@ -900,6 +903,14 @@
 			path = SetPassword;
 			sourceTree = "<group>";
 		};
+		5561C5C22B65A75300C815BC /* SelectableCircle */ = {
+			isa = PBXGroup;
+			children = (
+				5561C5C32B65A76500C815BC /* SelectableCircle.swift */,
+			);
+			path = SelectableCircle;
+			sourceTree = "<group>";
+		};
 		556977992B4746F60022B675 /* ProjectSettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1117,6 +1128,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5561C5C22B65A75300C815BC /* SelectableCircle */,
 				553722AA2B631D880061CF52 /* Backgrounds */,
 				55FE51A22B5CA94E0084617F /* PasswordValidation */,
 				5505C7F52B55EE9700806B4F /* StandardInformationView */,
@@ -1732,6 +1744,7 @@
 				559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
 				551AA4162B33612500F0B1E2 /* Language.swift in Sources */,
 				558074452B2CF2780041160B /* GoogleButton.swift in Sources */,
+				5561C5C42B65A76500C815BC /* SelectableCircle.swift in Sources */,
 				553722B02B631DC40061CF52 /* ViewBackground.swift in Sources */,
 				55DE10332B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,
 				55854FA02B5726F200CC5480 /* LeaveProjectService.swift in Sources */,
@@ -1914,6 +1927,7 @@
 				559E2D572B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
 				551AA4172B33612500F0B1E2 /* Language.swift in Sources */,
 				558074462B2CF2780041160B /* GoogleButton.swift in Sources */,
+				5561C5C52B65A76500C815BC /* SelectableCircle.swift in Sources */,
 				553722B12B631DC40061CF52 /* ViewBackground.swift in Sources */,
 				55DE10342B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,
 				55854FA12B5726F200CC5480 /* LeaveProjectService.swift in Sources */,
