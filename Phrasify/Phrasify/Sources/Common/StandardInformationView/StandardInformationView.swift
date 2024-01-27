@@ -15,17 +15,20 @@ struct StandardInformationView<ViewModel: StandardInformationProtocol>: View {
 
     var body: some View {
         GeometryReader { geometry in
-            VStack {
+            ZStack {
+                Color.clear
+                    .applyCellBackground()
+                    .ignoresSafeArea()
                 informationPage
-            }
-            .background() {
-                GeometryReader { geometry in
-                    Path { path in
-                        DispatchQueue.main.async {
-                            contentHeight = geometry.size.height
+                    .background() {
+                        GeometryReader { geometry in
+                            Path { path in
+                                DispatchQueue.main.async {
+                                    contentHeight = geometry.size.height
+                                }
+                            }
                         }
                     }
-                }
             }
         }
         .presentationDetents(contentHeight == .zero ? [.medium] : [.height(contentHeight)])
@@ -51,7 +54,6 @@ struct StandardInformationView<ViewModel: StandardInformationProtocol>: View {
         }
         .padding(16)
         .padding(.top, 16)
-        .applyCellBackground()
     }
 }
 
