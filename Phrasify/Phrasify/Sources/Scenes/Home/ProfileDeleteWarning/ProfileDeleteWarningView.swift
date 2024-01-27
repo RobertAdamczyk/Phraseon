@@ -27,6 +27,7 @@ struct ProfileDeleteWarningView: View {
                     }
                     .scrollTargetLayout()
                 }
+                .applyCellBackground()
                 .scrollDisabled(true)
                 .scrollIndicators(.hidden)
                 .scrollTargetBehavior(.paging)

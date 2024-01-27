@@ -51,6 +51,7 @@ struct StandardInformationView<ViewModel: StandardInformationProtocol>: View {
         }
         .padding(16)
         .padding(.top, 16)
+        .applyCellBackground()
     }
 }
 

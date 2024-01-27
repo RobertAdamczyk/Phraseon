@@ -55,6 +55,7 @@ struct StandardWarningView<ViewModel: StandardWarningProtocol>: View {
         }
         .padding(16)
         .padding(.top, 16)
+        .applyCellBackground()
     }
 }
 
