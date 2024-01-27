@@ -47,5 +47,6 @@ struct ProjectMembersView: View {
             }
         }
         .navigationTitle("Members")
+        .applyViewBackground()
     }
 }

@@ -62,6 +62,7 @@ struct ProjectSettingsView: View {
             .padding(16)
         }
         .navigationTitle("Settings")
+        .applyViewBackground()
     }
 }
 
@@ -139,10 +140,6 @@ extension ProjectSettingsView {
         }
         .padding(.horizontal, 8)
         .padding(8)
-        .background {
-            Rectangle()
-                .fill(appColor(.darkGray))
-        }
-        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .applyCellBackground()
     }
 }

@@ -59,8 +59,7 @@ public struct ToastView: View {
             }
             .padding(16)
             .padding(.top, safeAreaInsets.top)
-            .background(appColor(.darkGray))
-            .clipShape(.rect(bottomLeadingRadius: 16, bottomTrailingRadius: 16))
+            .applyCellBackground()
             .offset(y: startAnimation ? toastSize.height : 0)
             .animation(.easeInOut, value: startAnimation)
             .offset(y: dragOffset)

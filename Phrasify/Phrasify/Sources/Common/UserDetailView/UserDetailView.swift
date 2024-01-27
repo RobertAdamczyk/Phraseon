@@ -53,11 +53,7 @@ struct UserDetailView: View {
         }
         .padding(.horizontal, 8)
         .padding(8)
-        .background {
-            Rectangle()
-                .fill(appColor(.darkGray))
-        }
-        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .applyCellBackground()
     }
 
     private func makeImage(for image: Image = Image(systemName: "person.crop.circle.fill")) -> some View {

@@ -24,5 +24,6 @@ struct ChangeProjectOwnerView: View {
                 .padding(16)
         }
         .navigationTitle("Change Owner")
+        .applyViewBackground()
     }
 }

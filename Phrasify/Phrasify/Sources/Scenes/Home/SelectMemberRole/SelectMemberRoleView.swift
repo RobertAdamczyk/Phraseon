@@ -36,6 +36,7 @@ struct SelectMemberRole: View {
                 .padding(16)
         }
         .navigationTitle("Choose role")
+        .applyViewBackground()
     }
 
     private func makeRoleRow(for role: Role) -> some View {
@@ -45,11 +46,7 @@ struct SelectMemberRole: View {
             Spacer()
         }
         .padding(12)
-        .background {
-            Rectangle()
-                .fill(appColor(.darkGray))
-        }
-        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .applyCellBackground()
         .overlay {
             RoundedRectangle(cornerRadius: 8)
                 .stroke(lineWidth: 2)
