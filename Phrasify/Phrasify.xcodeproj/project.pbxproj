@@ -117,7 +117,6 @@
 		551AA42F2B339FE000F0B1E2 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 551AA42E2B339FE000F0B1E2 /* FirebaseFirestoreCombine-Community */; };
 		551CA5102B60717D001859CA /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 551CA50F2B60717D001859CA /* FirebaseFunctions */; };
 		551CA5152B6072CF001859CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 551CA5142B6072CF001859CA /* GoogleService-Info.plist */; };
-		551CA51A2B60759E001859CA /* Glassfy in Frameworks */ = {isa = PBXBuildFile; productRef = 551CA5192B60759E001859CA /* Glassfy */; };
 		552785C22B27A5120098FE95 /* PhrasifyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552785C12B27A5120098FE95 /* PhrasifyApp.swift */; };
 		552785C62B27A5140098FE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C52B27A5140098FE95 /* Assets.xcassets */; };
 		552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C92B27A5140098FE95 /* Preview Assets.xcassets */; };
@@ -125,8 +124,6 @@
 		552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
 		552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
 		552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
-		55367E032B644C6800521398 /* SyncSubscriptionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55367E022B644C6800521398 /* SyncSubscriptionUseCase.swift */; };
-		55367E042B644C6800521398 /* SyncSubscriptionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55367E022B644C6800521398 /* SyncSubscriptionUseCase.swift */; };
 		553722AD2B631DA00061CF52 /* CellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AC2B631DA00061CF52 /* CellBackground.swift */; };
 		553722AE2B631DA00061CF52 /* CellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AC2B631DA00061CF52 /* CellBackground.swift */; };
 		553722B02B631DC40061CF52 /* ViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AF2B631DC40061CF52 /* ViewBackground.swift */; };
@@ -149,6 +146,7 @@
 		556034302B59C530000140BC /* ApproveTranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560342E2B59C530000140BC /* ApproveTranslationService.swift */; };
 		5561C5C42B65A76500C815BC /* SelectableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561C5C32B65A76500C815BC /* SelectableCircle.swift */; };
 		5561C5C52B65A76500C815BC /* SelectableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561C5C32B65A76500C815BC /* SelectableCircle.swift */; };
+		5561C5C82B66EAB500C815BC /* Phrasify_InHouse.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 5561C5C72B66EAB500C815BC /* Phrasify_InHouse.storekit */; };
 		5569779B2B4747170022B675 /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779A2B4747170022B675 /* ProjectSettingsView.swift */; };
 		5569779C2B4747170022B675 /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779A2B4747170022B675 /* ProjectSettingsView.swift */; };
 		5569779E2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */; };
@@ -157,8 +155,8 @@
 		556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A02B47594A0022B675 /* SelectLanguageActions.swift */; };
 		556977A42B475B440022B675 /* SelectTechnologyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A32B475B440022B675 /* SelectTechnologyActions.swift */; };
 		556977A52B475B440022B675 /* SelectTechnologyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A32B475B440022B675 /* SelectTechnologyActions.swift */; };
-		5570FF492B61752D0011208F /* GlassfyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF482B61752D0011208F /* GlassfyRepository.swift */; };
-		5570FF4A2B61752D0011208F /* GlassfyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF482B61752D0011208F /* GlassfyRepository.swift */; };
+		5570FF492B61752D0011208F /* StoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF482B61752D0011208F /* StoreKitRepository.swift */; };
+		5570FF4A2B61752D0011208F /* StoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF482B61752D0011208F /* StoreKitRepository.swift */; };
 		5570FF4D2B61B13C0011208F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4C2B61B13C0011208F /* PaywallView.swift */; };
 		5570FF4E2B61B13C0011208F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4C2B61B13C0011208F /* PaywallView.swift */; };
 		5570FF502B61B1460011208F /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4F2B61B1460011208F /* PaywallViewModel.swift */; };
@@ -465,7 +463,6 @@
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyActions.swift; sourceTree = "<group>"; };
-		55367E022B644C6800521398 /* SyncSubscriptionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncSubscriptionUseCase.swift; sourceTree = "<group>"; };
 		553722AC2B631DA00061CF52 /* CellBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackground.swift; sourceTree = "<group>"; };
 		553722AF2B631DC40061CF52 /* ViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBackground.swift; sourceTree = "<group>"; };
 		553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallView+SubscriptionCell.swift"; sourceTree = "<group>"; };
@@ -482,11 +479,12 @@
 		555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUseCase.swift; sourceTree = "<group>"; };
 		5560342E2B59C530000140BC /* ApproveTranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveTranslationService.swift; sourceTree = "<group>"; };
 		5561C5C32B65A76500C815BC /* SelectableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCircle.swift; sourceTree = "<group>"; };
+		5561C5C72B66EAB500C815BC /* Phrasify_InHouse.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Phrasify_InHouse.storekit; sourceTree = "<group>"; };
 		5569779A2B4747170022B675 /* ProjectSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsView.swift; sourceTree = "<group>"; };
 		5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsViewModel.swift; sourceTree = "<group>"; };
 		556977A02B47594A0022B675 /* SelectLanguageActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageActions.swift; sourceTree = "<group>"; };
 		556977A32B475B440022B675 /* SelectTechnologyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyActions.swift; sourceTree = "<group>"; };
-		5570FF482B61752D0011208F /* GlassfyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassfyRepository.swift; sourceTree = "<group>"; };
+		5570FF482B61752D0011208F /* StoreKitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitRepository.swift; sourceTree = "<group>"; };
 		5570FF4C2B61B13C0011208F /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		5570FF4F2B61B1460011208F /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
 		5570FF522B61B1FF0011208F /* PaywallCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallCoordinator.swift; sourceTree = "<group>"; };
@@ -622,7 +620,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5570FF5D2B61CF1C0011208F /* Shimmer in Frameworks */,
-				551CA51A2B60759E001859CA /* Glassfy in Frameworks */,
 				558074322B2CDF130041160B /* GoogleSignIn in Frameworks */,
 				55A7B34C2B45CF970051BCF0 /* CachedAsyncImage in Frameworks */,
 				55C2790A2B2A4556005144F1 /* FirebaseAuth in Frameworks */,
@@ -911,6 +908,14 @@
 			path = SelectableCircle;
 			sourceTree = "<group>";
 		};
+		5561C5C62B66EA9000C815BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5561C5C72B66EAB500C815BC /* Phrasify_InHouse.storekit */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
 		556977992B4746F60022B675 /* ProjectSettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,7 +957,6 @@
 				558074492B2D12B80041160B /* GoogleUseCase.swift */,
 				55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */,
 				555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */,
-				55367E022B644C6800521398 /* SyncSubscriptionUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1191,7 +1195,7 @@
 				5505379D2B44C5C30077912D /* StorageRepository.swift */,
 				55E960D82B3CD8E50016DA23 /* CloudRepository.swift */,
 				551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */,
-				5570FF482B61752D0011208F /* GlassfyRepository.swift */,
+				5570FF482B61752D0011208F /* StoreKitRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1207,6 +1211,7 @@
 		55C762162B27A5FC008CBF30 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5561C5C62B66EA9000C815BC /* Products */,
 				551CA5112B607217001859CA /* Firebase */,
 				55C2792E2B2A5918005144F1 /* Animations */,
 				55C278D02B2A2E25005144F1 /* Fonts */,
@@ -1502,7 +1507,6 @@
 				55E960D62B3CD8D40016DA23 /* FirebaseFunctions */,
 				550537992B44C5B20077912D /* FirebaseStorage */,
 				55A7B34B2B45CF970051BCF0 /* CachedAsyncImage */,
-				551CA5192B60759E001859CA /* Glassfy */,
 				5570FF5C2B61CF1C0011208F /* Shimmer */,
 			);
 			productName = Phrasify;
@@ -1538,7 +1542,6 @@
 				55C279292B2A5525005144F1 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				55A7B34A2B45CF970051BCF0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
-				551CA5182B60759E001859CA /* XCRemoteSwiftPackageReference "ios-sdk" */,
 				5570FF5B2B61CF1C0011208F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
 			);
 			productRefGroup = 552785BF2B27A5120098FE95 /* Products */;
@@ -1578,6 +1581,7 @@
 				55C278F42B2A3F3A005144F1 /* RethinkSans-Medium.ttf in Resources */,
 				55C278F52B2A3F3A005144F1 /* RethinkSans-Regular.ttf in Resources */,
 				5505C7DB2B55BAEB00806B4F /* syncScript.txt in Resources */,
+				5561C5C82B66EAB500C815BC /* Phrasify_InHouse.storekit in Resources */,
 				55C278F62B2A3F3A005144F1 /* Preview Assets.xcassets in Resources */,
 				55C278F72B2A3F3A005144F1 /* RethinkSans-SemiBold.ttf in Resources */,
 				55C279312B2A5922005144F1 /* buttonLoadingAnimation.json in Resources */,
@@ -1661,7 +1665,6 @@
 				551AA4102B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */,
 				55C762302B27AB72008CBF30 /* StartView.swift in Sources */,
 				55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */,
-				55367E032B644C6800521398 /* SyncSubscriptionUseCase.swift in Sources */,
 				55826A8D2B34C83A00233D90 /* ProjectMember.swift in Sources */,
 				5516EBE52B432D4700C558B1 /* ProfileActions.swift in Sources */,
 				5505C7FA2B55EEB900806B4F /* StandardInformationProtocol.swift in Sources */,
@@ -1691,7 +1694,7 @@
 				55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */,
 				5516EBEC2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
 				5516EBDF2B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
-				5570FF492B61752D0011208F /* GlassfyRepository.swift in Sources */,
+				5570FF492B61752D0011208F /* StoreKitRepository.swift in Sources */,
 				55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
 				55DE104E2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
 				55DE103A2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,
@@ -1844,7 +1847,6 @@
 				551AA4112B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */,
 				55C278E52B2A3F3A005144F1 /* AppTextField.swift in Sources */,
 				55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */,
-				55367E042B644C6800521398 /* SyncSubscriptionUseCase.swift in Sources */,
 				55826A8E2B34C83A00233D90 /* ProjectMember.swift in Sources */,
 				5516EBE62B432D4700C558B1 /* ProfileActions.swift in Sources */,
 				5505C7FB2B55EEB900806B4F /* StandardInformationProtocol.swift in Sources */,
@@ -1874,7 +1876,7 @@
 				55C278EA2B2A3F3A005144F1 /* AppDivider.swift in Sources */,
 				5516EBED2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
 				5516EBE02B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
-				5570FF4A2B61752D0011208F /* GlassfyRepository.swift in Sources */,
+				5570FF4A2B61752D0011208F /* StoreKitRepository.swift in Sources */,
 				55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
 				55DE104F2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
 				55DE103B2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,
@@ -2265,14 +2267,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		551CA5182B60759E001859CA /* XCRemoteSwiftPackageReference "ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/glassfy/ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.0;
-			};
-		};
 		5570FF5B2B61CF1C0011208F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer.git";
@@ -2340,11 +2334,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFunctions;
-		};
-		551CA5192B60759E001859CA /* Glassfy */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 551CA5182B60759E001859CA /* XCRemoteSwiftPackageReference "ios-sdk" */;
-			productName = Glassfy;
 		};
 		5570FF5C2B61CF1C0011208F /* Shimmer */ = {
 			isa = XCSwiftPackageProductDependency;

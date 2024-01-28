@@ -6,23 +6,23 @@
 //
 
 import SwiftUI
-import Glassfy
+import StoreKit
 
 final class PaywallViewModel: ObservableObject {
 
     enum State {
         case loading
         case error
-        case idle([Glassfy.Sku], SubscriptionPlan)
+        case idle([Product], Product)
     }
 
     typealias PaywallCoordinator = Coordinator & FullScreenCoverActions
 
     @Published var state: State = .loading
 
-    var selectedSubscriptionPlan: SubscriptionPlan? {
-        if case .idle(_, let subscriptionPlan) = state {
-            return subscriptionPlan
+    var selectedProduct: Product? {
+        if case .idle(_, let product) = state {
+            return product
         }
         return nil
     }
@@ -34,29 +34,56 @@ final class PaywallViewModel: ObservableObject {
         return false
     }
 
-    private var selectedSku: Glassfy.Sku? {
-        if case .idle(let skus, let subscriptionPlan) = state {
-            return skus.first { $0.product.productIdentifier == subscriptionPlan.skuId }
+    var products: [Product] {
+        if case .idle(let products, _) = state {
+            return products
         }
-        return nil
+        return []
     }
 
+//    var alreadyBoughtProduct: Product? {
+//        if case .idle(let subscriptionInfo, _) = state {
+//            let product: Product? = {
+//                let plan = subscriptionInfo.permission.accountableSkus.compactMap { SubscriptionPlan(rawValue: $0.productId) }
+//                return plan.sorted(by: { $0.sortIndex > $1.sortIndex }).first
+//            }()
+//            return subscriptionPlan
+//        }
+//        return nil
+//    }
+//
+//    var alreadyBoughtUserEmail: String? {
+//        if case .idle(let subscriptionInfo, _) = state {
+//            return subscriptionInfo.userProperties.email
+//        }
+//        return nil
+//    }
+
+//    var hasValidSubscription: Bool {
+//        if case .idle(let subscriptionInfo, _) = state {
+//            return subscriptionInfo.permission.isValid
+//        }
+//        return false
+//    }
+//
+//    private var selectedSku: Glassfy.Sku? {
+//        if case .idle(let info, let subscriptionPlan) = state {
+//            return info.skus.first { $0.product.productIdentifier == subscriptionPlan.skuId }
+//        }
+//        return nil
+//    }
+
     private let coordinator: PaywallCoordinator
-    private lazy var syncSubscriptionUseCase: SyncSubscriptionUseCase = {
-        .init(firestoreRepository: coordinator.dependencies.firestoreRepository,
-              glassfyRepository: coordinator.dependencies.glassfyRepository,
-              authenticationRepository: coordinator.dependencies.authenticationRepository)
-    }()
 
     init(coordinator: PaywallCoordinator) {
         self.coordinator = coordinator
-        getSkus()
+        getProducts()
     }
 
-    func onPlanTapped(_ plan: SubscriptionPlan) {
+    func onProductTapped(_ product: Product) {
         withAnimation {
-            if case .idle(let skus, _) = state {
-                self.state = .idle(skus, plan)
+            if case .idle(let products, _) = state {
+                self.state = .idle(products, product)
             }
         }
     }
@@ -66,50 +93,25 @@ final class PaywallViewModel: ObservableObject {
     }
 
     @MainActor
-    func onRestorePurchaseButtonTapped() {
-        Task {
-            do {
-                try await coordinator.dependencies.glassfyRepository.restorePurchase()
-                syncSubscriptionUseCase.sync()
-            } catch {
-                ToastView.showGeneralError()
-            }
-        }
-    }
-
-    @MainActor
     func onSubscribeButtonTapped() async {
-        guard let selectedSku else { return }
+        guard let selectedProduct else { return }
         do {
-            _ = try await coordinator.dependencies.glassfyRepository.purchase(product: selectedSku)
-            syncSubscriptionUseCase.sync()
+            _ = try await coordinator.dependencies.storeKitRepository.purchase(selectedProduct)
         } catch {
             ToastView.showGeneralError()
         }
     }
 
-    func getInfo(for plan: SubscriptionPlan) -> (headline: String, price: String) {
-        let price: String = {
-            if case .idle(let skus, _) = state {
-                let product = skus.first { $0.product.productIdentifier == plan.skuId }?.product
-                let currency = product?.priceLocale.currencySymbol
-                let price = product?.price
-                if let price, let currency {
-                    return "\(currency)\(price)"
-                }
-                return "NaN"
-            }
-            return "NaN"
-        }()
-        return (plan.title, price)
-    }
-
-    private func getSkus() {
+    private func getProducts() {
         Task {
             do {
-                let skus = try await coordinator.dependencies.glassfyRepository.getOffers()
+                let products = try await coordinator.dependencies.storeKitRepository.getProducts()
                 await MainActor.run {
-                    self.state = .idle(skus, .basic)
+                    if let basic = products.filter({ $0.id == SubscriptionPlan.basic.id}).first {
+                        self.state = .idle(products, basic)
+                    } else {
+                        self.state = .error
+                    }
                 }
             } catch {
                 ToastView.showGeneralError()
@@ -121,7 +123,8 @@ final class PaywallViewModel: ObservableObject {
 extension PaywallViewModel {
 
     var plans: [PlanDescription] {
-        switch self.selectedSubscriptionPlan {
+        guard let id = self.selectedProduct?.id else { return [] }
+        return switch SubscriptionPlan(rawValue: id) {
         case .basic, .none: [.support, .workflow, .translation, .languages]
         case .gold: PlanDescription.allCases
         }

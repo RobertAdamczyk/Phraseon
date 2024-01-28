@@ -12,5 +12,5 @@ struct Dependencies {
     let firestoreRepository: FirestoreRepository
     let cloudRepository: CloudRepository
     let storageRepository: StorageRepository
-    let glassfyRepository: GlassfyRepository
+    let storeKitRepository: StoreKitRepository
 }

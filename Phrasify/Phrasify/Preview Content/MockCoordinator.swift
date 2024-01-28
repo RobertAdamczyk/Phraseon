@@ -14,7 +14,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
                              SelectMemberRoleActions, SheetActions, EnterContentKeyActions {
 
     var dependencies: Dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init(), cloudRepository: .init(),
-                                           storageRepository: .init(), glassfyRepository: .init())
+                                           storageRepository: .init(), storeKitRepository: .init())
 
     func showLogin() { /*empty*/ }
 

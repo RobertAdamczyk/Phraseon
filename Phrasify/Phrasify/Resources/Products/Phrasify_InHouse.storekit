@@ -1,0 +1,121 @@
+{
+  "identifier" : "A1C2118E",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6476577951",
+    "_developerTeamID" : "38Q6TG2KG3",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 728165048.81681597,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21438903",
+      "localizations" : [
+
+      ],
+      "name" : "PremiumAccess",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "9.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6476623475",
+          "introductoryOffer" : null,
+          "localizations" : [
+
+          ],
+          "productID" : "robert.adamczyk.phrasify.inhouse.subscription.basic",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "basic",
+          "subscriptionGroupID" : "21438903",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "19.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6476821462",
+          "introductoryOffer" : null,
+          "localizations" : [
+
+          ],
+          "productID" : "robert.adamczyk.phrasify.inhouse.subscription.gold",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "gold",
+          "subscriptionGroupID" : "21438903",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

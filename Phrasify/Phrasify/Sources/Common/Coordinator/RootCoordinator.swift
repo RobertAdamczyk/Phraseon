@@ -22,7 +22,7 @@ final class RootCoordinator: ObservableObject, Coordinator {
 
     init() {
         dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init(), cloudRepository: .init(),
-                             storageRepository: .init(), glassfyRepository: .init())
+                             storageRepository: .init(), storeKitRepository: .init())
         setupLoginSubscription()
     }
 

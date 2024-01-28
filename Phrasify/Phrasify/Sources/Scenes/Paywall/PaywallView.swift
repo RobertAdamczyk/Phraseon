@@ -23,13 +23,13 @@ struct PaywallView: View {
                     Text("Choose the plan that best fits your needs.")
                         .apply(.medium, size: .M, color: .white)
                     HStack(spacing: 16) {
-                        ForEach(SubscriptionPlan.allCases, id: \.self) { subscription in
+                        ForEach(viewModel.products, id: \.self) { product in
                             Button(action: {
-                                viewModel.onPlanTapped(subscription)
+                                viewModel.onProductTapped(product)
                             }, label: {
-                                SubscriptionCell(headline: viewModel.getInfo(for: subscription).headline,
-                                                 price: viewModel.getInfo(for: subscription).price,
-                                                 isSelected: viewModel.selectedSubscriptionPlan == subscription)
+                                SubscriptionCell(headline: product.displayName,
+                                                 price: product.displayPrice,
+                                                 isSelected: viewModel.selectedProduct == product)
                             })
                         }
                     }
@@ -56,7 +56,6 @@ struct PaywallView: View {
             }
             VStack(spacing: 16) {
                 AppButton(style: .fill("Subscribe Now", .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
-                AppButton(style: .text("Restore Purchase"), action: .main(viewModel.onRestorePurchaseButtonTapped))
             }
             .padding(16)
         }

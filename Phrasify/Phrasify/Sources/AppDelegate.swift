@@ -8,14 +8,12 @@
 import FirebaseCore
 import SwiftUI
 import GoogleSignIn
-import Glassfy
 
 class AppDelegate: NSObject, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
-        Glassfy.initialize(apiKey: "32a1f81429ab4cfd9ac7660573e4b45f", watcherMode: false)
         return true
     }
 

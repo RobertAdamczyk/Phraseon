@@ -19,4 +19,8 @@ enum AppError: Error, LocalizedError {
     case encodingError
     case notFound
     case alreadyMember
+    case purchaseFailedVerification
+    case purchasePending
+    case purchaseCancelled
+    case purchaseGeneralError
 }

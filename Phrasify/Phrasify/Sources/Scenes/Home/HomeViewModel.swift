@@ -22,17 +22,10 @@ final class HomeViewModel: ObservableObject {
         coordinator.dependencies.authenticationRepository.currentUser?.uid
     }
 
-    private lazy var syncSubscriptionUseCase: SyncSubscriptionUseCase = {
-        .init(firestoreRepository: coordinator.dependencies.firestoreRepository,
-              glassfyRepository: coordinator.dependencies.glassfyRepository,
-              authenticationRepository: coordinator.dependencies.authenticationRepository)
-    }()
-
     @MainActor
     init(coordinator: HomeCoordinator) {
         self.coordinator = coordinator
         setupProjectsSubscriber()
-        syncSubscriptionUseCase.sync()
     }
 
     func onProfileTapped() {
