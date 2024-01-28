@@ -13,8 +13,22 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
                              NavigationActions, SelectLanguageActions, SelectTechnologyActions,
                              SelectMemberRoleActions, SheetActions, EnterContentKeyActions {
 
-    var dependencies: Dependencies = .init(authenticationRepository: .init(), firestoreRepository: .init(), cloudRepository: .init(),
-                                           storageRepository: .init(), storeKitRepository: .init())
+    init() {
+        let authenticationRepository: AuthenticationRepository = .init()
+        let firestoreRepository: FirestoreRepository = .init()
+        let cloudRepository: CloudRepository = .init()
+        let storageRepository: StorageRepository = .init()
+        let storeKitRepository: StoreKitRepository = .init()
+        let userDomain: UserDomain = .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository)
+        dependencies = .init(authenticationRepository: authenticationRepository,
+                             firestoreRepository: firestoreRepository,
+                             cloudRepository: cloudRepository,
+                             storageRepository: storageRepository,
+                             storeKitRepository: storeKitRepository,
+                             userDomain: userDomain)
+    }
+
+    var dependencies: Dependencies
 
     func showLogin() { /*empty*/ }
 

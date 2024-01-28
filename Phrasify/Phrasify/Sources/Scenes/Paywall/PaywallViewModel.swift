@@ -8,7 +8,7 @@
 import SwiftUI
 import StoreKit
 
-final class PaywallViewModel: ObservableObject {
+final class PaywallViewModel: ObservableObject, UserDomainProtocol {
 
     enum State {
         case loading
@@ -19,6 +19,7 @@ final class PaywallViewModel: ObservableObject {
     typealias PaywallCoordinator = Coordinator & FullScreenCoverActions
 
     @Published var state: State = .loading
+    @Published var user: User?
 
     var selectedProduct: Product? {
         if case .idle(_, let product) = state {
@@ -73,10 +74,17 @@ final class PaywallViewModel: ObservableObject {
 //        return nil
 //    }
 
+    var userDomain: UserDomain {
+        coordinator.dependencies.userDomain
+    }
+
+    let cancelBag = CancelBag()
+
     private let coordinator: PaywallCoordinator
 
     init(coordinator: PaywallCoordinator) {
         self.coordinator = coordinator
+        setupUserSubscriber()
         getProducts()
     }
 
@@ -94,9 +102,9 @@ final class PaywallViewModel: ObservableObject {
 
     @MainActor
     func onSubscribeButtonTapped() async {
-        guard let selectedProduct else { return }
+        guard let selectedProduct, let subscriptionId = user?.subscriptionId else { return }
         do {
-            _ = try await coordinator.dependencies.storeKitRepository.purchase(selectedProduct)
+            _ = try await coordinator.dependencies.storeKitRepository.purchase(selectedProduct, with: [.appAccountToken(subscriptionId)])
         } catch {
             ToastView.showGeneralError()
         }

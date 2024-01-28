@@ -15,6 +15,7 @@ struct User: Codable, Hashable, IdentifiableUser {
     var name: String
     var surname: String
     var createdAt: Date
+    var subscriptionId: UUID
     var subscriptionStatus: SubscriptionStatus?
     var subscriptionPlan: SubscriptionPlan?
     var subscriptionValidUntil: Date?
@@ -26,6 +27,7 @@ struct User: Codable, Hashable, IdentifiableUser {
         case name
         case surname
         case createdAt
+        case subscriptionId
         case subscriptionStatus
         case subscriptionPlan
         case subscriptionValidUntil

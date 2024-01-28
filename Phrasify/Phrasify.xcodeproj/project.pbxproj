@@ -147,6 +147,8 @@
 		5561C5C42B65A76500C815BC /* SelectableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561C5C32B65A76500C815BC /* SelectableCircle.swift */; };
 		5561C5C52B65A76500C815BC /* SelectableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561C5C32B65A76500C815BC /* SelectableCircle.swift */; };
 		5561C5C82B66EAB500C815BC /* Phrasify_InHouse.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 5561C5C72B66EAB500C815BC /* Phrasify_InHouse.storekit */; };
+		5561C5CB2B67027000C815BC /* UserDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561C5CA2B67027000C815BC /* UserDomain.swift */; };
+		5561C5CC2B67027000C815BC /* UserDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561C5CA2B67027000C815BC /* UserDomain.swift */; };
 		5569779B2B4747170022B675 /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779A2B4747170022B675 /* ProjectSettingsView.swift */; };
 		5569779C2B4747170022B675 /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779A2B4747170022B675 /* ProjectSettingsView.swift */; };
 		5569779E2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */; };
@@ -480,6 +482,7 @@
 		5560342E2B59C530000140BC /* ApproveTranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveTranslationService.swift; sourceTree = "<group>"; };
 		5561C5C32B65A76500C815BC /* SelectableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCircle.swift; sourceTree = "<group>"; };
 		5561C5C72B66EAB500C815BC /* Phrasify_InHouse.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Phrasify_InHouse.storekit; sourceTree = "<group>"; };
+		5561C5CA2B67027000C815BC /* UserDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDomain.swift; sourceTree = "<group>"; };
 		5569779A2B4747170022B675 /* ProjectSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsView.swift; sourceTree = "<group>"; };
 		5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsViewModel.swift; sourceTree = "<group>"; };
 		556977A02B47594A0022B675 /* SelectLanguageActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageActions.swift; sourceTree = "<group>"; };
@@ -916,6 +919,14 @@
 			path = Products;
 			sourceTree = "<group>";
 		};
+		5561C5C92B67026200C815BC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5561C5CA2B67027000C815BC /* UserDomain.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		556977992B4746F60022B675 /* ProjectSettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1267,6 +1278,7 @@
 		55C7621B2B27A622008CBF30 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				5561C5C92B67026200C815BC /* Domain */,
 				55FE519A2B5B1AAA0084617F /* ErrorHandling */,
 				5516EBBE2B3F33D600C558B1 /* Extension */,
 				558074482B2D12AC0041160B /* UseCases */,
@@ -1759,6 +1771,7 @@
 				55C279132B2A4B48005144F1 /* AppDelegate.swift in Sources */,
 				55B841482B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
 				5505C7E52B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */,
+				5561C5CB2B67027000C815BC /* UserDomain.swift in Sources */,
 				55DE10442B4AD0D8001CB87F /* Role+UI.swift in Sources */,
 				556977A12B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55FE519F2B5B30BF0084617F /* UIApplication+KeyWindow.swift in Sources */,
@@ -1941,6 +1954,7 @@
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,
 				55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
 				5505C7E62B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */,
+				5561C5CC2B67027000C815BC /* UserDomain.swift in Sources */,
 				55DE10452B4AD0D8001CB87F /* Role+UI.swift in Sources */,
 				556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */,
 				55FE51A02B5B30BF0084617F /* UIApplication+KeyWindow.swift in Sources */,

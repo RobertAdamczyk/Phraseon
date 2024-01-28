@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class ProfileViewModel: ObservableObject {
+final class ProfileViewModel: ObservableObject, UserDomainProtocol {
 
     typealias ProfileCoordinator = Coordinator & ProfileActions & RootActions & NavigationActions
 
@@ -29,13 +29,17 @@ final class ProfileViewModel: ObservableObject {
         return formatter.string(from: validUntil)
     }
 
+    var userDomain: UserDomain {
+        coordinator.dependencies.userDomain
+    }
+
+    let cancelBag = CancelBag()
+
     private let coordinator: ProfileCoordinator
 
     private var userId: UserID? {
         coordinator.dependencies.authenticationRepository.currentUser?.uid
     }
-
-    private let cancelBag = CancelBag()
 
     init(coordinator: ProfileCoordinator) {
         self.coordinator = coordinator
@@ -76,19 +80,5 @@ final class ProfileViewModel: ObservableObject {
 
     func onDeleteAccountTapped() {
         coordinator.showProfileDeleteWarning()
-    }
-
-    private func setupUserSubscriber() {
-        guard let userId else { return }
-        coordinator.dependencies.firestoreRepository.getUserPublisher(userId: userId)
-            .receive(on: RunLoop.main)
-            .sink { _ in
-                // empty implementation
-            } receiveValue: { [weak self] user in
-                DispatchQueue.main.async {
-                    self?.user = user
-                }
-            }
-            .store(in: cancelBag)
     }
 }
