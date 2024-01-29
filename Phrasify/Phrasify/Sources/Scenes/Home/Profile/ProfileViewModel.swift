@@ -23,10 +23,21 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     }
 
     var subscriptionValidUntil: String {
-        guard let user, let validUntil = user.subscriptionValidUntil else { return "-" }
+        guard let user, let validUntil = user.subscriptionValidUntil, 
+              let subscriptionStatus = user.subscriptionStatus else { return "-" }
         let formatter = DateFormatter()
         formatter.dateStyle = .long
-        return formatter.string(from: validUntil)
+        #if DEBUG
+        formatter.timeStyle = .medium
+        #endif
+        if validUntil > .now {
+            switch subscriptionStatus {
+            case .trial: return "Expires " + formatter.string(from: validUntil)
+            case .premium: return "Renews " + formatter.string(from: validUntil)
+            }
+        } else {
+            return "Expired " + formatter.string(from: validUntil)
+        }
     }
 
     var userDomain: UserDomain {

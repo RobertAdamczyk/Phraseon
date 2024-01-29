@@ -107,6 +107,7 @@ extension ProfileView {
                     .apply(.regular, size: .S, color: .white)
                 Text(value)
                     .apply(.medium, size: .S, color: .lightGray)
+                    .multilineTextAlignment(.leading)
             }
             Spacer()
             if item.showChevron {
