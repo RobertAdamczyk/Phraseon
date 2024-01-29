@@ -31,6 +31,7 @@ struct StartView: View {
             }
         }
         .padding(16)
+        .applyViewBackground()
     }
 }
 

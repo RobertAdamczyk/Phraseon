@@ -26,6 +26,7 @@ struct ForgetPasswordView: View {
                 .padding(16)
         }
         .toolbarRole(.editor)
+        .applyViewBackground()
     }
 }
 

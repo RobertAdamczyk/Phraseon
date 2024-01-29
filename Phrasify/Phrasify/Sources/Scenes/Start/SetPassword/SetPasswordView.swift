@@ -27,6 +27,7 @@ struct SetPasswordView: View {
             .padding(16)
         }
         .toolbarRole(.editor)
+        .applyViewBackground()
     }
 }
 

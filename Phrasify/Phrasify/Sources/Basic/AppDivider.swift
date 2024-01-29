@@ -18,16 +18,18 @@ struct AppDivider: View {
     }
 
     var body: some View {
-        Rectangle()
-            .frame(height: 2)
-            .foregroundStyle(color)
-            .overlay {
-                if let text {
-                    Text(text)
-                        .padding(.horizontal, 4)
-                        .apply(.semibold, size: .L, color: .lightGray)
-                        .background(appColor(.black))
-                }
+        HStack(spacing: 0) {
+            Rectangle()
+                .frame(height: 2)
+                .foregroundStyle(color)
+            if let text {
+                Text(text)
+                    .padding(.horizontal, 4)
+                    .apply(.semibold, size: .L, color: .lightGray)
             }
+            Rectangle()
+                .frame(height: 2)
+                .foregroundStyle(color)
+        }
     }
 }

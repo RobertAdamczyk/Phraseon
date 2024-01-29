@@ -64,7 +64,7 @@ struct AppTextField: View {
 
     private func makeBackground() -> some View {
         RoundedRectangle(cornerRadius: 8)
-            .stroke(lineWidth: 1)
+            .stroke(lineWidth: 2)
             .foregroundStyle(appColor(.lightGray))
     }
 

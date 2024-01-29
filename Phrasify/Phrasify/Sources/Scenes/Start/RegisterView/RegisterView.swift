@@ -43,6 +43,7 @@ struct RegisterView: View {
         }
         .activitable(viewModel.shouldShowActivityView)
         .toolbarRole(.editor)
+        .applyViewBackground()
     }
 }
 

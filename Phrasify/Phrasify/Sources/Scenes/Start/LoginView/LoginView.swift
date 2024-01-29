@@ -38,6 +38,7 @@ struct LoginView: View {
         }
         .activitable(viewModel.shouldShowActivityView)
         .toolbarRole(.editor)
+        .applyViewBackground()
     }
 }
 
