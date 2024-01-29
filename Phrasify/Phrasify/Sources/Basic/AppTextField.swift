@@ -21,6 +21,7 @@ struct AppTextField: View {
             makeTextField()
                 .padding(12)
                 .background(makeBackground())
+                .applyCellBackground()
         }
     }
 
@@ -29,7 +30,7 @@ struct AppTextField: View {
         HStack(spacing: 8) {
 
             switch type {
-            case .email, .projectName, .keyId, .name, .surname:
+            case .email, .projectName, .keyId, .name, .surname, .keyContent:
                 image
                 TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.lightGray)), axis: type.axis)
                     .autocorrectionDisabled()
@@ -74,7 +75,7 @@ struct AppTextField: View {
 
 extension AppTextField {
 
-    enum TType {
+    enum TType: Hashable {
         case email
         case password
         case confirmPassword
@@ -84,6 +85,7 @@ extension AppTextField {
         case keyId
         case name
         case surname
+        case keyContent
 
         var title: String {
             return switch self {
@@ -96,6 +98,7 @@ extension AppTextField {
             case .keyId: "Phrase Identifier"
             case .name: "Name"
             case .surname: "Surname"
+            case .keyContent: "Content"
             }
         }
 
@@ -107,13 +110,14 @@ extension AppTextField {
             case .keyId: "this_is_my_phrase"
             case .name: "John"
             case .surname: "Doe"
+            case .keyContent: "Type your string phrase here..."
             }
         }
 
         var axis: Axis {
             return switch self {
             case .email, .password, .confirmPassword, .currentPassword, .name, .surname, .newPassword: .horizontal
-            case .projectName, .keyId: .vertical
+            case .projectName, .keyId, .keyContent: .vertical
             }
         }
 
@@ -124,6 +128,7 @@ extension AppTextField {
             case .projectName: Image(systemName: "folder.fill").resizable().frame(width: 20, height: 16)
             case .keyId: Image(systemName: "grid").resizable().frame(width: 16, height: 16)
             case .name, .surname: Image(systemName: "person.fill").resizable().frame(width: 16, height: 16)
+            case .keyContent: Image(systemName: "pencil.and.list.clipboard").resizable().frame(width: 18, height: 20)
             }
         }
     }

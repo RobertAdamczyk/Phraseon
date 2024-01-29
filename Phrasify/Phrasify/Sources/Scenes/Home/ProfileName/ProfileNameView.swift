@@ -29,6 +29,7 @@ struct ProfileNameView: View {
         }
         .navigationTitle("Profile Name")
         .onAppear(perform: focusNameTextField)
+        .applyViewBackground()
     }
 
     private func focusNameTextField() {

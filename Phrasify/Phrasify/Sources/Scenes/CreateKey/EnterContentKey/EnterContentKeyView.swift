@@ -16,18 +16,10 @@ struct EnterContentKeyView: View {
     var body: some View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: 32) {
+                VStack(alignment: .leading, spacing: 48) {
                     AppTitle(subtitle: viewModel.subtitle)
                     VStack(alignment: .leading, spacing: 16) {
-                        LanguageView(language: viewModel.language, isBaseLanguage: viewModel.isBaseLanguage)
-                        TextField("", text: $viewModel.translation,
-                                  prompt: Text(verbatim: "Content").foregroundStyle(appColor(.lightGray)), axis: .vertical)
-                        .apply(.regular, size: .S, color: .white)
-                        .focused($focusedTextField)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(12)
-                        .applyCellBackground()
+                        AppTextField(type: .keyContent, text: $viewModel.translation)
                     }
                 }
                 .padding(16)

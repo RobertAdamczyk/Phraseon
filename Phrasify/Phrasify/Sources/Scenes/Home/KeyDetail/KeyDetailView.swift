@@ -61,7 +61,7 @@ struct KeyDetailView: View {
             .padding(.vertical, 6)
             .padding(.horizontal, 12)
             .applyCellBackground()
-            AppDivider(color: appColor(.darkGray))
+            AppDivider(color: appColor(.lightGray))
                 .padding(.top, 16)
         }
     }

@@ -26,6 +26,7 @@ struct ChangePasswordView: View {
         }
         .navigationTitle("Change password")
         .onAppear(perform: setCurrentPasswordFocus)
+        .applyViewBackground()
     }
 
     private var content: some View {
