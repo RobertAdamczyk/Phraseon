@@ -55,7 +55,13 @@ struct PaywallView: View {
                 .padding(16)
             }
             VStack(spacing: 16) {
-                AppButton(style: .fill("Subscribe Now", .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
+                if let disclaimerTest = viewModel.disclaimerTest {
+                    Text(disclaimerTest)
+                        .apply(.regular, size: .S, color: .lightGray)
+                        .multilineTextAlignment(.center)
+                }
+                AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
+                    .disabled(viewModel.hasValidSelectedSubscription)
             }
             .padding(16)
         }

@@ -18,7 +18,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
 
     typealias PaywallCoordinator = Coordinator & FullScreenCoverActions
 
-    @Published var state: State = .loading
+    @Published private var state: State = .loading
     @Published var user: User?
 
     var selectedProduct: Product? {
@@ -42,37 +42,40 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         return []
     }
 
-//    var alreadyBoughtProduct: Product? {
-//        if case .idle(let subscriptionInfo, _) = state {
-//            let product: Product? = {
-//                let plan = subscriptionInfo.permission.accountableSkus.compactMap { SubscriptionPlan(rawValue: $0.productId) }
-//                return plan.sorted(by: { $0.sortIndex > $1.sortIndex }).first
-//            }()
-//            return subscriptionPlan
-//        }
-//        return nil
-//    }
-//
-//    var alreadyBoughtUserEmail: String? {
-//        if case .idle(let subscriptionInfo, _) = state {
-//            return subscriptionInfo.userProperties.email
-//        }
-//        return nil
-//    }
+    var hasValidSubscription: Bool {
+        guard let subscriptionValidUntil = user?.subscriptionValidUntil, let status = user?.subscriptionStatus else { return false }
+        return subscriptionValidUntil > .now && status == .premium
+    }
 
-//    var hasValidSubscription: Bool {
-//        if case .idle(let subscriptionInfo, _) = state {
-//            return subscriptionInfo.permission.isValid
-//        }
-//        return false
-//    }
-//
-//    private var selectedSku: Glassfy.Sku? {
-//        if case .idle(let info, let subscriptionPlan) = state {
-//            return info.skus.first { $0.product.productIdentifier == subscriptionPlan.skuId }
-//        }
-//        return nil
-//    }
+    var hasValidSelectedSubscription: Bool {
+        guard let user,
+              let subscriptionPlan = user.subscriptionPlan else { return false }
+        if case .idle(_, selectedProduct) = state, hasValidSubscription {
+            switch subscriptionPlan {
+            case .basic: return subscriptionPlan.id == self.selectedProduct?.id
+            case .gold: return true // if user has gold has also basic
+            }
+        }
+        return false
+    }
+
+    var buttonText: String {
+        if hasValidSelectedSubscription {
+            return "Already bought"
+        } else {
+            return hasValidSubscription ? "Upgrade Now" : "Subscribe Now"
+        }
+    }
+
+    var disclaimerTest: String? {
+        guard let userSubscriptionPlan = user?.subscriptionPlan, hasValidSubscription else { return nil }
+        switch userSubscriptionPlan {
+        case .basic:
+            return "You are currently subscribed to the Basic plan. Upgrade to Gold for more features!"
+        case .gold:
+            return "You are currently enjoying our Gold plan – the highest tier of service we offer. Thank you for being a valued subscriber!"
+        }
+    }
 
     var userDomain: UserDomain {
         coordinator.dependencies.userDomain
@@ -89,10 +92,8 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
     }
 
     func onProductTapped(_ product: Product) {
-        withAnimation {
-            if case .idle(let products, _) = state {
-                self.state = .idle(products, product)
-            }
+        if case .idle(let products, _) = state {
+            self.state = .idle(products, product)
         }
     }
 
@@ -105,6 +106,8 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         guard let selectedProduct, let subscriptionId = user?.subscriptionId else { return }
         do {
             _ = try await coordinator.dependencies.storeKitRepository.purchase(selectedProduct, with: [.appAccountToken(subscriptionId)])
+            ToastView.showSuccess(message: "Thank you for subscribing! Your subscription will be activated shortly.")
+            coordinator.dismissFullScreenCover()
         } catch {
             ToastView.showGeneralError()
         }
@@ -115,8 +118,9 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
             do {
                 let products = try await coordinator.dependencies.storeKitRepository.getProducts()
                 await MainActor.run {
-                    if let basic = products.filter({ $0.id == SubscriptionPlan.basic.id}).first {
-                        self.state = .idle(products, basic)
+                    if let basic = products.filter({ $0.id == SubscriptionPlan.basic.id }).first {
+                        let sortedProducts = products.sorted(by: { $0.price < $1.price })
+                        self.state = .idle(sortedProducts, basic)
                     } else {
                         self.state = .error
                     }

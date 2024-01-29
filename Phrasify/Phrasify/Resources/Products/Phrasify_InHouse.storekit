@@ -10,7 +10,7 @@
     "_applicationInternalID" : "6476577951",
     "_developerTeamID" : "38Q6TG2KG3",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 728165048.81681597,
+    "_lastSynchronizedDate" : 728236142.05567396,
     "_locale" : "en_US",
     "_storefront" : "USA",
     "_storeKitErrors" : [
@@ -82,7 +82,11 @@
           "internalID" : "6476623475",
           "introductoryOffer" : null,
           "localizations" : [
-
+            {
+              "description" : "basic subscription",
+              "displayName" : "Basic",
+              "locale" : "en_US"
+            }
           ],
           "productID" : "robert.adamczyk.phrasify.inhouse.subscription.basic",
           "recurringSubscriptionPeriod" : "P1M",
@@ -103,7 +107,11 @@
           "internalID" : "6476821462",
           "introductoryOffer" : null,
           "localizations" : [
-
+            {
+              "description" : "gold subscription",
+              "displayName" : "Gold",
+              "locale" : "en_US"
+            }
           ],
           "productID" : "robert.adamczyk.phrasify.inhouse.subscription.gold",
           "recurringSubscriptionPeriod" : "P1M",

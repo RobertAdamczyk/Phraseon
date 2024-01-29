@@ -320,6 +320,8 @@
 		55C2DAC82B3342F500435CD4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C2DAC62B3342F500435CD4 /* RegisterViewModel.swift */; };
 		55C762302B27AB72008CBF30 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7622F2B27AB72008CBF30 /* StartView.swift */; };
 		55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762352B27B52A008CBF30 /* StartCoordinator.swift */; };
+		55D41E1A2B68219200FADB4E /* SubscriptionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D41E192B68219200FADB4E /* SubscriptionPlan.swift */; };
+		55D41E1B2B68219200FADB4E /* SubscriptionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D41E192B68219200FADB4E /* SubscriptionPlan.swift */; };
 		55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10222B48D016001CB87F /* ProjectMembersView.swift */; };
 		55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10222B48D016001CB87F /* ProjectMembersView.swift */; };
 		55DE10262B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */; };
@@ -558,6 +560,7 @@
 		55C762252B27A8E2008CBF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55C7622F2B27AB72008CBF30 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		55C762352B27B52A008CBF30 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
+		55D41E192B68219200FADB4E /* SubscriptionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPlan.swift; sourceTree = "<group>"; };
 		55DE10222B48D016001CB87F /* ProjectMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersView.swift; sourceTree = "<group>"; };
 		55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersViewModel.swift; sourceTree = "<group>"; };
 		55DE10292B4A28B0001CB87F /* InviteMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteMemberView.swift; sourceTree = "<group>"; };
@@ -1252,6 +1255,7 @@
 				55B8414E2B4CB595007697AF /* User */,
 				558074392B2CE6650041160B /* AppError.swift */,
 				5516EBD72B419EBD00C558B1 /* SubscriptionStatus.swift */,
+				55D41E192B68219200FADB4E /* SubscriptionPlan.swift */,
 				558074562B2E56E50041160B /* Project.swift */,
 				55826A8F2B34C85800233D90 /* Role.swift */,
 				55826A8C2B34C83A00233D90 /* ProjectMember.swift */,
@@ -1716,6 +1720,7 @@
 				5513C24F2B325E2F004C1933 /* CreateProjectView.swift in Sources */,
 				55FE51BD2B5DAD240084617F /* SetBaseLanguageService.swift in Sources */,
 				551AA42A2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
+				55D41E1A2B68219200FADB4E /* SubscriptionPlan.swift in Sources */,
 				55826A8A2B34C63900233D90 /* UserID.swift in Sources */,
 				55B841502B4CB67B007697AF /* IdentifiableUser.swift in Sources */,
 				55DE10582B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
@@ -1899,6 +1904,7 @@
 				5513C2502B325E2F004C1933 /* CreateProjectView.swift in Sources */,
 				55FE51BE2B5DAD240084617F /* SetBaseLanguageService.swift in Sources */,
 				551AA42B2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
+				55D41E1B2B68219200FADB4E /* SubscriptionPlan.swift in Sources */,
 				55826A8B2B34C63900233D90 /* UserID.swift in Sources */,
 				55B841512B4CB67B007697AF /* IdentifiableUser.swift in Sources */,
 				55DE10592B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
