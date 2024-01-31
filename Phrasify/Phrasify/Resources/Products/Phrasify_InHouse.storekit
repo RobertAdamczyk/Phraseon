@@ -10,7 +10,7 @@
     "_applicationInternalID" : "6476577951",
     "_developerTeamID" : "38Q6TG2KG3",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 728236142.05567396,
+    "_lastSynchronizedDate" : 728423042.28963995,
     "_locale" : "en_US",
     "_storefront" : "USA",
     "_storeKitErrors" : [
@@ -78,7 +78,7 @@
           ],
           "displayPrice" : "9.99",
           "familyShareable" : false,
-          "groupNumber" : 1,
+          "groupNumber" : 2,
           "internalID" : "6476623475",
           "introductoryOffer" : null,
           "localizations" : [
@@ -103,7 +103,7 @@
           ],
           "displayPrice" : "19.99",
           "familyShareable" : false,
-          "groupNumber" : 2,
+          "groupNumber" : 1,
           "internalID" : "6476821462",
           "introductoryOffer" : null,
           "localizations" : [

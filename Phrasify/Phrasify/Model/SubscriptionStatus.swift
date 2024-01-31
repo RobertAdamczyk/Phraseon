@@ -9,7 +9,8 @@ import Foundation
 
 enum SubscriptionStatus: String, Codable, CaseIterable {
 
+    case expires = "EXPIRES"
+    case renews = "RENEWS"
     case trial = "TRIAL"
-    case premium = "PREMIUM"
 }
 

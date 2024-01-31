@@ -32,8 +32,9 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
         #endif
         if validUntil > .now {
             switch subscriptionStatus {
-            case .trial: return "Expires " + formatter.string(from: validUntil)
-            case .premium: return "Renews " + formatter.string(from: validUntil)
+            case .trial: return "Trial ends " + formatter.string(from: validUntil)
+            case .expires: return "Expires " + formatter.string(from: validUntil)
+            case .renews: return "Renews " + formatter.string(from: validUntil)
             }
         } else {
             return "Expired " + formatter.string(from: validUntil)

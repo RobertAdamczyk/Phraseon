@@ -44,7 +44,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
 
     var hasValidSubscription: Bool {
         guard let subscriptionValidUntil = user?.subscriptionValidUntil, let status = user?.subscriptionStatus else { return false }
-        return subscriptionValidUntil > .now && status == .premium
+        return subscriptionValidUntil > .now && status != .trial
     }
 
     var hasValidSelectedSubscription: Bool {
