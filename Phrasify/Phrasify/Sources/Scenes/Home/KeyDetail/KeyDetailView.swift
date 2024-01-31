@@ -76,7 +76,8 @@ struct KeyDetailView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                 HStack(spacing: 16) {
 
-                    if let keyStatus = viewModel.key.status[language.rawValue] {
+                    if let keyStatus = viewModel.key.status[language.rawValue],
+                        viewModel.translationApprovalUseCase.shouldShow {
                         if keyStatus == .review && viewModel.member?.hasPermissionToApproveKey == true {
                             ApproveButton(language: language, action: viewModel.onApproveTapped)
                         } else {

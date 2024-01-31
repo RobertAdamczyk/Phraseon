@@ -14,6 +14,10 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
     @Published var key: Key
     @Published internal var member: Member?
 
+    var translationApprovalUseCase: TranslationApprovalUseCase {
+        .init(project: project, subscriptionPlan: coordinator.dependencies.userDomain.user?.subscriptionPlan)
+    }
+
     let project: Project
     private let coordinator: KeyDetailCoordinator
     internal let cancelBag = CancelBag()
@@ -41,6 +45,7 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
         coordinator.showDeleteKeyWarning(project: project, key: key)
     }
 
+    @MainActor
     func onApproveTapped(language: Language) async {
         guard let projectId = project.id, let keyId = key.id else { return }
         do {

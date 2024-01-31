@@ -14,8 +14,8 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
 
     @Published var selectedKeysOrder: KeysOrder = .alphabetically
     @Published var searchText = ""
+    @Published var member: Member?
     @Published private var keys: [Key] = []
-    @Published internal var member: Member?
 
     var searchKeys: [Key] {
         if searchText.isEmpty {
@@ -25,6 +25,10 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
                 key.id?.lowercased().contains(searchText.lowercased()) == true
             }
         }
+    }
+
+    var translationApprovalUseCase: TranslationApprovalUseCase {
+        .init(project: project, subscriptionPlan: coordinator.dependencies.userDomain.user?.subscriptionPlan)
     }
 
     internal lazy var projectUseCase: ProjectUseCase = {

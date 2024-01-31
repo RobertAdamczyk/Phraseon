@@ -29,7 +29,7 @@ struct ProjectDetailView: View {
                     Button {
                         viewModel.onKeyTapped(key)
                     } label: {
-                        KeyRow(key: key)
+                        KeyRow(key: key, viewModel: viewModel)
                     }
 
                 }

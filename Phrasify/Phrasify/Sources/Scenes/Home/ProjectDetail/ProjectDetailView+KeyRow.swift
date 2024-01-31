@@ -12,6 +12,7 @@ extension ProjectDetailView {
     struct KeyRow: View {
 
         let key: Key
+        let viewModel: ProjectDetailViewModel
 
         var body: some View {
             HStack {
@@ -21,11 +22,13 @@ extension ProjectDetailView {
                     HStack(spacing: 4) {
                         Image(systemName: "clock")
                         Text(key.lastUpdatedAt.timeAgo)
-                        Rectangle()
-                            .frame(width: 2)
-                            .foregroundStyle(appColor(.lightGray))
-                            .padding(.horizontal, 8)
-                        Text(key.keyStatus.localizedTitle)
+                        if viewModel.translationApprovalUseCase.shouldShow {
+                            Rectangle()
+                                .frame(width: 2)
+                                .foregroundStyle(appColor(.lightGray))
+                                .padding(.horizontal, 8)
+                            Text(key.keyStatus.localizedTitle)
+                        }
                     }
                     .apply(.medium, size: .S, color: .lightGray)
                 }
@@ -45,7 +48,7 @@ extension ProjectDetailView {
     ZStack {
         appColor(.black)
         ProjectDetailView.KeyRow(key: .init(id: "test_key", translation: [:], createdAt: .now, lastUpdatedAt: .distantPast,
-                                            status: ["EN": KeyStatus.approved]))
+                                            status: ["EN": KeyStatus.approved]), viewModel: .init(coordinator: MockCoordinator(), project: .init(name: "", technologies: [], languages: [], baseLanguage: .english, members: [], owner: "das")))
             .padding(16)
     }
 }
