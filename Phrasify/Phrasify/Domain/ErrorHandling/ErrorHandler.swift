@@ -24,6 +24,9 @@ struct ErrorHandler {
         case cannotDeleteSelf = "CAN_NOT_DELETE_SELF"
         case languageNotValid = "LANGUAGE_NOT_VALID"
         case technologyNotValid = "TECHNOLOGY_NOT_VALID"
+        case accessExpired = "ACCESS_EXPIRED"
+        case accessDenied = "ACCESS_DENIED"
+        case projectCreationLimit = "PROJECT_CREATION_LIMIT"
     }
 
     let error: Error
@@ -84,6 +87,12 @@ struct ErrorHandler {
                 return "Invalid technology. Please choose a valid technology option."
             case .cannotDeleteSelf:
                 return "Can't remove yourself. Use 'Leave Project' instead."
+            case .accessExpired:
+                return "Your access period has expired. Please renew to continue enjoying our services."
+            case .accessDenied:
+                return "You do not have access to this service. Please check your subscription status or contact support."
+            case .projectCreationLimit:
+                return "You've reached your project limit. Upgrade your subscription to create more projects."
             case .databaseError:
                 return nil
             }
