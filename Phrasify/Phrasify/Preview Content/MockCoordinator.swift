@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-#if DEBUG
-
 final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenCoverActions, ProjectActions, ProfileActions,
                              NavigationActions, SelectLanguageActions, SelectTechnologyActions,
                              SelectMemberRoleActions, SheetActions, EnterContentKeyActions {
@@ -79,5 +77,3 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
     func showSelectBaseLanguage(name: String, languages: [Language]) {}
     func presentPaywall() {}
 }
-
-#endif
