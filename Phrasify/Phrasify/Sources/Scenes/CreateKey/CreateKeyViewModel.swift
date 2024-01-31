@@ -26,6 +26,7 @@ final class CreateKeyViewModel: ObservableObject {
         self.project = project
     }
 
+    @MainActor
     func onCloseButtonTapped() {
         coordinator.dismissFullScreenCover()
     }

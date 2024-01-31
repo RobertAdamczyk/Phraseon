@@ -23,6 +23,7 @@ final class CreateProjectViewModel: ObservableObject {
         self.coordinator = coordinator
     }
 
+    @MainActor
     func onCloseButtonTapped() {
         coordinator.dismissFullScreenCover()
     }

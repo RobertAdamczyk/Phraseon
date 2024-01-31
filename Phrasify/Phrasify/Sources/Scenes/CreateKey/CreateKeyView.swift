@@ -35,7 +35,7 @@ struct CreateKeyView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: viewModel.onCloseButtonTapped, label: {
-                    Image(systemName: "xmark")
+                    Image(systemName: "xmark").bold()
                 })
             }
         }

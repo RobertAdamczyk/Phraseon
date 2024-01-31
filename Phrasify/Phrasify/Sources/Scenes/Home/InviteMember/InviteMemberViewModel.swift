@@ -42,6 +42,7 @@ final class InviteMemberViewModel: ObservableObject {
         }
     }
 
+    @MainActor
     func onCloseButtonTapped() {
         coordinator.dismissFullScreenCover()
     }
