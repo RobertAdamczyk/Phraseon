@@ -35,6 +35,8 @@ struct StartView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     StartView(coordinator: StartCoordinator(parentCoordinator: MockCoordinator()))
 }
+#endif

@@ -47,6 +47,8 @@ struct RegisterView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     RegisterView(viewModel: .init(coordinator: MockCoordinator()))
 }
+#endif

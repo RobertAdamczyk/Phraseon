@@ -121,9 +121,11 @@ extension ProfileView {
     }
 }
 
+#if DEBUG
 #Preview {
     NavigationStack {
         ProfileView(viewModel: .init(coordinator: MockCoordinator()))
     }
     .preferredColorScheme(.dark)
 }
+#endif

@@ -113,8 +113,8 @@ struct SelectTechnologyView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     SelectTechnologyView(viewModel: .init(coordinator: MockCoordinator(), context: .createProject(projectName: "", languages: [], baseLanguage: .english)))
 }
-
-
+#endif

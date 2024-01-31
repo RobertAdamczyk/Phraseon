@@ -48,7 +48,9 @@ struct InviteMemberView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     InviteMemberView(coordinator: MockCoordinator(), project: .init(name: "", technologies: [],
                                                                     languages: [], baseLanguage: .english, members: [], owner: ""))
 }
+#endif

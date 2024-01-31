@@ -42,6 +42,8 @@ struct LoginView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     LoginView(viewModel: .init(coordinator: MockCoordinator()))
 }
+#endif

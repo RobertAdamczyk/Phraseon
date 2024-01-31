@@ -123,6 +123,7 @@ struct KeyDetailView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     KeyDetailView(viewModel: .init(coordinator: MockCoordinator(), 
                                    key: .init(translation: ["EN": "dasdasdasdadasd"],
@@ -141,3 +142,4 @@ struct KeyDetailView: View {
                                                                               baseLanguage: .english, members: [], owner: ""))))
     .preferredColorScheme(.dark)
 }
+#endif

@@ -79,9 +79,11 @@ struct PaywallView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     NavigationView {
         PaywallView(coordinator: MockCoordinator())
     }
     .preferredColorScheme(.dark)
 }
+#endif

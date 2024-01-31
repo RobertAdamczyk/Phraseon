@@ -113,7 +113,8 @@ struct SelectLanguageView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     SelectLanguageView(viewModel: .init(coordinator: MockCoordinator(), context: .createProject(name: "NAME")))
 }
-
+#endif

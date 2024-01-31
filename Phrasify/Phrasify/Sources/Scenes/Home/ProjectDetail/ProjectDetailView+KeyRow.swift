@@ -44,6 +44,7 @@ extension ProjectDetailView {
     }
 }
 
+#if DEBUG
 #Preview {
     ZStack {
         appColor(.black)
@@ -52,3 +53,4 @@ extension ProjectDetailView {
             .padding(16)
     }
 }
+#endif
