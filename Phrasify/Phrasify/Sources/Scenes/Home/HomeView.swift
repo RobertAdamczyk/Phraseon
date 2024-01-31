@@ -96,7 +96,9 @@ struct AddProjectCellView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     HomeView(coordinator: MockCoordinator())
         .preferredColorScheme(.dark)
 }
+#endif

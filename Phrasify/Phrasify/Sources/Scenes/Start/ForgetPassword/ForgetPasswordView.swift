@@ -30,7 +30,8 @@ struct ForgetPasswordView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     ForgetPasswordView(viewModel: .init(coordinator: MockCoordinator()))
 }
-
+#endif

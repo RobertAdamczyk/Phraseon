@@ -86,6 +86,7 @@ struct ProjectDetailView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     ProjectDetailView(viewModel: .init(coordinator: MockCoordinator(), 
                                        project: .init(name: "",
@@ -95,3 +96,4 @@ struct ProjectDetailView: View {
                                                       members: [],
                                                       owner: "")))
 }
+#endif
