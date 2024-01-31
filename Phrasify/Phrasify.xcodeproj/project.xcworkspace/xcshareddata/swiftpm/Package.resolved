@@ -154,9 +154,9 @@
       }
     },
     {
-      "identity" : "swiftui-cached-async-image?tab=readme-ov-file",
+      "identity" : "swiftui-cached-async-image.git",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/lorenzofiamingo/swiftui-cached-async-image?tab=readme-ov-file",
+      "location" : "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git",
       "state" : {
         "revision" : "467a3d17479887943ab917a379e62bbaff60ac8a",
         "version" : "2.1.1"
@@ -167,8 +167,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/markiv/SwiftUI-Shimmer.git",
       "state" : {
-        "revision" : "1f3a620e4abe890d00008cb2af7023d810b433a7",
-        "version" : "1.4.0"
+        "revision" : "5659a623567cefe258d1e3e67cb65585fbb6ecb6",
+        "version" : "1.4.2"
       }
     }
   ],

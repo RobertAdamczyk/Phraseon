@@ -167,7 +167,6 @@
 		5570FF542B61B1FF0011208F /* PaywallCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF522B61B1FF0011208F /* PaywallCoordinator.swift */; };
 		5570FF562B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */; };
 		5570FF572B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */; };
-		5570FF5D2B61CF1C0011208F /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 5570FF5C2B61CF1C0011208F /* Shimmer */; };
 		558074322B2CDF130041160B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 558074312B2CDF130041160B /* GoogleSignIn */; };
 		558074342B2CDF130041160B /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 558074332B2CDF130041160B /* GoogleSignInSwift */; };
 		558074362B2CDF1E0041160B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 558074352B2CDF1E0041160B /* GoogleSignIn */; };
@@ -250,8 +249,8 @@
 		559E2D5A2B4DEBBF0009A25A /* KeyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */; };
 		55A653E22B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A653E12B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift */; };
 		55A653E32B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A653E12B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift */; };
-		55A7B34C2B45CF970051BCF0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 55A7B34B2B45CF970051BCF0 /* CachedAsyncImage */; };
-		55A7B34E2B45CFA70051BCF0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 55A7B34D2B45CFA70051BCF0 /* CachedAsyncImage */; };
+		55A653E62B6AF4CE00F2B714 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 55A653E52B6AF4CE00F2B714 /* Shimmer */; };
+		55A653E92B6AF52800F2B714 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 55A653E82B6AF52800F2B714 /* CachedAsyncImage */; };
 		55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3542B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */; };
@@ -614,7 +613,6 @@
 				558074362B2CDF1E0041160B /* GoogleSignIn in Frameworks */,
 				55C279032B2A451A005144F1 /* FirebaseAuth in Frameworks */,
 				55C279052B2A451A005144F1 /* FirebaseFirestore in Frameworks */,
-				55A7B34E2B45CFA70051BCF0 /* CachedAsyncImage in Frameworks */,
 				558074382B2CDF220041160B /* GoogleSignInSwift in Frameworks */,
 				55C279072B2A451A005144F1 /* FirebaseFirestoreSwift in Frameworks */,
 				5505379C2B44C5B90077912D /* FirebaseStorage in Frameworks */,
@@ -628,9 +626,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5570FF5D2B61CF1C0011208F /* Shimmer in Frameworks */,
 				558074322B2CDF130041160B /* GoogleSignIn in Frameworks */,
-				55A7B34C2B45CF970051BCF0 /* CachedAsyncImage in Frameworks */,
 				55C2790A2B2A4556005144F1 /* FirebaseAuth in Frameworks */,
 				5505379A2B44C5B20077912D /* FirebaseStorage in Frameworks */,
 				55C2790C2B2A455D005144F1 /* FirebaseFirestore in Frameworks */,
@@ -639,6 +635,8 @@
 				55C2790E2B2A4562005144F1 /* FirebaseFirestoreSwift in Frameworks */,
 				55C2792B2B2A5538005144F1 /* Lottie in Frameworks */,
 				551AA42F2B339FE000F0B1E2 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				55A653E62B6AF4CE00F2B714 /* Shimmer in Frameworks */,
+				55A653E92B6AF52800F2B714 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1496,7 +1494,6 @@
 				558074372B2CDF220041160B /* GoogleSignInSwift */,
 				551AA42C2B339FD200F0B1E2 /* FirebaseFirestoreCombine-Community */,
 				5505379B2B44C5B90077912D /* FirebaseStorage */,
-				55A7B34D2B45CFA70051BCF0 /* CachedAsyncImage */,
 				551CA50F2B60717D001859CA /* FirebaseFunctions */,
 			);
 			productName = Phrasify;
@@ -1526,8 +1523,8 @@
 				551AA42E2B339FE000F0B1E2 /* FirebaseFirestoreCombine-Community */,
 				55E960D62B3CD8D40016DA23 /* FirebaseFunctions */,
 				550537992B44C5B20077912D /* FirebaseStorage */,
-				55A7B34B2B45CF970051BCF0 /* CachedAsyncImage */,
-				5570FF5C2B61CF1C0011208F /* Shimmer */,
+				55A653E52B6AF4CE00F2B714 /* Shimmer */,
+				55A653E82B6AF52800F2B714 /* CachedAsyncImage */,
 			);
 			productName = Phrasify;
 			productReference = 55C278FC2B2A3F3A005144F1 /* Phrasify_InHouse.app */;
@@ -1561,8 +1558,8 @@
 				55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				55C279292B2A5525005144F1 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
-				55A7B34A2B45CF970051BCF0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
-				5570FF5B2B61CF1C0011208F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
+				55A653E42B6AF4CE00F2B714 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
+				55A653E72B6AF52800F2B714 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 552785BF2B27A5120098FE95 /* Products */;
 			projectDirPath = "";
@@ -2293,14 +2290,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5570FF5B2B61CF1C0011208F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.0;
-			};
-		};
 		558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -2309,7 +2298,15 @@
 				version = 7.0.0;
 			};
 		};
-		55A7B34A2B45CF970051BCF0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+		55A653E42B6AF4CE00F2B714 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.4.2;
+			};
+		};
+		55A653E72B6AF52800F2B714 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image?tab=readme-ov-file";
 			requirement = {
@@ -2361,11 +2358,6 @@
 			package = 55C279012B2A451A005144F1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFunctions;
 		};
-		5570FF5C2B61CF1C0011208F /* Shimmer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5570FF5B2B61CF1C0011208F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
-			productName = Shimmer;
-		};
 		558074312B2CDF130041160B /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
@@ -2386,14 +2378,14 @@
 			package = 558074302B2CDF130041160B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
 		};
-		55A7B34B2B45CF970051BCF0 /* CachedAsyncImage */ = {
+		55A653E52B6AF4CE00F2B714 /* Shimmer */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 55A7B34A2B45CF970051BCF0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
-			productName = CachedAsyncImage;
+			package = 55A653E42B6AF4CE00F2B714 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
 		};
-		55A7B34D2B45CFA70051BCF0 /* CachedAsyncImage */ = {
+		55A653E82B6AF52800F2B714 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 55A7B34A2B45CF970051BCF0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			package = 55A653E72B6AF52800F2B714 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
 		};
 		55C279022B2A451A005144F1 /* FirebaseAuth */ = {
