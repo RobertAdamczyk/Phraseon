@@ -15,23 +15,28 @@ struct ProfileDeleteWarningView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            ScrollViewReader { proxy in
-                ScrollView(.horizontal) {
-                    HStack(spacing: 0) {
-                        deletionPage
-                            .frame(width: geometry.size.width)
-                            .id(ProfileDeleteWarningViewModel.State.deletion.rawValue)
-                        informationPage
-                            .frame(width: geometry.size.width)
-                            .id(ProfileDeleteWarningViewModel.State.information.rawValue)
+            ZStack {
+                Color.clear
+                    .applyCellBackground()
+                    .ignoresSafeArea()
+                ScrollViewReader { proxy in
+                    ScrollView(.horizontal) {
+                        HStack(spacing: 0) {
+                            deletionPage
+                                .frame(width: geometry.size.width)
+                                .id(ProfileDeleteWarningViewModel.State.deletion.rawValue)
+                            informationPage
+                                .frame(width: geometry.size.width)
+                                .id(ProfileDeleteWarningViewModel.State.information.rawValue)
+                        }
+                        .scrollTargetLayout()
                     }
-                    .scrollTargetLayout()
+                    .applyCellBackground()
+                    .scrollDisabled(true)
+                    .scrollIndicators(.hidden)
+                    .scrollTargetBehavior(.paging)
+                    .onAppear { setupScrollingAction(proxy) }
                 }
-                .applyCellBackground()
-                .scrollDisabled(true)
-                .scrollIndicators(.hidden)
-                .scrollTargetBehavior(.paging)
-                .onAppear { setupScrollingAction(proxy) }
             }
         }
         .presentationDetents(contentHeight == .zero ? [.medium] : [.height(contentHeight)])
