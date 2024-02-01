@@ -52,8 +52,8 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
               let subscriptionPlan = user.subscriptionPlan else { return false }
         if case .idle(_, selectedProduct) = state, hasValidSubscription {
             switch subscriptionPlan {
-            case .basic: return subscriptionPlan.id == self.selectedProduct?.id
-            case .gold: return true // if user has gold has also basic
+            case .individual: return subscriptionPlan.id == self.selectedProduct?.id
+            case .team: return true // if user has team has also individual
             }
         }
         return false
@@ -70,10 +70,10 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
     var disclaimerTest: String? {
         guard let userSubscriptionPlan = user?.subscriptionPlan, hasValidSubscription else { return nil }
         switch userSubscriptionPlan {
-        case .basic:
-            return "You are currently subscribed to the Basic plan. Upgrade to Gold for more features!"
-        case .gold:
-            return "You are currently enjoying our Gold plan – the highest tier of service we offer. Thank you for being a valued subscriber!"
+        case .individual:
+            return "You are currently subscribed to the Individual plan. Upgrade to Team for more features!"
+        case .team:
+            return "You are currently enjoying our Team plan – the highest tier of service we offer. Thank you for being a valued subscriber!"
         }
     }
 
@@ -119,9 +119,9 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
             do {
                 let products = try await coordinator.dependencies.storeKitRepository.getProducts()
                 await MainActor.run {
-                    if let basic = products.filter({ $0.id == SubscriptionPlan.basic.id }).first {
+                    if let individual = products.filter({ $0.id == SubscriptionPlan.individual.id }).first {
                         let sortedProducts = products.sorted(by: { $0.price < $1.price })
-                        self.state = .idle(sortedProducts, basic)
+                        self.state = .idle(sortedProducts, individual)
                     } else {
                         self.state = .error
                     }
@@ -138,8 +138,8 @@ extension PaywallViewModel {
     var plans: [PlanDescription] {
         guard let id = self.selectedProduct?.id else { return [] }
         return switch SubscriptionPlan(rawValue: id) {
-        case .basic, .none: [.support, .workflow, .translation, .languages]
-        case .gold: PlanDescription.allCases
+        case .individual, .none: [.support, .workflow, .translation, .languages]
+        case .team: PlanDescription.allCases
         }
     }
 

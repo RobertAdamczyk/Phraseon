@@ -17,7 +17,7 @@ final class StoreKitRepository {
     }
 
     func getProducts() async throws -> [Product] {
-        let storeProducts = try await StoreKit.Product.products(for: [SubscriptionPlan.basic.id, SubscriptionPlan.gold.id])
+        let storeProducts = try await StoreKit.Product.products(for: [SubscriptionPlan.individual.id, SubscriptionPlan.team.id])
         return storeProducts
     }
 

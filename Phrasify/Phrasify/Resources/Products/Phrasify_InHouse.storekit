@@ -10,7 +10,7 @@
     "_applicationInternalID" : "6476577951",
     "_developerTeamID" : "38Q6TG2KG3",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 728423042.28963995,
+    "_lastSynchronizedDate" : 728506454.66885495,
     "_locale" : "en_US",
     "_storefront" : "USA",
     "_storeKitErrors" : [
@@ -78,19 +78,19 @@
           ],
           "displayPrice" : "9.99",
           "familyShareable" : false,
-          "groupNumber" : 2,
-          "internalID" : "6476623475",
+          "groupNumber" : 1,
+          "internalID" : "6477212520",
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "basic subscription",
-              "displayName" : "Basic",
+              "description" : "Individual",
+              "displayName" : "Individual",
               "locale" : "en_US"
             }
           ],
-          "productID" : "robert.adamczyk.phrasify.inhouse.subscription.basic",
+          "productID" : "robert.adamczyk.phrasify.inhouse.subscription.individual",
           "recurringSubscriptionPeriod" : "P1M",
-          "referenceName" : "basic",
+          "referenceName" : "individual",
           "subscriptionGroupID" : "21438903",
           "type" : "RecurringSubscription"
         },
@@ -103,19 +103,19 @@
           ],
           "displayPrice" : "19.99",
           "familyShareable" : false,
-          "groupNumber" : 1,
-          "internalID" : "6476821462",
+          "groupNumber" : 2,
+          "internalID" : "6477212861",
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "gold subscription",
-              "displayName" : "Gold",
+              "description" : "Team",
+              "displayName" : "Team",
               "locale" : "en_US"
             }
           ],
-          "productID" : "robert.adamczyk.phrasify.inhouse.subscription.gold",
+          "productID" : "robert.adamczyk.phrasify.inhouse.subscription.team",
           "recurringSubscriptionPeriod" : "P1M",
-          "referenceName" : "gold",
+          "referenceName" : "team",
           "subscriptionGroupID" : "21438903",
           "type" : "RecurringSubscription"
         }
