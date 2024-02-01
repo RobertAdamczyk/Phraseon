@@ -9,7 +9,7 @@ import SwiftUI
 
 final class ProfileViewModel: ObservableObject, UserDomainProtocol {
 
-    typealias ProfileCoordinator = Coordinator & ProfileActions & RootActions & NavigationActions
+    typealias ProfileCoordinator = Coordinator & ProfileActions & RootActions & NavigationActions & PaywallActions
 
     @Published var user: User?
 
@@ -23,8 +23,8 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     }
 
     var subscriptionValidUntil: String {
-        guard let user, let validUntil = user.subscriptionValidUntil, 
-              let subscriptionStatus = user.subscriptionStatus else { return "-" }
+        guard let validUntil = user?.subscriptionValidUntil,
+              let subscriptionStatus = user?.subscriptionStatus else { return "Try for free" }
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         #if DEBUG

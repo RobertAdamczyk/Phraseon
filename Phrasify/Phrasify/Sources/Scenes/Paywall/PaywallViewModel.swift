@@ -59,8 +59,14 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         return false
     }
 
+    var trialAvailable: Bool {
+        return user?.subscriptionStatus == nil && user?.subscriptionPlan == nil && user?.subscriptionValidUntil == nil
+    }
+
     var buttonText: String {
-        if hasValidSelectedSubscription {
+        if trialAvailable {
+            return "Try for free"
+        } else if hasValidSelectedSubscription {
             return "Already bought"
         } else {
             return hasValidSubscription ? "Upgrade Now" : "Subscribe Now"
@@ -68,13 +74,18 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
     }
 
     var disclaimerTest: String? {
-        guard let userSubscriptionPlan = user?.subscriptionPlan, hasValidSubscription else { return nil }
-        switch userSubscriptionPlan {
-        case .individual:
-            return "You are currently subscribed to the Individual plan. Upgrade to Team for more features!"
-        case .team:
-            return "You are currently enjoying our Team plan – the highest tier of service we offer. Thank you for being a valued subscriber!"
+        if trialAvailable {
+            return "Start your 7-day free trial now and explore all the features of our platform with no commitment – you won't be charged when your trial ends."
         }
+        if let userSubscriptionPlan = user?.subscriptionPlan, hasValidSubscription {
+            switch userSubscriptionPlan {
+            case .individual:
+                return "You are currently subscribed to the Individual plan. Upgrade to Team for more features!"
+            case .team:
+                return "You are currently enjoying our Team plan – the highest tier of service we offer. Thank you for being a valued subscriber!"
+            }
+        }
+        return nil
     }
 
     var userDomain: UserDomain {
@@ -106,8 +117,13 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
     func onSubscribeButtonTapped() async {
         guard let selectedProduct, let subscriptionId = user?.subscriptionId else { return }
         do {
-            _ = try await coordinator.dependencies.storeKitRepository.purchase(selectedProduct, with: [.appAccountToken(subscriptionId)])
-            ToastView.showSuccess(message: "Thank you for subscribing! Your subscription will be activated shortly.")
+            if trialAvailable {
+                try await coordinator.dependencies.cloudRepository.startTrial(.init())
+                ToastView.showSuccess(message: "Your 7-day trial period has begun. Enjoy full access to all features.")
+            } else {
+                _ = try await coordinator.dependencies.storeKitRepository.purchase(selectedProduct, with: [.appAccountToken(subscriptionId)])
+                ToastView.showSuccess(message: "Thank you for subscribing! Your subscription will be activated shortly.")
+            }
             coordinator.dismissFullScreenCover()
         } catch {
             ToastView.showGeneralError()

@@ -9,7 +9,7 @@ import SwiftUI
 
 final class SelectTechnologyViewModel: ObservableObject {
 
-    typealias SelectTechnologyCoordinator = Coordinator & FullScreenCoverActions & NavigationActions
+    typealias SelectTechnologyCoordinator = Coordinator & FullScreenCoverActions & NavigationActions & PaywallActions
 
     @Published var selectedTechnologies: [Technology] = []
 
@@ -83,8 +83,13 @@ final class SelectTechnologyViewModel: ObservableObject {
                 ToastView.showSuccess(message: "Project '\(projectName)' successfully created.")
             }
         } catch {
-            let errorHandler = ErrorHandler(error: error)
-            ToastView.showError(message: errorHandler.localizedDescription)
+            if case .createProject = context, let cloudError = ErrorHandler.CloudError(rawValue: error.localizedDescription), 
+                cloudError == .accessDenied {
+                coordinator.presentPaywall()
+            } else {
+                let errorHandler = ErrorHandler(error: error)
+                ToastView.showError(message: errorHandler.localizedDescription)
+            }
         }
     }
 }

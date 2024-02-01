@@ -107,6 +107,9 @@ extension RootCoordinator: ProfileActions {
         let sheet: Sheet = .profileDeleteWarning(viewModel: viewModel)
         presentedSheet = sheet
     }
+}
+
+extension RootCoordinator: PaywallActions {
 
     func presentPaywall() {
         presentedFullScreenCover = .paywall

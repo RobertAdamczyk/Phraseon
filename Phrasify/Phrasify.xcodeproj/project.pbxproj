@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550041FA2B6C3B5300073384 /* StartTrialService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550041F92B6C3B5300073384 /* StartTrialService.swift */; };
+		550041FB2B6C3B5300073384 /* StartTrialService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550041F92B6C3B5300073384 /* StartTrialService.swift */; };
+		550041FD2B6C3FD700073384 /* PaywallActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550041FC2B6C3FD700073384 /* PaywallActions.swift */; };
+		550041FE2B6C3FD700073384 /* PaywallActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550041FC2B6C3FD700073384 /* PaywallActions.swift */; };
 		5505378A2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		5505378B2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		550537912B44C0170077912D /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537902B44C0170077912D /* PhotoPickerView.swift */; };
@@ -407,6 +411,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550041F92B6C3B5300073384 /* StartTrialService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTrialService.swift; sourceTree = "<group>"; };
+		550041FC2B6C3FD700073384 /* PaywallActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallActions.swift; sourceTree = "<group>"; };
 		550537892B4492670077912D /* NavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActions.swift; sourceTree = "<group>"; };
 		550537902B44C0170077912D /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		550537932B44C0270077912D /* PhotoPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerHandler.swift; sourceTree = "<group>"; };
@@ -1058,6 +1064,7 @@
 			isa = PBXGroup;
 			children = (
 				55854FB02B572C5B00CC5480 /* IsUserProjectOwnerService.swift */,
+				550041F92B6C3B5300073384 /* StartTrialService.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1197,6 +1204,7 @@
 				556977A32B475B440022B675 /* SelectTechnologyActions.swift */,
 				5516EBE12B432D3F00C558B1 /* ProjectActions.swift */,
 				5516EBE42B432D4700C558B1 /* ProfileActions.swift */,
+				550041FC2B6C3FD700073384 /* PaywallActions.swift */,
 				550537892B4492670077912D /* NavigationActions.swift */,
 				552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */,
 			);
@@ -1672,8 +1680,10 @@
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
 				551AA4242B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				5516EBE22B432D3F00C558B1 /* ProjectActions.swift in Sources */,
+				550041FD2B6C3FD700073384 /* PaywallActions.swift in Sources */,
 				55C2DAC72B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
 				55A7B3542B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */,
+				550041FA2B6C3B5300073384 /* StartTrialService.swift in Sources */,
 				5569779B2B4747170022B675 /* ProjectSettingsView.swift in Sources */,
 				55826AA52B34FD5F00233D90 /* CreateKeyCoordinator.swift in Sources */,
 				5505378A2B4492670077912D /* NavigationActions.swift in Sources */,
@@ -1857,8 +1867,10 @@
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
 				551AA4252B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				5516EBE32B432D3F00C558B1 /* ProjectActions.swift in Sources */,
+				550041FE2B6C3FD700073384 /* PaywallActions.swift in Sources */,
 				55C2DAC82B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
 				55A7B3552B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */,
+				550041FB2B6C3B5300073384 /* StartTrialService.swift in Sources */,
 				5569779C2B4747170022B675 /* ProjectSettingsView.swift in Sources */,
 				55826AA62B34FD5F00233D90 /* CreateKeyCoordinator.swift in Sources */,
 				5505378B2B4492670077912D /* NavigationActions.swift in Sources */,

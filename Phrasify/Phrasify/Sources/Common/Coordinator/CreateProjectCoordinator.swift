@@ -12,6 +12,7 @@ final class CreateProjectCoordinator: Coordinator, ObservableObject {
     typealias ParentCoordinator = Coordinator & RootActions & FullScreenCoverActions
 
     @Published var navigationViews: [NavigationView] = []
+    @Published var presentedFullScreenCover: FullScreenCover?
 
     var dependencies: Dependencies {
         parentCoordinator.dependencies
@@ -38,7 +39,11 @@ extension CreateProjectCoordinator: NavigationActions {
 extension CreateProjectCoordinator: FullScreenCoverActions {
 
     func dismissFullScreenCover() {
-        parentCoordinator.dismissFullScreenCover()
+        if presentedFullScreenCover == nil {
+            parentCoordinator.dismissFullScreenCover()
+        } else {
+            presentedFullScreenCover = nil
+        }
     }
 }
 
@@ -54,6 +59,13 @@ extension CreateProjectCoordinator: SelectTechnologyActions {
 
     func showSelectedTechnologies(project: Project) {
         // empty implementation
+    }
+}
+
+extension CreateProjectCoordinator: PaywallActions {
+
+    func presentPaywall() {
+        presentedFullScreenCover = .paywall
     }
 }
 
@@ -101,6 +113,16 @@ extension CreateProjectCoordinator {
             case .selectLanguage: return "001"
             case .selectTechnology: return "002"
             case .selectBaseLanguage: return "003"
+            }
+        }
+    }
+
+    enum FullScreenCover: Identifiable {
+        case paywall
+
+        var id: String {
+            switch self {
+            case .paywall: "001"
             }
         }
     }

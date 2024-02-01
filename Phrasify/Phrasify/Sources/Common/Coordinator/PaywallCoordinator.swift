@@ -9,7 +9,7 @@ import SwiftUI
 
 final class PaywallCoordinator: Coordinator, ObservableObject {
 
-    typealias ParentCoordinator = Coordinator & RootActions & FullScreenCoverActions
+    typealias ParentCoordinator = Coordinator & FullScreenCoverActions
 
     @Published var navigationViews: [NavigationView] = []
 

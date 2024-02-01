@@ -141,14 +141,6 @@ final class FirestoreRepository {
         let ref =  db.collection(Collections.users.rawValue).document(userId)
         try await ref.updateData(["photoUrl": photoUrl])
     }
-
-    func setSubscriptionInfo(userId: UserID, subscriptionStatus: SubscriptionStatus,
-                             subscriptionPlan: SubscriptionPlan, validUntil: Date) async throws {
-        let ref =  db.collection(Collections.users.rawValue).document(userId)
-        try await ref.updateData(["subscriptionStatus": subscriptionStatus.rawValue,
-                                  "subscriptionPlan": subscriptionPlan.rawValue,
-                                  "subscriptionValidUntil": validUntil])
-    }
 }
 
 extension DocumentReference {

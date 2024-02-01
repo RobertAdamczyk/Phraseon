@@ -82,6 +82,11 @@ final class CloudRepository {
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
+    func startTrial(_ requestModel: StartTrialService.RequestModel) async throws {
+        let service: StartTrialService = .init(requestModel: requestModel)
+        _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
+    }
+
     func isUserProjectOwner() async throws -> IsUserProjectOwnerService.ResponseModel {
         let service: IsUserProjectOwnerService = .init(requestModel: .init())
         let result = try await functions.httpsCallable(service.functionName).call()

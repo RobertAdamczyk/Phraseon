@@ -8,7 +8,7 @@
 import SwiftUI
 
 final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenCoverActions, ProjectActions, ProfileActions,
-                             NavigationActions, SelectLanguageActions, SelectTechnologyActions,
+                             NavigationActions, SelectLanguageActions, SelectTechnologyActions, PaywallActions,
                              SelectMemberRoleActions, SheetActions, EnterContentKeyActions {
 
     init() {

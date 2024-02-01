@@ -28,6 +28,11 @@ extension CreateProjectCoordinator {
                         }
                     }
             }
+            .fullScreenCover(item: $coordinator.presentedFullScreenCover) {
+                switch $0 {
+                case .paywall: PaywallCoordinator.RootView(parentCoordinator: coordinator)
+                }
+            }
             .onDisappear(perform: coordinator.popToRoot)
         }
     }
