@@ -83,7 +83,7 @@ final class SelectTechnologyViewModel: ObservableObject {
                 ToastView.showSuccess(message: "Project '\(projectName)' successfully created.")
             }
         } catch {
-            if case .createProject = context, let cloudError = ErrorHandler.CloudError(rawValue: error.localizedDescription), 
+            if case .createProject = context, let cloudError = ErrorHandler.CloudError(rawValue: error.localizedDescription),
                 cloudError == .accessDenied {
                 coordinator.presentPaywall()
             } else {
