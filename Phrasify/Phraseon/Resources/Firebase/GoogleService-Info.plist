@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1062328450697-vfq219vut3hr1pac78h3msfpdp247794.apps.googleusercontent.com</string>
+	<string>246222213689-5upca04fskkasaofi8nc04ti0p0m7pfn.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1062328450697-vfq219vut3hr1pac78h3msfpdp247794</string>
+	<string>com.googleusercontent.apps.246222213689-5upca04fskkasaofi8nc04ti0p0m7pfn</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBGJ43itW6Y_ytnNvJlVzs1U04t03HNJic</string>
+	<string>AIzaSyC2srJlL8ZGAGyq29TfiMWbZx2wMvmFD7c</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1062328450697</string>
+	<string>246222213689</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>robert.adamczyk.phrasify.inhouse</string>
+	<string>robert.adamczyk.phraseon.live</string>
 	<key>PROJECT_ID</key>
-	<string>phrasify-inhouse</string>
+	<string>phraseon-live</string>
 	<key>STORAGE_BUCKET</key>
-	<string>phrasify-inhouse.appspot.com</string>
+	<string>phraseon-live.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1062328450697:ios:040a0071965ba0e8d5d058</string>
+	<string>1:246222213689:ios:8012f41e3ff1d0be6cb3e8</string>
 </dict>
 </plist>

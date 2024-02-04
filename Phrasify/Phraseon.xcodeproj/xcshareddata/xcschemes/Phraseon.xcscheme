@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1510"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "55C278DB2B2A3F3A005144F1"
-               BuildableName = "Phrasify_InHouse.app"
-               BlueprintName = "Phrasify_InHouse"
-               ReferencedContainer = "container:Phrasify.xcodeproj">
+               BlueprintIdentifier = "552785BD2B27A5120098FE95"
+               BuildableName = "Phraseon.app"
+               BlueprintName = "Phraseon"
+               ReferencedContainer = "container:Phraseon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -43,10 +43,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "55C278DB2B2A3F3A005144F1"
-            BuildableName = "Phrasify_InHouse.app"
-            BlueprintName = "Phrasify_InHouse"
-            ReferencedContainer = "container:Phrasify.xcodeproj">
+            BlueprintIdentifier = "552785BD2B27A5120098FE95"
+            BuildableName = "Phraseon.app"
+            BlueprintName = "Phraseon"
+            ReferencedContainer = "container:Phraseon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -60,10 +60,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "55C278DB2B2A3F3A005144F1"
-            BuildableName = "Phrasify_InHouse.app"
-            BlueprintName = "Phrasify_InHouse"
-            ReferencedContainer = "container:Phrasify.xcodeproj">
+            BlueprintIdentifier = "552785BD2B27A5120098FE95"
+            BuildableName = "Phraseon.app"
+            BlueprintName = "Phraseon"
+            ReferencedContainer = "container:Phraseon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
