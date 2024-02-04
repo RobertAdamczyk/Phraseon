@@ -1,5 +1,5 @@
 {
-  "identifier" : "7C37F9D7",
+  "identifier" : "7F7A20B6",
   "nonRenewingSubscriptions" : [
 
   ],
@@ -7,10 +7,10 @@
 
   ],
   "settings" : {
-    "_applicationInternalID" : "6477338270",
+    "_applicationInternalID" : "6477338296",
     "_developerTeamID" : "38Q6TG2KG3",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 728732798.78753102,
+    "_lastSynchronizedDate" : 728732446.80127299,
     "_locale" : "en_US",
     "_storefront" : "USA",
     "_storeKitErrors" : [
@@ -63,7 +63,7 @@
   },
   "subscriptionGroups" : [
     {
-      "id" : "21442920",
+      "id" : "21443029",
       "localizations" : [
 
       ],
@@ -79,7 +79,7 @@
           "displayPrice" : "9.99",
           "familyShareable" : false,
           "groupNumber" : 2,
-          "internalID" : "6477343475",
+          "internalID" : "6477343861",
           "introductoryOffer" : null,
           "localizations" : [
             {
@@ -88,10 +88,10 @@
               "locale" : "en_US"
             }
           ],
-          "productID" : "robert.adamczyk.phraseon.inhouse.subscription.plan.individual",
+          "productID" : "robert.adamczyk.phraseon.live.subscription.plan.individual",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "individual",
-          "subscriptionGroupID" : "21442920",
+          "subscriptionGroupID" : "21443029",
           "type" : "RecurringSubscription"
         },
         {
@@ -104,7 +104,7 @@
           "displayPrice" : "19.99",
           "familyShareable" : false,
           "groupNumber" : 1,
-          "internalID" : "6477343619",
+          "internalID" : "6477343974",
           "introductoryOffer" : null,
           "localizations" : [
             {
@@ -113,10 +113,10 @@
               "locale" : "en_US"
             }
           ],
-          "productID" : "robert.adamczyk.phraseon.inhouse.subscription.plan.team",
+          "productID" : "robert.adamczyk.phraseon.live.subscription.plan.team",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "team",
-          "subscriptionGroupID" : "21442920",
+          "subscriptionGroupID" : "21443029",
           "type" : "RecurringSubscription"
         }
       ]
