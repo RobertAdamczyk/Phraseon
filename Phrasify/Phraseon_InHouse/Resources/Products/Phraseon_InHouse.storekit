@@ -1,5 +1,5 @@
 {
-  "identifier" : "A1C2118E",
+  "identifier" : "7C37F9D7",
   "nonRenewingSubscriptions" : [
 
   ],
@@ -7,10 +7,10 @@
 
   ],
   "settings" : {
-    "_applicationInternalID" : "6476577951",
+    "_applicationInternalID" : "6477338270",
     "_developerTeamID" : "38Q6TG2KG3",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 728506454.66885495,
+    "_lastSynchronizedDate" : 728731014.92321396,
     "_locale" : "en_US",
     "_storefront" : "USA",
     "_storeKitErrors" : [
@@ -63,7 +63,7 @@
   },
   "subscriptionGroups" : [
     {
-      "id" : "21438903",
+      "id" : "21442920",
       "localizations" : [
 
       ],
@@ -79,19 +79,19 @@
           "displayPrice" : "9.99",
           "familyShareable" : false,
           "groupNumber" : 1,
-          "internalID" : "6477212520",
+          "internalID" : "6477343475",
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "Individual",
+              "description" : "individual",
               "displayName" : "Individual",
               "locale" : "en_US"
             }
           ],
-          "productID" : "robert.adamczyk.phrasify.inhouse.subscription.individual",
+          "productID" : "robert.adamczyk.phraseon.inhouse.subscription.plan.individual",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "individual",
-          "subscriptionGroupID" : "21438903",
+          "subscriptionGroupID" : "21442920",
           "type" : "RecurringSubscription"
         },
         {
@@ -104,19 +104,19 @@
           "displayPrice" : "19.99",
           "familyShareable" : false,
           "groupNumber" : 2,
-          "internalID" : "6477212861",
+          "internalID" : "6477343619",
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "Team",
+              "description" : "team",
               "displayName" : "Team",
               "locale" : "en_US"
             }
           ],
-          "productID" : "robert.adamczyk.phrasify.inhouse.subscription.team",
+          "productID" : "robert.adamczyk.phraseon.inhouse.subscription.plan.team",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "team",
-          "subscriptionGroupID" : "21438903",
+          "subscriptionGroupID" : "21442920",
           "type" : "RecurringSubscription"
         }
       ]
