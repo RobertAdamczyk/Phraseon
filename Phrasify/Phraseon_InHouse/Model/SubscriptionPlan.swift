@@ -1,16 +1,16 @@
 //
 //  SubscriptionPlan.swift
-//  Phrasify
+//  Phraseon_InHouse
 //
-//  Created by Robert Adamczyk on 29.01.24.
+//  Created by Robert Adamczyk on 04.02.24.
 //
 
 import Foundation
 
 enum SubscriptionPlan: String, Codable, CaseIterable {
 
-    case individual = "robert.adamczyk.phraseon.live.subscription.plan.individual"
-    case team = "robert.adamczyk.phraseon.live.subscription.plan.team"
+    case individual = "robert.adamczyk.phraseon.inhouse.subscription.plan.individual"
+    case team = "robert.adamczyk.phraseon.inhouse.subscription.plan.team"
 
     var id: String {
         self.rawValue
