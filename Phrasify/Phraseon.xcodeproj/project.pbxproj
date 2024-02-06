@@ -189,6 +189,18 @@
 		5574B33B2B6F114D00C9DFB9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5574B33A2B6F114D00C9DFB9 /* FirebaseStorage */; };
 		5574B33D2B6F115B00C9DFB9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5574B33C2B6F115B00C9DFB9 /* FirebaseFirestore */; };
 		5574B33F2B6F1F8400C9DFB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5574B33E2B6F1F8400C9DFB9 /* GoogleService-Info.plist */; };
+		557DECFB2B72E5A10090DF0B /* AlgoliaKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DECFA2B72E5A10090DF0B /* AlgoliaKey.swift */; };
+		557DECFC2B72E5A10090DF0B /* AlgoliaKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DECFA2B72E5A10090DF0B /* AlgoliaKey.swift */; };
+		557DECFE2B72E5B80090DF0B /* AlgoliaTimestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DECFD2B72E5B80090DF0B /* AlgoliaTimestamp.swift */; };
+		557DECFF2B72E5B80090DF0B /* AlgoliaTimestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DECFD2B72E5B80090DF0B /* AlgoliaTimestamp.swift */; };
+		557DED012B72E5C70090DF0B /* HighlightResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DED002B72E5C70090DF0B /* HighlightResult.swift */; };
+		557DED022B72E5C70090DF0B /* HighlightResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DED002B72E5C70090DF0B /* HighlightResult.swift */; };
+		557DED042B72E5D80090DF0B /* HighlightTimestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DED032B72E5D80090DF0B /* HighlightTimestamp.swift */; };
+		557DED052B72E5D80090DF0B /* HighlightTimestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DED032B72E5D80090DF0B /* HighlightTimestamp.swift */; };
+		557DED072B72E5E10090DF0B /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DED062B72E5E10090DF0B /* Highlight.swift */; };
+		557DED082B72E5E10090DF0B /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DED062B72E5E10090DF0B /* Highlight.swift */; };
+		557DED0A2B72E6100090DF0B /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DED092B72E6100090DF0B /* SearchRepository.swift */; };
+		557DED0B2B72E6100090DF0B /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DED092B72E6100090DF0B /* SearchRepository.swift */; };
 		5580743A2B2CE6650041160B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074392B2CE6650041160B /* AppError.swift */; };
 		5580743B2B2CE6930041160B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074392B2CE6650041160B /* AppError.swift */; };
 		558074412B2CF08E0041160B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
@@ -255,6 +267,7 @@
 		55854FAE2B572B0800CC5480 /* DeleteKeyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854FAC2B572B0800CC5480 /* DeleteKeyService.swift */; };
 		55854FB12B572C5B00CC5480 /* IsUserProjectOwnerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854FB02B572C5B00CC5480 /* IsUserProjectOwnerService.swift */; };
 		55854FB22B572C5B00CC5480 /* IsUserProjectOwnerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55854FB02B572C5B00CC5480 /* IsUserProjectOwnerService.swift */; };
+		558ACFBD2B7192D500741793 /* AlgoliaSearchClient in Frameworks */ = {isa = PBXBuildFile; productRef = 558ACFBC2B7192D500741793 /* AlgoliaSearchClient */; };
 		558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		55909A202B58798D00A77F21 /* KeyDetailView+ApproveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A1F2B58798D00A77F21 /* KeyDetailView+ApproveButton.swift */; };
@@ -505,6 +518,12 @@
 		5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		5574B3282B6F0D3900C9DFB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5574B33E2B6F1F8400C9DFB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		557DECFA2B72E5A10090DF0B /* AlgoliaKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaKey.swift; sourceTree = "<group>"; };
+		557DECFD2B72E5B80090DF0B /* AlgoliaTimestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaTimestamp.swift; sourceTree = "<group>"; };
+		557DED002B72E5C70090DF0B /* HighlightResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightResult.swift; sourceTree = "<group>"; };
+		557DED032B72E5D80090DF0B /* HighlightTimestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightTimestamp.swift; sourceTree = "<group>"; };
+		557DED062B72E5E10090DF0B /* Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlight.swift; sourceTree = "<group>"; };
+		557DED092B72E6100090DF0B /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		558074392B2CE6650041160B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		558074402B2CF08E0041160B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		558074442B2CF2780041160B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
@@ -640,6 +659,7 @@
 				5574B3332B6F113500C9DFB9 /* FirebaseAuth in Frameworks */,
 				5574B33B2B6F114D00C9DFB9 /* FirebaseStorage in Frameworks */,
 				5574B33D2B6F115B00C9DFB9 /* FirebaseFirestore in Frameworks */,
+				558ACFBD2B7192D500741793 /* AlgoliaSearchClient in Frameworks */,
 				5574B32B2B6F112400C9DFB9 /* CachedAsyncImage in Frameworks */,
 				5574B3392B6F114700C9DFB9 /* FirebaseFunctions in Frameworks */,
 				5574B3372B6F114300C9DFB9 /* FirebaseFirestoreSwift in Frameworks */,
@@ -992,6 +1012,18 @@
 			path = Paywall;
 			sourceTree = "<group>";
 		};
+		557DECF92B72E58F0090DF0B /* Algolia */ = {
+			isa = PBXGroup;
+			children = (
+				557DECFA2B72E5A10090DF0B /* AlgoliaKey.swift */,
+				557DED062B72E5E10090DF0B /* Highlight.swift */,
+				557DED002B72E5C70090DF0B /* HighlightResult.swift */,
+				557DED032B72E5D80090DF0B /* HighlightTimestamp.swift */,
+				557DECFD2B72E5B80090DF0B /* AlgoliaTimestamp.swift */,
+			);
+			path = Algolia;
+			sourceTree = "<group>";
+		};
 		558074432B2CF2640041160B /* GoogleSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -1257,6 +1289,7 @@
 				55E960D82B3CD8E50016DA23 /* CloudRepository.swift */,
 				551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */,
 				5570FF482B61752D0011208F /* StoreKitRepository.swift */,
+				557DED092B72E6100090DF0B /* SearchRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1299,6 +1332,7 @@
 		55C762192B27A618008CBF30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				557DECF92B72E58F0090DF0B /* Algolia */,
 				55B8414E2B4CB595007697AF /* User */,
 				558074392B2CE6650041160B /* AppError.swift */,
 				5516EBD72B419EBD00C558B1 /* SubscriptionStatus.swift */,
@@ -1570,6 +1604,7 @@
 				5574B3382B6F114700C9DFB9 /* FirebaseFunctions */,
 				5574B33A2B6F114D00C9DFB9 /* FirebaseStorage */,
 				5574B33C2B6F115B00C9DFB9 /* FirebaseFirestore */,
+				558ACFBC2B7192D500741793 /* AlgoliaSearchClient */,
 			);
 			productName = Phrasify;
 			productReference = 55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse.app */;
@@ -1605,6 +1640,7 @@
 				5574B3132B6F020B00C9DFB9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				5574B3182B6F029F00C9DFB9 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				5574B31B2B6F031300C9DFB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				558ACFBB2B7192D500741793 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */,
 			);
 			productRefGroup = 552785BF2B27A5120098FE95 /* Products */;
 			projectDirPath = "";
@@ -1669,6 +1705,7 @@
 				55DE10262B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */,
 				5516EBB32B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074542B2E3C8F0041160B /* RootActions.swift in Sources */,
+				557DED0A2B72E6100090DF0B /* SearchRepository.swift in Sources */,
 				553F1BEB2B2914700071A099 /* SetPasswordView.swift in Sources */,
 				55DE104A2B4AFA07001CB87F /* URLCache+ImageCache.swift in Sources */,
 				551AA41A2B33667100F0B1E2 /* TagLayout.swift in Sources */,
@@ -1719,6 +1756,7 @@
 				551AA4242B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				5516EBE22B432D3F00C558B1 /* ProjectActions.swift in Sources */,
 				550041FD2B6C3FD700073384 /* PaywallActions.swift in Sources */,
+				557DED072B72E5E10090DF0B /* Highlight.swift in Sources */,
 				55C2DAC72B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
 				55A7B3542B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */,
 				550041FA2B6C3B5300073384 /* StartTrialService.swift in Sources */,
@@ -1739,7 +1777,9 @@
 				5570FF532B61B1FF0011208F /* PaywallCoordinator.swift in Sources */,
 				555A7DE62B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */,
 				558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */,
+				557DED042B72E5D80090DF0B /* HighlightTimestamp.swift in Sources */,
 				558074512B2E38110041160B /* Activitable.swift in Sources */,
+				557DECFB2B72E5A10090DF0B /* AlgoliaKey.swift in Sources */,
 				553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */,
 				55854F9D2B57259300CC5480 /* SetProjectTechnologiesService.swift in Sources */,
 				55FE51B02B5D1DB50084617F /* ValidationErrorProtocol.swift in Sources */,
@@ -1835,10 +1875,12 @@
 				55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				553F1BDD2B2907C10071A099 /* RegisterView.swift in Sources */,
 				55854F8E2B571FAB00CC5480 /* ChangeProjectOwnerService.swift in Sources */,
+				557DED012B72E5C70090DF0B /* HighlightResult.swift in Sources */,
 				55826AA22B34FD1600233D90 /* CreateKeyViewModel.swift in Sources */,
 				5516EBCF2B40D2F500C558B1 /* ProfileView.swift in Sources */,
 				5569779E2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */,
 				55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */,
+				557DECFE2B72E5B80090DF0B /* AlgoliaTimestamp.swift in Sources */,
 				5516EBB92B3F339E00C558B1 /* KeysOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1856,6 +1898,7 @@
 				55DE10272B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */,
 				5516EBB42B3F2EE700C558B1 /* Language+UI.swift in Sources */,
 				558074552B2E3C8F0041160B /* RootActions.swift in Sources */,
+				557DED0B2B72E6100090DF0B /* SearchRepository.swift in Sources */,
 				55C279182B2A4C0C005144F1 /* Dependencies.swift in Sources */,
 				55DE104B2B4AFA07001CB87F /* URLCache+ImageCache.swift in Sources */,
 				551AA41B2B33667100F0B1E2 /* TagLayout.swift in Sources */,
@@ -1906,6 +1949,7 @@
 				551AA4252B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				5516EBE32B432D3F00C558B1 /* ProjectActions.swift in Sources */,
 				550041FE2B6C3FD700073384 /* PaywallActions.swift in Sources */,
+				557DED082B72E5E10090DF0B /* Highlight.swift in Sources */,
 				55C2DAC82B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
 				55A7B3552B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */,
 				550041FB2B6C3B5300073384 /* StartTrialService.swift in Sources */,
@@ -1926,7 +1970,9 @@
 				5570FF542B61B1FF0011208F /* PaywallCoordinator.swift in Sources */,
 				555A7DE72B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */,
 				558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */,
+				557DED052B72E5D80090DF0B /* HighlightTimestamp.swift in Sources */,
 				558074522B2E38110041160B /* Activitable.swift in Sources */,
+				557DECFC2B72E5A10090DF0B /* AlgoliaKey.swift in Sources */,
 				55C278E72B2A3F3A005144F1 /* StartView.swift in Sources */,
 				55854F9E2B57259300CC5480 /* SetProjectTechnologiesService.swift in Sources */,
 				55FE51B12B5D1DB50084617F /* ValidationErrorProtocol.swift in Sources */,
@@ -2022,10 +2068,12 @@
 				55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
 				55C278EF2B2A3F3A005144F1 /* RegisterView.swift in Sources */,
 				55854F8F2B571FAB00CC5480 /* ChangeProjectOwnerService.swift in Sources */,
+				557DED022B72E5C70090DF0B /* HighlightResult.swift in Sources */,
 				55826AA32B34FD1600233D90 /* CreateKeyViewModel.swift in Sources */,
 				5516EBD02B40D2F500C558B1 /* ProfileView.swift in Sources */,
 				5569779F2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */,
 				55C278F02B2A3F3A005144F1 /* AppButton.swift in Sources */,
+				557DECFF2B72E5B80090DF0B /* AlgoliaTimestamp.swift in Sources */,
 				5516EBBA2B3F339E00C558B1 /* KeysOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2384,6 +2432,14 @@
 				version = 10.20.0;
 			};
 		};
+		558ACFBB2B7192D500741793 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/algolia/algoliasearch-client-swift";
+			requirement = {
+				kind = exactVersion;
+				version = 8.20.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2486,6 +2542,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5574B31B2B6F031300C9DFB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		558ACFBC2B7192D500741793 /* AlgoliaSearchClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 558ACFBB2B7192D500741793 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */;
+			productName = AlgoliaSearchClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

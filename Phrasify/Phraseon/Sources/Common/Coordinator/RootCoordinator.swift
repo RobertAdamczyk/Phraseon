@@ -27,12 +27,14 @@ final class RootCoordinator: ObservableObject, Coordinator {
         let storageRepository: StorageRepository = .init()
         let storeKitRepository: StoreKitRepository = .init()
         let userDomain: UserDomain = .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository)
+        let searchRepository: SearchRepository = .init()
         dependencies = .init(authenticationRepository: authenticationRepository,
                              firestoreRepository: firestoreRepository,
                              cloudRepository: cloudRepository,
                              storageRepository: storageRepository,
                              storeKitRepository: storeKitRepository,
-                             userDomain: userDomain)
+                             userDomain: userDomain,
+                             searchRepository: searchRepository)
         setupLoginSubscription()
     }
 

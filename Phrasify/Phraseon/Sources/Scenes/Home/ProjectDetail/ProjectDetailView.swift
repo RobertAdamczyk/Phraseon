@@ -13,8 +13,8 @@ struct ProjectDetailView: View {
     @State private var scrollState: ScrollingAnimator.State = .scrollView
 
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading, spacing: 16) {
+        ScrollView(showsIndicators: true) {
+            LazyVStack(alignment: .leading, spacing: 16) {
                 Picker("", selection: $viewModel.selectedKeysOrder) {
                     ForEach(KeysOrder.allCases, id: \.self) { bar in
                         Text(bar.title)
@@ -31,7 +31,9 @@ struct ProjectDetailView: View {
                     } label: {
                         KeyRow(key: key, viewModel: viewModel)
                     }
-
+                    .onAppear {
+                        viewModel.onKeyAppear(key)
+                    }
                 }
             }
             .animate($scrollState)

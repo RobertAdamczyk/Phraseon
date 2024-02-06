@@ -27,6 +27,8 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         }
     }
 
+    var keysLimit: Int = 20
+
     var translationApprovalUseCase: TranslationApprovalUseCase {
         .init(project: project, subscriptionPlan: coordinator.dependencies.userDomain.user?.subscriptionPlan)
     }
@@ -54,6 +56,14 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         setupSelectedKeysOrderSubscriber()
         setupMemberSubscriber()
         setupProjectSubscriber()
+        setupSearchTextSubscriber()
+    }
+
+    func onKeyAppear(_ key: Key) {
+        if keys.last == key && keysLimit == keys.count {
+            keysLimit += 10
+            setupKeysSubscriber()
+        }
     }
 
     func onAddButtonTapped() {
@@ -77,10 +87,22 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
             .store(in: cancelBag)
     }
 
+    private func setupSearchTextSubscriber() {
+        $searchText
+            .receive(on: RunLoop.main)
+            .removeDuplicates()
+            .sink { [weak self] _ in
+                self?.onSearchTextDidChange()
+            }
+            .store(in: cancelBag)
+    }
+
     private func setupKeysSubscriber() {
         guard let projectId = project.id else { return }
         keysTask?.cancel()
-        keysTask = coordinator.dependencies.firestoreRepository.getKeysPublisher(projectId: projectId, keysOrder: selectedKeysOrder)
+        keysTask = coordinator.dependencies.firestoreRepository.getKeysPublisher(projectId: projectId, 
+                                                                                 keysOrder: selectedKeysOrder,
+                                                                                 limit: keysLimit)
             .receive(on: RunLoop.main)
             .sink { _ in
                 // empty implementation
@@ -89,5 +111,16 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
                     self?.keys = keys
                 }
             }
+    }
+
+    private func onSearchTextDidChange() {
+        print("TEST: CHANGE")
+    }
+
+    private func searchKeys(with text: String) {
+        guard let projectId = project.id else { return }
+        coordinator.dependencies.searchRepository.searchKeys(in: projectId, with: searchText) { result in
+            print(result)
+        }
     }
 }

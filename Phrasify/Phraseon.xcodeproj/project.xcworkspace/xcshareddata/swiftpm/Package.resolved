@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "algoliasearch-client-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/algolia/algoliasearch-client-swift",
+      "state" : {
+        "revision" : "090ca174bf7fbd4ca3b336360b82eaca1e2db2dd",
+        "version" : "8.20.0"
+      }
+    },
+    {
       "identity" : "app-check",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/app-check.git",

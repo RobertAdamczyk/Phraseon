@@ -81,9 +81,10 @@ final class FirestoreRepository {
 
     // MARK: Keys
 
-    func getKeysPublisher(projectId: String, keysOrder: KeysOrder) -> AnyPublisher<[Key], Error> {
+    func getKeysPublisher(projectId: String, keysOrder: KeysOrder, limit: Int) -> AnyPublisher<[Key], Error> {
         return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.keys.rawValue)
                  .order(by: keysOrder.value.field, descending: keysOrder.value.descending)
+                 .limit(to: limit)
                  .snapshotPublisher()
                  .map { snapshot in
                      snapshot.documents.compactMap { document -> Key? in

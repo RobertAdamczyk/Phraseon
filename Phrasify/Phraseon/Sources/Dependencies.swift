@@ -14,4 +14,5 @@ struct Dependencies {
     let storageRepository: StorageRepository
     let storeKitRepository: StoreKitRepository
     let userDomain: UserDomain
+    let searchRepository: SearchRepository
 }
