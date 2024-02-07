@@ -126,6 +126,7 @@
 		5536E1662B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */; };
 		5536E1692B74362500E5DCC6 /* LoadingDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */; };
 		5536E16A2B74362500E5DCC6 /* LoadingDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */; };
+		5536E16C2B74435A00E5DCC6 /* AlgoliaSearchClient in Frameworks */ = {isa = PBXBuildFile; productRef = 5536E16B2B74435A00E5DCC6 /* AlgoliaSearchClient */; };
 		553722AD2B631DA00061CF52 /* CellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AC2B631DA00061CF52 /* CellBackground.swift */; };
 		553722AE2B631DA00061CF52 /* CellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AC2B631DA00061CF52 /* CellBackground.swift */; };
 		553722B02B631DC40061CF52 /* ViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AF2B631DC40061CF52 /* ViewBackground.swift */; };
@@ -648,6 +649,7 @@
 				5574B3212B6F031300C9DFB9 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				5574B31D2B6F031300C9DFB9 /* FirebaseAuth in Frameworks */,
 				5574B3122B6F01C200C9DFB9 /* Shimmer in Frameworks */,
+				5536E16C2B74435A00E5DCC6 /* AlgoliaSearchClient in Frameworks */,
 				5574B30F2B6F01B500C9DFB9 /* CachedAsyncImage in Frameworks */,
 				5574B3152B6F020B00C9DFB9 /* GoogleSignIn in Frameworks */,
 				5574B3252B6F031300C9DFB9 /* FirebaseFunctions in Frameworks */,
@@ -1591,6 +1593,7 @@
 				5574B3222B6F031300C9DFB9 /* FirebaseFirestoreSwift */,
 				5574B3242B6F031300C9DFB9 /* FirebaseFunctions */,
 				5574B3262B6F031300C9DFB9 /* FirebaseStorage */,
+				5536E16B2B74435A00E5DCC6 /* AlgoliaSearchClient */,
 			);
 			productName = Phrasify;
 			productReference = 552785BE2B27A5120098FE95 /* Phraseon.app */;
@@ -2463,6 +2466,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5536E16B2B74435A00E5DCC6 /* AlgoliaSearchClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 558ACFBB2B7192D500741793 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */;
+			productName = AlgoliaSearchClient;
+		};
 		5574B30E2B6F01B500C9DFB9 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5574B30D2B6F01B500C9DFB9 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
