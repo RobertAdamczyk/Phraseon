@@ -23,3 +23,10 @@ extension Key {
         self.status.values.contains(where: { $0 == KeyStatus.review}) ? KeyStatus.review : KeyStatus.approved
     }
 }
+
+extension AlgoliaKey {
+
+    var keyStatus: KeyStatus {
+        self.status.values.contains(where: { $0 == KeyStatus.review}) ? KeyStatus.review : KeyStatus.approved
+    }
+}

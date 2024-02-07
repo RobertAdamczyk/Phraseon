@@ -12,11 +12,12 @@ struct AlgoliaKey: Codable {
     let lastUpdatedAt: AlgoliaTimestamp
     let status: [String: KeyStatus]
     let translation: Translation
+    let keyId: String
     let objectID: String
     let highlightResult: HighlightResult
 
     enum CodingKeys: String, CodingKey {
-        case createdAt, lastUpdatedAt, status, translation, objectID
+        case createdAt, lastUpdatedAt, status, translation, objectID, keyId
         case highlightResult = "_highlightResult"
     }
 }

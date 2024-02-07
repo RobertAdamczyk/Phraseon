@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import AlgoliaSearchClient
 
 struct Highlight: Codable {
-    let value: String
-    let matchLevel: String
+    let value: AlgoliaSearchClient.HighlightedString
+    let matchLevel: AlgoliaSearchClient.MatchLevel
     let matchedWords: [String]
 }
