@@ -122,6 +122,10 @@
 		552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
 		552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
 		552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
+		5536E1652B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */; };
+		5536E1662B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */; };
+		5536E1692B74362500E5DCC6 /* LoadingDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */; };
+		5536E16A2B74362500E5DCC6 /* LoadingDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */; };
 		553722AD2B631DA00061CF52 /* CellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AC2B631DA00061CF52 /* CellBackground.swift */; };
 		553722AE2B631DA00061CF52 /* CellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AC2B631DA00061CF52 /* CellBackground.swift */; };
 		553722B02B631DC40061CF52 /* ViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AF2B631DC40061CF52 /* ViewBackground.swift */; };
@@ -487,6 +491,8 @@
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyActions.swift; sourceTree = "<group>"; };
+		5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighlightedString+extractedText.swift"; sourceTree = "<group>"; };
+		5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDotsView.swift; sourceTree = "<group>"; };
 		553722AC2B631DA00061CF52 /* CellBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackground.swift; sourceTree = "<group>"; };
 		553722AF2B631DC40061CF52 /* ViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBackground.swift; sourceTree = "<group>"; };
 		553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallView+SubscriptionCell.swift"; sourceTree = "<group>"; };
@@ -757,6 +763,7 @@
 				55DE10432B4AD0D8001CB87F /* Role+UI.swift */,
 				55DE10462B4AD118001CB87F /* Role+SortIndex.swift */,
 				55909A222B58946400A77F21 /* Member+Permissions.swift */,
+				5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -898,6 +905,14 @@
 				552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */,
 			);
 			path = LanguageView;
+			sourceTree = "<group>";
+		};
+		5536E1672B74361700E5DCC6 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		553722AA2B631D880061CF52 /* Backgrounds */ = {
@@ -1224,6 +1239,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5536E1672B74361700E5DCC6 /* Animation */,
 				5561C5C22B65A75300C815BC /* SelectableCircle */,
 				553722AA2B631D880061CF52 /* Backgrounds */,
 				55FE51A22B5CA94E0084617F /* PasswordValidation */,
@@ -1777,6 +1793,7 @@
 				5570FF532B61B1FF0011208F /* PaywallCoordinator.swift in Sources */,
 				555A7DE62B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */,
 				558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */,
+				5536E1652B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */,
 				557DED042B72E5D80090DF0B /* HighlightTimestamp.swift in Sources */,
 				558074512B2E38110041160B /* Activitable.swift in Sources */,
 				557DECFB2B72E5A10090DF0B /* AlgoliaKey.swift in Sources */,
@@ -1850,6 +1867,7 @@
 				55FB5F632B3E409B004D3720 /* KeyStatus.swift in Sources */,
 				55FE519C2B5B1AC20084617F /* ErrorHandler.swift in Sources */,
 				55FE51B72B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
+				5536E1692B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3572B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
 				551AA4162B33612500F0B1E2 /* Language.swift in Sources */,
@@ -1970,6 +1988,7 @@
 				5570FF542B61B1FF0011208F /* PaywallCoordinator.swift in Sources */,
 				555A7DE72B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */,
 				558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */,
+				5536E1662B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */,
 				557DED052B72E5D80090DF0B /* HighlightTimestamp.swift in Sources */,
 				558074522B2E38110041160B /* Activitable.swift in Sources */,
 				557DECFC2B72E5A10090DF0B /* AlgoliaKey.swift in Sources */,
@@ -2043,6 +2062,7 @@
 				55FB5F642B3E409B004D3720 /* KeyStatus.swift in Sources */,
 				55FE519D2B5B1AC20084617F /* ErrorHandler.swift in Sources */,
 				55FE51B82B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
+				5536E16A2B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3582B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				559E2D572B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
 				551AA4172B33612500F0B1E2 /* Language.swift in Sources */,
