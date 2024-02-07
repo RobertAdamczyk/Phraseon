@@ -15,25 +15,54 @@ struct ProjectDetailView: View {
     var body: some View {
         ScrollView(showsIndicators: true) {
             LazyVStack(alignment: .leading, spacing: 16) {
-                Picker("", selection: $viewModel.selectedKeysOrder) {
-                    ForEach(KeysOrder.allCases, id: \.self) { bar in
-                        Text(bar.title)
-                            .tag(bar)
+                if viewModel.shouldShowPicker {
+                    Picker("", selection: $viewModel.selectedKeysOrder) {
+                        ForEach(KeysOrder.allCases, id: \.self) { bar in
+                            Text(bar.title)
+                                .tag(bar)
+                        }
                     }
+                    .labelsHidden()
+                    .pickerStyle(.segmented)
+                    .padding(.bottom, 16)
                 }
-                .labelsHidden()
-                .pickerStyle(.segmented)
-                .padding(.bottom, 16)
 
-                ForEach(viewModel.searchKeys, id: \.self) { key in
-                    Button {
-                        viewModel.onKeyTapped(key)
-                    } label: {
-                        KeyRow(key: key, viewModel: viewModel)
+                switch viewModel.state {
+                case .loaded(let keys):
+                    ForEach(keys, id: \.self) { key in
+                        Button {
+                            viewModel.onKeyTapped(key)
+                        } label: {
+                            KeyRow(key: key, viewModel: viewModel)
+                        }
+                        .onAppear {
+                            viewModel.onKeyAppear(key)
+                        }
                     }
-                    .onAppear {
-                        viewModel.onKeyAppear(key)
+                case .searched(let keys):
+                    ForEach(keys, id: \.self.objectID) { key in
+                        Button {
+                            viewModel.onAlgoliaKeyTapped(key)
+                        } label: {
+                            AlgoliaKeyRow(key: key, viewModel: viewModel)
+                        }
                     }
+                case .notFound:
+                    ContentUnavailableView.search
+                        .padding(.top, 128)
+                case .loading:
+                    LoadingDotsView()
+                        .frame(height: 300)
+                case .failed:
+                    ContentUnavailableView("Error Occurred",
+                                           systemImage: "exclamationmark.circle.fill",
+                                           description: Text("Unable to load data. Please try again."))
+                        .padding(.top, 128)
+                case .empty:
+                    ContentUnavailableView("Currently there are no phrases", 
+                                           systemImage: "nosign",
+                                           description: Text("Add your first phrase."))
+                        .padding(.top, 128)
                 }
             }
             .animate($scrollState)

@@ -12,18 +12,24 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
 
     typealias ProjectDetailCoordinator = Coordinator & ProjectActions
 
+    enum State {
+        case loaded([Key])
+        case searched([AlgoliaKey])
+        case loading
+        case failed
+        case empty
+        case notFound
+    }
+
     @Published var selectedKeysOrder: KeysOrder = .alphabetically
     @Published var searchText = ""
     @Published var member: Member?
-    @Published private var keys: [Key] = []
+    @Published var state: State = .loading
 
-    var searchKeys: [Key] {
-        if searchText.isEmpty {
-            return keys
-        } else {
-            return keys.filter { key in
-                key.id?.lowercased().contains(searchText.lowercased()) == true
-            }
+    var shouldShowPicker: Bool {
+        switch state {
+        case .loaded: return true
+        default: return false
         }
     }
 
@@ -45,7 +51,16 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
 
     internal var project: Project
     internal let cancelBag = CancelBag()
+
+    private var keys: [Key] {
+        switch state {
+        case .loaded(let keys): return keys
+        default: return []
+        }
+    }
+
     private var keysTask: AnyCancellable?
+    private var searchTask: AnyCancellable?
 
     private let coordinator: ProjectDetailCoordinator
 
@@ -78,6 +93,15 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         coordinator.showKeyDetails(key: key, project: project, projectMemberUseCase: projectMemberUseCase)
     }
 
+    func onAlgoliaKeyTapped(_ algoliaKey: AlgoliaKey) {
+        let key: Key = .init(id: algoliaKey.objectID,
+                             translation: algoliaKey.translation,
+                             createdAt: .init(timeIntervalSince1970: TimeInterval(algoliaKey.createdAt.seconds)),
+                             lastUpdatedAt: .init(timeIntervalSince1970: TimeInterval(algoliaKey.lastUpdatedAt.seconds)),
+                             status: algoliaKey.status)
+        coordinator.showKeyDetails(key: key, project: project, projectMemberUseCase: projectMemberUseCase)
+    }
+
     private func setupSelectedKeysOrderSubscriber() {
         $selectedKeysOrder
             .receive(on: RunLoop.main)
@@ -91,8 +115,12 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         $searchText
             .receive(on: RunLoop.main)
             .removeDuplicates()
-            .sink { [weak self] _ in
-                self?.onSearchTextDidChange()
+            .sink { [weak self] newValue in
+                guard !newValue.isEmpty else {
+                    self?.setupKeysSubscriber()
+                    return
+                }
+                self?.onSearchTextDidChange(newValue)
             }
             .store(in: cancelBag)
     }
@@ -104,23 +132,55 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
                                                                                  keysOrder: selectedKeysOrder,
                                                                                  limit: keysLimit)
             .receive(on: RunLoop.main)
-            .sink { _ in
-                // empty implementation
+            .sink { [weak self] completion in
+                if case .failure = completion {
+                    DispatchQueue.main.async {
+                        self?.state = .failed
+                    }
+                }
             } receiveValue: { [weak self] keys in
                 DispatchQueue.main.async {
-                    self?.keys = keys
+                    if keys.isEmpty {
+                        self?.state = .empty
+                    } else {
+                        self?.state = .loaded(keys)
+                    }
                 }
             }
     }
 
-    private func onSearchTextDidChange() {
-        print("TEST: CHANGE")
+    private func setLoading() {
+        DispatchQueue.main.async { [weak self] in
+            self?.state = .loading
+        }
+    }
+
+    private func onSearchTextDidChange(_ text: String) {
+        searchTask?.cancel()
+        guard text.count > 2 else { return }
+        setLoading()
+        searchTask = Just(())
+            .delay(for: .seconds(2), scheduler: RunLoop.main)
+            .sink(receiveValue: { [weak self] in
+                self?.searchKeys(with: text)
+            })
     }
 
     private func searchKeys(with text: String) {
         guard let projectId = project.id else { return }
-        coordinator.dependencies.searchRepository.searchKeys(in: projectId, with: searchText) { result in
-            print(result)
+        coordinator.dependencies.searchRepository.searchKeys(in: projectId, with: searchText) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let keys):
+                    if keys.isEmpty {
+                        self?.state = .notFound
+                    } else {
+                        self?.state = .searched(keys)
+                    }
+                case .failure:
+                    self?.state = .failed
+                }
+            }
         }
     }
 }
