@@ -14,7 +14,6 @@ final class SearchRepository {
 
     init() {
         self.client = SearchClient(appID: .init(rawValue: Secrets.algoliaAppId), apiKey: .init(rawValue: Secrets.algoliaAdminKey))
-        ToastView.showSuccess(message: Secrets.algoliaAppId)
     }
 
     func searchKeys(in projectId: String, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {
