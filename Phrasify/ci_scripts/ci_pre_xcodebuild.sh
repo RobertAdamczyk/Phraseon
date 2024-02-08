@@ -6,9 +6,10 @@
 #  Created by Robert Adamczyk on 08.02.24.
 #
 echo "InHouse: PRE-Xcode Build is activated .... "
-echo $CI_WORKSPACE
-echo $ALGOLIA_APP_ID
-echo $ALGOLIA_ADMIN_KEY
+echo $CI_XCODE_SCHEME
+echo $CI_PRODUCT_PLATFORM
+echo $CI_PRODUCT
+echo $CI_XCODE_PROJECT
 
 # Write a JSON File containing all the environment variables and secrets.
 printf "{\"ALGOLIA_APP_ID\":\"%s\",\"ALGOLIA_ADMIN_KEY\":\"%s\"}" "$ALGOLIA_APP_ID" "$ALGOLIA_ADMIN_KEY" >> ../Phraseon_InHouse/Resources/secrets.json
