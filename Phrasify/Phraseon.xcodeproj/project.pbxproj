@@ -347,6 +347,9 @@
 		55C762302B27AB72008CBF30 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7622F2B27AB72008CBF30 /* StartView.swift */; };
 		55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C762352B27B52A008CBF30 /* StartCoordinator.swift */; };
 		55CADF2E2B7571F800D04365 /* ci_pre_xcodebuild.sh in Resources */ = {isa = PBXBuildFile; fileRef = 55CADF2D2B7571F800D04365 /* ci_pre_xcodebuild.sh */; };
+		55CADF322B7576CF00D04365 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 55CADF312B7576CF00D04365 /* secrets.json */; };
+		55CADF352B75816300D04365 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CADF342B75816300D04365 /* Secrets.swift */; };
+		55CADF362B75816300D04365 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CADF342B75816300D04365 /* Secrets.swift */; };
 		55D41E1A2B68219200FADB4E /* SubscriptionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D41E192B68219200FADB4E /* SubscriptionPlan.swift */; };
 		55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10222B48D016001CB87F /* ProjectMembersView.swift */; };
 		55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10222B48D016001CB87F /* ProjectMembersView.swift */; };
@@ -599,6 +602,8 @@
 		55C7622F2B27AB72008CBF30 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		55C762352B27B52A008CBF30 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
 		55CADF2D2B7571F800D04365 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
+		55CADF312B7576CF00D04365 /* secrets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
+		55CADF342B75816300D04365 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		55D41E192B68219200FADB4E /* SubscriptionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPlan.swift; sourceTree = "<group>"; };
 		55DE10222B48D016001CB87F /* ProjectMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersView.swift; sourceTree = "<group>"; };
 		55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersViewModel.swift; sourceTree = "<group>"; };
@@ -983,6 +988,7 @@
 		5567E6C42B6F8D4D00C9EDFF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				55CADF312B7576CF00D04365 /* secrets.json */,
 				5567E6C62B6F8D6000C9EDFF /* Products */,
 				5567E6C52B6F8D5400C9EDFF /* Firebase */,
 			);
@@ -1244,6 +1250,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55CADF332B75814E00D04365 /* Secrets */,
 				5536E1672B74361700E5DCC6 /* Animation */,
 				5561C5C22B65A75300C815BC /* SelectableCircle */,
 				553722AA2B631D880061CF52 /* Backgrounds */,
@@ -1446,6 +1453,14 @@
 				55CADF2D2B7571F800D04365 /* ci_pre_xcodebuild.sh */,
 			);
 			path = ci_scripts;
+			sourceTree = "<group>";
+		};
+		55CADF332B75814E00D04365 /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				55CADF342B75816300D04365 /* Secrets.swift */,
+			);
+			path = Secrets;
 			sourceTree = "<group>";
 		};
 		55DE10212B48D002001CB87F /* ProjectMembers */ = {
@@ -1708,6 +1723,7 @@
 				558074422B2CF08E0041160B /* Roboto-Medium.ttf in Resources */,
 				55CADF2E2B7571F800D04365 /* ci_pre_xcodebuild.sh in Resources */,
 				55C278F32B2A3F3A005144F1 /* RethinkSans-Bold.ttf in Resources */,
+				55CADF322B7576CF00D04365 /* secrets.json in Resources */,
 				55C278F42B2A3F3A005144F1 /* RethinkSans-Medium.ttf in Resources */,
 				55C278F52B2A3F3A005144F1 /* RethinkSans-Regular.ttf in Resources */,
 				5505C7DB2B55BAEB00806B4F /* syncScript.txt in Resources */,
@@ -1827,6 +1843,7 @@
 				55DE105F2B4B5465001CB87F /* LeaveProjectWarningViewModel.swift in Sources */,
 				553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */,
 				551AA40C2B334FB800F0B1E2 /* FullScreenCoverActions.swift in Sources */,
+				55CADF352B75816300D04365 /* Secrets.swift in Sources */,
 				55FF426C2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
 				55FE51A42B5CA9B90084617F /* PasswordValidationHandler.swift in Sources */,
 				55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */,
@@ -2022,6 +2039,7 @@
 				55DE10602B4B5465001CB87F /* LeaveProjectWarningViewModel.swift in Sources */,
 				55C2791A2B2A4C11005144F1 /* RootCoordinator.swift in Sources */,
 				551AA40D2B334FB800F0B1E2 /* FullScreenCoverActions.swift in Sources */,
+				55CADF362B75816300D04365 /* Secrets.swift in Sources */,
 				55FF426D2B2B923900F4D523 /* RootCoordinator+RootView.swift in Sources */,
 				55FE51A52B5CA9B90084617F /* PasswordValidationHandler.swift in Sources */,
 				55C278EA2B2A3F3A005144F1 /* AppDivider.swift in Sources */,

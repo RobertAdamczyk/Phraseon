@@ -13,12 +13,8 @@ final class SearchRepository {
     let client: SearchClient
 
     init() {
-        if let appId = ProcessInfo.processInfo.environment["ALGOLIA_APP_ID"],
-           let adminKey = ProcessInfo.processInfo.environment["ALGOLIA_ADMIN_KEY"] {
-            self.client = SearchClient(appID: .init(rawValue: appId), apiKey: .init(rawValue: adminKey))
-        } else {
-            fatalError("Need credentials for Algolia.")
-        }
+        self.client = SearchClient(appID: .init(rawValue: Secrets.algoliaAppId), apiKey: .init(rawValue: Secrets.algoliaAdminKey))
+        ToastView.showSuccess(message: Secrets.algoliaAppId)
     }
 
     func searchKeys(in projectId: String, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {
