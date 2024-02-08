@@ -16,9 +16,6 @@ printf "{\"ALGOLIA_APP_ID\":\"%s\",\"ALGOLIA_ADMIN_KEY\":\"%s\"}" "$ALGOLIA_APP_
 
 echo "Wrote Secrets.json file."
 
-echo "Failing the build on purpose to check script execution"
-exit 1
-
 echo "InHouse: PRE-Xcode Build is DONE .... "
 
 exit 0
