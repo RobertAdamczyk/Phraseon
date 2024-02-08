@@ -15,7 +15,7 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
     @Published internal var member: Member?
 
     var translationApprovalUseCase: TranslationApprovalUseCase {
-        .init(project: project, subscriptionPlan: coordinator.dependencies.userDomain.user?.subscriptionPlan)
+        .init(project: project, subscriptionPlan: coordinator.dependencies.userDomain.user.currentValue?.subscriptionPlan)
     }
 
     let project: Project

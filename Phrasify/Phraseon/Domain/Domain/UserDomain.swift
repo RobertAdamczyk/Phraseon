@@ -10,7 +10,7 @@ import SwiftUI
 
 protocol UserDomainProtocol: AnyObject {
 
-    var user: User? { set get }
+    var user: DeferredData<User> { set get }
     var cancelBag: CancelBag { get }
     var userDomain: UserDomain { get }
 
@@ -33,7 +33,7 @@ extension UserDomainProtocol {
 
 final class UserDomain {
 
-    @Published private(set) var user: User?
+    @Published private(set) var user: DeferredData<User> = .idle
 
     private let firestoreRepository: FirestoreRepository
     private let authenticationRepository: AuthenticationRepository
@@ -50,13 +50,22 @@ final class UserDomain {
     private func setupUserSubscriber() {
         guard let userId = authenticationRepository.currentUser?.uid else { return }
         cancelBag.cancel()
+        user = .isLoading
         firestoreRepository.getUserPublisher(userId: userId)
             .receive(on: RunLoop.main)
-            .sink { _ in
-                // empty implementation
+            .sink { [weak self] completion in
+                if case .failure(let error) = completion {
+                    DispatchQueue.main.async {
+                        self?.user = .failed(error)
+                    }
+                }
             } receiveValue: { [weak self] user in
                 DispatchQueue.main.async {
-                    self?.user = user
+                    if let user {
+                        self?.user = .loaded(user)
+                    } else {
+                        self?.user = .failed(AppError.decodingError)
+                    }
                 }
             }
             .store(in: cancelBag)
@@ -65,7 +74,7 @@ final class UserDomain {
     private func setupLoginSubscription() {
         authenticationRepository.$isLoggedIn.sink { [weak self] isLoggedIn in
             self?.cancelBag.cancel()
-            self?.user = nil
+            self?.user = .idle
             if isLoggedIn == true {
                 self?.setupUserSubscriber()
             }

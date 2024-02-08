@@ -36,7 +36,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     var keysLimit: Int = 20
 
     var translationApprovalUseCase: TranslationApprovalUseCase {
-        .init(project: project, subscriptionPlan: coordinator.dependencies.userDomain.user?.subscriptionPlan)
+        .init(project: project, subscriptionPlan: coordinator.dependencies.userDomain.user.currentValue?.subscriptionPlan)
     }
 
     internal lazy var projectUseCase: ProjectUseCase = {
@@ -157,7 +157,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
 
     private func onSearchTextDidChange(_ text: String) {
         searchTask?.cancel()
-        guard text.count > 2 else { return }
+        guard text.count > 2 && !keys.isEmpty else { return }
         setLoading()
         searchTask = Just(())
             .delay(for: .seconds(2), scheduler: RunLoop.main)

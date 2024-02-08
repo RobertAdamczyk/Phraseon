@@ -11,10 +11,17 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
 
     typealias ProfileCoordinator = Coordinator & ProfileActions & RootActions & NavigationActions & PaywallActions
 
-    @Published var user: User?
+    @Published var user: DeferredData<User>
+
+    var shouldShowLoading: Bool {
+        switch user {
+        case .isLoading: return true
+        case .idle, .loaded, .failed: return false
+        }
+    }
 
     var userName: String {
-        guard let user else { return "-" }
+        guard let user = user.currentValue else { return "-" }
 
         if user.name.isEmpty && user.surname.isEmpty {
             return "Enter your name"
@@ -23,8 +30,8 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     }
 
     var subscriptionValidUntil: String {
-        guard let validUntil = user?.subscriptionValidUntil,
-              let subscriptionStatus = user?.subscriptionStatus else { return "Try for free" }
+        guard let validUntil = user.currentValue?.subscriptionValidUntil,
+              let subscriptionStatus = user.currentValue?.subscriptionStatus else { return "Try for free" }
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         #if DEBUG
@@ -55,11 +62,12 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
 
     init(coordinator: ProfileCoordinator) {
         self.coordinator = coordinator
+        self.user = coordinator.dependencies.userDomain.user
         setupUserSubscriber()
     }
 
     func onNameTapped() {
-        guard let user else { return }
+        guard let user = user.currentValue else { return }
         coordinator.showProfileName(name: user.name, surname: user.surname)
     }
 

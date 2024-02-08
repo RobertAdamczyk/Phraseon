@@ -30,7 +30,7 @@ extension ProfileView {
 
         @ViewBuilder
         private func makePlaceholderLabel() -> some View {
-            if let urlString = viewModel.user?.photoUrl, let url = URL(string: urlString) {
+            if let urlString = viewModel.user.currentValue?.photoUrl, let url = URL(string: urlString) {
                 CachedAsyncImage(url: url, urlCache: URLCache.imageCache, content: makeImage, placeholder: makeProgressView)
             } else {
                 makeImage(for: Image(systemName: "person.crop.circle.fill"))

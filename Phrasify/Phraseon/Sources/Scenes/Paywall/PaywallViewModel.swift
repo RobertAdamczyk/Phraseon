@@ -19,7 +19,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
     typealias PaywallCoordinator = Coordinator & FullScreenCoverActions
 
     @Published private var state: State = .loading
-    @Published var user: User?
+    @Published var user: DeferredData<User>
 
     var selectedProduct: Product? {
         if case .idle(_, let product) = state {
@@ -43,12 +43,13 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
     }
 
     var hasValidSubscription: Bool {
-        guard let subscriptionValidUntil = user?.subscriptionValidUntil, let status = user?.subscriptionStatus else { return false }
+        guard let subscriptionValidUntil = user.currentValue?.subscriptionValidUntil, 
+                let status = user.currentValue?.subscriptionStatus else { return false }
         return subscriptionValidUntil > .now && status != .trial
     }
 
     var hasValidSelectedSubscription: Bool {
-        guard let user,
+        guard let user = user.currentValue,
               let subscriptionPlan = user.subscriptionPlan else { return false }
         if case .idle(_, selectedProduct) = state, hasValidSubscription {
             switch subscriptionPlan {
@@ -60,6 +61,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
     }
 
     var trialAvailable: Bool {
+        let user = user.currentValue
         return user?.subscriptionStatus == nil && user?.subscriptionPlan == nil && user?.subscriptionValidUntil == nil
     }
 
@@ -77,7 +79,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         if trialAvailable {
             return "Start your 7-day free trial now and explore all the features of our platform with no commitment – you won't be charged when your trial ends."
         }
-        if let userSubscriptionPlan = user?.subscriptionPlan, hasValidSubscription {
+        if let userSubscriptionPlan = user.currentValue?.subscriptionPlan, hasValidSubscription {
             switch userSubscriptionPlan {
             case .individual:
                 return "You are currently subscribed to the Individual plan. Upgrade to Team for more features!"
@@ -98,6 +100,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
 
     init(coordinator: PaywallCoordinator) {
         self.coordinator = coordinator
+        self.user = coordinator.dependencies.userDomain.user
         setupUserSubscriber()
         getProducts()
     }
@@ -115,7 +118,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
 
     @MainActor
     func onSubscribeButtonTapped() async {
-        guard let selectedProduct, let subscriptionId = user?.subscriptionId else { return }
+        guard let selectedProduct, let subscriptionId = user.currentValue?.subscriptionId else { return }
         do {
             if trialAvailable {
                 try await coordinator.dependencies.cloudRepository.startTrial(.init())

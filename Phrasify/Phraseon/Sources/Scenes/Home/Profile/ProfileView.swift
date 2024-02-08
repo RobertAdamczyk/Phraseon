@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Shimmer
 
 struct ProfileView: View {
 
@@ -19,7 +20,7 @@ struct ProfileView: View {
                     VStack(alignment: .leading, spacing: 16) {
                         Text("Personal Info")
                             .apply(.medium, size: .M, color: .lightGray)
-                        makeProfileRow(for: .email, value: viewModel.user?.email ?? "-")
+                        makeProfileRow(for: .email, value: viewModel.user.currentValue?.email ?? "-")
                         Button(action: viewModel.onNameTapped, label: {
                             makeProfileRow(for: .name, value: viewModel.userName)
                         })
@@ -44,6 +45,8 @@ struct ProfileView: View {
             .padding(16)
         }
         .navigationTitle("Profile")
+        .redacted(reason: viewModel.shouldShowLoading ? .placeholder : .invalidated)
+        .shimmering(active: viewModel.shouldShowLoading)
         .applyViewBackground()
     }
 }
