@@ -13,7 +13,7 @@ final class SearchRepository {
     let client: SearchClient
 
     init() {
-        self.client = SearchClient(appID: .init(rawValue: Secrets.algoliaAppId), apiKey: .init(rawValue: Secrets.algoliaAdminKey))
+        self.client = SearchClient(appID: .init(rawValue: Secrets.algoliaAppId), apiKey: .init(rawValue: Secrets.algoliaSearchKey))
     }
 
     func searchKeys(in projectId: String, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {

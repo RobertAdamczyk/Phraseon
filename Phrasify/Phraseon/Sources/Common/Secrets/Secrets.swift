@@ -20,7 +20,7 @@ struct Secrets {
         return secrets()["ALGOLIA_APP_ID"] as! String
     }
 
-    static var algoliaAdminKey: String {
-        return secrets()["ALGOLIA_ADMIN_KEY"] as! String
+    static var algoliaSearchKey: String {
+        return secrets()["ALGOLIA_SEARCH_KEY"] as! String
     }
 }

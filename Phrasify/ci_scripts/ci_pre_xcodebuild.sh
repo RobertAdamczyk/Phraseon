@@ -9,7 +9,7 @@ echo "PRE-Xcode Build is activated .... "
 
 # Write a JSON File containing all the environment variables and secrets.
 filePath="../$CI_PRODUCT/Resources/secrets.json"
-printf "{\"ALGOLIA_APP_ID\":\"%s\",\"ALGOLIA_ADMIN_KEY\":\"%s\"}" "$ALGOLIA_APP_ID" "$ALGOLIA_ADMIN_KEY" >> "$filePath"
+printf "{\"ALGOLIA_APP_ID\":\"%s\",\"ALGOLIA_ADMIN_KEY\":\"%s\"}" "$ALGOLIA_APP_ID" "$ALGOLIA_SEARCH_KEY" >> "$filePath"
 
 # Check if the file was created
 if test -f "$filePath"; then
