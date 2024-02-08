@@ -863,6 +863,7 @@
 		552785B52B27A5120098FE95 = {
 			isa = PBXGroup;
 			children = (
+				55CADF2C2B7571A000D04365 /* ci_scripts */,
 				552785C02B27A5120098FE95 /* Phraseon */,
 				55C278FE2B2A3F80005144F1 /* Phraseon_InHouse */,
 				552785BF2B27A5120098FE95 /* Products */,
@@ -1225,7 +1226,6 @@
 		55C278FE2B2A3F80005144F1 /* Phraseon_InHouse */ = {
 			isa = PBXGroup;
 			children = (
-				55CADF2C2B7571A000D04365 /* ci_scripts */,
 				55C278FD2B2A3F3A005144F1 /* Phraseon_InHouse-Info.plist */,
 				5567E6C42B6F8D4D00C9EDFF /* Resources */,
 				5567E6CB2B6F901D00C9EDFF /* Model */,
