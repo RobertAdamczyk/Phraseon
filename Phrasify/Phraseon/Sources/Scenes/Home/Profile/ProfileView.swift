@@ -44,10 +44,23 @@ struct ProfileView: View {
             }
             .padding(16)
         }
+        .opacity(viewModel.shouldShowContent ? 1 : 0)
         .navigationTitle("Profile")
+        .overlay(content: makeErrorIfNeeded)
+        .disabled(viewModel.shouldInteractionDisabled)
         .redacted(reason: viewModel.shouldShowLoading ? .placeholder : .invalidated)
         .shimmering(active: viewModel.shouldShowLoading)
         .applyViewBackground()
+    }
+
+    @ViewBuilder
+    private func makeErrorIfNeeded() -> some View {
+        if viewModel.shouldShowError {
+            ContentUnavailableView("Error Occurred",
+                                   systemImage: "exclamationmark.circle.fill",
+                                   description: Text("Unable to load data. Please try again later."))
+            .ignoresSafeArea()
+        }
     }
 }
 

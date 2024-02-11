@@ -20,6 +20,27 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
         }
     }
 
+    var shouldInteractionDisabled: Bool {
+        switch user {
+        case .failed, .idle, .isLoading: return true
+        case .loaded: return false
+        }
+    }
+
+    var shouldShowContent: Bool {
+        switch user {
+        case .failed, .idle: return false
+        case .loaded, .isLoading: return true
+        }
+    }
+
+    var shouldShowError: Bool {
+        switch user {
+        case .failed: return true
+        default: return false
+        }
+    }
+
     var userName: String {
         guard let user = user.currentValue else { return "-" }
 
