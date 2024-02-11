@@ -13,11 +13,9 @@ final class ProjectIntegrationViewModel: ObservableObject {
 
     @Published var shouldShowExportSheet: Bool = false
 
-    private(set) lazy var syncScriptFile: SyncScript? = {
+    var syncScriptFile: SyncScript? {
         .init(userId: coordinator.dependencies.authenticationRepository.currentUser?.uid, projectId: project.id)
-    }()
-
-    let defaultFilename: String = "syncPhrases"
+    }
 
     private let project: Project
     private let coordinator: ProjectIntegrationCoordinator

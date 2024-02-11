@@ -281,6 +281,7 @@
 		55909A212B58798D00A77F21 /* KeyDetailView+ApproveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A1F2B58798D00A77F21 /* KeyDetailView+ApproveButton.swift */; };
 		55909A232B58946400A77F21 /* Member+Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A222B58946400A77F21 /* Member+Permissions.swift */; };
 		55909A242B58946400A77F21 /* Member+Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A222B58946400A77F21 /* Member+Permissions.swift */; };
+		5590F24F2B78F1FF008AAC7C /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 5590F24E2B78F1FF008AAC7C /* Zip */; };
 		559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
 		559E2D572B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
 		559E2D592B4DEBBF0009A25A /* KeyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */; };
@@ -684,6 +685,7 @@
 				5574B33D2B6F115B00C9DFB9 /* FirebaseFirestore in Frameworks */,
 				558ACFBD2B7192D500741793 /* AlgoliaSearchClient in Frameworks */,
 				5574B32B2B6F112400C9DFB9 /* CachedAsyncImage in Frameworks */,
+				5590F24F2B78F1FF008AAC7C /* Zip in Frameworks */,
 				5574B3392B6F114700C9DFB9 /* FirebaseFunctions in Frameworks */,
 				5574B3372B6F114300C9DFB9 /* FirebaseFirestoreSwift in Frameworks */,
 				5574B3352B6F113E00C9DFB9 /* FirebaseFirestoreCombine-Community in Frameworks */,
@@ -1669,6 +1671,7 @@
 				5574B33A2B6F114D00C9DFB9 /* FirebaseStorage */,
 				5574B33C2B6F115B00C9DFB9 /* FirebaseFirestore */,
 				558ACFBC2B7192D500741793 /* AlgoliaSearchClient */,
+				5590F24E2B78F1FF008AAC7C /* Zip */,
 			);
 			productName = Phrasify;
 			productReference = 55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse.app */;
@@ -1705,6 +1708,7 @@
 				5574B3182B6F029F00C9DFB9 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				5574B31B2B6F031300C9DFB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				558ACFBB2B7192D500741793 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */,
+				5590F24D2B78F1FF008AAC7C /* XCRemoteSwiftPackageReference "Zip" */,
 			);
 			productRefGroup = 552785BF2B27A5120098FE95 /* Products */;
 			projectDirPath = "";
@@ -2517,6 +2521,14 @@
 				version = 8.20.0;
 			};
 		};
+		5590F24D2B78F1FF008AAC7C /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2629,6 +2641,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 558ACFBB2B7192D500741793 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */;
 			productName = AlgoliaSearchClient;
+		};
+		5590F24E2B78F1FF008AAC7C /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5590F24D2B78F1FF008AAC7C /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,23 +7,37 @@
 
 import SwiftUI
 import UniformTypeIdentifiers
+import Zip
 
 struct SyncScript: FileDocument {
-    // tell the system we support only plain text
-    static var readableContentTypes = [UTType.shellScript]
 
-    // by default our document is empty
-    var script: String
+    static let readableContentTypes = [UTType.zip]
+    static let scriptFileName: String = "syncScript.sh"
+    static let zipFileName: String = "syncScript.zip"
 
-    // a simple initializer that creates new, empty documents
+    var url: URL
+
     init?(userId: UserID?, projectId: String?) {
         guard let userId, let projectId, let filePath = Bundle.main.path(forResource: "syncScript", ofType: "txt") else { return nil }
+        guard let path = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist"),
+              let nsDictionary = NSDictionary(contentsOfFile: path),
+              let firebaseProjectId = nsDictionary["PROJECT_ID"] as? String else { return nil }
+        let fileManager = FileManager.default
+        let scriptFileURL = fileManager.temporaryDirectory.appendingPathComponent(Self.scriptFileName)
+        let zipFileURL = fileManager.temporaryDirectory.appendingPathComponent(Self.zipFileName)
 
         do {
             let syncScript = try String(contentsOfFile: filePath, encoding: .utf8)
-            self.script = syncScript
+            let scriptWithCredentials = syncScript
                 .replacingOccurrences(of: "ACCESS_TOKEN_VALUE", with: userId)
                 .replacingOccurrences(of: "PROJECT_ID_VALUE", with: projectId)
+                .replacingOccurrences(of: "FIREBASE_PROJECT_ID", with: firebaseProjectId)
+
+            try scriptWithCredentials.write(to: scriptFileURL, atomically: true, encoding: .utf8)
+
+            try Zip.zipFiles(paths: [scriptFileURL], zipFilePath: zipFileURL, password: nil, progress: nil)
+
+            self.url = zipFileURL
         } catch {
             print("Error loading file: \(error)")
             return nil
@@ -35,9 +49,7 @@ struct SyncScript: FileDocument {
         fatalError("Not needed.")
     }
 
-    // this will be called when the system wants to write our data to disk
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-        let data = Data(script.utf8)
-        return FileWrapper(regularFileWithContents: data)
+        try .init(url: url)
     }
 }

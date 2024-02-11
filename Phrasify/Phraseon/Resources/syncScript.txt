@@ -1,5 +1,4 @@
-#/bin/sh
-
+#!/bin/sh
 echo "Synchronizing Phrase Localizations"
 
 # ============================
@@ -30,7 +29,7 @@ fi
 
 # Get the data from project
 echo "Getting Data from Firebase Function..."
-RESPONSE=$(curl -s -H "x-access-key: ${ACCESS_TOKEN}" "https://us-central1-phrasify-inhouse.cloudfunctions.net//getKeys?projectId=${PROJECT_ID}")
+RESPONSE=$(curl -s -H "x-access-key: ${ACCESS_TOKEN}" "https://us-central1-FIREBASE_PROJECT_ID.cloudfunctions.net//getKeys?projectId=${PROJECT_ID}")
 
 # Check if the response is empty
 if [ -z "$RESPONSE" ]; then
