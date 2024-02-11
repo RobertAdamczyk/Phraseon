@@ -282,6 +282,7 @@
 		55909A232B58946400A77F21 /* Member+Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A222B58946400A77F21 /* Member+Permissions.swift */; };
 		55909A242B58946400A77F21 /* Member+Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A222B58946400A77F21 /* Member+Permissions.swift */; };
 		5590F24F2B78F1FF008AAC7C /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 5590F24E2B78F1FF008AAC7C /* Zip */; };
+		5590F2962B797B93008AAC7C /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 5590F2952B797B93008AAC7C /* Zip */; };
 		559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
 		559E2D572B4DEBB10009A25A /* KeyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D552B4DEBB10009A25A /* KeyDetailView.swift */; };
 		559E2D592B4DEBBF0009A25A /* KeyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */; };
@@ -667,6 +668,7 @@
 				5574B3122B6F01C200C9DFB9 /* Shimmer in Frameworks */,
 				5536E16C2B74435A00E5DCC6 /* AlgoliaSearchClient in Frameworks */,
 				5574B30F2B6F01B500C9DFB9 /* CachedAsyncImage in Frameworks */,
+				5590F2962B797B93008AAC7C /* Zip in Frameworks */,
 				5574B3152B6F020B00C9DFB9 /* GoogleSignIn in Frameworks */,
 				5574B3252B6F031300C9DFB9 /* FirebaseFunctions in Frameworks */,
 				5574B3272B6F031300C9DFB9 /* FirebaseStorage in Frameworks */,
@@ -1641,6 +1643,7 @@
 				5574B3242B6F031300C9DFB9 /* FirebaseFunctions */,
 				5574B3262B6F031300C9DFB9 /* FirebaseStorage */,
 				5536E16B2B74435A00E5DCC6 /* AlgoliaSearchClient */,
+				5590F2952B797B93008AAC7C /* Zip */,
 			);
 			productName = Phrasify;
 			productReference = 552785BE2B27A5120098FE95 /* Phraseon.app */;
@@ -2643,6 +2646,11 @@
 			productName = AlgoliaSearchClient;
 		};
 		5590F24E2B78F1FF008AAC7C /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5590F24D2B78F1FF008AAC7C /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+		5590F2952B797B93008AAC7C /* Zip */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5590F24D2B78F1FF008AAC7C /* XCRemoteSwiftPackageReference "Zip" */;
 			productName = Zip;
