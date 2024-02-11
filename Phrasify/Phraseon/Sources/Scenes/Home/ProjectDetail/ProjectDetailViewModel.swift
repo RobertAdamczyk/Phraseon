@@ -101,12 +101,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     }
 
     func onAlgoliaKeyTapped(_ algoliaKey: AlgoliaKey) {
-        let key: Key = .init(id: algoliaKey.objectID,
-                             translation: algoliaKey.translation,
-                             createdAt: .init(timeIntervalSince1970: TimeInterval(algoliaKey.createdAt.seconds)),
-                             lastUpdatedAt: .init(timeIntervalSince1970: TimeInterval(algoliaKey.lastUpdatedAt.seconds)),
-                             status: algoliaKey.status)
-        coordinator.showKeyDetails(key: key, project: project, projectMemberUseCase: projectMemberUseCase)
+        coordinator.showKeyDetails(key: algoliaKey.toKey, project: project, projectMemberUseCase: projectMemberUseCase)
     }
 
     private func setupSelectedKeysOrderSubscriber() {

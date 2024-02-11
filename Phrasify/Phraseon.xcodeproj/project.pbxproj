@@ -122,6 +122,8 @@
 		552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
 		552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
 		552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
+		552EC1732B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */; };
+		552EC1742B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */; };
 		5536E1652B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */; };
 		5536E1662B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */; };
 		5536E1692B74362500E5DCC6 /* LoadingDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */; };
@@ -499,6 +501,7 @@
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyActions.swift; sourceTree = "<group>"; };
+		552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlgoliaKey+toKey.swift"; sourceTree = "<group>"; };
 		5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighlightedString+extractedText.swift"; sourceTree = "<group>"; };
 		5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDotsView.swift; sourceTree = "<group>"; };
 		553722AC2B631DA00061CF52 /* CellBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackground.swift; sourceTree = "<group>"; };
@@ -778,6 +781,7 @@
 				55DE10462B4AD118001CB87F /* Role+SortIndex.swift */,
 				55909A222B58946400A77F21 /* Member+Permissions.swift */,
 				5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */,
+				552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -993,9 +997,9 @@
 		5567E6C42B6F8D4D00C9EDFF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				55CADF312B7576CF00D04365 /* secrets.json */,
 				5567E6C62B6F8D6000C9EDFF /* Products */,
 				5567E6C52B6F8D5400C9EDFF /* Firebase */,
+				55CADF312B7576CF00D04365 /* secrets.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1339,12 +1343,12 @@
 		55C762162B27A5FC008CBF30 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				55CADF372B75881400D04365 /* secrets.json */,
 				5561C5C62B66EA9000C815BC /* Products */,
 				551CA5112B607217001859CA /* Firebase */,
 				55C2792E2B2A5918005144F1 /* Animations */,
 				55C278D02B2A2E25005144F1 /* Fonts */,
 				5505C7D92B55BAEB00806B4F /* syncScript.txt */,
+				55CADF372B75881400D04365 /* secrets.json */,
 				552785C52B27A5140098FE95 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -1820,6 +1824,7 @@
 				5516EBE22B432D3F00C558B1 /* ProjectActions.swift in Sources */,
 				550041FD2B6C3FD700073384 /* PaywallActions.swift in Sources */,
 				557DED072B72E5E10090DF0B /* Highlight.swift in Sources */,
+				552EC1732B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */,
 				55C2DAC72B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
 				55A7B3542B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */,
 				550041FA2B6C3B5300073384 /* StartTrialService.swift in Sources */,
@@ -2017,6 +2022,7 @@
 				5516EBE32B432D3F00C558B1 /* ProjectActions.swift in Sources */,
 				550041FE2B6C3FD700073384 /* PaywallActions.swift in Sources */,
 				557DED082B72E5E10090DF0B /* Highlight.swift in Sources */,
+				552EC1742B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */,
 				55C2DAC82B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
 				55A7B3552B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */,
 				550041FB2B6C3B5300073384 /* StartTrialService.swift in Sources */,
