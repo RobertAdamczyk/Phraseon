@@ -20,7 +20,7 @@ BASE_DIR="$(dirname "$0")$RELATIVE_PATH"
 
 # Check if Network is available
 echo "Checking Network connectivity..."
-if ping -q -c 1 -W 1 google.com >/dev/null; then
+if ping -q -c 1 -W 1 us-central1-FIREBASE_PROJECT_ID.cloudfunctions.net >/dev/null; then
   echo "Network available; downloading localizations"
 else
   echo "Network unavailable; skipping synchronization"
@@ -43,8 +43,6 @@ find "$BASE_DIR" -name 'Localizable.strings' -exec rm {} \;
 # Extract and save each language's translations to a separate file
 echo "Extracting and saving translations..."
 echo "$RESPONSE" | jq -r 'to_entries[] | .key as $key | .value | to_entries[] | "\($key) \(.key) \(.value)"' | while read -r id lang text; do
-  # Convert language code to lowercase
-  lang=$(echo "$lang" | tr '[:upper:]' '[:lower:]')
 
   # Remove quotes from the beginning and end of the text
   text="${text%\"}"
