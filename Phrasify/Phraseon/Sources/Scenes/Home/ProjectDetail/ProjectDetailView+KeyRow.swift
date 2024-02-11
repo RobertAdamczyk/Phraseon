@@ -58,6 +58,8 @@ extension ProjectDetailView {
                         attributedString[range].foregroundColor = appColor(.white)
                     }
                 }
+            } else {
+                attributedString.foregroundColor = appColor(.white)
             }
             return attributedString
         }
@@ -80,8 +82,8 @@ extension ProjectDetailView {
 
         var body: some View {
             HStack {
-                VStack(alignment: .leading, spacing: 8) {
-                    VStack(alignment: .leading, spacing: 2) {
+                LazyVStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: 4) {
                         Text(keyId)
                             .apply(.medium, size: .M, color: .lightGray)
                             .multilineTextAlignment(.leading)

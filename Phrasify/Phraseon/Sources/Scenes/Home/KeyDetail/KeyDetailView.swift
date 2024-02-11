@@ -13,7 +13,7 @@ struct KeyDetailView: View {
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack(spacing: 32) {
+            LazyVStack(spacing: 32) {
                 makeIdentifierRow()
                 ForEach(viewModel.project.languages.reversed(), id: \.self) { language in
                     if let translation = viewModel.key.translation[language.rawValue] {
