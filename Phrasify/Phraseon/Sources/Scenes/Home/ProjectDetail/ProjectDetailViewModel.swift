@@ -26,6 +26,13 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     @Published var member: Member?
     @Published var state: State = .loading
 
+    var shouldShowContent: Bool {
+        switch state {
+        case .failed, .empty, .loading, .notFound: return false
+        case .loaded, .searched: return true
+        }
+    }
+
     var shouldShowPicker: Bool {
         switch state {
         case .loaded: return true
@@ -52,10 +59,10 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     internal var project: Project
     internal let cancelBag = CancelBag()
 
-    private var keys: [Key] {
+    private var keys: [Key]? {
         switch state {
         case .loaded(let keys): return keys
-        default: return []
+        default: return nil
         }
     }
 
@@ -75,7 +82,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     }
 
     func onKeyAppear(_ key: Key) {
-        if keys.last == key && keysLimit == keys.count {
+        if keys?.last == key && keysLimit == keys?.count {
             keysLimit += 10
             setupKeysSubscriber()
         }
@@ -105,7 +112,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     private func setupSelectedKeysOrderSubscriber() {
         $selectedKeysOrder
             .receive(on: RunLoop.main)
-            .sink { [weak self] selectedKeysOrder in
+            .sink { [weak self] _ in
                 self?.setupKeysSubscriber()
             }
             .store(in: cancelBag)
@@ -115,13 +122,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         $searchText
             .receive(on: RunLoop.main)
             .removeDuplicates()
-            .sink { [weak self] newValue in
-                guard !newValue.isEmpty else {
-                    self?.setupKeysSubscriber()
-                    return
-                }
-                self?.onSearchTextDidChange(newValue)
-            }
+            .sink(receiveValue: onSearchTextDidChange)
             .store(in: cancelBag)
     }
 
@@ -157,7 +158,10 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
 
     private func onSearchTextDidChange(_ text: String) {
         searchTask?.cancel()
-        guard text.count > 2 && !keys.isEmpty else { return }
+        guard !text.isEmpty && text.count > 2 && keys?.isEmpty != true else {
+            setupKeysSubscriber()
+            return
+        }
         setLoading()
         searchTask = Just(())
             .delay(for: .seconds(2), scheduler: RunLoop.main)

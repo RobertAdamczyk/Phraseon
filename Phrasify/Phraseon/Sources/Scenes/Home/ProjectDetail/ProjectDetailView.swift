@@ -47,22 +47,7 @@ struct ProjectDetailView: View {
                             AlgoliaKeyRow(key: key, viewModel: viewModel)
                         }
                     }
-                case .notFound:
-                    ContentUnavailableView.search
-                        .padding(.top, 128)
-                case .loading:
-                    LoadingDotsView()
-                        .frame(height: 300)
-                case .failed:
-                    ContentUnavailableView("Error Occurred",
-                                           systemImage: "exclamationmark.circle.fill",
-                                           description: Text("Unable to load data. Please try again."))
-                        .padding(.top, 128)
-                case .empty:
-                    ContentUnavailableView("Currently there are no phrases", 
-                                           systemImage: "nosign",
-                                           description: Text("Add your first phrase."))
-                        .padding(.top, 128)
+                default: EmptyView()
                 }
             }
             .animate($scrollState)
@@ -70,7 +55,12 @@ struct ProjectDetailView: View {
         }
         .scrollSpace()
         .onAppear(perform: setupSegmentedControlAppearance)
+        .opacity(viewModel.shouldShowContent ? 1 : 0)
+        .overlay(content: makeNotFoundViewIfNeeded)
         .searchable(text: $viewModel.searchText)
+        .overlay(content: makeLoadingIfNeeded)
+        .overlay(content: makeEmptyViewIfNeeded)
+        .overlay(content: makeErrorViewIfNeeded)
         .ignoresSafeArea(edges: .bottom)
         .overlay(alignment: .bottomTrailing, content: makeAddButton)
         .navigationTitle(viewModel.project.name)
@@ -108,6 +98,42 @@ struct ProjectDetailView: View {
             .padding(.bottom, 32)
         })
         .opacity(viewModel.member?.hasPermissionToAddKey == true ? 1 : 0)
+    }
+
+    @ViewBuilder
+    private func makeLoadingIfNeeded() -> some View {
+        if case .loading = viewModel.state {
+            LoadingDotsView()
+                .ignoresSafeArea()
+        }
+    }
+
+    @ViewBuilder
+    private func makeEmptyViewIfNeeded() -> some View {
+        if case .empty = viewModel.state {
+            ContentUnavailableView("Currently there are no phrases",
+                                   systemImage: "nosign",
+                                   description: Text("Add your first phrase."))
+            .ignoresSafeArea()
+        }
+    }
+
+    @ViewBuilder
+    private func makeNotFoundViewIfNeeded() -> some View {
+        if case .notFound = viewModel.state {
+            ContentUnavailableView.search
+                .ignoresSafeArea()
+        }
+    }
+
+    @ViewBuilder
+    private func makeErrorViewIfNeeded() -> some View {
+        if case .failed = viewModel.state {
+            ContentUnavailableView("Error Occurred",
+                                   systemImage: "exclamationmark.circle.fill",
+                                   description: Text("Unable to load data. Please try again."))
+            .ignoresSafeArea()
+        }
     }
 
     private func setupSegmentedControlAppearance() {
