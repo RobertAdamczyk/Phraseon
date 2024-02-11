@@ -32,6 +32,7 @@ final class SetPasswordViewModel: ObservableObject {
         guard case .success = passwordValidationHandler.validate(password: password, confirmPassword: confirmPassword) else { return }
         do {
             try await coordinator.dependencies.authenticationRepository.signUp(email: email, password: password)
+            UserDefaults.standard.set(email, forKey: UserDefaults.Key.email.rawValue)
             ToastView.showSuccess(message: "Account successfully created. Welcome in Phrasify!")
         } catch {
             let errorHandler: ErrorHandler = .init(error: error)

@@ -69,8 +69,6 @@
 		5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */; };
 		5516EBC72B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */; };
 		5516EBC82B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */; };
-		5516EBCB2B40CF7F00C558B1 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBCA2B40CF7F00C558B1 /* Triangle.swift */; };
-		5516EBCC2B40CF7F00C558B1 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBCA2B40CF7F00C558B1 /* Triangle.swift */; };
 		5516EBCF2B40D2F500C558B1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBCE2B40D2F500C558B1 /* ProfileView.swift */; };
 		5516EBD02B40D2F500C558B1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBCE2B40D2F500C558B1 /* ProfileView.swift */; };
 		5516EBD22B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBD12B40D2FD00C558B1 /* ProfileViewModel.swift */; };
@@ -124,6 +122,8 @@
 		552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
 		552EC1732B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */; };
 		552EC1742B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */; };
+		552EC1772B789D3A0079E754 /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1762B789D3A0079E754 /* UserDefaults+Key.swift */; };
+		552EC1782B789D3A0079E754 /* UserDefaults+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1762B789D3A0079E754 /* UserDefaults+Key.swift */; };
 		5536E1652B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */; };
 		5536E1662B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */; };
 		5536E1692B74362500E5DCC6 /* LoadingDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */; };
@@ -470,7 +470,6 @@
 		5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeysOrder+FieldPath.swift"; sourceTree = "<group>"; };
 		5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyView.swift; sourceTree = "<group>"; };
 		5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyViewModel.swift; sourceTree = "<group>"; };
-		5516EBCA2B40CF7F00C558B1 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		5516EBCE2B40D2F500C558B1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5516EBD12B40D2FD00C558B1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		5516EBD42B40E1E300C558B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -502,6 +501,7 @@
 		552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyActions.swift; sourceTree = "<group>"; };
 		552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlgoliaKey+toKey.swift"; sourceTree = "<group>"; };
+		552EC1762B789D3A0079E754 /* UserDefaults+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Key.swift"; sourceTree = "<group>"; };
 		5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighlightedString+extractedText.swift"; sourceTree = "<group>"; };
 		5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDotsView.swift; sourceTree = "<group>"; };
 		553722AC2B631DA00061CF52 /* CellBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackground.swift; sourceTree = "<group>"; };
@@ -804,14 +804,6 @@
 			path = EnterContentKey;
 			sourceTree = "<group>";
 		};
-		5516EBC92B40CF7500C558B1 /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				5516EBCA2B40CF7F00C558B1 /* Triangle.swift */,
-			);
-			path = Shapes;
-			sourceTree = "<group>";
-		};
 		5516EBCD2B40D2EA00C558B1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -924,6 +916,14 @@
 				552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */,
 			);
 			path = LanguageView;
+			sourceTree = "<group>";
+		};
+		552EC1752B789D250079E754 /* UserDefaultsKey */ = {
+			isa = PBXGroup;
+			children = (
+				552EC1762B789D3A0079E754 /* UserDefaults+Key.swift */,
+			);
+			path = UserDefaultsKey;
 			sourceTree = "<group>";
 		};
 		5536E1672B74361700E5DCC6 /* Animation */ = {
@@ -1259,6 +1259,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				552EC1752B789D250079E754 /* UserDefaultsKey */,
 				55CADF392B75915400D04365 /* DeferredData */,
 				55CADF332B75814E00D04365 /* Secrets */,
 				5536E1672B74361700E5DCC6 /* Animation */,
@@ -1272,7 +1273,6 @@
 				55B8414A2B4C9AF3007697AF /* SwipeAction */,
 				55DE103F2B4ABF8F001CB87F /* UserDetailView */,
 				5505378F2B44C0080077912D /* PhotoPicker */,
-				5516EBC92B40CF7500C558B1 /* Shapes */,
 				55826A992B34E20D00233D90 /* ScrollingAnimator */,
 				551AA4182B33664800F0B1E2 /* Layout */,
 				5580744C2B2E340C0041160B /* ActivityView */,
@@ -1808,6 +1808,7 @@
 				5513C2482B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,
 				55826A942B34D5F100233D90 /* ProjectDetailView.swift in Sources */,
 				55826AAE2B35046F00233D90 /* Key.swift in Sources */,
+				552EC1772B789D3A0079E754 /* UserDefaults+Key.swift in Sources */,
 				55A653E22B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift in Sources */,
 				5580743A2B2CE6650041160B /* AppError.swift in Sources */,
 				55826A902B34C85800233D90 /* Role.swift in Sources */,
@@ -1818,7 +1819,6 @@
 				5570FF4D2B61B13C0011208F /* PaywallView.swift in Sources */,
 				55854F8B2B571DA100CC5480 /* CreateProjectService.swift in Sources */,
 				5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
-				5516EBCB2B40CF7F00C558B1 /* Triangle.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
 				551AA4242B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				5516EBE22B432D3F00C558B1 /* ProjectActions.swift in Sources */,
@@ -2006,6 +2006,7 @@
 				5513C2492B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,
 				55826A952B34D5F100233D90 /* ProjectDetailView.swift in Sources */,
 				55826AAF2B35046F00233D90 /* Key.swift in Sources */,
+				552EC1782B789D3A0079E754 /* UserDefaults+Key.swift in Sources */,
 				55A653E32B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift in Sources */,
 				5580743B2B2CE6930041160B /* AppError.swift in Sources */,
 				55826A912B34C85800233D90 /* Role.swift in Sources */,
@@ -2016,7 +2017,6 @@
 				5570FF4E2B61B13C0011208F /* PaywallView.swift in Sources */,
 				55854F8C2B571DA100CC5480 /* CreateProjectService.swift in Sources */,
 				5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
-				5516EBCC2B40CF7F00C558B1 /* Triangle.swift in Sources */,
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
 				551AA4252B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				5516EBE32B432D3F00C558B1 /* ProjectActions.swift in Sources */,
