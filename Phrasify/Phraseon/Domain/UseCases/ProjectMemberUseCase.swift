@@ -1,6 +1,6 @@
 //
 //  ProjectMemberUseCase.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 07.01.24.
 //

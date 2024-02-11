@@ -1,6 +1,6 @@
 //
 //  CellBackground.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 25.01.24.
 //

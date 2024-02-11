@@ -1,6 +1,6 @@
 //
 //  Technology+UI.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 29.12.23.
 //

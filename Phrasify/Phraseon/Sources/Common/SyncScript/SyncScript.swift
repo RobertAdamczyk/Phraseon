@@ -1,6 +1,6 @@
 //
 //  SyncScript.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 15.01.24.
 //

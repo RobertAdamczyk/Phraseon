@@ -1,6 +1,6 @@
 //
 //  SwipeAction.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 08.01.24.
 //

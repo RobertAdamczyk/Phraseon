@@ -1,6 +1,6 @@
 //
 //  PaywallView.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 24.01.24.
 //

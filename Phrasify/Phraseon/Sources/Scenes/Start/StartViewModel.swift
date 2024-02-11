@@ -1,6 +1,6 @@
 //
 //  StartViewModel.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 14.12.23.
 //

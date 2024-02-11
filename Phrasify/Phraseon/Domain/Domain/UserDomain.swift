@@ -1,6 +1,6 @@
 //
 //  UserDomain.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 28.01.24.
 //

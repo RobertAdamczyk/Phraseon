@@ -1,6 +1,6 @@
 //
 //  Member.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 05.01.24.
 //

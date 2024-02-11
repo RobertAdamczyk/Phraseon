@@ -1,6 +1,6 @@
 //
 //  EnterContentKeyActions.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 10.01.24.
 //

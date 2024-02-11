@@ -1,6 +1,6 @@
 //
 //  StartView.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 11.12.23.
 //
@@ -19,7 +19,7 @@ struct StartView: View {
         VStack {
             Spacer()
             VStack(spacing: 16) {
-                Text("Phrasify")
+                Text("Phraseon")
                     .apply(.bold, size: .H2, color: .white)
                 Text("Manage and translate easily")
                     .apply(.medium, size: .L, color: .white)

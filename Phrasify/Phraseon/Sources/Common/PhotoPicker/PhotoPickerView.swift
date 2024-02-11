@@ -1,6 +1,6 @@
 //
 //  PhotoPickerView.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 02.01.24.
 //

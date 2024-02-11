@@ -1,6 +1,6 @@
 //
 //  Date+TimeAgo.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 28.12.23.
 //

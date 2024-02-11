@@ -1,6 +1,6 @@
 //
 //  ProjectMembersViewModel.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 06.01.24.
 //

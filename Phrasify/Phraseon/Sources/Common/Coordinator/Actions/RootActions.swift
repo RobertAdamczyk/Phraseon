@@ -1,6 +1,6 @@
 //
 //  RootActions.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 16.12.23.
 //

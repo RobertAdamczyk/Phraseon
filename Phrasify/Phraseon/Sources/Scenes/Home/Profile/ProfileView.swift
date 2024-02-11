@@ -1,6 +1,6 @@
 //
 //  ProfileView.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 30.12.23.
 //

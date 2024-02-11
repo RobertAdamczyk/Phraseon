@@ -1,6 +1,6 @@
 //
 //  SetPasswordViewModel.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 12.12.23.
 //
@@ -33,7 +33,7 @@ final class SetPasswordViewModel: ObservableObject {
         do {
             try await coordinator.dependencies.authenticationRepository.signUp(email: email, password: password)
             UserDefaults.standard.set(email, forKey: UserDefaults.Key.email.rawValue)
-            ToastView.showSuccess(message: "Account successfully created. Welcome in Phrasify!")
+            ToastView.showSuccess(message: "Account successfully created. Welcome in Phraseon!")
         } catch {
             let errorHandler: ErrorHandler = .init(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)

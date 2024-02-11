@@ -1,6 +1,6 @@
 //
 //  UIApplication+KeyWindow.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 19.01.24.
 //

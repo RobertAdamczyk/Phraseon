@@ -1,6 +1,6 @@
 //
 //  LoginView.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 11.12.23.
 //

@@ -1,6 +1,6 @@
 //
 //  ProjectIntegrationView.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 15.01.24.
 //
@@ -15,7 +15,7 @@ struct ProjectIntegrationView: View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 32) {
-                    AppTitle(subtitle: "This script synchronizes phrase localizations by downloading translations from a Phrasify and saving them into your project directories.")
+                    AppTitle(subtitle: "This script synchronizes phrase localizations by downloading translations from a Phraseon and saving them into your project directories.")
                     VStack(alignment: .leading, spacing: 16) {
                         Label("Pre-requisites", systemImage: "1.circle")
                             .apply(.medium, size: .M, color: .lightGray)

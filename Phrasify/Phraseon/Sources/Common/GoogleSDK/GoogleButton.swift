@@ -1,6 +1,6 @@
 //
 //  GoogleButton.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 15.12.23.
 //

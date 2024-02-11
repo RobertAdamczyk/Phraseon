@@ -1,6 +1,6 @@
 //
 //  CreateKeyService.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 16.01.24.
 //

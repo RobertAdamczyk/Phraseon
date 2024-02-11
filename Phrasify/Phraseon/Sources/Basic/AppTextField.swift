@@ -1,6 +1,6 @@
 //
 //  AppTextField.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 12.12.23.
 //
@@ -104,7 +104,7 @@ extension AppTextField {
 
         var placeholder: String {
             return switch self {
-            case .email: "hallo@phrasify.com"
+            case .email: "hallo@phraseon.com"
             case .password, .confirmPassword, .currentPassword, .newPassword: "Your password"
             case .projectName: "Your project name"
             case .keyId: "this_is_my_phrase"

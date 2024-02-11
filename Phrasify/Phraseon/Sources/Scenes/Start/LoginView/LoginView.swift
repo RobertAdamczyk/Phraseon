@@ -1,6 +1,6 @@
 //
 //  LoginView.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 12.12.23.
 //
@@ -17,7 +17,7 @@ struct LoginView: View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 32) {
-                    AppTitle(title: "Login in to Phrasify")
+                    AppTitle(title: "Login in to Phraseon")
                     AppTextField(type: .email, text: $viewModel.email)
                         .focused($focusedField, equals: .email)
                     AppTextField(type: .password, text: $viewModel.password)

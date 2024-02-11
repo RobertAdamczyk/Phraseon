@@ -1,6 +1,6 @@
 //
 //  ForgetPasswordViewModel.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 12.12.23.
 //

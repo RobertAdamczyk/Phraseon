@@ -1,6 +1,6 @@
 //
 //  KeyDetailViewModel.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 09.01.24.
 //

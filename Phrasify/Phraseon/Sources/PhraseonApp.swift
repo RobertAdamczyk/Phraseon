@@ -1,6 +1,6 @@
 //
-//  PhrasifyApp.swift
-//  Phrasify
+//  PhraseonApp.swift
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 11.12.23.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct PhrasifyApp: App {
+struct PhraseonApp: App {
 
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 

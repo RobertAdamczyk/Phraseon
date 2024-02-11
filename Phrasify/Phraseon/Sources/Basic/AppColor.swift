@@ -1,6 +1,6 @@
 //
 //  AppColor.swift
-//  Phrasify
+//  Phraseon
 //
 //  Created by Robert Adamczyk on 13.12.23.
 //
