@@ -14,7 +14,7 @@ enum Language: String, CaseIterable, Codable {
     case danish = "DA"
     case german = "DE"
     case greek = "EL"
-    case englishAmerican = "EN-US"
+    case english = "EN-US"
     case spanish = "ES"
     case finnish = "FI"
     case french = "FR"

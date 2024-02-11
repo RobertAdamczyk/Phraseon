@@ -51,6 +51,6 @@ struct InviteMemberView: View {
 #if DEBUG
 #Preview {
     InviteMemberView(coordinator: MockCoordinator(), project: .init(name: "", technologies: [],
-                                                                    languages: [], baseLanguage: .englishAmerican, members: [], owner: ""))
+                                                                    languages: [], baseLanguage: .english, members: [], owner: ""))
 }
 #endif

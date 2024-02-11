@@ -132,14 +132,14 @@ struct KeyDetailView: View {
                                               status: ["EN": KeyStatus.approved]),
                                    project: .init(name: "",
                                                   technologies: [],
-                                                  languages: [.englishAmerican, .polish],
-                                                  baseLanguage: .englishAmerican,
+                                                  languages: [.english, .polish],
+                                                  baseLanguage: .english,
                                                   members: [],
                                                   owner: "adasda"),
                                    projectMemberUseCase: .init(firestoreRepository: .init(), 
                                                                authenticationRepository: .init(),
                                                                project: .init(name: "", technologies: [], languages: [],
-                                                                              baseLanguage: .englishAmerican, members: [], owner: ""))))
+                                                                              baseLanguage: .english, members: [], owner: ""))))
     .preferredColorScheme(.dark)
 }
 #endif

@@ -16,7 +16,7 @@ extension Language {
         case .danish: return "Danish"
         case .german: return "German"
         case .greek: return "Greek"
-        case .englishAmerican: return "English (American)"
+        case .english: return "English"
         case .spanish: return "Spanish"
         case .finnish: return "Finnish"
         case .french: return "French"
@@ -33,7 +33,7 @@ extension Language {
         case .russian: return "Russian"
         case .swedish: return "Swedish"
         case .turkish: return "Turkish"
-        case .mandarinChineseSimplified: return "Mandarin Chinese (Simplified)"
+        case .mandarinChineseSimplified: return "Mandarin Chinese"
         }
     }
 
