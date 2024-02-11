@@ -46,8 +46,8 @@ struct ProfileView: View {
         }
         .opacity(viewModel.shouldShowContent ? 1 : 0)
         .navigationTitle("Profile")
-        .overlay(content: makeErrorIfNeeded)
         .disabled(viewModel.shouldInteractionDisabled)
+        .overlay(content: makeErrorIfNeeded)
         .redacted(reason: viewModel.shouldShowLoading ? .placeholder : .invalidated)
         .shimmering(active: viewModel.shouldShowLoading)
         .applyViewBackground()
@@ -60,6 +60,10 @@ struct ProfileView: View {
                                    systemImage: "exclamationmark.circle.fill",
                                    description: Text("Unable to load data. Please try again later."))
             .ignoresSafeArea()
+            .overlay(alignment: .bottom) {
+                AppButton(style: .fill("Logout", .lightBlue), action: .main(viewModel.onLogoutTapped))
+                    .padding(16)
+            }
         }
     }
 }
