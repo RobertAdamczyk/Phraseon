@@ -149,7 +149,7 @@ struct ProjectDetailView: View {
                                        project: .init(name: "",
                                                       technologies: [],
                                                       languages: [],
-                                                      baseLanguage: .english,
+                                                      baseLanguage: .englishAmerican,
                                                       members: [],
                                                       owner: "")))
 }
