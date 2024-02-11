@@ -27,6 +27,7 @@ struct ErrorHandler {
         case accessExpired = "ACCESS_EXPIRED"
         case accessDenied = "ACCESS_DENIED"
         case projectCreationLimit = "PROJECT_CREATION_LIMIT"
+        case phraseContentTooLong = "PHRASE_CONTENT_TOO_LONG"
     }
 
     let error: Error
@@ -93,6 +94,10 @@ struct ErrorHandler {
                 return "You do not have access to this service. Please check your subscription status or contact support."
             case .projectCreationLimit:
                 return "You've reached your project limit. Upgrade your subscription to create more projects."
+            case .phraseContentTooLong:
+                if let details = (error as NSError).userInfo["details"] as? [String : Any], let maxLength = details["maxLength"] {
+                    return "The provided phrase content is too long. Please shorten it to \(maxLength) characters or less."
+                }
             case .databaseError:
                 return nil
             }
