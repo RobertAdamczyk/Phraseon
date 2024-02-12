@@ -234,8 +234,6 @@
 		55826A952B34D5F100233D90 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826A932B34D5F100233D90 /* ProjectDetailView.swift */; };
 		55826A972B34D5F700233D90 /* ProjectDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826A962B34D5F700233D90 /* ProjectDetailViewModel.swift */; };
 		55826A982B34D5F700233D90 /* ProjectDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826A962B34D5F700233D90 /* ProjectDetailViewModel.swift */; };
-		55826A9B2B34E21F00233D90 /* ScrollingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826A9A2B34E21F00233D90 /* ScrollingAnimator.swift */; };
-		55826A9C2B34E21F00233D90 /* ScrollingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826A9A2B34E21F00233D90 /* ScrollingAnimator.swift */; };
 		55826A9F2B34FCDF00233D90 /* CreateKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826A9E2B34FCDF00233D90 /* CreateKeyView.swift */; };
 		55826AA02B34FCDF00233D90 /* CreateKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826A9E2B34FCDF00233D90 /* CreateKeyView.swift */; };
 		55826AA22B34FD1600233D90 /* CreateKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55826AA12B34FD1600233D90 /* CreateKeyViewModel.swift */; };
@@ -556,7 +554,6 @@
 		55826A8F2B34C85800233D90 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		55826A932B34D5F100233D90 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
 		55826A962B34D5F700233D90 /* ProjectDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModel.swift; sourceTree = "<group>"; };
-		55826A9A2B34E21F00233D90 /* ScrollingAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingAnimator.swift; sourceTree = "<group>"; };
 		55826A9E2B34FCDF00233D90 /* CreateKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeyView.swift; sourceTree = "<group>"; };
 		55826AA12B34FD1600233D90 /* CreateKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeyViewModel.swift; sourceTree = "<group>"; };
 		55826AA42B34FD5F00233D90 /* CreateKeyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeyCoordinator.swift; sourceTree = "<group>"; };
@@ -1109,14 +1106,6 @@
 			path = ProjectDetail;
 			sourceTree = "<group>";
 		};
-		55826A992B34E20D00233D90 /* ScrollingAnimator */ = {
-			isa = PBXGroup;
-			children = (
-				55826A9A2B34E21F00233D90 /* ScrollingAnimator.swift */,
-			);
-			path = ScrollingAnimator;
-			sourceTree = "<group>";
-		};
 		55826A9D2B34FAEB00233D90 /* CreateKey */ = {
 			isa = PBXGroup;
 			children = (
@@ -1277,7 +1266,6 @@
 				55B8414A2B4C9AF3007697AF /* SwipeAction */,
 				55DE103F2B4ABF8F001CB87F /* UserDetailView */,
 				5505378F2B44C0080077912D /* PhotoPicker */,
-				55826A992B34E20D00233D90 /* ScrollingAnimator */,
 				551AA4182B33664800F0B1E2 /* Layout */,
 				5580744C2B2E340C0041160B /* ActivityView */,
 				558074432B2CF2640041160B /* GoogleSDK */,
@@ -1921,7 +1909,6 @@
 				550537972B44C0DE0077912D /* ImageTransferable.swift in Sources */,
 				5516EBDC2B4326B600C558B1 /* ProfileNameView.swift in Sources */,
 				5516EBF22B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */,
-				55826A9B2B34E21F00233D90 /* ScrollingAnimator.swift in Sources */,
 				550537912B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4212B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FB5F632B3E409B004D3720 /* KeyStatus.swift in Sources */,
@@ -2119,7 +2106,6 @@
 				550537982B44C0DE0077912D /* ImageTransferable.swift in Sources */,
 				5516EBDD2B4326B600C558B1 /* ProfileNameView.swift in Sources */,
 				5516EBF32B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */,
-				55826A9C2B34E21F00233D90 /* ScrollingAnimator.swift in Sources */,
 				550537922B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4222B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FB5F642B3E409B004D3720 /* KeyStatus.swift in Sources */,

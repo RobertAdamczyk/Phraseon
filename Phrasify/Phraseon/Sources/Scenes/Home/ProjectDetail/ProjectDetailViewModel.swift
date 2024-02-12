@@ -64,7 +64,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     internal var project: Project
     internal let cancelBag = CancelBag()
 
-    private var keys: [Key]? {
+    var keys: [Key]? {
         switch state {
         case .loaded(let keys): return keys
         default: return nil
