@@ -25,6 +25,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     @Published var searchText = ""
     @Published var member: Member?
     @Published var state: State = .loading
+    @Published var isSearchPresented: Bool = false
 
     var shouldShowContent: Bool {
         switch state {
@@ -38,6 +39,10 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         case .loaded: return true
         default: return false
         }
+    }
+
+    var shouldShowAddButton: Bool {
+        member?.hasPermissionToAddKey == true && !isSearchPresented
     }
 
     var keysLimit: Int = 20

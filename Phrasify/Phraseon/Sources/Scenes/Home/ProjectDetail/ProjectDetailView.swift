@@ -57,7 +57,7 @@ struct ProjectDetailView: View {
         .onAppear(perform: setupSegmentedControlAppearance)
         .opacity(viewModel.shouldShowContent ? 1 : 0)
         .overlay(content: makeNotFoundViewIfNeeded)
-        .searchable(text: $viewModel.searchText)
+        .searchable(text: $viewModel.searchText, isPresented: $viewModel.isSearchPresented)
         .overlay(content: makeLoadingIfNeeded)
         .overlay(content: makeEmptyViewIfNeeded)
         .overlay(content: makeErrorViewIfNeeded)
@@ -97,7 +97,7 @@ struct ProjectDetailView: View {
             }
             .padding(.bottom, 32)
         })
-        .opacity(viewModel.member?.hasPermissionToAddKey == true ? 1 : 0)
+        .opacity(viewModel.shouldShowAddButton ? 1 : 0)
     }
 
     @ViewBuilder
