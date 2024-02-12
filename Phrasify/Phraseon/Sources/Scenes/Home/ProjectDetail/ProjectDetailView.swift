@@ -61,7 +61,6 @@ struct ProjectDetailView: View {
         .overlay(content: makeLoadingIfNeeded)
         .overlay(content: makeEmptyViewIfNeeded)
         .overlay(content: makeErrorViewIfNeeded)
-        .ignoresSafeArea(edges: .bottom)
         .overlay(alignment: .bottomTrailing, content: makeAddButton)
         .navigationTitle(viewModel.project.name)
         .toolbar {
@@ -96,7 +95,7 @@ struct ProjectDetailView: View {
                 UnevenRoundedRectangle(topLeadingRadius: 32, bottomLeadingRadius: 32)
                     .fill(appColor(.lightBlue).gradient)
             }
-            .padding(.bottom, 32)
+            .padding(.bottom, 16)
             .animation(.easeInOut, value: scrollID)
         })
         .opacity(viewModel.shouldShowAddButton ? 1 : 0)
