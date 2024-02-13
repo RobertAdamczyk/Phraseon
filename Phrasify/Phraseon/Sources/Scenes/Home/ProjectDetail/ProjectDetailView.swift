@@ -10,7 +10,6 @@ import SwiftUI
 struct ProjectDetailView: View {
 
     @ObservedObject var viewModel: ProjectDetailViewModel
-    @State private var scrollID: Key?
 
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -53,7 +52,6 @@ struct ProjectDetailView: View {
             .scrollTargetLayout()
             .padding(16)
         }
-        .scrollPosition(id: $scrollID)
         .onAppear(perform: setupSegmentedControlAppearance)
         .opacity(viewModel.shouldShowContent ? 1 : 0)
         .overlay(content: makeNotFoundViewIfNeeded)
@@ -79,14 +77,8 @@ struct ProjectDetailView: View {
     private func makeAddButton() -> some View {
         Button(action: viewModel.onAddButtonTapped, label: {
             HStack(spacing: 4) {
-                if let scrollID, viewModel.keys?.firstIndex(of: scrollID) ?? 0 > 2 {
-                    Text("X") // Placeholder
-                        .apply(.medium, size: .L, color: .black)
-                        .opacity(0)
-                } else {
-                    Text("Add phrase")
-                        .apply(.medium, size: .L, color: .black)
-                }
+                Text("Add phrase")
+                    .apply(.medium, size: .L, color: .black)
                 Image(systemName: "plus")
                     .apply(.semibold, size: .L, color: .black)
             }
@@ -96,7 +88,6 @@ struct ProjectDetailView: View {
                     .fill(appColor(.lightBlue).gradient)
             }
             .padding(.bottom, 16)
-            .animation(.easeInOut, value: scrollID)
         })
         .opacity(viewModel.shouldShowAddButton ? 1 : 0)
     }
