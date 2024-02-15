@@ -18,7 +18,9 @@ final class RootCoordinator: ObservableObject, Coordinator {
 
     var dependencies: Dependencies
 
-    private var cancelBag = CancelBag()
+    let appUpdateHandler: AppUpdateHandler
+
+    private let cancelBag = CancelBag()
 
     init() {
         let authenticationRepository: AuthenticationRepository = .init()
@@ -28,18 +30,25 @@ final class RootCoordinator: ObservableObject, Coordinator {
         let storeKitRepository: StoreKitRepository = .init()
         let userDomain: UserDomain = .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository)
         let searchRepository: SearchRepository = .init()
+        let configurationRepository: ConfigurationRepository = .init()
         dependencies = .init(authenticationRepository: authenticationRepository,
                              firestoreRepository: firestoreRepository,
                              cloudRepository: cloudRepository,
                              storageRepository: storageRepository,
                              storeKitRepository: storeKitRepository,
                              userDomain: userDomain,
-                             searchRepository: searchRepository)
-        setupLoginSubscription()
+                             searchRepository: searchRepository,
+                             configurationRepository: configurationRepository)
+        appUpdateHandler = .init(configurationRepository: configurationRepository)
+        setupSubscriptions()
     }
 
-    private func setupLoginSubscription() {
+    private func setupSubscriptions() {
         dependencies.authenticationRepository.$isLoggedIn.sink { _ in
+            self.objectWillChange.send()
+        }
+        .store(in: cancelBag)
+        appUpdateHandler.$updateInfo.sink { _ in
             self.objectWillChange.send()
         }
         .store(in: cancelBag)
