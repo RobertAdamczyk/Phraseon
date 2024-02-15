@@ -25,6 +25,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     @Published var searchText = ""
     @Published var member: Member?
     @Published var state: State = .loading
+    @Published var isSearchPresented: Bool = false
 
     var shouldShowContent: Bool {
         switch state {
@@ -38,6 +39,10 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         case .loaded: return true
         default: return false
         }
+    }
+
+    var shouldShowAddButton: Bool {
+        member?.hasPermissionToAddKey == true && !isSearchPresented
     }
 
     var keysLimit: Int = 20
@@ -59,7 +64,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     internal var project: Project
     internal let cancelBag = CancelBag()
 
-    private var keys: [Key]? {
+    var keys: [Key]? {
         switch state {
         case .loaded(let keys): return keys
         default: return nil

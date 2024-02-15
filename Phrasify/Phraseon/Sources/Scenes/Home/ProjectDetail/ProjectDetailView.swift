@@ -10,10 +10,9 @@ import SwiftUI
 struct ProjectDetailView: View {
 
     @ObservedObject var viewModel: ProjectDetailViewModel
-    @State private var scrollState: ScrollingAnimator.State = .scrollView
 
     var body: some View {
-        ScrollView(showsIndicators: true) {
+        ScrollView(showsIndicators: false) {
             LazyVStack(alignment: .leading, spacing: 16) {
                 if viewModel.shouldShowPicker {
                     Picker("", selection: $viewModel.selectedKeysOrder) {
@@ -50,18 +49,16 @@ struct ProjectDetailView: View {
                 default: EmptyView()
                 }
             }
-            .animate($scrollState)
+            .scrollTargetLayout()
             .padding(16)
         }
-        .scrollSpace()
         .onAppear(perform: setupSegmentedControlAppearance)
         .opacity(viewModel.shouldShowContent ? 1 : 0)
         .overlay(content: makeNotFoundViewIfNeeded)
-        .searchable(text: $viewModel.searchText)
+        .searchable(text: $viewModel.searchText, isPresented: $viewModel.isSearchPresented)
         .overlay(content: makeLoadingIfNeeded)
         .overlay(content: makeEmptyViewIfNeeded)
         .overlay(content: makeErrorViewIfNeeded)
-        .ignoresSafeArea(edges: .bottom)
         .overlay(alignment: .bottomTrailing, content: makeAddButton)
         .navigationTitle(viewModel.project.name)
         .toolbar {
@@ -80,13 +77,8 @@ struct ProjectDetailView: View {
     private func makeAddButton() -> some View {
         Button(action: viewModel.onAddButtonTapped, label: {
             HStack(spacing: 4) {
-                if scrollState == .scrollView {
-                    Text("Add phrase")
-                        .apply(.medium, size: .L, color: .black)
-                }
-                Text("X") // Placeholder
+                Text("Add phrase")
                     .apply(.medium, size: .L, color: .black)
-                    .opacity(0)
                 Image(systemName: "plus")
                     .apply(.semibold, size: .L, color: .black)
             }
@@ -95,9 +87,9 @@ struct ProjectDetailView: View {
                 UnevenRoundedRectangle(topLeadingRadius: 32, bottomLeadingRadius: 32)
                     .fill(appColor(.lightBlue).gradient)
             }
-            .padding(.bottom, 32)
+            .padding(.bottom, 16)
         })
-        .opacity(viewModel.member?.hasPermissionToAddKey == true ? 1 : 0)
+        .opacity(viewModel.shouldShowAddButton ? 1 : 0)
     }
 
     @ViewBuilder

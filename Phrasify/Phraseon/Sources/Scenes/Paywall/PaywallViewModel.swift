@@ -129,7 +129,16 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
             }
             coordinator.dismissFullScreenCover()
         } catch {
-            ToastView.showGeneralError()
+            if let appError = error as? AppError {
+                switch appError {
+                case .purchasePending: ToastView.showSuccess(message: "Your transaction is currently in progress and requires some additional time to complete.")
+                case .purchaseGeneralError: ToastView.showGeneralError()
+                case .purchaseCancelled: return
+                default: ToastView.showGeneralError()
+                }
+            } else {
+                ToastView.showGeneralError()
+            }
         }
     }
 
