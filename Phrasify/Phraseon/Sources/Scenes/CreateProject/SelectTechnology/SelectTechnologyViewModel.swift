@@ -53,6 +53,7 @@ final class SelectTechnologyViewModel: ObservableObject {
     }
 
     func onTechnologyTapped(_ technology: Technology) {
+        guard !selectedTechnologies.contains(technology) else { return }
         withAnimation(.snappy) {
             selectedTechnologies.insert(technology, at: 0)
         }
