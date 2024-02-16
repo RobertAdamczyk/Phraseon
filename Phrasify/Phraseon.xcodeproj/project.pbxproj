@@ -11,6 +11,13 @@
 		550041FB2B6C3B5300073384 /* StartTrialService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550041F92B6C3B5300073384 /* StartTrialService.swift */; };
 		550041FD2B6C3FD700073384 /* PaywallActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550041FC2B6C3FD700073384 /* PaywallActions.swift */; };
 		550041FE2B6C3FD700073384 /* PaywallActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550041FC2B6C3FD700073384 /* PaywallActions.swift */; };
+		55028A042B7EB3E200C786D9 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 55028A032B7EB3E200C786D9 /* FirebaseRemoteConfig */; };
+		55028A062B7EB41300C786D9 /* ConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A052B7EB41300C786D9 /* ConfigurationRepository.swift */; };
+		55028A072B7EB41300C786D9 /* ConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A052B7EB41300C786D9 /* ConfigurationRepository.swift */; };
+		55028A092B7EB58F00C786D9 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */; };
+		55028A0A2B7EB58F00C786D9 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */; };
+		55028A0D2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */; };
+		55028A0E2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */; };
 		5505378A2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		5505378B2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		550537912B44C0170077912D /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537902B44C0170077912D /* PhotoPickerView.swift */; };
@@ -135,6 +142,8 @@
 		553722B12B631DC40061CF52 /* ViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AF2B631DC40061CF52 /* ViewBackground.swift */; };
 		553722B32B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */; };
 		553722B42B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */; };
+		5539D7582B7FD22100BDA216 /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539D7572B7FD22000BDA216 /* AppUpdateView.swift */; };
+		5539D7592B7FD22100BDA216 /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539D7572B7FD22000BDA216 /* AppUpdateView.swift */; };
 		553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */; };
 		553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCD2B28FD890071A099 /* AppTextField.swift */; };
 		553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCF2B28FDD70071A099 /* AppDivider.swift */; };
@@ -441,6 +450,9 @@
 /* Begin PBXFileReference section */
 		550041F92B6C3B5300073384 /* StartTrialService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTrialService.swift; sourceTree = "<group>"; };
 		550041FC2B6C3FD700073384 /* PaywallActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallActions.swift; sourceTree = "<group>"; };
+		55028A052B7EB41300C786D9 /* ConfigurationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationRepository.swift; sourceTree = "<group>"; };
+		55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateHandler.swift; sourceTree = "<group>"; };
 		550537892B4492670077912D /* NavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActions.swift; sourceTree = "<group>"; };
 		550537902B44C0170077912D /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		550537932B44C0270077912D /* PhotoPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerHandler.swift; sourceTree = "<group>"; };
@@ -507,6 +519,7 @@
 		553722AC2B631DA00061CF52 /* CellBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackground.swift; sourceTree = "<group>"; };
 		553722AF2B631DC40061CF52 /* ViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBackground.swift; sourceTree = "<group>"; };
 		553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallView+SubscriptionCell.swift"; sourceTree = "<group>"; };
+		5539D7572B7FD22000BDA216 /* AppUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateView.swift; sourceTree = "<group>"; };
 		553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
 		553F1BCD2B28FD890071A099 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 		553F1BCF2B28FDD70071A099 /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
@@ -688,6 +701,7 @@
 				5574B3392B6F114700C9DFB9 /* FirebaseFunctions in Frameworks */,
 				5574B3372B6F114300C9DFB9 /* FirebaseFirestoreSwift in Frameworks */,
 				5574B3352B6F113E00C9DFB9 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				55028A042B7EB3E200C786D9 /* FirebaseRemoteConfig in Frameworks */,
 				5574B32F2B6F112C00C9DFB9 /* GoogleSignIn in Frameworks */,
 				5574B3312B6F112F00C9DFB9 /* Lottie in Frameworks */,
 			);
@@ -696,6 +710,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55028A0B2B7ECB9800C786D9 /* AppUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */,
+				5539D7572B7FD22000BDA216 /* AppUpdateView.swift */,
+			);
+			path = AppUpdate;
+			sourceTree = "<group>";
+		};
 		5505378F2B44C0080077912D /* PhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -863,6 +886,7 @@
 			isa = PBXGroup;
 			children = (
 				5574B3282B6F0D3900C9DFB9 /* GoogleService-Info.plist */,
+				55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -987,12 +1011,12 @@
 			path = Products;
 			sourceTree = "<group>";
 		};
-		5561C5C92B67026200C815BC /* Domain */ = {
+		5561C5C92B67026200C815BC /* Domains */ = {
 			isa = PBXGroup;
 			children = (
 				5561C5CA2B67027000C815BC /* UserDomain.swift */,
 			);
-			path = Domain;
+			path = Domains;
 			sourceTree = "<group>";
 		};
 		5567E6C42B6F8D4D00C9EDFF /* Resources */ = {
@@ -1252,6 +1276,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55028A0B2B7ECB9800C786D9 /* AppUpdate */,
 				552EC1752B789D250079E754 /* UserDefaultsKey */,
 				55CADF392B75915400D04365 /* DeferredData */,
 				55CADF332B75814E00D04365 /* Secrets */,
@@ -1315,6 +1340,7 @@
 			children = (
 				55854F852B571D3000CC5480 /* Services */,
 				55C279262B2A4DFC005144F1 /* AuthenticationRepository.swift */,
+				55028A052B7EB41300C786D9 /* ConfigurationRepository.swift */,
 				5505379D2B44C5C30077912D /* StorageRepository.swift */,
 				55E960D82B3CD8E50016DA23 /* CloudRepository.swift */,
 				551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */,
@@ -1394,7 +1420,7 @@
 		55C7621B2B27A622008CBF30 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				5561C5C92B67026200C815BC /* Domain */,
+				5561C5C92B67026200C815BC /* Domains */,
 				55FE519A2B5B1AAA0084617F /* ErrorHandling */,
 				5516EBBE2B3F33D600C558B1 /* Extension */,
 				558074482B2D12AC0041160B /* UseCases */,
@@ -1663,6 +1689,7 @@
 				5574B33C2B6F115B00C9DFB9 /* FirebaseFirestore */,
 				558ACFBC2B7192D500741793 /* AlgoliaSearchClient */,
 				5590F24E2B78F1FF008AAC7C /* Zip */,
+				55028A032B7EB3E200C786D9 /* FirebaseRemoteConfig */,
 			);
 			productName = Phrasify;
 			productReference = 55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse.app */;
@@ -1720,6 +1747,7 @@
 				55C278D72B2A2E36005144F1 /* RethinkSans-Medium.ttf in Resources */,
 				5567E6CF2B6F925A00C9EDFF /* Phraseon_Live.storekit in Resources */,
 				55C279302B2A5922005144F1 /* buttonLoadingAnimation.json in Resources */,
+				55028A092B7EB58F00C786D9 /* RemoteConfigDefaults.plist in Resources */,
 				55C278D52B2A2E36005144F1 /* RethinkSans-Regular.ttf in Resources */,
 				552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */,
 				55C278D82B2A2E36005144F1 /* RethinkSans-SemiBold.ttf in Resources */,
@@ -1743,6 +1771,7 @@
 				55C278F52B2A3F3A005144F1 /* RethinkSans-Regular.ttf in Resources */,
 				5505C7DB2B55BAEB00806B4F /* syncScript.txt in Resources */,
 				5567E6C82B6F8D8300C9EDFF /* Phraseon_InHouse.storekit in Resources */,
+				55028A0A2B7EB58F00C786D9 /* RemoteConfigDefaults.plist in Resources */,
 				55C278F62B2A3F3A005144F1 /* Preview Assets.xcassets in Resources */,
 				55C278F72B2A3F3A005144F1 /* RethinkSans-SemiBold.ttf in Resources */,
 				5574B33F2B6F1F8400C9DFB9 /* GoogleService-Info.plist in Resources */,
@@ -1803,12 +1832,14 @@
 				5513C2482B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,
 				55826A942B34D5F100233D90 /* ProjectDetailView.swift in Sources */,
 				55826AAE2B35046F00233D90 /* Key.swift in Sources */,
+				5539D7582B7FD22100BDA216 /* AppUpdateView.swift in Sources */,
 				552EC1772B789D3A0079E754 /* UserDefaults+Key.swift in Sources */,
 				55A653E22B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift in Sources */,
 				5580743A2B2CE6650041160B /* AppError.swift in Sources */,
 				55826A902B34C85800233D90 /* Role.swift in Sources */,
 				553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */,
 				5513C24B2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
+				55028A0D2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */,
 				55C279272B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5516EBC42B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
 				5570FF4D2B61B13C0011208F /* PaywallView.swift in Sources */,
@@ -1913,6 +1944,7 @@
 				551AA4212B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FB5F632B3E409B004D3720 /* KeyStatus.swift in Sources */,
 				55FE519C2B5B1AC20084617F /* ErrorHandler.swift in Sources */,
+				55028A062B7EB41300C786D9 /* ConfigurationRepository.swift in Sources */,
 				55FE51B72B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
 				5536E1692B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3572B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
@@ -2000,12 +2032,14 @@
 				5513C2492B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,
 				55826A952B34D5F100233D90 /* ProjectDetailView.swift in Sources */,
 				55826AAF2B35046F00233D90 /* Key.swift in Sources */,
+				5539D7592B7FD22100BDA216 /* AppUpdateView.swift in Sources */,
 				552EC1782B789D3A0079E754 /* UserDefaults+Key.swift in Sources */,
 				55A653E32B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift in Sources */,
 				5580743B2B2CE6930041160B /* AppError.swift in Sources */,
 				55826A912B34C85800233D90 /* Role.swift in Sources */,
 				55C278E42B2A3F3A005144F1 /* MockCoordinator.swift in Sources */,
 				5513C24C2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
+				55028A0E2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */,
 				55C279282B2A4DFC005144F1 /* AuthenticationRepository.swift in Sources */,
 				5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
 				5570FF4E2B61B13C0011208F /* PaywallView.swift in Sources */,
@@ -2110,6 +2144,7 @@
 				551AA4222B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FB5F642B3E409B004D3720 /* KeyStatus.swift in Sources */,
 				55FE519D2B5B1AC20084617F /* ErrorHandler.swift in Sources */,
+				55028A072B7EB41300C786D9 /* ConfigurationRepository.swift in Sources */,
 				55FE51B82B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
 				5536E16A2B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3582B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
@@ -2521,6 +2556,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		55028A032B7EB3E200C786D9 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5574B31B2B6F031300C9DFB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
 		5536E16B2B74435A00E5DCC6 /* AlgoliaSearchClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 558ACFBB2B7192D500741793 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */;
