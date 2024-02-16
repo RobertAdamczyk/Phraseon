@@ -144,6 +144,7 @@
 		553722B42B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */; };
 		5539D7582B7FD22100BDA216 /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539D7572B7FD22000BDA216 /* AppUpdateView.swift */; };
 		5539D7592B7FD22100BDA216 /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539D7572B7FD22000BDA216 /* AppUpdateView.swift */; };
+		5539D75B2B8006D900BDA216 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 5539D75A2B8006D900BDA216 /* FirebaseRemoteConfig */; };
 		553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */; };
 		553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCD2B28FD890071A099 /* AppTextField.swift */; };
 		553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCF2B28FDD70071A099 /* AppDivider.swift */; };
@@ -682,6 +683,7 @@
 				5574B3152B6F020B00C9DFB9 /* GoogleSignIn in Frameworks */,
 				5574B3252B6F031300C9DFB9 /* FirebaseFunctions in Frameworks */,
 				5574B3272B6F031300C9DFB9 /* FirebaseStorage in Frameworks */,
+				5539D75B2B8006D900BDA216 /* FirebaseRemoteConfig in Frameworks */,
 				5574B31F2B6F031300C9DFB9 /* FirebaseFirestore in Frameworks */,
 				5574B3232B6F031300C9DFB9 /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -1658,6 +1660,7 @@
 				5574B3262B6F031300C9DFB9 /* FirebaseStorage */,
 				5536E16B2B74435A00E5DCC6 /* AlgoliaSearchClient */,
 				5590F2952B797B93008AAC7C /* Zip */,
+				5539D75A2B8006D900BDA216 /* FirebaseRemoteConfig */,
 			);
 			productName = Phrasify;
 			productReference = 552785BE2B27A5120098FE95 /* Phraseon.app */;
@@ -2565,6 +2568,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 558ACFBB2B7192D500741793 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */;
 			productName = AlgoliaSearchClient;
+		};
+		5539D75A2B8006D900BDA216 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5574B31B2B6F031300C9DFB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
 		};
 		5574B30E2B6F01B500C9DFB9 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
