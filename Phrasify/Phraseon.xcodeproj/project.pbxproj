@@ -142,6 +142,8 @@
 		553722B12B631DC40061CF52 /* ViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AF2B631DC40061CF52 /* ViewBackground.swift */; };
 		553722B32B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */; };
 		553722B42B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */; };
+		5539D7582B7FD22100BDA216 /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539D7572B7FD22000BDA216 /* AppUpdateView.swift */; };
+		5539D7592B7FD22100BDA216 /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539D7572B7FD22000BDA216 /* AppUpdateView.swift */; };
 		553F1BCC2B28EF6B0071A099 /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */; };
 		553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCD2B28FD890071A099 /* AppTextField.swift */; };
 		553F1BD02B28FDD70071A099 /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCF2B28FDD70071A099 /* AppDivider.swift */; };
@@ -517,6 +519,7 @@
 		553722AC2B631DA00061CF52 /* CellBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackground.swift; sourceTree = "<group>"; };
 		553722AF2B631DC40061CF52 /* ViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBackground.swift; sourceTree = "<group>"; };
 		553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallView+SubscriptionCell.swift"; sourceTree = "<group>"; };
+		5539D7572B7FD22000BDA216 /* AppUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateView.swift; sourceTree = "<group>"; };
 		553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
 		553F1BCD2B28FD890071A099 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 		553F1BCF2B28FDD70071A099 /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
@@ -707,12 +710,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		55028A0B2B7ECB9800C786D9 /* AppUpdateHandler */ = {
+		55028A0B2B7ECB9800C786D9 /* AppUpdate */ = {
 			isa = PBXGroup;
 			children = (
 				55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */,
+				5539D7572B7FD22000BDA216 /* AppUpdateView.swift */,
 			);
-			path = AppUpdateHandler;
+			path = AppUpdate;
 			sourceTree = "<group>";
 		};
 		5505378F2B44C0080077912D /* PhotoPicker */ = {
@@ -1272,7 +1276,7 @@
 		55C2791F2B2A4CCD005144F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				55028A0B2B7ECB9800C786D9 /* AppUpdateHandler */,
+				55028A0B2B7ECB9800C786D9 /* AppUpdate */,
 				552EC1752B789D250079E754 /* UserDefaultsKey */,
 				55CADF392B75915400D04365 /* DeferredData */,
 				55CADF332B75814E00D04365 /* Secrets */,
@@ -1828,6 +1832,7 @@
 				5513C2482B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,
 				55826A942B34D5F100233D90 /* ProjectDetailView.swift in Sources */,
 				55826AAE2B35046F00233D90 /* Key.swift in Sources */,
+				5539D7582B7FD22100BDA216 /* AppUpdateView.swift in Sources */,
 				552EC1772B789D3A0079E754 /* UserDefaults+Key.swift in Sources */,
 				55A653E22B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift in Sources */,
 				5580743A2B2CE6650041160B /* AppError.swift in Sources */,
@@ -2027,6 +2032,7 @@
 				5513C2492B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,
 				55826A952B34D5F100233D90 /* ProjectDetailView.swift in Sources */,
 				55826AAF2B35046F00233D90 /* Key.swift in Sources */,
+				5539D7592B7FD22100BDA216 /* AppUpdateView.swift in Sources */,
 				552EC1782B789D3A0079E754 /* UserDefaults+Key.swift in Sources */,
 				55A653E32B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift in Sources */,
 				5580743B2B2CE6930041160B /* AppError.swift in Sources */,

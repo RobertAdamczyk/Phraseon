@@ -14,13 +14,12 @@ final class RootCoordinator: ObservableObject, Coordinator {
     @Published var presentedFullScreenCover: FullScreenCover?
     @Published var presentedSheet: Sheet?
 
-    var isLoggedIn: Bool? { dependencies.authenticationRepository.isLoggedIn }
+    @Published private(set) var updateInfo: AppUpdateHandler.UpdateInfo?
+    @Published private(set) var isLoggedIn: Bool?
 
     var dependencies: Dependencies
 
-    let appUpdateHandler: AppUpdateHandler
-
-    private let cancelBag = CancelBag()
+    private let appUpdateHandler: AppUpdateHandler
 
     init() {
         let authenticationRepository: AuthenticationRepository = .init()
@@ -44,14 +43,10 @@ final class RootCoordinator: ObservableObject, Coordinator {
     }
 
     private func setupSubscriptions() {
-        dependencies.authenticationRepository.$isLoggedIn.sink { _ in
-            self.objectWillChange.send()
-        }
-        .store(in: cancelBag)
-        appUpdateHandler.$updateInfo.sink { _ in
-            self.objectWillChange.send()
-        }
-        .store(in: cancelBag)
+        dependencies.authenticationRepository.$isLoggedIn
+            .assign(to: &$isLoggedIn)
+        appUpdateHandler.$updateInfo
+            .assign(to: &$updateInfo)
     }
 }
 

@@ -59,8 +59,11 @@ extension RootCoordinator {
                 } else if rootCoordinator.isLoggedIn == false {
                     StartCoordinator.RootView(parentCoordinator: rootCoordinator)
                 }
-                if let test = rootCoordinator.appUpdateHandler.updateInfo {
-                    Text("\(test.message)")
+                if let updateInfo = rootCoordinator.updateInfo {
+                    AppUpdateView(title: updateInfo.title, 
+                                  message: updateInfo.message,
+                                  confirmButtonText: updateInfo.confirmButtonText,
+                                  url: updateInfo.url)
                 }
             }
         }
