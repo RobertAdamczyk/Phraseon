@@ -32,7 +32,7 @@ struct SelectBaseLanguageView: View {
                 .disabled(viewModel.shouldButtonDisabled)
                 .padding(16)
         }
-        .navigationTitle("Choose base language")
+        .navigationTitle("Base language")
         .applyViewBackground()
     }
 

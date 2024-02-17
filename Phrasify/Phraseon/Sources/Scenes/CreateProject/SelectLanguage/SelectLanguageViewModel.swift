@@ -53,6 +53,7 @@ final class SelectLanguageViewModel: ObservableObject {
     }
 
     func onLanguageTapped(_ language: Language) {
+        guard !selectedLanguages.contains(language) else { return }
         withAnimation(.snappy) {
             selectedLanguages.insert(language, at: 0)
         }

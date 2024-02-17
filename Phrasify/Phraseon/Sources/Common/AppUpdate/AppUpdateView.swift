@@ -53,12 +53,14 @@ struct AppUpdateView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     ZStack {
         HomeView(coordinator: MockCoordinator())
-        AppUpdateView(title: "We are better than ever",
-                      message: "Please download the latest app version from the App Store.",
-                      confirmButtonText: "Update", 
+        AppUpdateView(title: "Beta Finished",
+                      message: "Thank you for beta testing. Please look forward to the final app release!",
+                      confirmButtonText: "Understood",
                       url: "http://www.google.com")
     }
 }
+#endif

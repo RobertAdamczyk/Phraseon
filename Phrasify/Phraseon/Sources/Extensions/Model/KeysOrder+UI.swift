@@ -13,7 +13,7 @@ extension KeysOrder {
         switch self {
         case .alphabetically: return "A-Z"
         case .recent: return "Recent"
-        case .alert: return "Review"
+        //case .alert: return "Review"
         }
     }
 }

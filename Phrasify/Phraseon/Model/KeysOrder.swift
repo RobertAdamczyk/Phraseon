@@ -10,5 +10,5 @@ import Foundation
 enum KeysOrder: String, CaseIterable {
     case alphabetically
     case recent
-    case alert
+    //case alert
 }
