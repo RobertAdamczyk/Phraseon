@@ -8,9 +8,6 @@
 import Foundation
 
 struct HighlightResult: Codable {
-    let createdAt: HighlightTimestamp
     let keyId: Highlight
-    let lastUpdatedAt: HighlightTimestamp
-    let status: [String: Highlight]
     let translation: [String: Highlight]
 }
