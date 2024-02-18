@@ -143,6 +143,8 @@ struct ProjectDetailView: View {
                                                       languages: [],
                                                       baseLanguage: .english,
                                                       members: [],
-                                                      owner: "")))
+                                                      owner: "",
+                                                      securedAlgoliaApiKey: "",
+                                                      createdAt: .now)))
 }
 #endif

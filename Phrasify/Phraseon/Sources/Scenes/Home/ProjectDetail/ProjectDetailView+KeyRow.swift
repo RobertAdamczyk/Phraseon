@@ -123,10 +123,21 @@ extension ProjectDetailView {
     ZStack {
         appColor(.black)
         VStack {
-            ProjectDetailView.KeyRow(key: .init(id: "test_key", translation: [:], createdAt: .now, lastUpdatedAt: .distantPast,
-                                                status: ["EN": KeyStatus.approved]), viewModel: .init(coordinator: MockCoordinator(), project: .init(name: "", technologies: [], languages: [],
-                                                                                                                                                     baseLanguage: .english, members: [], owner: "das")))
-            ProjectDetailView.AlgoliaKeyRow(key: .init(createdAt: .init(seconds: 100000, 
+            ProjectDetailView.KeyRow(key: .init(id: "test_key", 
+                                                translation: [:],
+                                                createdAt: .now, 
+                                                lastUpdatedAt: .distantPast,
+                                                status: ["EN": KeyStatus.approved]), 
+                                     viewModel: .init(coordinator: MockCoordinator(),
+                                                      project: .init(name: "",
+                                                                     technologies: [],
+                                                                     languages: [],
+                                                                     baseLanguage: .english,
+                                                                     members: [],
+                                                                     owner: "das",
+                                                                     securedAlgoliaApiKey: "",
+                                                                     createdAt: .now)))
+            ProjectDetailView.AlgoliaKeyRow(key: .init(createdAt: .init(seconds: 100000,
                                                                         nanoseconds: 10000),
                                                        lastUpdatedAt: .init(seconds: 10000,
                                                                             nanoseconds: 100000),
@@ -159,7 +170,9 @@ extension ProjectDetailView {
                                                                             languages: [],
                                                                             baseLanguage: .english,
                                                                             members: [],
-                                                                            owner: "das")))
+                                                                            owner: "das",
+                                                                            securedAlgoliaApiKey: "",
+                                                                            createdAt: .now)))
         }
         .padding(16)
     }

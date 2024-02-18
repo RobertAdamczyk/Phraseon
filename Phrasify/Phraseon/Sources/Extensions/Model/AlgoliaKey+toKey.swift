@@ -10,7 +10,7 @@ import Foundation
 extension AlgoliaKey {
 
     var toKey: Key {
-        .init(id: self.objectID,
+        .init(id: self.keyId,
               translation: self.translation,
               createdAt: .init(timeIntervalSince1970: TimeInterval(self.createdAt.seconds)),
               lastUpdatedAt: .init(timeIntervalSince1970: TimeInterval(self.lastUpdatedAt.seconds)),
