@@ -171,8 +171,8 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     }
 
     private func searchKeys(with text: String) {
-        guard let projectId = project.id else { return }
-        coordinator.dependencies.searchRepository.searchKeys(in: projectId, with: searchText) { [weak self] result in
+        coordinator.dependencies.searchRepository.searchKeys(securedApiKey: project.securedAlgoliaApiKey,
+                                                             with: searchText) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let keys):

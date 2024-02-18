@@ -135,11 +135,19 @@ struct KeyDetailView: View {
                                                   languages: [.english, .polish],
                                                   baseLanguage: .english,
                                                   members: [],
-                                                  owner: "adasda"),
-                                   projectMemberUseCase: .init(firestoreRepository: .init(), 
+                                                  owner: "adasda",
+                                                  securedAlgoliaApiKey: "",
+                                                  createdAt: .now),
+                                   projectMemberUseCase: .init(firestoreRepository: .init(),
                                                                authenticationRepository: .init(),
-                                                               project: .init(name: "", technologies: [], languages: [],
-                                                                              baseLanguage: .english, members: [], owner: ""))))
+                                                               project: .init(name: "", 
+                                                                              technologies: [],
+                                                                              languages: [],
+                                                                              baseLanguage: .english, 
+                                                                              members: [],
+                                                                              owner: "",
+                                                                              securedAlgoliaApiKey: "",
+                                                                              createdAt: .now))))
     .preferredColorScheme(.dark)
 }
 #endif

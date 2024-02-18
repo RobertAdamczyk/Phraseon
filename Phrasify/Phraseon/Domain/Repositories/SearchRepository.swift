@@ -10,14 +10,8 @@ import AlgoliaSearchClient
 
 final class SearchRepository {
 
-    let client: SearchClient
-
-    init() {
-        self.client = SearchClient(appID: .init(rawValue: Secrets.algoliaAppId), apiKey: .init(rawValue: Secrets.algoliaSearchKey))
-    }
-
-    func searchKeys(in projectId: String, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {
-        let index = client.index(withName: .init(rawValue: projectId))
+    func searchKeys(securedApiKey: String, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {
+        let index = getClient(for: securedApiKey).index(withName: .init(rawValue: "main"))
         let query = Query(text)
         index.search(query: query) { result in
             switch result {
@@ -38,5 +32,9 @@ final class SearchRepository {
                 completion(.failure(error))
             }
         }
+    }
+
+    private func getClient(for securedApiKey: String) -> SearchClient {
+        .init(appID: .init(rawValue: Secrets.algoliaAppId), apiKey: .init(rawValue: securedApiKey))
     }
 }

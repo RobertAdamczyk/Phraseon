@@ -17,6 +17,8 @@ struct Project: Codable, Hashable {
     var baseLanguage: Language
     var members: [UserID]
     var owner: UserID
+    var securedAlgoliaApiKey: String
+    var createdAt: Date
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -26,5 +28,7 @@ struct Project: Codable, Hashable {
         case baseLanguage
         case members
         case owner
+        case securedAlgoliaApiKey
+        case createdAt
     }
 }

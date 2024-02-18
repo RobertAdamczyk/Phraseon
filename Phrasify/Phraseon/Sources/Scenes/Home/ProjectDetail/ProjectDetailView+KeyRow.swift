@@ -123,33 +123,32 @@ extension ProjectDetailView {
     ZStack {
         appColor(.black)
         VStack {
-            ProjectDetailView.KeyRow(key: .init(id: "test_key", translation: [:], createdAt: .now, lastUpdatedAt: .distantPast,
-                                                status: ["EN": KeyStatus.approved]), viewModel: .init(coordinator: MockCoordinator(), project: .init(name: "", technologies: [], languages: [],
-                                                                                                                                                     baseLanguage: .english, members: [], owner: "das")))
-            ProjectDetailView.AlgoliaKeyRow(key: .init(createdAt: .init(seconds: 100000, 
+            ProjectDetailView.KeyRow(key: .init(id: "test_key", 
+                                                translation: [:],
+                                                createdAt: .now, 
+                                                lastUpdatedAt: .distantPast,
+                                                status: ["EN": KeyStatus.approved]), 
+                                     viewModel: .init(coordinator: MockCoordinator(),
+                                                      project: .init(name: "",
+                                                                     technologies: [],
+                                                                     languages: [],
+                                                                     baseLanguage: .english,
+                                                                     members: [],
+                                                                     owner: "das",
+                                                                     securedAlgoliaApiKey: "",
+                                                                     createdAt: .now)))
+            ProjectDetailView.AlgoliaKeyRow(key: .init(createdAt: .init(seconds: 100000,
                                                                         nanoseconds: 10000),
                                                        lastUpdatedAt: .init(seconds: 10000,
                                                                             nanoseconds: 100000),
                                                        status: [:],
                                                        translation: ["EN": "Hello world !"],
                                                        keyId: "keyid",
+                                                       projectId: "",
                                                        objectID: "asasdaasdas_sdasdasd_SdasdasdA_Sdasdasda",
-                                                       highlightResult: .init(createdAt: .init(seconds: .init(value: .init(string: ""),
-                                                                                                              matchLevel: .none,
-                                                                                                              matchedWords: []),
-                                                                                               nanoseconds: .init(value: .init(string: ""),
-                                                                                                                  matchLevel: .none,
-                                                                                                                  matchedWords: [])),
-                                                                              keyId: .init(value: .init(string: "<em>ey</em>id"),
+                                                       highlightResult: .init(keyId: .init(value: .init(string: "<em>ey</em>id"),
                                                                                            matchLevel: .full,
                                                                                            matchedWords: []),
-                                                                              lastUpdatedAt: .init(seconds: .init(value: .init(string: ""),
-                                                                                                                  matchLevel: .none,
-                                                                                                                  matchedWords: []),
-                                                                                                   nanoseconds: .init(value: .init(string: ""),
-                                                                                                                      matchLevel: .none,
-                                                                                                                      matchedWords: [])),
-                                                                              status: [:],
                                                                               translation: ["EN": .init(value: .init(string: "He<em>llo w</em>orld !"),
                                                                                                         matchLevel: .full,
                                                                                                         matchedWords: ["zamkn"])])),
@@ -159,7 +158,9 @@ extension ProjectDetailView {
                                                                             languages: [],
                                                                             baseLanguage: .english,
                                                                             members: [],
-                                                                            owner: "das")))
+                                                                            owner: "das",
+                                                                            securedAlgoliaApiKey: "",
+                                                                            createdAt: .now)))
         }
         .padding(16)
     }
