@@ -56,6 +56,7 @@ struct InviteMemberView: View {
                                                                     baseLanguage: .english,
                                                                     members: [], owner: "",
                                                                     securedAlgoliaApiKey: "",
-                                                                    createdAt: .now))
+                                                                    createdAt: .now,
+                                                                    algoliaIndexName: ""))
 }
 #endif

@@ -10,8 +10,9 @@ import AlgoliaSearchClient
 
 final class SearchRepository {
 
-    func searchKeys(securedApiKey: String, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {
-        let index = getClient(for: securedApiKey).index(withName: .init(rawValue: "main"))
+    func searchKeys(in project: Project, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {
+        let client = getClient(for: project.securedAlgoliaApiKey)
+        let index = client.index(withName: .init(rawValue: project.algoliaIndexName))
         let query = Query(text)
         index.search(query: query) { result in
             switch result {

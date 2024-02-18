@@ -145,6 +145,7 @@ struct ProjectDetailView: View {
                                                       members: [],
                                                       owner: "",
                                                       securedAlgoliaApiKey: "",
-                                                      createdAt: .now)))
+                                                      createdAt: .now,
+                                                      algoliaIndexName: "")))
 }
 #endif
