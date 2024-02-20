@@ -49,6 +49,9 @@
             ReferencedContainer = "container:Phraseon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <StoreKitConfigurationFileReference
+         identifier = "../../Phraseon_InHouse/Resources/Products/Phraseon_InHouse.storekit">
+      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

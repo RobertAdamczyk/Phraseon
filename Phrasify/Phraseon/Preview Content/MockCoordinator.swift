@@ -11,26 +11,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
                              NavigationActions, SelectLanguageActions, SelectTechnologyActions, PaywallActions,
                              SelectMemberRoleActions, SheetActions, EnterContentKeyActions {
 
-    init() {
-        let authenticationRepository: AuthenticationRepository = MockAuthenticationRepository()
-        let firestoreRepository: FirestoreRepository = MockFirestoreRepository()
-        let cloudRepository: CloudRepository = MockCloudRepository()
-        let storageRepository: StorageRepository = MockStorageRepository()
-        let storeKitRepository: StoreKitRepository = MockStoreKitRepository()
-        let userDomain: UserDomain = .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository)
-        let searchRepository: SearchRepository = MockSearchRepository()
-        let configurationRepository: ConfigurationRepository = MockConfigurationRepository()
-        dependencies = .init(authenticationRepository: authenticationRepository,
-                             firestoreRepository: firestoreRepository,
-                             cloudRepository: cloudRepository,
-                             storageRepository: storageRepository,
-                             storeKitRepository: storeKitRepository,
-                             userDomain: userDomain,
-                             searchRepository: searchRepository,
-                             configurationRepository: configurationRepository)
-    }
-
-    var dependencies: Dependencies
+    var dependencies: Dependencies = MockDependencies.dependencies
 
     func showLogin() { /*empty*/ }
 
