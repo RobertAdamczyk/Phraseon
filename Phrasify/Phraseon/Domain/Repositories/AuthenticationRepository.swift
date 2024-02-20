@@ -8,11 +8,34 @@
 import Firebase
 import Combine
 
-final class AuthenticationRepository {
+protocol AuthenticationRepository {
+
+    var isLoggedIn: Bool? { get set }
+
+    var currentUser: Firebase.User? { get }
+
+    func login(email: String, password: String) async throws
+
+    func login(with credential: AuthCredential) async throws
+
+    func signUp(email: String, password: String) async throws
+
+    func sendResetPassword(email: String) async throws
+
+    func logout() throws
+
+    func deleteUser() async throws
+
+    func reauthenticate(email: String, password: String) async throws
+
+    func updatePassword(to password: String) async throws
+}
+
+final class AuthenticationRepositoryImpl: AuthenticationRepository {
 
     // MARK: Public properties
 
-    @Published private(set) var isLoggedIn: Bool?
+    @Published var isLoggedIn: Bool?
 
     var currentUser: Firebase.User? {
         auth.currentUser

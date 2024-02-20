@@ -22,7 +22,7 @@ final class RootCoordinator: ObservableObject, Coordinator {
     private let appUpdateHandler: AppUpdateHandler
 
     init() {
-        let authenticationRepository: AuthenticationRepository = .init()
+        let authenticationRepository: AuthenticationRepository = AuthenticationRepositoryImpl()
         let firestoreRepository: FirestoreRepository = .init()
         let cloudRepository: CloudRepository = .init()
         let storageRepository: StorageRepository = .init()
