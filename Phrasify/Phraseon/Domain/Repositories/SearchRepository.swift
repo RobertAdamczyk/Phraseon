@@ -8,7 +8,12 @@
 import Foundation
 import AlgoliaSearchClient
 
-final class SearchRepository {
+protocol SearchRepository {
+
+    func searchKeys(in project: Project, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void)
+}
+
+final class SearchRepositoryImpl: SearchRepository {
 
     func searchKeys(in project: Project, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {
         let client = getClient(for: project.securedAlgoliaApiKey)

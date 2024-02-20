@@ -28,7 +28,7 @@ final class RootCoordinator: ObservableObject, Coordinator {
         let storageRepository: StorageRepository = StorageRepositoryImpl()
         let storeKitRepository: StoreKitRepository = StoreKitRepositoryImpl()
         let userDomain: UserDomain = .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository)
-        let searchRepository: SearchRepository = .init()
+        let searchRepository: SearchRepository = SearchRepositoryImpl()
         let configurationRepository: ConfigurationRepository = .init()
         dependencies = .init(authenticationRepository: authenticationRepository,
                              firestoreRepository: firestoreRepository,

@@ -18,7 +18,7 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
         let storageRepository: StorageRepository = MockStorageRepository()
         let storeKitRepository: StoreKitRepository = MockStoreKitRepository()
         let userDomain: UserDomain = .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository)
-        let searchRepository: SearchRepository = .init()
+        let searchRepository: SearchRepository = MockSearchRepository()
         let configurationRepository: ConfigurationRepository = .init()
         dependencies = .init(authenticationRepository: authenticationRepository,
                              firestoreRepository: firestoreRepository,

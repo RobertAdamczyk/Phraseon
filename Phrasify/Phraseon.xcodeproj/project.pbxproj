@@ -165,6 +165,8 @@
 		555458FA2B85441D00DA097F /* MockStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F82B85441D00DA097F /* MockStorageRepository.swift */; };
 		555458FC2B85483000DA097F /* MockStoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FB2B85483000DA097F /* MockStoreKitRepository.swift */; };
 		555458FD2B85483000DA097F /* MockStoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FB2B85483000DA097F /* MockStoreKitRepository.swift */; };
+		555458FF2B854A4D00DA097F /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FE2B854A4D00DA097F /* MockSearchRepository.swift */; };
+		555459002B854A4D00DA097F /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FE2B854A4D00DA097F /* MockSearchRepository.swift */; };
 		555A7DE62B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */; };
 		555A7DE72B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */; };
 		5560342F2B59C530000140BC /* ApproveTranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560342E2B59C530000140BC /* ApproveTranslationService.swift */; };
@@ -546,6 +548,7 @@
 		555458F52B8543C000DA097F /* MockCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudRepository.swift; sourceTree = "<group>"; };
 		555458F82B85441D00DA097F /* MockStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageRepository.swift; sourceTree = "<group>"; };
 		555458FB2B85483000DA097F /* MockStoreKitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStoreKitRepository.swift; sourceTree = "<group>"; };
+		555458FE2B854A4D00DA097F /* MockSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRepository.swift; sourceTree = "<group>"; };
 		555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUseCase.swift; sourceTree = "<group>"; };
 		5560342E2B59C530000140BC /* ApproveTranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveTranslationService.swift; sourceTree = "<group>"; };
 		5561C5C32B65A76500C815BC /* SelectableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCircle.swift; sourceTree = "<group>"; };
@@ -953,6 +956,7 @@
 				555458F52B8543C000DA097F /* MockCloudRepository.swift */,
 				555458F82B85441D00DA097F /* MockStorageRepository.swift */,
 				555458FB2B85483000DA097F /* MockStoreKitRepository.swift */,
+				555458FE2B854A4D00DA097F /* MockSearchRepository.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -1908,6 +1912,7 @@
 				5505C7EC2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,
 				552785C22B27A5120098FE95 /* PhraseonApp.swift in Sources */,
 				55FE51A72B5CA9D60084617F /* ValidationView.swift in Sources */,
+				555458FF2B854A4D00DA097F /* MockSearchRepository.swift in Sources */,
 				55C279112B2A4B38005144F1 /* RootCoordinator.swift in Sources */,
 				55FF42612B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				55FF42902B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
@@ -2113,6 +2118,7 @@
 				5505C7ED2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,
 				55C278E82B2A3F3A005144F1 /* ForgetPasswordViewModel.swift in Sources */,
 				55FE51A82B5CA9D60084617F /* ValidationView.swift in Sources */,
+				555459002B854A4D00DA097F /* MockSearchRepository.swift in Sources */,
 				55C278E92B2A3F3A005144F1 /* PhraseonApp.swift in Sources */,
 				55FF42622B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				55FF42912B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
