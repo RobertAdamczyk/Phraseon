@@ -8,7 +8,42 @@
 import FirebaseFunctions
 import Foundation
 
-final class CloudRepository {
+protocol CloudRepository {
+
+    func createProject(_ requestModel: CreateProjectService.RequestModel) async throws
+
+    func changeProjectOwner(_ requestModel: ChangeProjectOwnerService.RequestModel) async throws
+
+    func addProjectMember(_ requestModel: AddProjectMemberService.RequestModel) async throws
+
+    func changeMemberRole(_ requestModel: ChangeMemberRoleService.RequestModel) async throws
+
+    func deleteMember(_ requestModel: DeleteMemberService.RequestModel) async throws
+
+    func setProjectLanguages(_ requestModel: SetProjectLanguagesService.RequestModel) async throws
+
+    func setBaseLanguage(_ requestModel: SetBaseLanguageService.RequestModel) async throws
+
+    func setProjectTechnologies(_ requestModel: SetProjectTechnologiesService.RequestModel) async throws
+
+    func leaveProject(_ requestModel: LeaveProjectService.RequestModel) async throws
+
+    func deleteProject(_ requestModel: DeleteProjectService.RequestModel) async throws
+
+    func createKey(_ requestModel: CreateKeyService.RequestModel) async throws
+
+    func changeContentKey(_ requestModel: ChangeContentKeyService.RequestModel) async throws
+
+    func deleteKey(_ requestModel: DeleteKeyService.RequestModel) async throws
+
+    func approveTranslation(_ requestModel: ApproveTranslationService.RequestModel) async throws
+
+    func startTrial(_ requestModel: StartTrialService.RequestModel) async throws
+
+    func isUserProjectOwner() async throws -> IsUserProjectOwnerService.ResponseModel
+}
+
+final class CloudRepositoryImpl: CloudRepository {
 
     private let functions = Functions.functions()
 
