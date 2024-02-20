@@ -10,7 +10,30 @@ import FirebaseFirestore
 import FirebaseFirestoreCombineSwift
 import Combine
 
-final class FirestoreRepository {
+protocol FirestoreRepository {
+
+    func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Error>
+
+    func getProjectPublisher(projectId: String) -> AnyPublisher<Project?, Error>
+
+    func getMembersPublisher(projectId: String) -> AnyPublisher<[Member], Error>
+
+    func getMemberPublisher(userId: UserID, projectId: String) -> AnyPublisher<Member?, Error>
+
+    func getKeysPublisher(projectId: String, keysOrder: KeysOrder, limit: Int) -> AnyPublisher<[Key], Error>
+
+    func getKeyPublisher(projectId: String, keyId: String) -> AnyPublisher<Key?, Error>
+
+    func getUserPublisher(userId: UserID) -> AnyPublisher<User?, Error>
+
+    func getUser(email: String) async throws -> User
+
+    func setProfileName(userId: UserID, name: String, surname: String) async throws
+
+    func setProfilePhotoUrl(userId: UserID, photoUrl: String) async throws
+}
+
+final class FirestoreRepositoryImpl: FirestoreRepository {
 
     private let db = Firestore.firestore()
 
