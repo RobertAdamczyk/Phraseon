@@ -137,7 +137,8 @@ struct KeyDetailView: View {
                                                   members: [],
                                                   owner: "adasda",
                                                   securedAlgoliaApiKey: "",
-                                                  createdAt: .now),
+                                                  createdAt: .now,
+                                                  algoliaIndexName: ""),
                                    projectMemberUseCase: .init(firestoreRepository: .init(),
                                                                authenticationRepository: .init(),
                                                                project: .init(name: "", 
@@ -147,7 +148,8 @@ struct KeyDetailView: View {
                                                                               members: [],
                                                                               owner: "",
                                                                               securedAlgoliaApiKey: "",
-                                                                              createdAt: .now))))
+                                                                              createdAt: .now,
+                                                                              algoliaIndexName: ""))))
     .preferredColorScheme(.dark)
 }
 #endif

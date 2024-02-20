@@ -19,6 +19,7 @@ struct Project: Codable, Hashable {
     var owner: UserID
     var securedAlgoliaApiKey: String
     var createdAt: Date
+    var algoliaIndexName: String
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -30,5 +31,6 @@ struct Project: Codable, Hashable {
         case owner
         case securedAlgoliaApiKey
         case createdAt
+        case algoliaIndexName
     }
 }

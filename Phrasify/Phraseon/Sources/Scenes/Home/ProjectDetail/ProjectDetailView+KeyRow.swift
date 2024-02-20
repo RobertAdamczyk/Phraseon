@@ -136,7 +136,8 @@ extension ProjectDetailView {
                                                                      members: [],
                                                                      owner: "das",
                                                                      securedAlgoliaApiKey: "",
-                                                                     createdAt: .now)))
+                                                                     createdAt: .now,
+                                                                     algoliaIndexName: "")))
             ProjectDetailView.AlgoliaKeyRow(key: .init(createdAt: .init(seconds: 100000,
                                                                         nanoseconds: 10000),
                                                        lastUpdatedAt: .init(seconds: 10000,
@@ -160,7 +161,8 @@ extension ProjectDetailView {
                                                                             members: [],
                                                                             owner: "das",
                                                                             securedAlgoliaApiKey: "",
-                                                                            createdAt: .now)))
+                                                                            createdAt: .now,
+                                                                            algoliaIndexName: "")))
         }
         .padding(16)
     }
