@@ -163,6 +163,8 @@
 		555458F72B8543C000DA097F /* MockCloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F52B8543C000DA097F /* MockCloudRepository.swift */; };
 		555458F92B85441D00DA097F /* MockStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F82B85441D00DA097F /* MockStorageRepository.swift */; };
 		555458FA2B85441D00DA097F /* MockStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F82B85441D00DA097F /* MockStorageRepository.swift */; };
+		555458FC2B85483000DA097F /* MockStoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FB2B85483000DA097F /* MockStoreKitRepository.swift */; };
+		555458FD2B85483000DA097F /* MockStoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FB2B85483000DA097F /* MockStoreKitRepository.swift */; };
 		555A7DE62B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */; };
 		555A7DE72B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */; };
 		5560342F2B59C530000140BC /* ApproveTranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560342E2B59C530000140BC /* ApproveTranslationService.swift */; };
@@ -543,6 +545,7 @@
 		555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestoreRepository.swift; sourceTree = "<group>"; };
 		555458F52B8543C000DA097F /* MockCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudRepository.swift; sourceTree = "<group>"; };
 		555458F82B85441D00DA097F /* MockStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageRepository.swift; sourceTree = "<group>"; };
+		555458FB2B85483000DA097F /* MockStoreKitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStoreKitRepository.swift; sourceTree = "<group>"; };
 		555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUseCase.swift; sourceTree = "<group>"; };
 		5560342E2B59C530000140BC /* ApproveTranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveTranslationService.swift; sourceTree = "<group>"; };
 		5561C5C32B65A76500C815BC /* SelectableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCircle.swift; sourceTree = "<group>"; };
@@ -949,6 +952,7 @@
 				555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */,
 				555458F52B8543C000DA097F /* MockCloudRepository.swift */,
 				555458F82B85441D00DA097F /* MockStorageRepository.swift */,
+				555458FB2B85483000DA097F /* MockStoreKitRepository.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -1934,6 +1938,7 @@
 				55DE10582B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
 				55FE51AD2B5D1C830084617F /* ValidationHandlerProtocol.swift in Sources */,
 				5516EBE92B43609300C558B1 /* ChangePasswordView.swift in Sources */,
+				555458FC2B85483000DA097F /* MockStoreKitRepository.swift in Sources */,
 				551AA4272B337D2900F0B1E2 /* AppTitle.swift in Sources */,
 				55FE51B32B5D1DE50084617F /* EmailValidationHandler.swift in Sources */,
 				55DE102D2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
@@ -2138,6 +2143,7 @@
 				55FE51AE2B5D1C830084617F /* ValidationHandlerProtocol.swift in Sources */,
 				5516EBEA2B43609300C558B1 /* ChangePasswordView.swift in Sources */,
 				551AA4282B337D2900F0B1E2 /* AppTitle.swift in Sources */,
+				555458FD2B85483000DA097F /* MockStoreKitRepository.swift in Sources */,
 				55FE51B42B5D1DE50084617F /* EmailValidationHandler.swift in Sources */,
 				55DE102E2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAC2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
