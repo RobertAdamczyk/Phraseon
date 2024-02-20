@@ -167,6 +167,8 @@
 		555458FD2B85483000DA097F /* MockStoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FB2B85483000DA097F /* MockStoreKitRepository.swift */; };
 		555458FF2B854A4D00DA097F /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FE2B854A4D00DA097F /* MockSearchRepository.swift */; };
 		555459002B854A4D00DA097F /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FE2B854A4D00DA097F /* MockSearchRepository.swift */; };
+		555459022B854B0600DA097F /* MockConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555459012B854B0600DA097F /* MockConfigurationRepository.swift */; };
+		555459032B854B0600DA097F /* MockConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555459012B854B0600DA097F /* MockConfigurationRepository.swift */; };
 		555A7DE62B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */; };
 		555A7DE72B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */; };
 		5560342F2B59C530000140BC /* ApproveTranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560342E2B59C530000140BC /* ApproveTranslationService.swift */; };
@@ -549,6 +551,7 @@
 		555458F82B85441D00DA097F /* MockStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageRepository.swift; sourceTree = "<group>"; };
 		555458FB2B85483000DA097F /* MockStoreKitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStoreKitRepository.swift; sourceTree = "<group>"; };
 		555458FE2B854A4D00DA097F /* MockSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRepository.swift; sourceTree = "<group>"; };
+		555459012B854B0600DA097F /* MockConfigurationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfigurationRepository.swift; sourceTree = "<group>"; };
 		555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUseCase.swift; sourceTree = "<group>"; };
 		5560342E2B59C530000140BC /* ApproveTranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveTranslationService.swift; sourceTree = "<group>"; };
 		5561C5C32B65A76500C815BC /* SelectableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCircle.swift; sourceTree = "<group>"; };
@@ -957,6 +960,7 @@
 				555458F82B85441D00DA097F /* MockStorageRepository.swift */,
 				555458FB2B85483000DA097F /* MockStoreKitRepository.swift */,
 				555458FE2B854A4D00DA097F /* MockSearchRepository.swift */,
+				555459012B854B0600DA097F /* MockConfigurationRepository.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -1992,6 +1996,7 @@
 				55DE10302B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55854FAA2B572A8900CC5480 /* ChangeContentKeyService.swift in Sources */,
 				55FF425E2B2A674A00F4D523 /* CancelBag.swift in Sources */,
+				555459022B854B0600DA097F /* MockConfigurationRepository.swift in Sources */,
 				55C279132B2A4B48005144F1 /* AppDelegate.swift in Sources */,
 				55B841482B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
 				55CADF3B2B75916F00D04365 /* DeferredData.swift in Sources */,
@@ -2198,6 +2203,7 @@
 				55DE10312B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55854FAB2B572A8900CC5480 /* ChangeContentKeyService.swift in Sources */,
 				55FF425F2B2A677800F4D523 /* CancelBag.swift in Sources */,
+				555459032B854B0600DA097F /* MockConfigurationRepository.swift in Sources */,
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,
 				55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
 				55CADF3C2B75916F00D04365 /* DeferredData.swift in Sources */,
