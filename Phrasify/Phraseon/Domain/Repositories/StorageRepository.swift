@@ -8,10 +8,17 @@
 import FirebaseStorage
 import UIKit
 
-final class StorageRepository {
+protocol StorageRepository {
 
-    lazy var storage = Storage.storage()
-    lazy var storageRef = storage.reference()
+    func uploadImage(path: StorageRepositoryImpl.StoragePath, image: UIImage) async throws -> StorageMetadata
+
+    func downloadURL(for path: StorageRepositoryImpl.StoragePath) async throws -> URL
+}
+
+final class StorageRepositoryImpl: StorageRepository {
+
+    private lazy var storage = Storage.storage()
+    private lazy var storageRef = storage.reference()
 
     enum StoragePath {
         case userImage(fileName: String)

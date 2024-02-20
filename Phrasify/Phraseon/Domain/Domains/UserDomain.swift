@@ -72,7 +72,7 @@ final class UserDomain {
     }
 
     private func setupLoginSubscription() {
-        authenticationRepository.$isLoggedIn.sink { [weak self] isLoggedIn in
+        authenticationRepository.isLoggedInPublisher.sink { [weak self] isLoggedIn in
             self?.cancelBag.cancel()
             self?.user = .idle
             if isLoggedIn == true {

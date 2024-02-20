@@ -10,7 +10,7 @@ import Combine
 
 protocol AuthenticationRepository {
 
-    var isLoggedIn: Bool? { get set }
+    var isLoggedInPublisher: Published<Bool?>.Publisher { get }
 
     var currentUser: Firebase.User? { get }
 
@@ -35,7 +35,9 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository {
 
     // MARK: Public properties
 
-    @Published var isLoggedIn: Bool?
+    @Published private var isLoggedIn: Bool?
+
+    var isLoggedInPublisher: Published<Bool?>.Publisher { $isLoggedIn }
 
     var currentUser: Firebase.User? {
         auth.currentUser

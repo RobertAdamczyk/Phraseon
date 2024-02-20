@@ -12,10 +12,10 @@ final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenC
                              SelectMemberRoleActions, SheetActions, EnterContentKeyActions {
 
     init() {
-        let authenticationRepository: AuthenticationRepository = .init()
-        let firestoreRepository: FirestoreRepository = .init()
-        let cloudRepository: CloudRepository = .init()
-        let storageRepository: StorageRepository = .init()
+        let authenticationRepository: AuthenticationRepository = MockAuthenticationRepository()
+        let firestoreRepository: FirestoreRepository = MockFirestoreRepository()
+        let cloudRepository: CloudRepository = MockCloudRepository()
+        let storageRepository: StorageRepository = MockStorageRepository()
         let storeKitRepository: StoreKitRepository = .init()
         let userDomain: UserDomain = .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository)
         let searchRepository: SearchRepository = .init()

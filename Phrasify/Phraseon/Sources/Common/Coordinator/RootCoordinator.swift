@@ -25,7 +25,7 @@ final class RootCoordinator: ObservableObject, Coordinator {
         let authenticationRepository: AuthenticationRepository = AuthenticationRepositoryImpl()
         let firestoreRepository: FirestoreRepository = FirestoreRepositoryImpl()
         let cloudRepository: CloudRepository = CloudRepositoryImpl()
-        let storageRepository: StorageRepository = .init()
+        let storageRepository: StorageRepository = StorageRepositoryImpl()
         let storeKitRepository: StoreKitRepository = .init()
         let userDomain: UserDomain = .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository)
         let searchRepository: SearchRepository = .init()
@@ -43,7 +43,7 @@ final class RootCoordinator: ObservableObject, Coordinator {
     }
 
     private func setupSubscriptions() {
-        dependencies.authenticationRepository.$isLoggedIn
+        dependencies.authenticationRepository.isLoggedInPublisher
             .assign(to: &$isLoggedIn)
         appUpdateHandler.$updateInfo
             .assign(to: &$updateInfo)
