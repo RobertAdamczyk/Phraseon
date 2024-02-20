@@ -8,14 +8,14 @@
 import SwiftUI
 
 enum AppColor: String {
-    case lightBlue
-    case paleOrange
-    case white
-    case black
-    case darkGray
-    case lightGray
-    case green
-    case red
+    case lightBlue = "appLightBlue"
+    case paleOrange = "appPaleOrange"
+    case white = "appWhite"
+    case black = "appBlack"
+    case darkGray = "appDarkGray"
+    case lightGray = "appLightGray"
+    case green = "appGreen"
+    case red = "appRed"
 }
 
 func appColor(_ color: AppColor) -> Color {
