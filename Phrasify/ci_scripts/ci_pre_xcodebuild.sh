@@ -7,6 +7,14 @@
 #
 echo "PRE-Xcode Build is activated .... "
 
+# Listing current directory contents
+echo "Listing contents of the current directory:"
+ls -l
+
+# Listing parent directory contents
+echo "Listing contents of the parent directory:"
+ls -l ..
+
 # Write a JSON File containing all the environment variables and secrets.
 filePath="../$CI_PRODUCT/Resources/secrets.json"
 printf "{\"ALGOLIA_APP_ID\":\"%s\",\"ALGOLIA_SEARCH_KEY\":\"%s\"}" "$ALGOLIA_APP_ID" "$ALGOLIA_SEARCH_KEY" >> "$filePath"

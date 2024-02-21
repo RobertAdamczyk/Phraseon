@@ -20,7 +20,6 @@
 		55028A0E2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */; };
 		5502D9352B868B0300A0B110 /* ci_pre_xcodebuild.sh in Resources */ = {isa = PBXBuildFile; fileRef = 55CADF2D2B7571F800D04365 /* ci_pre_xcodebuild.sh */; };
 		5502D9382B868B2800A0B110 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502D9372B868B2800A0B110 /* LoginViewModelTest.swift */; };
-		5502D9392B86928B00A0B110 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 55CADF312B7576CF00D04365 /* secrets.json */; };
 		5505378A2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		5505378B2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		550537912B44C0170077912D /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537902B44C0170077912D /* PhotoPickerView.swift */; };
@@ -1873,7 +1872,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5502D9392B86928B00A0B110 /* secrets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
