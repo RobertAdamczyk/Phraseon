@@ -18,7 +18,6 @@
 		55028A0A2B7EB58F00C786D9 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */; };
 		55028A0D2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */; };
 		55028A0E2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */; };
-		5502D9342B86878A00A0B110 /* ci_pre_xcodebuild.sh in Resources */ = {isa = PBXBuildFile; fileRef = 55CADF2D2B7571F800D04365 /* ci_pre_xcodebuild.sh */; };
 		5505378A2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		5505378B2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		550537912B44C0170077912D /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537902B44C0170077912D /* PhotoPickerView.swift */; };
@@ -1818,7 +1817,7 @@
 					};
 					555459072B854D8300DA097F = {
 						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 552785BD2B27A5120098FE95;
+						TestTargetID = 55C278DB2B2A3F3A005144F1;
 					};
 				};
 			};
@@ -1863,7 +1862,6 @@
 				55028A092B7EB58F00C786D9 /* RemoteConfigDefaults.plist in Resources */,
 				55C278D52B2A2E36005144F1 /* RethinkSans-Regular.ttf in Resources */,
 				552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */,
-				5502D9342B86878A00A0B110 /* ci_pre_xcodebuild.sh in Resources */,
 				55C278D82B2A2E36005144F1 /* RethinkSans-SemiBold.ttf in Resources */,
 				552785C62B27A5140098FE95 /* Assets.xcassets in Resources */,
 				5574B3292B6F0D3900C9DFB9 /* GoogleService-Info.plist in Resources */,
@@ -2556,7 +2554,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phraseon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phraseon";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phraseon_InHouse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phraseon_InHouse";
 			};
 			name = Debug;
 		};
@@ -2576,7 +2574,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phraseon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phraseon";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phraseon_InHouse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phraseon_InHouse";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
