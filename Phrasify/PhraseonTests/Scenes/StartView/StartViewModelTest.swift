@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Phraseon
+@testable import Phraseon_InHouse
 
 final class StartViewModelTest: XCTestCase {
 
