@@ -7,16 +7,13 @@
 #
 echo "PRE-Xcode Build is activated .... "
 
-# Display the value of TEST_RUNNER_CI variable
-echo "TEST_RUNNER_CI: $TEST_RUNNER_CI"
-
 # Display all environment variables
 echo "Listing all environment variables:"
 printenv
 
-# Check if TEST_RUNNER_CI is set to true and skip the script if it is
-if [ "$TEST_RUNNER_CI" = "true" ]; then
-    echo "TEST_RUNNER_CI is set to true, skipping the creation of secrets.json"
+# Check if CI_TEST_DESTINATION_RUNTIME exists
+if [ ! -z "$CI_TEST_DESTINATION_RUNTIME" ]; then
+    echo "CI_TEST_DESTINATION_RUNTIME is set, skipping the script"
     exit 0
 fi
 
