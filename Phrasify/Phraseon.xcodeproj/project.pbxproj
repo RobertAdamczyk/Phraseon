@@ -468,13 +468,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5554590C2B854D8400DA097F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 552785B62B27A5120098FE95 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 552785BD2B27A5120098FE95;
-			remoteInfo = Phraseon;
-		};
 		555459192B855D9400DA097F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 552785B62B27A5120098FE95 /* Project object */;
@@ -1766,7 +1759,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5554590D2B854D8400DA097F /* PBXTargetDependency */,
 				5554591A2B855D9400DA097F /* PBXTargetDependency */,
 			);
 			name = PhraseonTests;
@@ -2335,11 +2327,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5554590D2B854D8400DA097F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 552785BD2B27A5120098FE95 /* Phraseon */;
-			targetProxy = 5554590C2B854D8400DA097F /* PBXContainerItemProxy */;
-		};
 		5554591A2B855D9400DA097F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse */;
