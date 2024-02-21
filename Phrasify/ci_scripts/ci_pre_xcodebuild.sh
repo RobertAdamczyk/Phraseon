@@ -7,6 +7,10 @@
 #
 echo "PRE-Xcode Build is activated .... "
 
+# Display the current directory path
+echo "Current directory path:"
+pwd
+
 # Listing current directory contents
 echo "Listing contents of the current directory:"
 ls -l
@@ -14,6 +18,18 @@ ls -l
 # Listing parent directory contents
 echo "Listing contents of the parent directory:"
 ls -l ..
+
+# Go up two levels to the "grandparent" directory
+cd ../..
+
+# Now list the contents of the "grandparent" directory
+echo "Listing contents of the grandparent directory:"
+ls -l
+
+# Display the path of the "grandparent" directory
+echo "Grandparent directory path:"
+pwd
+
 
 # Write a JSON File containing all the environment variables and secrets.
 filePath="../$CI_PRODUCT/Resources/secrets.json"
