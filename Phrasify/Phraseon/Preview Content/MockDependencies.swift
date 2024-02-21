@@ -19,15 +19,15 @@ struct MockDependencies {
                                                   searchRepository: MockSearchRepository(),
                                                   configurationRepository: MockConfigurationRepository())
 
-    func makeDependencies(authenticationRepository: MockAuthenticationRepository = MockAuthenticationRepository(),
-                          firestoreRepository: MockFirestoreRepository = MockFirestoreRepository(),
-                          cloudRepository: MockCloudRepository = MockCloudRepository(),
-                          storageRepository: MockStorageRepository = MockStorageRepository(),
-                          storeKitRepository: MockStoreKitRepository = MockStoreKitRepository(),
-                          userDomain: UserDomain = UserDomain(firestoreRepository: MockFirestoreRepository(), 
-                                                              authenticationRepository: MockAuthenticationRepository()),
-                          searchRepository: MockSearchRepository = MockSearchRepository(),
-                          configurationRepository: MockConfigurationRepository = MockConfigurationRepository()) -> Dependencies {
+    static func makeDependencies(authenticationRepository: AuthenticationRepository = MockAuthenticationRepository(),
+                                 firestoreRepository: MockFirestoreRepository = MockFirestoreRepository(),
+                                 cloudRepository: MockCloudRepository = MockCloudRepository(),
+                                 storageRepository: MockStorageRepository = MockStorageRepository(),
+                                 storeKitRepository: MockStoreKitRepository = MockStoreKitRepository(),
+                                 userDomain: UserDomain = UserDomain(firestoreRepository: MockFirestoreRepository(),
+                                                                     authenticationRepository: MockAuthenticationRepository()),
+                                 searchRepository: MockSearchRepository = MockSearchRepository(),
+                                 configurationRepository: MockConfigurationRepository = MockConfigurationRepository()) -> Dependencies {
         return .init(authenticationRepository: authenticationRepository,
                      firestoreRepository: firestoreRepository,
                      cloudRepository: cloudRepository,
