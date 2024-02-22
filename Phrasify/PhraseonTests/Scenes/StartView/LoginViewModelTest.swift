@@ -81,7 +81,7 @@ fileprivate final class LoginCoordinator: LoginViewModel.LoginCoordinator {
     }
 }
 
-fileprivate final class MockAuthenticationRepository: AuthenticationRepository {
+final class MockAuthenticationRepository: AuthenticationRepository {
 
     @Published var isLoggedIn: Bool? = false
 
