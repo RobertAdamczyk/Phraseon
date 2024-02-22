@@ -20,6 +20,7 @@ final class MockAuthenticationRepository: AuthenticationRepository {
     var emailToLogin: String = ""
     var passwordToLogin: String = ""
     var credentialToLogin: AuthCredential?
+    var sendResetPasswordEmail: String = ""
 
     func login(email: String, password: String) async throws {
         emailToLogin = email
@@ -35,7 +36,7 @@ final class MockAuthenticationRepository: AuthenticationRepository {
     }
 
     func sendResetPassword(email: String) async throws {
-        // empty
+        sendResetPasswordEmail = email
     }
 
     func logout() throws {

@@ -385,6 +385,7 @@
 		55D41E1A2B68219200FADB4E /* SubscriptionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D41E192B68219200FADB4E /* SubscriptionPlan.swift */; };
 		55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEA2B87E4C20002DAE3 /* RegisterViewModelTest.swift */; };
 		55D63DED2B87F0450002DAE3 /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */; };
+		55D63DEF2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEE2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift */; };
 		55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10222B48D016001CB87F /* ProjectMembersView.swift */; };
 		55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10222B48D016001CB87F /* ProjectMembersView.swift */; };
 		55DE10262B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */; };
@@ -667,6 +668,7 @@
 		55D41E192B68219200FADB4E /* SubscriptionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPlan.swift; sourceTree = "<group>"; };
 		55D63DEA2B87E4C20002DAE3 /* RegisterViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTest.swift; sourceTree = "<group>"; };
 		55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationRepository.swift; sourceTree = "<group>"; };
+		55D63DEE2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModelTest.swift; sourceTree = "<group>"; };
 		55DE10222B48D016001CB87F /* ProjectMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersView.swift; sourceTree = "<group>"; };
 		55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersViewModel.swift; sourceTree = "<group>"; };
 		55DE10292B4A28B0001CB87F /* InviteMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteMemberView.swift; sourceTree = "<group>"; };
@@ -1077,6 +1079,7 @@
 				555459132B854FD600DA097F /* StartViewModelTest.swift */,
 				5502D9372B868B2800A0B110 /* LoginViewModelTest.swift */,
 				55D63DEA2B87E4C20002DAE3 /* RegisterViewModelTest.swift */,
+				55D63DEE2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift */,
 				55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */,
 			);
 			path = StartView;
@@ -2113,6 +2116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5502D9382B868B2800A0B110 /* LoginViewModelTest.swift in Sources */,
+				55D63DEF2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift in Sources */,
 				55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */,
 				555459142B854FD600DA097F /* StartViewModelTest.swift in Sources */,
 				55D63DED2B87F0450002DAE3 /* MockAuthenticationRepository.swift in Sources */,
