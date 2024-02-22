@@ -51,4 +51,8 @@ final class MockAuthenticationRepository: AuthenticationRepository {
     func updatePassword(to password: String) async throws {
         // empty
     }
+
+    func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential {
+        return GoogleAuthProvider.credential(withIDToken: "", accessToken: "")
+    }
 }

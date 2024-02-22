@@ -7,6 +7,7 @@
 
 import Firebase
 import Combine
+import GoogleSignIn
 
 protocol AuthenticationRepository {
 
@@ -29,6 +30,8 @@ protocol AuthenticationRepository {
     func reauthenticate(email: String, password: String) async throws
 
     func updatePassword(to password: String) async throws
+
+    func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential
 }
 
 final class AuthenticationRepositoryImpl: AuthenticationRepository {
@@ -86,6 +89,22 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository {
 
     func updatePassword(to password: String) async throws {
         try await auth.currentUser?.updatePassword(to: password)
+    }
+
+    @MainActor
+    func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { throw AppError.idClientNil }
+
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+
+        // Start the sign in flow!
+        let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: viewController)
+        guard let idToken = result.user.idToken?.tokenString else { throw AppError.idTokenNil }
+
+        return GoogleAuthProvider.credential(withIDToken: idToken,
+                                             accessToken: result.user.accessToken.tokenString)
     }
 
     private func setupStateDidChangeListener() {

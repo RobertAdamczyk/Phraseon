@@ -243,8 +243,6 @@
 		558074422B2CF08E0041160B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
 		558074452B2CF2780041160B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074442B2CF2780041160B /* GoogleButton.swift */; };
 		558074462B2CF2780041160B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074442B2CF2780041160B /* GoogleButton.swift */; };
-		5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074492B2D12B80041160B /* GoogleUseCase.swift */; };
-		5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074492B2D12B80041160B /* GoogleUseCase.swift */; };
 		5580744E2B2E341B0041160B /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
 		5580744F2B2E341B0041160B /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
 		558074512B2E38110041160B /* Activitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074502B2E38110041160B /* Activitable.swift */; };
@@ -598,7 +596,6 @@
 		558074392B2CE6650041160B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		558074402B2CF08E0041160B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		558074442B2CF2780041160B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
-		558074492B2D12B80041160B /* GoogleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleUseCase.swift; sourceTree = "<group>"; };
 		5580744D2B2E341B0041160B /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		558074502B2E38110041160B /* Activitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activitable.swift; sourceTree = "<group>"; };
 		558074532B2E3C8F0041160B /* RootActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootActions.swift; sourceTree = "<group>"; };
@@ -1187,7 +1184,6 @@
 		558074482B2D12AC0041160B /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				558074492B2D12B80041160B /* GoogleUseCase.swift */,
 				55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */,
 				555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */,
 				55A653E12B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift */,
@@ -1961,7 +1957,6 @@
 				5516EBC42B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
 				5570FF4D2B61B13C0011208F /* PaywallView.swift in Sources */,
 				55854F8B2B571DA100CC5480 /* CreateProjectService.swift in Sources */,
-				5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
 				555459162B8551DE00DA097F /* MockDependencies.swift in Sources */,
 				551AA4242B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
@@ -2178,7 +2173,6 @@
 				5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
 				5570FF4E2B61B13C0011208F /* PaywallView.swift in Sources */,
 				55854F8C2B571DA100CC5480 /* CreateProjectService.swift in Sources */,
-				5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
 				555459172B8551DE00DA097F /* MockDependencies.swift in Sources */,
 				551AA4252B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,

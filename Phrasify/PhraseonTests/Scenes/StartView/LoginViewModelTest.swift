@@ -28,19 +28,33 @@ final class LoginViewModelTest: XCTestCase {
         XCTAssertTrue(coordinator.showForgetPasswordCalled)
     }
 
-    func testOnLoginTapped() throws {
+    func testOnLoginTapped() async throws {
         let coordinator: LoginCoordinator = .init()
         let viewModel: LoginViewModel = .init(coordinator: coordinator)
 
         viewModel.email = "EMAIL_TEST"
         viewModel.password = "PASSWORD_TEST"
 
-        Task {
-            await viewModel.onLoginTapped()
-            let mockAuthRepo = coordinator.dependencies.authenticationRepository as? MockAuthenticationRepository
-            XCTAssertEqual(mockAuthRepo?.emailToLogin, "EMAIL_TEST")
-            XCTAssertEqual(mockAuthRepo?.passwordToLogin, "PASSWORD_TEST")
+        await viewModel.onLoginTapped()
+        let mockAuthRepo = coordinator.dependencies.authenticationRepository as? MockAuthenticationRepository
+        XCTAssertEqual(mockAuthRepo?.emailToLogin, "EMAIL_TEST")
+        XCTAssertEqual(mockAuthRepo?.passwordToLogin, "PASSWORD_TEST")
+    }
+
+    @MainActor
+    func testOnLoginWithGoogleTapped() throws {
+        let coordinator: LoginCoordinator = .init()
+        let viewModel: LoginViewModel = .init(coordinator: coordinator)
+
+        viewModel.onLoginWithGoogleTapped()
+
+        let expectation = XCTestExpectation(description: "Wait for 1 second")
+        _ = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
+            expectation.fulfill()
         }
+        wait(for: [expectation], timeout: 1.0)
+        let mockAuthRepo = coordinator.dependencies.authenticationRepository as? MockAuthenticationRepository
+        XCTAssertEqual(mockAuthRepo?.credentialToLogin?.provider, "google.com")
     }
 }
 
@@ -77,6 +91,7 @@ fileprivate final class MockAuthenticationRepository: AuthenticationRepository {
 
     var emailToLogin: String = ""
     var passwordToLogin: String = ""
+    var credentialToLogin: AuthCredential?
 
     func login(email: String, password: String) async throws {
         emailToLogin = email
@@ -84,7 +99,7 @@ fileprivate final class MockAuthenticationRepository: AuthenticationRepository {
     }
     
     func login(with credential: AuthCredential) async throws {
-        // empty
+        credentialToLogin = credential
     }
     
     func signUp(email: String, password: String) async throws {
@@ -109,5 +124,9 @@ fileprivate final class MockAuthenticationRepository: AuthenticationRepository {
     
     func updatePassword(to password: String) async throws {
         // empty
+    }
+
+    func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential {
+        return GoogleAuthProvider.credential(withIDToken: "GOOGLE", accessToken: "GOOGLE")
     }
 }
