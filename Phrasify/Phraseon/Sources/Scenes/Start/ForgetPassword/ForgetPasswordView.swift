@@ -32,6 +32,6 @@ struct ForgetPasswordView: View {
 
 #if DEBUG
 #Preview {
-    ForgetPasswordView(viewModel: .init(coordinator: MockCoordinator()))
+    ForgetPasswordView(viewModel: .init(coordinator: PreviewCoordinator()))
 }
 #endif

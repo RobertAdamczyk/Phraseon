@@ -7,7 +7,6 @@
 
 import XCTest
 @testable import Phraseon_InHouse
-import Firebase
 
 final class RegisterViewModelTest: XCTestCase {
 

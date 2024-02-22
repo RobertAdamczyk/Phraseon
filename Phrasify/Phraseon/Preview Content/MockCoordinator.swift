@@ -1,5 +1,5 @@
 //
-//  MockCoordinator.swift
+//  PreviewCoordinator.swift
 //  Phraseon
 //
 //  Created by Robert Adamczyk on 12.12.23.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenCoverActions, ProjectActions, ProfileActions,
-                             NavigationActions, SelectLanguageActions, SelectTechnologyActions, PaywallActions,
-                             SelectMemberRoleActions, SheetActions, EnterContentKeyActions {
+final class PreviewCoordinator: Coordinator, StartActions, RootActions, FullScreenCoverActions, ProjectActions, ProfileActions,
+                                NavigationActions, SelectLanguageActions, SelectTechnologyActions, PaywallActions,
+                                SelectMemberRoleActions, SheetActions, EnterContentKeyActions {
 
     var dependencies: Dependencies = MockDependencies.dependencies
 

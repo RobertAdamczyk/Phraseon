@@ -125,7 +125,7 @@ struct KeyDetailView: View {
 
 #if DEBUG
 #Preview {
-    KeyDetailView(viewModel: .init(coordinator: MockCoordinator(), 
+    KeyDetailView(viewModel: .init(coordinator: PreviewCoordinator(), 
                                    key: .init(translation: ["EN": "dasdasdasdadasd"],
                                               createdAt: .now,
                                               lastUpdatedAt: .now,
@@ -139,8 +139,8 @@ struct KeyDetailView: View {
                                                   securedAlgoliaApiKey: "",
                                                   createdAt: .now,
                                                   algoliaIndexName: ""),
-                                   projectMemberUseCase: .init(firestoreRepository: MockFirestoreRepository(),
-                                                               authenticationRepository: MockAuthenticationRepository(),
+                                   projectMemberUseCase: .init(firestoreRepository: PreviewFirestoreRepository(),
+                                                               authenticationRepository: PreviewAuthenticationRepository(),
                                                                project: .init(name: "",
                                                                               technologies: [],
                                                                               languages: [],

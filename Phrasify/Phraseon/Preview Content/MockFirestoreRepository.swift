@@ -1,5 +1,5 @@
 //
-//  MockFirestoreRepository.swift
+//  PreviewFirestoreRepository.swift
 //  Phraseon
 //
 //  Created by Robert Adamczyk on 20.02.24.
@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class MockFirestoreRepository: FirestoreRepository {
+final class PreviewFirestoreRepository: FirestoreRepository {
 
     func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Error> {
         Just([Project]())

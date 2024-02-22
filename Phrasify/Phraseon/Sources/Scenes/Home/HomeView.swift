@@ -98,7 +98,7 @@ struct AddProjectCellView: View {
 
 #if DEBUG
 #Preview {
-    HomeView(coordinator: MockCoordinator())
+    HomeView(coordinator: PreviewCoordinator())
         .preferredColorScheme(.dark)
 }
 #endif

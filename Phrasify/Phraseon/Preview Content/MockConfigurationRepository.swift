@@ -1,5 +1,5 @@
 //
-//  MockConfigurationRepository.swift
+//  PreviewConfigurationRepository.swift
 //  Phraseon
 //
 //  Created by Robert Adamczyk on 20.02.24.
@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import FirebaseRemoteConfig
 
-final class MockConfigurationRepository: ConfigurationRepository {
+final class PreviewConfigurationRepository: ConfigurationRepository {
 
     private let configUpdateSubject = PassthroughSubject<Void, Never>()
 

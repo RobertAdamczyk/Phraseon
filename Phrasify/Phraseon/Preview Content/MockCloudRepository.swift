@@ -1,5 +1,5 @@
 //
-//  MockCloudRepository.swift
+//  PreviewCloudRepository.swift
 //  Phraseon
 //
 //  Created by Robert Adamczyk on 20.02.24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MockCloudRepository: CloudRepository {
+final class PreviewCloudRepository: CloudRepository {
 
     func createProject(_ requestModel: CreateProjectService.RequestModel) async throws {
         // empty

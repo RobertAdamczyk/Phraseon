@@ -9,25 +9,25 @@ import Foundation
 
 struct MockDependencies {
 
-    static let dependencies: Dependencies = .init(authenticationRepository: MockAuthenticationRepository(), 
-                                                  firestoreRepository: MockFirestoreRepository(),
-                                                  cloudRepository: MockCloudRepository(),
-                                                  storageRepository: MockStorageRepository(),
-                                                  storeKitRepository: MockStoreKitRepository(),
-                                                  userDomain: .init(firestoreRepository: MockFirestoreRepository(),
-                                                                    authenticationRepository: MockAuthenticationRepository()),
-                                                  searchRepository: MockSearchRepository(),
-                                                  configurationRepository: MockConfigurationRepository())
+    static let dependencies: Dependencies = .init(authenticationRepository: PreviewAuthenticationRepository(), 
+                                                  firestoreRepository: PreviewFirestoreRepository(),
+                                                  cloudRepository: PreviewCloudRepository(),
+                                                  storageRepository: PreviewStorageRepository(),
+                                                  storeKitRepository: PreviewStoreKitRepository(),
+                                                  userDomain: .init(firestoreRepository: PreviewFirestoreRepository(),
+                                                                    authenticationRepository: PreviewAuthenticationRepository()),
+                                                  searchRepository: PreviewSearchRepository(),
+                                                  configurationRepository: PreviewConfigurationRepository())
 
-    static func makeDependencies(authenticationRepository: AuthenticationRepository = MockAuthenticationRepository(),
-                                 firestoreRepository: MockFirestoreRepository = MockFirestoreRepository(),
-                                 cloudRepository: MockCloudRepository = MockCloudRepository(),
-                                 storageRepository: MockStorageRepository = MockStorageRepository(),
-                                 storeKitRepository: MockStoreKitRepository = MockStoreKitRepository(),
-                                 userDomain: UserDomain = UserDomain(firestoreRepository: MockFirestoreRepository(),
-                                                                     authenticationRepository: MockAuthenticationRepository()),
-                                 searchRepository: MockSearchRepository = MockSearchRepository(),
-                                 configurationRepository: MockConfigurationRepository = MockConfigurationRepository()) -> Dependencies {
+    static func makeDependencies(authenticationRepository: AuthenticationRepository = PreviewAuthenticationRepository(),
+                                 firestoreRepository: FirestoreRepository = PreviewFirestoreRepository(),
+                                 cloudRepository: CloudRepository = PreviewCloudRepository(),
+                                 storageRepository: StorageRepository = PreviewStorageRepository(),
+                                 storeKitRepository: StoreKitRepository = PreviewStoreKitRepository(),
+                                 userDomain: UserDomain = UserDomain(firestoreRepository: PreviewFirestoreRepository(),
+                                                                     authenticationRepository: PreviewAuthenticationRepository()),
+                                 searchRepository: SearchRepository = PreviewSearchRepository(),
+                                 configurationRepository: ConfigurationRepository = PreviewConfigurationRepository()) -> Dependencies {
         return .init(authenticationRepository: authenticationRepository,
                      firestoreRepository: firestoreRepository,
                      cloudRepository: cloudRepository,

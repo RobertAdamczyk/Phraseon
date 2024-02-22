@@ -82,7 +82,7 @@ struct PaywallView: View {
 #if DEBUG
 #Preview {
     NavigationView {
-        PaywallView(coordinator: MockCoordinator())
+        PaywallView(coordinator: PreviewCoordinator())
     }
     .preferredColorScheme(.dark)
 }

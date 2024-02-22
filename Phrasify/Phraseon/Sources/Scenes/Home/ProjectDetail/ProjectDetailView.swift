@@ -137,7 +137,7 @@ struct ProjectDetailView: View {
 
 #if DEBUG
 #Preview {
-    ProjectDetailView(viewModel: .init(coordinator: MockCoordinator(), 
+    ProjectDetailView(viewModel: .init(coordinator: PreviewCoordinator(), 
                                        project: .init(name: "",
                                                       technologies: [],
                                                       languages: [],
