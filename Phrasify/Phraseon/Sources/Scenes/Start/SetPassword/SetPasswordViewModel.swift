@@ -10,7 +10,7 @@ import Combine
 
 final class SetPasswordViewModel: ObservableObject {
 
-    typealias SetPasswordCoordinator = Coordinator & StartActions & NavigationActions
+    typealias SetPasswordCoordinator = Coordinator
 
     @Published var password: String = ""
     @Published var confirmPassword: String = ""

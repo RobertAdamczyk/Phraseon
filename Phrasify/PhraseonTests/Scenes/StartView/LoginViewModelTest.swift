@@ -36,8 +36,8 @@ final class LoginViewModelTest: XCTestCase {
 
         await viewModel.onLoginTapped()
         let mockAuthRepo = coordinator.dependencies.authenticationRepository as? MockAuthenticationRepository
-        XCTAssertEqual(mockAuthRepo?.emailToLogin, "EMAIL_TEST")
-        XCTAssertEqual(mockAuthRepo?.passwordToLogin, "PASSWORD_TEST")
+        XCTAssertEqual(mockAuthRepo?.email, "EMAIL_TEST")
+        XCTAssertEqual(mockAuthRepo?.password, "PASSWORD_TEST")
     }
 
     @MainActor
