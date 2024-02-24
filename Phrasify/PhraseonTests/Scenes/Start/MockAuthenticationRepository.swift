@@ -11,19 +11,29 @@ import Firebase
 
 final class MockAuthenticationRepository: AuthenticationRepository {
 
+    var userId: UserID? {
+        "123"
+    }
+
+    var email: String? {
+        "email"
+    }
+
+    var authenticationProvider: AuthenticationProvider? {
+        nil
+    }
+
     @Published var isLoggedIn: Bool? = false
 
     var isLoggedInPublisher: Published<Bool?>.Publisher { $isLoggedIn }
 
-    var currentUser: Firebase.User? { nil }
-
-    var email: String? = nil
-    var password: String? = nil
+    var enteredEmail: String? = nil
+    var enteredPassword: String? = nil
     @Published var credentialToLogin: AuthCredential?
 
     func login(email: String, password: String) async throws {
-        self.email = email
-        self.password = password
+        self.enteredEmail = email
+        self.enteredPassword = password
     }
 
     func login(with credential: AuthCredential) async throws {
@@ -31,12 +41,12 @@ final class MockAuthenticationRepository: AuthenticationRepository {
     }
 
     func signUp(email: String, password: String) async throws {
-        self.email = email
-        self.password = password
+        self.enteredEmail = email
+        self.enteredPassword = password
     }
 
     func sendResetPassword(email: String) async throws {
-        self.email = email
+        self.enteredEmail = email
     }
 
     func logout() throws {

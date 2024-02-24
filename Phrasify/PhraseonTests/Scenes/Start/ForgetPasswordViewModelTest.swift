@@ -48,7 +48,7 @@ final class ForgetPasswordViewModelTest: XCTestCase {
         XCTAssertEqual(viewModel.emailValidationHandler.validationError, nil)
 
         let mockAuthRepo = coordinator.dependencies.authenticationRepository as? MockAuthenticationRepository
-        XCTAssertEqual(mockAuthRepo?.email, "TEST123@GMAIL.COM")
+        XCTAssertEqual(mockAuthRepo?.enteredEmail, "TEST123@GMAIL.COM")
         XCTAssertTrue(coordinator.popViewCalled)
     }
 

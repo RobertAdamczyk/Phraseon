@@ -48,7 +48,7 @@ final class UserDomain {
     }
 
     private func setupUserSubscriber() {
-        guard let userId = authenticationRepository.currentUser?.uid else { return }
+        guard let userId = authenticationRepository.userId else { return }
         cancelBag.cancel()
         user = .isLoading
         firestoreRepository.getUserPublisher(userId: userId)

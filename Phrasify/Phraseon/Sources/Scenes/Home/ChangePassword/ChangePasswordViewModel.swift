@@ -38,7 +38,7 @@ final class ChangePasswordViewModel: ObservableObject {
     private let coordinator: ChangePasswordCoordinator
 
     private var email: String? {
-        coordinator.dependencies.authenticationRepository.currentUser?.email
+        coordinator.dependencies.authenticationRepository.email
     }
 
     private let authenticationProvider: AuthenticationProvider

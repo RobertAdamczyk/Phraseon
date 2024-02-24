@@ -29,29 +29,29 @@ final class SetPasswordViewModelTest: XCTestCase {
         await viewModel.onCreateAccountTapped()
         XCTAssertEqual(viewModel.passwordValidationHandler.validationError, .passwordTooShort)
         let mockAuthRepo = coordinator.dependencies.authenticationRepository as? MockAuthenticationRepository
-        XCTAssertEqual(mockAuthRepo?.email, nil)
-        XCTAssertEqual(mockAuthRepo?.password, nil)
+        XCTAssertEqual(mockAuthRepo?.enteredEmail, nil)
+        XCTAssertEqual(mockAuthRepo?.enteredPassword, nil)
 
         viewModel.password = "1234567"
         viewModel.confirmPassword = "1234567"
         await viewModel.onCreateAccountTapped()
         XCTAssertEqual(viewModel.passwordValidationHandler.validationError, .passwordTooShort)
-        XCTAssertEqual(mockAuthRepo?.email, nil)
-        XCTAssertEqual(mockAuthRepo?.password, nil)
+        XCTAssertEqual(mockAuthRepo?.enteredEmail, nil)
+        XCTAssertEqual(mockAuthRepo?.enteredPassword, nil)
 
         viewModel.password = "1234567"
         viewModel.confirmPassword = "12345678"
         await viewModel.onCreateAccountTapped()
         XCTAssertEqual(viewModel.passwordValidationHandler.validationError, .passwordsNotTheSame)
-        XCTAssertEqual(mockAuthRepo?.email, nil)
-        XCTAssertEqual(mockAuthRepo?.password, nil)
+        XCTAssertEqual(mockAuthRepo?.enteredEmail, nil)
+        XCTAssertEqual(mockAuthRepo?.enteredPassword, nil)
 
         viewModel.password = "12345678"
         viewModel.confirmPassword = "12345678"
         await viewModel.onCreateAccountTapped()
         XCTAssertEqual(viewModel.passwordValidationHandler.validationError, nil)
-        XCTAssertEqual(mockAuthRepo?.email, initEmail)
-        XCTAssertEqual(mockAuthRepo?.password, "12345678")
+        XCTAssertEqual(mockAuthRepo?.enteredEmail, initEmail)
+        XCTAssertEqual(mockAuthRepo?.enteredPassword, "12345678")
     }
 
     @MainActor

@@ -15,7 +15,7 @@ final class ProfileNameViewModel: ObservableObject {
     @Published var surname: String
 
     private var userId: UserID? {
-        coordinator.dependencies.authenticationRepository.currentUser?.uid
+        coordinator.dependencies.authenticationRepository.userId
     }
 
     private let coordinator: ProfileNameCoordinator

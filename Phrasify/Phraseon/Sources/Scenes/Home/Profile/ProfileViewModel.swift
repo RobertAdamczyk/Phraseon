@@ -78,7 +78,7 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     private let coordinator: ProfileCoordinator
 
     private var userId: UserID? {
-        coordinator.dependencies.authenticationRepository.currentUser?.uid
+        coordinator.dependencies.authenticationRepository.userId
     }
 
     init(coordinator: ProfileCoordinator) {
@@ -93,7 +93,7 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     }
 
     func onPasswordTapped() {
-        guard let provider = coordinator.dependencies.authenticationRepository.currentUser?.authenticationProvider else { return }
+        guard let provider = coordinator.dependencies.authenticationRepository.authenticationProvider else { return }
         coordinator.showChangePassword(authenticationProvider: provider)
     }
 

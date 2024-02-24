@@ -13,7 +13,11 @@ protocol AuthenticationRepository {
 
     var isLoggedInPublisher: Published<Bool?>.Publisher { get }
 
-    var currentUser: Firebase.User? { get }
+    var userId: UserID? { get }
+
+    var email: String? { get }
+
+    var authenticationProvider: AuthenticationProvider? { get }
 
     func login(email: String, password: String) async throws
 
@@ -42,8 +46,16 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository {
 
     var isLoggedInPublisher: Published<Bool?>.Publisher { $isLoggedIn }
 
-    var currentUser: Firebase.User? {
-        auth.currentUser
+    var userId: UserID? {
+        auth.currentUser?.uid
+    }
+
+    var email: String? {
+        auth.currentUser?.email
+    }
+
+    var authenticationProvider: AuthenticationProvider? {
+        auth.currentUser?.authenticationProvider
     }
 
     // MARK: Private properties

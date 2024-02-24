@@ -19,10 +19,9 @@ final class HomeViewModel: ObservableObject {
     private var cancelBag = CancelBag()
 
     private var userId: UserID? {
-        coordinator.dependencies.authenticationRepository.currentUser?.uid
+        coordinator.dependencies.authenticationRepository.userId
     }
 
-    @MainActor
     init(coordinator: HomeCoordinator) {
         self.coordinator = coordinator
         setupProjectsSubscriber()
@@ -40,7 +39,6 @@ final class HomeViewModel: ObservableObject {
         coordinator.presentCreateProject()
     }
 
-    @MainActor
     private func setupProjectsSubscriber() {
         guard let userId else { return }
         coordinator.dependencies.firestoreRepository.getProjectsPublisher(userId: userId)
@@ -48,7 +46,9 @@ final class HomeViewModel: ObservableObject {
             .sink { _ in
                 // empty implementation
             } receiveValue: { [weak self] projects in
-                self?.projects = projects
+                DispatchQueue.main.async { [weak self] in
+                    self?.projects = projects
+                }
             }
             .store(in: cancelBag)
     }

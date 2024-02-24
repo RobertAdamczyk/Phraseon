@@ -16,8 +16,16 @@ final class PreviewAuthenticationRepository: AuthenticationRepository {
         $isLoggedIn
     }
 
-    var currentUser: Firebase.User? {
-        return nil
+    var userId: UserID? {
+        "123"
+    }
+
+    var email: String? {
+        "email@email.com"
+    }
+
+    var authenticationProvider: AuthenticationProvider? {
+        nil
     }
 
     func login(email: String, password: String) async throws {
