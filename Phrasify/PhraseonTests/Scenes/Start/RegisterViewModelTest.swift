@@ -68,12 +68,16 @@ final class RegisterViewModelTest: XCTestCase {
         viewModel.onRegisterWithEmailTapped()
         XCTAssertEqual(viewModel.emailValidationHandler.validationError, .empty)
 
+        let expectation = XCTestExpectation(description: "Wait for 1 second")
+        viewModel.emailValidationHandler.$validationError.sink { error in
+            if error == nil {
+                expectation.fulfill()
+            }
+        }
+        .store(in: cancelBag)
+
         viewModel.email = "NEW"
 
-        let expectation = XCTestExpectation(description: "Wait for 1 second")
-        _ = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
-            expectation.fulfill()
-        }
         wait(for: [expectation], timeout: 1.0)
 
         XCTAssertEqual(viewModel.emailValidationHandler.validationError, nil)

@@ -10,6 +10,8 @@ import XCTest
 
 final class LoginViewModelTest: XCTestCase {
 
+    let cancelBag = CancelBag()
+
     func testInit() throws {
         let coordinator: LoginCoordinator = .init()
         let viewModel: LoginViewModel = .init(coordinator: coordinator)
@@ -44,15 +46,20 @@ final class LoginViewModelTest: XCTestCase {
     func testOnLoginWithGoogleTapped() throws {
         let coordinator: LoginCoordinator = .init()
         let viewModel: LoginViewModel = .init(coordinator: coordinator)
+        let mockAuthRepo = coordinator.dependencies.authenticationRepository as? MockAuthenticationRepository
+
+        let expectation = XCTestExpectation(description: "Wait for 1 second")
+        mockAuthRepo?.$credentialToLogin.sink(receiveValue: { credential in
+            if credential != nil {
+                expectation.fulfill()
+            }
+        })
+        .store(in: cancelBag)
 
         viewModel.onLoginWithGoogleTapped()
 
-        let expectation = XCTestExpectation(description: "Wait for 1 second")
-        _ = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
-            expectation.fulfill()
-        }
         wait(for: [expectation], timeout: 1.0)
-        let mockAuthRepo = coordinator.dependencies.authenticationRepository as? MockAuthenticationRepository
+
         XCTAssertEqual(mockAuthRepo?.credentialToLogin?.provider, "google.com")
     }
 }

@@ -1070,12 +1070,12 @@
 		555459112B854FB400DA097F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				555459122B854FC800DA097F /* StartView */,
+				555459122B854FC800DA097F /* Start */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		555459122B854FC800DA097F /* StartView */ = {
+		555459122B854FC800DA097F /* Start */ = {
 			isa = PBXGroup;
 			children = (
 				555459132B854FD600DA097F /* StartViewModelTest.swift */,
@@ -1085,7 +1085,7 @@
 				55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */,
 				55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */,
 			);
-			path = StartView;
+			path = Start;
 			sourceTree = "<group>";
 		};
 		5561C5C22B65A75300C815BC /* SelectableCircle */ = {

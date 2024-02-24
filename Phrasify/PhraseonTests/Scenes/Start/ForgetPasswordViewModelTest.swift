@@ -10,6 +10,8 @@ import XCTest
 
 final class ForgetPasswordViewModelTest: XCTestCase {
 
+    let cancelBag = CancelBag()
+
     func testInit() throws {
         let coordinator: ForgetPasswordCoordinator = .init()
         let viewModel: ForgetPasswordViewModel = .init(coordinator: coordinator)
@@ -58,12 +60,16 @@ final class ForgetPasswordViewModelTest: XCTestCase {
         await viewModel.onSendEmailTapped()
         XCTAssertEqual(viewModel.emailValidationHandler.validationError, .empty)
 
+        let expectation = XCTestExpectation(description: "Wait for 1 second")
+        viewModel.emailValidationHandler.$validationError.sink { error in
+            if error == nil {
+                expectation.fulfill()
+            }
+        }
+        .store(in: cancelBag)
+
         viewModel.email = "NEW"
 
-        let expectation = XCTestExpectation(description: "Wait for 1 second")
-        _ = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in // TODO: Try sink on validationerror
-            expectation.fulfill()
-        }
         await fulfillment(of: [expectation], timeout: 1.0)
 
         XCTAssertEqual(viewModel.emailValidationHandler.validationError, nil)

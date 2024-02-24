@@ -10,6 +10,8 @@ import XCTest
 
 final class SetPasswordViewModelTest: XCTestCase {
 
+    let cancelBag = CancelBag()
+
     func testInit() throws {
         let coordinator: SetPasswordCoordinator = .init()
         let viewModel: SetPasswordViewModel = .init(email: "EMAIL@GOOGLE.COM", coordinator: coordinator)
@@ -60,12 +62,16 @@ final class SetPasswordViewModelTest: XCTestCase {
         await viewModel.onCreateAccountTapped()
         XCTAssertEqual(viewModel.passwordValidationHandler.validationError, .passwordTooShort)
 
+        let expectation = XCTestExpectation(description: "Wait for 1 second")
+        viewModel.passwordValidationHandler.$validationError.sink { error in
+            if error == nil {
+                expectation.fulfill()
+            }
+        }
+        .store(in: cancelBag)
+
         viewModel.password = "NEW"
 
-        let expectation = XCTestExpectation(description: "Wait for 1 second")
-        _ = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in // TODO: Try sink on validationerror
-            expectation.fulfill()
-        }
         await fulfillment(of: [expectation], timeout: 1.0)
 
         XCTAssertEqual(viewModel.passwordValidationHandler.validationError, nil)
@@ -73,12 +79,15 @@ final class SetPasswordViewModelTest: XCTestCase {
         await viewModel.onCreateAccountTapped()
         XCTAssertEqual(viewModel.passwordValidationHandler.validationError, .passwordsNotTheSame)
 
-        viewModel.confirmPassword = "NEW"
-
         let expectation2 = XCTestExpectation(description: "Wait for 1 second")
-        _ = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in // TODO: Try sink on validationerror
-            expectation2.fulfill()
+        viewModel.passwordValidationHandler.$validationError.sink { error in
+            if error == nil {
+                expectation2.fulfill()
+            }
         }
+        .store(in: cancelBag)
+
+        viewModel.confirmPassword = "NEW"
         await fulfillment(of: [expectation2], timeout: 1.0)
 
         XCTAssertEqual(viewModel.passwordValidationHandler.validationError, nil)
