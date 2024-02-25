@@ -159,6 +159,8 @@
 		553F1BED2B2914910071A099 /* SetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */; };
 		55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */; };
 		55406C592B8A922F00B03E9D /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */; };
+		55406C5D2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */; };
+		55406C5E2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */; };
 		555458F02B85422300DA097F /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */; };
 		555458F12B85422300DA097F /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */; };
 		555458F32B8542DF00DA097F /* MockFirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */; };
@@ -566,6 +568,7 @@
 		553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
 		55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModelTest.swift; sourceTree = "<group>"; };
 		55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailActions.swift; sourceTree = "<group>"; };
 		555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationRepository.swift; sourceTree = "<group>"; };
 		555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestoreRepository.swift; sourceTree = "<group>"; };
 		555458F52B8543C000DA097F /* MockCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudRepository.swift; sourceTree = "<group>"; };
@@ -1430,6 +1433,7 @@
 				55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */,
 				556977A32B475B440022B675 /* SelectTechnologyActions.swift */,
 				5516EBE12B432D3F00C558B1 /* ProjectActions.swift */,
+				55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */,
 				5516EBE42B432D4700C558B1 /* ProfileActions.swift */,
 				550041FC2B6C3FD700073384 /* PaywallActions.swift */,
 				550537892B4492670077912D /* NavigationActions.swift */,
@@ -1939,6 +1943,7 @@
 				55854F9A2B57250600CC5480 /* SetProjectLanguagesService.swift in Sources */,
 				55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				5505C7F72B55EEAA00806B4F /* StandardInformationView.swift in Sources */,
+				55406C5D2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */,
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
 				55FE51BA2B5D95BA0084617F /* SelectBaseLanguageViewModel.swift in Sources */,
 				55DE102A2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
@@ -2160,6 +2165,7 @@
 				55854F9B2B57250600CC5480 /* SetProjectLanguagesService.swift in Sources */,
 				55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				5505C7F82B55EEAA00806B4F /* StandardInformationView.swift in Sources */,
+				55406C5E2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */,
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
 				55FE51BB2B5D95BA0084617F /* SelectBaseLanguageViewModel.swift in Sources */,
 				55DE102B2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,

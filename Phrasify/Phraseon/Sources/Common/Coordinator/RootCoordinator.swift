@@ -122,7 +122,7 @@ extension RootCoordinator: PaywallActions {
     }
 }
 
-extension RootCoordinator: ProjectActions {
+extension RootCoordinator: ProjectDetailActions {
 
     func presentCreateKey(project: Project) {
         presentedFullScreenCover = .createKey(project)
@@ -135,6 +135,15 @@ extension RootCoordinator: ProjectActions {
         let view: NavigationView = .projectSettings(viewModel: viewModel)
         navigationViews.append(view)
     }
+
+    func showKeyDetails(key: Key, project: Project, projectMemberUseCase: ProjectMemberUseCase) {
+        let viewModel = KeyDetailViewModel(coordinator: self, key: key, project: project, projectMemberUseCase: projectMemberUseCase)
+        let view: NavigationView = .keyDetail(viewModel: viewModel)
+        self.navigationViews.append(view)
+    }
+}
+
+extension RootCoordinator: ProjectActions {
 
     func showProjectMembers(project: Project, projectMemberUseCase: ProjectMemberUseCase) {
         let viewModel = ProjectMembersViewModel(coordinator: self, project: project, projectMemberUseCase: projectMemberUseCase)
@@ -175,12 +184,6 @@ extension RootCoordinator: ProjectActions {
         let viewModel = DeleteMemberWarningViewModel(coordinator: self, project: project, member: member)
         let sheet: Sheet = .deleteMemberWarning(viewModel: viewModel)
         self.presentedSheet = sheet
-    }
-
-    func showKeyDetails(key: Key, project: Project, projectMemberUseCase: ProjectMemberUseCase) {
-        let viewModel = KeyDetailViewModel(coordinator: self, key: key, project: project, projectMemberUseCase: projectMemberUseCase)
-        let view: NavigationView = .keyDetail(viewModel: viewModel)
-        self.navigationViews.append(view)
     }
 
     func showProjectIntegration(project: Project) {

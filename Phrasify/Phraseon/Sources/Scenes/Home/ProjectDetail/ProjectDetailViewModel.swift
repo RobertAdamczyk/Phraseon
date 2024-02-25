@@ -10,7 +10,7 @@ import Combine
 
 final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol, ProjectUseCaseProtocol {
 
-    typealias ProjectDetailCoordinator = Coordinator & ProjectActions
+    typealias ProjectDetailCoordinator = Coordinator & ProjectDetailActions
 
     enum State {
         case loaded([Key])

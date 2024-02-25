@@ -9,7 +9,7 @@ import SwiftUI
 
 final class PreviewCoordinator: Coordinator, StartActions, RootActions, FullScreenCoverActions, ProjectActions, ProfileActions,
                                 NavigationActions, SelectLanguageActions, SelectTechnologyActions, PaywallActions,
-                                SelectMemberRoleActions, SheetActions, EnterContentKeyActions {
+                                SelectMemberRoleActions, SheetActions, EnterContentKeyActions, ProjectDetailActions {
 
     var dependencies: Dependencies = MockDependencies.dependencies
 
