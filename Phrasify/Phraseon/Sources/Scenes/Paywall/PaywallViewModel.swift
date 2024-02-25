@@ -53,8 +53,8 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
               let subscriptionPlan = user.subscriptionPlan else { return false }
         if case .idle(_, selectedProduct) = state, hasValidSubscription {
             switch subscriptionPlan {
-            case .individual: return subscriptionPlan.id == self.selectedProduct?.id
-            case .team: return true // if user has team has also individual
+            case .monthly: return subscriptionPlan.id == self.selectedProduct?.id
+            case .yearly: return true // if user has yearly has also monthly
             }
         }
         return false
@@ -81,10 +81,10 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         }
         if let userSubscriptionPlan = user.currentValue?.subscriptionPlan, hasValidSubscription {
             switch userSubscriptionPlan {
-            case .individual:
-                return "You are currently subscribed to the Individual plan. Upgrade to Team for more features!"
-            case .team:
-                return "You are currently enjoying our Team plan – the highest tier of service we offer. Thank you for being a valued subscriber!"
+            case .monthly:
+                return "You are currently subscribed to our Monthly plan. Consider upgrading to the Yearly plan for better pricing over the long term!"
+            case .yearly:
+                return "You are enjoying full access to our app with the Yearly subscription – thank you for trusting and supporting our project!"
             }
         }
         return nil
@@ -147,9 +147,9 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
             do {
                 let products = try await coordinator.dependencies.storeKitRepository.getProducts()
                 await MainActor.run {
-                    if let individual = products.filter({ $0.id == SubscriptionPlan.individual.id }).first {
+                    if let monthly = products.filter({ $0.id == SubscriptionPlan.monthly.id }).first {
                         let sortedProducts = products.sorted(by: { $0.price < $1.price })
-                        self.state = .idle(sortedProducts, individual)
+                        self.state = .idle(sortedProducts, monthly)
                     } else {
                         self.state = .error
                     }
@@ -163,32 +163,22 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
 
 extension PaywallViewModel {
 
-    var plans: [PlanDescription] {
-        guard let id = self.selectedProduct?.id else { return [] }
-        return switch SubscriptionPlan(rawValue: id) {
-        case .individual, .none: [.support, .workflow, .translation, .languages]
-        case .team: PlanDescription.allCases
-        }
-    }
-
-    enum PlanDescription: CaseIterable {
+    enum PlanFeature: CaseIterable {
         case support
-        case workflow
         case translation
-        case languages
-        case members
-        case approvals
-        case projects
+        case collaboration
+        case management
 
-        var text: String {
+        var description: String {
             switch self {
-            case .support: return "Reliable customer support."
-            case .workflow: return "Automate your workflow with API access."
-            case .translation: return "Automatic phrase translations."
-            case .languages: return "Access to a wide range of languages."
-            case .members: return "Add multiple members to projects."
-            case .approvals: return "Translation reviews and approvals"
-            case .projects: return "Unlimited project management."
+            case .support:
+                return "Get 24/7 support for any issue."
+            case .translation:
+                return "Enjoy seamless translations in numerous languages."
+            case .collaboration:
+                return "Collaborate effectively with team members."
+            case .management:
+                return "Manage projects effortlessly with unlimited access."
             }
         }
     }

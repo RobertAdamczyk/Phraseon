@@ -20,36 +20,33 @@ struct PaywallView: View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 32) {
-                    Text("Choose the plan that best fits your needs.")
+                    Text("Adaptability or Savings? The choice is yours.")
                         .apply(.medium, size: .M, color: .white)
-                    HStack(spacing: 16) {
+                    VStack(spacing: 16) {
                         ForEach(viewModel.products, id: \.self) { product in
                             Button(action: {
                                 viewModel.onProductTapped(product)
                             }, label: {
                                 SubscriptionCell(headline: product.displayName,
                                                  price: product.displayPrice,
+                                                 period: product.subscription?.subscriptionPeriod.unit.localizedDescription,
                                                  isSelected: viewModel.selectedProduct == product)
                             })
                         }
                     }
                     VStack(alignment: .leading, spacing: 16) {
-                        ForEach(PaywallViewModel.PlanDescription.allCases, id: \.self) { plan in
+                        ForEach(PaywallViewModel.PlanFeature.allCases, id: \.self) { plan in
                             Label {
-                                Text(plan.text)
+                                Text(plan.description)
                             } icon: {
                                 ZStack {
                                     Image(systemName: "checkmark")
-                                        .opacity(viewModel.plans.contains(plan) ? 1 : 0)
                                         .foregroundStyle(appColor(.green))
-                                    Image(systemName: "xmark")
-                                        .opacity(viewModel.plans.contains(plan) ? 0 : 1)
-                                        .foregroundStyle(appColor(.red))
                                 }
                             }
                         }
                     }
-                    .apply(.medium, size: .M, color: .white)
+                    .apply(.regular, size: .S, color: .white)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(16)

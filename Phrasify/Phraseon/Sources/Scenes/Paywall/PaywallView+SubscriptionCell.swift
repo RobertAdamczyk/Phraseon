@@ -13,17 +13,19 @@ extension PaywallView {
 
         let headline: String
         let price: String
+        let period: String?
         let isSelected: Bool
 
         var body: some View {
             VStack(spacing: 8) {
-                VStack(alignment: .leading) {
-                    Text(headline)
-                        .apply(.semibold, size: .M, color: .white)
-                    Text(price)
-                        .apply(.bold, size: .H1, color: .white)
-                    Spacer()
-                    Text("Billed Monthly")
+                VStack(alignment: .leading, spacing: 16) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(headline)
+                            .apply(.medium, size: .M, color: .white)
+                        Text(price)
+                            .apply(.semibold, size: .H1, color: .white)
+                    }
+                    Text("Billed per " + (period ?? "-"))
                         .apply(.regular, size: .S, color: .lightGray)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -31,12 +33,18 @@ extension PaywallView {
                 .padding(.vertical, 8)
             }
             .frame(maxWidth: .infinity)
-            .frame(height: 128)
             .applyCellBackground()
             .overlay(alignment: .topTrailing) {
                 SelectableCircle(isSelected: isSelected)
-                    .padding(8)
+                    .padding(16)
             }
         }
+    }
+}
+
+#Preview {
+
+    ZStack {
+        PaywallView.SubscriptionCell(headline: "headline", price: "$9.99", period: "Billed monthly", isSelected: true)
     }
 }

@@ -13,6 +13,6 @@ struct TranslationApprovalUseCase {
     let subscriptionPlan: SubscriptionPlan?
 
     var shouldShow: Bool {
-        return project.members.count == 1 && subscriptionPlan == .team
+        return project.members.count > 1
     }
 }
