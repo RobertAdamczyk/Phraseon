@@ -129,7 +129,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     private func setupKeysSubscriber() {
         guard let projectId = project.id else { return }
         keysTask?.cancel()
-        keysTask = coordinator.dependencies.firestoreRepository.getKeysPublisher(projectId: projectId, 
+        keysTask = coordinator.dependencies.firestoreRepository.getKeysPublisher(projectId: projectId,
                                                                                  keysOrder: selectedKeysOrder,
                                                                                  limit: keysLimit)
             .receive(on: RunLoop.main)

@@ -159,6 +159,7 @@
 		553F1BED2B2914910071A099 /* SetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */; };
 		55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */; };
 		55406C592B8A922F00B03E9D /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */; };
+		55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */; };
 		55406C5D2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */; };
 		55406C5E2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */; };
 		555458F02B85422300DA097F /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */; };
@@ -568,6 +569,7 @@
 		553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
 		55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModelTest.swift; sourceTree = "<group>"; };
 		55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModelTest.swift; sourceTree = "<group>"; };
 		55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailActions.swift; sourceTree = "<group>"; };
 		555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationRepository.swift; sourceTree = "<group>"; };
 		555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestoreRepository.swift; sourceTree = "<group>"; };
@@ -1068,6 +1070,7 @@
 			isa = PBXGroup;
 			children = (
 				55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */,
+				55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -2136,6 +2139,7 @@
 			files = (
 				55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */,
 				5502D9382B868B2800A0B110 /* LoginViewModelTest.swift in Sources */,
+				55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */,
 				55D63DEF2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift in Sources */,
 				55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */,
 				555459142B854FD600DA097F /* StartViewModelTest.swift in Sources */,
