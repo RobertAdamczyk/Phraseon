@@ -15,6 +15,7 @@ extension PaywallView {
         let price: String
         let period: String?
         let isSelected: Bool
+        let isAlreadyBought: Bool
 
         var body: some View {
             VStack(spacing: 8) {
@@ -25,8 +26,14 @@ extension PaywallView {
                         Text(price)
                             .apply(.semibold, size: .H1, color: .white)
                     }
-                    Text("Billed per " + (period ?? "-"))
-                        .apply(.regular, size: .S, color: .lightGray)
+                    HStack {
+                        Text("Billed per " + (period ?? "-"))
+                        Spacer()
+                        if isAlreadyBought {
+                            Text("Already Bought")
+                        }
+                    }
+                    .apply(.regular, size: .S, color: .lightGray)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 16)
@@ -45,6 +52,6 @@ extension PaywallView {
 #Preview {
 
     ZStack {
-        PaywallView.SubscriptionCell(headline: "headline", price: "$9.99", period: "Billed monthly", isSelected: true)
+        PaywallView.SubscriptionCell(headline: "Monthly", price: "$9.99", period: "month", isSelected: true, isAlreadyBought: true)
     }
 }

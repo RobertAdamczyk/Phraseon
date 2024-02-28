@@ -20,6 +20,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
 
     @Published private var state: State = .loading
     @Published var user: DeferredData<User>
+    @AppStorage(UserDefaults.Key.lastSubscriptionPurchaseDate.rawValue) private var lastSubscriptionPurchaseDate: Double?
 
     var selectedProduct: Product? {
         if case .idle(_, let product) = state {
@@ -48,16 +49,9 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         return subscriptionValidUntil > .now && status != .trial
     }
 
-    var hasValidSelectedSubscription: Bool {
-        guard let user = user.currentValue,
-              let subscriptionPlan = user.subscriptionPlan else { return false }
-        if case .idle(_, selectedProduct) = state, hasValidSubscription {
-            switch subscriptionPlan {
-            case .monthly: return subscriptionPlan.id == self.selectedProduct?.id
-            case .yearly: return true // if user has yearly has also monthly
-            }
-        }
-        return false
+    var alreadySubscribedProductId: String? {
+        guard hasValidSubscription else { return nil }
+        return user.currentValue?.subscriptionPlan?.id
     }
 
     var trialAvailable: Bool {
@@ -65,13 +59,20 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         return user?.subscriptionStatus == nil && user?.subscriptionPlan == nil && user?.subscriptionValidUntil == nil
     }
 
+    var possiblyProcessSubscription: Bool {
+        guard let lastSubscriptionPurchaseDate else { return false }
+        return abs(Date(timeIntervalSince1970: lastSubscriptionPurchaseDate).timeIntervalSinceNow) < 180
+    }
+
     var buttonText: String {
         if trialAvailable {
             return "Try for free"
-        } else if hasValidSelectedSubscription {
-            return "Already bought"
+        } else if hasValidSubscription {
+            return "Manage Subscriptions"
+        } else if possiblyProcessSubscription {
+            return "Processing Subscription"
         } else {
-            return hasValidSubscription ? "Upgrade Now" : "Subscribe Now"
+            return "Subscribe Now"
         }
     }
 
@@ -86,6 +87,9 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
             case .yearly:
                 return "You are enjoying full access to our app with the Yearly subscription – thank you for trusting and supporting our project!"
             }
+        }
+        if possiblyProcessSubscription {
+            return "Please note that it may take a few minutes to process your subscription purchase."
         }
         return nil
     }
@@ -125,6 +129,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
                 ToastView.showSuccess(message: "Your 7-day trial period has begun. Enjoy full access to all features.")
             } else {
                 _ = try await coordinator.dependencies.storeKitRepository.purchase(selectedProduct, with: [.appAccountToken(subscriptionId)])
+                self.lastSubscriptionPurchaseDate = Date.now.timeIntervalSince1970
                 ToastView.showSuccess(message: "Thank you for subscribing! Your subscription will be activated shortly.")
             }
             coordinator.dismissFullScreenCover()

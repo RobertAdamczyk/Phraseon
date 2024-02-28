@@ -7,10 +7,13 @@
 
 import SwiftUI
 import Shimmer
+import StoreKit
 
 struct PaywallView: View {
 
     @StateObject private var viewModel: PaywallViewModel
+
+    @State private var showManageSubscriptions: Bool = false
 
     init(coordinator: PaywallViewModel.PaywallCoordinator) {
         self._viewModel = .init(wrappedValue: .init(coordinator: coordinator))
@@ -30,7 +33,8 @@ struct PaywallView: View {
                                 SubscriptionCell(headline: product.displayName,
                                                  price: product.displayPrice,
                                                  period: product.subscription?.subscriptionPeriod.unit.localizedDescription,
-                                                 isSelected: viewModel.selectedProduct == product)
+                                                 isSelected: viewModel.selectedProduct == product,
+                                                 isAlreadyBought: product.id == viewModel.alreadySubscribedProductId)
                             })
                         }
                     }
@@ -57,8 +61,15 @@ struct PaywallView: View {
                         .apply(.regular, size: .S, color: .lightGray)
                         .multilineTextAlignment(.center)
                 }
-                AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
-                    .disabled(viewModel.hasValidSelectedSubscription)
+                if viewModel.hasValidSubscription {
+                    AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .main({
+                        showManageSubscriptions = true
+                    }))
+                } else {
+                    AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
+                        .disabled(viewModel.possiblyProcessSubscription)
+                }
+
             }
             .padding(16)
         }
@@ -73,6 +84,7 @@ struct PaywallView: View {
             }
         }
         .applyViewBackground()
+        .manageSubscriptionsSheet(isPresented: $showManageSubscriptions)
     }
 }
 
