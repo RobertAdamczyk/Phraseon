@@ -58,7 +58,7 @@ struct SelectMemberRole: View {
 
 #if DEBUG
 #Preview {
-    SelectMemberRole(viewModel: .init(coordinator: MockCoordinator(),
+    SelectMemberRole(viewModel: .init(coordinator: PreviewCoordinator(),
                                       project: .init(name: "", technologies: [], languages: [], baseLanguage: .polish, members: [], owner: "", securedAlgoliaApiKey: "", createdAt: .now, algoliaIndexName: ""),
                                       context: .invite(user: .init(email: "", name: "", surname: "", createdAt: .now, subscriptionId: .init(), subscriptionStatus: .expires, subscriptionValidUntil: .now))))
     .preferredColorScheme(.dark)

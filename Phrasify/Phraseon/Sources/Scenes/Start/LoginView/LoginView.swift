@@ -44,6 +44,6 @@ struct LoginView: View {
 
 #if DEBUG
 #Preview {
-    LoginView(viewModel: .init(coordinator: MockCoordinator()))
+    LoginView(viewModel: .init(coordinator: PreviewCoordinator()))
 }
 #endif

@@ -8,7 +8,23 @@
 import Foundation
 import StoreKit
 
-final class StoreKitRepository {
+protocol StoreKitRepository {
+
+    func getProducts() async throws -> [Product]
+
+    func purchase(_ product: Product, with options: Set<Product.PurchaseOption>) async throws -> Transaction?
+
+    func listenForTransactions() -> Task<Void, Error>
+}
+
+extension StoreKitRepository {
+
+    func purchase(_ product: Product, with options: Set<Product.PurchaseOption> = []) async throws -> Transaction? {
+        try await purchase(product, with: options)
+    }
+}
+
+final class StoreKitRepositoryImpl: StoreKitRepository {
 
     private var updateListenerTask: Task<Void, Error>? = nil
 
@@ -17,7 +33,7 @@ final class StoreKitRepository {
     }
 
     func getProducts() async throws -> [Product] {
-        let storeProducts = try await StoreKit.Product.products(for: [SubscriptionPlan.individual.id, SubscriptionPlan.team.id])
+        let storeProducts = try await StoreKit.Product.products(for: [SubscriptionPlan.monthly.id, SubscriptionPlan.yearly.id])
         return storeProducts
     }
 

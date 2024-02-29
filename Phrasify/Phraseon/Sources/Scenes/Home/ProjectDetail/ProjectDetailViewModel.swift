@@ -10,7 +10,7 @@ import Combine
 
 final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol, ProjectUseCaseProtocol {
 
-    typealias ProjectDetailCoordinator = Coordinator & ProjectActions
+    typealias ProjectDetailCoordinator = Coordinator & ProjectDetailActions
 
     enum State {
         case loaded([Key])
@@ -129,7 +129,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     private func setupKeysSubscriber() {
         guard let projectId = project.id else { return }
         keysTask?.cancel()
-        keysTask = coordinator.dependencies.firestoreRepository.getKeysPublisher(projectId: projectId, 
+        keysTask = coordinator.dependencies.firestoreRepository.getKeysPublisher(projectId: projectId,
                                                                                  keysOrder: selectedKeysOrder,
                                                                                  limit: keysLimit)
             .receive(on: RunLoop.main)

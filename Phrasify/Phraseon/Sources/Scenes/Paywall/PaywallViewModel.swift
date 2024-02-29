@@ -20,6 +20,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
 
     @Published private var state: State = .loading
     @Published var user: DeferredData<User>
+    @AppStorage(UserDefaults.Key.lastSubscriptionPurchaseDate.rawValue) private var lastSubscriptionPurchaseDate: Double?
 
     var selectedProduct: Product? {
         if case .idle(_, let product) = state {
@@ -48,16 +49,9 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         return subscriptionValidUntil > .now && status != .trial
     }
 
-    var hasValidSelectedSubscription: Bool {
-        guard let user = user.currentValue,
-              let subscriptionPlan = user.subscriptionPlan else { return false }
-        if case .idle(_, selectedProduct) = state, hasValidSubscription {
-            switch subscriptionPlan {
-            case .individual: return subscriptionPlan.id == self.selectedProduct?.id
-            case .team: return true // if user has team has also individual
-            }
-        }
-        return false
+    var alreadySubscribedProductId: String? {
+        guard hasValidSubscription else { return nil }
+        return user.currentValue?.subscriptionPlan?.id
     }
 
     var trialAvailable: Bool {
@@ -65,13 +59,20 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         return user?.subscriptionStatus == nil && user?.subscriptionPlan == nil && user?.subscriptionValidUntil == nil
     }
 
+    var possiblyProcessSubscription: Bool {
+        guard let lastSubscriptionPurchaseDate else { return false }
+        return abs(Date(timeIntervalSince1970: lastSubscriptionPurchaseDate).timeIntervalSinceNow) < 180
+    }
+
     var buttonText: String {
         if trialAvailable {
             return "Try for free"
-        } else if hasValidSelectedSubscription {
-            return "Already bought"
+        } else if hasValidSubscription {
+            return "Manage Subscriptions"
+        } else if possiblyProcessSubscription {
+            return "Processing Subscription"
         } else {
-            return hasValidSubscription ? "Upgrade Now" : "Subscribe Now"
+            return "Subscribe Now"
         }
     }
 
@@ -81,11 +82,14 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         }
         if let userSubscriptionPlan = user.currentValue?.subscriptionPlan, hasValidSubscription {
             switch userSubscriptionPlan {
-            case .individual:
-                return "You are currently subscribed to the Individual plan. Upgrade to Team for more features!"
-            case .team:
-                return "You are currently enjoying our Team plan – the highest tier of service we offer. Thank you for being a valued subscriber!"
+            case .monthly:
+                return "You are currently subscribed to our Monthly plan. Consider upgrading to the Yearly plan for better pricing over the long term!"
+            case .yearly:
+                return "You are enjoying full access to our app with the Yearly subscription – thank you for trusting and supporting our project!"
             }
+        }
+        if possiblyProcessSubscription {
+            return "Please note that it may take a few minutes to process your subscription purchase."
         }
         return nil
     }
@@ -125,6 +129,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
                 ToastView.showSuccess(message: "Your 7-day trial period has begun. Enjoy full access to all features.")
             } else {
                 _ = try await coordinator.dependencies.storeKitRepository.purchase(selectedProduct, with: [.appAccountToken(subscriptionId)])
+                self.lastSubscriptionPurchaseDate = Date.now.timeIntervalSince1970
                 ToastView.showSuccess(message: "Thank you for subscribing! Your subscription will be activated shortly.")
             }
             coordinator.dismissFullScreenCover()
@@ -147,9 +152,9 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
             do {
                 let products = try await coordinator.dependencies.storeKitRepository.getProducts()
                 await MainActor.run {
-                    if let individual = products.filter({ $0.id == SubscriptionPlan.individual.id }).first {
+                    if let monthly = products.filter({ $0.id == SubscriptionPlan.monthly.id }).first {
                         let sortedProducts = products.sorted(by: { $0.price < $1.price })
-                        self.state = .idle(sortedProducts, individual)
+                        self.state = .idle(sortedProducts, monthly)
                     } else {
                         self.state = .error
                     }
@@ -163,32 +168,22 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
 
 extension PaywallViewModel {
 
-    var plans: [PlanDescription] {
-        guard let id = self.selectedProduct?.id else { return [] }
-        return switch SubscriptionPlan(rawValue: id) {
-        case .individual, .none: [.support, .workflow, .translation, .languages]
-        case .team: PlanDescription.allCases
-        }
-    }
-
-    enum PlanDescription: CaseIterable {
+    enum PlanFeature: CaseIterable {
         case support
-        case workflow
         case translation
-        case languages
-        case members
-        case approvals
-        case projects
+        case collaboration
+        case management
 
-        var text: String {
+        var description: String {
             switch self {
-            case .support: return "Reliable customer support."
-            case .workflow: return "Automate your workflow with API access."
-            case .translation: return "Automatic phrase translations."
-            case .languages: return "Access to a wide range of languages."
-            case .members: return "Add multiple members to projects."
-            case .approvals: return "Translation reviews and approvals"
-            case .projects: return "Unlimited project management."
+            case .support:
+                return "Get 24/7 support for any issue."
+            case .translation:
+                return "Enjoy seamless translations in numerous languages."
+            case .collaboration:
+                return "Collaborate effectively with team members."
+            case .management:
+                return "Manage projects effortlessly with unlimited access."
             }
         }
     }

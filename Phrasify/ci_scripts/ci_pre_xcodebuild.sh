@@ -7,6 +7,16 @@
 #
 echo "PRE-Xcode Build is activated .... "
 
+# Display all environment variables
+echo "Listing all environment variables:"
+printenv
+
+# Check if CI_TEST_DESTINATION_RUNTIME exists
+if [ ! -z "$CI_TEST_DESTINATION_RUNTIME" ]; then
+    echo "CI_TEST_DESTINATION_RUNTIME is set, skipping the script"
+    exit 0
+fi
+
 # Write a JSON File containing all the environment variables and secrets.
 filePath="../$CI_PRODUCT/Resources/secrets.json"
 printf "{\"ALGOLIA_APP_ID\":\"%s\",\"ALGOLIA_SEARCH_KEY\":\"%s\"}" "$ALGOLIA_APP_ID" "$ALGOLIA_SEARCH_KEY" >> "$filePath"

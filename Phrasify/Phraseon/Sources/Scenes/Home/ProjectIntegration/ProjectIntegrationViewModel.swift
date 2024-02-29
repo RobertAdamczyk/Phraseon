@@ -14,7 +14,7 @@ final class ProjectIntegrationViewModel: ObservableObject {
     @Published var shouldShowExportSheet: Bool = false
 
     var syncScriptFile: SyncScript? {
-        .init(userId: coordinator.dependencies.authenticationRepository.currentUser?.uid, projectId: project.id)
+        .init(userId: coordinator.dependencies.authenticationRepository.userId, projectId: project.id)
     }
 
     private let project: Project

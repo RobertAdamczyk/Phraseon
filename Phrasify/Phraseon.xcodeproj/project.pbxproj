@@ -18,6 +18,8 @@
 		55028A0A2B7EB58F00C786D9 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */; };
 		55028A0D2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */; };
 		55028A0E2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */; };
+		5502D9352B868B0300A0B110 /* ci_pre_xcodebuild.sh in Resources */ = {isa = PBXBuildFile; fileRef = 55CADF2D2B7571F800D04365 /* ci_pre_xcodebuild.sh */; };
+		5502D9382B868B2800A0B110 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502D9372B868B2800A0B110 /* LoginViewModelTest.swift */; };
 		5505378A2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		5505378B2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		550537912B44C0170077912D /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537902B44C0170077912D /* PhotoPickerView.swift */; };
@@ -155,6 +157,28 @@
 		553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BE72B2911770071A099 /* ForgetPasswordViewModel.swift */; };
 		553F1BEB2B2914700071A099 /* SetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BEA2B2914700071A099 /* SetPasswordView.swift */; };
 		553F1BED2B2914910071A099 /* SetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */; };
+		55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */; };
+		55406C592B8A922F00B03E9D /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */; };
+		55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */; };
+		55406C5D2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */; };
+		55406C5E2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */; };
+		555458F02B85422300DA097F /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */; };
+		555458F12B85422300DA097F /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */; };
+		555458F32B8542DF00DA097F /* MockFirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */; };
+		555458F42B8542DF00DA097F /* MockFirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */; };
+		555458F62B8543C000DA097F /* MockCloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F52B8543C000DA097F /* MockCloudRepository.swift */; };
+		555458F72B8543C000DA097F /* MockCloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F52B8543C000DA097F /* MockCloudRepository.swift */; };
+		555458F92B85441D00DA097F /* MockStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F82B85441D00DA097F /* MockStorageRepository.swift */; };
+		555458FA2B85441D00DA097F /* MockStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F82B85441D00DA097F /* MockStorageRepository.swift */; };
+		555458FC2B85483000DA097F /* MockStoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FB2B85483000DA097F /* MockStoreKitRepository.swift */; };
+		555458FD2B85483000DA097F /* MockStoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FB2B85483000DA097F /* MockStoreKitRepository.swift */; };
+		555458FF2B854A4D00DA097F /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FE2B854A4D00DA097F /* MockSearchRepository.swift */; };
+		555459002B854A4D00DA097F /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458FE2B854A4D00DA097F /* MockSearchRepository.swift */; };
+		555459022B854B0600DA097F /* MockConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555459012B854B0600DA097F /* MockConfigurationRepository.swift */; };
+		555459032B854B0600DA097F /* MockConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555459012B854B0600DA097F /* MockConfigurationRepository.swift */; };
+		555459142B854FD600DA097F /* StartViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555459132B854FD600DA097F /* StartViewModelTest.swift */; };
+		555459162B8551DE00DA097F /* MockDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555459152B8551DE00DA097F /* MockDependencies.swift */; };
+		555459172B8551DE00DA097F /* MockDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555459152B8551DE00DA097F /* MockDependencies.swift */; };
 		555A7DE62B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */; };
 		555A7DE72B51EC0900B2A9B8 /* ProjectUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */; };
 		5560342F2B59C530000140BC /* ApproveTranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560342E2B59C530000140BC /* ApproveTranslationService.swift */; };
@@ -224,8 +248,6 @@
 		558074422B2CF08E0041160B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
 		558074452B2CF2780041160B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074442B2CF2780041160B /* GoogleButton.swift */; };
 		558074462B2CF2780041160B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074442B2CF2780041160B /* GoogleButton.swift */; };
-		5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074492B2D12B80041160B /* GoogleUseCase.swift */; };
-		5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074492B2D12B80041160B /* GoogleUseCase.swift */; };
 		5580744E2B2E341B0041160B /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
 		5580744F2B2E341B0041160B /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
 		558074512B2E38110041160B /* Activitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074502B2E38110041160B /* Activitable.swift */; };
@@ -366,6 +388,9 @@
 		55CADF3B2B75916F00D04365 /* DeferredData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CADF3A2B75916F00D04365 /* DeferredData.swift */; };
 		55CADF3C2B75916F00D04365 /* DeferredData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CADF3A2B75916F00D04365 /* DeferredData.swift */; };
 		55D41E1A2B68219200FADB4E /* SubscriptionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D41E192B68219200FADB4E /* SubscriptionPlan.swift */; };
+		55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEA2B87E4C20002DAE3 /* RegisterViewModelTest.swift */; };
+		55D63DED2B87F0450002DAE3 /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */; };
+		55D63DEF2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEE2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift */; };
 		55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10222B48D016001CB87F /* ProjectMembersView.swift */; };
 		55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10222B48D016001CB87F /* ProjectMembersView.swift */; };
 		55DE10262B48D020001CB87F /* ProjectMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */; };
@@ -448,12 +473,23 @@
 		55FF42912B2BB34D00F4D523 /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF428F2B2BB34D00F4D523 /* ToastView+Show.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		555459192B855D9400DA097F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 552785B62B27A5120098FE95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55C278DB2B2A3F3A005144F1;
+			remoteInfo = Phraseon_InHouse;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		550041F92B6C3B5300073384 /* StartTrialService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTrialService.swift; sourceTree = "<group>"; };
 		550041FC2B6C3FD700073384 /* PaywallActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallActions.swift; sourceTree = "<group>"; };
 		55028A052B7EB41300C786D9 /* ConfigurationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationRepository.swift; sourceTree = "<group>"; };
 		55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateHandler.swift; sourceTree = "<group>"; };
+		5502D9372B868B2800A0B110 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		550537892B4492670077912D /* NavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActions.swift; sourceTree = "<group>"; };
 		550537902B44C0170077912D /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		550537932B44C0270077912D /* PhotoPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerHandler.swift; sourceTree = "<group>"; };
@@ -531,6 +567,20 @@
 		553F1BE72B2911770071A099 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
 		553F1BEA2B2914700071A099 /* SetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordView.swift; sourceTree = "<group>"; };
 		553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
+		55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModelTest.swift; sourceTree = "<group>"; };
+		55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModelTest.swift; sourceTree = "<group>"; };
+		55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailActions.swift; sourceTree = "<group>"; };
+		555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationRepository.swift; sourceTree = "<group>"; };
+		555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestoreRepository.swift; sourceTree = "<group>"; };
+		555458F52B8543C000DA097F /* MockCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudRepository.swift; sourceTree = "<group>"; };
+		555458F82B85441D00DA097F /* MockStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageRepository.swift; sourceTree = "<group>"; };
+		555458FB2B85483000DA097F /* MockStoreKitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStoreKitRepository.swift; sourceTree = "<group>"; };
+		555458FE2B854A4D00DA097F /* MockSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRepository.swift; sourceTree = "<group>"; };
+		555459012B854B0600DA097F /* MockConfigurationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfigurationRepository.swift; sourceTree = "<group>"; };
+		555459082B854D8300DA097F /* PhraseonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhraseonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		555459132B854FD600DA097F /* StartViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModelTest.swift; sourceTree = "<group>"; };
+		555459152B8551DE00DA097F /* MockDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDependencies.swift; sourceTree = "<group>"; };
 		555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUseCase.swift; sourceTree = "<group>"; };
 		5560342E2B59C530000140BC /* ApproveTranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveTranslationService.swift; sourceTree = "<group>"; };
 		5561C5C32B65A76500C815BC /* SelectableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCircle.swift; sourceTree = "<group>"; };
@@ -558,7 +608,6 @@
 		558074392B2CE6650041160B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		558074402B2CF08E0041160B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		558074442B2CF2780041160B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
-		558074492B2D12B80041160B /* GoogleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleUseCase.swift; sourceTree = "<group>"; };
 		5580744D2B2E341B0041160B /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		558074502B2E38110041160B /* Activitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activitable.swift; sourceTree = "<group>"; };
 		558074532B2E3C8F0041160B /* RootActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootActions.swift; sourceTree = "<group>"; };
@@ -626,6 +675,9 @@
 		55CADF372B75881400D04365 /* secrets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		55CADF3A2B75916F00D04365 /* DeferredData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredData.swift; sourceTree = "<group>"; };
 		55D41E192B68219200FADB4E /* SubscriptionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPlan.swift; sourceTree = "<group>"; };
+		55D63DEA2B87E4C20002DAE3 /* RegisterViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTest.swift; sourceTree = "<group>"; };
+		55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationRepository.swift; sourceTree = "<group>"; };
+		55D63DEE2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModelTest.swift; sourceTree = "<group>"; };
 		55DE10222B48D016001CB87F /* ProjectMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersView.swift; sourceTree = "<group>"; };
 		55DE10252B48D020001CB87F /* ProjectMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersViewModel.swift; sourceTree = "<group>"; };
 		55DE10292B4A28B0001CB87F /* InviteMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteMemberView.swift; sourceTree = "<group>"; };
@@ -686,6 +738,13 @@
 				5539D75B2B8006D900BDA216 /* FirebaseRemoteConfig in Frameworks */,
 				5574B31F2B6F031300C9DFB9 /* FirebaseFirestore in Frameworks */,
 				5574B3232B6F031300C9DFB9 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555459052B854D8300DA097F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -899,6 +958,7 @@
 				55CADF2C2B7571A000D04365 /* ci_scripts */,
 				552785C02B27A5120098FE95 /* Phraseon */,
 				55C278FE2B2A3F80005144F1 /* Phraseon_InHouse */,
+				555459092B854D8400DA097F /* PhraseonTests */,
 				552785BF2B27A5120098FE95 /* Products */,
 				55C279082B2A4556005144F1 /* Frameworks */,
 			);
@@ -909,6 +969,7 @@
 			children = (
 				552785BE2B27A5120098FE95 /* Phraseon.app */,
 				55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse.app */,
+				555459082B854D8300DA097F /* PhraseonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -933,6 +994,14 @@
 			children = (
 				552785C92B27A5140098FE95 /* Preview Assets.xcassets */,
 				553F1BCB2B28EF6B0071A099 /* MockCoordinator.swift */,
+				555459152B8551DE00DA097F /* MockDependencies.swift */,
+				555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */,
+				555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */,
+				555458F52B8543C000DA097F /* MockCloudRepository.swift */,
+				555458F82B85441D00DA097F /* MockStorageRepository.swift */,
+				555458FB2B85483000DA097F /* MockStoreKitRepository.swift */,
+				555458FE2B854A4D00DA097F /* MockSearchRepository.swift */,
+				555459012B854B0600DA097F /* MockConfigurationRepository.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -995,6 +1064,45 @@
 				553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */,
 			);
 			path = SetPassword;
+			sourceTree = "<group>";
+		};
+		55406C572B8A921F00B03E9D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */,
+				55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		555459092B854D8400DA097F /* PhraseonTests */ = {
+			isa = PBXGroup;
+			children = (
+				555459112B854FB400DA097F /* Scenes */,
+			);
+			path = PhraseonTests;
+			sourceTree = "<group>";
+		};
+		555459112B854FB400DA097F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				55406C572B8A921F00B03E9D /* Home */,
+				555459122B854FC800DA097F /* Start */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		555459122B854FC800DA097F /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				555459132B854FD600DA097F /* StartViewModelTest.swift */,
+				5502D9372B868B2800A0B110 /* LoginViewModelTest.swift */,
+				55D63DEA2B87E4C20002DAE3 /* RegisterViewModelTest.swift */,
+				55D63DEE2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift */,
+				55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */,
+				55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 		5561C5C22B65A75300C815BC /* SelectableCircle */ = {
@@ -1105,7 +1213,6 @@
 		558074482B2D12AC0041160B /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				558074492B2D12B80041160B /* GoogleUseCase.swift */,
 				55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */,
 				555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */,
 				55A653E12B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift */,
@@ -1329,6 +1436,7 @@
 				55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */,
 				556977A32B475B440022B675 /* SelectTechnologyActions.swift */,
 				5516EBE12B432D3F00C558B1 /* ProjectActions.swift */,
+				55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */,
 				5516EBE42B432D4700C558B1 /* ProfileActions.swift */,
 				550041FC2B6C3FD700073384 /* PaywallActions.swift */,
 				550537892B4492670077912D /* NavigationActions.swift */,
@@ -1666,6 +1774,24 @@
 			productReference = 552785BE2B27A5120098FE95 /* Phraseon.app */;
 			productType = "com.apple.product-type.application";
 		};
+		555459072B854D8300DA097F /* PhraseonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5554590E2B854D8400DA097F /* Build configuration list for PBXNativeTarget "PhraseonTests" */;
+			buildPhases = (
+				555459042B854D8300DA097F /* Sources */,
+				555459052B854D8300DA097F /* Frameworks */,
+				555459062B854D8300DA097F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5554591A2B855D9400DA097F /* PBXTargetDependency */,
+			);
+			name = PhraseonTests;
+			productName = PhraseonTests;
+			productReference = 555459082B854D8300DA097F /* PhraseonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55C278F92B2A3F3A005144F1 /* Build configuration list for PBXNativeTarget "Phraseon_InHouse" */;
@@ -1705,11 +1831,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					552785BD2B27A5120098FE95 = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					555459072B854D8300DA097F = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 55C278DB2B2A3F3A005144F1;
 					};
 				};
 			};
@@ -1737,6 +1867,7 @@
 			targets = (
 				552785BD2B27A5120098FE95 /* Phraseon */,
 				55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse */,
+				555459072B854D8300DA097F /* PhraseonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1753,12 +1884,20 @@
 				55028A092B7EB58F00C786D9 /* RemoteConfigDefaults.plist in Resources */,
 				55C278D52B2A2E36005144F1 /* RethinkSans-Regular.ttf in Resources */,
 				552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */,
+				5502D9352B868B0300A0B110 /* ci_pre_xcodebuild.sh in Resources */,
 				55C278D82B2A2E36005144F1 /* RethinkSans-SemiBold.ttf in Resources */,
 				552785C62B27A5140098FE95 /* Assets.xcassets in Resources */,
 				5574B3292B6F0D3900C9DFB9 /* GoogleService-Info.plist in Resources */,
 				55CADF382B75881400D04365 /* secrets.json in Resources */,
 				558074412B2CF08E0041160B /* Roboto-Medium.ttf in Resources */,
 				5505C7DA2B55BAEB00806B4F /* syncScript.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555459062B854D8300DA097F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1807,6 +1946,7 @@
 				55854F9A2B57250600CC5480 /* SetProjectLanguagesService.swift in Sources */,
 				55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				5505C7F72B55EEAA00806B4F /* StandardInformationView.swift in Sources */,
+				55406C5D2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */,
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
 				55FE51BA2B5D95BA0084617F /* SelectBaseLanguageViewModel.swift in Sources */,
 				55DE102A2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
@@ -1823,6 +1963,7 @@
 				552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
 				5516EBD22B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				5505C7DE2B55BE5900806B4F /* SyncScript.swift in Sources */,
+				555458F62B8543C000DA097F /* MockCloudRepository.swift in Sources */,
 				5507D4072B48727600E14C63 /* Member.swift in Sources */,
 				55DE10512B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */,
 				55DE10472B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
@@ -1847,8 +1988,8 @@
 				5516EBC42B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
 				5570FF4D2B61B13C0011208F /* PaywallView.swift in Sources */,
 				55854F8B2B571DA100CC5480 /* CreateProjectService.swift in Sources */,
-				5580744A2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				553F1BCE2B28FD890071A099 /* AppTextField.swift in Sources */,
+				555459162B8551DE00DA097F /* MockDependencies.swift in Sources */,
 				551AA4242B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				5516EBE22B432D3F00C558B1 /* ProjectActions.swift in Sources */,
 				550041FD2B6C3FD700073384 /* PaywallActions.swift in Sources */,
@@ -1887,6 +2028,7 @@
 				5505C7EC2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,
 				552785C22B27A5120098FE95 /* PhraseonApp.swift in Sources */,
 				55FE51A72B5CA9D60084617F /* ValidationView.swift in Sources */,
+				555458FF2B854A4D00DA097F /* MockSearchRepository.swift in Sources */,
 				55C279112B2A4B38005144F1 /* RootCoordinator.swift in Sources */,
 				55FF42612B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				55FF42902B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
@@ -1898,7 +2040,9 @@
 				55FE51A42B5CA9B90084617F /* PasswordValidationHandler.swift in Sources */,
 				55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */,
 				5516EBEC2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
+				555458F32B8542DF00DA097F /* MockFirestoreRepository.swift in Sources */,
 				5516EBDF2B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
+				555458F02B85422300DA097F /* MockAuthenticationRepository.swift in Sources */,
 				5570FF492B61752D0011208F /* StoreKitRepository.swift in Sources */,
 				55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
 				55DE104E2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
@@ -1915,6 +2059,7 @@
 				55DE10582B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
 				55FE51AD2B5D1C830084617F /* ValidationHandlerProtocol.swift in Sources */,
 				5516EBE92B43609300C558B1 /* ChangePasswordView.swift in Sources */,
+				555458FC2B85483000DA097F /* MockStoreKitRepository.swift in Sources */,
 				551AA4272B337D2900F0B1E2 /* AppTitle.swift in Sources */,
 				55FE51B32B5D1DE50084617F /* EmailValidationHandler.swift in Sources */,
 				55DE102D2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
@@ -1963,6 +2108,7 @@
 				55DE10302B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55854FAA2B572A8900CC5480 /* ChangeContentKeyService.swift in Sources */,
 				55FF425E2B2A674A00F4D523 /* CancelBag.swift in Sources */,
+				555459022B854B0600DA097F /* MockConfigurationRepository.swift in Sources */,
 				55C279132B2A4B48005144F1 /* AppDelegate.swift in Sources */,
 				55B841482B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
 				55CADF3B2B75916F00D04365 /* DeferredData.swift in Sources */,
@@ -1981,8 +2127,24 @@
 				5516EBCF2B40D2F500C558B1 /* ProfileView.swift in Sources */,
 				5569779E2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */,
 				55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */,
+				555458F92B85441D00DA097F /* MockStorageRepository.swift in Sources */,
 				557DECFE2B72E5B80090DF0B /* AlgoliaTimestamp.swift in Sources */,
 				5516EBB92B3F339E00C558B1 /* KeysOrder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555459042B854D8300DA097F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */,
+				5502D9382B868B2800A0B110 /* LoginViewModelTest.swift in Sources */,
+				55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */,
+				55D63DEF2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift in Sources */,
+				55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */,
+				555459142B854FD600DA097F /* StartViewModelTest.swift in Sources */,
+				55D63DED2B87F0450002DAE3 /* MockAuthenticationRepository.swift in Sources */,
+				55406C592B8A922F00B03E9D /* HomeViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2007,6 +2169,7 @@
 				55854F9B2B57250600CC5480 /* SetProjectLanguagesService.swift in Sources */,
 				55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				5505C7F82B55EEAA00806B4F /* StandardInformationView.swift in Sources */,
+				55406C5E2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */,
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
 				55FE51BB2B5D95BA0084617F /* SelectBaseLanguageViewModel.swift in Sources */,
 				55DE102B2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
@@ -2023,6 +2186,7 @@
 				552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
 				5516EBD32B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				5505C7DF2B55BE5900806B4F /* SyncScript.swift in Sources */,
+				555458F72B8543C000DA097F /* MockCloudRepository.swift in Sources */,
 				5507D4082B48727600E14C63 /* Member.swift in Sources */,
 				55DE10522B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */,
 				55DE10482B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
@@ -2047,8 +2211,8 @@
 				5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */,
 				5570FF4E2B61B13C0011208F /* PaywallView.swift in Sources */,
 				55854F8C2B571DA100CC5480 /* CreateProjectService.swift in Sources */,
-				5580744B2B2D12B80041160B /* GoogleUseCase.swift in Sources */,
 				55C279192B2A4C0F005144F1 /* AppDelegate.swift in Sources */,
+				555459172B8551DE00DA097F /* MockDependencies.swift in Sources */,
 				551AA4252B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				5516EBE32B432D3F00C558B1 /* ProjectActions.swift in Sources */,
 				550041FE2B6C3FD700073384 /* PaywallActions.swift in Sources */,
@@ -2087,6 +2251,7 @@
 				5505C7ED2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift in Sources */,
 				55C278E82B2A3F3A005144F1 /* ForgetPasswordViewModel.swift in Sources */,
 				55FE51A82B5CA9D60084617F /* ValidationView.swift in Sources */,
+				555459002B854A4D00DA097F /* MockSearchRepository.swift in Sources */,
 				55C278E92B2A3F3A005144F1 /* PhraseonApp.swift in Sources */,
 				55FF42622B2B7E3400F4D523 /* StartViewModel.swift in Sources */,
 				55FF42912B2BB34D00F4D523 /* ToastView+Show.swift in Sources */,
@@ -2098,7 +2263,9 @@
 				55FE51A52B5CA9B90084617F /* PasswordValidationHandler.swift in Sources */,
 				55C278EA2B2A3F3A005144F1 /* AppDivider.swift in Sources */,
 				5516EBED2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */,
+				555458F42B8542DF00DA097F /* MockFirestoreRepository.swift in Sources */,
 				5516EBE02B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
+				555458F12B85422300DA097F /* MockAuthenticationRepository.swift in Sources */,
 				5570FF4A2B61752D0011208F /* StoreKitRepository.swift in Sources */,
 				55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
 				55DE104F2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
@@ -2115,6 +2282,7 @@
 				55FE51AE2B5D1C830084617F /* ValidationHandlerProtocol.swift in Sources */,
 				5516EBEA2B43609300C558B1 /* ChangePasswordView.swift in Sources */,
 				551AA4282B337D2900F0B1E2 /* AppTitle.swift in Sources */,
+				555458FD2B85483000DA097F /* MockStoreKitRepository.swift in Sources */,
 				55FE51B42B5D1DE50084617F /* EmailValidationHandler.swift in Sources */,
 				55DE102E2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAC2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
@@ -2163,6 +2331,7 @@
 				55DE10312B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
 				55854FAB2B572A8900CC5480 /* ChangeContentKeyService.swift in Sources */,
 				55FF425F2B2A677800F4D523 /* CancelBag.swift in Sources */,
+				555459032B854B0600DA097F /* MockConfigurationRepository.swift in Sources */,
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,
 				55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
 				55CADF3C2B75916F00D04365 /* DeferredData.swift in Sources */,
@@ -2181,12 +2350,21 @@
 				5516EBD02B40D2F500C558B1 /* ProfileView.swift in Sources */,
 				5569779F2B4747380022B675 /* ProjectSettingsViewModel.swift in Sources */,
 				55C278F02B2A3F3A005144F1 /* AppButton.swift in Sources */,
+				555458FA2B85441D00DA097F /* MockStorageRepository.swift in Sources */,
 				557DECFF2B72E5B80090DF0B /* AlgoliaTimestamp.swift in Sources */,
 				5516EBBA2B3F339E00C558B1 /* KeysOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5554591A2B855D9400DA097F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse */;
+			targetProxy = 555459192B855D9400DA097F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		552785CB2B27A5140098FE95 /* Debug */ = {
@@ -2385,6 +2563,47 @@
 			};
 			name = Release;
 		};
+		5554590F2B854D8400DA097F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 38Q6TG2KG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = robert.adamczyk.phraseon.tests.PhraseonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phraseon_InHouse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phraseon_InHouse";
+			};
+			name = Debug;
+		};
+		555459102B854D8400DA097F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 38Q6TG2KG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = robert.adamczyk.phraseon.tests.PhraseonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phraseon_InHouse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phraseon_InHouse";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		55C278FA2B2A3F3A005144F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2484,6 +2703,15 @@
 			buildConfigurations = (
 				552785CE2B27A5140098FE95 /* Debug */,
 				552785CF2B27A5140098FE95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5554590E2B854D8400DA097F /* Build configuration list for PBXNativeTarget "PhraseonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5554590F2B854D8400DA097F /* Debug */,
+				555459102B854D8400DA097F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

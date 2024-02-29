@@ -9,7 +9,14 @@ import Foundation
 import Combine
 import FirebaseRemoteConfig
 
-final class ConfigurationRepository {
+protocol ConfigurationRepository {
+
+    var configUpdatePublisher: AnyPublisher<Void, Never> { get }
+
+    func getValue(for key: ConfigurationRepositoryImpl.ConfigKey) -> RemoteConfigValue
+}
+
+final class ConfigurationRepositoryImpl: ConfigurationRepository {
 
     var configUpdatePublisher: AnyPublisher<Void, Never> {
         configUpdateSubject.eraseToAnyPublisher()
@@ -59,7 +66,7 @@ final class ConfigurationRepository {
     }
 }
 
-extension ConfigurationRepository {
+extension ConfigurationRepositoryImpl {
 
     enum ConfigKey: String {
         case versionUpdateInfo

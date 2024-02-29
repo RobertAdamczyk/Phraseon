@@ -56,7 +56,7 @@ struct AppUpdateView: View {
 #if DEBUG
 #Preview {
     ZStack {
-        HomeView(coordinator: MockCoordinator())
+        HomeView(coordinator: PreviewCoordinator())
         AppUpdateView(title: "Beta Finished",
                       message: "Thank you for beta testing. Please look forward to the final app release!",
                       confirmButtonText: "Understood",

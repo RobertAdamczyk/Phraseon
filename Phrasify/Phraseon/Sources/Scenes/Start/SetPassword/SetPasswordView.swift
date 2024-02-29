@@ -33,6 +33,6 @@ struct SetPasswordView: View {
 
 #if DEBUG
 #Preview {
-    SetPasswordView(viewModel: .init(email: "", coordinator: MockCoordinator()))
+    SetPasswordView(viewModel: .init(email: "", coordinator: PreviewCoordinator()))
 }
 #endif

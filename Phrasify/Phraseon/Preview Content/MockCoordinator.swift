@@ -1,5 +1,5 @@
 //
-//  MockCoordinator.swift
+//  PreviewCoordinator.swift
 //  Phraseon
 //
 //  Created by Robert Adamczyk on 12.12.23.
@@ -7,30 +7,11 @@
 
 import SwiftUI
 
-final class MockCoordinator: Coordinator, StartActions, RootActions, FullScreenCoverActions, ProjectActions, ProfileActions,
-                             NavigationActions, SelectLanguageActions, SelectTechnologyActions, PaywallActions,
-                             SelectMemberRoleActions, SheetActions, EnterContentKeyActions {
+final class PreviewCoordinator: Coordinator, StartActions, RootActions, FullScreenCoverActions, ProjectActions, ProfileActions,
+                                NavigationActions, SelectLanguageActions, SelectTechnologyActions, PaywallActions,
+                                SelectMemberRoleActions, SheetActions, EnterContentKeyActions, ProjectDetailActions {
 
-    init() {
-        let authenticationRepository: AuthenticationRepository = .init()
-        let firestoreRepository: FirestoreRepository = .init()
-        let cloudRepository: CloudRepository = .init()
-        let storageRepository: StorageRepository = .init()
-        let storeKitRepository: StoreKitRepository = .init()
-        let userDomain: UserDomain = .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository)
-        let searchRepository: SearchRepository = .init()
-        let configurationRepository: ConfigurationRepository = .init()
-        dependencies = .init(authenticationRepository: authenticationRepository,
-                             firestoreRepository: firestoreRepository,
-                             cloudRepository: cloudRepository,
-                             storageRepository: storageRepository,
-                             storeKitRepository: storeKitRepository,
-                             userDomain: userDomain,
-                             searchRepository: searchRepository,
-                             configurationRepository: configurationRepository)
-    }
-
-    var dependencies: Dependencies
+    var dependencies: Dependencies = MockDependencies.dependencies
 
     func showLogin() { /*empty*/ }
 

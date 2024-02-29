@@ -17,10 +17,6 @@ final class LoginViewModel: ObservableObject, Activitable {
 
     private let coordinator: LoginCoordinator
 
-    private lazy var googleUseCase: GoogleUseCase = {
-        .init(authenticationRepository: coordinator.dependencies.authenticationRepository)
-    }()
-
     init(coordinator: LoginCoordinator) {
         self.coordinator = coordinator
     }
@@ -40,28 +36,21 @@ final class LoginViewModel: ObservableObject, Activitable {
         coordinator.showForgetPassword()
     }
 
+    @MainActor
     func onLoginWithGoogleTapped() {
+        guard let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene),
+              let viewController = windowScene.windows.first?.rootViewController else { return }
+        startActivity()
         Task {
             do {
-                try await googleUseCase.getGoogleAuthCredential() // Currently no error handling needed
-                await loginWithGoogleCredentials()
+                let credentials = try await coordinator.dependencies.authenticationRepository.getGoogleAuthCredential(on: viewController)
+                try await coordinator.dependencies.authenticationRepository.login(with: credentials)
+                ToastView.showSuccess(message: "Login successful. Welcome!")
             } catch {
-                return
+                let errorHandler: ErrorHandler = .init(error: error)
+                ToastView.showError(message: errorHandler.localizedDescription)
             }
+            stopActivity()
         }
     }
-
-    @MainActor
-    private func loginWithGoogleCredentials() async {
-        startActivity()
-        do {
-            try await googleUseCase.loginWithGoogleCredentials()
-            ToastView.showSuccess(message: "Login successful. Welcome !")
-        } catch {
-            let errorHandler: ErrorHandler = .init(error: error)
-            ToastView.showError(message: errorHandler.localizedDescription)
-        }
-        stopActivity()
-    }
-
 }

@@ -40,6 +40,7 @@ final class PasswordValidationHandler: ValidationHandlerProtocol {
             validationError = .passwordTooShort
             return .failure(ValidationError.passwordTooShort)
         }
+        validationError = nil
         return .success(Void())
     }
 }

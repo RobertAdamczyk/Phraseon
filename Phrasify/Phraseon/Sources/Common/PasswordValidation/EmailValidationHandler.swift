@@ -65,6 +65,7 @@ final class EmailValidationHandler: ValidationHandlerProtocol {
         }
 
         if let topDomain = domainParts.last, topDomain.count >= 2 {
+            self.validationError = nil
             return .success(Void())
         } else {
             self.validationError = .badlyFormatted

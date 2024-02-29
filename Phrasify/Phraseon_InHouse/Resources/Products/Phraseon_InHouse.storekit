@@ -10,7 +10,7 @@
     "_applicationInternalID" : "6477338270",
     "_developerTeamID" : "38Q6TG2KG3",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 728732798.78753102,
+    "_lastSynchronizedDate" : 730586798.33383203,
     "_locale" : "en_US",
     "_storefront" : "USA",
     "_storeKitErrors" : [
@@ -78,19 +78,19 @@
           ],
           "displayPrice" : "9.99",
           "familyShareable" : false,
-          "groupNumber" : 2,
-          "internalID" : "6477343475",
+          "groupNumber" : 1,
+          "internalID" : "6478466922",
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "individual",
-              "displayName" : "Individual",
+              "description" : "monthly",
+              "displayName" : "Monthly",
               "locale" : "en_US"
             }
           ],
-          "productID" : "robert.adamczyk.phraseon.inhouse.subscription.plan.individual",
+          "productID" : "robert.adamczyk.phraseon.inhouse.subscription.plan.monthly",
           "recurringSubscriptionPeriod" : "P1M",
-          "referenceName" : "individual",
+          "referenceName" : "monthly",
           "subscriptionGroupID" : "21442920",
           "type" : "RecurringSubscription"
         },
@@ -101,21 +101,21 @@
           "codeOffers" : [
 
           ],
-          "displayPrice" : "19.99",
+          "displayPrice" : "59.99",
           "familyShareable" : false,
           "groupNumber" : 1,
-          "internalID" : "6477343619",
+          "internalID" : "6478466951",
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "team",
-              "displayName" : "Team",
+              "description" : "yearly",
+              "displayName" : "Yearly",
               "locale" : "en_US"
             }
           ],
-          "productID" : "robert.adamczyk.phraseon.inhouse.subscription.plan.team",
-          "recurringSubscriptionPeriod" : "P1M",
-          "referenceName" : "team",
+          "productID" : "robert.adamczyk.phraseon.inhouse.subscription.plan.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "yearly",
           "subscriptionGroupID" : "21442920",
           "type" : "RecurringSubscription"
         }

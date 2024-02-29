@@ -68,7 +68,7 @@ final class ProjectMemberUseCase {
     }
 
     private func setupMemberSubscriber() {
-        guard let projectId = project.id, let userId = authenticationRepository.currentUser?.uid else { return }
+        guard let projectId = project.id, let userId = authenticationRepository.userId else { return }
         firestoreRepository.getMemberPublisher(userId: userId, projectId: projectId)
             .receive(on: RunLoop.main)
             .sink { _ in

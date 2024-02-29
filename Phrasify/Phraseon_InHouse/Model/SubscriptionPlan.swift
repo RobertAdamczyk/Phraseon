@@ -9,8 +9,8 @@ import Foundation
 
 enum SubscriptionPlan: String, Codable, CaseIterable {
 
-    case individual = "robert.adamczyk.phraseon.inhouse.subscription.plan.individual"
-    case team = "robert.adamczyk.phraseon.inhouse.subscription.plan.team"
+    case yearly = "robert.adamczyk.phraseon.inhouse.subscription.plan.yearly"
+    case monthly = "robert.adamczyk.phraseon.inhouse.subscription.plan.monthly"
 
     var id: String {
         self.rawValue
@@ -18,8 +18,8 @@ enum SubscriptionPlan: String, Codable, CaseIterable {
 
     var sortIndex: Int {
         switch self {
-        case .individual: return 0
-        case .team: return 1
+        case .yearly: return 0
+        case .monthly: return 1
         }
     }
 }

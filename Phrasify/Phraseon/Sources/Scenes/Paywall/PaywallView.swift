@@ -7,10 +7,13 @@
 
 import SwiftUI
 import Shimmer
+import StoreKit
 
 struct PaywallView: View {
 
     @StateObject private var viewModel: PaywallViewModel
+
+    @State private var showManageSubscriptions: Bool = false
 
     init(coordinator: PaywallViewModel.PaywallCoordinator) {
         self._viewModel = .init(wrappedValue: .init(coordinator: coordinator))
@@ -20,36 +23,34 @@ struct PaywallView: View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 32) {
-                    Text("Choose the plan that best fits your needs.")
+                    Text("Adaptability or Savings? The choice is yours.")
                         .apply(.medium, size: .M, color: .white)
-                    HStack(spacing: 16) {
+                    VStack(spacing: 16) {
                         ForEach(viewModel.products, id: \.self) { product in
                             Button(action: {
                                 viewModel.onProductTapped(product)
                             }, label: {
                                 SubscriptionCell(headline: product.displayName,
                                                  price: product.displayPrice,
-                                                 isSelected: viewModel.selectedProduct == product)
+                                                 period: product.subscription?.subscriptionPeriod.unit.localizedDescription,
+                                                 isSelected: viewModel.selectedProduct == product,
+                                                 isAlreadyBought: product.id == viewModel.alreadySubscribedProductId)
                             })
                         }
                     }
                     VStack(alignment: .leading, spacing: 16) {
-                        ForEach(PaywallViewModel.PlanDescription.allCases, id: \.self) { plan in
+                        ForEach(PaywallViewModel.PlanFeature.allCases, id: \.self) { plan in
                             Label {
-                                Text(plan.text)
+                                Text(plan.description)
                             } icon: {
                                 ZStack {
                                     Image(systemName: "checkmark")
-                                        .opacity(viewModel.plans.contains(plan) ? 1 : 0)
                                         .foregroundStyle(appColor(.green))
-                                    Image(systemName: "xmark")
-                                        .opacity(viewModel.plans.contains(plan) ? 0 : 1)
-                                        .foregroundStyle(appColor(.red))
                                 }
                             }
                         }
                     }
-                    .apply(.medium, size: .M, color: .white)
+                    .apply(.regular, size: .S, color: .white)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(16)
@@ -60,8 +61,15 @@ struct PaywallView: View {
                         .apply(.regular, size: .S, color: .lightGray)
                         .multilineTextAlignment(.center)
                 }
-                AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
-                    .disabled(viewModel.hasValidSelectedSubscription)
+                if viewModel.hasValidSubscription {
+                    AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .main({
+                        showManageSubscriptions = true
+                    }))
+                } else {
+                    AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
+                        .disabled(viewModel.possiblyProcessSubscription)
+                }
+
             }
             .padding(16)
         }
@@ -76,13 +84,14 @@ struct PaywallView: View {
             }
         }
         .applyViewBackground()
+        .manageSubscriptionsSheet(isPresented: $showManageSubscriptions)
     }
 }
 
 #if DEBUG
 #Preview {
     NavigationView {
-        PaywallView(coordinator: MockCoordinator())
+        PaywallView(coordinator: PreviewCoordinator())
     }
     .preferredColorScheme(.dark)
 }

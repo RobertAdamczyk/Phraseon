@@ -7,15 +7,55 @@
 
 import Firebase
 import Combine
+import GoogleSignIn
 
-final class AuthenticationRepository {
+protocol AuthenticationRepository {
+
+    var isLoggedInPublisher: Published<Bool?>.Publisher { get }
+
+    var userId: UserID? { get }
+
+    var email: String? { get }
+
+    var authenticationProvider: AuthenticationProvider? { get }
+
+    func login(email: String, password: String) async throws
+
+    func login(with credential: AuthCredential) async throws
+
+    func signUp(email: String, password: String) async throws
+
+    func sendResetPassword(email: String) async throws
+
+    func logout() throws
+
+    func deleteUser() async throws
+
+    func reauthenticate(email: String, password: String) async throws
+
+    func updatePassword(to password: String) async throws
+
+    func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential
+}
+
+final class AuthenticationRepositoryImpl: AuthenticationRepository {
 
     // MARK: Public properties
 
-    @Published private(set) var isLoggedIn: Bool?
+    @Published private var isLoggedIn: Bool?
 
-    var currentUser: Firebase.User? {
-        auth.currentUser
+    var isLoggedInPublisher: Published<Bool?>.Publisher { $isLoggedIn }
+
+    var userId: UserID? {
+        auth.currentUser?.uid
+    }
+
+    var email: String? {
+        auth.currentUser?.email
+    }
+
+    var authenticationProvider: AuthenticationProvider? {
+        auth.currentUser?.authenticationProvider
     }
 
     // MARK: Private properties
@@ -61,6 +101,22 @@ final class AuthenticationRepository {
 
     func updatePassword(to password: String) async throws {
         try await auth.currentUser?.updatePassword(to: password)
+    }
+
+    @MainActor
+    func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { throw AppError.idClientNil }
+
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+
+        // Start the sign in flow!
+        let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: viewController)
+        guard let idToken = result.user.idToken?.tokenString else { throw AppError.idTokenNil }
+
+        return GoogleAuthProvider.credential(withIDToken: idToken,
+                                             accessToken: result.user.accessToken.tokenString)
     }
 
     private func setupStateDidChangeListener() {

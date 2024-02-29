@@ -49,6 +49,6 @@ struct RegisterView: View {
 
 #if DEBUG
 #Preview {
-    RegisterView(viewModel: .init(coordinator: MockCoordinator()))
+    RegisterView(viewModel: .init(coordinator: PreviewCoordinator()))
 }
 #endif

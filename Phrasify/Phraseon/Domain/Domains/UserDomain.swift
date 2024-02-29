@@ -48,7 +48,7 @@ final class UserDomain {
     }
 
     private func setupUserSubscriber() {
-        guard let userId = authenticationRepository.currentUser?.uid else { return }
+        guard let userId = authenticationRepository.userId else { return }
         cancelBag.cancel()
         user = .isLoading
         firestoreRepository.getUserPublisher(userId: userId)
@@ -72,7 +72,7 @@ final class UserDomain {
     }
 
     private func setupLoginSubscription() {
-        authenticationRepository.$isLoggedIn.sink { [weak self] isLoggedIn in
+        authenticationRepository.isLoggedInPublisher.sink { [weak self] isLoggedIn in
             self?.cancelBag.cancel()
             self?.user = .idle
             if isLoggedIn == true {
