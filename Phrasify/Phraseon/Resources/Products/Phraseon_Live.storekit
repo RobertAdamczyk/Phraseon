@@ -10,7 +10,7 @@
     "_applicationInternalID" : "6477338296",
     "_developerTeamID" : "38Q6TG2KG3",
     "_failTransactionsEnabled" : false,
-    "_lastSynchronizedDate" : 730931859.64442897,
+    "_lastSynchronizedDate" : 730932661.95233798,
     "_locale" : "en_US",
     "_storefront" : "USA",
     "_storeKitErrors" : [
@@ -103,7 +103,7 @@
           ],
           "displayPrice" : "59.99",
           "familyShareable" : false,
-          "groupNumber" : 2,
+          "groupNumber" : 1,
           "internalID" : "6478711781",
           "introductoryOffer" : null,
           "localizations" : [
