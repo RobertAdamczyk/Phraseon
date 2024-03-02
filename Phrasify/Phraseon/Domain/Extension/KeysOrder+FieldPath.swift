@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+import Model
 
 extension KeysOrder {
 

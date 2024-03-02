@@ -68,8 +68,6 @@
 		5516EBB42B3F2EE700C558B1 /* Language+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBB22B3F2EE700C558B1 /* Language+UI.swift */; };
 		5516EBB62B3F2EF900C558B1 /* Technology+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */; };
 		5516EBB72B3F2EF900C558B1 /* Technology+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */; };
-		5516EBB92B3F339E00C558B1 /* KeysOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBB82B3F339E00C558B1 /* KeysOrder.swift */; };
-		5516EBBA2B3F339E00C558B1 /* KeysOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBB82B3F339E00C558B1 /* KeysOrder.swift */; };
 		5516EBBC2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBBB2B3F33B000C558B1 /* KeysOrder+UI.swift */; };
 		5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBBB2B3F33B000C558B1 /* KeysOrder+UI.swift */; };
 		5516EBC02B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */; };
@@ -162,6 +160,8 @@
 		55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */; };
 		55406C5D2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */; };
 		55406C5E2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */; };
+		5540B75F2B93C6FF00F4580F /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 5540B75E2B93C6FF00F4580F /* Model */; };
+		5540B7612B93C7ED00F4580F /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 5540B7602B93C7ED00F4580F /* Model */; };
 		555458F02B85422300DA097F /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */; };
 		555458F12B85422300DA097F /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */; };
 		555458F32B8542DF00DA097F /* MockFirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */; };
@@ -514,7 +514,6 @@
 		5516EBAE2B3F2D5700C558B1 /* KeyStatus+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyStatus+UI.swift"; sourceTree = "<group>"; };
 		5516EBB22B3F2EE700C558B1 /* Language+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+UI.swift"; sourceTree = "<group>"; };
 		5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Technology+UI.swift"; sourceTree = "<group>"; };
-		5516EBB82B3F339E00C558B1 /* KeysOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysOrder.swift; sourceTree = "<group>"; };
 		5516EBBB2B3F33B000C558B1 /* KeysOrder+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeysOrder+UI.swift"; sourceTree = "<group>"; };
 		5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeysOrder+FieldPath.swift"; sourceTree = "<group>"; };
 		5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyView.swift; sourceTree = "<group>"; };
@@ -571,6 +570,7 @@
 		55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
 		55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModelTest.swift; sourceTree = "<group>"; };
 		55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailActions.swift; sourceTree = "<group>"; };
+		5540B75D2B93C51F00F4580F /* Model */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Model; sourceTree = "<group>"; };
 		555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationRepository.swift; sourceTree = "<group>"; };
 		555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestoreRepository.swift; sourceTree = "<group>"; };
 		555458F52B8543C000DA097F /* MockCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudRepository.swift; sourceTree = "<group>"; };
@@ -729,6 +729,7 @@
 				5574B3212B6F031300C9DFB9 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				5574B31D2B6F031300C9DFB9 /* FirebaseAuth in Frameworks */,
 				5574B3122B6F01C200C9DFB9 /* Shimmer in Frameworks */,
+				5540B75F2B93C6FF00F4580F /* Model in Frameworks */,
 				5536E16C2B74435A00E5DCC6 /* AlgoliaSearchClient in Frameworks */,
 				5574B30F2B6F01B500C9DFB9 /* CachedAsyncImage in Frameworks */,
 				5590F2962B797B93008AAC7C /* Zip in Frameworks */,
@@ -756,6 +757,7 @@
 				5574B3332B6F113500C9DFB9 /* FirebaseAuth in Frameworks */,
 				5574B33B2B6F114D00C9DFB9 /* FirebaseStorage in Frameworks */,
 				5574B33D2B6F115B00C9DFB9 /* FirebaseFirestore in Frameworks */,
+				5540B7612B93C7ED00F4580F /* Model in Frameworks */,
 				558ACFBD2B7192D500741793 /* AlgoliaSearchClient in Frameworks */,
 				5574B32B2B6F112400C9DFB9 /* CachedAsyncImage in Frameworks */,
 				5590F24F2B78F1FF008AAC7C /* Zip in Frameworks */,
@@ -958,6 +960,7 @@
 				55CADF2C2B7571A000D04365 /* ci_scripts */,
 				552785C02B27A5120098FE95 /* Phraseon */,
 				55C278FE2B2A3F80005144F1 /* Phraseon_InHouse */,
+				5540B75C2B93C4BE00F4580F /* Modules */,
 				555459092B854D8400DA097F /* PhraseonTests */,
 				552785BF2B27A5120098FE95 /* Products */,
 				55C279082B2A4556005144F1 /* Frameworks */,
@@ -1073,6 +1076,14 @@
 				55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		5540B75C2B93C4BE00F4580F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5540B75D2B93C51F00F4580F /* Model */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		555459092B854D8400DA097F /* PhraseonTests */ = {
@@ -1511,7 +1522,6 @@
 				551AA41C2B3379B700F0B1E2 /* Technology.swift */,
 				55826AAD2B35046F00233D90 /* Key.swift */,
 				55FB5F622B3E409B004D3720 /* KeyStatus.swift */,
-				5516EBB82B3F339E00C558B1 /* KeysOrder.swift */,
 				5516EBEE2B436DAD00C558B1 /* AuthenticationProvider.swift */,
 			);
 			path = Model;
@@ -1769,6 +1779,7 @@
 				5536E16B2B74435A00E5DCC6 /* AlgoliaSearchClient */,
 				5590F2952B797B93008AAC7C /* Zip */,
 				5539D75A2B8006D900BDA216 /* FirebaseRemoteConfig */,
+				5540B75E2B93C6FF00F4580F /* Model */,
 			);
 			productName = Phrasify;
 			productReference = 552785BE2B27A5120098FE95 /* Phraseon.app */;
@@ -1819,6 +1830,7 @@
 				558ACFBC2B7192D500741793 /* AlgoliaSearchClient */,
 				5590F24E2B78F1FF008AAC7C /* Zip */,
 				55028A032B7EB3E200C786D9 /* FirebaseRemoteConfig */,
+				5540B7602B93C7ED00F4580F /* Model */,
 			);
 			productName = Phrasify;
 			productReference = 55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse.app */;
@@ -2129,7 +2141,6 @@
 				55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */,
 				555458F92B85441D00DA097F /* MockStorageRepository.swift in Sources */,
 				557DECFE2B72E5B80090DF0B /* AlgoliaTimestamp.swift in Sources */,
-				5516EBB92B3F339E00C558B1 /* KeysOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2352,7 +2363,6 @@
 				55C278F02B2A3F3A005144F1 /* AppButton.swift in Sources */,
 				555458FA2B85441D00DA097F /* MockStorageRepository.swift in Sources */,
 				557DECFF2B72E5B80090DF0B /* AlgoliaTimestamp.swift in Sources */,
-				5516EBBA2B3F339E00C558B1 /* KeysOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2801,6 +2811,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5574B31B2B6F031300C9DFB9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
+		};
+		5540B75E2B93C6FF00F4580F /* Model */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Model;
+		};
+		5540B7602B93C7ED00F4580F /* Model */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Model;
 		};
 		5574B30E2B6F01B500C9DFB9 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;

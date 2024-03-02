@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Model
 
 final class PreviewFirestoreRepository: FirestoreRepository {
 

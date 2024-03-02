@@ -9,6 +9,7 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreCombineSwift
 import Combine
+import Model
 
 protocol FirestoreRepository {
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum KeysOrder: String, CaseIterable {
+public enum KeysOrder: String, CaseIterable {
     case alphabetically
     case recent
     //case alert
