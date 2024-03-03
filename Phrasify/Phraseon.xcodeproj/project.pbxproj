@@ -789,8 +789,8 @@
 		5516EBAD2B3F2D4700C558B1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5540B76B2B94804F00F4580F /* Foundation */,
 				5516EBB12B3F2ED100C558B1 /* Model */,
-				55DE10492B4AFA07001CB87F /* URLCache+ImageCache.swift */,
 				55FE519E2B5B30BF0084617F /* UIApplication+KeyWindow.swift */,
 			);
 			path = Extensions;
@@ -1022,6 +1022,15 @@
 				5540B75D2B93C51F00F4580F /* Model */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		5540B76B2B94804F00F4580F /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */,
+				55DE10492B4AFA07001CB87F /* URLCache+ImageCache.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		555459092B854D8400DA097F /* PhraseonTests */ = {
@@ -1303,8 +1312,6 @@
 			isa = PBXGroup;
 			children = (
 				55028A0B2B7ECB9800C786D9 /* AppUpdate */,
-				552EC1752B789D250079E754 /* UserDefaultsKey */,
-				55CADF392B75915400D04365 /* DeferredData */,
 				55CADF332B75814E00D04365 /* Secrets */,
 				5536E1672B74361700E5DCC6 /* Animation */,
 				5561C5C22B65A75300C815BC /* SelectableCircle */,
@@ -1416,9 +1423,10 @@
 		55C7621A2B27A61D008CBF30 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				552EC1752B789D250079E754 /* UserDefaultsKey */,
+				55CADF392B75915400D04365 /* DeferredData */,
 				55C279162B2A4BE7005144F1 /* Localized.swift */,
 				55FF425D2B2A674A00F4D523 /* CancelBag.swift */,
-				55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
