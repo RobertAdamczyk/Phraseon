@@ -55,7 +55,7 @@ final class PhotoPickerHandler: ObservableObject {
                     }
                 case .success(nil):
                     self.imageState = .empty
-                case .failure(let error):
+                case .failure:
                     ToastView.showGeneralError()
                     self.imageState = .empty
                 }
