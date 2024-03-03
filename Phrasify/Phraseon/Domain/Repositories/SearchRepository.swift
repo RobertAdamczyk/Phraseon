@@ -8,6 +8,7 @@
 import Foundation
 import AlgoliaSearchClient
 import Model
+import Common
 
 protocol SearchRepository {
 
@@ -42,6 +43,6 @@ final class SearchRepositoryImpl: SearchRepository {
     }
 
     private func getClient(for securedApiKey: String) -> SearchClient {
-        .init(appID: .init(rawValue: Secrets.algoliaAppId), apiKey: .init(rawValue: securedApiKey))
+        .init(appID: .init(rawValue: Secrets.shared.algoliaAppId), apiKey: .init(rawValue: securedApiKey))
     }
 }

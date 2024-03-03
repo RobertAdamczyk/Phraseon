@@ -15,6 +15,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         guard let target = Target(rawValue: Bundle.main.bundleURL.lastPathComponent) else { fatalError("Target not found !") }
         TargetConfiguration.shared.setup(target: target)
+        Secrets.shared.setup(path: Bundle.main.path(forResource: "secrets", ofType: "json"))
         FirebaseApp.configure()
         return true
     }
