@@ -9,7 +9,7 @@ import Foundation
 
 extension UserDefaults {
 
-    enum Key: String {
+    public enum Key: String {
         case email
         case updateInfoData
         case lastSubscriptionPurchaseDate

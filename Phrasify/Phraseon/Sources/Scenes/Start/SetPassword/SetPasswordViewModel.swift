@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Common
 
 final class SetPasswordViewModel: ObservableObject {
 

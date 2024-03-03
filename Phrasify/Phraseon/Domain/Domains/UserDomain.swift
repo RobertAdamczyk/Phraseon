@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Model
+import Common
 
 protocol UserDomainProtocol: AnyObject {
 

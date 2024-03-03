@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Common
 
 final class RegisterViewModel: ObservableObject, Activitable {
 
