@@ -9,11 +9,15 @@ import Foundation
 
 public final class TargetConfiguration {
 
+    public var currentTarget: Target {
+        target
+    }
+
     public func setup(target: Target) {
-        currentTarget = target
+        self.target = target
     }
 
     public static var shared = TargetConfiguration()
 
-    private(set) var currentTarget: Target = .live
+    private var target: Target = .live // .LIVE is Fallback, this should be set on app start.
 }

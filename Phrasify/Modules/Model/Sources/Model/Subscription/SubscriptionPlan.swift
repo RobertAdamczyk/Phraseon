@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Common
 
 public enum SubscriptionPlan: Codable, CaseIterable {
 

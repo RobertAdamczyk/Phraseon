@@ -6,9 +6,8 @@
 //
 
 import FirebaseCore
-import SwiftUI
 import GoogleSignIn
-import Model
+import Common
 
 class AppDelegate: NSObject, UIApplicationDelegate {
 
