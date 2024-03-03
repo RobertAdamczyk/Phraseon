@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GoogleButton: View {
 
-    let action: () -> Void
+    let action: @MainActor () -> Void
 
     private let fillColor: Color = .init(red: 0.07450980392156863, 
                                          green: 0.07450980392156863,

@@ -117,7 +117,6 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         }
     }
 
-    @MainActor
     func onCloseButtonTapped() {
         coordinator.dismissFullScreenCover()
     }
