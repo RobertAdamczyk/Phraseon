@@ -9,6 +9,7 @@ import XCTest
 import Combine
 @testable import Phraseon_InHouse
 @testable import Model
+@testable import Common
 
 final class HomeViewModelTest: XCTestCase {
 
