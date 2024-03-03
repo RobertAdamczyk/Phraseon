@@ -16,7 +16,8 @@ let package = Package(
     ],
     dependencies: [
         // Dodaj zależność Firebase Firestore tutaj
-        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "10.20.0")
+        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "10.20.0"),
+        .package(url: "https://github.com/algolia/algoliasearch-client-swift", from: "8.20.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -25,7 +26,8 @@ let package = Package(
             name: "Model",
             dependencies: [
                 // Upewnij się, że dodajesz Firestore jako zależność dla celu
-                .product(name: "FirebaseFirestoreSwift", package: "firebase-ios-sdk")
+                .product(name: "FirebaseFirestoreSwift", package: "firebase-ios-sdk"),
+                .product(name: "AlgoliaSearchClient", package: "algoliasearch-client-swift")
             ]),
         .testTarget(
             name: "ModelTests",
