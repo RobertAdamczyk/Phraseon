@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol IdentifiableUser {
+public protocol IdentifiableUser {
 
     var id: String? { get }
     var email: String { get }

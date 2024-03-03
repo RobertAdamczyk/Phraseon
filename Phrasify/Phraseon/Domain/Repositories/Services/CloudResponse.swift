@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Model
 
 protocol CloudResponse: Decodable {
     associatedtype Model: Decodable

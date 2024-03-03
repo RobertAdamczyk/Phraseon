@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum KeyStatus: Int, CaseIterable, Codable {
+public enum KeyStatus: Int, CaseIterable, Codable {
 
     case approved = 0
     case review = 1

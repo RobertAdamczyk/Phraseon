@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Technology: String, CaseIterable, Codable {
+public enum Technology: String, CaseIterable, Codable {
     case swift = "SWIFT"
     // case kotlin = "KOTLIN"
 }

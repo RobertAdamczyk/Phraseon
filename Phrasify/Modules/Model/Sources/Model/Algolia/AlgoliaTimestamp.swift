@@ -7,12 +7,17 @@
 
 import Foundation
 
-struct AlgoliaTimestamp: Codable {
-    let seconds: Int
-    let nanoseconds: Int
+public struct AlgoliaTimestamp: Codable {
+    public let seconds: Int
+    public let nanoseconds: Int
 
     enum CodingKeys: String, CodingKey {
         case seconds = "_seconds"
         case nanoseconds = "_nanoseconds"
+    }
+
+    public init(seconds: Int, nanoseconds: Int) {
+        self.seconds = seconds
+        self.nanoseconds = nanoseconds
     }
 }

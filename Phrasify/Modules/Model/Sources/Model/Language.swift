@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Language: String, CaseIterable, Codable {
+public enum Language: String, CaseIterable, Codable {
 
     case arabic = "AR"
     case czech = "CS"

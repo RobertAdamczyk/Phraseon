@@ -7,6 +7,7 @@
 
 import Foundation
 @testable import Phraseon_InHouse
+@testable import Model
 import Firebase
 
 final class MockAuthenticationRepository: AuthenticationRepository {

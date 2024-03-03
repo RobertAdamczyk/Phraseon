@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SubscriptionStatus: String, Codable, CaseIterable {
+public enum SubscriptionStatus: String, Codable, CaseIterable {
 
     case expires = "EXPIRES"
     case renews = "RENEWS"

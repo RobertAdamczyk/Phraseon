@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Model
 
 protocol ProjectUseCaseProtocol: AnyObject {
 

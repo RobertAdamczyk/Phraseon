@@ -8,6 +8,7 @@
 import SwiftUI
 import UniformTypeIdentifiers
 import Zip
+import Model
 
 struct SyncScript: FileDocument {
 

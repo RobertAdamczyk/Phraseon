@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Model
 
 struct SelectMemberRole: View {
 

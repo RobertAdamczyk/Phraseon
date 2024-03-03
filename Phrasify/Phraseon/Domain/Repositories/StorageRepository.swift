@@ -7,6 +7,7 @@
 
 import FirebaseStorage
 import UIKit
+import Model
 
 protocol StorageRepository {
 

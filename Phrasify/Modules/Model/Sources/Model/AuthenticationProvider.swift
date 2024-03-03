@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AuthenticationProvider: String {
+public enum AuthenticationProvider: String {
 
     case password = "password"
     case google = "google.com"

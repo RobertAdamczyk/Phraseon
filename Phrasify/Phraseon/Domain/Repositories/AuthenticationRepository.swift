@@ -8,6 +8,7 @@
 import Firebase
 import Combine
 import GoogleSignIn
+import Model
 
 protocol AuthenticationRepository {
 

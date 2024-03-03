@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import Model
 
 final class PreviewAuthenticationRepository: AuthenticationRepository {
 

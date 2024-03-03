@@ -7,4 +7,4 @@
 
 import Foundation
 
-typealias UserID = String
+public typealias UserID = String

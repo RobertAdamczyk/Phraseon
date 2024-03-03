@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Model
 
 final class PreviewCoordinator: Coordinator, StartActions, RootActions, FullScreenCoverActions, ProjectActions, ProfileActions,
                                 NavigationActions, SelectLanguageActions, SelectTechnologyActions, PaywallActions,

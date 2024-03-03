@@ -7,6 +7,7 @@
 
 import Foundation
 import StoreKit
+import Model
 
 protocol StoreKitRepository {
 

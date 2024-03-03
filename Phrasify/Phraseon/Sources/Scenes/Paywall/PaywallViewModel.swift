@@ -7,6 +7,7 @@
 
 import SwiftUI
 import StoreKit
+import Model
 
 final class PaywallViewModel: ObservableObject, UserDomainProtocol {
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AppError: Error, LocalizedError {
+public enum AppError: Error, LocalizedError {
 
     case idTokenNil
     case idClientNil

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import PhotosUI
+import Model
 
 struct ImageTransferable: Transferable {
     let image: Image

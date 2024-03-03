@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Model
 
 final class ChangePasswordViewModel: ObservableObject {
 
