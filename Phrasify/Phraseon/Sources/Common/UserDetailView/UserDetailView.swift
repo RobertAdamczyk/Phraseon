@@ -10,13 +10,18 @@ import CachedAsyncImage
 
 struct UserDetailView: View {
 
-    let email: String
-    let name: String
-    let surname: String
+    let email: String?
+    let name: String?
+    let surname: String?
     let photoUrl: String?
 
     private var hasName: Bool {
-        !name.isEmpty || !surname.isEmpty
+        return (name?.isEmpty == false) || (surname?.isEmpty == false)
+    }
+
+    private var fullName: String {
+        let fullNameParts = [name ?? "", surname ?? ""].filter { !$0.isEmpty }
+        return fullNameParts.joined(separator: " ")
     }
 
     var body: some View {
@@ -24,7 +29,7 @@ struct UserDetailView: View {
     }
 
     @ViewBuilder
-    private func makeUserRow(email: String, name: String, surname: String, photoUrl: String?) -> some View {
+    private func makeUserRow(email: String?, name: String?, surname: String?, photoUrl: String?) -> some View {
         HStack(spacing: 16) {
             ZStack {
                 if let photoUrl = photoUrl {
@@ -37,12 +42,12 @@ struct UserDetailView: View {
             }
             VStack(alignment: .leading) {
                 if hasName {
-                    Text(name + " " + surname)
+                    Text(fullName)
                         .apply(.regular, size: .S, color: .white)
-                    Text(email)
+                    Text(email ?? "No email address")
                         .apply(.medium, size: .S, color: .lightGray)
                 } else {
-                    Text(email)
+                    Text(email ?? "No email address")
                         .apply(.regular, size: .S, color: .white)
                     Text("placeholder")
                         .apply(.medium, size: .S, color: .lightGray)

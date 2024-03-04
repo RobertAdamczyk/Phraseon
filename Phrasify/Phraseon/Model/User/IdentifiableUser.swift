@@ -10,8 +10,8 @@ import Foundation
 protocol IdentifiableUser {
 
     var id: String? { get }
-    var email: String { get }
-    var name: String { get }
-    var surname: String { get }
+    var email: String? { get }
+    var name: String? { get }
+    var surname: String? { get }
     var photoUrl: String? { get }
 }

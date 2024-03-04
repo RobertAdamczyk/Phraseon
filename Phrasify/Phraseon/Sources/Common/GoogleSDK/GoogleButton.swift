@@ -33,7 +33,7 @@ struct GoogleButton: View {
                     .foregroundStyle(fontColor)
                 Spacer()
             }
-            .frame(height: 54)
+            .frame(height: AppButton.height)
             .background {
                 RoundedRectangle(cornerRadius: 16)
                     .foregroundStyle(fillColor)

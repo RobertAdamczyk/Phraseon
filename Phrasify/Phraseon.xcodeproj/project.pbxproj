@@ -125,6 +125,8 @@
 		552785C22B27A5120098FE95 /* PhraseonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552785C12B27A5120098FE95 /* PhraseonApp.swift */; };
 		552785C62B27A5140098FE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C52B27A5140098FE95 /* Assets.xcassets */; };
 		552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C92B27A5140098FE95 /* Preview Assets.xcassets */; };
+		552BA5122B9679FD00314807 /* SignInWithAppleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BA5112B9679FD00314807 /* SignInWithAppleUseCase.swift */; };
+		552BA5132B9679FD00314807 /* SignInWithAppleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BA5112B9679FD00314807 /* SignInWithAppleUseCase.swift */; };
 		552CA7402B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
 		552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
 		552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
@@ -547,6 +549,7 @@
 		552785C52B27A5140098FE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		552785C72B27A5140098FE95 /* Phraseon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phraseon.entitlements; sourceTree = "<group>"; };
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		552BA5112B9679FD00314807 /* SignInWithAppleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleUseCase.swift; sourceTree = "<group>"; };
 		552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyActions.swift; sourceTree = "<group>"; };
 		552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlgoliaKey+toKey.swift"; sourceTree = "<group>"; };
@@ -1216,6 +1219,7 @@
 				55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */,
 				555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */,
 				55A653E12B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift */,
+				552BA5112B9679FD00314807 /* SignInWithAppleUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -2065,6 +2069,7 @@
 				55DE102D2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAB2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				553722B32B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */,
+				552BA5122B9679FD00314807 /* SignInWithAppleUseCase.swift in Sources */,
 				55C279172B2A4BE7005144F1 /* Localized.swift in Sources */,
 				552CA7402B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */,
 				55854FB12B572C5B00CC5480 /* IsUserProjectOwnerService.swift in Sources */,
@@ -2288,6 +2293,7 @@
 				5516EBAC2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
 				553722B42B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */,
 				55C2791B2B2A4C17005144F1 /* Localized.swift in Sources */,
+				552BA5132B9679FD00314807 /* SignInWithAppleUseCase.swift in Sources */,
 				552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */,
 				55854FB22B572C5B00CC5480 /* IsUserProjectOwnerService.swift in Sources */,
 				55C278EB2B2A3F3A005144F1 /* FontStyle.swift in Sources */,

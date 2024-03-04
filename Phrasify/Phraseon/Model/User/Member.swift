@@ -12,8 +12,8 @@ struct Member: Codable, Hashable, IdentifiableUser {
 
     @DocumentID var id: String?
     var role: Role
-    var name: String
-    var surname: String
-    var email: String
+    var name: String?
+    var surname: String?
+    var email: String?
     var photoUrl: String?
 }

@@ -21,7 +21,7 @@ protocol AuthenticationRepository {
 
     func login(email: String, password: String) async throws
 
-    func login(with credential: AuthCredential) async throws
+    func login(with credential: AuthCredential) async throws -> AuthDataResult?
 
     func signUp(email: String, password: String) async throws
 
@@ -75,8 +75,8 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository {
         try await auth.signIn(withEmail: email, password: password)
     }
 
-    func login(with credential: AuthCredential) async throws {
-        try await auth.signIn(with: credential)
+    func login(with credential: AuthCredential) async throws -> AuthDataResult? {
+        return try await auth.signIn(with: credential)
     }
 
     func signUp(email: String, password: String) async throws {

@@ -44,10 +44,17 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     var userName: String {
         guard let user = user.currentValue else { return "-" }
 
-        if user.name.isEmpty && user.surname.isEmpty {
+        let name = user.name ?? ""
+        let surname = user.surname ?? ""
+
+        let fullNameParts = [name, surname].filter { !$0.isEmpty }
+        let fullName = fullNameParts.joined(separator: " ")
+
+        if fullName.isEmpty {
             return "Enter your name"
         }
-        return user.name + " " + user.surname
+
+        return fullName
     }
 
     var subscriptionValidUntil: String {

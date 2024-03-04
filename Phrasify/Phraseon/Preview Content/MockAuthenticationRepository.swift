@@ -32,8 +32,8 @@ final class PreviewAuthenticationRepository: AuthenticationRepository {
         // empty
     }
     
-    func login(with credential: AuthCredential) async throws {
-        // empty
+    func login(with credential: AuthCredential) async throws -> AuthDataResult? {
+        return nil
     }
     
     func signUp(email: String, password: String) async throws {
