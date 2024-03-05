@@ -221,8 +221,6 @@
 		557DED0B2B72E6100090DF0B /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DED092B72E6100090DF0B /* SearchRepository.swift */; };
 		558074412B2CF08E0041160B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
 		558074422B2CF08E0041160B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
-		558074452B2CF2780041160B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074442B2CF2780041160B /* GoogleButton.swift */; };
-		558074462B2CF2780041160B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074442B2CF2780041160B /* GoogleButton.swift */; };
 		5580744E2B2E341B0041160B /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
 		5580744F2B2E341B0041160B /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
 		558074512B2E38110041160B /* Activitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074502B2E38110041160B /* Activitable.swift */; };
@@ -387,6 +385,14 @@
 		55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E960D82B3CD8E50016DA23 /* CloudRepository.swift */; };
 		55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
+		55FD140B2B97BD90006DA3E4 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14092B97BD90006DA3E4 /* AppleButton.swift */; };
+		55FD140C2B97BD90006DA3E4 /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */; };
+		55FD140D2B97BDA7006DA3E4 /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */; };
+		55FD140E2B97BDAA006DA3E4 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14092B97BD90006DA3E4 /* AppleButton.swift */; };
+		55FD14102B97BDC6006DA3E4 /* AuthenticationProvider+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD140F2B97BDC6006DA3E4 /* AuthenticationProvider+UI.swift */; };
+		55FD14112B97BDC6006DA3E4 /* AuthenticationProvider+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD140F2B97BDC6006DA3E4 /* AuthenticationProvider+UI.swift */; };
+		55FD14132B97BDE3006DA3E4 /* SignInWithAppleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14122B97BDE3006DA3E4 /* SignInWithAppleUseCase.swift */; };
+		55FD14142B97BDE3006DA3E4 /* SignInWithAppleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14122B97BDE3006DA3E4 /* SignInWithAppleUseCase.swift */; };
 		55FE51982B5B15420084617F /* CloudResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51972B5B15420084617F /* CloudResponse.swift */; };
 		55FE51992B5B15420084617F /* CloudResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51972B5B15420084617F /* CloudResponse.swift */; };
 		55FE519C2B5B1AC20084617F /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519B2B5B1AC20084617F /* ErrorHandler.swift */; };
@@ -546,7 +552,6 @@
 		5574B33E2B6F1F8400C9DFB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		557DED092B72E6100090DF0B /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		558074402B2CF08E0041160B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		558074442B2CF2780041160B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		5580744D2B2E341B0041160B /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		558074502B2E38110041160B /* Activitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activitable.swift; sourceTree = "<group>"; };
 		558074532B2E3C8F0041160B /* RootActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootActions.swift; sourceTree = "<group>"; };
@@ -627,6 +632,10 @@
 		55DE10612B4B56D1001CB87F /* SheetActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetActions.swift; sourceTree = "<group>"; };
 		55E960D82B3CD8E50016DA23 /* CloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRepository.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
+		55FD14092B97BD90006DA3E4 /* AppleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
+		55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
+		55FD140F2B97BDC6006DA3E4 /* AuthenticationProvider+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthenticationProvider+UI.swift"; sourceTree = "<group>"; };
+		55FD14122B97BDE3006DA3E4 /* SignInWithAppleUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithAppleUseCase.swift; sourceTree = "<group>"; };
 		55FE51972B5B15420084617F /* CloudResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudResponse.swift; sourceTree = "<group>"; };
 		55FE519B2B5B1AC20084617F /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		55FE519E2B5B30BF0084617F /* UIApplication+KeyWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+KeyWindow.swift"; sourceTree = "<group>"; };
@@ -793,6 +802,7 @@
 				5516EBB22B3F2EE700C558B1 /* Language+UI.swift */,
 				5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */,
 				5516EBBB2B3F33B000C558B1 /* KeysOrder+UI.swift */,
+				55FD140F2B97BDC6006DA3E4 /* AuthenticationProvider+UI.swift */,
 				55DE10432B4AD0D8001CB87F /* Role+UI.swift */,
 				55DE10462B4AD118001CB87F /* Role+SortIndex.swift */,
 				55909A222B58946400A77F21 /* Member+Permissions.swift */,
@@ -1114,14 +1124,6 @@
 			path = Paywall;
 			sourceTree = "<group>";
 		};
-		558074432B2CF2640041160B /* GoogleSDK */ = {
-			isa = PBXGroup;
-			children = (
-				558074442B2CF2780041160B /* GoogleButton.swift */,
-			);
-			path = GoogleSDK;
-			sourceTree = "<group>";
-		};
 		558074472B2CF28F0041160B /* GoogleSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -1133,6 +1135,7 @@
 		558074482B2D12AC0041160B /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				55FD14122B97BDE3006DA3E4 /* SignInWithAppleUseCase.swift */,
 				55DE10572B4B4371001CB87F /* ProjectMemberUseCase.swift */,
 				555A7DE52B51EC0900B2A9B8 /* ProjectUseCase.swift */,
 				55A653E12B6ABB7B00F2B714 /* TranslationApprovalUseCase.swift */,
@@ -1307,7 +1310,7 @@
 				5505378F2B44C0080077912D /* PhotoPicker */,
 				551AA4182B33664800F0B1E2 /* Layout */,
 				5580744C2B2E340C0041160B /* ActivityView */,
-				558074432B2CF2640041160B /* GoogleSDK */,
+				55FD14082B97BD90006DA3E4 /* AuthenticationProviderButtons */,
 				55FF428E2B2BB34200F4D523 /* Toast */,
 				55C279202B2A4CE9005144F1 /* Coordinator */,
 			);
@@ -1520,6 +1523,16 @@
 			);
 			path = LeaveProject;
 			sourceTree = "<group>";
+		};
+		55FD14082B97BD90006DA3E4 /* AuthenticationProviderButtons */ = {
+			isa = PBXGroup;
+			children = (
+				55FD14092B97BD90006DA3E4 /* AppleButton.swift */,
+				55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */,
+			);
+			name = AuthenticationProviderButtons;
+			path = Phraseon/Sources/Common/AuthenticationProviderButtons;
+			sourceTree = SOURCE_ROOT;
 		};
 		55FE519A2B5B1AAA0084617F /* ErrorHandling */ = {
 			isa = PBXGroup;
@@ -1829,6 +1842,7 @@
 				553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */,
 				55DE10622B4B56D1001CB87F /* SheetActions.swift in Sources */,
 				55854FA72B57285200CC5480 /* CreateKeyService.swift in Sources */,
+				55FD14132B97BDE3006DA3E4 /* SignInWithAppleUseCase.swift in Sources */,
 				55854F972B57235800CC5480 /* DeleteMemberService.swift in Sources */,
 				55C279152B2A4BB0005144F1 /* Dependencies.swift in Sources */,
 				553F1BE32B29080B0071A099 /* LoginViewModel.swift in Sources */,
@@ -1863,6 +1877,7 @@
 				55E960D92B3CD8E50016DA23 /* CloudRepository.swift in Sources */,
 				5516EBE52B432D4700C558B1 /* ProfileActions.swift in Sources */,
 				5505C7FA2B55EEB900806B4F /* StandardInformationProtocol.swift in Sources */,
+				55FD14102B97BDC6006DA3E4 /* AuthenticationProvider+UI.swift in Sources */,
 				55826A972B34D5F700233D90 /* ProjectDetailViewModel.swift in Sources */,
 				5516EBC72B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */,
 				5570FF532B61B1FF0011208F /* PaywallCoordinator.swift in Sources */,
@@ -1929,6 +1944,7 @@
 				55826A9F2B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
 				5516EBC02B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */,
 				550537972B44C0DE0077912D /* ImageTransferable.swift in Sources */,
+				55FD140B2B97BD90006DA3E4 /* AppleButton.swift in Sources */,
 				5516EBDC2B4326B600C558B1 /* ProfileNameView.swift in Sources */,
 				5516EBF22B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */,
 				550537912B44C0170077912D /* PhotoPickerView.swift in Sources */,
@@ -1939,7 +1955,6 @@
 				5536E1692B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3572B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
-				558074452B2CF2780041160B /* GoogleButton.swift in Sources */,
 				5561C5C42B65A76500C815BC /* SelectableCircle.swift in Sources */,
 				553722B02B631DC40061CF52 /* ViewBackground.swift in Sources */,
 				55DE10332B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,
@@ -1959,6 +1974,7 @@
 				55909A202B58798D00A77F21 /* KeyDetailView+ApproveButton.swift in Sources */,
 				553722AD2B631DA00061CF52 /* CellBackground.swift in Sources */,
 				55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */,
+				55FD140C2B97BD90006DA3E4 /* GoogleButton.swift in Sources */,
 				553F1BDD2B2907C10071A099 /* RegisterView.swift in Sources */,
 				55854F8E2B571FAB00CC5480 /* ChangeProjectOwnerService.swift in Sources */,
 				55826AA22B34FD1600233D90 /* CreateKeyViewModel.swift in Sources */,
@@ -2026,7 +2042,9 @@
 				5513C2532B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				55DE10632B4B56D1001CB87F /* SheetActions.swift in Sources */,
 				55854FA82B57285200CC5480 /* CreateKeyService.swift in Sources */,
+				55FD14142B97BDE3006DA3E4 /* SignInWithAppleUseCase.swift in Sources */,
 				55854F982B57235800CC5480 /* DeleteMemberService.swift in Sources */,
+				55FD140D2B97BDA7006DA3E4 /* GoogleButton.swift in Sources */,
 				55C278E22B2A3F3A005144F1 /* LoginView.swift in Sources */,
 				55C278E32B2A3F3A005144F1 /* LoginViewModel.swift in Sources */,
 				5513C2492B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,
@@ -2059,6 +2077,7 @@
 				55C278E52B2A3F3A005144F1 /* AppTextField.swift in Sources */,
 				55E960DA2B3CD8E50016DA23 /* CloudRepository.swift in Sources */,
 				5516EBE62B432D4700C558B1 /* ProfileActions.swift in Sources */,
+				55FD14112B97BDC6006DA3E4 /* AuthenticationProvider+UI.swift in Sources */,
 				5505C7FB2B55EEB900806B4F /* StandardInformationProtocol.swift in Sources */,
 				55826A982B34D5F700233D90 /* ProjectDetailViewModel.swift in Sources */,
 				5516EBC82B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */,
@@ -2125,6 +2144,7 @@
 				5570FF572B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */,
 				55826AA02B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
 				5516EBC12B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */,
+				55FD140E2B97BDAA006DA3E4 /* AppleButton.swift in Sources */,
 				550537982B44C0DE0077912D /* ImageTransferable.swift in Sources */,
 				5516EBDD2B4326B600C558B1 /* ProfileNameView.swift in Sources */,
 				5516EBF32B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */,
@@ -2136,7 +2156,6 @@
 				5536E16A2B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3582B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				559E2D572B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
-				558074462B2CF2780041160B /* GoogleButton.swift in Sources */,
 				5561C5C52B65A76500C815BC /* SelectableCircle.swift in Sources */,
 				553722B12B631DC40061CF52 /* ViewBackground.swift in Sources */,
 				55DE10342B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,

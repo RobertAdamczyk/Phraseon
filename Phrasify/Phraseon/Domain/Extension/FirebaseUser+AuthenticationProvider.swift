@@ -6,14 +6,16 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseAuth
 import Model
 
-extension Firebase.User {
+extension FirebaseAuth.User {
 
     var authenticationProvider: AuthenticationProvider? {
         for userInfo in self.providerData {
-            return .init(rawValue: userInfo.providerID)
+            if let authenticationProvider = AuthenticationProvider(rawValue: userInfo.providerID) {
+                return authenticationProvider
+            }
         }
         return nil
     }

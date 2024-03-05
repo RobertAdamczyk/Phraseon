@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct LoginView: View {
 
@@ -29,6 +30,8 @@ struct LoginView: View {
             }
             VStack(spacing: 32) {
                 if focusedField == nil {
+                    AppleButton(onRequest: viewModel.onLoginWithAppleTapped,
+                                onCompletion: viewModel.handleLoginWithApple)
                     GoogleButton(action: viewModel.onLoginWithGoogleTapped)
                     AppDivider(with: "OR")
                 }

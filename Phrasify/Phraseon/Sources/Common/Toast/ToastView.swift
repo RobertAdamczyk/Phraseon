@@ -32,18 +32,14 @@ public struct ToastView: View {
     let message: String
 
     @State private var startAnimation: Bool = false
+    @State private var didAppear: Bool = false
     @State private var dragOffset: CGFloat = .zero
     @State private var toastSize: CGSize = .zero
-
-    private var safeAreaInsets: UIEdgeInsets {
-        UIApplication.shared.keyWindow?.safeAreaInsets ?? .zero
-    }
 
     internal static var toastDuration: CGFloat = 3
 
     public var body: some View {
         VStack {
-            Spacer()
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading) {
                     Label {
@@ -58,19 +54,28 @@ public struct ToastView: View {
                 Spacer()
             }
             .padding(16)
-            .padding(.top, safeAreaInsets.top)
-            .applyCellBackground()
-            .offset(y: startAnimation ? toastSize.height : 0)
-            .animation(.easeInOut, value: startAnimation)
-            .offset(y: dragOffset)
             .background {
-                GeometryReader { proxy in
-                    Color.clear
-                        .onAppear {
-                            toastSize = proxy.size
+                Color.clear
+                    .applyCellBackground()
+                    .background {
+                        GeometryReader { proxy in
+                            Color.clear
+                                .onAppear {
+                                    print("onAppear \(proxy.size)")
+                                    toastSize = proxy.size
+                                    didAppear = true
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                                        performAnimation()
+                                    }
+                                }
                         }
-                }
+                    }
+                    .ignoresSafeArea()
+
             }
+            .offset(y: startAnimation ? 0 : -toastSize.height)
+            .animation(.default, value: startAnimation)
+            .offset(y: dragOffset)
             .gesture(
                 DragGesture()
                     .onChanged { gesture in
@@ -83,21 +88,27 @@ public struct ToastView: View {
                         }
                     }
             )
+            Spacer()
         }
-        .onAppear {
-            startAnimation = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + ToastView.toastDuration) {
-                startAnimation = false
-            }
+        .opacity(didAppear ? 1 : 0)
+    }
+
+    private func performAnimation() {
+        startAnimation = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + ToastView.toastDuration) {
+            startAnimation = false
         }
-        .offset(y: -UIScreen.main.bounds.height)
-        .ignoresSafeArea()
     }
 }
 
 #Preview {
     ZStack {
         appColor(.black)
-        ToastView(type: .error, message: "aklsdjalksjdlajksdkja")
+        ToastView(type: .error, message: "aklsdjalksjdlajksdkja asdasdasd asdasdasdas sadasdasdasd sadasdas asdasdasdasd")
+    }
+    .overlay {
+        AppButton(style: .fill("TEST", .lightBlue), action: .main({
+            ToastView.showGeneralError()
+        }))
     }
 }

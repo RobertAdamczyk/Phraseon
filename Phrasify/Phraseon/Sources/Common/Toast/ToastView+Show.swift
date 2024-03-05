@@ -10,20 +10,23 @@ import SwiftUI
 extension ToastView {
 
     private static func show(toast: ToastView) {
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
+        DispatchQueue.main.async {
+            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
 
 
-        let hostingController = UIHostingController(rootView: toast)
-        hostingController.view.backgroundColor = .clear
+            let hostingController = UIHostingController(rootView: toast)
+            hostingController.view.backgroundColor = .clear
 
-        let toastWindow = PassthroughWindow(windowScene: windowScene)
-        toastWindow.windowLevel = .alert + 1
-        toastWindow.rootViewController = hostingController
-        toastWindow.makeKeyAndVisible()
+            let toastWindow = PassthroughWindow(windowScene: windowScene)
+            toastWindow.windowLevel = .alert + 1
+            toastWindow.rootViewController = hostingController
+            toastWindow.makeKeyAndVisible()
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + ToastView.toastDuration + 1) {
-            toastWindow.isHidden = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + ToastView.toastDuration + 1) {
+                toastWindow.isHidden = true
+            }
         }
+
     }
 
     public static func showError(message: String?) {

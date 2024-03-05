@@ -29,11 +29,11 @@ struct GoogleButton: View {
                 Spacer()
                 Image(.googleIcon)
                 Text(text)
-                    .font(.custom("Roboto-Medium", fixedSize: 14))
+                    .font(.custom("Roboto-Medium", fixedSize: 20))
                     .foregroundStyle(fontColor)
                 Spacer()
             }
-            .frame(height: 54)
+            .frame(height: AppButton.height)
             .background {
                 RoundedRectangle(cornerRadius: 16)
                     .foregroundStyle(fillColor)

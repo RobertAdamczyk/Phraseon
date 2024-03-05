@@ -11,9 +11,9 @@ import FirebaseFirestoreSwift
 public struct User: Codable, Hashable, IdentifiableUser {
 
     @DocumentID public var id: String?
-    public var email: String
-    public var name: String
-    public var surname: String
+    public var email: String?
+    public var name: String?
+    public var surname: String?
     public var createdAt: Date
     public var subscriptionId: UUID
     public var subscriptionStatus: SubscriptionStatus?

@@ -26,7 +26,8 @@ let package = Package(
             name: "Model",
             dependencies: [
                 .product(name: "FirebaseFirestoreSwift", package: "firebase-ios-sdk"),
-                .product(name: "AlgoliaSearchClient", package: "algoliasearch-client-swift")
+                .product(name: "AlgoliaSearchClient", package: "algoliasearch-client-swift"),
+                .product(name: "Common", package: "Common")
             ]),
         .testTarget(
             name: "ModelTests",

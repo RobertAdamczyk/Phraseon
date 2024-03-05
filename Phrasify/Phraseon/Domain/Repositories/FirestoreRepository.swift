@@ -158,8 +158,7 @@ final class FirestoreRepositoryImpl: FirestoreRepository {
 
     func setProfileName(userId: UserID, name: String, surname: String) async throws {
         let ref =  db.collection(Collections.users.rawValue).document(userId)
-        try await ref.updateData(["name": name,
-                                  "surname": surname])
+        try await ref.setData(["name": name, "surname": surname], merge: true)
     }
 
     func setProfilePhotoUrl(userId: UserID, photoUrl: String) async throws {

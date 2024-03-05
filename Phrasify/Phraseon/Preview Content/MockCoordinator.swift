@@ -30,7 +30,7 @@ final class PreviewCoordinator: Coordinator, StartActions, RootActions, FullScre
     func popView() { /*empty*/ }
 
     func showProfile() { /*empty*/ }
-    func showProfileName(name: String, surname: String) { /*empty*/ }
+    func showProfileName(name: String?, surname: String?) { /*empty*/ }
     func presentCreateProject() { /*empty*/ }
     func presentCreateKey(project: Project) { /*empty*/ }
     func dismissFullScreenCover() { /*empty*/ }

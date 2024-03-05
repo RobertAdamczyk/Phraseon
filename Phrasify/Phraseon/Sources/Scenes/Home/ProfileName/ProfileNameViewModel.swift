@@ -21,10 +21,10 @@ final class ProfileNameViewModel: ObservableObject {
 
     private let coordinator: ProfileNameCoordinator
 
-    init(name: String, surname: String, coordinator: ProfileNameCoordinator) {
+    init(name: String?, surname: String?, coordinator: ProfileNameCoordinator) {
         self.coordinator = coordinator
-        self.name = name
-        self.surname = surname
+        self.name = name ?? ""
+        self.surname = surname ?? ""
     }
 
     @MainActor

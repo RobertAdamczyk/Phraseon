@@ -10,6 +10,8 @@ import Lottie
 
 struct AppButton: View {
 
+    static let height: CGFloat = 54
+
     let style: Style
     let action: Action
 
@@ -56,7 +58,7 @@ struct AppButton: View {
                 }
             }
             .apply(.medium, size: .L, color: .black)
-            .frame(height: 54)
+            .frame(height: Self.height)
             .frame(maxWidth: .infinity, alignment: .center)
             .background {
                 makeBackground()

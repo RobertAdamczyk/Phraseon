@@ -97,7 +97,7 @@ extension RootCoordinator: RootActions {
 
 extension RootCoordinator: ProfileActions {
 
-    func showProfileName(name: String, surname: String) {
+    func showProfileName(name: String?, surname: String?) {
         let viewModel = ProfileNameViewModel(name: name, surname: surname, coordinator: self)
         let view: NavigationView = .profileName(viewModel: viewModel)
         navigationViews.append(view)
