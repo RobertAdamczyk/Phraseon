@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import Model
+import Domain
 
 final class RootCoordinator: ObservableObject, Coordinator {
 

@@ -12,8 +12,6 @@
 		550041FD2B6C3FD700073384 /* PaywallActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550041FC2B6C3FD700073384 /* PaywallActions.swift */; };
 		550041FE2B6C3FD700073384 /* PaywallActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550041FC2B6C3FD700073384 /* PaywallActions.swift */; };
 		55028A042B7EB3E200C786D9 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 55028A032B7EB3E200C786D9 /* FirebaseRemoteConfig */; };
-		55028A062B7EB41300C786D9 /* ConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A052B7EB41300C786D9 /* ConfigurationRepository.swift */; };
-		55028A072B7EB41300C786D9 /* ConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A052B7EB41300C786D9 /* ConfigurationRepository.swift */; };
 		55028A092B7EB58F00C786D9 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */; };
 		55028A0A2B7EB58F00C786D9 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */; };
 		55028A0D2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */; };
@@ -150,6 +148,8 @@
 		5540B7612B93C7ED00F4580F /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 5540B7602B93C7ED00F4580F /* Model */; };
 		5540B76E2B94830C00F4580F /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 5540B76D2B94830C00F4580F /* Common */; };
 		5540B7702B94831200F4580F /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 5540B76F2B94831200F4580F /* Common */; };
+		5547F9C92B97C4D8008136F9 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 5547F9C82B97C4D8008136F9 /* Domain */; };
+		5547F9CB2B97C4DD008136F9 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 5547F9CA2B97C4DD008136F9 /* Domain */; };
 		555458F02B85422300DA097F /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */; };
 		555458F12B85422300DA097F /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */; };
 		555458F32B8542DF00DA097F /* MockFirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */; };
@@ -444,7 +444,6 @@
 /* Begin PBXFileReference section */
 		550041F92B6C3B5300073384 /* StartTrialService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTrialService.swift; sourceTree = "<group>"; };
 		550041FC2B6C3FD700073384 /* PaywallActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallActions.swift; sourceTree = "<group>"; };
-		55028A052B7EB41300C786D9 /* ConfigurationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationRepository.swift; sourceTree = "<group>"; };
 		55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateHandler.swift; sourceTree = "<group>"; };
 		5502D9372B868B2800A0B110 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
@@ -523,6 +522,7 @@
 		55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailActions.swift; sourceTree = "<group>"; };
 		5540B75D2B93C51F00F4580F /* Model */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Model; sourceTree = "<group>"; };
 		5540B76C2B94812900F4580F /* Common */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Common; sourceTree = "<group>"; };
+		5547F9C72B97C3B6008136F9 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		555458EF2B85422300DA097F /* MockAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationRepository.swift; sourceTree = "<group>"; };
 		555458F22B8542DF00DA097F /* MockFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestoreRepository.swift; sourceTree = "<group>"; };
 		555458F52B8543C000DA097F /* MockCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudRepository.swift; sourceTree = "<group>"; };
@@ -675,6 +675,7 @@
 				5574B3272B6F031300C9DFB9 /* FirebaseStorage in Frameworks */,
 				5539D75B2B8006D900BDA216 /* FirebaseRemoteConfig in Frameworks */,
 				5574B31F2B6F031300C9DFB9 /* FirebaseFirestore in Frameworks */,
+				5547F9C92B97C4D8008136F9 /* Domain in Frameworks */,
 				5574B3232B6F031300C9DFB9 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,6 +705,7 @@
 				5574B3352B6F113E00C9DFB9 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				55028A042B7EB3E200C786D9 /* FirebaseRemoteConfig in Frameworks */,
 				5574B32F2B6F112C00C9DFB9 /* GoogleSignIn in Frameworks */,
+				5547F9CB2B97C4DD008136F9 /* Domain in Frameworks */,
 				5574B3312B6F112F00C9DFB9 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1010,6 +1012,7 @@
 		5540B75C2B93C4BE00F4580F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5547F9C72B97C3B6008136F9 /* Domain */,
 				5540B75D2B93C51F00F4580F /* Model */,
 				5540B76C2B94812900F4580F /* Common */,
 			);
@@ -1358,7 +1361,6 @@
 			children = (
 				55854F852B571D3000CC5480 /* Services */,
 				55C279262B2A4DFC005144F1 /* AuthenticationRepository.swift */,
-				55028A052B7EB41300C786D9 /* ConfigurationRepository.swift */,
 				5505379D2B44C5C30077912D /* StorageRepository.swift */,
 				55E960D82B3CD8E50016DA23 /* CloudRepository.swift */,
 				551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */,
@@ -1642,6 +1644,7 @@
 				5539D75A2B8006D900BDA216 /* FirebaseRemoteConfig */,
 				5540B75E2B93C6FF00F4580F /* Model */,
 				5540B76F2B94831200F4580F /* Common */,
+				5547F9C82B97C4D8008136F9 /* Domain */,
 			);
 			productName = Phrasify;
 			productReference = 552785BE2B27A5120098FE95 /* Phraseon.app */;
@@ -1694,6 +1697,7 @@
 				55028A032B7EB3E200C786D9 /* FirebaseRemoteConfig */,
 				5540B7602B93C7ED00F4580F /* Model */,
 				5540B76D2B94830C00F4580F /* Common */,
+				5547F9CA2B97C4DD008136F9 /* Domain */,
 			);
 			productName = Phrasify;
 			productReference = 55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse.app */;
@@ -1950,7 +1954,6 @@
 				550537912B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4212B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FE519C2B5B1AC20084617F /* ErrorHandler.swift in Sources */,
-				55028A062B7EB41300C786D9 /* ConfigurationRepository.swift in Sources */,
 				55FE51B72B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
 				5536E1692B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3572B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
@@ -2151,7 +2154,6 @@
 				550537922B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4222B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FE519D2B5B1AC20084617F /* ErrorHandler.swift in Sources */,
-				55028A072B7EB41300C786D9 /* ConfigurationRepository.swift in Sources */,
 				55FE51B82B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
 				5536E16A2B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3582B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
@@ -2646,6 +2648,14 @@
 		5540B76F2B94831200F4580F /* Common */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Common;
+		};
+		5547F9C82B97C4D8008136F9 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		5547F9CA2B97C4DD008136F9 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
 		};
 		5574B30E2B6F01B500C9DFB9 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;

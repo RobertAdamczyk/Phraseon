@@ -9,16 +9,16 @@ import Foundation
 import Combine
 import FirebaseRemoteConfig
 
-protocol ConfigurationRepository {
+public protocol ConfigurationRepository {
 
     var configUpdatePublisher: AnyPublisher<Void, Never> { get }
 
     func getValue(for key: ConfigurationRepositoryImpl.ConfigKey) -> RemoteConfigValue
 }
 
-final class ConfigurationRepositoryImpl: ConfigurationRepository {
+public final class ConfigurationRepositoryImpl: ConfigurationRepository {
 
-    var configUpdatePublisher: AnyPublisher<Void, Never> {
+    public var configUpdatePublisher: AnyPublisher<Void, Never> {
         configUpdateSubject.eraseToAnyPublisher()
     }
 
@@ -27,7 +27,7 @@ final class ConfigurationRepositoryImpl: ConfigurationRepository {
 
     private let configUpdateSubject = PassthroughSubject<Void, Never>()
 
-    init() {
+    public init() {
         self.remoteConfig = RemoteConfig.remoteConfig()
         self.settings = .init()
         settings.minimumFetchInterval = 0
@@ -68,7 +68,7 @@ final class ConfigurationRepositoryImpl: ConfigurationRepository {
 
 extension ConfigurationRepositoryImpl {
 
-    enum ConfigKey: String {
+    public enum ConfigKey: String {
         case versionUpdateInfo
     }
 }
