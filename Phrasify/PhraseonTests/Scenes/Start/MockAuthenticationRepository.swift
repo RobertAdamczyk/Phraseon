@@ -37,8 +37,9 @@ final class MockAuthenticationRepository: AuthenticationRepository {
         self.enteredPassword = password
     }
 
-    func login(with credential: AuthCredential) async throws {
+    func login(with credential: AuthCredential) async throws -> AuthDataResult? {
         credentialToLogin = credential
+        return nil
     }
 
     func signUp(email: String, password: String) async throws {
