@@ -33,6 +33,10 @@ final class ChangePasswordViewModel: ObservableObject {
         }
     }
 
+    var providerTitle: String {
+        authenticationProvider.providerTitle
+    }
+
     let passwordValidationHandler = PasswordValidationHandler()
 
     private let coordinator: ChangePasswordCoordinator
@@ -50,7 +54,7 @@ final class ChangePasswordViewModel: ObservableObject {
         self.state = {
             switch authenticationProvider {
             case .password: return .currentPassword
-            case .google: return .unavailable
+            case .google, .apple: return .unavailable
             }
         }()
         setupPasswordTextSubscriber()
@@ -96,7 +100,7 @@ final class ChangePasswordViewModel: ObservableObject {
 extension ChangePasswordViewModel {
 
     enum State {
-        case unavailable // for example google login
+        case unavailable // for google/apple login
         case currentPassword
         case newPassword
         case confirmNewPassword

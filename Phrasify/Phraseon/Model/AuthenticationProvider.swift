@@ -11,4 +11,5 @@ enum AuthenticationProvider: String {
 
     case password = "password"
     case google = "google.com"
+    case apple = "apple.com"
 }

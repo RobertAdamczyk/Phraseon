@@ -60,9 +60,9 @@ struct ChangePasswordView: View {
 
     private var unavailableContent: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Unavailable for Google Accounts")
+            Text("Unavailable for \(viewModel.providerTitle) Accounts")
                 .apply(.bold, size: .L, color: .white)
-            Text("Notice: As you're logged in using your Google account, the password for this app cannot be changed here. Your app login is linked to your Google account, and any password changes must be made through your Google account settings. Please visit Google's account management to update your password. We appreciate your understanding and are here to assist with any other account inquiries you may have.")
+            Text("Notice: As you're logged in using your \(viewModel.providerTitle) account, the password for this app cannot be changed here. Your app login is linked to your \(viewModel.providerTitle) account, and any password changes must be made through your \(viewModel.providerTitle) account settings. Please visit \(viewModel.providerTitle)'s account management to update your password. We appreciate your understanding and are here to assist with any other account inquiries you may have.")
                 .apply(.regular, size: .S, color: .white)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
