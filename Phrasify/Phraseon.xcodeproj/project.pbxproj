@@ -437,6 +437,8 @@
 		55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FB5F632B3E409B004D3720 /* KeyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F622B3E409B004D3720 /* KeyStatus.swift */; };
 		55FB5F642B3E409B004D3720 /* KeyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F622B3E409B004D3720 /* KeyStatus.swift */; };
+		55FD14062B97B7B8006DA3E4 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14052B97B7B8006DA3E4 /* AppleButton.swift */; };
+		55FD14072B97B7B8006DA3E4 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14052B97B7B8006DA3E4 /* AppleButton.swift */; };
 		55FE51982B5B15420084617F /* CloudResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51972B5B15420084617F /* CloudResponse.swift */; };
 		55FE51992B5B15420084617F /* CloudResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51972B5B15420084617F /* CloudResponse.swift */; };
 		55FE519C2B5B1AC20084617F /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE519B2B5B1AC20084617F /* ErrorHandler.swift */; };
@@ -705,6 +707,7 @@
 		55E960D82B3CD8E50016DA23 /* CloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRepository.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FB5F622B3E409B004D3720 /* KeyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatus.swift; sourceTree = "<group>"; };
+		55FD14052B97B7B8006DA3E4 /* AppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 		55FE51972B5B15420084617F /* CloudResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudResponse.swift; sourceTree = "<group>"; };
 		55FE519B2B5B1AC20084617F /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		55FE519E2B5B30BF0084617F /* UIApplication+KeyWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+KeyWindow.swift"; sourceTree = "<group>"; };
@@ -1201,12 +1204,13 @@
 			path = Algolia;
 			sourceTree = "<group>";
 		};
-		558074432B2CF2640041160B /* GoogleSDK */ = {
+		558074432B2CF2640041160B /* AuthenticationProviderButtons */ = {
 			isa = PBXGroup;
 			children = (
 				558074442B2CF2780041160B /* GoogleButton.swift */,
+				55FD14052B97B7B8006DA3E4 /* AppleButton.swift */,
 			);
-			path = GoogleSDK;
+			path = AuthenticationProviderButtons;
 			sourceTree = "<group>";
 		};
 		558074472B2CF28F0041160B /* GoogleSDK */ = {
@@ -1410,7 +1414,7 @@
 				5505378F2B44C0080077912D /* PhotoPicker */,
 				551AA4182B33664800F0B1E2 /* Layout */,
 				5580744C2B2E340C0041160B /* ActivityView */,
-				558074432B2CF2640041160B /* GoogleSDK */,
+				558074432B2CF2640041160B /* AuthenticationProviderButtons */,
 				55FF428E2B2BB34200F4D523 /* Toast */,
 				55C279202B2A4CE9005144F1 /* Coordinator */,
 			);
@@ -2063,6 +2067,7 @@
 				55FE51BD2B5DAD240084617F /* SetBaseLanguageService.swift in Sources */,
 				551AA42A2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55D41E1A2B68219200FADB4E /* SubscriptionPlan.swift in Sources */,
+				55FD14062B97B7B8006DA3E4 /* AppleButton.swift in Sources */,
 				55826A8A2B34C63900233D90 /* UserID.swift in Sources */,
 				55B841502B4CB67B007697AF /* IdentifiableUser.swift in Sources */,
 				55DE10582B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
@@ -2288,6 +2293,7 @@
 				55FE51BE2B5DAD240084617F /* SetBaseLanguageService.swift in Sources */,
 				551AA42B2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55826A8B2B34C63900233D90 /* UserID.swift in Sources */,
+				55FD14072B97B7B8006DA3E4 /* AppleButton.swift in Sources */,
 				55B841512B4CB67B007697AF /* IdentifiableUser.swift in Sources */,
 				55DE10592B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
 				55FE51AE2B5D1C830084617F /* ValidationHandlerProtocol.swift in Sources */,

@@ -30,12 +30,8 @@ struct LoginView: View {
             }
             VStack(spacing: 32) {
                 if focusedField == nil {
-                    SignInWithAppleButton(.continue,
-                                          onRequest: viewModel.onLoginWithAppleTapped,
-                                          onCompletion: viewModel.handleLoginWithApple)
-                    .signInWithAppleButtonStyle(.white)
-                    .frame(height: AppButton.height)
-                    .clipShape(.rect(cornerRadius: 16))
+                    AppleButton(onRequest: viewModel.onLoginWithAppleTapped,
+                                onCompletion: viewModel.handleLoginWithApple)
                     GoogleButton(action: viewModel.onLoginWithGoogleTapped)
                     AppDivider(with: "OR")
                 }

@@ -64,7 +64,17 @@ final class LoginViewModel: ObservableObject, Activitable {
         signInWithAppleUseCase.performLogin(request: request)
     }
 
+    @MainActor
     func handleLoginWithApple(result: Result<ASAuthorization, any Error>) {
-        signInWithAppleUseCase.completeLogin(result: result)
+        startActivity()
+        Task {
+            do {
+                try await signInWithAppleUseCase.completeLogin(result: result)
+            } catch {
+                let error = ErrorHandler(error: error)
+                ToastView.showError(message: error.localizedDescription)
+            }
+            stopActivity()
+        }
     }
 }

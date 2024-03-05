@@ -29,7 +29,7 @@ final class SignInWithAppleUseCase {
         request.nonce = sha256(nonce)
     }
 
-    func completeLogin(result: Result<ASAuthorization, any Error>) {
+    func completeLogin(result: Result<ASAuthorization, any Error>) async throws {
         switch result {
         case .success(let success):
             if let appleIDCredential = success.credential as? ASAuthorizationAppleIDCredential {
@@ -47,17 +47,12 @@ final class SignInWithAppleUseCase {
                 let credential = OAuthProvider.credential(withProviderID: "apple.com",
                                                           idToken: idTokenString,
                                                           rawNonce: currentNonce)
-                Task {
-                    do {
-                        let result = try await authenticationRepository.login(with: credential)
-                        updateNameIfNecessary(appleIDCredential: appleIDCredential, result: result)
-                    } catch {
-                        ToastView.showGeneralError()
-                    }
-                }
+
+                let result = try await authenticationRepository.login(with: credential)
+                updateNameIfNecessary(appleIDCredential: appleIDCredential, result: result)
             }
-        case .failure:
-            ToastView.showGeneralError()
+        case .failure(let error):
+            throw error
         }
     }
 

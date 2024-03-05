@@ -19,6 +19,8 @@ struct RegisterView: View {
                 VStack(alignment: .leading, spacing: 32) {
                     AppTitle(title: "Get your free account")
                     if focusedField == nil {
+                        AppleButton(onRequest: viewModel.onLoginWithAppleTapped,
+                                    onCompletion: viewModel.handleLoginWithApple)
                         GoogleButton(action: viewModel.onLoginWithGoogleTapped)
                         AppDivider(with: "OR")
                     }
