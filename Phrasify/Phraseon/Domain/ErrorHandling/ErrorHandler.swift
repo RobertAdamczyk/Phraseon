@@ -7,6 +7,8 @@
 
 import Foundation
 import Firebase
+import AuthenticationServices
+import GoogleSignIn
 
 struct ErrorHandler {
 
@@ -31,6 +33,12 @@ struct ErrorHandler {
     }
 
     let error: Error
+
+    var shouldIgnoreError: Bool {
+        return (error as? GIDSignInError)?.code == .canceled ||
+               (error as? ASAuthorizationError)?.code == .canceled ||
+               (error as? ASAuthorizationError)?.code == .unknown
+    }
 
     var localizedDescription: String? {
         if let authError = error as? AuthErrorCode {
