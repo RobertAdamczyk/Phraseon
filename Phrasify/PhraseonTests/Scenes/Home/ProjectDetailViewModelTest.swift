@@ -10,6 +10,7 @@ import Combine
 @testable import Phraseon_InHouse
 @testable import Model
 @testable import Common
+@testable import Domain
 
 final class ProjectDetailViewModelTest: XCTestCase {
 
