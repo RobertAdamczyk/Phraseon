@@ -64,8 +64,6 @@
 		5516EBB72B3F2EF900C558B1 /* Technology+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */; };
 		5516EBBC2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBBB2B3F33B000C558B1 /* KeysOrder+UI.swift */; };
 		5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBBB2B3F33B000C558B1 /* KeysOrder+UI.swift */; };
-		5516EBC02B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */; };
-		5516EBC12B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */; };
 		5516EBC42B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */; };
 		5516EBC52B3F6B0100C558B1 /* EnterContentKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */; };
 		5516EBC72B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */; };
@@ -86,8 +84,6 @@
 		5516EBEA2B43609300C558B1 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBE82B43609300C558B1 /* ChangePasswordView.swift */; };
 		5516EBEC2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBEB2B4360A000C558B1 /* ChangePasswordViewModel.swift */; };
 		5516EBED2B4360A000C558B1 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBEB2B4360A000C558B1 /* ChangePasswordViewModel.swift */; };
-		5516EBF22B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBF12B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift */; };
-		5516EBF32B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBF12B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift */; };
 		551AA40C2B334FB800F0B1E2 /* FullScreenCoverActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* FullScreenCoverActions.swift */; };
 		551AA40D2B334FB800F0B1E2 /* FullScreenCoverActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40B2B334FB800F0B1E2 /* FullScreenCoverActions.swift */; };
 		551AA4102B335D1A00F0B1E2 /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */; };
@@ -102,8 +98,6 @@
 		551AA4252B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4232B337A9200F0B1E2 /* SelectTechnologyViewModel.swift */; };
 		551AA4272B337D2900F0B1E2 /* AppTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4262B337D2900F0B1E2 /* AppTitle.swift */; };
 		551AA4282B337D2900F0B1E2 /* AppTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4262B337D2900F0B1E2 /* AppTitle.swift */; };
-		551AA42A2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */; };
-		551AA42B2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */; };
 		552785C22B27A5120098FE95 /* PhraseonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552785C12B27A5120098FE95 /* PhraseonApp.swift */; };
 		552785C62B27A5140098FE95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C52B27A5140098FE95 /* Assets.xcassets */; };
 		552785CA2B27A5140098FE95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C92B27A5140098FE95 /* Preview Assets.xcassets */; };
@@ -464,7 +458,6 @@
 		5516EBB22B3F2EE700C558B1 /* Language+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language+UI.swift"; sourceTree = "<group>"; };
 		5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Technology+UI.swift"; sourceTree = "<group>"; };
 		5516EBBB2B3F33B000C558B1 /* KeysOrder+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeysOrder+UI.swift"; sourceTree = "<group>"; };
-		5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeysOrder+FieldPath.swift"; sourceTree = "<group>"; };
 		5516EBC32B3F6B0100C558B1 /* EnterContentKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyView.swift; sourceTree = "<group>"; };
 		5516EBC62B3F6B2C00C558B1 /* EnterContentKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyViewModel.swift; sourceTree = "<group>"; };
 		5516EBCE2B40D2F500C558B1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -475,7 +468,6 @@
 		5516EBE42B432D4700C558B1 /* ProfileActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActions.swift; sourceTree = "<group>"; };
 		5516EBE82B43609300C558B1 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		5516EBEB2B4360A000C558B1 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
-		5516EBF12B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseUser+AuthenticationProvider.swift"; sourceTree = "<group>"; };
 		551AA40B2B334FB800F0B1E2 /* FullScreenCoverActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCoverActions.swift; sourceTree = "<group>"; };
 		551AA40F2B335D1A00F0B1E2 /* SelectLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageView.swift; sourceTree = "<group>"; };
 		551AA4122B335D2400F0B1E2 /* SelectLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewModel.swift; sourceTree = "<group>"; };
@@ -483,7 +475,6 @@
 		551AA4202B337A8A00F0B1E2 /* SelectTechnologyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyView.swift; sourceTree = "<group>"; };
 		551AA4232B337A9200F0B1E2 /* SelectTechnologyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyViewModel.swift; sourceTree = "<group>"; };
 		551AA4262B337D2900F0B1E2 /* AppTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTitle.swift; sourceTree = "<group>"; };
-		551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepository.swift; sourceTree = "<group>"; };
 		551CA5162B607516001859CA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		552785BE2B27A5120098FE95 /* Phraseon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		552785C12B27A5120098FE95 /* PhraseonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseonApp.swift; sourceTree = "<group>"; };
@@ -803,15 +794,6 @@
 				552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		5516EBBE2B3F33D600C558B1 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				5516EBBF2B3F340F00C558B1 /* KeysOrder+FieldPath.swift */,
-				5516EBF12B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		5516EBC22B3F6AB500C558B1 /* EnterContentKey */ = {
@@ -1353,7 +1335,6 @@
 				55854F852B571D3000CC5480 /* Services */,
 				55C279262B2A4DFC005144F1 /* AuthenticationRepository.swift */,
 				55E960D82B3CD8E50016DA23 /* CloudRepository.swift */,
-				551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1399,7 +1380,6 @@
 			children = (
 				5561C5C92B67026200C815BC /* Domains */,
 				55FE519A2B5B1AAA0084617F /* ErrorHandling */,
-				5516EBBE2B3F33D600C558B1 /* Extension */,
 				558074482B2D12AC0041160B /* UseCases */,
 				55C279252B2A4DE7005144F1 /* Repositories */,
 			);
@@ -1907,7 +1887,6 @@
 				55DE10412B4ABFC1001CB87F /* UserDetailView.swift in Sources */,
 				5513C24F2B325E2F004C1933 /* CreateProjectView.swift in Sources */,
 				55FE51BD2B5DAD240084617F /* SetBaseLanguageService.swift in Sources */,
-				551AA42A2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55DE10582B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
 				55FE51AD2B5D1C830084617F /* ValidationHandlerProtocol.swift in Sources */,
 				5516EBE92B43609300C558B1 /* ChangePasswordView.swift in Sources */,
@@ -1931,11 +1910,9 @@
 				5516EBB62B3F2EF900C558B1 /* Technology+UI.swift in Sources */,
 				5570FF562B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */,
 				55826A9F2B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
-				5516EBC02B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */,
 				550537972B44C0DE0077912D /* ImageTransferable.swift in Sources */,
 				55FD140B2B97BD90006DA3E4 /* AppleButton.swift in Sources */,
 				5516EBDC2B4326B600C558B1 /* ProfileNameView.swift in Sources */,
-				5516EBF22B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */,
 				550537912B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4212B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FE519C2B5B1AC20084617F /* ErrorHandler.swift in Sources */,
@@ -2104,7 +2081,6 @@
 				55DE10422B4ABFC1001CB87F /* UserDetailView.swift in Sources */,
 				5513C2502B325E2F004C1933 /* CreateProjectView.swift in Sources */,
 				55FE51BE2B5DAD240084617F /* SetBaseLanguageService.swift in Sources */,
-				551AA42B2B3391A900F0B1E2 /* FirestoreRepository.swift in Sources */,
 				55DE10592B4B4371001CB87F /* ProjectMemberUseCase.swift in Sources */,
 				55FE51AE2B5D1C830084617F /* ValidationHandlerProtocol.swift in Sources */,
 				5516EBEA2B43609300C558B1 /* ChangePasswordView.swift in Sources */,
@@ -2128,11 +2104,9 @@
 				5516EBB72B3F2EF900C558B1 /* Technology+UI.swift in Sources */,
 				5570FF572B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */,
 				55826AA02B34FCDF00233D90 /* CreateKeyView.swift in Sources */,
-				5516EBC12B3F340F00C558B1 /* KeysOrder+FieldPath.swift in Sources */,
 				55FD140E2B97BDAA006DA3E4 /* AppleButton.swift in Sources */,
 				550537982B44C0DE0077912D /* ImageTransferable.swift in Sources */,
 				5516EBDD2B4326B600C558B1 /* ProfileNameView.swift in Sources */,
-				5516EBF32B4371EA00C558B1 /* FirebaseUser+AuthenticationProvider.swift in Sources */,
 				550537922B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4222B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FE519D2B5B1AC20084617F /* ErrorHandler.swift in Sources */,

@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import Model
 import Common
+import Domain
 
 protocol UserDomainProtocol: AnyObject {
 

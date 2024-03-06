@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import Model
+import Domain
 
 final class PreviewFirestoreRepository: FirestoreRepository {
 

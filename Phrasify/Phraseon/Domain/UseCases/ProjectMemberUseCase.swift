@@ -8,6 +8,7 @@
 import SwiftUI
 import Model
 import Common
+import Domain
 
 protocol ProjectMemberUseCaseProtocol: AnyObject {
 

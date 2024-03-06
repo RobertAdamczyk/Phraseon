@@ -9,6 +9,7 @@ import Foundation
 import CryptoKit
 import FirebaseAuth
 import AuthenticationServices
+import Domain
 
 final class SignInWithAppleUseCase {
 

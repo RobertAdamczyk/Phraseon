@@ -11,7 +11,7 @@ import FirebaseFirestoreCombineSwift
 import Combine
 import Model
 
-protocol FirestoreRepository {
+public protocol FirestoreRepository {
 
     func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Error>
 
@@ -34,7 +34,9 @@ protocol FirestoreRepository {
     func setProfilePhotoUrl(userId: UserID, photoUrl: String) async throws
 }
 
-final class FirestoreRepositoryImpl: FirestoreRepository {
+public final class FirestoreRepositoryImpl: FirestoreRepository {
+
+    public init() { }
 
     private let db = Firestore.firestore()
 
@@ -49,7 +51,7 @@ final class FirestoreRepositoryImpl: FirestoreRepository {
 
     // MARK: Projects
 
-    func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Error> {
+    public func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Error> {
         return db.collection(Collections.projects.rawValue).whereField(Project.CodingKeys.members.rawValue, arrayContains: userId)
                  .snapshotPublisher()
                  .map { snapshot in
@@ -63,7 +65,7 @@ final class FirestoreRepositoryImpl: FirestoreRepository {
                  .eraseToAnyPublisher()
     }
 
-    func getProjectPublisher(projectId: String) -> AnyPublisher<Project?, Error> {
+    public func getProjectPublisher(projectId: String) -> AnyPublisher<Project?, Error> {
         return db.collection(Collections.projects.rawValue).document(projectId)
                  .snapshotPublisher()
                  .map { snapshot in
@@ -77,7 +79,7 @@ final class FirestoreRepositoryImpl: FirestoreRepository {
 
     // MARK: Members
 
-    func getMembersPublisher(projectId: String) -> AnyPublisher<[Member], Error> {
+    public func getMembersPublisher(projectId: String) -> AnyPublisher<[Member], Error> {
         return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.members.rawValue)
                  .snapshotPublisher()
                  .map { snapshot in
@@ -91,7 +93,7 @@ final class FirestoreRepositoryImpl: FirestoreRepository {
                  .eraseToAnyPublisher()
     }
 
-    func getMemberPublisher(userId: UserID, projectId: String) -> AnyPublisher<Member?, Error> {
+    public func getMemberPublisher(userId: UserID, projectId: String) -> AnyPublisher<Member?, Error> {
         return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.members.rawValue).document(userId)
                  .snapshotPublisher()
                  .map { snapshot in
@@ -105,7 +107,7 @@ final class FirestoreRepositoryImpl: FirestoreRepository {
 
     // MARK: Keys
 
-    func getKeysPublisher(projectId: String, keysOrder: KeysOrder, limit: Int) -> AnyPublisher<[Key], Error> {
+    public func getKeysPublisher(projectId: String, keysOrder: KeysOrder, limit: Int) -> AnyPublisher<[Key], Error> {
         return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.keys.rawValue)
                  .order(by: keysOrder.value.field, descending: keysOrder.value.descending)
                  .limit(to: limit)
@@ -121,7 +123,7 @@ final class FirestoreRepositoryImpl: FirestoreRepository {
                  .eraseToAnyPublisher()
     }
 
-    func getKeyPublisher(projectId: String, keyId: String) -> AnyPublisher<Key?, Error> {
+    public func getKeyPublisher(projectId: String, keyId: String) -> AnyPublisher<Key?, Error> {
         return db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.keys.rawValue).document(keyId)
                  .snapshotPublisher()
                  .map { snapshot in
@@ -135,7 +137,7 @@ final class FirestoreRepositoryImpl: FirestoreRepository {
 
     // MARK: User
 
-    func getUserPublisher(userId: UserID) -> AnyPublisher<User?, Error> {
+    public func getUserPublisher(userId: UserID) -> AnyPublisher<User?, Error> {
         return db.collection(Collections.users.rawValue).document(userId)
                  .snapshotPublisher()
                  .map { snapshot in
@@ -147,7 +149,7 @@ final class FirestoreRepositoryImpl: FirestoreRepository {
                  .eraseToAnyPublisher()
     }
 
-    func getUser(email: String) async throws -> User {
+    public func getUser(email: String) async throws -> User {
         let ref = db.collection(Collections.users.rawValue).whereField(User.CodingKeys.email.rawValue, isEqualTo: email)
         let querySnapshot = try await ref.getDocuments()
         if let document = querySnapshot.documents.first {
@@ -156,12 +158,12 @@ final class FirestoreRepositoryImpl: FirestoreRepository {
         throw AppError.notFound
     }
 
-    func setProfileName(userId: UserID, name: String, surname: String) async throws {
+    public func setProfileName(userId: UserID, name: String, surname: String) async throws {
         let ref =  db.collection(Collections.users.rawValue).document(userId)
         try await ref.setData(["name": name, "surname": surname], merge: true)
     }
 
-    func setProfilePhotoUrl(userId: UserID, photoUrl: String) async throws {
+    public func setProfilePhotoUrl(userId: UserID, photoUrl: String) async throws {
         let ref =  db.collection(Collections.users.rawValue).document(userId)
         try await ref.updateData(["photoUrl": photoUrl])
     }

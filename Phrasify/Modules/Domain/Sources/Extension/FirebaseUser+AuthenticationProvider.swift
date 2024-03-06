@@ -11,7 +11,7 @@ import Model
 
 extension FirebaseAuth.User {
 
-    var authenticationProvider: AuthenticationProvider? {
+    public var authenticationProvider: AuthenticationProvider? {
         for userInfo in self.providerData {
             if let authenticationProvider = AuthenticationProvider(rawValue: userInfo.providerID) {
                 return authenticationProvider
