@@ -10,14 +10,16 @@ import AlgoliaSearchClient
 import Model
 import Common
 
-protocol SearchRepository {
+public protocol SearchRepository {
 
     func searchKeys(in project: Project, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void)
 }
 
-final class SearchRepositoryImpl: SearchRepository {
+public final class SearchRepositoryImpl: SearchRepository {
 
-    func searchKeys(in project: Project, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {
+    public init() { }
+
+    public func searchKeys(in project: Project, with text: String, completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {
         let client = getClient(for: project.securedAlgoliaApiKey)
         let index = client.index(withName: .init(rawValue: project.algoliaIndexName))
         let query = Query(text)

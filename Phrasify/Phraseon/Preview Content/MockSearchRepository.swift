@@ -7,6 +7,7 @@
 
 import Foundation
 import Model
+import Domain
 
 final class PreviewSearchRepository: SearchRepository {
 
