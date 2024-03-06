@@ -185,8 +185,6 @@
 		556977A22B47594A0022B675 /* SelectLanguageActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A02B47594A0022B675 /* SelectLanguageActions.swift */; };
 		556977A42B475B440022B675 /* SelectTechnologyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A32B475B440022B675 /* SelectTechnologyActions.swift */; };
 		556977A52B475B440022B675 /* SelectTechnologyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A32B475B440022B675 /* SelectTechnologyActions.swift */; };
-		5570FF492B61752D0011208F /* StoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF482B61752D0011208F /* StoreKitRepository.swift */; };
-		5570FF4A2B61752D0011208F /* StoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF482B61752D0011208F /* StoreKitRepository.swift */; };
 		5570FF4D2B61B13C0011208F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4C2B61B13C0011208F /* PaywallView.swift */; };
 		5570FF4E2B61B13C0011208F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4C2B61B13C0011208F /* PaywallView.swift */; };
 		5570FF502B61B1460011208F /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4F2B61B1460011208F /* PaywallViewModel.swift */; };
@@ -541,7 +539,6 @@
 		5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsViewModel.swift; sourceTree = "<group>"; };
 		556977A02B47594A0022B675 /* SelectLanguageActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageActions.swift; sourceTree = "<group>"; };
 		556977A32B475B440022B675 /* SelectTechnologyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyActions.swift; sourceTree = "<group>"; };
-		5570FF482B61752D0011208F /* StoreKitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitRepository.swift; sourceTree = "<group>"; };
 		5570FF4C2B61B13C0011208F /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		5570FF4F2B61B1460011208F /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
 		5570FF522B61B1FF0011208F /* PaywallCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallCoordinator.swift; sourceTree = "<group>"; };
@@ -1361,7 +1358,6 @@
 				5505379D2B44C5C30077912D /* StorageRepository.swift */,
 				55E960D82B3CD8E50016DA23 /* CloudRepository.swift */,
 				551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */,
-				5570FF482B61752D0011208F /* StoreKitRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1907,7 +1903,6 @@
 				555458F32B8542DF00DA097F /* MockFirestoreRepository.swift in Sources */,
 				5516EBDF2B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
 				555458F02B85422300DA097F /* MockAuthenticationRepository.swift in Sources */,
-				5570FF492B61752D0011208F /* StoreKitRepository.swift in Sources */,
 				55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
 				55DE104E2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
 				55DE103A2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,
@@ -2106,7 +2101,6 @@
 				555458F42B8542DF00DA097F /* MockFirestoreRepository.swift in Sources */,
 				5516EBE02B4326EB00C558B1 /* ProfileNameViewModel.swift in Sources */,
 				555458F12B85422300DA097F /* MockAuthenticationRepository.swift in Sources */,
-				5570FF4A2B61752D0011208F /* StoreKitRepository.swift in Sources */,
 				55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */,
 				55DE104F2B4AFD36001CB87F /* ChangeProjectOwnerView.swift in Sources */,
 				55DE103B2B4AB3D9001CB87F /* SelectMemberRoleViewModel.swift in Sources */,

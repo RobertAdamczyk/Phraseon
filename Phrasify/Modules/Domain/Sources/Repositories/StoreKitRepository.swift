@@ -9,36 +9,34 @@ import Foundation
 import StoreKit
 import Model
 
-protocol StoreKitRepository {
+public protocol StoreKitRepository {
 
     func getProducts() async throws -> [Product]
 
     func purchase(_ product: Product, with options: Set<Product.PurchaseOption>) async throws -> Transaction?
-
-    func listenForTransactions() -> Task<Void, Error>
 }
 
 extension StoreKitRepository {
 
-    func purchase(_ product: Product, with options: Set<Product.PurchaseOption> = []) async throws -> Transaction? {
+    public func purchase(_ product: Product, with options: Set<Product.PurchaseOption> = []) async throws -> Transaction? {
         try await purchase(product, with: options)
     }
 }
 
-final class StoreKitRepositoryImpl: StoreKitRepository {
+public final class StoreKitRepositoryImpl: StoreKitRepository {
 
     private var updateListenerTask: Task<Void, Error>? = nil
 
-    init() {
+    public init() {
         updateListenerTask = listenForTransactions()
     }
 
-    func getProducts() async throws -> [Product] {
+    public func getProducts() async throws -> [Product] {
         let storeProducts = try await StoreKit.Product.products(for: [SubscriptionPlan.monthly.id, SubscriptionPlan.yearly.id])
         return storeProducts
     }
 
-    func purchase(_ product: Product, with options: Set<Product.PurchaseOption> = []) async throws -> Transaction? {
+    public func purchase(_ product: Product, with options: Set<Product.PurchaseOption> = []) async throws -> Transaction? {
         let result = try await product.purchase(options: options)
 
         switch result {
@@ -59,7 +57,7 @@ final class StoreKitRepositoryImpl: StoreKitRepository {
         }
     }
 
-    func listenForTransactions() -> Task<Void, Error> {
+    private func listenForTransactions() -> Task<Void, Error> {
         return Task.detached {
             // Iterate through any transactions that don't come from a direct call to `purchase()`.
             for await result in Transaction.updates {
