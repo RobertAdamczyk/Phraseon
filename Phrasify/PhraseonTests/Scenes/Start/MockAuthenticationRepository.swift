@@ -9,6 +9,7 @@ import Foundation
 @testable import Phraseon_InHouse
 @testable import Model
 import Firebase
+@testable import Domain
 
 final class MockAuthenticationRepository: AuthenticationRepository {
 
