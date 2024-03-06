@@ -52,7 +52,9 @@ final class RegisterViewModel: ObservableObject, Activitable {
                 ToastView.showSuccess(message: "Login successful. Welcome!")
             } catch {
                 let errorHandler: ErrorHandler = .init(error: error)
-                ToastView.showError(message: errorHandler.localizedDescription)
+                if !errorHandler.shouldIgnoreError {
+                    ToastView.showError(message: errorHandler.localizedDescription)
+                }
             }
             stopActivity()
         }
@@ -69,8 +71,10 @@ final class RegisterViewModel: ObservableObject, Activitable {
             do {
                 try await signInWithAppleUseCase.completeLogin(result: result)
             } catch {
-                let error = ErrorHandler(error: error)
-                ToastView.showError(message: error.localizedDescription)
+                let errorHandler: ErrorHandler = .init(error: error)
+                if !errorHandler.shouldIgnoreError {
+                    ToastView.showError(message: errorHandler.localizedDescription)
+                }
             }
             stopActivity()
         }
