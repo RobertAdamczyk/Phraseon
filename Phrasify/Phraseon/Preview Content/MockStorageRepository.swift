@@ -7,12 +7,11 @@
 
 import Foundation
 import FirebaseStorage
-import UIKit
 import Domain
 
 final class PreviewStorageRepository: StorageRepository {
 
-    func uploadImage(path: StorageRepositoryImpl.StoragePath, image: UIImage) async throws -> FirebaseStorage.StorageMetadata {
+    func uploadImage(path: StorageRepositoryImpl.StoragePath, imageData: Data) async throws -> FirebaseStorage.StorageMetadata {
         return .init()
     }
     

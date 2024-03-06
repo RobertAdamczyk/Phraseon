@@ -14,7 +14,6 @@ public enum AppError: Error, LocalizedError {
     case googleAuthNil
     case viewControllerNil
     case imageNil
-    case imageCompressionNil
     case decodingError
     case encodingError
     case notFound

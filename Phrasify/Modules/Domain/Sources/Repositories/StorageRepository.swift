@@ -6,12 +6,12 @@
 //
 
 import FirebaseStorage
-import UIKit
+import Foundation
 import Model
 
 public protocol StorageRepository {
 
-    func uploadImage(path: StorageRepositoryImpl.StoragePath, image: UIImage) async throws -> StorageMetadata
+    func uploadImage(path: StorageRepositoryImpl.StoragePath, imageData: Data) async throws -> StorageMetadata
 
     func downloadURL(for path: StorageRepositoryImpl.StoragePath) async throws -> URL
 }
@@ -34,13 +34,11 @@ public final class StorageRepositoryImpl: StorageRepository {
         }
     }
 
-    public func uploadImage(path: StoragePath, image: UIImage) async throws -> StorageMetadata {
-        guard let data = image.jpegData(compressionQuality: 0.1) else { throw AppError.imageCompressionNil }
-
+    public func uploadImage(path: StoragePath, imageData: Data) async throws -> StorageMetadata {
         // Create a reference to the file you want to upload
         let ref = storageRef.child(path.rawValue)
 
-        return try await ref.putDataAsync(data)
+        return try await ref.putDataAsync(imageData)
     }
 
     public func downloadURL(for path: StoragePath) async throws -> URL {
