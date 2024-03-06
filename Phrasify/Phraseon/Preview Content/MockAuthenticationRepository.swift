@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 import Model
+import Domain
 
 final class PreviewAuthenticationRepository: AuthenticationRepository {
 

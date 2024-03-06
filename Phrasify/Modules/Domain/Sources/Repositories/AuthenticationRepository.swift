@@ -11,7 +11,7 @@ import GoogleSignIn
 import Model
 import FirebaseAuth
 
-protocol AuthenticationRepository {
+public protocol AuthenticationRepository {
 
     var isLoggedInPublisher: Published<Bool?>.Publisher { get }
 
@@ -40,23 +40,23 @@ protocol AuthenticationRepository {
     func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential
 }
 
-final class AuthenticationRepositoryImpl: AuthenticationRepository {
+public final class AuthenticationRepositoryImpl: AuthenticationRepository {
 
     // MARK: Public properties
 
     @Published private var isLoggedIn: Bool?
 
-    var isLoggedInPublisher: Published<Bool?>.Publisher { $isLoggedIn }
+    public var isLoggedInPublisher: Published<Bool?>.Publisher { $isLoggedIn }
 
-    var userId: UserID? {
+    public var userId: UserID? {
         auth.currentUser?.uid
     }
 
-    var email: String? {
+    public var email: String? {
         auth.currentUser?.email
     }
 
-    var authenticationProvider: AuthenticationProvider? {
+    public var authenticationProvider: AuthenticationProvider? {
         auth.currentUser?.authenticationProvider
     }
 
@@ -66,47 +66,47 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository {
 
     // MARK: Lifecycle
 
-    init() {
+    public init() {
         auth.useAppLanguage() // TODO: Check this
         setupStateDidChangeListener()
     }
 
     // MARK: Public functions
 
-    func login(email: String, password: String) async throws {
+    public func login(email: String, password: String) async throws {
         try await auth.signIn(withEmail: email, password: password)
     }
 
-    func login(with credential: AuthCredential) async throws -> AuthDataResult? {
+    public func login(with credential: AuthCredential) async throws -> AuthDataResult? {
         return try await auth.signIn(with: credential)
     }
 
-    func signUp(email: String, password: String) async throws {
+    public func signUp(email: String, password: String) async throws {
         try await auth.createUser(withEmail: email, password: password)
     }
 
-    func sendResetPassword(email: String) async throws {
+    public func sendResetPassword(email: String) async throws {
         try await auth.sendPasswordReset(withEmail: email)
     }
 
-    func logout() throws {
+    public func logout() throws {
         try auth.signOut()
     }
 
-    func deleteUser() async throws {
+    public func deleteUser() async throws {
         try await auth.currentUser?.delete()
     }
 
-    func reauthenticate(email: String, password: String) async throws {
+    public func reauthenticate(email: String, password: String) async throws {
         try await auth.currentUser?.reauthenticate(with: EmailAuthProvider.credential(withEmail: email, password: password))
     }
 
-    func updatePassword(to password: String) async throws {
+    public func updatePassword(to password: String) async throws {
         try await auth.currentUser?.updatePassword(to: password)
     }
 
     @MainActor
-    func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential {
+    public func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential {
         guard let clientID = FirebaseApp.app()?.options.clientID else { throw AppError.idClientNil }
 
         // Create Google Sign In configuration object.
