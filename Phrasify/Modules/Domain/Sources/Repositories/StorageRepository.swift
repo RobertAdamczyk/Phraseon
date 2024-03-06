@@ -9,19 +9,21 @@ import FirebaseStorage
 import UIKit
 import Model
 
-protocol StorageRepository {
+public protocol StorageRepository {
 
     func uploadImage(path: StorageRepositoryImpl.StoragePath, image: UIImage) async throws -> StorageMetadata
 
     func downloadURL(for path: StorageRepositoryImpl.StoragePath) async throws -> URL
 }
 
-final class StorageRepositoryImpl: StorageRepository {
+public final class StorageRepositoryImpl: StorageRepository {
+
+    public init() { }
 
     private lazy var storage = Storage.storage()
     private lazy var storageRef = storage.reference()
 
-    enum StoragePath {
+    public enum StoragePath {
         case userImage(fileName: String)
 
         var rawValue: String {
@@ -32,7 +34,7 @@ final class StorageRepositoryImpl: StorageRepository {
         }
     }
 
-    func uploadImage(path: StoragePath, image: UIImage) async throws -> StorageMetadata {
+    public func uploadImage(path: StoragePath, image: UIImage) async throws -> StorageMetadata {
         guard let data = image.jpegData(compressionQuality: 0.1) else { throw AppError.imageCompressionNil }
 
         // Create a reference to the file you want to upload
@@ -41,7 +43,7 @@ final class StorageRepositoryImpl: StorageRepository {
         return try await ref.putDataAsync(data)
     }
 
-    func downloadURL(for path: StoragePath) async throws -> URL {
+    public func downloadURL(for path: StoragePath) async throws -> URL {
         let ref = storageRef.child(path.rawValue)
         return try await ref.downloadURL()
     }

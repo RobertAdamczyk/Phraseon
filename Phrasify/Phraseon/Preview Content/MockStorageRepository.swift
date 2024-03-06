@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseStorage
 import UIKit
+import Domain
 
 final class PreviewStorageRepository: StorageRepository {
 

@@ -26,8 +26,6 @@
 		550537952B44C0270077912D /* PhotoPickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537932B44C0270077912D /* PhotoPickerHandler.swift */; };
 		550537972B44C0DE0077912D /* ImageTransferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537962B44C0DE0077912D /* ImageTransferable.swift */; };
 		550537982B44C0DE0077912D /* ImageTransferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537962B44C0DE0077912D /* ImageTransferable.swift */; };
-		5505379E2B44C5C30077912D /* StorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505379D2B44C5C30077912D /* StorageRepository.swift */; };
-		5505379F2B44C5C30077912D /* StorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505379D2B44C5C30077912D /* StorageRepository.swift */; };
 		5505C7DA2B55BAEB00806B4F /* syncScript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5505C7D92B55BAEB00806B4F /* syncScript.txt */; };
 		5505C7DB2B55BAEB00806B4F /* syncScript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5505C7D92B55BAEB00806B4F /* syncScript.txt */; };
 		5505C7DE2B55BE5900806B4F /* SyncScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7DD2B55BE5900806B4F /* SyncScript.swift */; };
@@ -447,7 +445,6 @@
 		550537902B44C0170077912D /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		550537932B44C0270077912D /* PhotoPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerHandler.swift; sourceTree = "<group>"; };
 		550537962B44C0DE0077912D /* ImageTransferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransferable.swift; sourceTree = "<group>"; };
-		5505379D2B44C5C30077912D /* StorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRepository.swift; sourceTree = "<group>"; };
 		5505C7D92B55BAEB00806B4F /* syncScript.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = syncScript.txt; sourceTree = "<group>"; };
 		5505C7DD2B55BE5900806B4F /* SyncScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncScript.swift; sourceTree = "<group>"; };
 		5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationView.swift; sourceTree = "<group>"; };
@@ -1355,7 +1352,6 @@
 			children = (
 				55854F852B571D3000CC5480 /* Services */,
 				55C279262B2A4DFC005144F1 /* AuthenticationRepository.swift */,
-				5505379D2B44C5C30077912D /* StorageRepository.swift */,
 				55E960D82B3CD8E50016DA23 /* CloudRepository.swift */,
 				551AA4292B3391A900F0B1E2 /* FirestoreRepository.swift */,
 			);
@@ -1929,7 +1925,6 @@
 				55826AAB2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift in Sources */,
 				553F1BED2B2914910071A099 /* SetPasswordViewModel.swift in Sources */,
 				553F1BE62B2911500071A099 /* ForgetPasswordView.swift in Sources */,
-				5505379E2B44C5C30077912D /* StorageRepository.swift in Sources */,
 				5505C7E22B55C32A00806B4F /* ProjectIntegrationView.swift in Sources */,
 				55C279232B2A4D18005144F1 /* StartActions.swift in Sources */,
 				5505C7F32B55E6F100806B4F /* StandardWarningProtocol.swift in Sources */,
@@ -2127,7 +2122,6 @@
 				55826AAC2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift in Sources */,
 				55C278EC2B2A3F3A005144F1 /* StartCoordinator.swift in Sources */,
 				55C278ED2B2A3F3A005144F1 /* SetPasswordViewModel.swift in Sources */,
-				5505379F2B44C5C30077912D /* StorageRepository.swift in Sources */,
 				5505C7E32B55C32A00806B4F /* ProjectIntegrationView.swift in Sources */,
 				55C279242B2A4D18005144F1 /* StartActions.swift in Sources */,
 				5505C7F42B55E6F100806B4F /* StandardWarningProtocol.swift in Sources */,

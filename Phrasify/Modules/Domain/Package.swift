@@ -26,6 +26,7 @@ let package = Package(
             name: "Domain",
             dependencies: [
                 .product(name: "FirebaseRemoteConfig", package: "firebase-ios-sdk"),
+                .product(name: "FirebaseStorage", package: "firebase-ios-sdk"),
                 .product(name: "Common", package: "Common"),
                 .product(name: "Model", package: "Model")
             ]),
