@@ -42,4 +42,11 @@ public enum DeferredData<T>: Equatable where T: Equatable {
             return false
         }
     }
+
+    var isFailed: Bool {
+        switch self {
+        case .idle, .isLoading, .loaded: return false
+        case .failed: return true
+        }
+    }
 }

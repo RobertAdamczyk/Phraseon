@@ -28,6 +28,10 @@ final class PreviewAuthenticationRepository: AuthenticationRepository {
         nil
     }
 
+    var creationDate: Date? {
+        nil
+    }
+
     func login(email: String, password: String) async throws {
         // empty
     }
