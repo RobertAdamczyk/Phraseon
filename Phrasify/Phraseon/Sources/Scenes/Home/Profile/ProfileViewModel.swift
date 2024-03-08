@@ -17,8 +17,12 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
 
     var shouldShowLoading: Bool {
         switch user {
-        case .isLoading: return true
-        case .idle, .loaded, .failed: return false
+        case .isLoading: 
+            return true
+        case .failed:
+            return possibleUserCreationDelay
+        case .idle, .loaded: 
+            return false
         }
     }
 
@@ -30,6 +34,7 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     }
 
     var shouldShowContent: Bool {
+        guard !possibleUserCreationDelay else { return true }
         switch user {
         case .failed, .idle: return false
         case .loaded, .isLoading: return true
@@ -37,6 +42,7 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     }
 
     var shouldShowError: Bool {
+        guard !possibleUserCreationDelay else { return false }
         switch user {
         case .failed: return true
         default: return false
@@ -83,6 +89,15 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     }
 
     let cancelBag = CancelBag()
+
+    private var possibleUserCreationDelay: Bool {
+        guard user.isFailed else { return false }
+        guard let creationDate = coordinator.dependencies.authenticationRepository.creationDate else { return false }
+        // WORKAROUND ⚠️
+        // In Backend there is a slight delay between registration and creation of a user in the database.
+        // Therefore, in case of an error of no user for the first 30 seconds after registration show loading.
+        return abs(creationDate.timeIntervalSinceNow) < 30
+    }
 
     private let coordinator: ProfileCoordinator
 

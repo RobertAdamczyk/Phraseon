@@ -21,6 +21,8 @@ public protocol AuthenticationRepository {
 
     var authenticationProvider: AuthenticationProvider? { get }
 
+    var creationDate: Date? { get }
+
     func login(email: String, password: String) async throws
 
     func login(with credential: AuthCredential) async throws -> AuthDataResult?
@@ -58,6 +60,10 @@ public final class AuthenticationRepositoryImpl: AuthenticationRepository {
 
     public var authenticationProvider: AuthenticationProvider? {
         auth.currentUser?.authenticationProvider
+    }
+
+    var creationDate: Date? {
+        auth.currentUser?.metadata.creationDate
     }
 
     // MARK: Private properties
