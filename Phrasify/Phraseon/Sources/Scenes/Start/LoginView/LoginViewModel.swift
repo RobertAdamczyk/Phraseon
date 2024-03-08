@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AuthenticationServices
+import Domain
 
 final class LoginViewModel: ObservableObject, Activitable {
 

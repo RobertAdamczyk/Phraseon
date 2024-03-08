@@ -23,7 +23,7 @@ extension ProjectDetailView {
                     HStack(spacing: 4) {
                         Image(systemName: "clock")
                         Text(key.lastUpdatedAt.timeAgo)
-                        if viewModel.translationApprovalUseCase.shouldShow {
+                        if viewModel.shouldShowReviewStatus {
                             Rectangle()
                                 .frame(width: 2)
                                 .foregroundStyle(appColor(.lightGray))
@@ -97,7 +97,7 @@ extension ProjectDetailView {
                     HStack(spacing: 4) {
                         Image(systemName: "clock")
                         Text(Date(timeIntervalSince1970: TimeInterval(key.lastUpdatedAt.seconds)).timeAgo)
-                        if viewModel.translationApprovalUseCase.shouldShow {
+                        if viewModel.shouldShowReviewStatus {
                             Rectangle()
                                 .frame(width: 2)
                                 .foregroundStyle(appColor(.lightGray))

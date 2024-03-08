@@ -8,6 +8,7 @@
 import SwiftUI
 import Model
 import Common
+import Domain
 
 final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
 
@@ -16,8 +17,8 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
     @Published var key: Key
     @Published internal var member: Member?
 
-    var translationApprovalUseCase: TranslationApprovalUseCase {
-        .init(project: project, subscriptionPlan: coordinator.dependencies.userDomain.user.currentValue?.subscriptionPlan)
+    var shouldShowApproveButton: Bool {
+        return project.members.count > 1
     }
 
     let project: Project

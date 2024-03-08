@@ -9,28 +9,27 @@ import Foundation
 import CryptoKit
 import FirebaseAuth
 import AuthenticationServices
-import Domain
 
-final class SignInWithAppleUseCase {
+public final class SignInWithAppleUseCase {
 
     private var currentNonce: String?
 
     private let authenticationRepository: AuthenticationRepository
     private let firestoreRepository: FirestoreRepository
 
-    init(authenticationRepository: AuthenticationRepository, firestoreRepository: FirestoreRepository) {
+    public init(authenticationRepository: AuthenticationRepository, firestoreRepository: FirestoreRepository) {
         self.authenticationRepository = authenticationRepository
         self.firestoreRepository = firestoreRepository
     }
 
-    func performLogin(request: ASAuthorizationAppleIDRequest) {
+    public func performLogin(request: ASAuthorizationAppleIDRequest) {
         request.requestedScopes = [.email, .fullName]
         let nonce = randomNonceString()
         currentNonce = nonce
         request.nonce = sha256(nonce)
     }
 
-    func completeLogin(result: Result<ASAuthorization, any Error>) async throws {
+    public func completeLogin(result: Result<ASAuthorization, any Error>) async throws {
         switch result {
         case .success(let success):
             if let appleIDCredential = success.credential as? ASAuthorizationAppleIDCredential {

@@ -8,6 +8,7 @@
 import SwiftUI
 import Model
 import Common
+import Domain
 
 final class ProjectMembersViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
 

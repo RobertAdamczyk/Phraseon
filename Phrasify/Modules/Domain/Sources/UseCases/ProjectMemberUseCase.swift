@@ -8,9 +8,8 @@
 import SwiftUI
 import Model
 import Common
-import Domain
 
-protocol ProjectMemberUseCaseProtocol: AnyObject {
+public protocol ProjectMemberUseCaseProtocol: AnyObject {
 
     var member: Member? { set get }
     var projectMemberUseCase: ProjectMemberUseCase { get }
@@ -25,23 +24,23 @@ protocol ProjectMemberUseCaseProtocol: AnyObject {
 
 extension ProjectMemberUseCaseProtocol {
 
-    var isAdmin: Bool {
+    public var isAdmin: Bool {
         [Role.admin].contains(member?.role)
     }
 
-    var isOwner: Bool {
+    public var isOwner: Bool {
         [Role.owner].contains(member?.role)
     }
 
-    var isDeveloper: Bool {
+    public var isDeveloper: Bool {
         [Role.developer].contains(member?.role)
     }
 
-    var isViewer: Bool {
+    public var isViewer: Bool {
         [Role.viewer].contains(member?.role)
     }
 
-    func setupMemberSubscriber() {
+    public func setupMemberSubscriber() {
         projectMemberUseCase.$member
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] member in
@@ -53,9 +52,9 @@ extension ProjectMemberUseCaseProtocol {
     }
 }
 
-final class ProjectMemberUseCase {
+public final class ProjectMemberUseCase {
 
-    @Published private(set) var member: Member?
+    @Published public private(set) var member: Member?
 
     private let firestoreRepository: FirestoreRepository
     private let authenticationRepository: AuthenticationRepository
@@ -63,7 +62,7 @@ final class ProjectMemberUseCase {
 
     private let cancelBag = CancelBag()
 
-    init(firestoreRepository: FirestoreRepository, authenticationRepository: AuthenticationRepository, project: Project) {
+    public init(firestoreRepository: FirestoreRepository, authenticationRepository: AuthenticationRepository, project: Project) {
         self.firestoreRepository = firestoreRepository
         self.authenticationRepository = authenticationRepository
         self.project = project

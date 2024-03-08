@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 import Model
 import Common
+import Domain
 
 final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol, ProjectUseCaseProtocol {
 
@@ -49,8 +50,8 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
 
     var keysLimit: Int = 20
 
-    var translationApprovalUseCase: TranslationApprovalUseCase {
-        .init(project: project, subscriptionPlan: coordinator.dependencies.userDomain.user.currentValue?.subscriptionPlan)
+    var shouldShowReviewStatus: Bool {
+        return project.members.count > 1
     }
 
     internal lazy var projectUseCase: ProjectUseCase = {

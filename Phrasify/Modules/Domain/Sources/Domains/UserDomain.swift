@@ -9,9 +9,8 @@ import Foundation
 import SwiftUI
 import Model
 import Common
-import Domain
 
-protocol UserDomainProtocol: AnyObject {
+public protocol UserDomainProtocol: AnyObject {
 
     var user: DeferredData<User> { set get }
     var cancelBag: CancelBag { get }
@@ -22,7 +21,7 @@ protocol UserDomainProtocol: AnyObject {
 
 extension UserDomainProtocol {
 
-    func setupUserSubscriber() {
+    public func setupUserSubscriber() {
         userDomain.$user
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] user in
@@ -34,9 +33,9 @@ extension UserDomainProtocol {
     }
 }
 
-final class UserDomain {
+public final class UserDomain {
 
-    @Published private(set) var user: DeferredData<User> = .idle
+    @Published public private(set) var user: DeferredData<User> = .idle
 
     private let firestoreRepository: FirestoreRepository
     private let authenticationRepository: AuthenticationRepository
@@ -44,7 +43,7 @@ final class UserDomain {
     private let loginCancelBag = CancelBag()
     private let cancelBag = CancelBag()
 
-    init(firestoreRepository: FirestoreRepository, authenticationRepository: AuthenticationRepository) {
+    public init(firestoreRepository: FirestoreRepository, authenticationRepository: AuthenticationRepository) {
         self.firestoreRepository = firestoreRepository
         self.authenticationRepository = authenticationRepository
         setupLoginSubscription()

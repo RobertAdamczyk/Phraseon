@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import Model
+import Domain
 import Common
 
 final class ChangePasswordViewModel: ObservableObject {

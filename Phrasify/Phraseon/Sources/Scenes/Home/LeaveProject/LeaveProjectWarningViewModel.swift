@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Model
+import Domain
 
 final class LeaveProjectWarningViewModel: StandardWarningProtocol {
 

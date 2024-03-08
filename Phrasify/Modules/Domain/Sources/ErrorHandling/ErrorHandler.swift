@@ -10,9 +10,9 @@ import Firebase
 import AuthenticationServices
 import GoogleSignIn
 
-struct ErrorHandler {
+public struct ErrorHandler {
 
-    enum CloudError: String {
+    public enum CloudError: String {
         case memberNotFound = "MEMBER_NOT_FOUND"
         case roleNotFound = "ROLE_NOT_FOUND"
         case userNotFound = "USER_NOT_FOUND"
@@ -32,15 +32,19 @@ struct ErrorHandler {
         case phraseContentTooLong = "PHRASE_CONTENT_TOO_LONG"
     }
 
+    public init(error: Error) {
+        self.error = error
+    }
+
     let error: Error
 
-    var shouldIgnoreError: Bool {
+    public var shouldIgnoreError: Bool {
         return (error as? GIDSignInError)?.code == .canceled ||
                (error as? ASAuthorizationError)?.code == .canceled ||
                (error as? ASAuthorizationError)?.code == .unknown
     }
 
-    var localizedDescription: String? {
+    public var localizedDescription: String? {
         if let authError = error as? AuthErrorCode {
             switch authError.code {
             case .wrongPassword, .invalidCredential:

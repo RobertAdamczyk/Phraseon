@@ -8,6 +8,7 @@
 import SwiftUI
 import Common
 import AuthenticationServices
+import Domain
 
 final class RegisterViewModel: ObservableObject, Activitable {
 

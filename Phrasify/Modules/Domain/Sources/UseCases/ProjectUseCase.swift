@@ -8,9 +8,8 @@
 import SwiftUI
 import Model
 import Common
-import Domain
 
-protocol ProjectUseCaseProtocol: AnyObject {
+public protocol ProjectUseCaseProtocol: AnyObject {
 
     var project: Project { set get }
     var projectUseCase: ProjectUseCase { get }
@@ -21,7 +20,7 @@ protocol ProjectUseCaseProtocol: AnyObject {
 
 extension ProjectUseCaseProtocol {
 
-    func setupProjectSubscriber() {
+    public func setupProjectSubscriber() {
         projectUseCase.$project
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] project in
@@ -33,15 +32,15 @@ extension ProjectUseCaseProtocol {
     }
 }
 
-final class ProjectUseCase {
+public final class ProjectUseCase {
 
-    @Published private(set) var project: Project
+    @Published public private(set) var project: Project
 
     private let firestoreRepository: FirestoreRepository
 
     private let cancelBag = CancelBag()
 
-    init(firestoreRepository: FirestoreRepository, project: Project) {
+    public init(firestoreRepository: FirestoreRepository, project: Project) {
         self.firestoreRepository = firestoreRepository
         self.project = project
         setupProjectSubscriber()
