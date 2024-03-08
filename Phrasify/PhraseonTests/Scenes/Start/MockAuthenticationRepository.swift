@@ -25,6 +25,10 @@ final class MockAuthenticationRepository: AuthenticationRepository {
         nil
     }
 
+    var creationDate: Date? {
+        nil
+    }
+
     @Published var isLoggedIn: Bool? = false
 
     var isLoggedInPublisher: Published<Bool?>.Publisher { $isLoggedIn }
