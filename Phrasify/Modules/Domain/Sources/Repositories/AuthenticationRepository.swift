@@ -62,7 +62,7 @@ public final class AuthenticationRepositoryImpl: AuthenticationRepository {
         auth.currentUser?.authenticationProvider
     }
 
-    var creationDate: Date? {
+    public var creationDate: Date? {
         auth.currentUser?.metadata.creationDate
     }
 
