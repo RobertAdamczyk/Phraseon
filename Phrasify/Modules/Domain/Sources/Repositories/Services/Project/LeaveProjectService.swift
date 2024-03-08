@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LeaveProjectService: CloudService {
+public struct LeaveProjectService: CloudService {
 
     typealias Model = RequestModel
 
@@ -17,7 +17,12 @@ struct LeaveProjectService: CloudService {
         "leaveProject"
     }
 
-    struct RequestModel: Codable {
+    public struct RequestModel: Codable {
+
+        public init(projectId: String) {
+            self.projectId = projectId
+        }
+
         let projectId: String
     }
 }

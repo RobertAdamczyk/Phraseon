@@ -8,7 +8,7 @@
 import Foundation
 import Model
 
-struct SetBaseLanguageService: CloudService {
+public struct SetBaseLanguageService: CloudService {
 
     typealias Model = RequestModel
 
@@ -18,7 +18,13 @@ struct SetBaseLanguageService: CloudService {
         "setBaseLanguage"
     }
 
-    struct RequestModel: Codable {
+    public struct RequestModel: Codable {
+
+        public init(projectId: String, baseLanguage: Language) {
+            self.projectId = projectId
+            self.baseLanguage = baseLanguage
+        }
+
         let projectId: String
         let baseLanguage: Language
     }

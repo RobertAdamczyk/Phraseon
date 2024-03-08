@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChangeProjectOwnerService: CloudService {
+public struct ChangeProjectOwnerService: CloudService {
 
     typealias Model = RequestModel
 
@@ -17,7 +17,13 @@ struct ChangeProjectOwnerService: CloudService {
         "changeOwner"
     }
 
-    struct RequestModel: Codable {
+    public struct RequestModel: Codable {
+
+        public init(projectId: String, newOwnerEmail: String) {
+            self.projectId = projectId
+            self.newOwnerEmail = newOwnerEmail
+        }
+
         let projectId: String
         let newOwnerEmail: String
     }

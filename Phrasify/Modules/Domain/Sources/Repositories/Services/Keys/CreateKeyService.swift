@@ -8,7 +8,7 @@
 import Foundation
 import Model
 
-struct CreateKeyService: CloudService {
+public struct CreateKeyService: CloudService {
 
     typealias Model = RequestModel
 
@@ -18,7 +18,15 @@ struct CreateKeyService: CloudService {
         "createKey"
     }
 
-    struct RequestModel: Codable {
+    public struct RequestModel: Codable {
+
+        public init(projectId: String, keyId: String, language: Language, translation: String) {
+            self.projectId = projectId
+            self.keyId = keyId
+            self.language = language
+            self.translation = translation
+        }
+
         let projectId: String
         let keyId: String
         let language: Language

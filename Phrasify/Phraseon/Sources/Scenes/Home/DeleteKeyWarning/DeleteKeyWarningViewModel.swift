@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Domain
 import Model
 
 final class DeleteKeyWarningViewModel: StandardWarningProtocol {

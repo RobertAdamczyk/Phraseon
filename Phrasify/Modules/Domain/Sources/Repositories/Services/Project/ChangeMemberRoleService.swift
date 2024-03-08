@@ -8,7 +8,7 @@
 import Foundation
 import Model
 
-struct ChangeMemberRoleService: CloudService {
+public struct ChangeMemberRoleService: CloudService {
 
     typealias Model = RequestModel
 
@@ -18,7 +18,14 @@ struct ChangeMemberRoleService: CloudService {
         "changeMemberRole"
     }
 
-    struct RequestModel: Codable {
+    public struct RequestModel: Codable {
+
+        public init(userId: UserID, projectId: String, role: Role) {
+            self.userId = userId
+            self.projectId = projectId
+            self.role = role
+        }
+
         let userId: UserID
         let projectId: String
         let role: Role

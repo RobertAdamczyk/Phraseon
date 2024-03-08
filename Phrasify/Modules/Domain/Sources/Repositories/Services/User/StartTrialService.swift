@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StartTrialService: CloudService {
+public struct StartTrialService: CloudService {
 
     typealias Model = RequestModel
 
@@ -17,6 +17,8 @@ struct StartTrialService: CloudService {
         "startTrial"
     }
 
-    struct RequestModel: Codable {
+    public struct RequestModel: Codable {
+
+        public init() { }
     }
 }

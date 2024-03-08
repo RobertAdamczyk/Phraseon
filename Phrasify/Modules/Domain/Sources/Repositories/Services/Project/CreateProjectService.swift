@@ -8,7 +8,7 @@
 import Foundation
 import Model
 
-struct CreateProjectService: CloudService {
+public struct CreateProjectService: CloudService {
 
     typealias Model = RequestModel
 
@@ -18,7 +18,15 @@ struct CreateProjectService: CloudService {
         "createProject"
     }
 
-    struct RequestModel: Codable {
+    public struct RequestModel: Codable {
+
+        public init(name: String, languages: [Language], baseLanguage: Language, technologies: [Technology]) {
+            self.name = name
+            self.languages = languages
+            self.baseLanguage = baseLanguage
+            self.technologies = technologies
+        }
+
         let name: String
         let languages: [Language]
         let baseLanguage: Language

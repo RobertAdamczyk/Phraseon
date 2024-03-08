@@ -8,7 +8,7 @@
 import Foundation
 import Model
 
-struct SetProjectTechnologiesService: CloudService {
+public struct SetProjectTechnologiesService: CloudService {
 
     typealias Model = RequestModel
 
@@ -18,7 +18,13 @@ struct SetProjectTechnologiesService: CloudService {
         "setProjectTechnologies"
     }
 
-    struct RequestModel: Codable {
+    public struct RequestModel: Codable {
+
+        public init(projectId: String, technologies: [Technology]) {
+            self.projectId = projectId
+            self.technologies = technologies
+        }
+
         let projectId: String
         let technologies: [Technology]
     }

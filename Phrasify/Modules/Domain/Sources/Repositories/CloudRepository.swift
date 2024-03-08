@@ -8,7 +8,7 @@
 import FirebaseFunctions
 import Foundation
 
-protocol CloudRepository {
+public protocol CloudRepository {
 
     func createProject(_ requestModel: CreateProjectService.RequestModel) async throws
 
@@ -43,86 +43,88 @@ protocol CloudRepository {
     func isUserProjectOwner() async throws -> IsUserProjectOwnerService.ResponseModel
 }
 
-final class CloudRepositoryImpl: CloudRepository {
+public final class CloudRepositoryImpl: CloudRepository {
+
+    public init() { }
 
     private let functions = Functions.functions()
 
-    func createProject(_ requestModel: CreateProjectService.RequestModel) async throws {
+    public func createProject(_ requestModel: CreateProjectService.RequestModel) async throws {
         let service: CreateProjectService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func changeProjectOwner(_ requestModel: ChangeProjectOwnerService.RequestModel) async throws {
+    public func changeProjectOwner(_ requestModel: ChangeProjectOwnerService.RequestModel) async throws {
         let service: ChangeProjectOwnerService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func addProjectMember(_ requestModel: AddProjectMemberService.RequestModel) async throws {
+    public func addProjectMember(_ requestModel: AddProjectMemberService.RequestModel) async throws {
         let service: AddProjectMemberService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func changeMemberRole(_ requestModel: ChangeMemberRoleService.RequestModel) async throws {
+    public func changeMemberRole(_ requestModel: ChangeMemberRoleService.RequestModel) async throws {
         let service: ChangeMemberRoleService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func deleteMember(_ requestModel: DeleteMemberService.RequestModel) async throws {
+    public func deleteMember(_ requestModel: DeleteMemberService.RequestModel) async throws {
         let service: DeleteMemberService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func setProjectLanguages(_ requestModel: SetProjectLanguagesService.RequestModel) async throws {
+    public func setProjectLanguages(_ requestModel: SetProjectLanguagesService.RequestModel) async throws {
         let service: SetProjectLanguagesService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func setBaseLanguage(_ requestModel: SetBaseLanguageService.RequestModel) async throws {
+    public func setBaseLanguage(_ requestModel: SetBaseLanguageService.RequestModel) async throws {
         let service: SetBaseLanguageService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func setProjectTechnologies(_ requestModel: SetProjectTechnologiesService.RequestModel) async throws {
+    public func setProjectTechnologies(_ requestModel: SetProjectTechnologiesService.RequestModel) async throws {
         let service: SetProjectTechnologiesService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func leaveProject(_ requestModel: LeaveProjectService.RequestModel) async throws {
+    public func leaveProject(_ requestModel: LeaveProjectService.RequestModel) async throws {
         let service: LeaveProjectService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func deleteProject(_ requestModel: DeleteProjectService.RequestModel) async throws {
+    public func deleteProject(_ requestModel: DeleteProjectService.RequestModel) async throws {
         let service: DeleteProjectService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func createKey(_ requestModel: CreateKeyService.RequestModel) async throws {
+    public func createKey(_ requestModel: CreateKeyService.RequestModel) async throws {
         let service: CreateKeyService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func changeContentKey(_ requestModel: ChangeContentKeyService.RequestModel) async throws {
+    public func changeContentKey(_ requestModel: ChangeContentKeyService.RequestModel) async throws {
         let service: ChangeContentKeyService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func deleteKey(_ requestModel: DeleteKeyService.RequestModel) async throws {
+    public func deleteKey(_ requestModel: DeleteKeyService.RequestModel) async throws {
         let service: DeleteKeyService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func approveTranslation(_ requestModel: ApproveTranslationService.RequestModel) async throws {
+    public func approveTranslation(_ requestModel: ApproveTranslationService.RequestModel) async throws {
         let service: ApproveTranslationService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func startTrial(_ requestModel: StartTrialService.RequestModel) async throws {
+    public func startTrial(_ requestModel: StartTrialService.RequestModel) async throws {
         let service: StartTrialService = .init(requestModel: requestModel)
         _ = try await functions.httpsCallable(service.functionName).call(service.getParameters())
     }
 
-    func isUserProjectOwner() async throws -> IsUserProjectOwnerService.ResponseModel {
+    public func isUserProjectOwner() async throws -> IsUserProjectOwnerService.ResponseModel {
         let service: IsUserProjectOwnerService = .init(requestModel: .init())
         let result = try await functions.httpsCallable(service.functionName).call()
         return try .decode(from: result.data)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct IsUserProjectOwnerService: CloudService {
+public struct IsUserProjectOwnerService: CloudService {
 
     typealias Model = RequestModel
 
@@ -21,9 +21,14 @@ struct IsUserProjectOwnerService: CloudService {
         // empty
     }
 
-    struct ResponseModel: CloudResponse {
+    public struct ResponseModel: CloudResponse {
+
         typealias Model = Self
 
-        let isOwner: Bool
+        public init(isOwner: Bool) {
+            self.isOwner = isOwner
+        }
+
+        public let isOwner: Bool
     }
 }

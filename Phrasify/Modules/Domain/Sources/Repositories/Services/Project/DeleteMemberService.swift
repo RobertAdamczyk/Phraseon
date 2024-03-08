@@ -8,7 +8,7 @@
 import Foundation
 import Model
 
-struct DeleteMemberService: CloudService {
+public struct DeleteMemberService: CloudService {
 
     typealias Model = RequestModel
 
@@ -18,7 +18,13 @@ struct DeleteMemberService: CloudService {
         "deleteMember"
     }
 
-    struct RequestModel: Codable {
+    public struct RequestModel: Codable {
+
+        public init(projectId: String, userId: UserID) {
+            self.projectId = projectId
+            self.userId = userId
+        }
+
         let projectId: String
         let userId: UserID
     }
