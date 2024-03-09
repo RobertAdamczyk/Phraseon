@@ -25,8 +25,6 @@ struct MockDependencies {
                                  cloudRepository: CloudRepository = PreviewCloudRepository(),
                                  storageRepository: StorageRepository = PreviewStorageRepository(),
                                  storeKitRepository: StoreKitRepository = PreviewStoreKitRepository(),
-                                 userDomain: UserDomain = UserDomain(firestoreRepository: PreviewFirestoreRepository(),
-                                                                     authenticationRepository: PreviewAuthenticationRepository()),
                                  searchRepository: SearchRepository = PreviewSearchRepository(),
                                  configurationRepository: ConfigurationRepository = PreviewConfigurationRepository()) -> Dependencies {
         return .init(authenticationRepository: authenticationRepository,
@@ -34,7 +32,7 @@ struct MockDependencies {
                      cloudRepository: cloudRepository,
                      storageRepository: storageRepository,
                      storeKitRepository: storeKitRepository,
-                     userDomain: userDomain,
+                     userDomain: .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository),
                      searchRepository: searchRepository,
                      configurationRepository: configurationRepository)
     }

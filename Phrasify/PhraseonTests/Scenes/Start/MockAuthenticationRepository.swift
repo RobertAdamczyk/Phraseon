@@ -13,6 +13,11 @@ import Firebase
 
 final class MockAuthenticationRepository: AuthenticationRepository {
 
+    var mockAuthenticationProvider: AuthenticationProvider?
+    var calledLogout: Bool?
+    var calledDeleteUser: Bool?
+    var mockCreationDate: Date?
+
     var userId: UserID? {
         "123"
     }
@@ -22,14 +27,14 @@ final class MockAuthenticationRepository: AuthenticationRepository {
     }
 
     var authenticationProvider: AuthenticationProvider? {
-        nil
+        mockAuthenticationProvider
     }
 
     var creationDate: Date? {
-        nil
+        mockCreationDate
     }
 
-    @Published var isLoggedIn: Bool? = false
+    @Published var isLoggedIn: Bool? = true
 
     var isLoggedInPublisher: Published<Bool?>.Publisher { $isLoggedIn }
 
@@ -57,11 +62,11 @@ final class MockAuthenticationRepository: AuthenticationRepository {
     }
 
     func logout() throws {
-        // empty
+        self.calledLogout = true
     }
 
     func deleteUser() async throws {
-        // empty
+        self.calledDeleteUser = true
     }
 
     func reauthenticate(email: String, password: String) async throws {
