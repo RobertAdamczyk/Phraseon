@@ -147,6 +147,14 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
         }
     }
 
+    func onPrivacyPolicyTapped() {
+        guard let urlString = coordinator.dependencies.configurationRepository.getValue(for: .privacyPolicyUrl).stringValue,
+              let url = URL(string: urlString) else {
+            return
+        }
+        UIApplication.shared.open(url)
+    }
+
     private func getProducts() {
         Task {
             do {
