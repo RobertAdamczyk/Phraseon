@@ -16,6 +16,16 @@ final class ProjectDetailViewModelTest: XCTestCase {
 
     let cancelBag = CancelBag()
 
+    private var lastTestKey: Key {
+        .init(id: "123", translation: [:], createdAt: Date(timeIntervalSince1970: 1000000), lastUpdatedAt: Date(timeIntervalSince1970: 1000000), status: [:])
+    }
+
+    private func getTestKeys(limit: Int) -> [Key] {
+        var keys: [Key] = .init(repeating: .init(translation: [:], createdAt: .now, lastUpdatedAt: .now, status: [:]), count: limit - 1)
+        keys.append(lastTestKey)
+        return keys
+    }
+
     static var project: Project = .init(id: "123", name: "", technologies: [], languages: [], baseLanguage: .english, 
                                         members: [], owner: "",
                                         securedAlgoliaApiKey: "", createdAt: .now, algoliaIndexName: "")
@@ -82,6 +92,9 @@ final class ProjectDetailViewModelTest: XCTestCase {
 
         XCTAssertEqual(viewModel.member, nil)
 
+        let repo = coordinator.dependencies.firestoreRepository as? MockFirestoreRepository
+        repo?.memberPublisher = .init(role: .admin, name: "LOADED", surname: "", email: "")
+
         let expectation = XCTestExpectation(description: "Wait for member")
         viewModel.$member.sink(receiveValue: { member in
             if member != nil {
@@ -92,8 +105,7 @@ final class ProjectDetailViewModelTest: XCTestCase {
 
         wait(for: [expectation], timeout: 1.0)
 
-        let repo = coordinator.dependencies.firestoreRepository as? MockFirestoreRepository
-        XCTAssertEqual(viewModel.member, repo?.member)
+        XCTAssertEqual(viewModel.member, repo?.memberPublisher)
         XCTAssertNotEqual(viewModel.member, nil)
     }
 
@@ -138,6 +150,9 @@ final class ProjectDetailViewModelTest: XCTestCase {
 
         XCTAssertEqual(viewModel.keys, nil)
 
+        let repo = coordinator.dependencies.firestoreRepository as? MockFirestoreRepository
+        repo?.keysPublisher = getTestKeys(limit: viewModel.keysLimit)
+
         let expectation = XCTestExpectation(description: "Wait for keys")
         viewModel.$state.sink(receiveValue: { state in
             if case .loaded(let keys) = state, !keys.isEmpty {
@@ -158,6 +173,8 @@ final class ProjectDetailViewModelTest: XCTestCase {
             XCTFail("Missing mock")
             return
         }
+
+        repo.keysPublisher = getTestKeys(limit: viewModel.keysLimit)
 
         let initLimit = viewModel.keysLimit
         var newLimit: Int? = nil
@@ -184,8 +201,17 @@ final class ProjectDetailViewModelTest: XCTestCase {
         wait(for: [keysExpectation], timeout: 5.0)
 
         // onKeyAppear() PART 1
-        viewModel.onKeyAppear(repo.lastKey)
+        guard let lastKey = repo.keysPublisher.last else {
+            XCTFail()
+            return
+        }
+        viewModel.onKeyAppear(lastKey)
         XCTAssertTrue(viewModel.keysLimit > initLimit)
+        guard let calledLimit = repo.calledLimit else {
+            XCTFail()
+            return
+        }
+        XCTAssertTrue(calledLimit > initLimit)
 
         newLimit = viewModel.keysLimit
         guard let newLimit else {
@@ -193,17 +219,26 @@ final class ProjectDetailViewModelTest: XCTestCase {
             return
         }
 
+        repo.keysPublisher = getTestKeys(limit: newLimit)
         wait(for: [newLimitExpectation], timeout: 5.0)
 
         XCTAssertEqual(viewModel.keys?.count, newLimit)
         XCTAssertNotEqual(viewModel.keys?.count, nil)
 
-        // onKeyAppear() PARK 2
-        viewModel.onKeyAppear(repo.lastKey)
+        // onKeyAppear() PART 2
+        guard let lastKey = repo.keysPublisher.last else {
+            XCTFail()
+            return
+        }
+        viewModel.onKeyAppear(lastKey)
         XCTAssertTrue(viewModel.keysLimit > newLimit)
 
         newLimitAgain = viewModel.keysLimit
-
+        guard let newLimitAgain else {
+            XCTFail("Expectation of number")
+            return
+        }
+        repo.keysPublisher = getTestKeys(limit: newLimitAgain)
         wait(for: [newLimitAgainExpectation], timeout: 5.0)
 
         XCTAssertEqual(viewModel.keys?.count, newLimitAgain)
@@ -274,12 +309,12 @@ final class ProjectDetailViewModelTest: XCTestCase {
             return
         }
 
-        XCTAssertEqual(viewModel.selectedKeysOrder, repo.keysOrder)
-        repo.keysOrder = nil
+        XCTAssertEqual(viewModel.selectedKeysOrder, repo.calledKeysOrder)
+        repo.calledKeysOrder = nil
 
         let expectation = XCTestExpectation(description: "Wait for keys order")
         viewModel.$state.sink(receiveValue: { state in
-            if repo.keysOrder == .recent {
+            if repo.calledKeysOrder == .recent {
                 expectation.fulfill()
             }
         })
@@ -289,7 +324,7 @@ final class ProjectDetailViewModelTest: XCTestCase {
 
         wait(for: [expectation], timeout: 5.0)
 
-        XCTAssertEqual(repo.keysOrder, .recent)
+        XCTAssertEqual(repo.calledKeysOrder, .recent)
     }
 
     func testOnSearchTextDidChange() throws {
@@ -390,7 +425,7 @@ final class ProjectDetailViewModelTest: XCTestCase {
 
         repo.mockSearch = nil
         viewModel.searchText = TOO_SHORT_TEXT
-
+        (coordinator.dependencies.firestoreRepository as? MockFirestoreRepository)?.keysPublisher = getTestKeys(limit: viewModel.keysLimit)
         wait(for: [tooShortExpectation], timeout: 5.0)
 
         XCTAssertEqual(viewModel.keys?.count, viewModel.keysLimit)
@@ -426,69 +461,6 @@ fileprivate final class MockProjectDetailCoordinator: ProjectDetailViewModel.Pro
     }
 }
 
-fileprivate final class MockFirestoreRepository: FirestoreRepository {
-
-    let member: Member = .init(role: .admin, name: "LOADED", surname: "", email: "")
-
-    let lastKey: Key = .init(id: "123", translation: [:], createdAt: Date(timeIntervalSince1970: 1000000),
-                             lastUpdatedAt: Date(timeIntervalSince1970: 1000000), status: [:])
-
-    var keysOrder: KeysOrder? = nil
-
-    func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Error> {
-        return Just([])
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
-    }
-
-    func getProjectPublisher(projectId: String) -> AnyPublisher<Project?, Error> {
-        return Just(ProjectDetailViewModelTest.project)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
-    }
-
-    func getMembersPublisher(projectId: String) -> AnyPublisher<[Member], Error> {
-        return Just([])
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
-    }
-
-    func getMemberPublisher(userId: UserID, projectId: String) -> AnyPublisher<Member?, Error> {
-        return Just(member)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
-    }
-
-    func getKeysPublisher(projectId: String, keysOrder: KeysOrder, limit: Int) -> AnyPublisher<[Key], Error> {
-        var keys: [Key] = .init(repeating: .init(translation: [:], createdAt: .now, lastUpdatedAt: .now, status: [:]), count: limit - 1)
-        keys.append(lastKey)
-        self.keysOrder = keysOrder
-        return Just(keys)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
-    }
-
-    func getKeyPublisher(projectId: String, keyId: String) -> AnyPublisher<Key?, Error> {
-        return Just(nil)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
-    }
-
-    func getUserPublisher(userId: UserID) -> AnyPublisher<User?, Error> {
-        return Just(nil)
-            .setFailureType(to: Error.self)
-            .eraseToAnyPublisher()
-    }
-
-    func getUser(email: String) async throws -> User {
-        return .init(email: "", name: "", surname: "", createdAt: .now, subscriptionId: .init())
-    }
-
-    func setProfileName(userId: UserID, name: String, surname: String) async throws {}
-
-    func setProfilePhotoUrl(userId: UserID, photoUrl: String) async throws {}
-}
-
 fileprivate final class MockSearchRepository: SearchRepository {
 
     var searchText: String? = nil
@@ -503,9 +475,9 @@ fileprivate final class MockSearchRepository: SearchRepository {
     var mockSearch: MockSearch? = nil
 
     func searchKeys(in project: Project,
-                    with text: String, 
+                    with text: String,
                     completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {
-        let keys: [AlgoliaKey] = .init(repeating: .init(createdAt: .init(seconds: 0, nanoseconds: 0), 
+        let keys: [AlgoliaKey] = .init(repeating: .init(createdAt: .init(seconds: 0, nanoseconds: 0),
                                                         lastUpdatedAt: .init(seconds: 0, nanoseconds: 0),
                                                         status: [:],
                                                         translation: [:],

@@ -17,9 +17,14 @@ final class ProfileViewModelTests: XCTestCase {
 
     let cancelBag = CancelBag()
 
+    private var testUser: User? = .init(id: "123", email: "email", name: "name", surname: "surname", createdAt: .now, subscriptionId: .init())
+
     func testInit() throws {
         let coordinator = ProfileCoordinator()
         let viewModel = ProfileViewModel(coordinator: coordinator)
+
+        let repo = coordinator.dependencies.firestoreRepository as? MockFirestoreRepository
+        repo?.userPublisher = testUser
 
         let expectation = XCTestExpectation(description: "Wait for user")
         viewModel.$user.sink(receiveValue: { user in
@@ -37,6 +42,9 @@ final class ProfileViewModelTests: XCTestCase {
     func testOnNameTapped() throws {
         let coordinator = ProfileCoordinator()
         let viewModel = ProfileViewModel(coordinator: coordinator)
+
+        let repo = coordinator.dependencies.firestoreRepository as? MockFirestoreRepository
+        repo?.userPublisher = testUser
 
         let expectation = XCTestExpectation(description: "Wait for user")
         viewModel.$user.sink(receiveValue: { user in
@@ -249,66 +257,5 @@ fileprivate final class ProfileCoordinator: ProfileViewModel.ProfileCoordinator 
     
     func presentCreateProject() {
 
-    }
-}
-
-fileprivate final class MockFirestoreRepository: FirestoreRepository {
-
-    var calledPhotoUrl: String?
-    var calledUserId: String?
-
-    func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Error> {
-        Just([Project]())
-                    .setFailureType(to: Error.self)
-                    .eraseToAnyPublisher()
-    }
-
-    func getProjectPublisher(projectId: String) -> AnyPublisher<Project?, Error> {
-        Just(nil)
-                    .setFailureType(to: Error.self)
-                    .eraseToAnyPublisher()
-    }
-
-    func getMembersPublisher(projectId: String) -> AnyPublisher<[Member], Error> {
-        Just([Member]())
-                    .setFailureType(to: Error.self)
-                    .eraseToAnyPublisher()
-    }
-
-    func getMemberPublisher(userId: UserID, projectId: String) -> AnyPublisher<Member?, Error> {
-        Just(nil)
-                    .setFailureType(to: Error.self)
-                    .eraseToAnyPublisher()
-    }
-
-    func getKeysPublisher(projectId: String, keysOrder: KeysOrder, limit: Int) -> AnyPublisher<[Key], Error> {
-        Just([Key]())
-                    .setFailureType(to: Error.self)
-                    .eraseToAnyPublisher()
-    }
-
-    func getKeyPublisher(projectId: String, keyId: String) -> AnyPublisher<Key?, Error> {
-        Just(nil)
-                    .setFailureType(to: Error.self)
-                    .eraseToAnyPublisher()
-    }
-
-    func getUserPublisher(userId: UserID) -> AnyPublisher<User?, Error> {
-        Just(.init(id: "123", email: "email", name: "name", surname: "surname", createdAt: .now, subscriptionId: .init()))
-                    .setFailureType(to: Error.self)
-                    .eraseToAnyPublisher()
-    }
-
-    func getUser(email: String) async throws -> User {
-        return .init(email: "", name: "", surname: "", createdAt: .now, subscriptionId: .init())
-    }
-
-    func setProfileName(userId: UserID, name: String, surname: String) async throws {
-        // empty
-    }
-
-    func setProfilePhotoUrl(userId: UserID, photoUrl: String) async throws {
-        self.calledUserId = userId
-        self.calledPhotoUrl = photoUrl
     }
 }

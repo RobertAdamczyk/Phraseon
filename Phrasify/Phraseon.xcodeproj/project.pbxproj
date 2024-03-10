@@ -200,6 +200,7 @@
 		5574B33B2B6F114D00C9DFB9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5574B33A2B6F114D00C9DFB9 /* FirebaseStorage */; };
 		5574B33D2B6F115B00C9DFB9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5574B33C2B6F115B00C9DFB9 /* FirebaseFirestore */; };
 		5574B33F2B6F1F8400C9DFB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5574B33E2B6F1F8400C9DFB9 /* GoogleService-Info.plist */; };
+		557F64EC2B9E745A00D6A791 /* MockFirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F64EB2B9E745A00D6A791 /* MockFirestoreRepository.swift */; };
 		558074412B2CF08E0041160B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
 		558074422B2CF08E0041160B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
 		5580744E2B2E341B0041160B /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
@@ -479,6 +480,7 @@
 		5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		5574B3282B6F0D3900C9DFB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5574B33E2B6F1F8400C9DFB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		557F64EB2B9E745A00D6A791 /* MockFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestoreRepository.swift; sourceTree = "<group>"; };
 		558074402B2CF08E0041160B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		5580744D2B2E341B0041160B /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		558074502B2E38110041160B /* Activitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activitable.swift; sourceTree = "<group>"; };
@@ -928,6 +930,7 @@
 		555459092B854D8400DA097F /* PhraseonTests */ = {
 			isa = PBXGroup;
 			children = (
+				557F64EA2B9E73A900D6A791 /* Mocks */,
 				555459112B854FB400DA097F /* Scenes */,
 			);
 			path = PhraseonTests;
@@ -1014,6 +1017,14 @@
 				5570FF4F2B61B1460011208F /* PaywallViewModel.swift */,
 			);
 			path = Paywall;
+			sourceTree = "<group>";
+		};
+		557F64EA2B9E73A900D6A791 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				557F64EB2B9E745A00D6A791 /* MockFirestoreRepository.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		558074472B2CF28F0041160B /* GoogleSDK */ = {
@@ -1758,6 +1769,7 @@
 				55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */,
 				5502D9382B868B2800A0B110 /* LoginViewModelTest.swift in Sources */,
 				55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */,
+				557F64EC2B9E745A00D6A791 /* MockFirestoreRepository.swift in Sources */,
 				55D63DEF2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift in Sources */,
 				554ADC002B9BB03C00775842 /* ProfileViewModelTest.swift in Sources */,
 				55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */,
