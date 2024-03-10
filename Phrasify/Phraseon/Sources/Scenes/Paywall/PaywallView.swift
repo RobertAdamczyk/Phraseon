@@ -69,6 +69,10 @@ struct PaywallView: View {
                     AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
                         .disabled(viewModel.possiblyProcessSubscription)
                 }
+                Button(action: viewModel.onPrivacyPolicyTapped) {
+                    Text("Terms of Service & Privacy Policy")
+                        .apply(.regular, size: .S, color: .lightGray)
+                }
 
             }
             .padding(16)

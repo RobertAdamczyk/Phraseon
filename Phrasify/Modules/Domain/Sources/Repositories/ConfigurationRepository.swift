@@ -70,5 +70,6 @@ extension ConfigurationRepositoryImpl {
 
     public enum ConfigKey: String {
         case versionUpdateInfo
+        case privacyPolicyUrl
     }
 }
