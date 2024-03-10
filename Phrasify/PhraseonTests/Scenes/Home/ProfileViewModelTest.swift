@@ -211,7 +211,8 @@ fileprivate final class ProfileCoordinator: ProfileViewModel.ProfileCoordinator 
     var calledShowDeleteUser: Bool?
 
     var dependencies: Dependencies = MockDependencies.makeDependencies(authenticationRepository: MockAuthenticationRepository(),
-                                                                       firestoreRepository: MockFirestoreRepository())
+                                                                       firestoreRepository: MockFirestoreRepository(),
+                                                                       storageRepository: MockStorageRepository())
 
     func popToRoot() {
 
