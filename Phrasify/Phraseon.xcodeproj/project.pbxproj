@@ -26,6 +26,7 @@
 		550537982B44C0DE0077912D /* ImageTransferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537962B44C0DE0077912D /* ImageTransferable.swift */; };
 		55054FFE2B9FC559006E06B1 /* MockStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55054FFD2B9FC559006E06B1 /* MockStorageRepository.swift */; };
 		550550002B9FC5A7006E06B1 /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55054FFF2B9FC5A7006E06B1 /* MockSearchRepository.swift */; };
+		550550022B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550550012B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift */; };
 		5505C7DA2B55BAEB00806B4F /* syncScript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5505C7D92B55BAEB00806B4F /* syncScript.txt */; };
 		5505C7DB2B55BAEB00806B4F /* syncScript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5505C7D92B55BAEB00806B4F /* syncScript.txt */; };
 		5505C7DE2B55BE5900806B4F /* SyncScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7DD2B55BE5900806B4F /* SyncScript.swift */; };
@@ -392,6 +393,7 @@
 		550537962B44C0DE0077912D /* ImageTransferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransferable.swift; sourceTree = "<group>"; };
 		55054FFD2B9FC559006E06B1 /* MockStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageRepository.swift; sourceTree = "<group>"; };
 		55054FFF2B9FC5A7006E06B1 /* MockSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRepository.swift; sourceTree = "<group>"; };
+		550550012B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameViewModelTest.swift; sourceTree = "<group>"; };
 		5505C7D92B55BAEB00806B4F /* syncScript.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = syncScript.txt; sourceTree = "<group>"; };
 		5505C7DD2B55BE5900806B4F /* SyncScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncScript.swift; sourceTree = "<group>"; };
 		5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationView.swift; sourceTree = "<group>"; };
@@ -908,6 +910,7 @@
 				55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */,
 				554ADBFF2B9BB03C00775842 /* ProfileViewModelTest.swift */,
 				55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */,
+				550550012B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1778,6 +1781,7 @@
 				55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */,
 				557F64EC2B9E745A00D6A791 /* MockFirestoreRepository.swift in Sources */,
 				55D63DEF2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift in Sources */,
+				550550022B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift in Sources */,
 				554ADC002B9BB03C00775842 /* ProfileViewModelTest.swift in Sources */,
 				55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */,
 				555459142B854FD600DA097F /* StartViewModelTest.swift in Sources */,

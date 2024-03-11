@@ -10,7 +10,7 @@ import Model
 
 final class ProfileNameViewModel: ObservableObject {
 
-    typealias ProfileNameCoordinator = Coordinator & ProfileActions & RootActions & NavigationActions
+    typealias ProfileNameCoordinator = Coordinator & NavigationActions
 
     @Published var name: String
     @Published var surname: String

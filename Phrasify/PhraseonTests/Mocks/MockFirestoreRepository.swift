@@ -23,6 +23,9 @@ final class MockFirestoreRepository: FirestoreRepository {
     var calledUserId: String?
     var calledLimit: Int?
 
+    var calledName: String?
+    var calledSurname: String?
+
     func getProjectsPublisher(userId: UserID) -> AnyPublisher<[Project], Error> {
         $projectsPublisher
             .setFailureType(to: Error.self)
@@ -71,7 +74,11 @@ final class MockFirestoreRepository: FirestoreRepository {
         return .init(email: "", name: "", surname: "", createdAt: .now, subscriptionId: .init())
     }
 
-    func setProfileName(userId: UserID, name: String, surname: String) async throws {}
+    func setProfileName(userId: UserID, name: String, surname: String) async throws {
+        self.calledName = name
+        self.calledSurname = surname
+        self.calledUserId = userId
+    }
 
     func setProfilePhotoUrl(userId: UserID, photoUrl: String) async throws {
         self.calledUserId = userId
