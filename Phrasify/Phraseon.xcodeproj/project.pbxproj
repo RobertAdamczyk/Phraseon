@@ -24,6 +24,8 @@
 		550537952B44C0270077912D /* PhotoPickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537932B44C0270077912D /* PhotoPickerHandler.swift */; };
 		550537972B44C0DE0077912D /* ImageTransferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537962B44C0DE0077912D /* ImageTransferable.swift */; };
 		550537982B44C0DE0077912D /* ImageTransferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537962B44C0DE0077912D /* ImageTransferable.swift */; };
+		55054FFE2B9FC559006E06B1 /* MockStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55054FFD2B9FC559006E06B1 /* MockStorageRepository.swift */; };
+		550550002B9FC5A7006E06B1 /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55054FFF2B9FC5A7006E06B1 /* MockSearchRepository.swift */; };
 		5505C7DA2B55BAEB00806B4F /* syncScript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5505C7D92B55BAEB00806B4F /* syncScript.txt */; };
 		5505C7DB2B55BAEB00806B4F /* syncScript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5505C7D92B55BAEB00806B4F /* syncScript.txt */; };
 		5505C7DE2B55BE5900806B4F /* SyncScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7DD2B55BE5900806B4F /* SyncScript.swift */; };
@@ -388,6 +390,8 @@
 		550537902B44C0170077912D /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		550537932B44C0270077912D /* PhotoPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerHandler.swift; sourceTree = "<group>"; };
 		550537962B44C0DE0077912D /* ImageTransferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransferable.swift; sourceTree = "<group>"; };
+		55054FFD2B9FC559006E06B1 /* MockStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageRepository.swift; sourceTree = "<group>"; };
+		55054FFF2B9FC5A7006E06B1 /* MockSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRepository.swift; sourceTree = "<group>"; };
 		5505C7D92B55BAEB00806B4F /* syncScript.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = syncScript.txt; sourceTree = "<group>"; };
 		5505C7DD2B55BE5900806B4F /* SyncScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncScript.swift; sourceTree = "<group>"; };
 		5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationView.swift; sourceTree = "<group>"; };
@@ -953,7 +957,6 @@
 				55D63DEA2B87E4C20002DAE3 /* RegisterViewModelTest.swift */,
 				55D63DEE2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift */,
 				55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */,
-				55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -1022,7 +1025,10 @@
 		557F64EA2B9E73A900D6A791 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */,
 				557F64EB2B9E745A00D6A791 /* MockFirestoreRepository.swift */,
+				55054FFD2B9FC559006E06B1 /* MockStorageRepository.swift */,
+				55054FFF2B9FC5A7006E06B1 /* MockSearchRepository.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1767,6 +1773,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */,
+				55054FFE2B9FC559006E06B1 /* MockStorageRepository.swift in Sources */,
 				5502D9382B868B2800A0B110 /* LoginViewModelTest.swift in Sources */,
 				55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */,
 				557F64EC2B9E745A00D6A791 /* MockFirestoreRepository.swift in Sources */,
@@ -1774,6 +1781,7 @@
 				554ADC002B9BB03C00775842 /* ProfileViewModelTest.swift in Sources */,
 				55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */,
 				555459142B854FD600DA097F /* StartViewModelTest.swift in Sources */,
+				550550002B9FC5A7006E06B1 /* MockSearchRepository.swift in Sources */,
 				55D63DED2B87F0450002DAE3 /* MockAuthenticationRepository.swift in Sources */,
 				55406C592B8A922F00B03E9D /* HomeViewModelTest.swift in Sources */,
 			);

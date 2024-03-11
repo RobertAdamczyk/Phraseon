@@ -195,21 +195,6 @@ final class ProfileViewModelTests: XCTestCase {
     }
 }
 
-fileprivate final class MockStorageRepository: StorageRepository {
-
-    var calledUploadImageCalled: Bool?
-    var mockDownloadURL: URL?
-
-    func uploadImage(path: StorageRepositoryImpl.StoragePath, imageData: Data) async throws -> StorageMetadata {
-        self.calledUploadImageCalled = true
-        return .init()
-    }
-    
-    func downloadURL(for path: StorageRepositoryImpl.StoragePath) async throws -> URL {
-        return mockDownloadURL ?? .applicationDirectory
-    }
-}
-
 fileprivate final class ProfileCoordinator: ProfileViewModel.ProfileCoordinator {
 
     var calledName: String?

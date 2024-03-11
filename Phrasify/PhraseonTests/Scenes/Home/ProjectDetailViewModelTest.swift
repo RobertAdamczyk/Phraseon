@@ -16,6 +16,19 @@ final class ProjectDetailViewModelTest: XCTestCase {
 
     let cancelBag = CancelBag()
 
+    private let searchKeys: [AlgoliaKey] = .init(repeating: .init(createdAt: .init(seconds: 0, nanoseconds: 0),
+                                                                  lastUpdatedAt: .init(seconds: 0, nanoseconds: 0),
+                                                                  status: [:],
+                                                                  translation: [:],
+                                                                  keyId: "",
+                                                                  projectId: "",
+                                                                  objectID: "",
+                                                                  highlightResult: .init(keyId: .init(value: .init(string: ""),
+                                                                                                      matchLevel: .full,
+                                                                                                      matchedWords: []),
+                                                                                         translation: [:])),
+                                                 count: 10)
+
     private var lastTestKey: Key {
         .init(id: "123", translation: [:], createdAt: Date(timeIntervalSince1970: 1000000), lastUpdatedAt: Date(timeIntervalSince1970: 1000000), status: [:])
     }
@@ -387,7 +400,7 @@ final class ProjectDetailViewModelTest: XCTestCase {
         })
         .store(in: cancelBag)
 
-        repo.mockSearch = .found
+        repo.mockSearch = .found(searchKeys)
         viewModel.searchText = FOUND_TEXT
 
         wait(for: [searchExpectation, loadingSearchExpectation], timeout: 5.0)
@@ -458,49 +471,5 @@ fileprivate final class MockProjectDetailCoordinator: ProjectDetailViewModel.Pro
     func showKeyDetails(key: Key, project: Project, projectMemberUseCase: ProjectMemberUseCase) {
         self.key = key
         self.project = project
-    }
-}
-
-fileprivate final class MockSearchRepository: SearchRepository {
-
-    var searchText: String? = nil
-    var project: Project? = nil
-
-    enum MockSearch {
-        case found
-        case notFound
-        case error
-    }
-
-    var mockSearch: MockSearch? = nil
-
-    func searchKeys(in project: Project,
-                    with text: String,
-                    completion: @escaping (Result<[AlgoliaKey], Error>) -> Void) {
-        let keys: [AlgoliaKey] = .init(repeating: .init(createdAt: .init(seconds: 0, nanoseconds: 0),
-                                                        lastUpdatedAt: .init(seconds: 0, nanoseconds: 0),
-                                                        status: [:],
-                                                        translation: [:],
-                                                        keyId: "",
-                                                        projectId: "",
-                                                        objectID: "",
-                                                        highlightResult: .init(keyId: .init(value: .init(string: ""),
-                                                                                            matchLevel: .full,
-                                                                                            matchedWords: []),
-                                                                               translation: [:])),
-                                       count: 10)
-        self.searchText = text
-        self.project = project
-
-        switch mockSearch {
-        case .found:
-            completion(.success(keys))
-        case .notFound:
-            completion(.success([]))
-        case .error:
-            completion(.failure(AppError.decodingError))
-        default:
-            fatalError("Need set emptySearch flag")
-        }
     }
 }
