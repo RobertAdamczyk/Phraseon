@@ -40,6 +40,7 @@ final class MockAuthenticationRepository: AuthenticationRepository {
 
     var enteredEmail: String? = nil
     var enteredPassword: String? = nil
+    var enteredUpdatedPassword: String? = nil
     @Published var credentialToLogin: AuthCredential?
 
     func login(email: String, password: String) async throws {
@@ -70,11 +71,12 @@ final class MockAuthenticationRepository: AuthenticationRepository {
     }
 
     func reauthenticate(email: String, password: String) async throws {
-        // empty
+        self.enteredEmail = email
+        self.enteredPassword = password
     }
 
     func updatePassword(to password: String) async throws {
-        // empty
+        self.enteredUpdatedPassword = password
     }
 
     func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential {

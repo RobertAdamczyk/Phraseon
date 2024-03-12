@@ -33,7 +33,7 @@ struct ChangePasswordView: View {
         VStack(spacing: 16) {
             AppTextField(type: .currentPassword, text: $viewModel.currentPassword)
                 .focused($focusedTextField, equals: .currentPassword)
-                .disabled(viewModel.state == .newPassword)
+                .disabled(viewModel.shouldCurrentPasswordDisabled)
             ZStack {
                 if viewModel.shouldShowNewPassword {
                     AppTextField(type: .newPassword, text: $viewModel.newPassword)

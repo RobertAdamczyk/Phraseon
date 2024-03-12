@@ -332,6 +332,7 @@
 		55DE10602B4B5465001CB87F /* LeaveProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE105E2B4B5465001CB87F /* LeaveProjectWarningViewModel.swift */; };
 		55DE10622B4B56D1001CB87F /* SheetActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10612B4B56D1001CB87F /* SheetActions.swift */; };
 		55DE10632B4B56D1001CB87F /* SheetActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10612B4B56D1001CB87F /* SheetActions.swift */; };
+		55DFE4312BA0E3D700061962 /* ChangePasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE4302BA0E3D700061962 /* ChangePasswordViewModelTest.swift */; };
 		55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FD140B2B97BD90006DA3E4 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14092B97BD90006DA3E4 /* AppleButton.swift */; };
@@ -549,6 +550,7 @@
 		55DE10502B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerViewModel.swift; sourceTree = "<group>"; };
 		55DE105E2B4B5465001CB87F /* LeaveProjectWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveProjectWarningViewModel.swift; sourceTree = "<group>"; };
 		55DE10612B4B56D1001CB87F /* SheetActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetActions.swift; sourceTree = "<group>"; };
+		55DFE4302BA0E3D700061962 /* ChangePasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModelTest.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FD14092B97BD90006DA3E4 /* AppleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 		55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
@@ -911,6 +913,7 @@
 				554ADBFF2B9BB03C00775842 /* ProfileViewModelTest.swift */,
 				55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */,
 				550550012B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift */,
+				55DFE4302BA0E3D700061962 /* ChangePasswordViewModelTest.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1776,6 +1779,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */,
+				55DFE4312BA0E3D700061962 /* ChangePasswordViewModelTest.swift in Sources */,
 				55054FFE2B9FC559006E06B1 /* MockStorageRepository.swift in Sources */,
 				5502D9382B868B2800A0B110 /* LoginViewModelTest.swift in Sources */,
 				55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */,

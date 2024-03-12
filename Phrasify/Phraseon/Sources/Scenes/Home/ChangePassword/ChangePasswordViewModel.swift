@@ -13,7 +13,7 @@ import Common
 
 final class ChangePasswordViewModel: ObservableObject {
 
-    typealias ChangePasswordCoordinator = Coordinator & RootActions & NavigationActions
+    typealias ChangePasswordCoordinator = Coordinator & NavigationActions
 
     @Published private(set) var state: State
     @Published var currentPassword: String = ""
@@ -26,6 +26,13 @@ final class ChangePasswordViewModel: ObservableObject {
 
     var shouldShowConfirmNewPassword: Bool {
         state == .confirmNewPassword
+    }
+
+    var shouldCurrentPasswordDisabled: Bool {
+        switch state {
+        case .newPassword, .unavailable, .confirmNewPassword: return true
+        case .currentPassword: return false
+        }
     }
 
     var primaryButtonText: String {
