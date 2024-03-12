@@ -5,8 +5,6 @@
 //  Created by Robert Adamczyk on 12.03.24.
 //
 
-import Foundation
-
 import XCTest
 import Combine
 @testable import Phraseon_InHouse

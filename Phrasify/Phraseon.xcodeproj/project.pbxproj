@@ -333,6 +333,8 @@
 		55DE10622B4B56D1001CB87F /* SheetActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10612B4B56D1001CB87F /* SheetActions.swift */; };
 		55DE10632B4B56D1001CB87F /* SheetActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10612B4B56D1001CB87F /* SheetActions.swift */; };
 		55DFE4312BA0E3D700061962 /* ChangePasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE4302BA0E3D700061962 /* ChangePasswordViewModelTest.swift */; };
+		55DFE4332BA0F28B00061962 /* ProfileDeleteWarningViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE4322BA0F28B00061962 /* ProfileDeleteWarningViewModelTest.swift */; };
+		55DFE4352BA0F4B300061962 /* MockCloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE4342BA0F4B300061962 /* MockCloudRepository.swift */; };
 		55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FD140B2B97BD90006DA3E4 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14092B97BD90006DA3E4 /* AppleButton.swift */; };
@@ -551,6 +553,8 @@
 		55DE105E2B4B5465001CB87F /* LeaveProjectWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveProjectWarningViewModel.swift; sourceTree = "<group>"; };
 		55DE10612B4B56D1001CB87F /* SheetActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetActions.swift; sourceTree = "<group>"; };
 		55DFE4302BA0E3D700061962 /* ChangePasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModelTest.swift; sourceTree = "<group>"; };
+		55DFE4322BA0F28B00061962 /* ProfileDeleteWarningViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModelTest.swift; sourceTree = "<group>"; };
+		55DFE4342BA0F4B300061962 /* MockCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudRepository.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FD14092B97BD90006DA3E4 /* AppleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 		55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
@@ -914,6 +918,7 @@
 				55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */,
 				550550012B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift */,
 				55DFE4302BA0E3D700061962 /* ChangePasswordViewModelTest.swift */,
+				55DFE4322BA0F28B00061962 /* ProfileDeleteWarningViewModelTest.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1035,6 +1040,7 @@
 				557F64EB2B9E745A00D6A791 /* MockFirestoreRepository.swift */,
 				55054FFD2B9FC559006E06B1 /* MockStorageRepository.swift */,
 				55054FFF2B9FC5A7006E06B1 /* MockSearchRepository.swift */,
+				55DFE4342BA0F4B300061962 /* MockCloudRepository.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1783,9 +1789,11 @@
 				55054FFE2B9FC559006E06B1 /* MockStorageRepository.swift in Sources */,
 				5502D9382B868B2800A0B110 /* LoginViewModelTest.swift in Sources */,
 				55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */,
+				55DFE4352BA0F4B300061962 /* MockCloudRepository.swift in Sources */,
 				557F64EC2B9E745A00D6A791 /* MockFirestoreRepository.swift in Sources */,
 				55D63DEF2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift in Sources */,
 				550550022B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift in Sources */,
+				55DFE4332BA0F28B00061962 /* ProfileDeleteWarningViewModelTest.swift in Sources */,
 				554ADC002B9BB03C00775842 /* ProfileViewModelTest.swift in Sources */,
 				55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */,
 				555459142B854FD600DA097F /* StartViewModelTest.swift in Sources */,

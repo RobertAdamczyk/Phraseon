@@ -16,7 +16,7 @@ final class ProfileDeleteWarningViewModel: ObservableObject {
         case loading
     }
 
-    typealias ProfileDeleteWarningCoordinator = Coordinator & ProfileActions & NavigationActions & SheetActions
+    typealias ProfileDeleteWarningCoordinator = Coordinator & SheetActions
 
     @Published private(set) var state: State = .deletion {
         didSet {
