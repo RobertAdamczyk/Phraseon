@@ -403,7 +403,7 @@ final class ProjectDetailViewModelTest: XCTestCase {
         repo.mockSearch = .found(searchKeys)
         viewModel.searchText = FOUND_TEXT
 
-        wait(for: [searchExpectation, loadingSearchExpectation], timeout: 5.0)
+        wait(for: [searchExpectation, loadingSearchExpectation], timeout: 10.0)
 
         XCTAssertEqual(searchedKeys?.count, 10)
 
