@@ -31,6 +31,7 @@ final class ProfileDeleteWarningViewModelTest: XCTestCase {
         let viewModel = ProfileDeleteWarningViewModel(coordinator: coordinator)
         XCTAssertEqual(viewModel.state, .deletion)
 
+        let expectationScrollToPageAction = XCTestExpectation()
         let expectationLoading = XCTestExpectation()
         let expectationInformation = XCTestExpectation()
         viewModel.$state.sink { state in
@@ -45,12 +46,17 @@ final class ProfileDeleteWarningViewModelTest: XCTestCase {
         }
         .store(in: cancelBag)
 
+        viewModel.scrollToPageAction = { _ in
+            expectationScrollToPageAction.fulfill()
+        }
+
         cloudRepo?.mockIsUserProjectOwner = true
 
         Task {
             await viewModel.onDeleteAccountTapped()
             await fulfillment(of: [expectationLoading], timeout: 1.0)
             await fulfillment(of: [expectationInformation], timeout: 1.0)
+            await fulfillment(of: [expectationScrollToPageAction], timeout: 1.0)
             XCTAssertEqual(viewModel.state, .information)
             coordinator.calledDismissSheet = nil
             viewModel.onUnderstoodTapped()
