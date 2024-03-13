@@ -247,6 +247,15 @@
 		55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
 		55B8414C2B4C9AFC007697AF /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8414B2B4C9AFC007697AF /* SwipeAction.swift */; };
 		55B8414D2B4C9AFC007697AF /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8414B2B4C9AFC007697AF /* SwipeAction.swift */; };
+		55BC7BA82BA2649800801465 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CE2B2A2DBA005144F1 /* FontStyle.swift */; };
+		55BC7BA92BA264B200801465 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278D92B2A2F99005144F1 /* AppColor.swift */; };
+		55BC7BAA2BA2650B00801465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552785C52B27A5140098FE95 /* Assets.xcassets */; };
+		55BC7BB12BA2670200801465 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
+		55BC7BB22BA2670500801465 /* RethinkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D22B2A2E36005144F1 /* RethinkSans-Bold.ttf */; };
+		55BC7BB32BA2670700801465 /* RethinkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D32B2A2E36005144F1 /* RethinkSans-Medium.ttf */; };
+		55BC7BB42BA2670900801465 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */; };
+		55BC7BB52BA2670C00801465 /* RethinkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D42B2A2E36005144F1 /* RethinkSans-SemiBold.ttf */; };
+		55BC7BB62BA2671300801465 /* buttonLoadingAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 55C2792F2B2A5922005144F1 /* buttonLoadingAnimation.json */; };
 		55C278CD2B2A2DA1005144F1 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CC2B2A2DA1005144F1 /* AppButton.swift */; };
 		55C278CF2B2A2DBA005144F1 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C278CE2B2A2DBA005144F1 /* FontStyle.swift */; };
 		55C278D52B2A2E36005144F1 /* RethinkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */; };
@@ -335,6 +344,9 @@
 		55DFE4312BA0E3D700061962 /* ChangePasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE4302BA0E3D700061962 /* ChangePasswordViewModelTest.swift */; };
 		55DFE4332BA0F28B00061962 /* ProfileDeleteWarningViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE4322BA0F28B00061962 /* ProfileDeleteWarningViewModelTest.swift */; };
 		55DFE4352BA0F4B300061962 /* MockCloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE4342BA0F4B300061962 /* MockCloudRepository.swift */; };
+		55DFE43D2BA0FE1900061962 /* Phraseon_InHouse_MacOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE43C2BA0FE1900061962 /* Phraseon_InHouse_MacOSApp.swift */; };
+		55DFE43F2BA0FE1900061962 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE43E2BA0FE1900061962 /* ContentView.swift */; };
+		55DFE4442BA0FE1C00061962 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DFE4432BA0FE1C00061962 /* Preview Assets.xcassets */; };
 		55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FD140B2B97BD90006DA3E4 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14092B97BD90006DA3E4 /* AppleButton.swift */; };
@@ -510,6 +522,7 @@
 		55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModel.swift; sourceTree = "<group>"; };
 		55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectWarningViewModel.swift; sourceTree = "<group>"; };
 		55B8414B2B4C9AFC007697AF /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
+		55BC7BB72BA2673000801465 /* Phraseon-InHouse-MacOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Phraseon-InHouse-MacOS-Info.plist"; path = "Phraseon_InHouse_MacOS/Resources/Phraseon-InHouse-MacOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		55C278CC2B2A2DA1005144F1 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		55C278CE2B2A2DBA005144F1 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -555,6 +568,11 @@
 		55DFE4302BA0E3D700061962 /* ChangePasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModelTest.swift; sourceTree = "<group>"; };
 		55DFE4322BA0F28B00061962 /* ProfileDeleteWarningViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModelTest.swift; sourceTree = "<group>"; };
 		55DFE4342BA0F4B300061962 /* MockCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudRepository.swift; sourceTree = "<group>"; };
+		55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon_InHouse_MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55DFE43C2BA0FE1900061962 /* Phraseon_InHouse_MacOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phraseon_InHouse_MacOSApp.swift; sourceTree = "<group>"; };
+		55DFE43E2BA0FE1900061962 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		55DFE4432BA0FE1C00061962 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		55DFE4452BA0FE1C00061962 /* Phraseon_InHouse_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phraseon_InHouse_MacOS.entitlements; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FD14092B97BD90006DA3E4 /* AppleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 		55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
@@ -627,6 +645,13 @@
 				5574B32F2B6F112C00C9DFB9 /* GoogleSignIn in Frameworks */,
 				5547F9CB2B97C4DD008136F9 /* Domain in Frameworks */,
 				5574B3312B6F112F00C9DFB9 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55DFE4372BA0FE1900061962 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,8 +835,10 @@
 			isa = PBXGroup;
 			children = (
 				55CADF2C2B7571A000D04365 /* ci_scripts */,
+				55BC7BAB2BA2661E00801465 /* Shared */,
 				552785C02B27A5120098FE95 /* Phraseon */,
 				55C278FE2B2A3F80005144F1 /* Phraseon_InHouse */,
+				55DFE43B2BA0FE1900061962 /* Phraseon_InHouse_MacOS */,
 				5540B75C2B93C4BE00F4580F /* Modules */,
 				555459092B854D8400DA097F /* PhraseonTests */,
 				552785BF2B27A5120098FE95 /* Products */,
@@ -825,6 +852,7 @@
 				552785BE2B27A5120098FE95 /* Phraseon.app */,
 				55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse.app */,
 				555459082B854D8300DA097F /* PhraseonTests.xctest */,
+				55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_MacOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1125,6 +1153,42 @@
 			path = SwipeAction;
 			sourceTree = "<group>";
 		};
+		55BC7BAB2BA2661E00801465 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				55BC7BAC2BA2662500801465 /* Sources */,
+				55BC7BAE2BA2663400801465 /* Resources */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		55BC7BAC2BA2662500801465 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				55BC7BAF2BA2666D00801465 /* Common */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		55BC7BAE2BA2663400801465 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55C278D02B2A2E25005144F1 /* Fonts */,
+				55C2792E2B2A5918005144F1 /* Animations */,
+				552785C52B27A5140098FE95 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		55BC7BAF2BA2666D00801465 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				55C278D92B2A2F99005144F1 /* AppColor.swift */,
+				55C278CE2B2A2DBA005144F1 /* FontStyle.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		55C278D02B2A2E25005144F1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1227,11 +1291,8 @@
 			children = (
 				5561C5C62B66EA9000C815BC /* Products */,
 				551CA5112B607217001859CA /* Firebase */,
-				55C2792E2B2A5918005144F1 /* Animations */,
-				55C278D02B2A2E25005144F1 /* Fonts */,
 				5505C7D92B55BAEB00806B4F /* syncScript.txt */,
 				55CADF372B75881400D04365 /* secrets.json */,
-				552785C52B27A5140098FE95 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1256,8 +1317,6 @@
 				553F1BCD2B28FD890071A099 /* AppTextField.swift */,
 				553F1BCF2B28FDD70071A099 /* AppDivider.swift */,
 				55C278CC2B2A2DA1005144F1 /* AppButton.swift */,
-				55C278CE2B2A2DBA005144F1 /* FontStyle.swift */,
-				55C278D92B2A2F99005144F1 /* AppColor.swift */,
 				551AA4262B337D2900F0B1E2 /* AppTitle.swift */,
 			);
 			path = Basic;
@@ -1356,6 +1415,42 @@
 				5505C7FC2B55F0AA00806B4F /* LeaveProjectInformationViewModel.swift */,
 			);
 			path = LeaveProject;
+			sourceTree = "<group>";
+		};
+		55DFE43B2BA0FE1900061962 /* Phraseon_InHouse_MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				55EC29B22BA26A99003D6F4C /* Sources */,
+				55EC29B32BA26A9E003D6F4C /* Resources */,
+				55DFE4422BA0FE1C00061962 /* Preview Content */,
+			);
+			path = Phraseon_InHouse_MacOS;
+			sourceTree = "<group>";
+		};
+		55DFE4422BA0FE1C00061962 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				55DFE4432BA0FE1C00061962 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		55EC29B22BA26A99003D6F4C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				55DFE43E2BA0FE1900061962 /* ContentView.swift */,
+				55DFE43C2BA0FE1900061962 /* Phraseon_InHouse_MacOSApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		55EC29B32BA26A9E003D6F4C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55DFE4452BA0FE1C00061962 /* Phraseon_InHouse_MacOS.entitlements */,
+				55BC7BB72BA2673000801465 /* Phraseon-InHouse-MacOS-Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		55FD14082B97BD90006DA3E4 /* AuthenticationProviderButtons */ = {
@@ -1527,6 +1622,23 @@
 			productReference = 55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse.app */;
 			productType = "com.apple.product-type.application";
 		};
+		55DFE4392BA0FE1900061962 /* Phraseon_InHouse_MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55DFE4462BA0FE1C00061962 /* Build configuration list for PBXNativeTarget "Phraseon_InHouse_MacOS" */;
+			buildPhases = (
+				55DFE4362BA0FE1900061962 /* Sources */,
+				55DFE4372BA0FE1900061962 /* Frameworks */,
+				55DFE4382BA0FE1900061962 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Phraseon_InHouse_MacOS;
+			productName = Phraseon_InHouse_MacOS;
+			productReference = 55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_MacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1534,7 +1646,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1510;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					552785BD2B27A5120098FE95 = {
@@ -1543,6 +1655,9 @@
 					555459072B854D8300DA097F = {
 						CreatedOnToolsVersion = 15.1;
 						TestTargetID = 55C278DB2B2A3F3A005144F1;
+					};
+					55DFE4392BA0FE1900061962 = {
+						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
@@ -1571,6 +1686,7 @@
 				552785BD2B27A5120098FE95 /* Phraseon */,
 				55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse */,
 				555459072B854D8300DA097F /* PhraseonTests */,
+				55DFE4392BA0FE1900061962 /* Phraseon_InHouse_MacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1622,6 +1738,21 @@
 				5574B33F2B6F1F8400C9DFB9 /* GoogleService-Info.plist in Resources */,
 				55C279312B2A5922005144F1 /* buttonLoadingAnimation.json in Resources */,
 				55C278F82B2A3F3A005144F1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55DFE4382BA0FE1900061962 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BC7BB42BA2670900801465 /* RethinkSans-Regular.ttf in Resources */,
+				55BC7BB22BA2670500801465 /* RethinkSans-Bold.ttf in Resources */,
+				55BC7BB32BA2670700801465 /* RethinkSans-Medium.ttf in Resources */,
+				55BC7BAA2BA2650B00801465 /* Assets.xcassets in Resources */,
+				55DFE4442BA0FE1C00061962 /* Preview Assets.xcassets in Resources */,
+				55BC7BB62BA2671300801465 /* buttonLoadingAnimation.json in Resources */,
+				55BC7BB12BA2670200801465 /* Roboto-Medium.ttf in Resources */,
+				55BC7BB52BA2670C00801465 /* RethinkSans-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1955,6 +2086,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		55DFE4362BA0FE1900061962 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55DFE43F2BA0FE1900061962 /* ContentView.swift in Sources */,
+				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
+				55DFE43D2BA0FE1900061962 /* Phraseon_InHouse_MacOSApp.swift in Sources */,
+				55BC7BA82BA2649800801465 /* FontStyle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2228,6 +2370,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -2269,6 +2412,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -2282,6 +2426,66 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		55DFE4472BA0FE1C00061962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Phraseon_InHouse_MacOS/Phraseon_InHouse_MacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Phraseon_InHouse_MacOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 38Q6TG2KG3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Phraseon-InHouse-MacOS-Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = robert.adamczyk.phraseon.macos.inhouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		55DFE4482BA0FE1C00061962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Phraseon_InHouse_MacOS/Phraseon_InHouse_MacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Phraseon_InHouse_MacOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 38Q6TG2KG3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Phraseon-InHouse-MacOS-Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = robert.adamczyk.phraseon.macos.inhouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -2320,6 +2524,15 @@
 			buildConfigurations = (
 				55C278FA2B2A3F3A005144F1 /* Debug */,
 				55C278FB2B2A3F3A005144F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55DFE4462BA0FE1C00061962 /* Build configuration list for PBXNativeTarget "Phraseon_InHouse_MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55DFE4472BA0FE1C00061962 /* Debug */,
+				55DFE4482BA0FE1C00061962 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
