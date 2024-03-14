@@ -50,6 +50,7 @@ public enum SubscriptionPlan: Codable, CaseIterable {
         return switch TargetConfiguration.shared.currentTarget {
         case .live: "robert.adamczyk.phraseon.live.subscription.plan.monthly"
         case .inHouse: "robert.adamczyk.phraseon.inhouse.subscription.plan.monthly"
+        case .inHouseMacOS: "none"
         }
     }
 
@@ -57,6 +58,7 @@ public enum SubscriptionPlan: Codable, CaseIterable {
         return switch TargetConfiguration.shared.currentTarget {
         case .live: "robert.adamczyk.phraseon.live.subscription.plan.yearly"
         case .inHouse: "robert.adamczyk.phraseon.inhouse.subscription.plan.yearly"
+        case .inHouseMacOS: "none"
         }
     }
 }
