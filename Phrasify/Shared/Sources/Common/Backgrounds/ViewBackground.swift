@@ -9,10 +9,10 @@ import SwiftUI
 
 fileprivate struct ViewBackground: ViewModifier {
     func body(content: Content) -> some View {
-        content
-            .background {
-                appColor(.appBackground).ignoresSafeArea()
-            }
+        ZStack {
+            appColor(.appBackground).ignoresSafeArea()
+            content
+        }
     }
 }
 
