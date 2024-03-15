@@ -16,6 +16,7 @@ enum AppColor: String {
     case lightGray = "appLightGray"
     case green = "appGreen"
     case red = "appRed"
+    case appBackground = "appBackground"
 }
 
 func appColor(_ color: AppColor) -> Color {
