@@ -132,6 +132,13 @@
 		553F1BEB2B2914700071A099 /* SetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BEA2B2914700071A099 /* SetPasswordView.swift */; };
 		553F1BED2B2914910071A099 /* SetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */; };
 		553FD2722BA4F52900461FEA /* CellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AC2B631DA00061CF52 /* CellBackground.swift */; };
+		553FD2792BA502AE00461FEA /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD2782BA502AE00461FEA /* RootCoordinator.swift */; };
+		553FD27B2BA502DC00461FEA /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD27A2BA502DC00461FEA /* StartCoordinator.swift */; };
+		553FD27D2BA502FD00461FEA /* StartCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD27C2BA502FD00461FEA /* StartCoordinator+RootView.swift */; };
+		553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD27E2BA5034A00461FEA /* StartActions.swift */; };
+		553FD2812BA5036500461FEA /* RootCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD2802BA5036500461FEA /* RootCoordinator+RootView.swift */; };
+		553FD2842BA503D600461FEA /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD2832BA503D600461FEA /* StartView.swift */; };
+		553FD2862BA503EC00461FEA /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD2852BA503EC00461FEA /* StartViewModel.swift */; };
 		55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */; };
 		55406C592B8A922F00B03E9D /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */; };
 		55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */; };
@@ -351,7 +358,6 @@
 		55DFE4332BA0F28B00061962 /* ProfileDeleteWarningViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE4322BA0F28B00061962 /* ProfileDeleteWarningViewModelTest.swift */; };
 		55DFE4352BA0F4B300061962 /* MockCloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE4342BA0F4B300061962 /* MockCloudRepository.swift */; };
 		55DFE43D2BA0FE1900061962 /* PhraseonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE43C2BA0FE1900061962 /* PhraseonApp.swift */; };
-		55DFE43F2BA0FE1900061962 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE43E2BA0FE1900061962 /* ContentView.swift */; };
 		55DFE4442BA0FE1C00061962 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DFE4432BA0FE1C00061962 /* Preview Assets.xcassets */; };
 		55EC29B52BA26B8F003D6F4C /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 55EC29B42BA26B8F003D6F4C /* Common */; };
 		55EC29B72BA26B8F003D6F4C /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 55EC29B62BA26B8F003D6F4C /* Domain */; };
@@ -482,6 +488,13 @@
 		553F1BE72B2911770071A099 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
 		553F1BEA2B2914700071A099 /* SetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordView.swift; sourceTree = "<group>"; };
 		553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModel.swift; sourceTree = "<group>"; };
+		553FD2782BA502AE00461FEA /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		553FD27A2BA502DC00461FEA /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
+		553FD27C2BA502FD00461FEA /* StartCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StartCoordinator+RootView.swift"; sourceTree = "<group>"; };
+		553FD27E2BA5034A00461FEA /* StartActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartActions.swift; sourceTree = "<group>"; };
+		553FD2802BA5036500461FEA /* RootCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootCoordinator+RootView.swift"; sourceTree = "<group>"; };
+		553FD2832BA503D600461FEA /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		553FD2852BA503EC00461FEA /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModelTest.swift; sourceTree = "<group>"; };
 		55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
 		55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModelTest.swift; sourceTree = "<group>"; };
@@ -583,7 +596,6 @@
 		55DFE4342BA0F4B300061962 /* MockCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudRepository.swift; sourceTree = "<group>"; };
 		55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon_InHouse_MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DFE43C2BA0FE1900061962 /* PhraseonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseonApp.swift; sourceTree = "<group>"; };
-		55DFE43E2BA0FE1900061962 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		55DFE4432BA0FE1C00061962 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		55DFE4452BA0FE1C00061962 /* Phraseon_InHouse_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phraseon_InHouse_MacOS.entitlements; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
@@ -955,6 +967,59 @@
 				553F1BEC2B2914910071A099 /* SetPasswordViewModel.swift */,
 			);
 			path = SetPassword;
+			sourceTree = "<group>";
+		};
+		553FD2732BA5026F00461FEA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				553FD2822BA503B200461FEA /* Start */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		553FD2742BA5027500461FEA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				553FD2752BA5027900461FEA /* Coordinator */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		553FD2752BA5027900461FEA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				553FD2772BA5029100461FEA /* Actions */,
+				553FD2762BA5028C00461FEA /* RootViews */,
+				553FD2782BA502AE00461FEA /* RootCoordinator.swift */,
+				553FD27A2BA502DC00461FEA /* StartCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		553FD2762BA5028C00461FEA /* RootViews */ = {
+			isa = PBXGroup;
+			children = (
+				553FD27C2BA502FD00461FEA /* StartCoordinator+RootView.swift */,
+				553FD2802BA5036500461FEA /* RootCoordinator+RootView.swift */,
+			);
+			path = RootViews;
+			sourceTree = "<group>";
+		};
+		553FD2772BA5029100461FEA /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				553FD27E2BA5034A00461FEA /* StartActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		553FD2822BA503B200461FEA /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				553FD2832BA503D600461FEA /* StartView.swift */,
+				553FD2852BA503EC00461FEA /* StartViewModel.swift */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 		55406C572B8A921F00B03E9D /* Home */ = {
@@ -1481,7 +1546,8 @@
 		55EC29B22BA26A99003D6F4C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				55DFE43E2BA0FE1900061962 /* ContentView.swift */,
+				553FD2742BA5027500461FEA /* Common */,
+				553FD2732BA5026F00461FEA /* Scenes */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -2144,14 +2210,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				55DE74352BA3ACF80030C7C7 /* AppButton.swift in Sources */,
-				55DFE43F2BA0FE1900061962 /* ContentView.swift in Sources */,
+				553FD27D2BA502FD00461FEA /* StartCoordinator+RootView.swift in Sources */,
+				553FD2842BA503D600461FEA /* StartView.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
 				55DE74262BA39CA30030C7C7 /* Coordinator.swift in Sources */,
+				553FD2812BA5036500461FEA /* RootCoordinator+RootView.swift in Sources */,
 				55DE74342BA3AC560030C7C7 /* ViewBackground.swift in Sources */,
 				55DE74282BA39DA90030C7C7 /* AppUpdateHandler.swift in Sources */,
 				553FD2722BA4F52900461FEA /* CellBackground.swift in Sources */,
+				553FD27B2BA502DC00461FEA /* StartCoordinator.swift in Sources */,
 				55DFE43D2BA0FE1900061962 /* PhraseonApp.swift in Sources */,
+				553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */,
+				553FD2862BA503EC00461FEA /* StartViewModel.swift in Sources */,
 				55EC29BA2BA26BAF003D6F4C /* Dependencies.swift in Sources */,
+				553FD2792BA502AE00461FEA /* RootCoordinator.swift in Sources */,
 				55BC7BA82BA2649800801465 /* FontStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
