@@ -41,6 +41,7 @@ struct AppButton: View {
             makeBody()
         }
         .disabled(!isEnabled)
+        .buttonStyle(.plain)
     }
 
     @ViewBuilder
