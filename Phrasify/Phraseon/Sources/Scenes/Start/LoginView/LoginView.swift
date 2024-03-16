@@ -24,7 +24,7 @@ struct LoginView: View {
                     AppTextField(type: .password, text: $viewModel.password)
                         .focused($focusedField, equals: .password)
                     AppButton(style: .text("Forget Password?"), action: .main(viewModel.onForgetPasswordTapped))
-
+                        .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 .padding(16)
             }

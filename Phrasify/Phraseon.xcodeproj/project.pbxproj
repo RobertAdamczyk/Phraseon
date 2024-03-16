@@ -144,6 +144,8 @@
 		553FD28C2BA63A4C00461FEA /* AppTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4262B337D2900F0B1E2 /* AppTitle.swift */; };
 		553FD28D2BA63A5300461FEA /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCD2B28FD890071A099 /* AppTextField.swift */; };
 		553FD28E2BA63DBA00461FEA /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCF2B28FDD70071A099 /* AppDivider.swift */; };
+		553FD28F2BA63EA300461FEA /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14092B97BD90006DA3E4 /* AppleButton.swift */; };
+		553FD2902BA63EAD00461FEA /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */; };
 		55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */; };
 		55406C592B8A922F00B03E9D /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */; };
 		55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */; };
@@ -1286,6 +1288,7 @@
 		55BC7BAF2BA2666D00801465 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55FD14082B97BD90006DA3E4 /* AuthenticationProviderButtons */,
 				553722AA2B631D880061CF52 /* Backgrounds */,
 				55DE74272BA39DA20030C7C7 /* AppUpdate */,
 				55DE74252BA39C960030C7C7 /* Coordinator */,
@@ -1344,7 +1347,6 @@
 				5505378F2B44C0080077912D /* PhotoPicker */,
 				551AA4182B33664800F0B1E2 /* Layout */,
 				5580744C2B2E340C0041160B /* ActivityView */,
-				55FD14082B97BD90006DA3E4 /* AuthenticationProviderButtons */,
 				55FF428E2B2BB34200F4D523 /* Toast */,
 				55C279202B2A4CE9005144F1 /* Coordinator */,
 			);
@@ -1587,7 +1589,7 @@
 				55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */,
 			);
 			name = AuthenticationProviderButtons;
-			path = Phraseon/Sources/Common/AuthenticationProviderButtons;
+			path = Shared/Sources/Common/AuthenticationProviderButtons;
 			sourceTree = SOURCE_ROOT;
 		};
 		55FE51A22B5CA94E0084617F /* PasswordValidation */ = {
@@ -2229,9 +2231,11 @@
 				55DE74352BA3ACF80030C7C7 /* AppButton.swift in Sources */,
 				553FD28C2BA63A4C00461FEA /* AppTitle.swift in Sources */,
 				553FD28E2BA63DBA00461FEA /* AppDivider.swift in Sources */,
+				553FD2902BA63EAD00461FEA /* GoogleButton.swift in Sources */,
 				553FD27D2BA502FD00461FEA /* StartCoordinator+RootView.swift in Sources */,
 				553FD2842BA503D600461FEA /* StartView.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
+				553FD28F2BA63EA300461FEA /* AppleButton.swift in Sources */,
 				55DE74262BA39CA30030C7C7 /* Coordinator.swift in Sources */,
 				553FD2812BA5036500461FEA /* RootCoordinator+RootView.swift in Sources */,
 				55DE74342BA3AC560030C7C7 /* ViewBackground.swift in Sources */,

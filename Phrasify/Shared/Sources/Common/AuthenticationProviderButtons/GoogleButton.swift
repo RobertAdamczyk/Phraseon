@@ -44,6 +44,7 @@ struct GoogleButton: View {
                     .foregroundStyle(strokeColor)
             }
         }
+        .buttonStyle(.plain)
     }
 }
 

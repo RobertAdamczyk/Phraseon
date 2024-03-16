@@ -16,7 +16,18 @@ struct StartView: View {
     }
 
     var body: some View {
-        VStack {
+        ViewThatFits {
+            content
+            ScrollView(showsIndicators: false) {
+                content
+            }
+        }
+        .applyViewBackground()
+        .navigationTitle("Phraseon")
+    }
+
+    private var content: some View {
+        VStack(spacing: 124) {
             Spacer()
             VStack(spacing: 16) {
                 Text("Phraseon")
@@ -24,15 +35,13 @@ struct StartView: View {
                 Text("Manage and translate easily")
                     .apply(.medium, size: .L, color: .white)
             }
-            Spacer()
-            VStack(spacing: 16) {
+            VStack(spacing: 24) {
                 AppButton(style: .fill("Sign in", .paleOrange), action: .main(viewModel.showLogin))
                 AppButton(style: .fill("Sign up", .lightBlue), action: .main(viewModel.showRegister))
             }
-            .frame(maxWidth: 400)
+            Spacer()
         }
+        .frame(maxWidth: 375)
         .scenePadding()
-        .applyViewBackground()
-        .navigationTitle("Phraseon")
     }
 }
