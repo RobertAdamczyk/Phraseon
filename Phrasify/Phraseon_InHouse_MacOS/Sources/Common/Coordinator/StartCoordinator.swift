@@ -22,15 +22,24 @@ final class StartCoordinator: ObservableObject, Coordinator {
     init(parentCoordinator: ParentCoordinator) {
         self.parentCoordinator = parentCoordinator
     }
-
-    enum NavigationView {
-
-        case empty
-    }
 }
 
 extension StartCoordinator: StartActions {
-    func showEmpty() {
-        navigationViews.append(.empty)
+
+    func showLogin() {
+        navigationViews.append(.login)
+    }
+
+    func showRegister() {
+        navigationViews.append(.register)
+    }
+}
+
+extension StartCoordinator {
+
+    enum NavigationView {
+
+        case login
+        case register
     }
 }

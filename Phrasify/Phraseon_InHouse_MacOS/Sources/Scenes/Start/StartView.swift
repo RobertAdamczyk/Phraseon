@@ -26,8 +26,8 @@ struct StartView: View {
             }
             Spacer()
             VStack(spacing: 16) {
-                AppButton(style: .fill("Sign in", .paleOrange), action: .main(viewModel.showEmpty))
-                AppButton(style: .fill("Sign up", .lightBlue), action: .main({}))
+                AppButton(style: .fill("Sign in", .paleOrange), action: .main(viewModel.showLogin))
+                AppButton(style: .fill("Sign up", .lightBlue), action: .main(viewModel.showRegister))
             }
             .frame(maxWidth: 400)
         }

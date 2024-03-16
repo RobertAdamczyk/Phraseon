@@ -17,7 +17,11 @@ final class StartViewModel: ObservableObject {
         self.coordinator = coordinator
     }
 
-    func showEmpty() {
-        coordinator.showEmpty()
+    func showLogin() {
+        coordinator.showLogin()
+    }
+
+    func showRegister() {
+        coordinator.showRegister()
     }
 }

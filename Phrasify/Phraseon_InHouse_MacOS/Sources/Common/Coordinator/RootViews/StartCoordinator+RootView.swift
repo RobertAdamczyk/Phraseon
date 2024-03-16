@@ -22,7 +22,8 @@ extension StartCoordinator {
                 StartView(coordinator: startCoordinator)
                     .navigationDestination(for: StartCoordinator.NavigationView.self) {
                         switch $0 {
-                        case .empty: Text("TEST").applyViewBackground()
+                        case .login: Text("LOGIN").applyViewBackground()
+                        case .register: Text("REGISTER").applyViewBackground()
                         }
                     }
             }

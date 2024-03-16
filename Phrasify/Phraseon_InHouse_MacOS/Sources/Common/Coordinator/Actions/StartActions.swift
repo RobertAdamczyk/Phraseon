@@ -8,5 +8,6 @@
 import Foundation
 
 protocol StartActions {
-    func showEmpty()
+    func showLogin()
+    func showRegister()
 }
