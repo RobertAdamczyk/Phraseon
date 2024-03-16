@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Phraseon_InHouse
+@testable import Phraseon_InHouse_iOS
 @testable import Common
 
 final class LoginViewModelTest: XCTestCase {

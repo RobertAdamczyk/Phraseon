@@ -472,7 +472,7 @@
 		551AA4232B337A9200F0B1E2 /* SelectTechnologyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyViewModel.swift; sourceTree = "<group>"; };
 		551AA4262B337D2900F0B1E2 /* AppTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTitle.swift; sourceTree = "<group>"; };
 		551CA5162B607516001859CA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		552785BE2B27A5120098FE95 /* Phraseon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		552785BE2B27A5120098FE95 /* Phraseon_Live_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon_Live_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		552785C52B27A5140098FE95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		552785C72B27A5140098FE95 /* Phraseon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phraseon.entitlements; sourceTree = "<group>"; };
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -564,8 +564,8 @@
 		55C278D32B2A2E36005144F1 /* RethinkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Medium.ttf"; sourceTree = "<group>"; };
 		55C278D42B2A2E36005144F1 /* RethinkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		55C278D92B2A2F99005144F1 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
-		55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon_InHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		55C278FD2B2A3F3A005144F1 /* Phraseon_InHouse-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Phraseon_InHouse-Info.plist"; path = "/Users/radamczyk/Fork/Phrasify/Phrasify/Phraseon_InHouse-Info.plist"; sourceTree = "<absolute>"; };
+		55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon_InHouse_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C278FD2B2A3F3A005144F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/radamczyk/Fork/Phrasify/Phrasify/Info.plist; sourceTree = "<absolute>"; };
 		55C279102B2A4B38005144F1 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		55C279142B2A4BB0005144F1 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		55C2791C2B2A4C60005144F1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -866,7 +866,6 @@
 			isa = PBXGroup;
 			children = (
 				5574B3282B6F0D3900C9DFB9 /* GoogleService-Info.plist */,
-				55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -876,8 +875,7 @@
 			children = (
 				55CADF2C2B7571A000D04365 /* ci_scripts */,
 				55BC7BAB2BA2661E00801465 /* Shared */,
-				552785C02B27A5120098FE95 /* Phraseon */,
-				55C278FE2B2A3F80005144F1 /* Phraseon_InHouse */,
+				5577AB6F2BA6489C00B0866D /* iOS */,
 				55DFE43B2BA0FE1900061962 /* Phraseon_InHouse_MacOS */,
 				5540B75C2B93C4BE00F4580F /* Modules */,
 				555459092B854D8400DA097F /* PhraseonTests */,
@@ -889,24 +887,20 @@
 		552785BF2B27A5120098FE95 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				552785BE2B27A5120098FE95 /* Phraseon.app */,
-				55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse.app */,
+				552785BE2B27A5120098FE95 /* Phraseon_Live_iOS.app */,
+				55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse_iOS.app */,
 				555459082B854D8300DA097F /* PhraseonTests.xctest */,
 				55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_MacOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		552785C02B27A5120098FE95 /* Phraseon */ = {
+		552785C02B27A5120098FE95 /* Phraseon_Live */ = {
 			isa = PBXGroup;
 			children = (
-				55C762252B27A8E2008CBF30 /* Info.plist */,
-				55C762182B27A607008CBF30 /* Sources */,
 				55C762162B27A5FC008CBF30 /* Resources */,
-				552785C72B27A5140098FE95 /* Phraseon.entitlements */,
-				552785C82B27A5140098FE95 /* Preview Content */,
 			);
-			path = Phraseon;
+			path = Phraseon_Live;
 			sourceTree = "<group>";
 		};
 		552785C82B27A5140098FE95 /* Preview Content */ = {
@@ -1124,6 +1118,7 @@
 			children = (
 				5567E6C62B6F8D6000C9EDFF /* Products */,
 				5567E6C52B6F8D5400C9EDFF /* Firebase */,
+				55C278FD2B2A3F3A005144F1 /* Info.plist */,
 				55CADF312B7576CF00D04365 /* secrets.json */,
 			);
 			path = Resources;
@@ -1162,6 +1157,36 @@
 				5570FF4F2B61B1460011208F /* PaywallViewModel.swift */,
 			);
 			path = Paywall;
+			sourceTree = "<group>";
+		};
+		5577AB6F2BA6489C00B0866D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5577AB702BA64B9300B0866D /* Shared */,
+				552785C02B27A5120098FE95 /* Phraseon_Live */,
+				55C278FE2B2A3F80005144F1 /* Phraseon_InHouse */,
+				552785C72B27A5140098FE95 /* Phraseon.entitlements */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		5577AB702BA64B9300B0866D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				55C762182B27A607008CBF30 /* Sources */,
+				5577AB712BA64BB100B0866D /* Resources */,
+				552785C82B27A5140098FE95 /* Preview Content */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5577AB712BA64BB100B0866D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */,
+				5505C7D92B55BAEB00806B4F /* syncScript.txt */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		557F64EA2B9E73A900D6A791 /* Mocks */ = {
@@ -1318,7 +1343,6 @@
 			isa = PBXGroup;
 			children = (
 				5567E6C42B6F8D4D00C9EDFF /* Resources */,
-				55C278FD2B2A3F3A005144F1 /* Phraseon_InHouse-Info.plist */,
 			);
 			path = Phraseon_InHouse;
 			sourceTree = "<group>";
@@ -1401,7 +1425,7 @@
 			children = (
 				5561C5C62B66EA9000C815BC /* Products */,
 				551CA5112B607217001859CA /* Firebase */,
-				5505C7D92B55BAEB00806B4F /* syncScript.txt */,
+				55C762252B27A8E2008CBF30 /* Info.plist */,
 				55CADF372B75881400D04365 /* secrets.json */,
 			);
 			path = Resources;
@@ -1413,16 +1437,8 @@
 				5516EBAD2B3F2D4700C558B1 /* Extensions */,
 				55C2791F2B2A4CCD005144F1 /* Common */,
 				55C7622D2B27AB1A008CBF30 /* Scenes */,
-				55C762262B27A99A008CBF30 /* Basic */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		55C762262B27A99A008CBF30 /* Basic */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Basic;
 			sourceTree = "<group>";
 		};
 		55C7622D2B27AB1A008CBF30 /* Scenes */ = {
@@ -1663,9 +1679,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		552785BD2B27A5120098FE95 /* Phraseon */ = {
+		552785BD2B27A5120098FE95 /* Phraseon_Live_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 552785CD2B27A5140098FE95 /* Build configuration list for PBXNativeTarget "Phraseon" */;
+			buildConfigurationList = 552785CD2B27A5140098FE95 /* Build configuration list for PBXNativeTarget "Phraseon_Live_iOS" */;
 			buildPhases = (
 				552785BA2B27A5120098FE95 /* Sources */,
 				552785BB2B27A5120098FE95 /* Frameworks */,
@@ -1675,7 +1691,7 @@
 			);
 			dependencies = (
 			);
-			name = Phraseon;
+			name = Phraseon_Live_iOS;
 			packageProductDependencies = (
 				5574B30E2B6F01B500C9DFB9 /* CachedAsyncImage */,
 				5574B3112B6F01C200C9DFB9 /* Shimmer */,
@@ -1695,7 +1711,7 @@
 				5547F9C82B97C4D8008136F9 /* Domain */,
 			);
 			productName = Phrasify;
-			productReference = 552785BE2B27A5120098FE95 /* Phraseon.app */;
+			productReference = 552785BE2B27A5120098FE95 /* Phraseon_Live_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		555459072B854D8300DA097F /* PhraseonTests */ = {
@@ -1716,9 +1732,9 @@
 			productReference = 555459082B854D8300DA097F /* PhraseonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse */ = {
+		55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55C278F92B2A3F3A005144F1 /* Build configuration list for PBXNativeTarget "Phraseon_InHouse" */;
+			buildConfigurationList = 55C278F92B2A3F3A005144F1 /* Build configuration list for PBXNativeTarget "Phraseon_InHouse_iOS" */;
 			buildPhases = (
 				55C278DC2B2A3F3A005144F1 /* Sources */,
 				55C278F12B2A3F3A005144F1 /* Frameworks */,
@@ -1728,7 +1744,7 @@
 			);
 			dependencies = (
 			);
-			name = Phraseon_InHouse;
+			name = Phraseon_InHouse_iOS;
 			packageProductDependencies = (
 				5574B32A2B6F112400C9DFB9 /* CachedAsyncImage */,
 				5574B32C2B6F112800C9DFB9 /* Shimmer */,
@@ -1748,7 +1764,7 @@
 				5547F9CA2B97C4DD008136F9 /* Domain */,
 			);
 			productName = Phrasify;
-			productReference = 55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse.app */;
+			productReference = 55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		55DFE4392BA0FE1900061962 /* Phraseon_InHouse_MacOS */ = {
@@ -1821,8 +1837,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				552785BD2B27A5120098FE95 /* Phraseon */,
-				55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse */,
+				552785BD2B27A5120098FE95 /* Phraseon_Live_iOS */,
+				55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse_iOS */,
 				55DFE4392BA0FE1900061962 /* Phraseon_InHouse_MacOS */,
 				555459072B854D8300DA097F /* PhraseonTests */,
 			);
@@ -2259,7 +2275,7 @@
 /* Begin PBXTargetDependency section */
 		5554591A2B855D9400DA097F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse */;
+			target = 55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse_iOS */;
 			targetProxy = 555459192B855D9400DA097F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2384,15 +2400,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Phraseon/Phraseon.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iOS/Phraseon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Phraseon/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 38Q6TG2KG3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Phraseon/Info.plist;
+				INFOPLIST_FILE = iOS/Phraseon_Live/Resources/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -2425,15 +2441,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Phraseon/Phraseon.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iOS/Phraseon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Phraseon/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 38Q6TG2KG3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Phraseon/Info.plist;
+				INFOPLIST_FILE = iOS/Phraseon_Live/Resources/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -2477,7 +2493,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phraseon_InHouse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phraseon_InHouse";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phraseon_InHouse_iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phraseon_InHouse_iOS";
 			};
 			name = Debug;
 		};
@@ -2497,7 +2513,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phraseon_InHouse.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phraseon_InHouse";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phraseon_InHouse_iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phraseon_InHouse_iOS";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -2507,15 +2523,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Phraseon/Phraseon.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iOS/Phraseon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Phraseon/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 38Q6TG2KG3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Phraseon_InHouse-Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -2549,15 +2565,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Phraseon/Phraseon.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iOS/Phraseon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Phraseon/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 38Q6TG2KG3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Phraseon_InHouse-Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -2658,7 +2674,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		552785CD2B27A5140098FE95 /* Build configuration list for PBXNativeTarget "Phraseon" */ = {
+		552785CD2B27A5140098FE95 /* Build configuration list for PBXNativeTarget "Phraseon_Live_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				552785CE2B27A5140098FE95 /* Debug */,
@@ -2676,7 +2692,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55C278F92B2A3F3A005144F1 /* Build configuration list for PBXNativeTarget "Phraseon_InHouse" */ = {
+		55C278F92B2A3F3A005144F1 /* Build configuration list for PBXNativeTarget "Phraseon_InHouse_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55C278FA2B2A3F3A005144F1 /* Debug */,

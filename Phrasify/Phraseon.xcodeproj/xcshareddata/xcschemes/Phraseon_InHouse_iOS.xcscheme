@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "55C278DB2B2A3F3A005144F1"
-               BuildableName = "Phraseon_InHouse.app"
-               BlueprintName = "Phraseon_InHouse"
+               BuildableName = "Phraseon_InHouse_iOS.app"
+               BlueprintName = "Phraseon_InHouse_iOS"
                ReferencedContainer = "container:Phraseon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55C278DB2B2A3F3A005144F1"
-            BuildableName = "Phraseon_InHouse.app"
-            BlueprintName = "Phraseon_InHouse"
+            BuildableName = "Phraseon_InHouse_iOS.app"
+            BlueprintName = "Phraseon_InHouse_iOS"
             ReferencedContainer = "container:Phraseon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,8 +61,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55C278DB2B2A3F3A005144F1"
-            BuildableName = "Phraseon_InHouse.app"
-            BlueprintName = "Phraseon_InHouse"
+            BuildableName = "Phraseon_InHouse_iOS.app"
+            BlueprintName = "Phraseon_InHouse_iOS"
             ReferencedContainer = "container:Phraseon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

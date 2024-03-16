@@ -61,7 +61,6 @@ public struct ToastView: View {
                         GeometryReader { proxy in
                             Color.clear
                                 .onAppear {
-                                    print("onAppear \(proxy.size)")
                                     toastSize = proxy.size
                                     didAppear = true
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {

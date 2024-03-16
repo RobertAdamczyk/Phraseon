@@ -6,7 +6,7 @@
 //
 
 import Combine
-@testable import Phraseon_InHouse
+@testable import Phraseon_InHouse_iOS
 @testable import Model
 @testable import Domain
 

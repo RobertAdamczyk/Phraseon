@@ -4,8 +4,6 @@ Phrasify/Phrasify.xcodeproj/project.xcworkspace/xcuserdata/radamczyk.xcuserdatad
 Phrasify/Phrasify.xcodeproj/xcuserdata/radamczyk.xcuserdatad/xcschemes/xcschememanagement.plist
 Phrasify/Phrasify.xcodeproj/project.xcworkspace/xcuserdata/radamczyk.xcuserdatad/UserInterfaceState.xcuserstate
 *.xcuserstate
-Phrasify/Phraseon_InHouse/Resources/secrets.json
-Phrasify/Phraseon/Resources/secrets.json
+**/secrets.json
 Phrasify/Phraseon.xcodeproj/project.xcworkspace/xcuserdata
 Phrasify/Phraseon.xcodeproj/xcuserdata
-Phrasify/Phraseon_InHouse_MacOS/Resources/secrets.json
