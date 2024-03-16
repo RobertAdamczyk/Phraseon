@@ -139,6 +139,11 @@
 		553FD2812BA5036500461FEA /* RootCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD2802BA5036500461FEA /* RootCoordinator+RootView.swift */; };
 		553FD2842BA503D600461FEA /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD2832BA503D600461FEA /* StartView.swift */; };
 		553FD2862BA503EC00461FEA /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD2852BA503EC00461FEA /* StartViewModel.swift */; };
+		553FD2892BA638DD00461FEA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD2882BA638DD00461FEA /* LoginView.swift */; };
+		553FD28B2BA638E500461FEA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553FD28A2BA638E500461FEA /* LoginViewModel.swift */; };
+		553FD28C2BA63A4C00461FEA /* AppTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4262B337D2900F0B1E2 /* AppTitle.swift */; };
+		553FD28D2BA63A5300461FEA /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCD2B28FD890071A099 /* AppTextField.swift */; };
+		553FD28E2BA63DBA00461FEA /* AppDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F1BCF2B28FDD70071A099 /* AppDivider.swift */; };
 		55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */; };
 		55406C592B8A922F00B03E9D /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */; };
 		55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */; };
@@ -495,6 +500,8 @@
 		553FD2802BA5036500461FEA /* RootCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		553FD2832BA503D600461FEA /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		553FD2852BA503EC00461FEA /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		553FD2882BA638DD00461FEA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		553FD28A2BA638E500461FEA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		55406C552B893DE700B03E9D /* SetPasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewModelTest.swift; sourceTree = "<group>"; };
 		55406C582B8A922F00B03E9D /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
 		55406C5A2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModelTest.swift; sourceTree = "<group>"; };
@@ -972,6 +979,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				553FD2872BA638CA00461FEA /* Login */,
 				553FD2822BA503B200461FEA /* Start */,
 			);
 			path = Scenes;
@@ -1020,6 +1028,15 @@
 				553FD2852BA503EC00461FEA /* StartViewModel.swift */,
 			);
 			path = Start;
+			sourceTree = "<group>";
+		};
+		553FD2872BA638CA00461FEA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				553FD2882BA638DD00461FEA /* LoginView.swift */,
+				553FD28A2BA638E500461FEA /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		55406C572B8A921F00B03E9D /* Home */ = {
@@ -1274,6 +1291,10 @@
 				55DE74252BA39C960030C7C7 /* Coordinator */,
 				55C278D92B2A2F99005144F1 /* AppColor.swift */,
 				55C278CE2B2A2DBA005144F1 /* FontStyle.swift */,
+				553F1BCF2B28FDD70071A099 /* AppDivider.swift */,
+				551AA4262B337D2900F0B1E2 /* AppTitle.swift */,
+				55C278CC2B2A2DA1005144F1 /* AppButton.swift */,
+				553F1BCD2B28FD890071A099 /* AppTextField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1398,10 +1419,6 @@
 		55C762262B27A99A008CBF30 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				553F1BCD2B28FD890071A099 /* AppTextField.swift */,
-				553F1BCF2B28FDD70071A099 /* AppDivider.swift */,
-				55C278CC2B2A2DA1005144F1 /* AppButton.swift */,
-				551AA4262B337D2900F0B1E2 /* AppTitle.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -2210,6 +2227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				55DE74352BA3ACF80030C7C7 /* AppButton.swift in Sources */,
+				553FD28C2BA63A4C00461FEA /* AppTitle.swift in Sources */,
+				553FD28E2BA63DBA00461FEA /* AppDivider.swift in Sources */,
 				553FD27D2BA502FD00461FEA /* StartCoordinator+RootView.swift in Sources */,
 				553FD2842BA503D600461FEA /* StartView.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
@@ -2217,14 +2236,17 @@
 				553FD2812BA5036500461FEA /* RootCoordinator+RootView.swift in Sources */,
 				55DE74342BA3AC560030C7C7 /* ViewBackground.swift in Sources */,
 				55DE74282BA39DA90030C7C7 /* AppUpdateHandler.swift in Sources */,
+				553FD28B2BA638E500461FEA /* LoginViewModel.swift in Sources */,
 				553FD2722BA4F52900461FEA /* CellBackground.swift in Sources */,
 				553FD27B2BA502DC00461FEA /* StartCoordinator.swift in Sources */,
+				553FD2892BA638DD00461FEA /* LoginView.swift in Sources */,
 				55DFE43D2BA0FE1900061962 /* PhraseonApp.swift in Sources */,
 				553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */,
 				553FD2862BA503EC00461FEA /* StartViewModel.swift in Sources */,
 				55EC29BA2BA26BAF003D6F4C /* Dependencies.swift in Sources */,
 				553FD2792BA502AE00461FEA /* RootCoordinator.swift in Sources */,
 				55BC7BA82BA2649800801465 /* FontStyle.swift in Sources */,
+				553FD28D2BA63A5300461FEA /* AppTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

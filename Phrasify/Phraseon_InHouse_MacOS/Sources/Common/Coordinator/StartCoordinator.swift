@@ -27,19 +27,38 @@ final class StartCoordinator: ObservableObject, Coordinator {
 extension StartCoordinator: StartActions {
 
     func showLogin() {
-        navigationViews.append(.login)
+        let viewModel = LoginViewModel(coordinator: self)
+        let navigationView: NavigationView = .login(viewModel: viewModel)
+        navigationViews.append(navigationView)
     }
 
     func showRegister() {
-        navigationViews.append(.register)
+        // empty
     }
 }
 
 extension StartCoordinator {
 
-    enum NavigationView {
+    enum NavigationView: Identifiable, Equatable, Hashable {
 
-        case login
-        case register
+        static func == (lhs: StartCoordinator.NavigationView, rhs: StartCoordinator.NavigationView) -> Bool {
+            lhs.id == rhs.id
+        }
+
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
+
+        case login(viewModel: LoginViewModel)
+        // case register(viewModel: RegisterViewModel)
+        // case forgetPassword(viewModel: ForgetPasswordViewModel)
+
+        var id: String {
+            switch self {
+            case .login: return "001"
+            // case .register: return "002"
+            // case .forgetPassword: return "003"
+            }
+        }
     }
 }

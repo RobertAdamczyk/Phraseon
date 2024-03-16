@@ -33,6 +33,6 @@ struct StartView: View {
         }
         .scenePadding()
         .applyViewBackground()
-        .navigationTitle("START VIEW")
+        .navigationTitle("Phraseon")
     }
 }

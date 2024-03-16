@@ -19,6 +19,11 @@ struct AppTextField: View {
             Text(type.title)
                 .apply(.regular, size: .M, color: .white)
             makeTextField()
+                .autocorrectionDisabled()
+                #if os(iOS)
+                .textInputAutocapitalization(.never)
+                #endif
+                .textFieldStyle(.plain)
                 .padding(12)
                 .background(makeBackground())
                 .applyCellBackground()
@@ -32,9 +37,10 @@ struct AppTextField: View {
             switch type {
             case .email, .projectName, .keyId, .name, .surname, .keyContent:
                 image
-                TextField("", text: $text, prompt: Text(verbatim: type.placeholder).foregroundStyle(appColor(.lightGray)), axis: type.axis)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
+                TextField("", text: $text, 
+                          prompt: Text(verbatim: type.placeholder)
+                                    .foregroundStyle(appColor(.lightGray)),
+                          axis: type.axis)
                     .apply(.medium, size: .L, color: .white)
 
             case .password, .confirmPassword, .currentPassword, .newPassword:

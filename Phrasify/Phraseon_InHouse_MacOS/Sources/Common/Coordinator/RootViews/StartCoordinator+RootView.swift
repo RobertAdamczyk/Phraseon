@@ -22,8 +22,8 @@ extension StartCoordinator {
                 StartView(coordinator: startCoordinator)
                     .navigationDestination(for: StartCoordinator.NavigationView.self) {
                         switch $0 {
-                        case .login: Text("LOGIN").applyViewBackground()
-                        case .register: Text("REGISTER").applyViewBackground()
+                        case .login(let viewModel): LoginView(viewModel: viewModel)
+                        // case .register: Text("REGISTER").applyViewBackground()
                         }
                     }
             }
