@@ -529,6 +529,7 @@
 		5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsViewModel.swift; sourceTree = "<group>"; };
 		556977A02B47594A0022B675 /* SelectLanguageActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageActions.swift; sourceTree = "<group>"; };
 		556977A32B475B440022B675 /* SelectTechnologyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyActions.swift; sourceTree = "<group>"; };
+		5569DC5D2BA70B4600634838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5570FF4C2B61B13C0011208F /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		5570FF4F2B61B1460011208F /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
 		5570FF522B61B1FF0011208F /* PaywallCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallCoordinator.swift; sourceTree = "<group>"; };
@@ -556,7 +557,6 @@
 		55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModel.swift; sourceTree = "<group>"; };
 		55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectWarningViewModel.swift; sourceTree = "<group>"; };
 		55B8414B2B4C9AFC007697AF /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
-		55BC7BB72BA2673000801465 /* Phraseon-InHouse-MacOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Phraseon-InHouse-MacOS-Info.plist"; path = "Phraseon_InHouse_MacOS/Resources/Phraseon-InHouse-MacOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		55C278CC2B2A2DA1005144F1 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		55C278CE2B2A2DBA005144F1 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		55C278D12B2A2E36005144F1 /* RethinkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RethinkSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -606,7 +606,7 @@
 		55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon_InHouse_MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DFE43C2BA0FE1900061962 /* PhraseonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseonApp.swift; sourceTree = "<group>"; };
 		55DFE4432BA0FE1C00061962 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		55DFE4452BA0FE1C00061962 /* Phraseon_InHouse_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phraseon_InHouse_MacOS.entitlements; sourceTree = "<group>"; };
+		55DFE4452BA0FE1C00061962 /* Phraseon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phraseon.entitlements; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FD14092B97BD90006DA3E4 /* AppleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 		55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
@@ -876,7 +876,7 @@
 				55CADF2C2B7571A000D04365 /* ci_scripts */,
 				55BC7BAB2BA2661E00801465 /* Shared */,
 				5577AB6F2BA6489C00B0866D /* iOS */,
-				55DFE43B2BA0FE1900061962 /* Phraseon_InHouse_MacOS */,
+				5569DC5A2BA70A0900634838 /* macOS */,
 				5540B75C2B93C4BE00F4580F /* Modules */,
 				555459092B854D8400DA097F /* PhraseonTests */,
 				552785BF2B27A5120098FE95 /* Products */,
@@ -1147,6 +1147,34 @@
 				5569779D2B4747380022B675 /* ProjectSettingsViewModel.swift */,
 			);
 			path = ProjectSettings;
+			sourceTree = "<group>";
+		};
+		5569DC5A2BA70A0900634838 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				5569DC5B2BA70AFA00634838 /* Shared */,
+				55DFE43B2BA0FE1900061962 /* Phraseon_InHouse */,
+				55DFE4452BA0FE1C00061962 /* Phraseon.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		5569DC5B2BA70AFA00634838 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5569DC5C2BA70B0800634838 /* Sources */,
+				55DFE4422BA0FE1C00061962 /* Preview Content */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5569DC5C2BA70B0800634838 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				553FD2742BA5027500461FEA /* Common */,
+				553FD2732BA5026F00461FEA /* Scenes */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		5570FF4B2B61B1200011208F /* Paywall */ = {
@@ -1560,14 +1588,12 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		55DFE43B2BA0FE1900061962 /* Phraseon_InHouse_MacOS */ = {
+		55DFE43B2BA0FE1900061962 /* Phraseon_InHouse */ = {
 			isa = PBXGroup;
 			children = (
-				55EC29B22BA26A99003D6F4C /* Sources */,
 				55EC29B32BA26A9E003D6F4C /* Resources */,
-				55DFE4422BA0FE1C00061962 /* Preview Content */,
 			);
-			path = Phraseon_InHouse_MacOS;
+			path = Phraseon_InHouse;
 			sourceTree = "<group>";
 		};
 		55DFE4422BA0FE1C00061962 /* Preview Content */ = {
@@ -1578,22 +1604,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		55EC29B22BA26A99003D6F4C /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				553FD2742BA5027500461FEA /* Common */,
-				553FD2732BA5026F00461FEA /* Scenes */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
 		55EC29B32BA26A9E003D6F4C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				55DE742D2BA3A6010030C7C7 /* Firebase */,
 				55DE742B2BA3A5B90030C7C7 /* secrets.json */,
-				55DFE4452BA0FE1C00061962 /* Phraseon_InHouse_MacOS.entitlements */,
-				55BC7BB72BA2673000801465 /* Phraseon-InHouse-MacOS-Info.plist */,
+				5569DC5D2BA70B4600634838 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -2607,16 +2623,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Phraseon_InHouse_MacOS/Resources/Phraseon_InHouse_MacOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = macOS/Phraseon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Phraseon_InHouse_MacOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"macOS/Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 38Q6TG2KG3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Phraseon_InHouse_MacOS/Resources/Phraseon-InHouse-MacOS-Info.plist";
+				INFOPLIST_FILE = macOS/Phraseon_InHouse/Resources/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2637,16 +2653,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Phraseon_InHouse_MacOS/Resources/Phraseon_InHouse_MacOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = macOS/Phraseon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Phraseon_InHouse_MacOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"macOS/Shared/Preview Content\"";
 				DEVELOPMENT_TEAM = 38Q6TG2KG3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Phraseon_InHouse_MacOS/Resources/Phraseon-InHouse-MacOS-Info.plist";
+				INFOPLIST_FILE = macOS/Phraseon_InHouse/Resources/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
