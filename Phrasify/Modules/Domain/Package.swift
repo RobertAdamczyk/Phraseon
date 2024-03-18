@@ -16,7 +16,7 @@ let package = Package(
             targets: ["Domain"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "10.20.0"),
+        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "10.22.1"),
         .package(url: "https://github.com/google/GoogleSignIn-iOS", from: "7.0.0"),
         .package(name: "Model", path: "../Model"),
         .package(name: "Common", path: "../Common")

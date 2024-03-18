@@ -16,7 +16,7 @@ let package = Package(
             targets: ["Model"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "10.20.0"),
+        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "10.22.1"),
         .package(url: "https://github.com/algolia/algoliasearch-client-swift", from: "8.20.0"),
         .package(name: "Common", path: "../Common")
     ],
