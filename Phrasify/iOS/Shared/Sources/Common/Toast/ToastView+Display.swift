@@ -9,7 +9,7 @@ import SwiftUI
 
 extension ToastView {
 
-    private static func show(toast: ToastView) {
+    static func displayOnScreen(toast: ToastView) {
         DispatchQueue.main.async {
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
 
@@ -27,26 +27,6 @@ extension ToastView {
             }
         }
 
-    }
-
-    public static func showError(message: String?) {
-        guard let message else {
-            showGeneralError()
-            return
-        }
-        let toastToShow = ToastView(type: .error, message: message)
-        show(toast: toastToShow)
-    }
-
-    public static func showSuccess(message: String) {
-        let toastToShow = ToastView(type: .success, message: message)
-        show(toast: toastToShow)
-    }
-
-    public static func showGeneralError() {
-        let message = "An unexpected error occurred. Please try again later. If the problem persists, contact our support team."
-        let toastToShow = ToastView(type: .error, message: message)
-        show(toast: toastToShow)
     }
 }
 

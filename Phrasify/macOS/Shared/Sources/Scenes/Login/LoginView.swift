@@ -31,7 +31,7 @@ struct LoginView: View {
             AppTextField(type: .password, text: $viewModel.password)
             AppButton(style: .text("Forget Password?"), action: .main({}))
                 .frame(maxWidth: .infinity, alignment: .trailing)
-            AppButton(style: .fill("Login", .lightBlue), action: .main({}))
+            AppButton(style: .fill("Login", .lightBlue), action: .async(viewModel.onLoginTapped))
             AppDivider(with: "OR")
             GoogleButton(action: {})
             AppleButton(onRequest: { _ in

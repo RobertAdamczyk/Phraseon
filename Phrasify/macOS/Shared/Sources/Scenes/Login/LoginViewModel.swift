@@ -19,4 +19,9 @@ final class LoginViewModel: ObservableObject {
     init(coordinator: LoginCoordinator) {
         self.coordinator = coordinator
     }
+
+    @MainActor
+    func onLoginTapped() async {
+        ToastView.showGeneralError()
+    }
 }

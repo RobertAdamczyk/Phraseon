@@ -54,24 +54,7 @@ public struct ToastView: View {
                 Spacer()
             }
             .padding(16)
-            .background {
-                Color.clear
-                    .applyCellBackground()
-                    .background {
-                        GeometryReader { proxy in
-                            Color.clear
-                                .onAppear {
-                                    toastSize = proxy.size
-                                    didAppear = true
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-                                        performAnimation()
-                                    }
-                                }
-                        }
-                    }
-                    .ignoresSafeArea()
-
-            }
+            .applyStyle(startAnimation: startAnimation, onAppear: onAppear)
             .offset(y: startAnimation ? 0 : -toastSize.height)
             .animation(.default, value: startAnimation)
             .offset(y: dragOffset)
@@ -92,11 +75,57 @@ public struct ToastView: View {
         .opacity(didAppear ? 1 : 0)
     }
 
+    private func onAppear(size: CGSize) {
+        toastSize = size
+        didAppear = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            performAnimation()
+        }
+    }
+
     private func performAnimation() {
         startAnimation = true
         DispatchQueue.main.asyncAfter(deadline: .now() + ToastView.toastDuration) {
             startAnimation = false
         }
+    }
+}
+
+extension View {
+
+    fileprivate func applyStyle(startAnimation: Bool, onAppear: @escaping (CGSize) -> Void) -> some View {
+        self
+#if os(iOS)
+            .background {
+                Color.clear
+                    .applyCellBackground()
+                    .background {
+                        GeometryReader { proxy in
+                            Color.clear
+                                .onAppear(perform: {
+                                    onAppear(proxy.size)
+                                })
+                        }
+                    }
+                    .ignoresSafeArea()
+            }
+#else
+            .background {
+                Color.clear
+                    .applyCellBackground(cornerRadius: 32)
+                    .background {
+                        GeometryReader { proxy in
+                            Color.clear
+                                .onAppear(perform: {
+                                    onAppear(proxy.size)
+                                })
+                        }
+                    }
+            }
+            .padding(32)
+            .opacity(startAnimation ? 1 : 0)
+#endif
+
     }
 }
 
