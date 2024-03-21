@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Domain
+import AuthenticationServices
 
 final class LoginViewModel: ObservableObject, Activitable {
 
@@ -18,6 +19,11 @@ final class LoginViewModel: ObservableObject, Activitable {
     @Published var shouldShowActivityView: Bool = false
 
     private let coordinator: LoginCoordinator
+
+    private lazy var signInWithAppleUseCase: SignInWithAppleUseCase = {
+        .init(authenticationRepository: coordinator.dependencies.authenticationRepository,
+              firestoreRepository: coordinator.dependencies.firestoreRepository)
+    }()
 
     init(coordinator: LoginCoordinator) {
         self.coordinator = coordinator
@@ -42,6 +48,27 @@ final class LoginViewModel: ObservableObject, Activitable {
             do {
                 let credentials = try await coordinator.dependencies.authenticationRepository.getGoogleAuthCredential(on: window)
                 _ = try await coordinator.dependencies.authenticationRepository.login(with: credentials)
+                ToastView.showSuccess(message: "Login successful. Welcome!")
+            } catch {
+                let errorHandler: ErrorHandler = .init(error: error)
+                if !errorHandler.shouldIgnoreError {
+                    ToastView.showError(message: errorHandler.localizedDescription)
+                }
+            }
+            stopActivity()
+        }
+    }
+
+    func onLoginWithAppleTapped(request: ASAuthorizationAppleIDRequest) {
+        signInWithAppleUseCase.performLogin(request: request)
+    }
+
+    @MainActor
+    func handleLoginWithApple(result: Result<ASAuthorization, any Error>) {
+        startActivity()
+        Task {
+            do {
+                try await signInWithAppleUseCase.completeLogin(result: result)
                 ToastView.showSuccess(message: "Login successful. Welcome!")
             } catch {
                 let errorHandler: ErrorHandler = .init(error: error)

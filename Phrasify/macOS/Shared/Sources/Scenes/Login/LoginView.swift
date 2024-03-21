@@ -34,11 +34,7 @@ struct LoginView: View {
             AppButton(style: .fill("Login", .lightBlue), action: .async(viewModel.onLoginTapped))
             AppDivider(with: "OR")
             GoogleButton(action: viewModel.onLoginWithGoogleTapped)
-            AppleButton(onRequest: { _ in
-
-            }) { _ in
-
-            }
+            AppleButton(onRequest: viewModel.onLoginWithAppleTapped, onCompletion: viewModel.handleLoginWithApple)
             Spacer()
         }
         .frame(maxWidth: 375)

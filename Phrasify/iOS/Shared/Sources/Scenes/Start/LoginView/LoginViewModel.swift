@@ -73,6 +73,7 @@ final class LoginViewModel: ObservableObject, Activitable {
         Task {
             do {
                 try await signInWithAppleUseCase.completeLogin(result: result)
+                ToastView.showSuccess(message: "Login successful. Welcome!")
             } catch {
                 let errorHandler: ErrorHandler = .init(error: error)
                 if !errorHandler.shouldIgnoreError {
