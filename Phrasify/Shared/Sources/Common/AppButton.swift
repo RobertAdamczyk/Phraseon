@@ -55,6 +55,7 @@ struct AppButton: View {
                     LottieView(animation: .named("buttonLoadingAnimation"))
                         .playing(loopMode: .loop)
                         .scaleEffect(2)
+                        .frame(width: 200, height: Self.height) // need for macos
                         .transition(.opacity)
                 }
             }
