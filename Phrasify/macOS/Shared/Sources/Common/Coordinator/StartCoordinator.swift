@@ -37,6 +37,17 @@ extension StartCoordinator: StartActions {
     }
 }
 
+extension StartCoordinator: NavigationActions {
+
+    func popView() {
+        navigationViews.removeLast()
+    }
+
+    func popToRoot() {
+        navigationViews.removeAll()
+    }
+}
+
 extension StartCoordinator {
 
     enum NavigationView: Identifiable, Equatable, Hashable {

@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import Domain
 
 final class LoginViewModel: ObservableObject {
 
-    typealias LoginCoordinator = Coordinator
+    typealias LoginCoordinator = Coordinator & NavigationActions
 
     @Published var email: String = ""
     @Published var password: String = ""
@@ -22,6 +23,12 @@ final class LoginViewModel: ObservableObject {
 
     @MainActor
     func onLoginTapped() async {
-        ToastView.showGeneralError()
+        do {
+            try await coordinator.dependencies.authenticationRepository.login(email: email, password: password)
+            ToastView.showSuccess(message: "Login successful. Welcome back!")
+        } catch {
+            let errorHandler: ErrorHandler = .init(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
+        }
     }
 }

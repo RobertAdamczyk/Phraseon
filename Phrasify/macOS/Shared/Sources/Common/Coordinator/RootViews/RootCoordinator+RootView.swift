@@ -14,18 +14,24 @@ extension RootCoordinator {
         @StateObject private var rootCoordinator = RootCoordinator()
 
         var body: some View {
-            NavigationSplitView(columnVisibility: $rootCoordinator.navigationSplitViewVisibility) {
-                Text("XD")
-            } detail: {
-                ZStack {
-                    if rootCoordinator.isLoggedIn == true {
+            ZStack {
+                if rootCoordinator.isLoggedIn == true {
+                    NavigationSplitView(columnVisibility: $rootCoordinator.navigationSplitViewVisibility) {
+                        Text("XD")
+                    } detail: {
                         Text("HOME")
-                    } else if rootCoordinator.isLoggedIn == false {
+                            .onTapGesture {
+                                try? rootCoordinator.dependencies.authenticationRepository.logout()
+                            }
+                    }
+                } else if rootCoordinator.isLoggedIn == false {
+                    NavigationSplitView(columnVisibility: $rootCoordinator.navigationSplitViewVisibility) {
+                        Text("XD")
+                    } detail: {
                         StartCoordinator.RootView(coordinator: rootCoordinator)
                     }
                 }
             }
-
         }
     }
 }
