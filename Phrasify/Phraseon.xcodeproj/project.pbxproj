@@ -108,6 +108,9 @@
 		552D26682BAB801A0085A031 /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D26672BAB801A0085A031 /* NavigationActions.swift */; };
 		552EC1732B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */; };
 		552EC1742B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */; };
+		5530A52B2BACE3FF00B6B9D3 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
+		5530A52C2BACE40A00B6B9D3 /* LoadingDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */; };
+		5530A52D2BACE41500B6B9D3 /* Activitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558074502B2E38110041160B /* Activitable.swift */; };
 		5536E1652B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */; };
 		5536E1662B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */; };
 		5536E1692B74362500E5DCC6 /* LoadingDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */; };
@@ -1352,6 +1355,8 @@
 		55BC7BAF2BA2666D00801465 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5536E1672B74361700E5DCC6 /* Animation */,
+				5580744C2B2E340C0041160B /* ActivityView */,
 				55E92BA52BAA3EFB0014174E /* Toast */,
 				55FD14082B97BD90006DA3E4 /* AuthenticationProviderButtons */,
 				553722AA2B631D880061CF52 /* Backgrounds */,
@@ -1399,7 +1404,6 @@
 			isa = PBXGroup;
 			children = (
 				55028A0B2B7ECB9800C786D9 /* AppUpdate */,
-				5536E1672B74361700E5DCC6 /* Animation */,
 				5561C5C22B65A75300C815BC /* SelectableCircle */,
 				55FE51A22B5CA94E0084617F /* PasswordValidation */,
 				5505C7F52B55EE9700806B4F /* StandardInformationView */,
@@ -1410,7 +1414,6 @@
 				55DE103F2B4ABF8F001CB87F /* UserDetailView */,
 				5505378F2B44C0080077912D /* PhotoPicker */,
 				551AA4182B33664800F0B1E2 /* Layout */,
-				5580744C2B2E340C0041160B /* ActivityView */,
 				55FF428E2B2BB34200F4D523 /* Toast */,
 				55C279202B2A4CE9005144F1 /* Coordinator */,
 			);
@@ -2300,6 +2303,7 @@
 				552D26682BAB801A0085A031 /* NavigationActions.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
 				553FD28F2BA63EA300461FEA /* AppleButton.swift in Sources */,
+				5530A52D2BACE41500B6B9D3 /* Activitable.swift in Sources */,
 				55DE74262BA39CA30030C7C7 /* Coordinator.swift in Sources */,
 				553FD2812BA5036500461FEA /* RootCoordinator+RootView.swift in Sources */,
 				55DE74342BA3AC560030C7C7 /* ViewBackground.swift in Sources */,
@@ -2312,9 +2316,11 @@
 				55DA4C532BA8F98C00C70011 /* ToastView.swift in Sources */,
 				55DFE43D2BA0FE1900061962 /* PhraseonApp.swift in Sources */,
 				553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */,
+				5530A52C2BACE40A00B6B9D3 /* LoadingDotsView.swift in Sources */,
 				553FD2862BA503EC00461FEA /* StartViewModel.swift in Sources */,
 				55EC29BA2BA26BAF003D6F4C /* Dependencies.swift in Sources */,
 				553FD2792BA502AE00461FEA /* RootCoordinator.swift in Sources */,
+				5530A52B2BACE3FF00B6B9D3 /* ActivityView.swift in Sources */,
 				55BC7BA82BA2649800801465 /* FontStyle.swift in Sources */,
 				553FD28D2BA63A5300461FEA /* AppTextField.swift in Sources */,
 			);
