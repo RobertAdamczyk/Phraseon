@@ -105,6 +105,7 @@
 		552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
 		552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
 		552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
+		552D26682BAB801A0085A031 /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D26672BAB801A0085A031 /* NavigationActions.swift */; };
 		552EC1732B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */; };
 		552EC1742B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */; };
 		5536E1652B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */; };
@@ -483,6 +484,7 @@
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyActions.swift; sourceTree = "<group>"; };
+		552D26672BAB801A0085A031 /* NavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActions.swift; sourceTree = "<group>"; };
 		552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlgoliaKey+toKey.swift"; sourceTree = "<group>"; };
 		5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighlightedString+extractedText.swift"; sourceTree = "<group>"; };
 		5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDotsView.swift; sourceTree = "<group>"; };
@@ -1021,6 +1023,7 @@
 			isa = PBXGroup;
 			children = (
 				553FD27E2BA5034A00461FEA /* StartActions.swift */,
+				552D26672BAB801A0085A031 /* NavigationActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -2294,6 +2297,7 @@
 				553FD2902BA63EAD00461FEA /* GoogleButton.swift in Sources */,
 				553FD27D2BA502FD00461FEA /* StartCoordinator+RootView.swift in Sources */,
 				553FD2842BA503D600461FEA /* StartView.swift in Sources */,
+				552D26682BAB801A0085A031 /* NavigationActions.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
 				553FD28F2BA63EA300461FEA /* AppleButton.swift in Sources */,
 				55DE74262BA39CA30030C7C7 /* Coordinator.swift in Sources */,
