@@ -8,12 +8,14 @@
 import SwiftUI
 import Domain
 
-final class LoginViewModel: ObservableObject {
+final class LoginViewModel: ObservableObject, Activitable {
 
     typealias LoginCoordinator = Coordinator & NavigationActions
 
     @Published var email: String = ""
     @Published var password: String = ""
+
+    @Published var shouldShowActivityView: Bool = false
 
     private let coordinator: LoginCoordinator
 
@@ -29,6 +31,25 @@ final class LoginViewModel: ObservableObject {
         } catch {
             let errorHandler: ErrorHandler = .init(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)
+        }
+    }
+
+    @MainActor
+    func onLoginWithGoogleTapped() {
+        guard let window = NSApplication.shared.mainWindow else { return }
+        startActivity()
+        Task {
+            do {
+                let credentials = try await coordinator.dependencies.authenticationRepository.getGoogleAuthCredential(on: window)
+                _ = try await coordinator.dependencies.authenticationRepository.login(with: credentials)
+                ToastView.showSuccess(message: "Login successful. Welcome!")
+            } catch {
+                let errorHandler: ErrorHandler = .init(error: error)
+                if !errorHandler.shouldIgnoreError {
+                    ToastView.showError(message: errorHandler.localizedDescription)
+                }
+            }
+            stopActivity()
         }
     }
 }

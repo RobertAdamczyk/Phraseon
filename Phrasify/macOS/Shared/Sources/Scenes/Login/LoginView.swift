@@ -33,7 +33,7 @@ struct LoginView: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
             AppButton(style: .fill("Login", .lightBlue), action: .async(viewModel.onLoginTapped))
             AppDivider(with: "OR")
-            GoogleButton(action: {})
+            GoogleButton(action: viewModel.onLoginWithGoogleTapped)
             AppleButton(onRequest: { _ in
 
             }) { _ in
@@ -43,5 +43,6 @@ struct LoginView: View {
         }
         .frame(maxWidth: 375)
         .scenePadding()
+        .activitable(viewModel.shouldShowActivityView)
     }
 }
