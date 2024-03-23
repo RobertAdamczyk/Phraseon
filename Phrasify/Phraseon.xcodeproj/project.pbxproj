@@ -382,6 +382,11 @@
 		55EC29BC2BA26CF4003D6F4C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 55EC29BB2BA26CF4003D6F4C /* FirebaseFirestore */; };
 		55EC29BE2BA26CF4003D6F4C /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 55EC29BD2BA26CF4003D6F4C /* FirebaseFirestoreCombine-Community */; };
 		55EC29C02BA26CF4003D6F4C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 55EC29BF2BA26CF4003D6F4C /* FirebaseFirestoreSwift */; };
+		55EF44392BAEF9DD0005ACA5 /* PasswordValidationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A32B5CA9B90084617F /* PasswordValidationHandler.swift */; };
+		55EF443A2BAEF9E00005ACA5 /* EmailValidationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51B22B5D1DE50084617F /* EmailValidationHandler.swift */; };
+		55EF443B2BAEF9E20005ACA5 /* ValidationHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51AC2B5D1C830084617F /* ValidationHandlerProtocol.swift */; };
+		55EF443C2BAEF9E40005ACA5 /* ValidationErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51AF2B5D1DB50084617F /* ValidationErrorProtocol.swift */; };
+		55EF443D2BAEF9E60005ACA5 /* ValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FE51A62B5CA9D60084617F /* ValidationView.swift */; };
 		55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FD140B2B97BD90006DA3E4 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14092B97BD90006DA3E4 /* AppleButton.swift */; };
@@ -1355,6 +1360,7 @@
 		55BC7BAF2BA2666D00801465 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55FE51A22B5CA94E0084617F /* PasswordValidation */,
 				5536E1672B74361700E5DCC6 /* Animation */,
 				5580744C2B2E340C0041160B /* ActivityView */,
 				55E92BA52BAA3EFB0014174E /* Toast */,
@@ -1405,7 +1411,6 @@
 			children = (
 				55028A0B2B7ECB9800C786D9 /* AppUpdate */,
 				5561C5C22B65A75300C815BC /* SelectableCircle */,
-				55FE51A22B5CA94E0084617F /* PasswordValidation */,
 				5505C7F52B55EE9700806B4F /* StandardInformationView */,
 				5505C7EE2B55E6CC00806B4F /* StandardWarningView */,
 				5505C7DC2B55BE4C00806B4F /* SyncScript */,
@@ -2295,11 +2300,15 @@
 			files = (
 				55DE74352BA3ACF80030C7C7 /* AppButton.swift in Sources */,
 				553FD28C2BA63A4C00461FEA /* AppTitle.swift in Sources */,
+				55EF443C2BAEF9E40005ACA5 /* ValidationErrorProtocol.swift in Sources */,
 				553FD28E2BA63DBA00461FEA /* AppDivider.swift in Sources */,
+				55EF443B2BAEF9E20005ACA5 /* ValidationHandlerProtocol.swift in Sources */,
 				55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */,
+				55EF443D2BAEF9E60005ACA5 /* ValidationView.swift in Sources */,
 				553FD2902BA63EAD00461FEA /* GoogleButton.swift in Sources */,
 				553FD27D2BA502FD00461FEA /* StartCoordinator+RootView.swift in Sources */,
 				553FD2842BA503D600461FEA /* StartView.swift in Sources */,
+				55EF44392BAEF9DD0005ACA5 /* PasswordValidationHandler.swift in Sources */,
 				552D26682BAB801A0085A031 /* NavigationActions.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
 				553FD28F2BA63EA300461FEA /* AppleButton.swift in Sources */,
@@ -2320,6 +2329,7 @@
 				553FD2862BA503EC00461FEA /* StartViewModel.swift in Sources */,
 				55EC29BA2BA26BAF003D6F4C /* Dependencies.swift in Sources */,
 				553FD2792BA502AE00461FEA /* RootCoordinator.swift in Sources */,
+				55EF443A2BAEF9E00005ACA5 /* EmailValidationHandler.swift in Sources */,
 				5530A52B2BACE3FF00B6B9D3 /* ActivityView.swift in Sources */,
 				55BC7BA82BA2649800801465 /* FontStyle.swift in Sources */,
 				553FD28D2BA63A5300461FEA /* AppTextField.swift in Sources */,
