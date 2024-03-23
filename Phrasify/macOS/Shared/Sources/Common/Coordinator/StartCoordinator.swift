@@ -33,7 +33,9 @@ extension StartCoordinator: StartActions {
     }
 
     func showRegister() {
-        // empty
+        let viewModel = RegisterViewModel(coordinator: self)
+        let navigationView: NavigationView = .register(viewModel: viewModel)
+        navigationViews.append(navigationView)
     }
 }
 
@@ -61,13 +63,13 @@ extension StartCoordinator {
         }
 
         case login(viewModel: LoginViewModel)
-        // case register(viewModel: RegisterViewModel)
+        case register(viewModel: RegisterViewModel)
         // case forgetPassword(viewModel: ForgetPasswordViewModel)
 
         var id: String {
             switch self {
             case .login: return "001"
-            // case .register: return "002"
+            case .register: return "002"
             // case .forgetPassword: return "003"
             }
         }
