@@ -261,6 +261,7 @@
 		55A7B3552B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */; };
 		55A7B3572B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */; };
 		55A7B3582B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */; };
+		55AEA74C2BB0BB4200710E99 /* Toolbar+DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AEA74B2BB0BB4200710E99 /* Toolbar+DisplayMode.swift */; };
 		55B841482B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
 		55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
 		55B8414C2B4C9AFC007697AF /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8414B2B4C9AFC007697AF /* SwipeAction.swift */; };
@@ -572,6 +573,7 @@
 		55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Image.swift"; sourceTree = "<group>"; };
 		55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningView.swift; sourceTree = "<group>"; };
 		55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModel.swift; sourceTree = "<group>"; };
+		55AEA74B2BB0BB4200710E99 /* Toolbar+DisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Toolbar+DisplayMode.swift"; sourceTree = "<group>"; };
 		55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectWarningViewModel.swift; sourceTree = "<group>"; };
 		55B8414B2B4C9AFC007697AF /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 		55C278CC2B2A2DA1005144F1 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
@@ -1006,6 +1008,7 @@
 		553FD2742BA5027500461FEA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55AEA74A2BB0BA9100710E99 /* Toolbar */,
 				55E92BA22BAA3DDA0014174E /* Toast */,
 				553FD2752BA5027900461FEA /* Coordinator */,
 			);
@@ -1315,6 +1318,14 @@
 				55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */,
 			);
 			path = ProfileDeleteWarning;
+			sourceTree = "<group>";
+		};
+		55AEA74A2BB0BA9100710E99 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				55AEA74B2BB0BB4200710E99 /* Toolbar+DisplayMode.swift */,
+			);
+			path = Toolbar;
 			sourceTree = "<group>";
 		};
 		55B841432B4C7C88007697AF /* DeleteProjectWarning */ = {
@@ -2339,6 +2350,7 @@
 				553FD2892BA638DD00461FEA /* LoginView.swift in Sources */,
 				55E92BA92BAA3F2E0014174E /* ToastView+Show.swift in Sources */,
 				55DA4C532BA8F98C00C70011 /* ToastView.swift in Sources */,
+				55AEA74C2BB0BB4200710E99 /* Toolbar+DisplayMode.swift in Sources */,
 				55DFE43D2BA0FE1900061962 /* PhraseonApp.swift in Sources */,
 				553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */,
 				5530A52C2BACE40A00B6B9D3 /* LoadingDotsView.swift in Sources */,

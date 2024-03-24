@@ -23,6 +23,7 @@ struct StartView: View {
             }
         }
         .applyViewBackground()
+        .toolbarLargeDisplayMode()
         .navigationTitle("Phraseon")
     }
 
