@@ -13,7 +13,7 @@ final class LoginViewModel: ObservableObject, Activitable {
 
     typealias LoginCoordinator = Coordinator & StartActions
 
-    @Published var email: String = ""
+    @AppStorage(UserDefaults.Key.email.rawValue) var email: String = ""
     @Published var password: String = ""
 
     @Published var shouldShowActivityView: Bool = false
