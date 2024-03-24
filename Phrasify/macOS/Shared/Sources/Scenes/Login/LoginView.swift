@@ -18,7 +18,8 @@ struct LoginView: View {
                 content
             }
         }
-        .navigationTitle("Login")
+        .activitable(viewModel.shouldShowActivityView)
+        .navigationTitle("Sign In")
         .applyViewBackground()
     }
 
@@ -39,6 +40,5 @@ struct LoginView: View {
         }
         .frame(maxWidth: 375)
         .scenePadding()
-        .activitable(viewModel.shouldShowActivityView)
     }
 }

@@ -9,15 +9,19 @@ import SwiftUI
 import Common
 import AuthenticationServices
 import Domain
+import Combine
 
 final class RegisterViewModel: ObservableObject, Activitable {
 
     typealias RegisterCoordinator = Coordinator & StartActions
 
     @Published var email: String = ""
+    @Published var password: String = ""
+    @Published var confirmPassword: String = ""
     @Published var shouldShowActivityView: Bool = false
 
     let emailValidationHandler = EmailValidationHandler()
+    let passwordValidationHandler = PasswordValidationHandler()
 
     private let coordinator: RegisterCoordinator
     private let cancelBag = CancelBag()
@@ -29,16 +33,25 @@ final class RegisterViewModel: ObservableObject, Activitable {
 
     init(coordinator: RegisterCoordinator) {
         self.coordinator = coordinator
-        setupEmailTextSubscriber()
+        setupTextSubscriber()
     }
 
     func onLoginTapped() {
         coordinator.showLogin()
     }
 
-    func onRegisterWithEmailTapped() {
+    @MainActor
+    func onRegisterWithEmailTapped() async {
         guard case .success = emailValidationHandler.validate(email: email) else { return }
-        //coordinator.showSetPassword(email: email)
+        guard case .success = passwordValidationHandler.validate(password: password, confirmPassword: confirmPassword) else { return }
+        do {
+            try await coordinator.dependencies.authenticationRepository.signUp(email: email, password: password)
+            UserDefaults.standard.set(email, forKey: UserDefaults.Key.email.rawValue)
+            ToastView.showSuccess(message: "Account successfully created. Welcome in Phraseon!")
+        } catch {
+            let errorHandler: ErrorHandler = .init(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
+        }
     }
 
     @MainActor
@@ -80,11 +93,12 @@ final class RegisterViewModel: ObservableObject, Activitable {
         }
     }
 
-    private func setupEmailTextSubscriber() {
-        $email
+    private func setupTextSubscriber() {
+        Publishers.MergeMany($password, $confirmPassword, $email)
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] _ in
                 DispatchQueue.main.async {
+                    self?.passwordValidationHandler.resetValidation()
                     self?.emailValidationHandler.resetValidation()
                 }
             })
