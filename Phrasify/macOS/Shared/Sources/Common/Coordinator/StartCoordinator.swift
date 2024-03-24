@@ -12,6 +12,7 @@ final class StartCoordinator: ObservableObject, Coordinator {
     typealias ParentCoordinator = Coordinator
 
     @Published var navigationViews: [NavigationView] = []
+    @Published var presentedSheet: Sheet?
 
     var dependencies: Dependencies {
         parentCoordinator.dependencies
@@ -37,6 +38,11 @@ extension StartCoordinator: StartActions {
         let navigationView: NavigationView = .register(viewModel: viewModel)
         navigationViews.append(navigationView)
     }
+
+    func showForgetPassword() {
+        let viewModel = ForgetPasswordViewModel(coordinator: self)
+        self.presentedSheet = .forgetPassword(viewModel: viewModel)
+    }
 }
 
 extension StartCoordinator: NavigationActions {
@@ -47,6 +53,13 @@ extension StartCoordinator: NavigationActions {
 
     func popToRoot() {
         navigationViews.removeAll()
+    }
+}
+
+extension StartCoordinator: SheetActions {
+
+    func dismissSheet() {
+        self.presentedSheet = nil
     }
 }
 
@@ -64,13 +77,21 @@ extension StartCoordinator {
 
         case login(viewModel: LoginViewModel)
         case register(viewModel: RegisterViewModel)
-        // case forgetPassword(viewModel: ForgetPasswordViewModel)
 
         var id: String {
             switch self {
             case .login: return "001"
             case .register: return "002"
-            // case .forgetPassword: return "003"
+            }
+        }
+    }
+
+    enum Sheet: Identifiable {
+        case forgetPassword(viewModel: ForgetPasswordViewModel)
+
+        var id: String {
+            switch self {
+            case .forgetPassword: "001"
             }
         }
     }

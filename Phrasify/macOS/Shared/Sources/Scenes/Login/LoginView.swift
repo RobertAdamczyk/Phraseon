@@ -30,7 +30,7 @@ struct LoginView: View {
                 .padding(.bottom, 16)
             AppTextField(type: .email, text: $viewModel.email)
             AppTextField(type: .password, text: $viewModel.password)
-            AppButton(style: .text("Forget Password?"), action: .main({}))
+            AppButton(style: .text("Forget Password?"), action: .main(viewModel.onForgetPasswordTapped))
                 .frame(maxWidth: .infinity, alignment: .trailing)
             AppButton(style: .fill("Login", .lightBlue), action: .async(viewModel.onLoginTapped))
             AppDivider(with: "OR")

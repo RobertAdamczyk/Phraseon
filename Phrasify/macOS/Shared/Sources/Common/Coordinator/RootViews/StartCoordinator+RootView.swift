@@ -27,6 +27,11 @@ extension StartCoordinator {
                         }
                     }
             }
+            .sheet(item: $startCoordinator.presentedSheet) {
+                switch $0 {
+                case .forgetPassword(let viewModel): ForgetPasswordView(viewModel: viewModel)
+                }
+            }
             .onDisappear(perform: startCoordinator.popToRoot)
         }
     }

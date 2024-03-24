@@ -105,7 +105,6 @@
 		552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
 		552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
 		552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */; };
-		552D26682BAB801A0085A031 /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552D26672BAB801A0085A031 /* NavigationActions.swift */; };
 		552EC1732B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */; };
 		552EC1742B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */; };
 		5530A52B2BACE3FF00B6B9D3 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5580744D2B2E341B0041160B /* ActivityView.swift */; };
@@ -262,6 +261,10 @@
 		55A7B3572B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */; };
 		55A7B3582B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */; };
 		55AEA74C2BB0BB4200710E99 /* Toolbar+DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AEA74B2BB0BB4200710E99 /* Toolbar+DisplayMode.swift */; };
+		55AEA74F2BB0CB5C00710E99 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AEA74E2BB0CB5C00710E99 /* ForgetPasswordView.swift */; };
+		55AEA7512BB0CB6500710E99 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AEA7502BB0CB6500710E99 /* ForgetPasswordViewModel.swift */; };
+		55AEA7532BB0D16D00710E99 /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
+		55AEA7542BB0D1A700710E99 /* SheetActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE10612B4B56D1001CB87F /* SheetActions.swift */; };
 		55B841482B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
 		55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
 		55B8414C2B4C9AFC007697AF /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8414B2B4C9AFC007697AF /* SwipeAction.swift */; };
@@ -495,7 +498,6 @@
 		552785C92B27A5140098FE95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterContentKeyActions.swift; sourceTree = "<group>"; };
-		552D26672BAB801A0085A031 /* NavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActions.swift; sourceTree = "<group>"; };
 		552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlgoliaKey+toKey.swift"; sourceTree = "<group>"; };
 		5536E1642B7426E500E5DCC6 /* HighlightedString+extractedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HighlightedString+extractedText.swift"; sourceTree = "<group>"; };
 		5536E1682B74362500E5DCC6 /* LoadingDotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDotsView.swift; sourceTree = "<group>"; };
@@ -574,6 +576,8 @@
 		55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningView.swift; sourceTree = "<group>"; };
 		55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModel.swift; sourceTree = "<group>"; };
 		55AEA74B2BB0BB4200710E99 /* Toolbar+DisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Toolbar+DisplayMode.swift"; sourceTree = "<group>"; };
+		55AEA74E2BB0CB5C00710E99 /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
+		55AEA7502BB0CB6500710E99 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
 		55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProjectWarningViewModel.swift; sourceTree = "<group>"; };
 		55B8414B2B4C9AFC007697AF /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 		55C278CC2B2A2DA1005144F1 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
@@ -998,6 +1002,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55AEA74D2BB0CB5400710E99 /* ForgetPassword */,
 				55EF44342BAEF8F60005ACA5 /* Register */,
 				553FD2872BA638CA00461FEA /* Login */,
 				553FD2822BA503B200461FEA /* Start */,
@@ -1039,7 +1044,6 @@
 			isa = PBXGroup;
 			children = (
 				553FD27E2BA5034A00461FEA /* StartActions.swift */,
-				552D26672BAB801A0085A031 /* NavigationActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -1328,6 +1332,24 @@
 			path = Toolbar;
 			sourceTree = "<group>";
 		};
+		55AEA74D2BB0CB5400710E99 /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				55AEA74E2BB0CB5C00710E99 /* ForgetPasswordView.swift */,
+				55AEA7502BB0CB6500710E99 /* ForgetPasswordViewModel.swift */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		55AEA7522BB0D16600710E99 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				55DE10612B4B56D1001CB87F /* SheetActions.swift */,
+				550537892B4492670077912D /* NavigationActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		55B841432B4C7C88007697AF /* DeleteProjectWarning */ = {
 			isa = PBXGroup;
 			children = (
@@ -1462,7 +1484,6 @@
 				55C279222B2A4D18005144F1 /* StartActions.swift */,
 				558074532B2E3C8F0041160B /* RootActions.swift */,
 				551AA40B2B334FB800F0B1E2 /* FullScreenCoverActions.swift */,
-				55DE10612B4B56D1001CB87F /* SheetActions.swift */,
 				556977A02B47594A0022B675 /* SelectLanguageActions.swift */,
 				55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */,
 				556977A32B475B440022B675 /* SelectTechnologyActions.swift */,
@@ -1470,7 +1491,6 @@
 				55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */,
 				5516EBE42B432D4700C558B1 /* ProfileActions.swift */,
 				550041FC2B6C3FD700073384 /* PaywallActions.swift */,
-				550537892B4492670077912D /* NavigationActions.swift */,
 				552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */,
 			);
 			path = Actions;
@@ -1603,6 +1623,7 @@
 		55DE74252BA39C960030C7C7 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				55AEA7522BB0D16600710E99 /* Actions */,
 				55C2791C2B2A4C60005144F1 /* Coordinator.swift */,
 			);
 			path = Coordinator;
@@ -2336,14 +2357,16 @@
 				553FD27D2BA502FD00461FEA /* StartCoordinator+RootView.swift in Sources */,
 				553FD2842BA503D600461FEA /* StartView.swift in Sources */,
 				55EF44392BAEF9DD0005ACA5 /* PasswordValidationHandler.swift in Sources */,
-				552D26682BAB801A0085A031 /* NavigationActions.swift in Sources */,
+				55AEA7512BB0CB6500710E99 /* ForgetPasswordViewModel.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
 				553FD28F2BA63EA300461FEA /* AppleButton.swift in Sources */,
 				5530A52D2BACE41500B6B9D3 /* Activitable.swift in Sources */,
 				55DE74262BA39CA30030C7C7 /* Coordinator.swift in Sources */,
 				553FD2812BA5036500461FEA /* RootCoordinator+RootView.swift in Sources */,
 				55DE74342BA3AC560030C7C7 /* ViewBackground.swift in Sources */,
+				55AEA7532BB0D16D00710E99 /* NavigationActions.swift in Sources */,
 				55DE74282BA39DA90030C7C7 /* AppUpdateHandler.swift in Sources */,
+				55AEA7542BB0D1A700710E99 /* SheetActions.swift in Sources */,
 				553FD28B2BA638E500461FEA /* LoginViewModel.swift in Sources */,
 				553FD2722BA4F52900461FEA /* CellBackground.swift in Sources */,
 				553FD27B2BA502DC00461FEA /* StartCoordinator.swift in Sources */,
@@ -2351,6 +2374,7 @@
 				55E92BA92BAA3F2E0014174E /* ToastView+Show.swift in Sources */,
 				55DA4C532BA8F98C00C70011 /* ToastView.swift in Sources */,
 				55AEA74C2BB0BB4200710E99 /* Toolbar+DisplayMode.swift in Sources */,
+				55AEA74F2BB0CB5C00710E99 /* ForgetPasswordView.swift in Sources */,
 				55DFE43D2BA0FE1900061962 /* PhraseonApp.swift in Sources */,
 				553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */,
 				5530A52C2BACE40A00B6B9D3 /* LoadingDotsView.swift in Sources */,

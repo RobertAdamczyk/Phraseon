@@ -10,4 +10,5 @@ import Foundation
 protocol StartActions {
     func showLogin()
     func showRegister()
+    func showForgetPassword()
 }
