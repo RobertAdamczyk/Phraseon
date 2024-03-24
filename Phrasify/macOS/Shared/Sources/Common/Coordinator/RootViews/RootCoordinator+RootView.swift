@@ -16,20 +16,13 @@ extension RootCoordinator {
         var body: some View {
             ZStack {
                 if rootCoordinator.isLoggedIn == true {
-                    NavigationSplitView(columnVisibility: $rootCoordinator.navigationSplitViewVisibility) {
-                        Text("XD")
-                    } detail: {
-                        Text("HOME")
-                            .onTapGesture {
-                                try? rootCoordinator.dependencies.authenticationRepository.logout()
-                            }
-                    }
+                    Text("HOME")
+                        .toolbarLargeDisplayMode()
+                        .onTapGesture {
+                            try? rootCoordinator.dependencies.authenticationRepository.logout()
+                        }
                 } else if rootCoordinator.isLoggedIn == false {
-                    NavigationSplitView(columnVisibility: $rootCoordinator.navigationSplitViewVisibility) {
-                        Text("XD")
-                    } detail: {
-                        StartCoordinator.RootView(coordinator: rootCoordinator)
-                    }
+                    StartCoordinator.RootView(coordinator: rootCoordinator)
                 }
             }
         }

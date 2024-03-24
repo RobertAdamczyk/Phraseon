@@ -27,6 +27,7 @@ extension StartCoordinator {
                         }
                     }
             }
+            .onDisappear(perform: startCoordinator.popToRoot)
         }
     }
 
