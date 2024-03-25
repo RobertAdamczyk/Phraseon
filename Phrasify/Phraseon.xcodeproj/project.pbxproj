@@ -375,6 +375,9 @@
 		55DFE4352BA0F4B300061962 /* MockCloudRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE4342BA0F4B300061962 /* MockCloudRepository.swift */; };
 		55DFE43D2BA0FE1900061962 /* PhraseonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFE43C2BA0FE1900061962 /* PhraseonApp.swift */; };
 		55DFE4442BA0FE1C00061962 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DFE4432BA0FE1C00061962 /* Preview Assets.xcassets */; };
+		55E4FB092BB20D1000D6D6DA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB082BB20D1000D6D6DA /* HomeView.swift */; };
+		55E4FB0B2BB20D1F00D6D6DA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB0A2BB20D1F00D6D6DA /* HomeViewModel.swift */; };
+		55E4FB0E2BB20DCB00D6D6DA /* Technology+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */; };
 		55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */; };
 		55E92BA72BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
 		55E92BA82BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
@@ -630,6 +633,8 @@
 		55DFE43C2BA0FE1900061962 /* PhraseonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseonApp.swift; sourceTree = "<group>"; };
 		55DFE4432BA0FE1C00061962 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		55DFE4452BA0FE1C00061962 /* Phraseon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phraseon.entitlements; sourceTree = "<group>"; };
+		55E4FB082BB20D1000D6D6DA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		55E4FB0A2BB20D1F00D6D6DA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Display.swift"; sourceTree = "<group>"; };
 		55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Show.swift"; sourceTree = "<group>"; };
 		55EF44352BAEF9240005ACA5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -814,7 +819,6 @@
 			children = (
 				5516EBAE2B3F2D5700C558B1 /* KeyStatus+UI.swift */,
 				5516EBB22B3F2EE700C558B1 /* Language+UI.swift */,
-				5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */,
 				5516EBBB2B3F33B000C558B1 /* KeysOrder+UI.swift */,
 				55FD140F2B97BDC6006DA3E4 /* AuthenticationProvider+UI.swift */,
 				55DE10432B4AD0D8001CB87F /* Role+UI.swift */,
@@ -1002,6 +1006,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55E4FB072BB20D0400D6D6DA /* Home */,
 				55AEA74D2BB0CB5400710E99 /* ForgetPassword */,
 				55EF44342BAEF8F60005ACA5 /* Register */,
 				553FD2872BA638CA00461FEA /* Login */,
@@ -1378,6 +1383,7 @@
 		55BC7BAC2BA2662500801465 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				55E4FB0C2BB20DBE00D6D6DA /* Extensions */,
 				55BC7BAF2BA2666D00801465 /* Common */,
 				55DFE43C2BA0FE1900061962 /* PhraseonApp.swift */,
 				55C279142B2A4BB0005144F1 /* Dependencies.swift */,
@@ -1659,6 +1665,31 @@
 				55DFE4432BA0FE1C00061962 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		55E4FB072BB20D0400D6D6DA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				55E4FB082BB20D1000D6D6DA /* HomeView.swift */,
+				55E4FB0A2BB20D1F00D6D6DA /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		55E4FB0C2BB20DBE00D6D6DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55E4FB0D2BB20DC500D6D6DA /* Model */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		55E4FB0D2BB20DC500D6D6DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		55E92BA22BAA3DDA0014174E /* Toast */ = {
@@ -2347,6 +2378,7 @@
 				55DE74352BA3ACF80030C7C7 /* AppButton.swift in Sources */,
 				553FD28C2BA63A4C00461FEA /* AppTitle.swift in Sources */,
 				55EF44362BAEF9240005ACA5 /* RegisterView.swift in Sources */,
+				55E4FB0B2BB20D1F00D6D6DA /* HomeViewModel.swift in Sources */,
 				55EF443C2BAEF9E40005ACA5 /* ValidationErrorProtocol.swift in Sources */,
 				55EF44382BAEF9390005ACA5 /* RegisterViewModel.swift in Sources */,
 				553FD28E2BA63DBA00461FEA /* AppDivider.swift in Sources */,
@@ -2359,6 +2391,7 @@
 				55EF44392BAEF9DD0005ACA5 /* PasswordValidationHandler.swift in Sources */,
 				55AEA7512BB0CB6500710E99 /* ForgetPasswordViewModel.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
+				55E4FB092BB20D1000D6D6DA /* HomeView.swift in Sources */,
 				553FD28F2BA63EA300461FEA /* AppleButton.swift in Sources */,
 				5530A52D2BACE41500B6B9D3 /* Activitable.swift in Sources */,
 				55DE74262BA39CA30030C7C7 /* Coordinator.swift in Sources */,
@@ -2377,6 +2410,7 @@
 				55AEA74F2BB0CB5C00710E99 /* ForgetPasswordView.swift in Sources */,
 				55DFE43D2BA0FE1900061962 /* PhraseonApp.swift in Sources */,
 				553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */,
+				55E4FB0E2BB20DCB00D6D6DA /* Technology+UI.swift in Sources */,
 				5530A52C2BACE40A00B6B9D3 /* LoadingDotsView.swift in Sources */,
 				553FD2862BA503EC00461FEA /* StartViewModel.swift in Sources */,
 				55EC29BA2BA26BAF003D6F4C /* Dependencies.swift in Sources */,

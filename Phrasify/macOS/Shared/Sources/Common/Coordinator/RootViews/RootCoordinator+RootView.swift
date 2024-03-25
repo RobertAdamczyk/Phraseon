@@ -16,11 +16,18 @@ extension RootCoordinator {
         var body: some View {
             ZStack {
                 if rootCoordinator.isLoggedIn == true {
-                    Text("HOME")
-                        .toolbarLargeDisplayMode()
-                        .onTapGesture {
-                            try? rootCoordinator.dependencies.authenticationRepository.logout()
+                    NavigationSplitView {
+                        Text("XD")
+                    } detail: {
+                        NavigationStack(path: $rootCoordinator.navigationViews) {
+                            HomeView(coordinator: rootCoordinator)
+                                .navigationDestination(for: RootCoordinator.NavigationView.self) {
+                                    switch $0 {
+                                    case .empty: EmptyView()
+                                    }
+                                }
                         }
+                    }
                 } else if rootCoordinator.isLoggedIn == false {
                     StartCoordinator.RootView(coordinator: rootCoordinator)
                 }

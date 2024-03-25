@@ -10,7 +10,7 @@ import Domain
 
 final class RootCoordinator: ObservableObject, Coordinator {
 
-    @Published var navigationSplitViewVisibility: NavigationSplitViewVisibility = .detailOnly
+    @Published var navigationViews: [NavigationView] = []
     @Published private(set) var updateInfo: AppUpdateHandler.UpdateInfo?
     @Published private(set) var isLoggedIn: Bool?
 
@@ -44,5 +44,12 @@ final class RootCoordinator: ObservableObject, Coordinator {
             .assign(to: &$isLoggedIn)
         appUpdateHandler.$updateInfo
             .assign(to: &$updateInfo)
+    }
+}
+
+extension RootCoordinator {
+
+    enum NavigationView {
+        case empty
     }
 }
