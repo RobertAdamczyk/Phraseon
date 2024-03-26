@@ -12,7 +12,7 @@ import Common
 
 final class HomeViewModel: ObservableObject {
 
-    typealias HomeCoordinator = Coordinator
+    typealias HomeCoordinator = Coordinator & HomeActions
 
     @Published private(set) var projects: [Project] = []
 
@@ -30,7 +30,7 @@ final class HomeViewModel: ObservableObject {
     }
 
     func onProjectTapped(project: Project) {
-        // coordinator.showProjectDetails(project: project)
+        coordinator.showProjectDetail()
     }
 
     func onAddProjectTapped() {

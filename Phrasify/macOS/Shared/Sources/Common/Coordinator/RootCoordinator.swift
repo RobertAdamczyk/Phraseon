@@ -10,6 +10,7 @@ import Domain
 
 final class RootCoordinator: ObservableObject, Coordinator {
 
+    @Published var selectedSplitView: SplitView = .home
     @Published var navigationViews: [NavigationView] = []
     @Published private(set) var updateInfo: AppUpdateHandler.UpdateInfo?
     @Published private(set) var isLoggedIn: Bool?
@@ -47,9 +48,28 @@ final class RootCoordinator: ObservableObject, Coordinator {
     }
 }
 
+extension RootCoordinator: NavigationActions {
+
+    func popView() {
+        navigationViews.removeLast()
+    }
+
+    func popToRoot() {
+        navigationViews.removeAll()
+    }
+}
+
 extension RootCoordinator {
 
     enum NavigationView {
         case empty
+    }
+}
+
+extension RootCoordinator {
+
+    enum SplitView {
+        case home
+        case profile
     }
 }
