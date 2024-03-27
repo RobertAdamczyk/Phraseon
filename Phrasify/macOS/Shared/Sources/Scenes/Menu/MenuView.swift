@@ -16,15 +16,35 @@ struct MenuView: View {
     }
 
     var body: some View {
-        VStack(spacing: 16) {
-            Button(action: viewModel.onHomeTapped) {
-                Label("Home", systemImage: "house.fill")
-                    .apply(.bold, size: .L, color: .white)
-            }
-            Button(action: viewModel.onProfileTapped) {
-                Label("Profile", systemImage: "person.fill")
-                    .apply(.bold, size: .L, color: .white)
-            }
+        VStack(alignment: .leading, spacing: 16) {
+            AppTitle(title: "Menu")
+                .padding(.bottom, 16)
+            makeMenuButton(for: .projects, perform: viewModel.onProjectsTapped)
+            makeMenuButton(for: .profile, perform: viewModel.onProfileTapped)
+            Spacer()
         }
+        .padding(16)
+    }
+
+    private func makeMenuButton(for menu: MenuItem, perform action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            HStack(alignment: .center, spacing: 4) {
+                menu.systemImage
+                    .frame(width: 28)
+                    .foregroundStyle(appColor(.paleOrange))
+                Text(menu.label)
+                    .lineLimit(1)
+                Spacer()
+            }
+            .apply(.semibold, size: .M, color: .white)
+            .padding(.vertical, 8)
+            .padding(.horizontal, 4)
+            .background {
+                RoundedRectangle(cornerRadius: 8)
+                    .foregroundStyle(menu == viewModel.selectedMenuItem ? appColor(.lightGray).opacity(0.5) : .clear)
+            }
+            .contentShape(.rect)
+        }
+        .buttonStyle(.plain)
     }
 }

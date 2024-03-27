@@ -9,6 +9,6 @@ import Foundation
 
 protocol MenuActions {
 
-    func showHome()
+    func showProjects()
     func showProfile()
 }

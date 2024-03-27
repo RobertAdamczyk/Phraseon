@@ -25,8 +25,8 @@ extension HomeCoordinator {
             NavigationSplitView {
                 MenuView(coordinator: homeCoordinator)
             } detail: {
-                switch homeCoordinator.selectedSplitView {
-                case .home:
+                switch homeCoordinator.selectedMenuItem {
+                case .projects:
                     ProjectCoordinator.RootView(projectCoordinator: projectCoordinator)
                 case .profile:
                     ProfileCoordinator.RootView(profileCoordinator: profileCoordinator)

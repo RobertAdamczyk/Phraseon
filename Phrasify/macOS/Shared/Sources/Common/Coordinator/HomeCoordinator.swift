@@ -11,7 +11,7 @@ final class HomeCoordinator: Coordinator, ObservableObject {
 
     typealias ParentCoordinator = Coordinator
 
-    @Published var selectedSplitView: SplitView = .home
+    @Published var selectedMenuItem: MenuItem = .projects
 
     var dependencies: Dependencies {
         parentCoordinator.dependencies
@@ -26,19 +26,11 @@ final class HomeCoordinator: Coordinator, ObservableObject {
 
 extension HomeCoordinator: MenuActions {
 
-    func showHome() {
-        self.selectedSplitView = .home
+    func showProjects() {
+        self.selectedMenuItem = .projects
     }
 
     func showProfile() {
-        self.selectedSplitView = .profile
-    }
-}
-
-extension HomeCoordinator {
-
-    enum SplitView {
-        case home
-        case profile
+        self.selectedMenuItem = .profile
     }
 }

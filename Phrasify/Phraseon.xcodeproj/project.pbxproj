@@ -388,6 +388,8 @@
 		55E4FB1F2BB4CBAF00D6D6DA /* ProfileCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB1E2BB4CBAF00D6D6DA /* ProfileCoordinator+RootView.swift */; };
 		55E4FB212BB4CBF200D6D6DA /* ProjectCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB202BB4CBF200D6D6DA /* ProjectCoordinator+RootView.swift */; };
 		55E4FB232BB4CC1F00D6D6DA /* ProjectCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB222BB4CC1F00D6D6DA /* ProjectCoordinator.swift */; };
+		55E4FB262BB4E01B00D6D6DA /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB252BB4E01B00D6D6DA /* MenuItem.swift */; };
+		55E4FB282BB4E03800D6D6DA /* MenuItem+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB272BB4E03800D6D6DA /* MenuItem+UI.swift */; };
 		55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */; };
 		55E92BA72BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
 		55E92BA82BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
@@ -655,6 +657,8 @@
 		55E4FB1E2BB4CBAF00D6D6DA /* ProfileCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		55E4FB202BB4CBF200D6D6DA /* ProjectCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		55E4FB222BB4CC1F00D6D6DA /* ProjectCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCoordinator.swift; sourceTree = "<group>"; };
+		55E4FB252BB4E01B00D6D6DA /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		55E4FB272BB4E03800D6D6DA /* MenuItem+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuItem+UI.swift"; sourceTree = "<group>"; };
 		55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Display.swift"; sourceTree = "<group>"; };
 		55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Show.swift"; sourceTree = "<group>"; };
 		55EF44352BAEF9240005ACA5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -1039,6 +1043,7 @@
 		553FD2742BA5027500461FEA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55E4FB242BB4E00E00D6D6DA /* MenuItem */,
 				55AEA74A2BB0BA9100710E99 /* Toolbar */,
 				55E92BA22BAA3DDA0014174E /* Toast */,
 				553FD2752BA5027900461FEA /* Coordinator */,
@@ -1730,6 +1735,15 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		55E4FB242BB4E00E00D6D6DA /* MenuItem */ = {
+			isa = PBXGroup;
+			children = (
+				55E4FB252BB4E01B00D6D6DA /* MenuItem.swift */,
+				55E4FB272BB4E03800D6D6DA /* MenuItem+UI.swift */,
+			);
+			path = MenuItem;
+			sourceTree = "<group>";
+		};
 		55E92BA22BAA3DDA0014174E /* Toast */ = {
 			isa = PBXGroup;
 			children = (
@@ -2414,6 +2428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55E4FB122BB371D100D6D6DA /* HomeCoordinator+RootView.swift in Sources */,
+				55E4FB282BB4E03800D6D6DA /* MenuItem+UI.swift in Sources */,
 				55E4FB192BB4035600D6D6DA /* MenuViewModel.swift in Sources */,
 				55DE74352BA3ACF80030C7C7 /* AppButton.swift in Sources */,
 				553FD28C2BA63A4C00461FEA /* AppTitle.swift in Sources */,
@@ -2432,6 +2447,7 @@
 				553FD27D2BA502FD00461FEA /* StartCoordinator+RootView.swift in Sources */,
 				553FD2842BA503D600461FEA /* StartView.swift in Sources */,
 				55EF44392BAEF9DD0005ACA5 /* PasswordValidationHandler.swift in Sources */,
+				55E4FB262BB4E01B00D6D6DA /* MenuItem.swift in Sources */,
 				55AEA7512BB0CB6500710E99 /* ForgetPasswordViewModel.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
 				55E4FB092BB20D1000D6D6DA /* ProjectsView.swift in Sources */,
