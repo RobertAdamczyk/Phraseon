@@ -59,6 +59,17 @@ extension RootCoordinator: NavigationActions {
     }
 }
 
+extension RootCoordinator: MenuActions {
+
+    func showHome() {
+        self.selectedSplitView = .home
+    }
+
+    func showProfile() {
+        self.selectedSplitView = .profile
+    }
+}
+
 extension RootCoordinator {
 
     enum NavigationView {

@@ -9,7 +9,7 @@ import SwiftUI
 
 final class MenuViewModel: ObservableObject {
 
-    typealias MenuCoordinator = Coordinator
+    typealias MenuCoordinator = Coordinator & MenuActions
 
     private let coordinator: MenuCoordinator
 
@@ -18,11 +18,11 @@ final class MenuViewModel: ObservableObject {
     }
 
     func onHomeTapped() {
-
+        coordinator.showHome()
     }
 
     func onProfileTapped() {
-
+        coordinator.showProfile()
     }
 }
 
