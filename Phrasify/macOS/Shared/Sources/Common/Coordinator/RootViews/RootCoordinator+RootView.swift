@@ -16,17 +16,7 @@ extension RootCoordinator {
         var body: some View {
             ZStack {
                 if rootCoordinator.isLoggedIn == true {
-                    NavigationSplitView {
-                        MenuView(coordinator: rootCoordinator)
-                    } detail: {
-                        switch rootCoordinator.selectedSplitView {
-                        case .home:
-                            HomeCoordinator.RootView(coordinator: rootCoordinator)
-                        case .profile:
-                            Text("PROFILE").navigationTitle("Profile")
-                        }
-
-                    }
+                    HomeCoordinator.RootView(coordinator: rootCoordinator)
                 } else if rootCoordinator.isLoggedIn == false {
                     StartCoordinator.RootView(coordinator: rootCoordinator)
                 }

@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  ProjectsView.swift
 //  Phraseon_InHouse_MacOS
 //
 //  Created by Robert Adamczyk on 25.03.24.
@@ -8,11 +8,11 @@
 import SwiftUI
 import Model
 
-struct HomeView: View {
+struct ProjectsView: View {
 
-    @StateObject private var viewModel: HomeViewModel
+    @StateObject private var viewModel: ProjectsViewModel
 
-    init(coordinator: HomeViewModel.HomeCoordinator) {
+    init(coordinator: ProjectsViewModel.ProjectsCoordinator) {
         self._viewModel = .init(wrappedValue: .init(coordinator: coordinator))
     }
 

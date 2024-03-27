@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  ProjectsViewModel.swift
 //  Phraseon_InHouse_MacOS
 //
 //  Created by Robert Adamczyk on 25.03.24.
@@ -10,13 +10,13 @@ import Combine
 import Model
 import Common
 
-final class HomeViewModel: ObservableObject {
+final class ProjectsViewModel: ObservableObject {
 
-    typealias HomeCoordinator = Coordinator & HomeActions
+    typealias ProjectsCoordinator = Coordinator & ProjectsActions
 
     @Published private(set) var projects: [Project] = []
 
-    private let coordinator: HomeCoordinator
+    private let coordinator: ProjectsCoordinator
 
     private var cancelBag = CancelBag()
 
@@ -24,7 +24,7 @@ final class HomeViewModel: ObservableObject {
         coordinator.dependencies.authenticationRepository.userId
     }
 
-    init(coordinator: HomeCoordinator) {
+    init(coordinator: ProjectsCoordinator) {
         self.coordinator = coordinator
         setupProjectsSubscriber()
     }
