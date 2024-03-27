@@ -381,6 +381,8 @@
 		55E4FB102BB2305300D6D6DA /* HomeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB0F2BB2305300D6D6DA /* HomeActions.swift */; };
 		55E4FB122BB371D100D6D6DA /* HomeCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB112BB371D100D6D6DA /* HomeCoordinator+RootView.swift */; };
 		55E4FB142BB371F400D6D6DA /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB132BB371F400D6D6DA /* HomeCoordinator.swift */; };
+		55E4FB172BB4032C00D6D6DA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB162BB4032C00D6D6DA /* MenuView.swift */; };
+		55E4FB192BB4035600D6D6DA /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB182BB4035600D6D6DA /* MenuViewModel.swift */; };
 		55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */; };
 		55E92BA72BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
 		55E92BA82BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
@@ -641,6 +643,8 @@
 		55E4FB0F2BB2305300D6D6DA /* HomeActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActions.swift; sourceTree = "<group>"; };
 		55E4FB112BB371D100D6D6DA /* HomeCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		55E4FB132BB371F400D6D6DA /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		55E4FB162BB4032C00D6D6DA /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		55E4FB182BB4035600D6D6DA /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Display.swift"; sourceTree = "<group>"; };
 		55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Show.swift"; sourceTree = "<group>"; };
 		55EF44352BAEF9240005ACA5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -1012,6 +1016,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55E4FB152BB4032000D6D6DA /* Menu */,
 				55E4FB072BB20D0400D6D6DA /* Home */,
 				55AEA74D2BB0CB5400710E99 /* ForgetPassword */,
 				55EF44342BAEF8F60005ACA5 /* Register */,
@@ -1701,6 +1706,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		55E4FB152BB4032000D6D6DA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				55E4FB162BB4032C00D6D6DA /* MenuView.swift */,
+				55E4FB182BB4035600D6D6DA /* MenuViewModel.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		55E92BA22BAA3DDA0014174E /* Toast */ = {
 			isa = PBXGroup;
 			children = (
@@ -2385,6 +2399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55E4FB122BB371D100D6D6DA /* HomeCoordinator+RootView.swift in Sources */,
+				55E4FB192BB4035600D6D6DA /* MenuViewModel.swift in Sources */,
 				55DE74352BA3ACF80030C7C7 /* AppButton.swift in Sources */,
 				553FD28C2BA63A4C00461FEA /* AppTitle.swift in Sources */,
 				55EF44362BAEF9240005ACA5 /* RegisterView.swift in Sources */,
@@ -2409,6 +2424,7 @@
 				553FD2812BA5036500461FEA /* RootCoordinator+RootView.swift in Sources */,
 				55DE74342BA3AC560030C7C7 /* ViewBackground.swift in Sources */,
 				55AEA7532BB0D16D00710E99 /* NavigationActions.swift in Sources */,
+				55E4FB172BB4032C00D6D6DA /* MenuView.swift in Sources */,
 				55DE74282BA39DA90030C7C7 /* AppUpdateHandler.swift in Sources */,
 				55AEA7542BB0D1A700710E99 /* SheetActions.swift in Sources */,
 				553FD28B2BA638E500461FEA /* LoginViewModel.swift in Sources */,

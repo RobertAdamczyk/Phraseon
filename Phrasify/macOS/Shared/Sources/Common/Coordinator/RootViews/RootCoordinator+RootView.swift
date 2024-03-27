@@ -17,20 +17,7 @@ extension RootCoordinator {
             ZStack {
                 if rootCoordinator.isLoggedIn == true {
                     NavigationSplitView {
-                        VStack(spacing: 16) {
-                            Button {
-                                rootCoordinator.selectedSplitView = .home
-                            } label: {
-                                Label("Home", systemImage: "house.fill")
-                                    .apply(.bold, size: .L, color: .white)
-                            }
-                            Button {
-                                rootCoordinator.selectedSplitView = .profile
-                            } label: {
-                                Label("Profile", systemImage: "person.fill")
-                                    .apply(.bold, size: .L, color: .white)
-                            }
-                        }
+                        MenuView(coordinator: rootCoordinator)
                     } detail: {
                         switch rootCoordinator.selectedSplitView {
                         case .home:
