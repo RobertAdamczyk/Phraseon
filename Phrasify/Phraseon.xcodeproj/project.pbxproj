@@ -390,6 +390,10 @@
 		55E4FB232BB4CC1F00D6D6DA /* ProjectCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB222BB4CC1F00D6D6DA /* ProjectCoordinator.swift */; };
 		55E4FB262BB4E01B00D6D6DA /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB252BB4E01B00D6D6DA /* MenuItem.swift */; };
 		55E4FB282BB4E03800D6D6DA /* MenuItem+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB272BB4E03800D6D6DA /* MenuItem+UI.swift */; };
+		55E4FB2A2BB4E21100D6D6DA /* CreateProjectCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB292BB4E21100D6D6DA /* CreateProjectCoordinator.swift */; };
+		55E4FB2C2BB4E25500D6D6DA /* CreateProjectCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB2B2BB4E25500D6D6DA /* CreateProjectCoordinator+RootView.swift */; };
+		55E4FB2F2BB4E51000D6D6DA /* CreateProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB2E2BB4E51000D6D6DA /* CreateProjectView.swift */; };
+		55E4FB312BB4E52400D6D6DA /* CreateProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB302BB4E52400D6D6DA /* CreateProjectViewModel.swift */; };
 		55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */; };
 		55E92BA72BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
 		55E92BA82BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
@@ -659,6 +663,10 @@
 		55E4FB222BB4CC1F00D6D6DA /* ProjectCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCoordinator.swift; sourceTree = "<group>"; };
 		55E4FB252BB4E01B00D6D6DA /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		55E4FB272BB4E03800D6D6DA /* MenuItem+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuItem+UI.swift"; sourceTree = "<group>"; };
+		55E4FB292BB4E21100D6D6DA /* CreateProjectCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectCoordinator.swift; sourceTree = "<group>"; };
+		55E4FB2B2BB4E25500D6D6DA /* CreateProjectCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateProjectCoordinator+RootView.swift"; sourceTree = "<group>"; };
+		55E4FB2E2BB4E51000D6D6DA /* CreateProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectView.swift; sourceTree = "<group>"; };
+		55E4FB302BB4E52400D6D6DA /* CreateProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewModel.swift; sourceTree = "<group>"; };
 		55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Display.swift"; sourceTree = "<group>"; };
 		55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Show.swift"; sourceTree = "<group>"; };
 		55EF44352BAEF9240005ACA5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -1030,6 +1038,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55E4FB2D2BB4E4FE00D6D6DA /* CreateProject */,
 				55E4FB152BB4032000D6D6DA /* Menu */,
 				55E4FB072BB20D0400D6D6DA /* Projects */,
 				55AEA74D2BB0CB5400710E99 /* ForgetPassword */,
@@ -1061,6 +1070,7 @@
 				553FD27A2BA502DC00461FEA /* StartCoordinator.swift */,
 				55E4FB1C2BB4CB7D00D6D6DA /* ProfileCoordinator.swift */,
 				55E4FB222BB4CC1F00D6D6DA /* ProjectCoordinator.swift */,
+				55E4FB292BB4E21100D6D6DA /* CreateProjectCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1073,6 +1083,7 @@
 				55E4FB112BB371D100D6D6DA /* HomeCoordinator+RootView.swift */,
 				55E4FB1E2BB4CBAF00D6D6DA /* ProfileCoordinator+RootView.swift */,
 				55E4FB202BB4CBF200D6D6DA /* ProjectCoordinator+RootView.swift */,
+				55E4FB2B2BB4E25500D6D6DA /* CreateProjectCoordinator+RootView.swift */,
 			);
 			path = RootViews;
 			sourceTree = "<group>";
@@ -1742,6 +1753,15 @@
 				55E4FB272BB4E03800D6D6DA /* MenuItem+UI.swift */,
 			);
 			path = MenuItem;
+			sourceTree = "<group>";
+		};
+		55E4FB2D2BB4E4FE00D6D6DA /* CreateProject */ = {
+			isa = PBXGroup;
+			children = (
+				55E4FB2E2BB4E51000D6D6DA /* CreateProjectView.swift */,
+				55E4FB302BB4E52400D6D6DA /* CreateProjectViewModel.swift */,
+			);
+			path = CreateProject;
 			sourceTree = "<group>";
 		};
 		55E92BA22BAA3DDA0014174E /* Toast */ = {
@@ -2440,6 +2460,7 @@
 				55EF443C2BAEF9E40005ACA5 /* ValidationErrorProtocol.swift in Sources */,
 				55EF44382BAEF9390005ACA5 /* RegisterViewModel.swift in Sources */,
 				553FD28E2BA63DBA00461FEA /* AppDivider.swift in Sources */,
+				55E4FB2F2BB4E51000D6D6DA /* CreateProjectView.swift in Sources */,
 				55EF443B2BAEF9E20005ACA5 /* ValidationHandlerProtocol.swift in Sources */,
 				55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */,
 				55EF443D2BAEF9E60005ACA5 /* ValidationView.swift in Sources */,
@@ -2448,6 +2469,7 @@
 				553FD2842BA503D600461FEA /* StartView.swift in Sources */,
 				55EF44392BAEF9DD0005ACA5 /* PasswordValidationHandler.swift in Sources */,
 				55E4FB262BB4E01B00D6D6DA /* MenuItem.swift in Sources */,
+				55E4FB2C2BB4E25500D6D6DA /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55AEA7512BB0CB6500710E99 /* ForgetPasswordViewModel.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
 				55E4FB092BB20D1000D6D6DA /* ProjectsView.swift in Sources */,
@@ -2457,6 +2479,7 @@
 				553FD2812BA5036500461FEA /* RootCoordinator+RootView.swift in Sources */,
 				55E4FB232BB4CC1F00D6D6DA /* ProjectCoordinator.swift in Sources */,
 				55E4FB212BB4CBF200D6D6DA /* ProjectCoordinator+RootView.swift in Sources */,
+				55E4FB2A2BB4E21100D6D6DA /* CreateProjectCoordinator.swift in Sources */,
 				55DE74342BA3AC560030C7C7 /* ViewBackground.swift in Sources */,
 				55AEA7532BB0D16D00710E99 /* NavigationActions.swift in Sources */,
 				55E4FB172BB4032C00D6D6DA /* MenuView.swift in Sources */,
@@ -2466,6 +2489,7 @@
 				553FD28B2BA638E500461FEA /* LoginViewModel.swift in Sources */,
 				553FD2722BA4F52900461FEA /* CellBackground.swift in Sources */,
 				553FD27B2BA502DC00461FEA /* StartCoordinator.swift in Sources */,
+				55E4FB312BB4E52400D6D6DA /* CreateProjectViewModel.swift in Sources */,
 				553FD2892BA638DD00461FEA /* LoginView.swift in Sources */,
 				55E92BA92BAA3F2E0014174E /* ToastView+Show.swift in Sources */,
 				55DA4C532BA8F98C00C70011 /* ToastView.swift in Sources */,

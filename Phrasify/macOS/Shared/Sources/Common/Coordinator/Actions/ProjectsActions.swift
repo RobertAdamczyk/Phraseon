@@ -10,4 +10,5 @@ import Foundation
 protocol ProjectsActions {
 
     func showProjectDetail()
+    func presentCreateProject()
 }

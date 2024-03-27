@@ -12,6 +12,7 @@ final class ProjectCoordinator: Coordinator, ObservableObject {
     typealias ParentCoordinator = Coordinator
 
     @Published var navigationViews: [NavigationView] = []
+    @Published var presentedSheet: Sheet?
 
     var dependencies: Dependencies {
         parentCoordinator.dependencies
@@ -40,11 +41,25 @@ extension ProjectCoordinator: ProjectsActions {
     func showProjectDetail() {
         navigationViews.append(.empty)
     }
+
+    func presentCreateProject() {
+        presentedSheet = .createProject
+    }
 }
 
 extension ProjectCoordinator {
 
     enum NavigationView {
         case empty
+    }
+
+    enum Sheet: Identifiable {
+        case createProject
+
+        var id: String {
+            switch self {
+            case .createProject: return "001"
+            }
+        }
     }
 }

@@ -34,8 +34,7 @@ final class ProjectsViewModel: ObservableObject {
     }
 
     func onAddProjectTapped() {
-        try? coordinator.dependencies.authenticationRepository.logout()
-        // coordinator.presentCreateProject()
+        coordinator.presentCreateProject()
     }
 
     private func setupProjectsSubscriber() {

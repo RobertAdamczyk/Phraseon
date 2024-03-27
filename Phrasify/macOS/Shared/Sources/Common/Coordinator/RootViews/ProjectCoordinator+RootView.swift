@@ -22,6 +22,11 @@ extension ProjectCoordinator {
                         }
                     }
             }
+            .sheet(item: $projectCoordinator.presentedSheet) {
+                switch $0 {
+                case .createProject: CreateProjectCoordinator.RootView(coordinator: projectCoordinator)
+                }
+            }
         }
     }
 }
