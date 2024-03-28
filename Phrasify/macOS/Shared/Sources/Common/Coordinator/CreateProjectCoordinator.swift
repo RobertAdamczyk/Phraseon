@@ -9,7 +9,7 @@ import SwiftUI
 
 final class CreateProjectCoordinator: Coordinator, ObservableObject {
 
-    typealias ParentCoordinator = Coordinator
+    typealias ParentCoordinator = Coordinator & SheetActions
 
     @Published var navigationViews: [NavigationView] = []
 
@@ -32,6 +32,13 @@ extension CreateProjectCoordinator: NavigationActions {
 
     func popView() {
         navigationViews.removeLast()
+    }
+}
+
+extension CreateProjectCoordinator: SheetActions {
+
+    func dismissSheet() {
+        parentCoordinator.dismissSheet()
     }
 }
 

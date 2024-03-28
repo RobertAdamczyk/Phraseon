@@ -36,6 +36,13 @@ extension ProjectCoordinator: NavigationActions {
     }
 }
 
+extension ProjectCoordinator: SheetActions {
+
+    func dismissSheet() {
+        presentedSheet = nil
+    }
+}
+
 extension ProjectCoordinator: ProjectsActions {
 
     func showProjectDetail() {
