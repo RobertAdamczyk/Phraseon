@@ -22,7 +22,7 @@ extension CreateProjectCoordinator {
                 CreateProjectView(coordinator: createProjectCoordinator)
                     .navigationDestination(for: CreateProjectCoordinator.NavigationView.self) {
                         switch $0 {
-                        case .empty: Text("EMPTY").navigationTitle("Empty")
+                        case .selectLanguage(let viewModel): SelectLanguageView(viewModel: viewModel)
                         }
                     }
             }

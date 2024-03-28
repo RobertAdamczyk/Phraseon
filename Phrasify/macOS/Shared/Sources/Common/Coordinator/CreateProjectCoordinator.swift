@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Model
 
 final class CreateProjectCoordinator: Coordinator, ObservableObject {
 
@@ -42,9 +43,49 @@ extension CreateProjectCoordinator: SheetActions {
     }
 }
 
+extension CreateProjectCoordinator: SelectLanguageActions {
+
+    func showSelectLanguage(name: String) {
+        let viewModel = SelectLanguageViewModel(coordinator: self, context: .createProject(name: name))
+        let view: NavigationView = .selectLanguage(viewModel: viewModel)
+        navigationViews.append(view)
+    }
+    
+    func showSelectedLanguages(project: Project) {
+        // empty
+    }
+    
+    func showSelectBaseLanguage(name: String, languages: [Language]) {
+        // empty
+    }
+    
+    func showSelectedBaseLanguage(project: Project) {
+        // empty
+    }
+}
+
 extension CreateProjectCoordinator {
 
-    enum NavigationView {
-        case empty
+    enum NavigationView: Identifiable, Equatable, Hashable {
+
+        case selectLanguage(viewModel: SelectLanguageViewModel)
+        // case selectBaseLanguage(viewModel: SelectBaseLanguageViewModel)
+        // case selectTechnology(viewModel: SelectTechnologyViewModel)
+
+        static func == (lhs: CreateProjectCoordinator.NavigationView, rhs: CreateProjectCoordinator.NavigationView) -> Bool {
+            lhs.id == rhs.id
+        }
+
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
+
+        var id: String {
+            switch self {
+            case .selectLanguage: return "001"
+            // case .selectTechnology: return "002"
+            // case .selectBaseLanguage: return "003"
+            }
+        }
     }
 }

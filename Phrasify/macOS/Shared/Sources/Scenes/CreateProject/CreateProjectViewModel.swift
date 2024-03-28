@@ -9,7 +9,7 @@ import SwiftUI
 
 final class CreateProjectViewModel: ObservableObject {
 
-    typealias CreateProjectCoordinator = Coordinator & SheetActions
+    typealias CreateProjectCoordinator = Coordinator & SheetActions & SelectLanguageActions
 
     @Published var projectName: String = ""
 
@@ -28,7 +28,7 @@ final class CreateProjectViewModel: ObservableObject {
     }
 
     func onContinueButtonTapped() {
-        // coordinator.showSelectLanguage(name: projectName)
+        coordinator.showSelectLanguage(name: projectName)
     }
 }
 
