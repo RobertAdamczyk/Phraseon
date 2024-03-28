@@ -92,11 +92,28 @@ final class SelectTechnologyViewModel: ObservableObject {
         } catch {
             if case .createProject = context, let cloudError = ErrorHandler.CloudError(rawValue: error.localizedDescription),
                 cloudError == .accessDenied {
-                // coordinator.presentPaywall()
+                await startTrial()
             } else {
                 let errorHandler = ErrorHandler(error: error)
                 ToastView.showError(message: errorHandler.localizedDescription)
             }
+        }
+    }
+
+    @MainActor
+    private func startTrial() async {
+        guard case .createProject(let projectName, let languages, let baseLanguage) = context else { return }
+        do {
+            try await coordinator.dependencies.cloudRepository.startTrial(.init())
+            try await coordinator.dependencies.cloudRepository.createProject(.init(name: projectName,
+                                                                                   languages: languages,
+                                                                                   baseLanguage: baseLanguage,
+                                                                                   technologies: selectedTechnologies))
+            coordinator.dismissSheet()
+            ToastView.showSuccess(message: "Project '\(projectName)' successfully created.")
+        } catch {
+            let errorHandler = ErrorHandler(error: error)
+            ToastView.showError(message: errorHandler.localizedDescription)
         }
     }
 }
