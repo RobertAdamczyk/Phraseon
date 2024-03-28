@@ -68,8 +68,12 @@ extension CreateProjectCoordinator: SelectLanguageActions {
 
 extension CreateProjectCoordinator: SelectTechnologyActions {
 
-    func showSelectTechnology(name: String, languages: [Model.Language], baseLanguage: Model.Language) {
-        // empty
+    func showSelectTechnology(name: String, languages: [Language], baseLanguage: Language) {
+        let viewModel = SelectTechnologyViewModel(coordinator: self, context: .createProject(projectName: name, 
+                                                                                             languages: languages, 
+                                                                                             baseLanguage: baseLanguage))
+        let view: NavigationView = .selectTechnology(viewModel: viewModel)
+        navigationViews.append(view)
     }
     
     func showSelectedTechnologies(project: Model.Project) {
@@ -83,7 +87,7 @@ extension CreateProjectCoordinator {
 
         case selectLanguage(viewModel: SelectLanguageViewModel)
         case selectBaseLanguage(viewModel: SelectBaseLanguageViewModel)
-        // case selectTechnology(viewModel: SelectTechnologyViewModel)
+        case selectTechnology(viewModel: SelectTechnologyViewModel)
 
         static func == (lhs: CreateProjectCoordinator.NavigationView, rhs: CreateProjectCoordinator.NavigationView) -> Bool {
             lhs.id == rhs.id
@@ -96,7 +100,7 @@ extension CreateProjectCoordinator {
         var id: String {
             switch self {
             case .selectLanguage: return "001"
-            // case .selectTechnology: return "002"
+            case .selectTechnology: return "002"
             case .selectBaseLanguage: return "003"
             }
         }

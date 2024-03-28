@@ -24,6 +24,7 @@ extension CreateProjectCoordinator {
                         switch $0 {
                         case .selectLanguage(let viewModel): SelectLanguageView(viewModel: viewModel)
                         case .selectBaseLanguage(let viewModel): SelectBaseLanguageView(viewModel: viewModel)
+                        case .selectTechnology(let viewModel): SelectTechnologyView(viewModel: viewModel)
                         }
                     }
             }

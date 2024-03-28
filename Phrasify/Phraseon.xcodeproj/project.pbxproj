@@ -404,6 +404,8 @@
 		55E4FB412BB5D92200D6D6DA /* SelectBaseLanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB402BB5D92200D6D6DA /* SelectBaseLanguageViewModel.swift */; };
 		55E4FB422BB5D95B00D6D6DA /* SelectTechnologyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A32B475B440022B675 /* SelectTechnologyActions.swift */; };
 		55E4FB432BB5D9BE00D6D6DA /* SelectableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561C5C32B65A76500C815BC /* SelectableCircle.swift */; };
+		55E4FB462BB5DC9D00D6D6DA /* SelectTechnologyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB452BB5DC9D00D6D6DA /* SelectTechnologyView.swift */; };
+		55E4FB482BB5DCA700D6D6DA /* SelectTechnologyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB472BB5DCA700D6D6DA /* SelectTechnologyViewModel.swift */; };
 		55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */; };
 		55E92BA72BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
 		55E92BA82BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
@@ -682,6 +684,8 @@
 		55E4FB3B2BB4F01100D6D6DA /* PresentationFrame+Minimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresentationFrame+Minimal.swift"; sourceTree = "<group>"; };
 		55E4FB3E2BB5D91800D6D6DA /* SelectBaseLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBaseLanguageView.swift; sourceTree = "<group>"; };
 		55E4FB402BB5D92200D6D6DA /* SelectBaseLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBaseLanguageViewModel.swift; sourceTree = "<group>"; };
+		55E4FB452BB5DC9D00D6D6DA /* SelectTechnologyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyView.swift; sourceTree = "<group>"; };
+		55E4FB472BB5DCA700D6D6DA /* SelectTechnologyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyViewModel.swift; sourceTree = "<group>"; };
 		55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Display.swift"; sourceTree = "<group>"; };
 		55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Show.swift"; sourceTree = "<group>"; };
 		55EF44352BAEF9240005ACA5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -1052,6 +1056,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55E4FB442BB5DC8900D6D6DA /* SelectTechnology */,
 				55E4FB3D2BB5D90200D6D6DA /* SelectBaseLanguage */,
 				55E4FB332BB4EB2200D6D6DA /* SelectLanguage */,
 				55E4FB2D2BB4E4FE00D6D6DA /* CreateProject */,
@@ -1808,6 +1813,15 @@
 			path = SelectBaseLanguage;
 			sourceTree = "<group>";
 		};
+		55E4FB442BB5DC8900D6D6DA /* SelectTechnology */ = {
+			isa = PBXGroup;
+			children = (
+				55E4FB452BB5DC9D00D6D6DA /* SelectTechnologyView.swift */,
+				55E4FB472BB5DCA700D6D6DA /* SelectTechnologyViewModel.swift */,
+			);
+			path = SelectTechnology;
+			sourceTree = "<group>";
+		};
 		55E92BA22BAA3DDA0014174E /* Toast */ = {
 			isa = PBXGroup;
 			children = (
@@ -2517,6 +2531,7 @@
 				553FD27D2BA502FD00461FEA /* StartCoordinator+RootView.swift in Sources */,
 				553FD2842BA503D600461FEA /* StartView.swift in Sources */,
 				55E4FB392BB4EBA400D6D6DA /* Language+UI.swift in Sources */,
+				55E4FB482BB5DCA700D6D6DA /* SelectTechnologyViewModel.swift in Sources */,
 				55EF44392BAEF9DD0005ACA5 /* PasswordValidationHandler.swift in Sources */,
 				55E4FB262BB4E01B00D6D6DA /* MenuItem.swift in Sources */,
 				55E4FB2C2BB4E25500D6D6DA /* CreateProjectCoordinator+RootView.swift in Sources */,
@@ -2551,6 +2566,7 @@
 				55DFE43D2BA0FE1900061962 /* PhraseonApp.swift in Sources */,
 				553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */,
 				55E4FB0E2BB20DCB00D6D6DA /* Technology+UI.swift in Sources */,
+				55E4FB462BB5DC9D00D6D6DA /* SelectTechnologyView.swift in Sources */,
 				5530A52C2BACE40A00B6B9D3 /* LoadingDotsView.swift in Sources */,
 				553FD2862BA503EC00461FEA /* StartViewModel.swift in Sources */,
 				55EC29BA2BA26BAF003D6F4C /* Dependencies.swift in Sources */,
