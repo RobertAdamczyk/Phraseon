@@ -11,7 +11,7 @@ import Domain
 
 final class SelectLanguageViewModel: ObservableObject {
 
-    typealias SelectLanguageCoordinator = Coordinator & SelectLanguageActions &  NavigationActions
+    typealias SelectLanguageCoordinator = Coordinator & SelectLanguageActions &  NavigationActions & SheetActions
 
     @Published var selectedLanguages: [Language] = []
 
@@ -52,6 +52,10 @@ final class SelectLanguageViewModel: ObservableObject {
         if case .settings(let project) = context {
             selectedLanguages = project.languages
         }
+    }
+
+    func onCloseButtonTapped() {
+        coordinator.dismissSheet()
     }
 
     func onLanguageTapped(_ language: Language) {
