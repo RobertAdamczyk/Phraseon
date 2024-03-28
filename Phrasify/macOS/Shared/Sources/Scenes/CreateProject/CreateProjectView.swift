@@ -24,7 +24,7 @@ struct CreateProjectView: View {
         }
         .navigationTitle("Create a new project")
         .applyViewBackground()
-        .frame(minWidth: 500, minHeight: 300)
+        .presentationMinimalFrame()
     }
 
     private var content: some View {

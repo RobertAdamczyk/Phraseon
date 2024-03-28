@@ -17,6 +17,7 @@ struct ForgetPasswordView: View {
                 .scenePadding()
         }
         .applyViewBackground()
+        .presentationMinimalFrame()
     }
 
     private var content: some View {

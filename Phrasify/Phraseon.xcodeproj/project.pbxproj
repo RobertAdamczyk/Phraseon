@@ -399,6 +399,7 @@
 		55E4FB372BB4EB4A00D6D6DA /* SelectLanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB362BB4EB4A00D6D6DA /* SelectLanguageViewModel.swift */; };
 		55E4FB382BB4EB8A00D6D6DA /* TagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551AA4192B33667100F0B1E2 /* TagLayout.swift */; };
 		55E4FB392BB4EBA400D6D6DA /* Language+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBB22B3F2EE700C558B1 /* Language+UI.swift */; };
+		55E4FB3C2BB4F01100D6D6DA /* PresentationFrame+Minimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB3B2BB4F01100D6D6DA /* PresentationFrame+Minimal.swift */; };
 		55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */; };
 		55E92BA72BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
 		55E92BA82BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
@@ -674,6 +675,7 @@
 		55E4FB302BB4E52400D6D6DA /* CreateProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewModel.swift; sourceTree = "<group>"; };
 		55E4FB342BB4EB2F00D6D6DA /* SelectLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageView.swift; sourceTree = "<group>"; };
 		55E4FB362BB4EB4A00D6D6DA /* SelectLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewModel.swift; sourceTree = "<group>"; };
+		55E4FB3B2BB4F01100D6D6DA /* PresentationFrame+Minimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PresentationFrame+Minimal.swift"; sourceTree = "<group>"; };
 		55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Display.swift"; sourceTree = "<group>"; };
 		55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Show.swift"; sourceTree = "<group>"; };
 		55EF44352BAEF9240005ACA5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -1059,6 +1061,7 @@
 		553FD2742BA5027500461FEA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55E4FB3A2BB4EFF100D6D6DA /* PresentationFrame */,
 				55E4FB242BB4E00E00D6D6DA /* MenuItem */,
 				55AEA74A2BB0BA9100710E99 /* Toolbar */,
 				55E92BA22BAA3DDA0014174E /* Toast */,
@@ -1781,6 +1784,14 @@
 			path = SelectLanguage;
 			sourceTree = "<group>";
 		};
+		55E4FB3A2BB4EFF100D6D6DA /* PresentationFrame */ = {
+			isa = PBXGroup;
+			children = (
+				55E4FB3B2BB4F01100D6D6DA /* PresentationFrame+Minimal.swift */,
+			);
+			path = PresentationFrame;
+			sourceTree = "<group>";
+		};
 		55E92BA22BAA3DDA0014174E /* Toast */ = {
 			isa = PBXGroup;
 			children = (
@@ -2493,6 +2504,7 @@
 				55E4FB262BB4E01B00D6D6DA /* MenuItem.swift in Sources */,
 				55E4FB2C2BB4E25500D6D6DA /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55AEA7512BB0CB6500710E99 /* ForgetPasswordViewModel.swift in Sources */,
+				55E4FB3C2BB4F01100D6D6DA /* PresentationFrame+Minimal.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
 				55E4FB092BB20D1000D6D6DA /* ProjectsView.swift in Sources */,
 				553FD28F2BA63EA300461FEA /* AppleButton.swift in Sources */,
