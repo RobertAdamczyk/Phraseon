@@ -56,10 +56,23 @@ extension CreateProjectCoordinator: SelectLanguageActions {
     }
     
     func showSelectBaseLanguage(name: String, languages: [Language]) {
-        // empty
+        let viewModel = SelectBaseLanguageViewModel(coordinator: self, context: .createProject(name: name, languages: languages))
+        let view: NavigationView = .selectBaseLanguage(viewModel: viewModel)
+        navigationViews.append(view)
     }
     
     func showSelectedBaseLanguage(project: Project) {
+        // empty
+    }
+}
+
+extension CreateProjectCoordinator: SelectTechnologyActions {
+
+    func showSelectTechnology(name: String, languages: [Model.Language], baseLanguage: Model.Language) {
+        // empty
+    }
+    
+    func showSelectedTechnologies(project: Model.Project) {
         // empty
     }
 }
@@ -69,7 +82,7 @@ extension CreateProjectCoordinator {
     enum NavigationView: Identifiable, Equatable, Hashable {
 
         case selectLanguage(viewModel: SelectLanguageViewModel)
-        // case selectBaseLanguage(viewModel: SelectBaseLanguageViewModel)
+        case selectBaseLanguage(viewModel: SelectBaseLanguageViewModel)
         // case selectTechnology(viewModel: SelectTechnologyViewModel)
 
         static func == (lhs: CreateProjectCoordinator.NavigationView, rhs: CreateProjectCoordinator.NavigationView) -> Bool {
@@ -84,7 +97,7 @@ extension CreateProjectCoordinator {
             switch self {
             case .selectLanguage: return "001"
             // case .selectTechnology: return "002"
-            // case .selectBaseLanguage: return "003"
+            case .selectBaseLanguage: return "003"
             }
         }
     }
