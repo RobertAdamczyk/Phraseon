@@ -15,32 +15,8 @@ final class SelectTechnologyViewModel: ObservableObject {
 
     @Published var selectedTechnologies: [Technology] = []
 
-    var availableTechnologies: [Technology] {
-        Technology.allCases.filter { !selectedTechnologies.contains($0) }
-    }
-
-    var shouldShowPlaceholder: Bool {
-        selectedTechnologies.isEmpty
-    }
-
-    var shouldPrimaryButtonDisabled: Bool {
-        selectedTechnologies.isEmpty
-    }
-
-    var subtitle: String {
-        switch context {
-        case .settings:
-            "Modify your project's technology settings – feel free to adjust them at any time to align with your evolving project requirements."
-        case .createProject:
-            "Choose the technology in which the project is created – remember, you can change it at any time."
-        }
-    }
-
-    var buttonText: String {
-        switch context {
-        case .settings: "Save"
-        case .createProject: "Create Project"
-        }
+    var utility: Utility {
+        .init(selectedTechnologies: selectedTechnologies, context: context)
     }
 
     private let coordinator: SelectTechnologyCoordinator
@@ -111,13 +87,5 @@ final class SelectTechnologyViewModel: ObservableObject {
             let errorHandler = ErrorHandler(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)
         }
-    }
-}
-
-extension SelectTechnologyViewModel {
-
-    enum Context {
-        case settings(project: Project)
-        case createProject(projectName: String, languages: [Language], baseLanguage: Language)
     }
 }
