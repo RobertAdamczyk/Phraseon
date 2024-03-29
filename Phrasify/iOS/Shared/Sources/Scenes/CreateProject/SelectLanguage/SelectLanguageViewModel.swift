@@ -15,32 +15,8 @@ final class SelectLanguageViewModel: ObservableObject {
 
     @Published var selectedLanguages: [Language] = []
 
-    var availableLanguages: [Language] {
-        Language.allCases.filter { !selectedLanguages.contains($0) }
-    }
-
-    var shouldShowPlaceholder: Bool {
-        selectedLanguages.isEmpty
-    }
-
-    var shouldPrimaryButtonDisabled: Bool {
-        selectedLanguages.isEmpty
-    }
-
-    var subtitle: String {
-        switch context {
-        case .settings:
-            "Adjust your language settings – your choices can be modified at any time to better suit your project's needs."
-        case .createProject:
-            "Choose supported languages – remember, you can change it at any time."
-        }
-    }
-
-    var buttonText: String {
-        switch context {
-        case .settings: "Save"
-        case .createProject: "Continue"
-        }
+    var utility: Utility {
+        .init(selectedLanguages: selectedLanguages, context: context)
     }
 
     private let coordinator: SelectLanguageCoordinator
@@ -84,13 +60,5 @@ final class SelectLanguageViewModel: ObservableObject {
         case .createProject(let name):
             coordinator.showSelectBaseLanguage(name: name, languages: selectedLanguages)
         }
-    }
-}
-
-extension SelectLanguageViewModel {
-
-    enum Context {
-        case settings(project: Project)
-        case createProject(name: String)
     }
 }

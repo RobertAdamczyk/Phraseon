@@ -31,7 +31,7 @@ struct SelectLanguageView: View {
 
     @ViewBuilder
     private var titleView: some View {
-        AppTitle(subtitle: viewModel.subtitle)
+        AppTitle(subtitle: viewModel.utility.subtitle)
         .padding(.bottom, 16)
     }
 
@@ -39,7 +39,7 @@ struct SelectLanguageView: View {
     private var horizontalScrollView: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
-                if viewModel.shouldShowPlaceholder {
+                if viewModel.utility.shouldShowPlaceholder {
                     ZStack(alignment: .leading) {
                         Text("Select language")
                             .apply(.regular, size: .M, color: .darkGray)
@@ -63,7 +63,7 @@ struct SelectLanguageView: View {
     private var verticalScrollView: some View {
         ScrollView(.vertical, showsIndicators: false) {
             TagLayout(alignment: .center) {
-                ForEach(viewModel.availableLanguages, id: \.self) { language in
+                ForEach(viewModel.utility.availableLanguages, id: \.self) { language in
                     makeLanguageView(title: language.localizedTitle)
                         .matchedGeometryEffect(id: language, in: animation)
                         .onTapGesture {
@@ -79,8 +79,8 @@ struct SelectLanguageView: View {
 
     @ViewBuilder
     private var buttonView: some View {
-        AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
-            .disabled(viewModel.shouldPrimaryButtonDisabled)
+        AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
+            .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
             .padding(.top, 16)
     }
 
