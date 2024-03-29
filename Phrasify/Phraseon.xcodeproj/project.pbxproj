@@ -412,6 +412,12 @@
 		55E4FB502BB6047B00D6D6DA /* SelectTechnologyViewModel+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB4F2BB6047B00D6D6DA /* SelectTechnologyViewModel+Context.swift */; };
 		55E4FB512BB6047B00D6D6DA /* SelectTechnologyViewModel+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB4F2BB6047B00D6D6DA /* SelectTechnologyViewModel+Context.swift */; };
 		55E4FB522BB6047B00D6D6DA /* SelectTechnologyViewModel+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB4F2BB6047B00D6D6DA /* SelectTechnologyViewModel+Context.swift */; };
+		55E4FB552BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB542BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift */; };
+		55E4FB562BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB542BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift */; };
+		55E4FB572BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB542BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift */; };
+		55E4FB592BB6191900D6D6DA /* SelectBaseLanguage+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB582BB6191900D6D6DA /* SelectBaseLanguage+Context.swift */; };
+		55E4FB5A2BB6191900D6D6DA /* SelectBaseLanguage+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB582BB6191900D6D6DA /* SelectBaseLanguage+Context.swift */; };
+		55E4FB5B2BB6191900D6D6DA /* SelectBaseLanguage+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB582BB6191900D6D6DA /* SelectBaseLanguage+Context.swift */; };
 		55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */; };
 		55E92BA72BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
 		55E92BA82BAA3F2E0014174E /* ToastView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */; };
@@ -694,6 +700,8 @@
 		55E4FB472BB5DCA700D6D6DA /* SelectTechnologyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTechnologyViewModel.swift; sourceTree = "<group>"; };
 		55E4FB4B2BB6037600D6D6DA /* SelectTechnologyViewModel+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectTechnologyViewModel+Utility.swift"; sourceTree = "<group>"; };
 		55E4FB4F2BB6047B00D6D6DA /* SelectTechnologyViewModel+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectTechnologyViewModel+Context.swift"; sourceTree = "<group>"; };
+		55E4FB542BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectBaseLanguage+Utility.swift"; sourceTree = "<group>"; };
+		55E4FB582BB6191900D6D6DA /* SelectBaseLanguage+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectBaseLanguage+Context.swift"; sourceTree = "<group>"; };
 		55E92BA32BAA3DEB0014174E /* ToastView+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Display.swift"; sourceTree = "<group>"; };
 		55E92BA62BAA3F2E0014174E /* ToastView+Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToastView+Show.swift"; sourceTree = "<group>"; };
 		55EF44352BAEF9240005ACA5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -1834,6 +1842,7 @@
 		55E4FB492BB6035400D6D6DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55E4FB532BB6190800D6D6DA /* SelectBaseLanguage */,
 				55E4FB4A2BB6036400D6D6DA /* SelectTechnology */,
 			);
 			path = Scenes;
@@ -1846,6 +1855,15 @@
 				55E4FB4F2BB6047B00D6D6DA /* SelectTechnologyViewModel+Context.swift */,
 			);
 			path = SelectTechnology;
+			sourceTree = "<group>";
+		};
+		55E4FB532BB6190800D6D6DA /* SelectBaseLanguage */ = {
+			isa = PBXGroup;
+			children = (
+				55E4FB542BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift */,
+				55E4FB582BB6191900D6D6DA /* SelectBaseLanguage+Context.swift */,
+			);
+			path = SelectBaseLanguage;
 			sourceTree = "<group>";
 		};
 		55E92BA22BAA3DDA0014174E /* Toast */ = {
@@ -2305,6 +2323,7 @@
 				55FE51B32B5D1DE50084617F /* EmailValidationHandler.swift in Sources */,
 				55DE102D2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAB2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
+				55E4FB592BB6191900D6D6DA /* SelectBaseLanguage+Context.swift in Sources */,
 				553722B32B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */,
 				552CA7402B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */,
 				55C762362B27B52A008CBF30 /* StartCoordinator.swift in Sources */,
@@ -2326,6 +2345,7 @@
 				550537912B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4212B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FE51B72B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
+				55E4FB552BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift in Sources */,
 				5536E1692B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3572B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
@@ -2482,6 +2502,7 @@
 				55FE51B42B5D1DE50084617F /* EmailValidationHandler.swift in Sources */,
 				55DE102E2B4A28E0001CB87F /* InviteMemberViewModel.swift in Sources */,
 				5516EBAC2B3F289600C558B1 /* ProjectDetailView+KeyRow.swift in Sources */,
+				55E4FB5A2BB6191900D6D6DA /* SelectBaseLanguage+Context.swift in Sources */,
 				553722B42B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */,
 				552CA7412B4EFE0C00A6C3D2 /* LanguageView.swift in Sources */,
 				55C278EB2B2A3F3A005144F1 /* FontStyle.swift in Sources */,
@@ -2503,6 +2524,7 @@
 				550537922B44C0170077912D /* PhotoPickerView.swift in Sources */,
 				551AA4222B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FE51B82B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
+				55E4FB562BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift in Sources */,
 				5536E16A2B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3582B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				559E2D572B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
@@ -2543,6 +2565,7 @@
 				553FD28C2BA63A4C00461FEA /* AppTitle.swift in Sources */,
 				55E4FB1D2BB4CB7D00D6D6DA /* ProfileCoordinator.swift in Sources */,
 				55E4FB352BB4EB2F00D6D6DA /* SelectLanguageView.swift in Sources */,
+				55E4FB572BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift in Sources */,
 				55E4FB1F2BB4CBAF00D6D6DA /* ProfileCoordinator+RootView.swift in Sources */,
 				55EF44362BAEF9240005ACA5 /* RegisterView.swift in Sources */,
 				55E4FB322BB4EA8F00D6D6DA /* SelectLanguageActions.swift in Sources */,
@@ -2602,6 +2625,7 @@
 				553FD2862BA503EC00461FEA /* StartViewModel.swift in Sources */,
 				55EC29BA2BA26BAF003D6F4C /* Dependencies.swift in Sources */,
 				55E4FB412BB5D92200D6D6DA /* SelectBaseLanguageViewModel.swift in Sources */,
+				55E4FB5B2BB6191900D6D6DA /* SelectBaseLanguage+Context.swift in Sources */,
 				553FD2792BA502AE00461FEA /* RootCoordinator.swift in Sources */,
 				55EF443A2BAEF9E00005ACA5 /* EmailValidationHandler.swift in Sources */,
 				5530A52B2BACE3FF00B6B9D3 /* ActivityView.swift in Sources */,

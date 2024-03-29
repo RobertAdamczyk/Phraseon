@@ -18,7 +18,7 @@ struct SelectBaseLanguageView: View {
                 VStack(spacing: 32) {
                     AppTitle(subtitle: "Set the base language for your project from the list of available languages. The base language serves as the primary reference for all translations.")
                     VStack(spacing: 12) {
-                        ForEach(viewModel.languages, id: \.self) { language in
+                        ForEach(viewModel.utility.languages, id: \.self) { language in
                             Button(action: {
                                 viewModel.onLanguageTapped(language)
                             }, label: {
@@ -31,8 +31,8 @@ struct SelectBaseLanguageView: View {
                 .padding(16)
             }
             VStack(spacing: 16) {
-                AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onSaveButtonTapped))
-                    .disabled(viewModel.shouldButtonDisabled)
+                AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSaveButtonTapped))
+                    .disabled(viewModel.utility.shouldButtonDisabled)
                 AppButton(style: .text("Cancel"), action: .main(viewModel.onCloseButtonTapped))
             }
             .padding(16)

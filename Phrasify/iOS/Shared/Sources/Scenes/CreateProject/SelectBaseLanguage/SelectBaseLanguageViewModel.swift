@@ -15,22 +15,8 @@ final class SelectBaseLanguageViewModel: ObservableObject {
 
     @Published var selectedBaseLanguage: Language?
 
-    var languages: [Language] {
-        switch context {
-        case .settings(let project): return project.languages
-        case .createProject(_, let languages): return languages
-        }
-    }
-
-    var buttonText: String {
-        switch context {
-        case .settings: "Save"
-        case .createProject: "Continue"
-        }
-    }
-
-    var shouldButtonDisabled: Bool {
-        selectedBaseLanguage == nil
+    var utility: Utility {
+        .init(context: context, selectedBaseLanguage: selectedBaseLanguage)
     }
 
     private let coordinator: SelectBaseLanguageCoordinator
@@ -67,13 +53,5 @@ final class SelectBaseLanguageViewModel: ObservableObject {
             coordinator.showSelectTechnology(name: name, languages: languages, baseLanguage: selectedBaseLanguage)
         }
 
-    }
-}
-
-extension SelectBaseLanguageViewModel {
-
-    enum Context {
-        case settings(project: Project)
-        case createProject(name: String, languages: [Language])
     }
 }
