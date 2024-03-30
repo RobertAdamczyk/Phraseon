@@ -25,7 +25,7 @@ struct CreateProjectView: View {
                 .padding([.horizontal, .top], 16)
             }
             AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped))
-                .disabled(viewModel.shouldPrimaryButtonDisabled)
+                .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
                 .padding(16)
         }
         .toolbar {

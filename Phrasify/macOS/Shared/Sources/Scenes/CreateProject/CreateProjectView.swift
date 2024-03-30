@@ -35,7 +35,7 @@ struct CreateProjectView: View {
             }
             Spacer()
             AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped))
-                .disabled(viewModel.shouldPrimaryButtonDisabled)
+                .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
             AppButton(style: .text("Cancel"), action: .main(viewModel.onCloseButtonTapped))
         }
         .padding(16)

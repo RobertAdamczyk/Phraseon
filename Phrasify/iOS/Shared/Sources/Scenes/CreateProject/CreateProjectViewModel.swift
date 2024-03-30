@@ -13,8 +13,8 @@ final class CreateProjectViewModel: ObservableObject {
 
     @Published var projectName: String = ""
 
-    var shouldPrimaryButtonDisabled: Bool {
-        projectName.count < 3
+    var utility: Utility {
+        .init(projectName: projectName)
     }
 
     private let coordinator: CreateProjectCoordinator

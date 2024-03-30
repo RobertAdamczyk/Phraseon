@@ -11,7 +11,7 @@ import Domain
 
 final class SelectLanguageViewModel: ObservableObject {
 
-    typealias SelectLanguageCoordinator = Coordinator & SelectLanguageActions & SelectTechnologyActions &  NavigationActions
+    typealias SelectLanguageCoordinator = Coordinator & SelectLanguageActions & SelectTechnologyActions & NavigationActions
 
     @Published var selectedLanguages: [Language] = []
 
