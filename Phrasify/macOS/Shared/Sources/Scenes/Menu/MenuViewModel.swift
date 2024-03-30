@@ -12,12 +12,12 @@ final class MenuViewModel: ObservableObject {
 
     typealias MenuCoordinator = Coordinator & MenuActions
 
-    @Published var selectedMenuItem: MenuItem?
+    @Published private(set) var selectedMenuItem: MenuItem
 
     private let coordinator: MenuCoordinator
-    private let cancelBag = CancelBag()
 
     init(coordinator: MenuCoordinator) {
+        self.selectedMenuItem = (coordinator as? HomeCoordinator)?.selectedMenuItem ?? .projects
         self.coordinator = coordinator
         setupMenuItemSubscription()
     }
@@ -31,12 +31,7 @@ final class MenuViewModel: ObservableObject {
     }
 
     private func setupMenuItemSubscription() {
-        (coordinator as? HomeCoordinator)?.$selectedMenuItem
-            .receive(on: DispatchQueue.main)
-            .sink(receiveValue: { [weak self] menuItem in
-                self?.selectedMenuItem = menuItem
-            })
-            .store(in: cancelBag)
+        (coordinator as? HomeCoordinator)?.$selectedMenuItem.assign(to: &$selectedMenuItem)
     }
 }
 
