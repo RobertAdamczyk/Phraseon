@@ -11,7 +11,7 @@ extension ToastView {
 
     static func displayOnScreen(toast: ToastView) {
         DispatchQueue.main.async {
-            guard let main = NSApplication.shared.mainWindow, let contentView = main.contentView else { return }
+            guard let main = NSApplication.shared.keyWindow, let contentView = main.contentView else { return }
 
             let toastController = NSHostingController(rootView: toast)
             toastController.view.frame = contentView.bounds
