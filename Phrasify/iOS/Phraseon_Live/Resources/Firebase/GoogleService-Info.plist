@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>246222213689-5upca04fskkasaofi8nc04ti0p0m7pfn.apps.googleusercontent.com</string>
+	<string>CLIENT_ID_VALUE</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.246222213689-5upca04fskkasaofi8nc04ti0p0m7pfn</string>
+	<string>REVERSED_CLIENT_ID_VALUE</string>
 	<key>API_KEY</key>
-	<string>AIzaSyC2srJlL8ZGAGyq29TfiMWbZx2wMvmFD7c</string>
+	<string>API_KEY_VALUE</string>
 	<key>GCM_SENDER_ID</key>
 	<string>246222213689</string>
 	<key>PLIST_VERSION</key>
@@ -19,16 +19,16 @@
 	<key>STORAGE_BUCKET</key>
 	<string>phraseon-live.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:246222213689:ios:8012f41e3ff1d0be6cb3e8</string>
+	<string>GOOGLE_APP_ID_VALUE</string>
 </dict>
 </plist>
