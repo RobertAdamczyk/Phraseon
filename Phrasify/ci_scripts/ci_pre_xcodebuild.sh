@@ -18,7 +18,7 @@ if [ ! -z "$CI_TEST_DESTINATION_RUNTIME" ]; then
 fi
 
 # Write a JSON File containing all the environment variables and secrets.
-filePath="../iOS/$CI_PRODUCT/Resources/secrets.json"
+filePath="../$CI_PRODUCT_PLATFORM/$CI_PRODUCT/Resources/secrets.json"
 printf "{\"ALGOLIA_APP_ID\":\"%s\",\"ALGOLIA_SEARCH_KEY\":\"%s\"}" "$ALGOLIA_APP_ID" "$ALGOLIA_SEARCH_KEY" >> "$filePath"
 
 # Check if the file was created
