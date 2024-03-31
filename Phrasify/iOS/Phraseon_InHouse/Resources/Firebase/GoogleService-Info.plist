@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>898674544512-r042b6h6v6inj5i0qbhn134ec4e31gkt.apps.googleusercontent.com</string>
+	<string>CLIENT_ID_VALUE</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.898674544512-r042b6h6v6inj5i0qbhn134ec4e31gkt</string>
+	<string>REVERSED_CLIENT_ID_VALUE</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBPvkoUVuxGKCZcV1YORr0zDsc103zA4rw</string>
+	<string>API_KEY_VALUE</string>
 	<key>GCM_SENDER_ID</key>
 	<string>898674544512</string>
 	<key>PLIST_VERSION</key>
@@ -19,16 +19,16 @@
 	<key>STORAGE_BUCKET</key>
 	<string>phraseon-inhouse.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:898674544512:ios:65d473a5c6411920473b65</string>
+	<string>GOOGLE_APP_ID_VALUE</string>
 </dict>
 </plist>

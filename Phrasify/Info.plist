@@ -9,7 +9,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.898674544512-r042b6h6v6inj5i0qbhn134ec4e31gkt</string>
+				<string>REVERSED_CLIENT_ID_VALUE</string>
 			</array>
 		</dict>
 	</array>

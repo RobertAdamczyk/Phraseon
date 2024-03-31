@@ -18,15 +18,48 @@ if [ ! -z "$CI_TEST_DESTINATION_RUNTIME" ]; then
 fi
 
 # Write a JSON File containing all the environment variables and secrets.
-filePath="../$CI_PRODUCT_PLATFORM/$CI_PRODUCT/Resources/secrets.json"
-printf "{\"ALGOLIA_APP_ID\":\"%s\",\"ALGOLIA_SEARCH_KEY\":\"%s\"}" "$ALGOLIA_APP_ID" "$ALGOLIA_SEARCH_KEY" >> "$filePath"
+secretsFilePath="../$CI_PRODUCT_PLATFORM/$CI_PRODUCT/Resources/secrets.json"
+printf "{\"ALGOLIA_APP_ID\":\"%s\",\"ALGOLIA_SEARCH_KEY\":\"%s\"}" "$ALGOLIA_APP_ID" "$ALGOLIA_SEARCH_KEY" >> "$secretsFilePath"
 
 # Check if the file was created
-if test -f "$filePath"; then
+if test -f "$secretsFilePath"; then
     echo "The secrets.json file has been successfully created."
 else
     echo "Failed to create the secrets.json file."
     exit 1  # Optional: exit with an error if the file doesn't exist
+fi
+
+# Define the path to the google plist file
+googleFilePath="../$CI_PRODUCT_PLATFORM/$CI_PRODUCT/Resources/Firebase/GoogleService-Info.plist"
+
+# Check if the plist file exists
+if test -f "$googleFilePath"; then
+    # File exists, proceed with replacing placeholder values
+    sed -i '' "s/CLIENT_ID_VALUE/${GOOGLE_CLIENT_ID}/g" "$googleFilePath"
+    sed -i '' "s/REVERSED_CLIENT_ID_VALUE/${GOOGLE_REVERSED_CLIENT_ID}/g" "$googleFilePath"
+    sed -i '' "s/API_KEY_VALUE/${GOOGLE_API_KEY}/g" "$googleFilePath"
+    sed -i '' "s/GOOGLE_APP_ID_VALUE/${GOOGLE_APP_ID}/g" "$googleFilePath"
+
+    echo "Updated GoogleService-Info.plist with environment variables."
+else
+    # File does not exist, print error message and exit with status 1
+    echo "Error: GoogleService-Info.plist file does not exist at $googleFilePath."
+    exit 1
+fi
+
+# Define the path to the info plist file
+infoFilePath="../$CI_PRODUCT_PLATFORM/$CI_PRODUCT/Resources/Info.plist"
+
+# Check if the plist file exists
+if test -f "$infoFilePath"; then
+    # File exists, proceed with replacing placeholder values
+    sed -i '' "s/REVERSED_CLIENT_ID_VALUE/${GOOGLE_REVERSED_CLIENT_ID}/g" "$infoFilePath"
+
+    echo "Updated Info.plist with environment variables."
+else
+    # File does not exist, print error message and exit with status 1
+    echo "Error: Info.plist file does not exist at $infoFilePath."
+    exit 1
 fi
 
 echo "PRE-Xcode Build is DONE .... "
