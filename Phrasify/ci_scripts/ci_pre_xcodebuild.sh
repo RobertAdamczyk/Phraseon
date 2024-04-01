@@ -65,8 +65,12 @@ fi
 # Define the path to the FirebaseSecrets plist file
 firebaseSecretsFilePath="../$CI_PRODUCT_PLATFORM/$CI_PRODUCT/Resources/Firebase/FirebaseSecrets.plist"
 
-# Create an empty FirebaseSecrets.plist file
-touch "$firebaseSecretsFilePath"
+# Create FirebaseSecrets.plist with a basic plist structure
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict></dict>
+</plist>" > "$firebaseSecretsFilePath"
 echo "An empty FirebaseSecrets.plist file has been created at $firebaseSecretsFilePath."
 
 echo "PRE-Xcode Build is DONE .... "
