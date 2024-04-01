@@ -62,6 +62,13 @@ else
     exit 1
 fi
 
+# Define the path to the FirebaseSecrets plist file
+firebaseSecretsFilePath="../$CI_PRODUCT_PLATFORM/$CI_PRODUCT/Resources/Firebase/FirebaseSecrets.plist"
+
+# Create an empty FirebaseSecrets.plist file
+touch "$firebaseSecretsFilePath"
+echo "An empty FirebaseSecrets.plist file has been created at $firebaseSecretsFilePath."
+
 echo "PRE-Xcode Build is DONE .... "
 
 exit 0
