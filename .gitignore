@@ -8,3 +8,4 @@ Phrasify/Phrasify.xcodeproj/project.xcworkspace/xcuserdata/radamczyk.xcuserdatad
 Phrasify/Phraseon.xcodeproj/project.xcworkspace/xcuserdata
 Phrasify/Phraseon.xcodeproj/xcuserdata
 **/FirebaseSecrets.plist
+**/InfoSecrets.plist

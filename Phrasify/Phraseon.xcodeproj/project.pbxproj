@@ -326,6 +326,10 @@
 		55CB629A2BBB58B800A879C3 /* FirebaseSecrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55CB62992BBB58B800A879C3 /* FirebaseSecrets.plist */; };
 		55CB629D2BBB5FC000A879C3 /* FirebaseSecrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55CB629C2BBB5FC000A879C3 /* FirebaseSecrets.plist */; };
 		55CB629F2BBB5FE500A879C3 /* FirebaseSecrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55CB629E2BBB5FE500A879C3 /* FirebaseSecrets.plist */; };
+		55CB62A22BBB629D00A879C3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB62A12BBB629D00A879C3 /* ProfileView.swift */; };
+		55CB62A42BBB62B600A879C3 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB62A32BBB62B600A879C3 /* ProfileViewModel.swift */; };
+		55CB62A62BBB62CE00A879C3 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 55CB62A52BBB62CE00A879C3 /* Shimmer */; };
+		55CB62A92BBB63CB00A879C3 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 55CB62A82BBB63CB00A879C3 /* CachedAsyncImage */; };
 		55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEA2B87E4C20002DAE3 /* RegisterViewModelTest.swift */; };
 		55D63DED2B87F0450002DAE3 /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */; };
 		55D63DEF2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEE2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift */; };
@@ -658,6 +662,11 @@
 		55CB62992BBB58B800A879C3 /* FirebaseSecrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirebaseSecrets.plist; sourceTree = "<group>"; };
 		55CB629C2BBB5FC000A879C3 /* FirebaseSecrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirebaseSecrets.plist; sourceTree = "<group>"; };
 		55CB629E2BBB5FE500A879C3 /* FirebaseSecrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirebaseSecrets.plist; sourceTree = "<group>"; };
+		55CB62A12BBB629D00A879C3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		55CB62A32BBB62B600A879C3 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		55CFBA8C2BBCADBD002E35D9 /* InfoSecrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoSecrets.plist; sourceTree = "<group>"; };
+		55CFBA8E2BBCAE86002E35D9 /* InfoSecrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoSecrets.plist; sourceTree = "<group>"; };
+		55CFBA902BBCAEBE002E35D9 /* InfoSecrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoSecrets.plist; sourceTree = "<group>"; };
 		55D63DEA2B87E4C20002DAE3 /* RegisterViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTest.swift; sourceTree = "<group>"; };
 		55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationRepository.swift; sourceTree = "<group>"; };
 		55D63DEE2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModelTest.swift; sourceTree = "<group>"; };
@@ -806,7 +815,9 @@
 				55EC29B92BA26B8F003D6F4C /* Model in Frameworks */,
 				55DE74372BA3AD070030C7C7 /* Lottie in Frameworks */,
 				55EC29BC2BA26CF4003D6F4C /* FirebaseFirestore in Frameworks */,
+				55CB62A92BBB63CB00A879C3 /* CachedAsyncImage in Frameworks */,
 				55EC29B72BA26B8F003D6F4C /* Domain in Frameworks */,
+				55CB62A62BBB62CE00A879C3 /* Shimmer in Frameworks */,
 				55EC29BE2BA26CF4003D6F4C /* FirebaseFirestoreCombine-Community in Frameworks */,
 				55EC29B52BA26B8F003D6F4C /* Common in Frameworks */,
 				55EC29C02BA26CF4003D6F4C /* FirebaseFirestoreSwift in Frameworks */,
@@ -1091,6 +1102,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55CB62A02BBB628500A879C3 /* Profile */,
 				55E4FB442BB5DC8900D6D6DA /* SelectTechnology */,
 				55E4FB3D2BB5D90200D6D6DA /* SelectBaseLanguage */,
 				55E4FB332BB4EB2200D6D6DA /* SelectLanguage */,
@@ -1257,6 +1269,7 @@
 				5567E6C62B6F8D6000C9EDFF /* Products */,
 				5567E6C52B6F8D5400C9EDFF /* Firebase */,
 				55E4FB6A2BB9F6B600D6D6DA /* Info.plist */,
+				55CFBA8E2BBCAE86002E35D9 /* InfoSecrets.plist */,
 				55CADF312B7576CF00D04365 /* secrets.json */,
 			);
 			path = Resources;
@@ -1620,6 +1633,7 @@
 				5561C5C62B66EA9000C815BC /* Products */,
 				551CA5112B607217001859CA /* Firebase */,
 				55C762252B27A8E2008CBF30 /* Info.plist */,
+				55CFBA902BBCAEBE002E35D9 /* InfoSecrets.plist */,
 				55CADF372B75881400D04365 /* secrets.json */,
 			);
 			path = Resources;
@@ -1675,6 +1689,15 @@
 				55CADF2D2B7571F800D04365 /* ci_pre_xcodebuild.sh */,
 			);
 			path = ci_scripts;
+			sourceTree = "<group>";
+		};
+		55CB62A02BBB628500A879C3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				55CB62A12BBB629D00A879C3 /* ProfileView.swift */,
+				55CB62A32BBB62B600A879C3 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		55DE10212B48D002001CB87F /* ProjectMembers */ = {
@@ -1929,6 +1952,7 @@
 				55DE742D2BA3A6010030C7C7 /* Firebase */,
 				55DE742B2BA3A5B90030C7C7 /* secrets.json */,
 				5569DC5D2BA70B4600634838 /* Info.plist */,
+				55CFBA8C2BBCADBD002E35D9 /* InfoSecrets.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -2131,6 +2155,8 @@
 				55EC29BD2BA26CF4003D6F4C /* FirebaseFirestoreCombine-Community */,
 				55EC29BF2BA26CF4003D6F4C /* FirebaseFirestoreSwift */,
 				55DE74362BA3AD070030C7C7 /* Lottie */,
+				55CB62A52BBB62CE00A879C3 /* Shimmer */,
+				55CB62A82BBB63CB00A879C3 /* CachedAsyncImage */,
 			);
 			productName = Phraseon_InHouse_MacOS;
 			productReference = 55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_MacOS.app */;
@@ -2609,6 +2635,7 @@
 				55E4FB122BB371D100D6D6DA /* HomeCoordinator+RootView.swift in Sources */,
 				55E4FB282BB4E03800D6D6DA /* MenuItem+UI.swift in Sources */,
 				55E4FB192BB4035600D6D6DA /* MenuViewModel.swift in Sources */,
+				55CB62A42BBB62B600A879C3 /* ProfileViewModel.swift in Sources */,
 				55DE74352BA3ACF80030C7C7 /* AppButton.swift in Sources */,
 				55E4FB382BB4EB8A00D6D6DA /* TagLayout.swift in Sources */,
 				553FD28C2BA63A4C00461FEA /* AppTitle.swift in Sources */,
@@ -2678,6 +2705,7 @@
 				55EC29BA2BA26BAF003D6F4C /* Dependencies.swift in Sources */,
 				55E4FB412BB5D92200D6D6DA /* SelectBaseLanguageViewModel.swift in Sources */,
 				55E4FB5B2BB6191900D6D6DA /* SelectBaseLanguage+Context.swift in Sources */,
+				55CB62A22BBB629D00A879C3 /* ProfileView.swift in Sources */,
 				553FD2792BA502AE00461FEA /* RootCoordinator.swift in Sources */,
 				55EF443A2BAEF9E00005ACA5 /* EmailValidationHandler.swift in Sources */,
 				5530A52B2BACE3FF00B6B9D3 /* ActivityView.swift in Sources */,
@@ -2826,7 +2854,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iOS/Phraseon_Live/Resources/Info.plist;
+				INFOPLIST_FILE = iOS/Phraseon_Live/Resources/InfoSecrets.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -2949,7 +2977,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iOS/Phraseon_InHouse/Resources/Info.plist;
+				INFOPLIST_FILE = iOS/Phraseon_InHouse/Resources/InfoSecrets.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -3034,7 +3062,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = macOS/Phraseon_InHouse/Resources/Info.plist;
+				INFOPLIST_FILE = macOS/Phraseon_InHouse/Resources/InfoSecrets.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3343,6 +3371,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5590F24D2B78F1FF008AAC7C /* XCRemoteSwiftPackageReference "Zip" */;
 			productName = Zip;
+		};
+		55CB62A52BBB62CE00A879C3 /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5574B3102B6F01C200C9DFB9 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
+		};
+		55CB62A82BBB63CB00A879C3 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5574B30D2B6F01B500C9DFB9 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 		55DE74362BA3AD070030C7C7 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
