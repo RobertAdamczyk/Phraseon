@@ -330,6 +330,9 @@
 		55CB62A42BBB62B600A879C3 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB62A32BBB62B600A879C3 /* ProfileViewModel.swift */; };
 		55CB62A62BBB62CE00A879C3 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 55CB62A52BBB62CE00A879C3 /* Shimmer */; };
 		55CB62A92BBB63CB00A879C3 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 55CB62A82BBB63CB00A879C3 /* CachedAsyncImage */; };
+		55CFBA932BBCB499002E35D9 /* ProfileViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CFBA922BBCB499002E35D9 /* ProfileViewModel+Utility.swift */; };
+		55CFBA942BBCB499002E35D9 /* ProfileViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CFBA922BBCB499002E35D9 /* ProfileViewModel+Utility.swift */; };
+		55CFBA952BBCB499002E35D9 /* ProfileViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CFBA922BBCB499002E35D9 /* ProfileViewModel+Utility.swift */; };
 		55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEA2B87E4C20002DAE3 /* RegisterViewModelTest.swift */; };
 		55D63DED2B87F0450002DAE3 /* MockAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */; };
 		55D63DEF2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D63DEE2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift */; };
@@ -667,6 +670,7 @@
 		55CFBA8C2BBCADBD002E35D9 /* InfoSecrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoSecrets.plist; sourceTree = "<group>"; };
 		55CFBA8E2BBCAE86002E35D9 /* InfoSecrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoSecrets.plist; sourceTree = "<group>"; };
 		55CFBA902BBCAEBE002E35D9 /* InfoSecrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoSecrets.plist; sourceTree = "<group>"; };
+		55CFBA922BBCB499002E35D9 /* ProfileViewModel+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewModel+Utility.swift"; sourceTree = "<group>"; };
 		55D63DEA2B87E4C20002DAE3 /* RegisterViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTest.swift; sourceTree = "<group>"; };
 		55D63DEC2B87F0450002DAE3 /* MockAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthenticationRepository.swift; sourceTree = "<group>"; };
 		55D63DEE2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModelTest.swift; sourceTree = "<group>"; };
@@ -1700,6 +1704,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		55CFBA912BBCB471002E35D9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				55CFBA922BBCB499002E35D9 /* ProfileViewModel+Utility.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		55DE10212B48D002001CB87F /* ProjectMembers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1886,6 +1898,7 @@
 		55E4FB492BB6035400D6D6DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55CFBA912BBCB471002E35D9 /* Profile */,
 				55E4FB652BB807F000D6D6DA /* CreateProject */,
 				55E4FB5C2BB6AB6A00D6D6DA /* SelectLanguage */,
 				55E4FB532BB6190800D6D6DA /* SelectBaseLanguage */,
@@ -2425,6 +2438,7 @@
 				55DE10332B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,
 				55FF42682B2B914000F4D523 /* HomeViewModel.swift in Sources */,
 				55DE10302B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
+				55CFBA932BBCB499002E35D9 /* ProfileViewModel+Utility.swift in Sources */,
 				555459022B854B0600DA097F /* PreviewConfigurationRepository.swift in Sources */,
 				55B841482B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
 				5505C7E52B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */,
@@ -2607,6 +2621,7 @@
 				55DE10342B4AAEFA001CB87F /* InviteMemberCoordinator+RootView.swift in Sources */,
 				55FF42692B2B914100F4D523 /* HomeViewModel.swift in Sources */,
 				55DE10312B4AAE62001CB87F /* InviteMemberCoordinator.swift in Sources */,
+				55CFBA942BBCB499002E35D9 /* ProfileViewModel+Utility.swift in Sources */,
 				555459032B854B0600DA097F /* PreviewConfigurationRepository.swift in Sources */,
 				55C278EE2B2A3F3A005144F1 /* ForgetPasswordView.swift in Sources */,
 				55B841492B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift in Sources */,
@@ -2711,6 +2726,7 @@
 				5530A52B2BACE3FF00B6B9D3 /* ActivityView.swift in Sources */,
 				55BC7BA82BA2649800801465 /* FontStyle.swift in Sources */,
 				553FD28D2BA63A5300461FEA /* AppTextField.swift in Sources */,
+				55CFBA952BBCB499002E35D9 /* ProfileViewModel+Utility.swift in Sources */,
 				55E4FB102BB2305300D6D6DA /* ProjectsActions.swift in Sources */,
 				55E4FB4E2BB6037600D6D6DA /* SelectTechnologyViewModel+Utility.swift in Sources */,
 			);

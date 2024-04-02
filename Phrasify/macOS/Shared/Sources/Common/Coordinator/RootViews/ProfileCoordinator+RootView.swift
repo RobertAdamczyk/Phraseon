@@ -15,11 +15,7 @@ extension ProfileCoordinator {
 
         var body: some View {
             NavigationStack(path: $profileCoordinator.navigationViews) {
-                Text("Profile")
-                    .onTapGesture {
-                        try? profileCoordinator.dependencies.authenticationRepository.logout()
-                    }
-                    .navigationTitle("Profile")
+                ProfileView(coordinator: profileCoordinator)
                     .navigationDestination(for: ProfileCoordinator.NavigationView.self) {
                         switch $0 {
                         case .empty: Text("EMPTY").navigationTitle("Empty")

@@ -139,59 +139,59 @@ final class ProfileViewModelTests: XCTestCase {
 
         viewModel.user = .idle
 
-        XCTAssertEqual(viewModel.shouldShowLoading, false)
-        XCTAssertEqual(viewModel.shouldInteractionDisabled, true)
-        XCTAssertEqual(viewModel.shouldShowContent, false)
-        XCTAssertEqual(viewModel.shouldShowError, false)
-        XCTAssertEqual(viewModel.userName, "-")
+        XCTAssertEqual(viewModel.utility.shouldShowLoading, false)
+        XCTAssertEqual(viewModel.utility.shouldInteractionDisabled, true)
+        XCTAssertEqual(viewModel.utility.shouldShowContent, false)
+        XCTAssertEqual(viewModel.utility.shouldShowError, false)
+        XCTAssertEqual(viewModel.utility.userName, "-")
 
         viewModel.user = .isLoading
 
-        XCTAssertEqual(viewModel.shouldShowLoading, true)
-        XCTAssertEqual(viewModel.shouldInteractionDisabled, true)
-        XCTAssertEqual(viewModel.shouldShowContent, true)
-        XCTAssertEqual(viewModel.shouldShowError, false)
-        XCTAssertEqual(viewModel.userName, "-")
+        XCTAssertEqual(viewModel.utility.shouldShowLoading, true)
+        XCTAssertEqual(viewModel.utility.shouldInteractionDisabled, true)
+        XCTAssertEqual(viewModel.utility.shouldShowContent, true)
+        XCTAssertEqual(viewModel.utility.shouldShowError, false)
+        XCTAssertEqual(viewModel.utility.userName, "-")
 
         viewModel.user = .failed(AppError.imageNil)
 
-        XCTAssertEqual(viewModel.shouldShowLoading, false)
-        XCTAssertEqual(viewModel.shouldInteractionDisabled, true)
-        XCTAssertEqual(viewModel.shouldShowContent, false)
-        XCTAssertEqual(viewModel.shouldShowError, true)
-        XCTAssertEqual(viewModel.userName, "-")
+        XCTAssertEqual(viewModel.utility.shouldShowLoading, false)
+        XCTAssertEqual(viewModel.utility.shouldInteractionDisabled, true)
+        XCTAssertEqual(viewModel.utility.shouldShowContent, false)
+        XCTAssertEqual(viewModel.utility.shouldShowError, true)
+        XCTAssertEqual(viewModel.utility.userName, "-")
 
         viewModel.user = .failed(AppError.decodingError)
         (coordinator.dependencies.authenticationRepository as? MockAuthenticationRepository)?.mockCreationDate = .now
 
-        XCTAssertEqual(viewModel.shouldShowLoading, true)
-        XCTAssertEqual(viewModel.shouldInteractionDisabled, true)
-        XCTAssertEqual(viewModel.shouldShowContent, true)
-        XCTAssertEqual(viewModel.shouldShowError, false)
-        XCTAssertEqual(viewModel.userName, "-")
+        XCTAssertEqual(viewModel.utility.shouldShowLoading, true)
+        XCTAssertEqual(viewModel.utility.shouldInteractionDisabled, true)
+        XCTAssertEqual(viewModel.utility.shouldShowContent, true)
+        XCTAssertEqual(viewModel.utility.shouldShowError, false)
+        XCTAssertEqual(viewModel.utility.userName, "-")
 
         viewModel.user = .failed(AppError.decodingError)
         (coordinator.dependencies.authenticationRepository as? MockAuthenticationRepository)?.mockCreationDate = .now.addingTimeInterval(31)
 
-        XCTAssertEqual(viewModel.shouldShowLoading, false)
-        XCTAssertEqual(viewModel.shouldInteractionDisabled, true)
-        XCTAssertEqual(viewModel.shouldShowContent, false)
-        XCTAssertEqual(viewModel.shouldShowError, true)
-        XCTAssertEqual(viewModel.userName, "-")
+        XCTAssertEqual(viewModel.utility.shouldShowLoading, false)
+        XCTAssertEqual(viewModel.utility.shouldInteractionDisabled, true)
+        XCTAssertEqual(viewModel.utility.shouldShowContent, false)
+        XCTAssertEqual(viewModel.utility.shouldShowError, true)
+        XCTAssertEqual(viewModel.utility.userName, "-")
 
         viewModel.user = .loaded(.init(email: "", name: "", surname: "", createdAt: .now, subscriptionId: .init()))
 
-        XCTAssertEqual(viewModel.shouldShowLoading, false)
-        XCTAssertEqual(viewModel.shouldInteractionDisabled, false)
-        XCTAssertEqual(viewModel.shouldShowContent, true)
-        XCTAssertEqual(viewModel.shouldShowError, false)
-        XCTAssertEqual(viewModel.userName, "Enter your name")
+        XCTAssertEqual(viewModel.utility.shouldShowLoading, false)
+        XCTAssertEqual(viewModel.utility.shouldInteractionDisabled, false)
+        XCTAssertEqual(viewModel.utility.shouldShowContent, true)
+        XCTAssertEqual(viewModel.utility.shouldShowError, false)
+        XCTAssertEqual(viewModel.utility.userName, "Enter your name")
 
         viewModel.user = .loaded(.init(email: "", name: "Rob", surname: "", createdAt: .now, subscriptionId: .init()))
-        XCTAssertEqual(viewModel.userName, "Rob")
+        XCTAssertEqual(viewModel.utility.userName, "Rob")
 
         viewModel.user = .loaded(.init(email: "", name: "Rob", surname: "xxx", createdAt: .now, subscriptionId: .init()))
-        XCTAssertEqual(viewModel.userName, "Rob xxx")
+        XCTAssertEqual(viewModel.utility.userName, "Rob xxx")
     }
 }
 

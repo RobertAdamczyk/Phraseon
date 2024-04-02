@@ -1,8 +1,8 @@
 //
 //  ProfileView.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 30.12.23.
+//  Created by Robert Adamczyk on 01.04.24.
 //
 
 import SwiftUI
@@ -10,13 +10,17 @@ import Shimmer
 
 struct ProfileView: View {
 
-    @ObservedObject var viewModel: ProfileViewModel
+    @StateObject private var viewModel: ProfileViewModel
+
+    init(coordinator: ProfileViewModel.ProfileCoordinator) {
+        self._viewModel = .init(wrappedValue: .init(coordinator: coordinator))
+    }
 
     var body: some View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 32) {
-                    ImageView(viewModel: viewModel)
+                    //ImageView(viewModel: viewModel)
                     VStack(alignment: .leading, spacing: 16) {
                         Text("Personal Info")
                             .apply(.medium, size: .M, color: .lightGray)
@@ -24,9 +28,11 @@ struct ProfileView: View {
                         Button(action: viewModel.onNameTapped, label: {
                             makeProfileRow(for: .name, value: viewModel.utility.userName)
                         })
+                        .buttonStyle(.plain)
                         Button(action: viewModel.onPasswordTapped, label: {
                             makeProfileRow(for: .password, value: "********")
                         })
+                        .buttonStyle(.plain)
                     }
                     VStack(alignment: .leading, spacing: 16) {
                         Text("Subscription")
@@ -34,15 +40,17 @@ struct ProfileView: View {
                         Button(action: viewModel.onMembershipTapped, label: {
                             makeProfileRow(for: .membership, value: viewModel.utility.subscriptionValidUntil)
                         })
+                        .buttonStyle(.plain)
                     }
                 }
-                .padding(16)
+                .padding(32)
             }
-            VStack(spacing: 16) {
-                AppButton(style: .fill("Logout", .lightBlue), action: .main(viewModel.onLogoutTapped))
-                AppButton(style: .text("Delete Account"), action: .main(viewModel.onDeleteAccountTapped))
+            HStack(spacing: 16) {
+                Spacer()
+                Button("Delete Account...", action: viewModel.onDeleteAccountTapped)
+                Button("Logout", action: viewModel.onLogoutTapped)
             }
-            .padding(16)
+            .padding(32)
         }
         .opacity(viewModel.utility.shouldShowContent ? 1 : 0)
         .navigationTitle("Profile")
@@ -56,13 +64,11 @@ struct ProfileView: View {
     @ViewBuilder
     private func makeErrorIfNeeded() -> some View {
         if viewModel.utility.shouldShowError {
-            ContentUnavailableView("Error Occurred",
-                                   systemImage: "exclamationmark.circle.fill",
-                                   description: Text("Unable to load data. Please try again later."))
-            .ignoresSafeArea()
-            .overlay(alignment: .bottom) {
-                AppButton(style: .fill("Logout", .lightBlue), action: .main(viewModel.onLogoutTapped))
-                    .padding(16)
+            VStack(spacing: 32) {
+                ContentUnavailableView("Error Occurred",
+                                       systemImage: "exclamationmark.circle.fill",
+                                       description: Text("Unable to load data. Please try again later."))
+                Button("Logout", action: viewModel.onLogoutTapped)
             }
         }
     }
@@ -78,7 +84,7 @@ extension ProfileView {
 
         var imageView: some View {
             switch self {
-            case .email: 
+            case .email:
                 Image(systemName: "envelope.fill")
                     .resizable()
                     .frame(width: 28, height: 20)
@@ -122,7 +128,7 @@ extension ProfileView {
                     .foregroundStyle(appColor(.white))
             }
             .frame(width: 28)
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 4) {
                 Text(item.title)
                     .apply(.regular, size: .S, color: .white)
                 Text(value)
@@ -140,12 +146,3 @@ extension ProfileView {
         .applyCellBackground()
     }
 }
-
-#if DEBUG
-#Preview {
-    NavigationStack {
-        ProfileView(viewModel: .init(coordinator: PreviewCoordinator()))
-    }
-    .preferredColorScheme(.dark)
-}
-#endif

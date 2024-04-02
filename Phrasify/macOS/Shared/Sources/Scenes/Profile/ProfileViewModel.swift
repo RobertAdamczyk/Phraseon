@@ -1,8 +1,8 @@
 //
 //  ProfileViewModel.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 30.12.23.
+//  Created by Robert Adamczyk on 01.04.24.
 //
 
 import SwiftUI
@@ -12,7 +12,7 @@ import Domain
 
 final class ProfileViewModel: ObservableObject, UserDomainProtocol {
 
-    typealias ProfileCoordinator = Coordinator & ProfileActions & RootActions & NavigationActions & PaywallActions
+    typealias ProfileCoordinator = Coordinator & NavigationActions
 
     @Published var user: DeferredData<User>
 
@@ -40,24 +40,24 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
 
     func onNameTapped() {
         guard let user = user.currentValue else { return }
-        coordinator.showProfileName(name: user.name, surname: user.surname)
+        // coordinator.showProfileName(name: user.name, surname: user.surname)
     }
 
     func onPasswordTapped() {
         guard let provider = coordinator.dependencies.authenticationRepository.authenticationProvider else { return }
-        coordinator.showChangePassword(authenticationProvider: provider)
+        // coordinator.showChangePassword(authenticationProvider: provider)
     }
 
     func onMembershipTapped() {
-        coordinator.presentPaywall()
+        // coordinator.presentPaywall()
     }
 
-    func uploadProfileImage(_ uiImage: UIImage) async throws {
-        guard let userId, let data = uiImage.jpegData(compressionQuality: 0.1) else { return }
-        _ = try await coordinator.dependencies.storageRepository.uploadImage(path: .userImage(fileName: userId), imageData: data)
-        let url = try await coordinator.dependencies.storageRepository.downloadURL(for: .userImage(fileName: userId))
-        try await coordinator.dependencies.firestoreRepository.setProfilePhotoUrl(userId: userId, photoUrl: url.absoluteString)
-    }
+//    func uploadProfileImage(_ uiImage: UIImage) async throws {
+//        guard let userId, let data = uiImage.jpegData(compressionQuality: 0.1) else { return }
+//        _ = try await coordinator.dependencies.storageRepository.uploadImage(path: .userImage(fileName: userId), imageData: data)
+//        let url = try await coordinator.dependencies.storageRepository.downloadURL(for: .userImage(fileName: userId))
+//        try await coordinator.dependencies.firestoreRepository.setProfilePhotoUrl(userId: userId, photoUrl: url.absoluteString)
+//    }
 
     @MainActor
     func onLogoutTapped() {
@@ -71,6 +71,7 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     }
 
     func onDeleteAccountTapped() {
-        coordinator.showProfileDeleteWarning()
+        // coordinator.showProfileDeleteWarning()
     }
 }
+
