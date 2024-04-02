@@ -73,6 +73,17 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 </plist>" > "$firebaseSecretsFilePath"
 echo "An empty FirebaseSecrets.plist file has been created at $firebaseSecretsFilePath."
 
+# Define the path to the InfoSecrets plist file
+infoSecretsFilePath="../$CI_PRODUCT_PLATFORM/$CI_PRODUCT/Resources/InfoSecrets.plist"
+
+# Create FirebaseSecrets.plist with a basic plist structure
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict></dict>
+</plist>" > "$infoSecretsFilePath"
+echo "An empty InfoSecrets.plist file has been created at $infoSecretsFilePath."
+
 echo "PRE-Xcode Build is DONE .... "
 
 exit 0
