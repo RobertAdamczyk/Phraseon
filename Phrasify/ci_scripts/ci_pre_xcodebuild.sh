@@ -13,6 +13,23 @@ printenv
 
 # Check if CI_TEST_DESTINATION_RUNTIME exists
 if [ ! -z "$CI_TEST_DESTINATION_RUNTIME" ]; then
+# Define the path to the google plist file
+googleFilePath="../$CI_PRODUCT_PLATFORM/$CI_PRODUCT/Resources/Firebase/GoogleService-Info.plist"
+
+# Check if the plist file exists
+if test -f "$googleFilePath"; then
+    # File exists, proceed with replacing placeholder values
+    sed -i '' "s/CLIENT_ID_VALUE/${GOOGLE_CLIENT_ID}/g" "$googleFilePath"
+    sed -i '' "s/REVERSED_CLIENT_ID_VALUE/${GOOGLE_REVERSED_CLIENT_ID}/g" "$googleFilePath"
+    sed -i '' "s/API_KEY_VALUE/${GOOGLE_API_KEY}/g" "$googleFilePath"
+    sed -i '' "s/GOOGLE_APP_ID_VALUE/${GOOGLE_APP_ID}/g" "$googleFilePath"
+
+    echo "Updated GoogleService-Info.plist with environment variables."
+else
+    # File does not exist, print error message and exit with status 1
+    echo "Error: GoogleService-Info.plist file does not exist at $googleFilePath."
+    exit 1
+fi
     echo "CI_TEST_DESTINATION_RUNTIME is set, skipping the script"
     exit 0
 fi
