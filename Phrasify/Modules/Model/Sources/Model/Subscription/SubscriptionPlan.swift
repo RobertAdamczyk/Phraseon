@@ -15,8 +15,8 @@ public enum SubscriptionPlan: Codable, CaseIterable {
 
     public var id: String {
         switch self {
-        case .monthly: return Self.monthlyId
-        case .yearly: return Self.yearlyId
+        case .monthly: return Self.currentMonthlyId
+        case .yearly: return Self.currentYearlyId
         }
     }
 
@@ -32,12 +32,12 @@ public enum SubscriptionPlan: Codable, CaseIterable {
         let id = try container.decode(String.self)
 
         switch id {
-        case Self.monthlyId:
+        case Self.currentMonthlyId:
             self = .monthly
-        case Self.yearlyId:
+        case Self.currentYearlyId:
             self = .yearly
         default:
-            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Nieznane id")
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Unknown id")
         }
     }
 
@@ -46,19 +46,17 @@ public enum SubscriptionPlan: Codable, CaseIterable {
         try container.encode(self.id)
     }
 
-    private static var monthlyId: String {
+    private static var currentMonthlyId: String {
         return switch TargetConfiguration.shared.currentTarget {
         case .live: "robert.adamczyk.phraseon.live.subscription.plan.monthly"
-        case .inHouse: "robert.adamczyk.phraseon.inhouse.subscription.plan.monthly"
-        case .inHouseMacOS: "none"
+        case .inHouse, .inHouseMacOS: "robert.adamczyk.phraseon.inhouse.subscription.plan.monthly"
         }
     }
 
-    private static var yearlyId: String {
+    private static var currentYearlyId: String {
         return switch TargetConfiguration.shared.currentTarget {
         case .live: "robert.adamczyk.phraseon.live.subscription.plan.yearly"
-        case .inHouse: "robert.adamczyk.phraseon.inhouse.subscription.plan.yearly"
-        case .inHouseMacOS: "none"
+        case .inHouse, .inHouseMacOS: "robert.adamczyk.phraseon.inhouse.subscription.plan.yearly"
         }
     }
 }

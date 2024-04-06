@@ -3189,7 +3189,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = robert.adamczyk.phraseon.macos.inhouse;
+				PRODUCT_BUNDLE_IDENTIFIER = robert.adamczyk.phraseon.inhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -3219,7 +3219,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = robert.adamczyk.phraseon.macos.inhouse;
+				PRODUCT_BUNDLE_IDENTIFIER = robert.adamczyk.phraseon.inhouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
