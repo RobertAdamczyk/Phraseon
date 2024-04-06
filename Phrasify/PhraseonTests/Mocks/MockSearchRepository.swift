@@ -6,9 +6,8 @@
 //
 
 import Foundation
-@testable import Phraseon_InHouse_iOS
-@testable import Model
-@testable import Domain
+import Model
+import Domain
 
 final class MockSearchRepository: SearchRepository {
 

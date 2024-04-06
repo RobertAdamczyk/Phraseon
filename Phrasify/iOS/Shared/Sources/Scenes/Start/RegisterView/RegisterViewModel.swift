@@ -43,12 +43,10 @@ final class RegisterViewModel: ObservableObject, Activitable {
 
     @MainActor
     func onLoginWithGoogleTapped() {
-        guard let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene),
-              let viewController = windowScene.windows.first?.rootViewController else { return }
         startActivity()
         Task {
             do {
-                let credentials = try await coordinator.dependencies.authenticationRepository.getGoogleAuthCredential(on: viewController)
+                let credentials = try await coordinator.dependencies.authenticationRepository.getGoogleAuthCredential()
                 _ = try await coordinator.dependencies.authenticationRepository.login(with: credentials)
                 ToastView.showSuccess(message: "Login successful. Welcome!")
             } catch {

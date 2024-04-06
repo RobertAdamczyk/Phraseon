@@ -42,11 +42,7 @@ public protocol AuthenticationRepository {
 
     func updatePassword(to password: String) async throws
 
-    #if canImport(UIKit)
-    func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential
-    #else
-    func getGoogleAuthCredential(on viewController: NSWindow) async throws -> AuthCredential
-    #endif
+    func getGoogleAuthCredential() async throws -> AuthCredential
 }
 
 public final class AuthenticationRepositoryImpl: AuthenticationRepository {
@@ -118,39 +114,35 @@ public final class AuthenticationRepositoryImpl: AuthenticationRepository {
         try await auth.currentUser?.updatePassword(to: password)
     }
 
-    #if canImport(UIKit)
+
     @MainActor
-    public func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential {
+    public func getGoogleAuthCredential() async throws -> AuthCredential {
         guard let clientID = FirebaseApp.app()?.options.clientID else { throw AppError.idClientNil }
+
+        #if canImport(UIKit)
+        guard let windowScene = (UIApplication.shared.connectedScenes.first as? UIWindowScene),
+              let viewController = windowScene.windows.first?.rootViewController else { throw AppError.viewControllerNil }
+        #else
+        guard let window = NSApplication.shared.mainWindow else { throw AppError.viewControllerNil }
+        #endif
 
         // Create Google Sign In configuration object.
         let config = GIDConfiguration(clientID: clientID)
         GIDSignIn.sharedInstance.configuration = config
 
         // Start the sign in flow!
+        #if canImport(UIKit)
         let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: viewController)
-        guard let idToken = result.user.idToken?.tokenString else { throw AppError.idTokenNil }
-
-        return GoogleAuthProvider.credential(withIDToken: idToken,
-                                             accessToken: result.user.accessToken.tokenString)
-    }
-    #else
-    @MainActor
-    public func getGoogleAuthCredential(on window: NSWindow) async throws -> AuthCredential {
-        guard let clientID = FirebaseApp.app()?.options.clientID else { throw AppError.idClientNil }
-
-        // Create Google Sign In configuration object.
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.configuration = config
-
-        // Start the sign in flow!
+        #else
         let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: window)
+        #endif
+
         guard let idToken = result.user.idToken?.tokenString else { throw AppError.idTokenNil }
 
         return GoogleAuthProvider.credential(withIDToken: idToken,
                                              accessToken: result.user.accessToken.tokenString)
     }
-    #endif
+
 
     private func setupStateDidChangeListener() {
         auth.addStateDidChangeListener { [weak self] _, user in

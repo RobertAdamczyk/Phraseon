@@ -46,11 +46,10 @@ final class LoginViewModel: ObservableObject, Activitable {
 
     @MainActor
     func onLoginWithGoogleTapped() {
-        guard let window = NSApplication.shared.mainWindow else { return }
         startActivity()
         Task {
             do {
-                let credentials = try await coordinator.dependencies.authenticationRepository.getGoogleAuthCredential(on: window)
+                let credentials = try await coordinator.dependencies.authenticationRepository.getGoogleAuthCredential()
                 _ = try await coordinator.dependencies.authenticationRepository.login(with: credentials)
                 ToastView.showSuccess(message: "Login successful. Welcome!")
             } catch {

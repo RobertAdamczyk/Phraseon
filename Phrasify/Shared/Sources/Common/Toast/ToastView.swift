@@ -134,9 +134,4 @@ extension View {
         appColor(.black)
         ToastView(type: .error, message: "aklsdjalksjdlajksdkja asdasdasd asdasdasdas sadasdasdasd sadasdas asdasdasdasd")
     }
-    .overlay {
-        AppButton(style: .fill("TEST", .lightBlue), action: .main({
-            ToastView.showGeneralError()
-        }))
-    }
 }

@@ -13,9 +13,6 @@ printenv
 
 # Check if CI_TEST_DESTINATION_RUNTIME exists
 if [ ! -z "$CI_TEST_DESTINATION_RUNTIME" ]; then
-    # Define the path to the google plist file
-    googleFilePath="../$CI_PRODUCT_PLATFORM/$CI_PRODUCT/Resources/Firebase"
-    ls googleFilePath
     echo "CI_TEST_DESTINATION_RUNTIME is set, skipping the script"
     exit 0
 fi

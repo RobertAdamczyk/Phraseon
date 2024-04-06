@@ -6,10 +6,9 @@
 //
 
 import Foundation
-@testable import Phraseon_InHouse_iOS
-@testable import Model
-@testable import Domain
-@testable import FirebaseStorage
+import Model
+import Domain
+import FirebaseStorage
 
 final class MockStorageRepository: StorageRepository {
 

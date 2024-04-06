@@ -6,10 +6,9 @@
 //
 
 import Foundation
-@testable import Phraseon_InHouse_iOS
-@testable import Model
 import Firebase
-@testable import Domain
+import Domain
+import Model
 
 final class MockAuthenticationRepository: AuthenticationRepository {
 
@@ -79,7 +78,7 @@ final class MockAuthenticationRepository: AuthenticationRepository {
         self.enteredUpdatedPassword = password
     }
 
-    func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential {
+    func getGoogleAuthCredential() async throws -> AuthCredential {
         return GoogleAuthProvider.credential(withIDToken: "GOOGLE", accessToken: "GOOGLE")
     }
 }

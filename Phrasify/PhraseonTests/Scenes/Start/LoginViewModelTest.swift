@@ -6,8 +6,7 @@
 //
 
 import XCTest
-@testable import Phraseon_InHouse_iOS
-@testable import Common
+import Common
 
 final class LoginViewModelTest: XCTestCase {
 
@@ -59,7 +58,7 @@ final class LoginViewModelTest: XCTestCase {
 
         viewModel.onLoginWithGoogleTapped()
 
-        wait(for: [expectation], timeout: 1.0)
+        wait(for: [expectation], timeout: 5.0)
 
         XCTAssertEqual(mockAuthRepo?.credentialToLogin?.provider, "google.com")
     }

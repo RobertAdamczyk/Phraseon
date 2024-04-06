@@ -7,10 +7,8 @@
 
 import XCTest
 import Combine
-@testable import Phraseon_InHouse_iOS
-@testable import Model
-@testable import Common
-@testable import Domain
+import Model
+import Common
 
 final class HomeViewModelTest: XCTestCase {
 

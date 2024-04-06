@@ -7,11 +7,10 @@
 
 import XCTest
 import Combine
-@testable import Phraseon_InHouse_iOS
-@testable import Model
-@testable import Common
-@testable import Domain
-@testable import FirebaseStorage
+import Model
+import Common
+import Domain
+import FirebaseStorage
 
 final class ChangePasswordViewModelTest: XCTestCase {
 

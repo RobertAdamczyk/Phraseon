@@ -6,8 +6,7 @@
 //
 
 import XCTest
-@testable import Phraseon_InHouse_iOS
-@testable import Common
+import Common
 
 final class SetPasswordViewModelTest: XCTestCase {
 

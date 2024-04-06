@@ -66,7 +66,7 @@ final class PreviewAuthenticationRepository: AuthenticationRepository {
         // empty
     }
 
-    func getGoogleAuthCredential(on viewController: UIViewController) async throws -> AuthCredential {
+    func getGoogleAuthCredential() async throws -> AuthCredential {
         return GoogleAuthProvider.credential(withIDToken: "", accessToken: "")
     }
 }

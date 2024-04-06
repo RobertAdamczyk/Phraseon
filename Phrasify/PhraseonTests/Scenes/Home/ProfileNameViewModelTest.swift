@@ -7,11 +7,6 @@
 
 import XCTest
 import Combine
-@testable import Phraseon_InHouse_iOS
-@testable import Model
-@testable import Common
-@testable import Domain
-@testable import FirebaseStorage
 
 final class ProfileNameViewModelTest: XCTestCase {
 

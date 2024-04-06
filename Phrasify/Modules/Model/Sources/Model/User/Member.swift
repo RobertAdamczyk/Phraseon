@@ -16,4 +16,13 @@ public struct Member: Codable, Hashable, IdentifiableUser {
     public var surname: String?
     public var email: String?
     public var photoUrl: String?
+
+    public init(id: String? = nil, role: Role, name: String? = nil, surname: String? = nil, email: String? = nil, photoUrl: String? = nil) {
+        self.id = id
+        self.role = role
+        self.name = name
+        self.surname = surname
+        self.email = email
+        self.photoUrl = photoUrl
+    }
 }

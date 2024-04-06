@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Common
-import FirebaseCore
+import Firebase
 import GoogleSignIn
 
 @main
