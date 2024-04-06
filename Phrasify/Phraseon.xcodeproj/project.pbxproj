@@ -304,6 +304,9 @@
 		559F29EF2BC1644600384CDC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 559F29EE2BC1644600384CDC /* FirebaseAuth */; };
 		559F29F12BC1644E00384CDC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 559F29F02BC1644E00384CDC /* FirebaseStorage */; };
 		559F29F72BC1655900384CDC /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 559F29F62BC1655900384CDC /* FirebaseFirestoreCombine-Community */; };
+		559F29FF2BC1F21000384CDC /* ProfileDeleteWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */; };
+		559F2A002BC1F24600384CDC /* ProfileActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBE42B432D4700C558B1 /* ProfileActions.swift */; };
+		559F2A042BC1F60900384CDC /* ProfileDeleteWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A032BC1F60900384CDC /* ProfileDeleteWarningView.swift */; };
 		55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3542B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */; };
@@ -684,6 +687,7 @@
 		55909A222B58946400A77F21 /* Member+Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member+Permissions.swift"; sourceTree = "<group>"; };
 		559E2D552B4DEBB10009A25A /* KeyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailView.swift; sourceTree = "<group>"; };
 		559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewModel.swift; sourceTree = "<group>"; };
+		559F2A032BC1F60900384CDC /* ProfileDeleteWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningView.swift; sourceTree = "<group>"; };
 		55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Image.swift"; sourceTree = "<group>"; };
 		55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningView.swift; sourceTree = "<group>"; };
 		55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModel.swift; sourceTree = "<group>"; };
@@ -1162,6 +1166,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				559F2A022BC1F5FA00384CDC /* ProfileDeleteWarning */,
 				55CB62A02BBB628500A879C3 /* Profile */,
 				55E4FB442BB5DC8900D6D6DA /* SelectTechnology */,
 				55E4FB3D2BB5D90200D6D6DA /* SelectBaseLanguage */,
@@ -1496,11 +1501,26 @@
 			path = KeyDetail;
 			sourceTree = "<group>";
 		};
+		559F2A022BC1F5FA00384CDC /* ProfileDeleteWarning */ = {
+			isa = PBXGroup;
+			children = (
+				559F2A032BC1F60900384CDC /* ProfileDeleteWarningView.swift */,
+			);
+			path = ProfileDeleteWarning;
+			sourceTree = "<group>";
+		};
+		559F2A052BC1F63300384CDC /* ProfileDeleteWarning */ = {
+			isa = PBXGroup;
+			children = (
+				55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */,
+			);
+			path = ProfileDeleteWarning;
+			sourceTree = "<group>";
+		};
 		55A7B3522B45DB750051BCF0 /* ProfileDeleteWarning */ = {
 			isa = PBXGroup;
 			children = (
 				55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */,
-				55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */,
 			);
 			path = ProfileDeleteWarning;
 			sourceTree = "<group>";
@@ -1525,6 +1545,7 @@
 		55AEA7522BB0D16600710E99 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				5516EBE42B432D4700C558B1 /* ProfileActions.swift */,
 				556977A32B475B440022B675 /* SelectTechnologyActions.swift */,
 				556977A02B47594A0022B675 /* SelectLanguageActions.swift */,
 				55DE10612B4B56D1001CB87F /* SheetActions.swift */,
@@ -1672,7 +1693,6 @@
 				55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */,
 				5516EBE12B432D3F00C558B1 /* ProjectActions.swift */,
 				55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */,
-				5516EBE42B432D4700C558B1 /* ProfileActions.swift */,
 				550041FC2B6C3FD700073384 /* PaywallActions.swift */,
 				552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */,
 			);
@@ -1954,6 +1974,7 @@
 		55E4FB492BB6035400D6D6DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				559F2A052BC1F63300384CDC /* ProfileDeleteWarning */,
 				55CFBA912BBCB471002E35D9 /* Profile */,
 				55E4FB652BB807F000D6D6DA /* CreateProject */,
 				55E4FB5C2BB6AB6A00D6D6DA /* SelectLanguage */,
@@ -2761,11 +2782,13 @@
 				55DE74352BA3ACF80030C7C7 /* AppButton.swift in Sources */,
 				55E4FB382BB4EB8A00D6D6DA /* TagLayout.swift in Sources */,
 				553FD28C2BA63A4C00461FEA /* AppTitle.swift in Sources */,
+				559F29FF2BC1F21000384CDC /* ProfileDeleteWarningViewModel.swift in Sources */,
 				55E4FB1D2BB4CB7D00D6D6DA /* ProfileCoordinator.swift in Sources */,
 				55E4FB352BB4EB2F00D6D6DA /* SelectLanguageView.swift in Sources */,
 				55E4FB572BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift in Sources */,
 				55E4FB1F2BB4CBAF00D6D6DA /* ProfileCoordinator+RootView.swift in Sources */,
 				55EF44362BAEF9240005ACA5 /* RegisterView.swift in Sources */,
+				559F2A042BC1F60900384CDC /* ProfileDeleteWarningView.swift in Sources */,
 				55E4FB322BB4EA8F00D6D6DA /* SelectLanguageActions.swift in Sources */,
 				55E4FB0B2BB20D1F00D6D6DA /* ProjectsViewModel.swift in Sources */,
 				55E4FB3F2BB5D91800D6D6DA /* SelectBaseLanguageView.swift in Sources */,
@@ -2790,6 +2813,7 @@
 				55E4FB3C2BB4F01100D6D6DA /* PresentationFrame+Minimal.swift in Sources */,
 				55BC7BA92BA264B200801465 /* AppColor.swift in Sources */,
 				55E4FB092BB20D1000D6D6DA /* ProjectsView.swift in Sources */,
+				559F2A002BC1F24600384CDC /* ProfileActions.swift in Sources */,
 				553FD28F2BA63EA300461FEA /* AppleButton.swift in Sources */,
 				5530A52D2BACE41500B6B9D3 /* Activitable.swift in Sources */,
 				55DE74262BA39CA30030C7C7 /* Coordinator.swift in Sources */,

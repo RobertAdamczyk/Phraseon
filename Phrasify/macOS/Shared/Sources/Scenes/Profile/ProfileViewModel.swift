@@ -12,7 +12,7 @@ import Domain
 
 final class ProfileViewModel: ObservableObject, UserDomainProtocol {
 
-    typealias ProfileCoordinator = Coordinator & NavigationActions
+    typealias ProfileCoordinator = Coordinator & NavigationActions & ProfileActions
 
     @Published var user: DeferredData<User>
 
@@ -71,7 +71,7 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     }
 
     func onDeleteAccountTapped() {
-        // coordinator.showProfileDeleteWarning()
+        coordinator.showProfileDeleteWarning()
     }
 }
 

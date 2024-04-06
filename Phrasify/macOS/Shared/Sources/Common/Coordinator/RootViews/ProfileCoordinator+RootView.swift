@@ -22,6 +22,11 @@ extension ProfileCoordinator {
                         }
                     }
             }
+            .sheet(item: $profileCoordinator.presentedSheet) {
+                switch $0 {
+                case .profileDeleteWarning(let viewModel): ProfileDeleteWarningView(viewModel: viewModel)
+                }
+            }
         }
     }
 }

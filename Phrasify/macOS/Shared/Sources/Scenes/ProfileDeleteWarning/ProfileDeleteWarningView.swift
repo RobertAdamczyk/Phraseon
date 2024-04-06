@@ -1,8 +1,8 @@
 //
 //  ProfileDeleteWarningView.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 03.01.24.
+//  Created by Robert Adamczyk on 06.04.24.
 //
 
 import SwiftUI
@@ -10,8 +10,6 @@ import SwiftUI
 struct ProfileDeleteWarningView: View {
 
     @ObservedObject var viewModel: ProfileDeleteWarningViewModel
-
-    @State private var contentHeight: CGFloat = .zero
 
     var body: some View {
         GeometryReader { geometry in
@@ -39,12 +37,13 @@ struct ProfileDeleteWarningView: View {
                 }
             }
         }
-        .presentationDetents(contentHeight == .zero ? [.medium] : [.height(contentHeight)])
+        .presentationMinimalFrame()
     }
 
     @ViewBuilder
     private var informationPage: some View {
         VStack(spacing: 32) {
+            Spacer()
             Image(systemName: "info.square.fill")
                 .resizable()
                 .scaledToFit()
@@ -58,8 +57,8 @@ struct ProfileDeleteWarningView: View {
             }
             .multilineTextAlignment(.center)
             .apply(.regular, size: .S, color: .white)
-            Spacer()
             AppButton(style: .fill(viewModel.informationPageButtonTitle, .lightBlue), action: .main(viewModel.onUnderstoodTapped))
+            Spacer()
         }
         .padding(16)
         .padding(.top, 16)
@@ -92,15 +91,6 @@ struct ProfileDeleteWarningView: View {
         }
         .padding(16)
         .padding(.top, 16)
-        .background() {
-            GeometryReader { geometry in
-                Path { path in
-                    DispatchQueue.main.async {
-                        contentHeight = geometry.size.height
-                    }
-                }
-            }
-        }
     }
 
     private func setupScrollingAction(_ proxy: ScrollViewProxy) {
