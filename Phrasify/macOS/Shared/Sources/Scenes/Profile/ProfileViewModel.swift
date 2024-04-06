@@ -40,7 +40,7 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
 
     func onNameTapped() {
         guard let user = user.currentValue else { return }
-        // coordinator.showProfileName(name: user.name, surname: user.surname)
+        coordinator.showProfileName(name: user.name, surname: user.surname)
     }
 
     func onPasswordTapped() {

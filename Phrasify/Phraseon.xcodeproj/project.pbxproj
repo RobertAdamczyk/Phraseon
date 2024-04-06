@@ -257,7 +257,6 @@
 		559F29B92BC15FAC00384CDC /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 559F29B82BC15FAC00384CDC /* Common */; };
 		559F29BB2BC15FAF00384CDC /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 559F29BA2BC15FAF00384CDC /* Domain */; };
 		559F29BD2BC15FB200384CDC /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = 559F29BC2BC15FB200384CDC /* Model */; };
-		559F29BE2BC15FD500384CDC /* ProfileNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBDE2B4326EB00C558B1 /* ProfileNameViewModel.swift */; };
 		559F29BF2BC15FDC00384CDC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C2791C2B2A4C60005144F1 /* Coordinator.swift */; };
 		559F29C02BC15FE700384CDC /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		559F29C12BC15FF100384CDC /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C279142B2A4BB0005144F1 /* Dependencies.swift */; };
@@ -307,6 +306,11 @@
 		559F29FF2BC1F21000384CDC /* ProfileDeleteWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */; };
 		559F2A002BC1F24600384CDC /* ProfileActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBE42B432D4700C558B1 /* ProfileActions.swift */; };
 		559F2A042BC1F60900384CDC /* ProfileDeleteWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A032BC1F60900384CDC /* ProfileDeleteWarningView.swift */; };
+		559F2A0C2BC2103D00384CDC /* ProfileNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A0B2BC2103D00384CDC /* ProfileNameView.swift */; };
+		559F2A0F2BC2119F00384CDC /* ProfileNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A0E2BC2119F00384CDC /* ProfileNameViewModel.swift */; };
+		559F2A112BC211DE00384CDC /* ProfileNameViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A102BC211DE00384CDC /* ProfileNameViewModel+Utility.swift */; };
+		559F2A122BC211DE00384CDC /* ProfileNameViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A102BC211DE00384CDC /* ProfileNameViewModel+Utility.swift */; };
+		559F2A132BC211DE00384CDC /* ProfileNameViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A102BC211DE00384CDC /* ProfileNameViewModel+Utility.swift */; };
 		55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3542B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */; };
@@ -688,6 +692,9 @@
 		559E2D552B4DEBB10009A25A /* KeyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailView.swift; sourceTree = "<group>"; };
 		559E2D582B4DEBBF0009A25A /* KeyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewModel.swift; sourceTree = "<group>"; };
 		559F2A032BC1F60900384CDC /* ProfileDeleteWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningView.swift; sourceTree = "<group>"; };
+		559F2A0B2BC2103D00384CDC /* ProfileNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameView.swift; sourceTree = "<group>"; };
+		559F2A0E2BC2119F00384CDC /* ProfileNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameViewModel.swift; sourceTree = "<group>"; };
+		559F2A102BC211DE00384CDC /* ProfileNameViewModel+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileNameViewModel+Utility.swift"; sourceTree = "<group>"; };
 		55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Image.swift"; sourceTree = "<group>"; };
 		55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningView.swift; sourceTree = "<group>"; };
 		55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModel.swift; sourceTree = "<group>"; };
@@ -1011,8 +1018,8 @@
 		5516EBDA2B43269400C558B1 /* ProfileName */ = {
 			isa = PBXGroup;
 			children = (
-				5516EBDB2B4326B600C558B1 /* ProfileNameView.swift */,
 				5516EBDE2B4326EB00C558B1 /* ProfileNameViewModel.swift */,
+				5516EBDB2B4326B600C558B1 /* ProfileNameView.swift */,
 			);
 			path = ProfileName;
 			sourceTree = "<group>";
@@ -1166,6 +1173,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				559F2A0D2BC210AD00384CDC /* ProfileName */,
 				559F2A022BC1F5FA00384CDC /* ProfileDeleteWarning */,
 				55CB62A02BBB628500A879C3 /* Profile */,
 				55E4FB442BB5DC8900D6D6DA /* SelectTechnology */,
@@ -1515,6 +1523,23 @@
 				55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */,
 			);
 			path = ProfileDeleteWarning;
+			sourceTree = "<group>";
+		};
+		559F2A0A2BC2103200384CDC /* ProfileName */ = {
+			isa = PBXGroup;
+			children = (
+				559F2A102BC211DE00384CDC /* ProfileNameViewModel+Utility.swift */,
+			);
+			path = ProfileName;
+			sourceTree = "<group>";
+		};
+		559F2A0D2BC210AD00384CDC /* ProfileName */ = {
+			isa = PBXGroup;
+			children = (
+				559F2A0B2BC2103D00384CDC /* ProfileNameView.swift */,
+				559F2A0E2BC2119F00384CDC /* ProfileNameViewModel.swift */,
+			);
+			path = ProfileName;
 			sourceTree = "<group>";
 		};
 		55A7B3522B45DB750051BCF0 /* ProfileDeleteWarning */ = {
@@ -1974,6 +1999,7 @@
 		55E4FB492BB6035400D6D6DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				559F2A0A2BC2103200384CDC /* ProfileName */,
 				559F2A052BC1F63300384CDC /* ProfileDeleteWarning */,
 				55CFBA912BBCB471002E35D9 /* Profile */,
 				55E4FB652BB807F000D6D6DA /* CreateProject */,
@@ -2514,6 +2540,7 @@
 				551AA4212B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FE51B72B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
 				55E4FB552BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift in Sources */,
+				559F2A112BC211DE00384CDC /* ProfileNameViewModel+Utility.swift in Sources */,
 				5536E1692B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3572B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				559E2D562B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
@@ -2598,7 +2625,6 @@
 				55D63DEB2B87E4C20002DAE3 /* RegisterViewModelTest.swift in Sources */,
 				555459142B854FD600DA097F /* StartViewModelTest.swift in Sources */,
 				559F29DC2BC161B100384CDC /* ProfileViewModel.swift in Sources */,
-				559F29BE2BC15FD500384CDC /* ProfileNameViewModel.swift in Sources */,
 				559F29EC2BC1632B00384CDC /* FontStyle.swift in Sources */,
 				550550002B9FC5A7006E06B1 /* MockSearchRepository.swift in Sources */,
 				559F29D02BC160D800384CDC /* Activitable.swift in Sources */,
@@ -2741,6 +2767,7 @@
 				551AA4222B337A8A00F0B1E2 /* SelectTechnologyView.swift in Sources */,
 				55FE51B82B5D95B20084617F /* SelectBaseLanguageView.swift in Sources */,
 				55E4FB562BB6191100D6D6DA /* SelectBaseLanguage+Utility.swift in Sources */,
+				559F2A122BC211DE00384CDC /* ProfileNameViewModel+Utility.swift in Sources */,
 				5536E16A2B74362500E5DCC6 /* LoadingDotsView.swift in Sources */,
 				55A7B3582B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift in Sources */,
 				559E2D572B4DEBB10009A25A /* KeyDetailView.swift in Sources */,
@@ -2844,6 +2871,8 @@
 				55DFE43D2BA0FE1900061962 /* PhraseonApp.swift in Sources */,
 				553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */,
 				55E4FB0E2BB20DCB00D6D6DA /* Technology+UI.swift in Sources */,
+				559F2A0F2BC2119F00384CDC /* ProfileNameViewModel.swift in Sources */,
+				559F2A0C2BC2103D00384CDC /* ProfileNameView.swift in Sources */,
 				55E4FB462BB5DC9D00D6D6DA /* SelectTechnologyView.swift in Sources */,
 				55E4FB522BB6047B00D6D6DA /* SelectTechnologyViewModel+Context.swift in Sources */,
 				5530A52C2BACE40A00B6B9D3 /* LoadingDotsView.swift in Sources */,
@@ -2855,6 +2884,7 @@
 				553FD2792BA502AE00461FEA /* RootCoordinator.swift in Sources */,
 				55EF443A2BAEF9E00005ACA5 /* EmailValidationHandler.swift in Sources */,
 				5530A52B2BACE3FF00B6B9D3 /* ActivityView.swift in Sources */,
+				559F2A132BC211DE00384CDC /* ProfileNameViewModel+Utility.swift in Sources */,
 				55BC7BA82BA2649800801465 /* FontStyle.swift in Sources */,
 				553FD28D2BA63A5300461FEA /* AppTextField.swift in Sources */,
 				55CFBA952BBCB499002E35D9 /* ProfileViewModel+Utility.swift in Sources */,

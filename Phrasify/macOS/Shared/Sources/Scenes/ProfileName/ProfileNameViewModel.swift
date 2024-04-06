@@ -1,8 +1,8 @@
 //
 //  ProfileNameViewModel.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 01.01.24.
+//  Created by Robert Adamczyk on 07.04.24.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import Model
 
 final class ProfileNameViewModel: ObservableObject {
 
-    typealias ProfileNameCoordinator = Coordinator & NavigationActions
+    typealias ProfileNameCoordinator = Coordinator & SheetActions
 
     @Published var name: String
     @Published var surname: String
@@ -35,10 +35,15 @@ final class ProfileNameViewModel: ObservableObject {
         do {
             try await coordinator.dependencies.firestoreRepository.setProfileName(userId: userId, name: name, surname: surname)
             ToastView.showSuccess(message: "Your profile has been successfully updated.")
-            coordinator.popView()
+            coordinator.dismissSheet()
         } catch {
             ToastView.showGeneralError()
         }
     }
+
+    func onCancelButtonTapped() {
+        coordinator.dismissSheet()
+    }
 }
+
 

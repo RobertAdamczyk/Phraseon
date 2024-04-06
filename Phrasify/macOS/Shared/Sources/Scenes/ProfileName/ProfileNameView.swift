@@ -1,8 +1,8 @@
 //
 //  ProfileNameView.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 01.01.24.
+//  Created by Robert Adamczyk on 07.04.24.
 //
 
 import SwiftUI
@@ -24,12 +24,15 @@ struct ProfileNameView: View {
                 }
                 .padding(16)
             }
-            AppButton(style: .fill(viewModel.utility.saveButtonTitle, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
-                .padding(16)
+            VStack(spacing: 16) {
+                AppButton(style: .fill(viewModel.utility.saveButtonTitle, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
+                AppButton(style: .text("Cancel"), action: .main(viewModel.onCancelButtonTapped))
+            }
+            .padding(16)
         }
-        .navigationTitle(viewModel.utility.navigationTitle)
         .onAppear(perform: focusNameTextField)
         .applyViewBackground()
+        .presentationMinimalFrame()
     }
 
     private func focusNameTextField() {

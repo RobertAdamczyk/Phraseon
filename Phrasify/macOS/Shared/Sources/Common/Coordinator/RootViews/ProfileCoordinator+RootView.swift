@@ -25,6 +25,7 @@ extension ProfileCoordinator {
             .sheet(item: $profileCoordinator.presentedSheet) {
                 switch $0 {
                 case .profileDeleteWarning(let viewModel): ProfileDeleteWarningView(viewModel: viewModel)
+                case .profileName(let viewModel): ProfileNameView(viewModel: viewModel)
                 }
             }
         }
