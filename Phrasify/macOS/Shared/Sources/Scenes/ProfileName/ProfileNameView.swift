@@ -14,21 +14,24 @@ struct ProfileNameView: View {
     @FocusState private var focusedTextField: AppTextField.TType?
 
     var body: some View {
-        VStack(spacing: 0) {
-            ScrollView(showsIndicators: false) {
+        NavigationStack {
+            VStack(spacing: 0) {
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 16) {
+                        AppTextField(type: .name, text: $viewModel.name)
+                            .focused($focusedTextField, equals: .name)
+                        AppTextField(type: .surname, text: $viewModel.surname)
+                            .focused($focusedTextField, equals: .surname)
+                    }
+                    .padding(16)
+                }
                 VStack(spacing: 16) {
-                    AppTextField(type: .name, text: $viewModel.name)
-                        .focused($focusedTextField, equals: .name)
-                    AppTextField(type: .surname, text: $viewModel.surname)
-                        .focused($focusedTextField, equals: .surname)
+                    AppButton(style: .fill(viewModel.utility.saveButtonTitle, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
+                    AppButton(style: .text("Cancel"), action: .main(viewModel.onCancelButtonTapped))
                 }
                 .padding(16)
             }
-            VStack(spacing: 16) {
-                AppButton(style: .fill(viewModel.utility.saveButtonTitle, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
-                AppButton(style: .text("Cancel"), action: .main(viewModel.onCancelButtonTapped))
-            }
-            .padding(16)
+            .navigationTitle(viewModel.utility.navigationTitle)
         }
         .onAppear(perform: focusNameTextField)
         .applyViewBackground()
