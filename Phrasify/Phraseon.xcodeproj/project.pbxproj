@@ -335,6 +335,8 @@
 		559F2A3F2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A3E2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift */; };
 		559F2A402BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A3E2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift */; };
 		559F2A412BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A3E2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift */; };
+		559F2A422BC3522F00384CDC /* ProfileNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBDE2B4326EB00C558B1 /* ProfileNameViewModel.swift */; };
+		559F2A432BC3524B00384CDC /* ProfileNameViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A102BC211DE00384CDC /* ProfileNameViewModel+Utility.swift */; };
 		55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3542B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */; };
@@ -2661,6 +2663,7 @@
 				559F29CF2BC160D100384CDC /* LoginViewModel.swift in Sources */,
 				559F2A282BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */,
 				559F29C52BC1605B00384CDC /* StartViewModel.swift in Sources */,
+				559F2A432BC3524B00384CDC /* ProfileNameViewModel+Utility.swift in Sources */,
 				55406C562B893DE700B03E9D /* SetPasswordViewModelTest.swift in Sources */,
 				559F29ED2BC1643900384CDC /* Role+UI.swift in Sources */,
 				559F29EA2BC1627D00384CDC /* CellBackground.swift in Sources */,
@@ -2673,6 +2676,7 @@
 				55054FFE2B9FC559006E06B1 /* MockStorageRepository.swift in Sources */,
 				559F29CE2BC160B700384CDC /* PreviewConfigurationRepository.swift in Sources */,
 				5502D9382B868B2800A0B110 /* LoginViewModelTest.swift in Sources */,
+				559F2A422BC3522F00384CDC /* ProfileNameViewModel.swift in Sources */,
 				559F29D62BC1613700384CDC /* ForgetPasswordViewModel.swift in Sources */,
 				559F29DE2BC161B700384CDC /* ProfileActions.swift in Sources */,
 				55406C5B2B8A9D0E00B03E9D /* ProjectDetailViewModelTest.swift in Sources */,

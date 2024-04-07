@@ -47,9 +47,9 @@ final class ChangePasswordViewModelTest: XCTestCase {
         let viewModelPassword = ChangePasswordViewModel(authenticationProvider: .password, coordinator: coordinator)
         XCTAssertEqual(viewModelPassword.state, .currentPassword)
 
-        XCTAssertFalse(viewModelPassword.shouldShowNewPassword)
-        XCTAssertFalse(viewModelPassword.shouldShowConfirmNewPassword)
-        XCTAssertFalse(viewModelPassword.shouldCurrentPasswordDisabled)
+        XCTAssertFalse(viewModelPassword.utility.shouldShowNewPassword)
+        XCTAssertFalse(viewModelPassword.utility.shouldShowConfirmNewPassword)
+        XCTAssertFalse(viewModelPassword.utility.shouldCurrentPasswordDisabled)
         XCTAssertTrue([viewModelPassword.newPassword, viewModelPassword.confirmNewPassword, viewModelPassword.currentPassword].allSatisfy { $0.isEmpty })
     }
 
@@ -61,12 +61,12 @@ final class ChangePasswordViewModelTest: XCTestCase {
             XCTAssertEqual(authRepo?.enteredPassword, currentPassword)
             XCTAssertEqual(authRepo?.enteredEmail, coordinator.dependencies.authenticationRepository.email)
             XCTAssertEqual(viewModel.state, .newPassword)
-            XCTAssertTrue(viewModel.shouldCurrentPasswordDisabled)
-            XCTAssertTrue(viewModel.shouldShowNewPassword)
-            XCTAssertFalse(viewModel.shouldShowConfirmNewPassword)
+            XCTAssertTrue(viewModel.utility.shouldCurrentPasswordDisabled)
+            XCTAssertTrue(viewModel.utility.shouldShowNewPassword)
+            XCTAssertFalse(viewModel.utility.shouldShowConfirmNewPassword)
             await viewModel.onPrimaryButtonTapped()
-            XCTAssertTrue(viewModel.shouldShowConfirmNewPassword)
-            XCTAssertTrue(viewModel.shouldCurrentPasswordDisabled)
+            XCTAssertTrue(viewModel.utility.shouldShowConfirmNewPassword)
+            XCTAssertTrue(viewModel.utility.shouldCurrentPasswordDisabled)
             await viewModel.onPrimaryButtonTapped()
             XCTAssertEqual(viewModel.passwordValidationHandler.validationError, .passwordTooShort)
 
