@@ -26,15 +26,15 @@ struct PaywallView: View {
                     Text(viewModel.utility.title)
                         .apply(.medium, size: .M, color: .white)
                     VStack(spacing: 16) {
-                        ForEach(viewModel.products, id: \.self) { product in
+                        ForEach(viewModel.utility.products, id: \.self) { product in
                             Button(action: {
                                 viewModel.onProductTapped(product)
                             }, label: {
                                 SubscriptionCell(headline: product.displayName,
                                                  price: product.displayPrice,
                                                  period: product.subscription?.subscriptionPeriod.unit.localizedDescription,
-                                                 isSelected: viewModel.selectedProduct == product,
-                                                 isAlreadyBought: product.id == viewModel.alreadySubscribedProductId)
+                                                 isSelected: viewModel.utility.selectedProduct == product,
+                                                 isAlreadyBought: product.id == viewModel.utility.alreadySubscribedProductId)
                             })
                         }
                     }
@@ -56,18 +56,18 @@ struct PaywallView: View {
                 .padding(16)
             }
             VStack(spacing: 16) {
-                if let disclaimerTest = viewModel.disclaimerTest {
+                if let disclaimerTest = viewModel.utility.disclaimerTest {
                     Text(disclaimerTest)
                         .apply(.regular, size: .S, color: .lightGray)
                         .multilineTextAlignment(.center)
                 }
-                if viewModel.hasValidSubscription {
-                    AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .main({
+                if viewModel.utility.hasValidSubscription {
+                    AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .main({
                         showManageSubscriptions = true
                     }))
                 } else {
-                    AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
-                        .disabled(viewModel.possiblyProcessSubscription)
+                    AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
+                        .disabled(viewModel.utility.possiblyProcessSubscription)
                 }
                 Button(action: viewModel.onPrivacyPolicyTapped) {
                     Text(viewModel.utility.termsText)
@@ -78,8 +78,8 @@ struct PaywallView: View {
             .padding(16)
         }
         .navigationTitle(viewModel.utility.navigationTitle)
-        .redacted(reason: viewModel.isLoading ? .placeholder : .invalidated)
-        .shimmering(active: viewModel.isLoading)
+        .redacted(reason: viewModel.utility.isLoading ? .placeholder : .invalidated)
+        .shimmering(active: viewModel.utility.isLoading)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: viewModel.onCloseButtonTapped, label: {
