@@ -2,7 +2,7 @@
 //  ChangePasswordView.swift
 //  Phraseon
 //
-//  Created by Robert Adamczyk on 01.01.24.
+//  Created by Robert Adamczyk on 07.04.24.
 //
 
 import SwiftUI
@@ -14,19 +14,25 @@ struct ChangePasswordView: View {
     @FocusState private var focusedTextField: AppTextField.TType?
 
     var body: some View {
-        VStack(spacing: 0) {
-            ScrollView(showsIndicators: false) {
-                switch viewModel.state {
-                case .unavailable: unavailableContent
-                default: content
+        NavigationStack {
+            VStack(spacing: 0) {
+                ScrollView(showsIndicators: false) {
+                    switch viewModel.state {
+                    case .unavailable: unavailableContent
+                    default: content
+                    }
                 }
-            }
-            AppButton(style: .fill(viewModel.utility.primaryButtonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
+                VStack(spacing: 16) {
+                    AppButton(style: .fill(viewModel.utility.primaryButtonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
+                    AppButton(style: .text("Cancel"), action: .main(viewModel.onCancelButtonTapped))
+                }
                 .padding(16)
+            }
+            .navigationTitle(viewModel.utility.navigationTitle)
         }
-        .navigationTitle(viewModel.utility.navigationTitle)
         .onAppear(perform: setCurrentPasswordFocus)
         .applyViewBackground()
+        .presentationMinimalFrame()
     }
 
     private var content: some View {
@@ -65,7 +71,7 @@ struct ChangePasswordView: View {
             Text(viewModel.utility.unavailableContentMessage)
                 .apply(.regular, size: .S, color: .white)
                 .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(idealWidth: 400)
         }
         .padding(16)
     }
@@ -82,4 +88,5 @@ struct ChangePasswordView: View {
         focusedTextField = .confirmPassword
     }
 }
+
 

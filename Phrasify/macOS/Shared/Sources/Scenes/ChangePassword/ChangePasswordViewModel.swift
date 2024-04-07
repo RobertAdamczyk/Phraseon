@@ -1,8 +1,8 @@
 //
 //  ChangePasswordViewModel.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 01.01.24.
+//  Created by Robert Adamczyk on 07.04.24.
 //
 
 import SwiftUI
@@ -13,7 +13,7 @@ import Common
 
 final class ChangePasswordViewModel: ObservableObject {
 
-    typealias ChangePasswordCoordinator = Coordinator & NavigationActions
+    typealias ChangePasswordCoordinator = Coordinator & SheetActions
 
     @Published private(set) var state: State
     @Published var currentPassword: String = ""
@@ -62,14 +62,18 @@ final class ChangePasswordViewModel: ObservableObject {
                                                                          confirmPassword: confirmNewPassword) else { return }
                 try await coordinator.dependencies.authenticationRepository.updatePassword(to: newPassword)
                 ToastView.showSuccess(message: "Your password has been successfully changed.")
-                coordinator.popView()
+                coordinator.dismissSheet()
             case .unavailable:
-                coordinator.popView()
+                coordinator.dismissSheet()
             }
         } catch {
             let errorHandler: ErrorHandler = .init(error: error)
             ToastView.showError(message: errorHandler.localizedDescription)
         }
+    }
+
+    func onCancelButtonTapped() {
+        coordinator.dismissSheet()
     }
 
     private func setupPasswordTextSubscriber() {

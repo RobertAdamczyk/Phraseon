@@ -11,6 +11,6 @@ extension View {
 
     func presentationMinimalFrame() -> some View {
         self
-            .frame(minWidth: 700, minHeight: 500)
+            .frame(minWidth: 700, minHeight: 500) // TODO: Maybe ideal frame ?
     }
 }

@@ -53,6 +53,9 @@ extension ProfileCoordinator: ProfileActions {
     }
     
     func showChangePassword(authenticationProvider: AuthenticationProvider) {
+        let viewModel = ChangePasswordViewModel(authenticationProvider: authenticationProvider, coordinator: self)
+        let sheet: Sheet = .changePassword(viewModel: viewModel)
+        self.presentedSheet = sheet
     }
     
     func showProfileDeleteWarning() {
@@ -71,11 +74,13 @@ extension ProfileCoordinator {
     enum Sheet: Identifiable {
         case profileDeleteWarning(viewModel: ProfileDeleteWarningViewModel)
         case profileName(viewModel: ProfileNameViewModel)
+        case changePassword(viewModel: ChangePasswordViewModel)
 
         var id: String {
             switch self {
             case .profileDeleteWarning: return "001"
             case .profileName: return "002"
+            case .changePassword: return "003"
             }
         }
     }

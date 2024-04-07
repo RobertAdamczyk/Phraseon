@@ -45,7 +45,7 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
 
     func onPasswordTapped() {
         guard let provider = coordinator.dependencies.authenticationRepository.authenticationProvider else { return }
-        // coordinator.showChangePassword(authenticationProvider: provider)
+        coordinator.showChangePassword(authenticationProvider: provider)
     }
 
     func onMembershipTapped() {
