@@ -10,7 +10,7 @@ import SwiftUI
 extension ToastView {
 
     static func displayOnScreen(toast: ToastView) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { // Workaround to fix show toast after sheet dismiss.
             guard let main = NSApplication.shared.keyWindow, let contentView = main.contentView else { return }
 
             let toastController = NSHostingController(rootView: toast)
