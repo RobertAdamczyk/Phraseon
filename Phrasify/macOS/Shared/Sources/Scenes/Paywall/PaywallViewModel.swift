@@ -1,8 +1,8 @@
 //
 //  PaywallViewModel.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 24.01.24.
+//  Created by Robert Adamczyk on 07.04.24.
 //
 
 import SwiftUI
@@ -13,7 +13,7 @@ import Common
 
 final class PaywallViewModel: ObservableObject, UserDomainProtocol {
 
-    typealias PaywallCoordinator = Coordinator & FullScreenCoverActions
+    typealias PaywallCoordinator = Coordinator & SheetActions
 
     @Published private var state: State = .loading
     @Published var user: DeferredData<User>
@@ -45,12 +45,12 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
     }
 
     func onCloseButtonTapped() {
-        coordinator.dismissFullScreenCover()
+        coordinator.dismissSheet()
     }
 
     @MainActor
     func onSubscribeButtonTapped() async {
-        guard let selectedProduct = utility.selectedProduct, 
+        guard let selectedProduct = utility.selectedProduct,
               let subscriptionId = user.currentValue?.subscriptionId else { return }
         do {
             if utility.trialAvailable {
@@ -61,7 +61,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
                 self.lastSubscriptionPurchaseDate = Date.now.timeIntervalSince1970
                 ToastView.showSuccess(message: "Thank you for subscribing! Your subscription will be activated shortly.")
             }
-            coordinator.dismissFullScreenCover()
+            coordinator.dismissSheet()
         } catch {
             if let appError = error as? AppError {
                 switch appError {
@@ -81,7 +81,7 @@ final class PaywallViewModel: ObservableObject, UserDomainProtocol {
               let url = URL(string: urlString) else {
             return
         }
-        UIApplication.shared.open(url)
+        NSWorkspace.shared.open(url)
     }
 
     private func getProducts() {

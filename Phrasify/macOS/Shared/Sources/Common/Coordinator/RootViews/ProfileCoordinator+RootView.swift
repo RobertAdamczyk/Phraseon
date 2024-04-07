@@ -27,6 +27,7 @@ extension ProfileCoordinator {
                 case .profileDeleteWarning(let viewModel): ProfileDeleteWarningView(viewModel: viewModel)
                 case .profileName(let viewModel): ProfileNameView(viewModel: viewModel)
                 case .changePassword(let viewModel): ChangePasswordView(viewModel: viewModel)
+                case .paywall(let viewModel): PaywallView(viewModel: viewModel)
                 }
             }
         }

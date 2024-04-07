@@ -192,8 +192,6 @@
 		556977A52B475B440022B675 /* SelectTechnologyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556977A32B475B440022B675 /* SelectTechnologyActions.swift */; };
 		5570FF4D2B61B13C0011208F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4C2B61B13C0011208F /* PaywallView.swift */; };
 		5570FF4E2B61B13C0011208F /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4C2B61B13C0011208F /* PaywallView.swift */; };
-		5570FF502B61B1460011208F /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4F2B61B1460011208F /* PaywallViewModel.swift */; };
-		5570FF512B61B1460011208F /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4F2B61B1460011208F /* PaywallViewModel.swift */; };
 		5570FF532B61B1FF0011208F /* PaywallCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF522B61B1FF0011208F /* PaywallCoordinator.swift */; };
 		5570FF542B61B1FF0011208F /* PaywallCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF522B61B1FF0011208F /* PaywallCoordinator.swift */; };
 		5570FF562B61B2920011208F /* PaywallCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */; };
@@ -322,6 +320,21 @@
 		559F2A262BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A242BC2839600384CDC /* ChangePasswordViewModel+State.swift */; };
 		559F2A272BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A242BC2839600384CDC /* ChangePasswordViewModel+State.swift */; };
 		559F2A282BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A242BC2839600384CDC /* ChangePasswordViewModel+State.swift */; };
+		559F2A2A2BC2882400384CDC /* PaywallView+SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */; };
+		559F2A2D2BC288CF00384CDC /* PaywallActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550041FC2B6C3FD700073384 /* PaywallActions.swift */; };
+		559F2A2E2BC289EE00384CDC /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4F2B61B1460011208F /* PaywallViewModel.swift */; };
+		559F2A2F2BC289EE00384CDC /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570FF4F2B61B1460011208F /* PaywallViewModel.swift */; };
+		559F2A322BC28A0700384CDC /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A312BC28A0700384CDC /* PaywallViewModel.swift */; };
+		559F2A342BC28A6D00384CDC /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A332BC28A6D00384CDC /* PaywallView.swift */; };
+		559F2A372BC2A09F00384CDC /* PaywallViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A362BC2A09F00384CDC /* PaywallViewModel+Utility.swift */; };
+		559F2A382BC2A09F00384CDC /* PaywallViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A362BC2A09F00384CDC /* PaywallViewModel+Utility.swift */; };
+		559F2A392BC2A09F00384CDC /* PaywallViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A362BC2A09F00384CDC /* PaywallViewModel+Utility.swift */; };
+		559F2A3B2BC2A0F500384CDC /* PaywallViewModel+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A3A2BC2A0F500384CDC /* PaywallViewModel+State.swift */; };
+		559F2A3C2BC2A0F500384CDC /* PaywallViewModel+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A3A2BC2A0F500384CDC /* PaywallViewModel+State.swift */; };
+		559F2A3D2BC2A0F500384CDC /* PaywallViewModel+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A3A2BC2A0F500384CDC /* PaywallViewModel+State.swift */; };
+		559F2A3F2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A3E2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift */; };
+		559F2A402BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A3E2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift */; };
+		559F2A412BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A3E2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift */; };
 		55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3542B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */; };
@@ -710,6 +723,11 @@
 		559F2A1C2BC282F600384CDC /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		559F2A1F2BC2833400384CDC /* ChangePasswordViewModel+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewModel+Utility.swift"; sourceTree = "<group>"; };
 		559F2A242BC2839600384CDC /* ChangePasswordViewModel+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewModel+State.swift"; sourceTree = "<group>"; };
+		559F2A312BC28A0700384CDC /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
+		559F2A332BC28A6D00384CDC /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		559F2A362BC2A09F00384CDC /* PaywallViewModel+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallViewModel+Utility.swift"; sourceTree = "<group>"; };
+		559F2A3A2BC2A0F500384CDC /* PaywallViewModel+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallViewModel+State.swift"; sourceTree = "<group>"; };
+		559F2A3E2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallViewModel+PlanFeature.swift"; sourceTree = "<group>"; };
 		55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Image.swift"; sourceTree = "<group>"; };
 		55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningView.swift; sourceTree = "<group>"; };
 		55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModel.swift; sourceTree = "<group>"; };
@@ -1187,6 +1205,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				559F2A302BC289FC00384CDC /* Paywall */,
 				559F2A172BC282E000384CDC /* ChangePassword */,
 				559F2A0D2BC210AD00384CDC /* ProfileName */,
 				559F2A022BC1F5FA00384CDC /* ProfileDeleteWarning */,
@@ -1421,7 +1440,6 @@
 			isa = PBXGroup;
 			children = (
 				5570FF4C2B61B13C0011208F /* PaywallView.swift */,
-				553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */,
 				5570FF4F2B61B1460011208F /* PaywallViewModel.swift */,
 			);
 			path = Paywall;
@@ -1575,6 +1593,26 @@
 			path = ChangePassword;
 			sourceTree = "<group>";
 		};
+		559F2A302BC289FC00384CDC /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				559F2A312BC28A0700384CDC /* PaywallViewModel.swift */,
+				559F2A332BC28A6D00384CDC /* PaywallView.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		559F2A352BC2A09200384CDC /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				559F2A362BC2A09F00384CDC /* PaywallViewModel+Utility.swift */,
+				559F2A3A2BC2A0F500384CDC /* PaywallViewModel+State.swift */,
+				559F2A3E2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift */,
+				553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
 		55A7B3522B45DB750051BCF0 /* ProfileDeleteWarning */ = {
 			isa = PBXGroup;
 			children = (
@@ -1606,6 +1644,7 @@
 				5516EBE42B432D4700C558B1 /* ProfileActions.swift */,
 				556977A32B475B440022B675 /* SelectTechnologyActions.swift */,
 				556977A02B47594A0022B675 /* SelectLanguageActions.swift */,
+				550041FC2B6C3FD700073384 /* PaywallActions.swift */,
 				55DE10612B4B56D1001CB87F /* SheetActions.swift */,
 				550537892B4492670077912D /* NavigationActions.swift */,
 			);
@@ -1751,7 +1790,6 @@
 				55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */,
 				5516EBE12B432D3F00C558B1 /* ProjectActions.swift */,
 				55406C5C2B8B32E700B03E9D /* ProjectDetailActions.swift */,
-				550041FC2B6C3FD700073384 /* PaywallActions.swift */,
 				552CA7422B4F2D6800A6C3D2 /* EnterContentKeyActions.swift */,
 			);
 			path = Actions;
@@ -2033,6 +2071,7 @@
 		55E4FB492BB6035400D6D6DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				559F2A352BC2A09200384CDC /* Paywall */,
 				559F2A1E2BC2832000384CDC /* ChangePassword */,
 				559F2A0A2BC2103200384CDC /* ProfileName */,
 				559F2A052BC1F63300384CDC /* ProfileDeleteWarning */,
@@ -2468,7 +2507,6 @@
 				55DE102A2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				55E4FB5E2BB6AB7600D6D6DA /* SelectLanguageViewModel+Utility.swift in Sources */,
 				5516EBBC2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
-				5570FF502B61B1460011208F /* PaywallViewModel.swift in Sources */,
 				55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */,
 				5505C7F02B55E6D800806B4F /* StandardWarningView.swift in Sources */,
 				5580744E2B2E341B0041160B /* ActivityView.swift in Sources */,
@@ -2478,10 +2516,12 @@
 				5505C7DE2B55BE5900806B4F /* SyncScript.swift in Sources */,
 				559F2A252BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */,
 				555458F62B8543C000DA097F /* PreviewCloudRepository.swift in Sources */,
+				559F2A372BC2A09F00384CDC /* PaywallViewModel+Utility.swift in Sources */,
 				55DE10512B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */,
 				55DE10472B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
 				553F1BE12B2907FD0071A099 /* LoginView.swift in Sources */,
 				55DE10622B4B56D1001CB87F /* SheetActions.swift in Sources */,
+				559F2A3B2BC2A0F500384CDC /* PaywallViewModel+State.swift in Sources */,
 				55C279152B2A4BB0005144F1 /* Dependencies.swift in Sources */,
 				553F1BE32B29080B0071A099 /* LoginViewModel.swift in Sources */,
 				5513C2482B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,
@@ -2497,6 +2537,7 @@
 				551AA4242B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				5516EBE22B432D3F00C558B1 /* ProjectActions.swift in Sources */,
 				550041FD2B6C3FD700073384 /* PaywallActions.swift in Sources */,
+				559F2A2F2BC289EE00384CDC /* PaywallViewModel.swift in Sources */,
 				552EC1732B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */,
 				55C2DAC72B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
 				55A7B3542B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */,
@@ -2516,6 +2557,7 @@
 				5570FF532B61B1FF0011208F /* PaywallCoordinator.swift in Sources */,
 				558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */,
 				5536E1652B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */,
+				559F2A3F2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift in Sources */,
 				558074512B2E38110041160B /* Activitable.swift in Sources */,
 				553F1BE82B2911770071A099 /* ForgetPasswordViewModel.swift in Sources */,
 				55FE51B02B5D1DB50084617F /* ValidationErrorProtocol.swift in Sources */,
@@ -2699,7 +2741,6 @@
 				55DE102B2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				55E4FB5F2BB6AB7600D6D6DA /* SelectLanguageViewModel+Utility.swift in Sources */,
 				5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
-				5570FF512B61B1460011208F /* PaywallViewModel.swift in Sources */,
 				55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */,
 				5505C7F12B55E6D800806B4F /* StandardWarningView.swift in Sources */,
 				55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */,
@@ -2709,10 +2750,12 @@
 				5505C7DF2B55BE5900806B4F /* SyncScript.swift in Sources */,
 				559F2A262BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */,
 				555458F72B8543C000DA097F /* PreviewCloudRepository.swift in Sources */,
+				559F2A382BC2A09F00384CDC /* PaywallViewModel+Utility.swift in Sources */,
 				55DE10522B4AFD4B001CB87F /* ChangeProjectOwnerViewModel.swift in Sources */,
 				55DE10482B4AD118001CB87F /* Role+SortIndex.swift in Sources */,
 				5513C2532B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				55DE10632B4B56D1001CB87F /* SheetActions.swift in Sources */,
+				559F2A3C2BC2A0F500384CDC /* PaywallViewModel+State.swift in Sources */,
 				55FD140D2B97BDA7006DA3E4 /* GoogleButton.swift in Sources */,
 				55C278E22B2A3F3A005144F1 /* LoginView.swift in Sources */,
 				55C278E32B2A3F3A005144F1 /* LoginViewModel.swift in Sources */,
@@ -2728,6 +2771,7 @@
 				551AA4252B337A9200F0B1E2 /* SelectTechnologyViewModel.swift in Sources */,
 				5516EBE32B432D3F00C558B1 /* ProjectActions.swift in Sources */,
 				550041FE2B6C3FD700073384 /* PaywallActions.swift in Sources */,
+				559F2A2E2BC289EE00384CDC /* PaywallViewModel.swift in Sources */,
 				552EC1742B7898D20079E754 /* AlgoliaKey+toKey.swift in Sources */,
 				55C2DAC82B3342F500435CD4 /* RegisterViewModel.swift in Sources */,
 				55A7B3552B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */,
@@ -2747,6 +2791,7 @@
 				5570FF542B61B1FF0011208F /* PaywallCoordinator.swift in Sources */,
 				558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */,
 				5536E1662B7426E500E5DCC6 /* HighlightedString+extractedText.swift in Sources */,
+				559F2A402BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift in Sources */,
 				558074522B2E38110041160B /* Activitable.swift in Sources */,
 				55C278E72B2A3F3A005144F1 /* StartView.swift in Sources */,
 				55FE51B12B5D1DB50084617F /* ValidationErrorProtocol.swift in Sources */,
@@ -2867,6 +2912,7 @@
 				55EF44382BAEF9390005ACA5 /* RegisterViewModel.swift in Sources */,
 				553FD28E2BA63DBA00461FEA /* AppDivider.swift in Sources */,
 				55E4FB2F2BB4E51000D6D6DA /* CreateProjectView.swift in Sources */,
+				559F2A2A2BC2882400384CDC /* PaywallView+SubscriptionCell.swift in Sources */,
 				55EF443B2BAEF9E20005ACA5 /* ValidationHandlerProtocol.swift in Sources */,
 				55E4FB372BB4EB4A00D6D6DA /* SelectLanguageViewModel.swift in Sources */,
 				55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */,
@@ -2876,6 +2922,7 @@
 				553FD2842BA503D600461FEA /* StartView.swift in Sources */,
 				55E4FB392BB4EBA400D6D6DA /* Language+UI.swift in Sources */,
 				55E4FB482BB5DCA700D6D6DA /* SelectTechnologyViewModel.swift in Sources */,
+				559F2A342BC28A6D00384CDC /* PaywallView.swift in Sources */,
 				55EF44392BAEF9DD0005ACA5 /* PasswordValidationHandler.swift in Sources */,
 				55E4FB262BB4E01B00D6D6DA /* MenuItem.swift in Sources */,
 				55E4FB2C2BB4E25500D6D6DA /* CreateProjectCoordinator+RootView.swift in Sources */,
@@ -2907,8 +2954,10 @@
 				55E4FB312BB4E52400D6D6DA /* CreateProjectViewModel.swift in Sources */,
 				553FD2892BA638DD00461FEA /* LoginView.swift in Sources */,
 				55E92BA92BAA3F2E0014174E /* ToastView+Show.swift in Sources */,
+				559F2A3D2BC2A0F500384CDC /* PaywallViewModel+State.swift in Sources */,
 				559F2A162BC280C200384CDC /* AuthenticationProvider+UI.swift in Sources */,
 				55E4FB422BB5D95B00D6D6DA /* SelectTechnologyActions.swift in Sources */,
+				559F2A412BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift in Sources */,
 				55DA4C532BA8F98C00C70011 /* ToastView.swift in Sources */,
 				55AEA74C2BB0BB4200710E99 /* Toolbar+DisplayMode.swift in Sources */,
 				55AEA74F2BB0CB5C00710E99 /* ForgetPasswordView.swift in Sources */,
@@ -2916,6 +2965,7 @@
 				553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */,
 				55E4FB0E2BB20DCB00D6D6DA /* Technology+UI.swift in Sources */,
 				559F2A0F2BC2119F00384CDC /* ProfileNameViewModel.swift in Sources */,
+				559F2A2D2BC288CF00384CDC /* PaywallActions.swift in Sources */,
 				559F2A0C2BC2103D00384CDC /* ProfileNameView.swift in Sources */,
 				55E4FB462BB5DC9D00D6D6DA /* SelectTechnologyView.swift in Sources */,
 				55E4FB522BB6047B00D6D6DA /* SelectTechnologyViewModel+Context.swift in Sources */,
@@ -2924,6 +2974,7 @@
 				55EC29BA2BA26BAF003D6F4C /* Dependencies.swift in Sources */,
 				55E4FB412BB5D92200D6D6DA /* SelectBaseLanguageViewModel.swift in Sources */,
 				55E4FB5B2BB6191900D6D6DA /* SelectBaseLanguage+Context.swift in Sources */,
+				559F2A322BC28A0700384CDC /* PaywallViewModel.swift in Sources */,
 				55CB62A22BBB629D00A879C3 /* ProfileView.swift in Sources */,
 				553FD2792BA502AE00461FEA /* RootCoordinator.swift in Sources */,
 				55EF443A2BAEF9E00005ACA5 /* EmailValidationHandler.swift in Sources */,
@@ -2931,6 +2982,7 @@
 				5530A52B2BACE3FF00B6B9D3 /* ActivityView.swift in Sources */,
 				559F2A132BC211DE00384CDC /* ProfileNameViewModel+Utility.swift in Sources */,
 				559F2A272BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */,
+				559F2A392BC2A09F00384CDC /* PaywallViewModel+Utility.swift in Sources */,
 				55BC7BA82BA2649800801465 /* FontStyle.swift in Sources */,
 				553FD28D2BA63A5300461FEA /* AppTextField.swift in Sources */,
 				55CFBA952BBCB499002E35D9 /* ProfileViewModel+Utility.swift in Sources */,

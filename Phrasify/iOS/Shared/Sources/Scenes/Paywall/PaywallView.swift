@@ -23,7 +23,7 @@ struct PaywallView: View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 32) {
-                    Text("Adaptability or Savings? The choice is yours.")
+                    Text(viewModel.utility.title)
                         .apply(.medium, size: .M, color: .white)
                     VStack(spacing: 16) {
                         ForEach(viewModel.products, id: \.self) { product in
@@ -70,14 +70,14 @@ struct PaywallView: View {
                         .disabled(viewModel.possiblyProcessSubscription)
                 }
                 Button(action: viewModel.onPrivacyPolicyTapped) {
-                    Text("Terms of Service & Privacy Policy")
+                    Text(viewModel.utility.termsText)
                         .apply(.regular, size: .S, color: .lightGray)
                 }
 
             }
             .padding(16)
         }
-        .navigationTitle("Subscription")
+        .navigationTitle(viewModel.utility.navigationTitle)
         .redacted(reason: viewModel.isLoading ? .placeholder : .invalidated)
         .shimmering(active: viewModel.isLoading)
         .toolbar {

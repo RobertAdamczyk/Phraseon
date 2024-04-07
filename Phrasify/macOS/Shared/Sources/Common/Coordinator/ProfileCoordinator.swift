@@ -65,6 +65,15 @@ extension ProfileCoordinator: ProfileActions {
     }
 }
 
+extension ProfileCoordinator: PaywallActions {
+
+    func presentPaywall() {
+        let viewModel = PaywallViewModel(coordinator: self)
+        let sheet: Sheet = .paywall(viewModel: viewModel)
+        self.presentedSheet = sheet
+    }
+}
+
 extension ProfileCoordinator {
 
     enum NavigationView {
@@ -75,12 +84,14 @@ extension ProfileCoordinator {
         case profileDeleteWarning(viewModel: ProfileDeleteWarningViewModel)
         case profileName(viewModel: ProfileNameViewModel)
         case changePassword(viewModel: ChangePasswordViewModel)
+        case paywall(viewModel: PaywallViewModel)
 
         var id: String {
             switch self {
             case .profileDeleteWarning: return "001"
             case .profileName: return "002"
             case .changePassword: return "003"
+            case .paywall: return "004"
             }
         }
     }

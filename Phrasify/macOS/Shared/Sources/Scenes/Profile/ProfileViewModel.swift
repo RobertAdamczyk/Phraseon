@@ -12,7 +12,7 @@ import Domain
 
 final class ProfileViewModel: ObservableObject, UserDomainProtocol {
 
-    typealias ProfileCoordinator = Coordinator & NavigationActions & ProfileActions
+    typealias ProfileCoordinator = Coordinator & NavigationActions & ProfileActions & PaywallActions
 
     @Published var user: DeferredData<User>
 
@@ -49,7 +49,7 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
     }
 
     func onMembershipTapped() {
-        // coordinator.presentPaywall()
+        coordinator.presentPaywall()
     }
 
 //    func uploadProfileImage(_ uiImage: UIImage) async throws {
