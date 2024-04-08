@@ -13,8 +13,6 @@ struct PaywallView: View {
 
     @ObservedObject var viewModel: PaywallViewModel
 
-    @State private var showManageSubscriptions: Bool = false //  TODO: Do I need showManageSubscriptions ?
-
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -59,14 +57,8 @@ struct PaywallView: View {
                             .apply(.regular, size: .S, color: .lightGray)
                             .multilineTextAlignment(.center)
                     }
-                    if viewModel.utility.hasValidSubscription {
-                        AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .main({
-                            showManageSubscriptions = true
-                        }))
-                    } else {
-                        AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
-                            .disabled(viewModel.utility.possiblyProcessSubscription)
-                    }
+                    AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
+                        .disabled(viewModel.utility.possiblyProcessSubscription && !viewModel.utility.hasValidSubscription)
                     AppButton(style: .text("Cancel"), action: .main(viewModel.onCloseButtonTapped))
                     Button(action: viewModel.onPrivacyPolicyTapped) {
                         Text(viewModel.utility.termsText)
