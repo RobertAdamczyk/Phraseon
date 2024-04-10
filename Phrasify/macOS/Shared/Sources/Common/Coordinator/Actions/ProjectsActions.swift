@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import Model
 
 protocol ProjectsActions {
 
-    func showProjectDetail()
+    func showProjectDetail(project: Project)
     func presentCreateProject()
 }

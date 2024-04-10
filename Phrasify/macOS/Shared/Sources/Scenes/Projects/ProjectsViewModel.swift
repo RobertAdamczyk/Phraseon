@@ -30,7 +30,7 @@ final class ProjectsViewModel: ObservableObject {
     }
 
     func onProjectTapped(project: Project) {
-        coordinator.showProjectDetail()
+        coordinator.showProjectDetail(project: project)
     }
 
     func onAddProjectTapped() {

@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Model
+import Domain
 
 final class ProjectCoordinator: Coordinator, ObservableObject {
 
@@ -45,8 +47,10 @@ extension ProjectCoordinator: SheetActions {
 
 extension ProjectCoordinator: ProjectsActions {
 
-    func showProjectDetail() {
-        navigationViews.append(.empty)
+    func showProjectDetail(project: Project) {
+        let viewModel = ProjectDetailViewModel(coordinator: self, project: project)
+        let view: NavigationView = .projectDetail(viewModel: viewModel)
+        self.navigationViews.append(view)
     }
 
     func presentCreateProject() {
@@ -54,10 +58,36 @@ extension ProjectCoordinator: ProjectsActions {
     }
 }
 
+extension ProjectCoordinator: ProjectDetailActions {
+    func presentCreateKey(project: Project) {
+    }
+    
+    func showProjectSettings(projectUseCase: ProjectUseCase, projectMemberUseCase: ProjectMemberUseCase) {
+    }
+    
+    func showKeyDetails(key: Key, project: Project, projectMemberUseCase: ProjectMemberUseCase) {
+    }
+}
+
 extension ProjectCoordinator {
 
-    enum NavigationView {
-        case empty
+    enum NavigationView: Identifiable, Equatable, Hashable {
+
+        static func == (lhs: ProjectCoordinator.NavigationView, rhs: ProjectCoordinator.NavigationView) -> Bool {
+            lhs.id == rhs.id
+        }
+
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
+
+        case projectDetail(viewModel: ProjectDetailViewModel)
+
+        var id: String {
+            switch self {
+            case .projectDetail: return "001"
+            }
+        }
     }
 
     enum Sheet: Identifiable {

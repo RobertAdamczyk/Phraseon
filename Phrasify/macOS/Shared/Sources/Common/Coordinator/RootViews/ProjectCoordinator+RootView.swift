@@ -18,7 +18,7 @@ extension ProjectCoordinator {
                 ProjectsView(coordinator: projectCoordinator)
                     .navigationDestination(for: ProjectCoordinator.NavigationView.self) {
                         switch $0 {
-                        case .empty: Text("EMPTY").navigationTitle("Empty")
+                        case .projectDetail(let viewModel): ProjectDetailView(viewModel: viewModel)
                         }
                     }
             }

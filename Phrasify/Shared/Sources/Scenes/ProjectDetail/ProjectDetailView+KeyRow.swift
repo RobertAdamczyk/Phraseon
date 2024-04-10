@@ -13,7 +13,7 @@ extension ProjectDetailView {
     struct KeyRow: View {
 
         let key: Key
-        let viewModel: ProjectDetailViewModel
+        let shouldShowReviewStatus: Bool
 
         var body: some View {
             HStack {
@@ -23,7 +23,7 @@ extension ProjectDetailView {
                     HStack(spacing: 4) {
                         Image(systemName: "clock")
                         Text(key.lastUpdatedAt.timeAgo)
-                        if viewModel.shouldShowReviewStatus {
+                        if shouldShowReviewStatus {
                             Rectangle()
                                 .frame(width: 2)
                                 .foregroundStyle(appColor(.lightGray))
@@ -47,7 +47,7 @@ extension ProjectDetailView {
     struct AlgoliaKeyRow: View {
 
         let key: AlgoliaKey
-        let viewModel: ProjectDetailViewModel
+        let shouldShowReviewStatus: Bool
 
         var keyId: AttributedString {
             var attributedString = AttributedString(key.keyId)
@@ -97,7 +97,7 @@ extension ProjectDetailView {
                     HStack(spacing: 4) {
                         Image(systemName: "clock")
                         Text(Date(timeIntervalSince1970: TimeInterval(key.lastUpdatedAt.seconds)).timeAgo)
-                        if viewModel.shouldShowReviewStatus {
+                        if shouldShowReviewStatus {
                             Rectangle()
                                 .frame(width: 2)
                                 .foregroundStyle(appColor(.lightGray))
@@ -129,16 +129,7 @@ extension ProjectDetailView {
                                                 createdAt: .now, 
                                                 lastUpdatedAt: .distantPast,
                                                 status: ["EN": KeyStatus.approved]), 
-                                     viewModel: .init(coordinator: PreviewCoordinator(),
-                                                      project: .init(name: "",
-                                                                     technologies: [],
-                                                                     languages: [],
-                                                                     baseLanguage: .english,
-                                                                     members: [],
-                                                                     owner: "das",
-                                                                     securedAlgoliaApiKey: "",
-                                                                     createdAt: .now,
-                                                                     algoliaIndexName: "")))
+                                     shouldShowReviewStatus: true)
             ProjectDetailView.AlgoliaKeyRow(key: .init(createdAt: .init(seconds: 100000,
                                                                         nanoseconds: 10000),
                                                        lastUpdatedAt: .init(seconds: 10000,
@@ -154,16 +145,7 @@ extension ProjectDetailView {
                                                                               translation: ["EN": .init(value: .init(string: "He<em>llo w</em>orld !"),
                                                                                                         matchLevel: .full,
                                                                                                         matchedWords: ["zamkn"])])),
-                                            viewModel: .init(coordinator: PreviewCoordinator(),
-                                                             project: .init(name: "",
-                                                                            technologies: [],
-                                                                            languages: [],
-                                                                            baseLanguage: .english,
-                                                                            members: [],
-                                                                            owner: "das",
-                                                                            securedAlgoliaApiKey: "",
-                                                                            createdAt: .now,
-                                                                            algoliaIndexName: "")))
+                                            shouldShowReviewStatus: true)
         }
         .padding(16)
     }
