@@ -33,7 +33,7 @@ struct ProjectDetailView: View {
                         Button {
                             viewModel.onKeyTapped(key)
                         } label: {
-                            KeyRow(key: key, viewModel: viewModel)
+                            KeyRow(key: key, shouldShowReviewStatus: viewModel.shouldShowReviewStatus)
                         }
                         .onAppear {
                             viewModel.onKeyAppear(key)
@@ -44,7 +44,7 @@ struct ProjectDetailView: View {
                         Button {
                             viewModel.onAlgoliaKeyTapped(key)
                         } label: {
-                            AlgoliaKeyRow(key: key, viewModel: viewModel)
+                            AlgoliaKeyRow(key: key, shouldShowReviewStatus: viewModel.shouldShowReviewStatus)
                         }
                     }
                 default: EmptyView()
