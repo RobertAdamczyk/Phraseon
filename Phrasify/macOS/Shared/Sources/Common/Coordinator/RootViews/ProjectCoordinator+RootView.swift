@@ -19,6 +19,7 @@ extension ProjectCoordinator {
                     .navigationDestination(for: ProjectCoordinator.NavigationView.self) {
                         switch $0 {
                         case .projectDetail(let viewModel): ProjectDetailView(viewModel: viewModel)
+                        case .createKey(let viewModel): CreateKeyView(viewModel: viewModel)
                         }
                     }
             }

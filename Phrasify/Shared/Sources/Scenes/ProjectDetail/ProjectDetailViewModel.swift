@@ -13,7 +13,11 @@ import Domain
 
 final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol, ProjectUseCaseProtocol {
 
+    #if os(iOS)
     typealias ProjectDetailCoordinator = Coordinator & ProjectDetailActions
+    #else
+    typealias ProjectDetailCoordinator = Coordinator & CreateKeyActions
+    #endif
 
     enum State {
         case loaded([Key])
@@ -97,19 +101,31 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     }
 
     func onAddButtonTapped() {
+        #if os(iOS)
         coordinator.presentCreateKey(project: project)
+        #else
+        coordinator.showCreateKey(project: project, context: .create)
+        #endif
+
     }
 
     func onSettingsTapped() {
+        #if os(iOS)
         coordinator.showProjectSettings(projectUseCase: projectUseCase, projectMemberUseCase: projectMemberUseCase)
+        #endif
     }
 
     func onKeyTapped(_ key: Key) {
+        #if os(iOS)
         coordinator.showKeyDetails(key: key, project: project, projectMemberUseCase: projectMemberUseCase)
+        #endif
+
     }
 
     func onAlgoliaKeyTapped(_ algoliaKey: AlgoliaKey) {
+        #if os(iOS)
         coordinator.showKeyDetails(key: algoliaKey.toKey, project: project, projectMemberUseCase: projectMemberUseCase)
+        #endif
     }
 
     private func setupSelectedKeysOrderSubscriber() {

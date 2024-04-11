@@ -29,7 +29,7 @@ struct CreateKeyView: View {
                 .padding([.horizontal, .top], 16)
             }
             AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped))
-                .disabled(viewModel.shouldDisablePrimaryButton)
+                .disabled(viewModel.utility.shouldDisablePrimaryButton)
                 .padding(16)
         }
         .onAppear(perform: makeTextFieldFocused)

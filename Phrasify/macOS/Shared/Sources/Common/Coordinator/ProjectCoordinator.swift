@@ -58,14 +58,12 @@ extension ProjectCoordinator: ProjectsActions {
     }
 }
 
-extension ProjectCoordinator: ProjectDetailActions {
-    func presentCreateKey(project: Project) {
-    }
-    
-    func showProjectSettings(projectUseCase: ProjectUseCase, projectMemberUseCase: ProjectMemberUseCase) {
-    }
-    
-    func showKeyDetails(key: Key, project: Project, projectMemberUseCase: ProjectMemberUseCase) {
+extension ProjectCoordinator: CreateKeyActions {
+
+    func showCreateKey(project: Project, context: CreateKeyViewModel.Context) {
+        let viewModel = CreateKeyViewModel(coordinator: self, project: project, context: context)
+        let view: NavigationView = .createKey(viewModel: viewModel)
+        navigationViews.append(view)
     }
 }
 
@@ -82,10 +80,12 @@ extension ProjectCoordinator {
         }
 
         case projectDetail(viewModel: ProjectDetailViewModel)
+        case createKey(viewModel: CreateKeyViewModel)
 
         var id: String {
             switch self {
             case .projectDetail: return "001"
+            case .createKey: return "002"
             }
         }
     }

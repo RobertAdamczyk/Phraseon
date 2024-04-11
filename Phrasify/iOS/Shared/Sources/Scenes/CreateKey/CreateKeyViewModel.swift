@@ -14,8 +14,8 @@ final class CreateKeyViewModel: ObservableObject {
 
     @Published var keyId: String = ""
 
-    var shouldDisablePrimaryButton: Bool {
-        keyId.count < 3 || keyId.contains(" ")
+    var utility: Utility {
+        .init(keyId: keyId)
     }
 
     let project: Project
