@@ -36,6 +36,7 @@ extension KeyDetailView {
                             .opacity(isLoading ? 1 : 0)
                     }
             }
+            .buttonStyle(.plain)
         }
 
         private func executeAction() {

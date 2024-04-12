@@ -1,8 +1,8 @@
 //
 //  KeyDetailViewModel.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 09.01.24.
+//  Created by Robert Adamczyk on 12.04.24.
 //
 
 import SwiftUI
@@ -12,7 +12,7 @@ import Domain
 
 final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
 
-    typealias KeyDetailCoordinator = Coordinator & EnterContentKeyActions & ProjectActions
+    typealias KeyDetailCoordinator = Coordinator
 
     @Published var key: Key
     @Published var member: Member?
@@ -37,16 +37,16 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
     }
 
     func onCopyTapped(_ text: String) {
-        let pasteboard = UIPasteboard.general
-        pasteboard.string = text
+        let pasteboard = NSPasteboard.general
+        pasteboard.setString(text, forType: .string)
     }
 
     func onEditTranslationTapped(language: Language) {
-        coordinator.showEditContentKey(language: language, key: key, project: project)
+        // coordinator.showEditContentKey(language: language, key: key, project: project)
     }
 
     func onDeleteTapped() {
-        coordinator.showDeleteKeyWarning(project: project, key: key)
+        // coordinator.showDeleteKeyWarning(project: project, key: key)
     }
 
     private func setupKeySubscriber() {
@@ -64,4 +64,5 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
             .store(in: cancelBag)
     }
 }
+
 

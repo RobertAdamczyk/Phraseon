@@ -20,6 +20,7 @@ extension ProjectCoordinator {
                         switch $0 {
                         case .projectDetail(let viewModel): ProjectDetailView(viewModel: viewModel)
                         case .createKey(let viewModel): CreateKeyView(viewModel: viewModel)
+                        case .keyDetail(let viewModel): KeyDetailView(viewModel: viewModel)
                         }
                     }
             }

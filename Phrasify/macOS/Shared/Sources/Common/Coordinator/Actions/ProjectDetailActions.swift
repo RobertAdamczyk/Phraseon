@@ -7,8 +7,10 @@
 
 import Foundation
 import Model
+import Domain
 
-protocol CreateKeyActions {
+protocol ProjectDetailActions {
 
     func showCreateKey(project: Project, context: CreateKeyViewModel.Context)
+    func showKeyDetails(key: Key, project: Project, projectMemberUseCase: ProjectMemberUseCase)
 }

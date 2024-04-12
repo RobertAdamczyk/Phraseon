@@ -1,8 +1,8 @@
 //
 //  KeyDetailView.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 09.01.24.
+//  Created by Robert Adamczyk on 12.04.24.
 //
 
 import SwiftUI
@@ -24,11 +24,10 @@ struct KeyDetailView: View {
                     }
                 }
             }
-            .padding(16)
+            .padding(32)
         }
-        .navigationTitle("Phrase")
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItem(placement: .destructiveAction) {
                 if viewModel.member?.hasPermissionToDeleteKey == true {
                     Button(action: viewModel.onDeleteTapped, label: {
                         Image(systemName: "trash")
@@ -37,6 +36,7 @@ struct KeyDetailView: View {
                 }
             }
         }
+        .navigationTitle("Phrase")
         .applyViewBackground()
     }
 
@@ -109,6 +109,7 @@ struct KeyDetailView: View {
                 .frame(width: 22, height: 22)
                 .apply(.medium, size: .M, color: .paleOrange)
         }
+        .buttonStyle(.plain)
     }
 
     private func makeCopyButton(for text: String) -> some View {
@@ -120,36 +121,6 @@ struct KeyDetailView: View {
                 .frame(width: 18, height: 22)
                 .apply(.medium, size: .M, color: .paleOrange)
         }
+        .buttonStyle(.plain)
     }
 }
-
-#if DEBUG
-#Preview {
-    KeyDetailView(viewModel: .init(coordinator: PreviewCoordinator(), 
-                                   key: .init(translation: ["EN": "dasdasdasdadasd"],
-                                              createdAt: .now,
-                                              lastUpdatedAt: .now,
-                                              status: ["EN": KeyStatus.approved]),
-                                   project: .init(name: "",
-                                                  technologies: [],
-                                                  languages: [.english, .polish],
-                                                  baseLanguage: .english,
-                                                  members: [],
-                                                  owner: "adasda",
-                                                  securedAlgoliaApiKey: "",
-                                                  createdAt: .now,
-                                                  algoliaIndexName: ""),
-                                   projectMemberUseCase: .init(firestoreRepository: PreviewFirestoreRepository(),
-                                                               authenticationRepository: PreviewAuthenticationRepository(),
-                                                               project: .init(name: "",
-                                                                              technologies: [],
-                                                                              languages: [],
-                                                                              baseLanguage: .english, 
-                                                                              members: [],
-                                                                              owner: "",
-                                                                              securedAlgoliaApiKey: "",
-                                                                              createdAt: .now,
-                                                                              algoliaIndexName: ""))))
-    .preferredColorScheme(.dark)
-}
-#endif
