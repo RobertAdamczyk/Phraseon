@@ -11,7 +11,7 @@ import Domain
 
 final class CreateKeyViewModel: ObservableObject {
 
-    typealias CreateKeyCoordinator = Coordinator & NavigationActions
+    typealias CreateKeyCoordinator = Coordinator & SheetActions
 
     enum Context {
         case create
@@ -72,7 +72,7 @@ final class CreateKeyViewModel: ObservableObject {
     }
 
     func onCloseButtonTapped() {
-        coordinator.popView()
+        coordinator.dismissSheet()
     }
 
     @MainActor
@@ -85,7 +85,7 @@ final class CreateKeyViewModel: ObservableObject {
                                                                                    keyId: keyId,
                                                                                    language: language,
                                                                                    translation: translation))
-                coordinator.popView()
+                coordinator.dismissSheet()
                 ToastView.showSuccess(message: "Phrase successfully created.")
             case .edit(let key, _):
                 guard let keyId = key.id else { return }
@@ -93,7 +93,7 @@ final class CreateKeyViewModel: ObservableObject {
                                                                                           keyId: keyId,
                                                                                           language: language,
                                                                                           translation: translation))
-                coordinator.popView()
+                coordinator.dismissSheet()
                 ToastView.showSuccess(message: "Phrase content updated successfully.")
             }
         } catch {

@@ -16,17 +16,25 @@ extension ProjectCoordinator {
         var body: some View {
             NavigationStack(path: $projectCoordinator.navigationViews) {
                 ProjectsView(coordinator: projectCoordinator)
-                    .navigationDestination(for: ProjectCoordinator.NavigationView.self) {
-                        switch $0 {
-                        case .projectDetail(let viewModel): ProjectDetailView(viewModel: viewModel)
-                        case .createKey(let viewModel): CreateKeyView(viewModel: viewModel)
-                        case .keyDetail(let viewModel): KeyDetailView(viewModel: viewModel)
+                    .navigationDestination(for: ProjectCoordinator.NavigationView.self) { view in
+                        Group {
+                            switch view {
+                            case .projectDetail(let viewModel): ProjectDetailView(viewModel: viewModel)
+                            case .keyDetail(let viewModel): KeyDetailView(viewModel: viewModel)
+                            }
+                        }
+                        .sheet(item: $projectCoordinator.presentedSheet) {
+                            switch $0 {
+                            case .createProject: CreateProjectCoordinator.RootView(coordinator: projectCoordinator)
+                            case .createKey(let viewModel): CreateKeyView(viewModel: viewModel)
+                            }
                         }
                     }
             }
             .sheet(item: $projectCoordinator.presentedSheet) {
                 switch $0 {
                 case .createProject: CreateProjectCoordinator.RootView(coordinator: projectCoordinator)
+                case .createKey(let viewModel): CreateKeyView(viewModel: viewModel)
                 }
             }
         }
