@@ -57,8 +57,11 @@ struct ProfileDeleteWarningView: View {
             }
             .multilineTextAlignment(.center)
             .apply(.regular, size: .S, color: .white)
-            AppButton(style: .fill(viewModel.informationPageButtonTitle, .lightBlue), action: .main(viewModel.onUnderstoodTapped))
             Spacer()
+            HStack {
+                Spacer()
+                AppButton(style: .fill(viewModel.informationPageButtonTitle, .lightBlue), action: .main(viewModel.onUnderstoodTapped))
+            }
         }
         .padding(16)
         .padding(.top, 16)
@@ -66,6 +69,7 @@ struct ProfileDeleteWarningView: View {
 
     private var deletionPage: some View {
         VStack(spacing: 32) {
+            Spacer()
             Image(systemName: "exclamationmark.triangle.fill")
                 .resizable()
                 .scaledToFit()
@@ -83,10 +87,12 @@ struct ProfileDeleteWarningView: View {
             }
             .multilineTextAlignment(.center)
             .apply(.regular, size: .S, color: .white)
-            VStack(spacing: 16) {
-                AppButton(style: .fill(viewModel.deletionPageButtonDeleteAccountTitle, .lightBlue), action: .async(viewModel.onDeleteAccountTapped))
-                AppButton(style: .text(viewModel.deletionPageButtonCancelTitle), action: .main(viewModel.onCancelTapped))
+            Spacer()
+            HStack(spacing: 16) {
+                Spacer()
+                AppButton(style: .fill(viewModel.deletionPageButtonCancelTitle, .lightGray), action: .main(viewModel.onCancelTapped))
                     .opacity(viewModel.state == .deletion ? 1 : 0)
+                AppButton(style: .fill(viewModel.deletionPageButtonDeleteAccountTitle, .lightBlue), action: .async(viewModel.onDeleteAccountTapped))
             }
         }
         .padding(16)

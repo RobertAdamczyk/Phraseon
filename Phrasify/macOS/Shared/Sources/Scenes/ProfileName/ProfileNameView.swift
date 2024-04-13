@@ -25,9 +25,10 @@ struct ProfileNameView: View {
                     }
                     .padding(16)
                 }
-                VStack(spacing: 16) {
+                HStack(spacing: 16) {
+                    Spacer()
+                    AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCancelButtonTapped))
                     AppButton(style: .fill(viewModel.utility.saveButtonTitle, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
-                    AppButton(style: .text("Cancel"), action: .main(viewModel.onCancelButtonTapped))
                 }
                 .padding(16)
             }

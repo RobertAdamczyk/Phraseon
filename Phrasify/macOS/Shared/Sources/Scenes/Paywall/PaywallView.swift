@@ -57,9 +57,11 @@ struct PaywallView: View {
                             .apply(.regular, size: .S, color: .lightGray)
                             .multilineTextAlignment(.center)
                     }
-                    AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
-                        .disabled(viewModel.utility.possiblyProcessSubscription && !viewModel.utility.hasValidSubscription)
-                    AppButton(style: .text("Cancel"), action: .main(viewModel.onCloseButtonTapped))
+                    VStack(spacing: 16) {
+                        AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSubscribeButtonTapped))
+                            .disabled(viewModel.utility.possiblyProcessSubscription && !viewModel.utility.hasValidSubscription)
+                        AppButton(style: .text("Cancel"), action: .main(viewModel.onCloseButtonTapped))
+                    }
                     Button(action: viewModel.onPrivacyPolicyTapped) {
                         Text(viewModel.utility.termsText)
                             .apply(.regular, size: .S, color: .lightGray)

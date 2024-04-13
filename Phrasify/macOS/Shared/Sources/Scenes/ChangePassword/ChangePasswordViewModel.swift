@@ -24,6 +24,10 @@ final class ChangePasswordViewModel: ObservableObject {
         .init(state: state, authenticationProvider: authenticationProvider)
     }
 
+    var shouldShowCancelButton: Bool {
+        state != .unavailable
+    }
+
     let passwordValidationHandler = PasswordValidationHandler()
 
     private let coordinator: ChangePasswordCoordinator

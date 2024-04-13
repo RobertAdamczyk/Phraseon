@@ -80,10 +80,11 @@ struct SelectTechnologyView: View {
 
     @ViewBuilder
     private var buttonView: some View {
-        VStack(spacing: 16) {
+        HStack(spacing: 16) {
+            Spacer()
+            AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
             AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
                 .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
-            AppButton(style: .text("Cancel"), action: .main(viewModel.onCloseButtonTapped))
         }
         .padding(.top, 16)
     }

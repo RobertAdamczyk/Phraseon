@@ -31,10 +31,11 @@ struct CreateKeyView: View {
                     }
                     .padding(16)
                 }
-                VStack(spacing: 16) {
-                    AppButton(style: .fill("Continue", .lightBlue), action: .async(viewModel.onContinueButtonTapped))
+                HStack(spacing: 16) {
+                    Spacer()
+                    AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
+                    AppButton(style: .fill("Create Phrase", .lightBlue), action: .async(viewModel.onContinueButtonTapped))
                         .disabled(viewModel.utility.shouldDisablePrimaryButton)
-                    AppButton(style: .text("Cancel"), action: .main(viewModel.onCloseButtonTapped))
                 }
                 .padding(16)
             }

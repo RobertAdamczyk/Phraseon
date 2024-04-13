@@ -1,8 +1,8 @@
 //
 //  AppButton.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 13.12.23.
+//  Created by Robert Adamczyk on 13.04.24.
 //
 
 import SwiftUI
@@ -10,7 +10,8 @@ import Lottie
 
 struct AppButton: View {
 
-    static let height: CGFloat = 54
+    static let height: CGFloat = 40
+    static let authenticationProviderButtonHeight: CGFloat = 54
 
     let style: Style
     let action: Action
@@ -48,23 +49,9 @@ struct AppButton: View {
     private func makeBody() -> some View {
         switch style {
         case .fill(let text, _):
-            ZStack {
-                Text(text)
-                    .opacity(loading ? 0 : 1)
-                if loading {
-                    LottieView(animation: .named("buttonLoadingAnimation"))
-                        .playing(loopMode: .loop)
-                        .scaleEffect(2)
-                        .frame(width: 200, height: Self.height) // need for macos
-                        .transition(.opacity)
-                }
-            }
-            .apply(.medium, size: .L, color: .black)
-            .frame(height: Self.height)
-            .frame(maxWidth: .infinity, alignment: .center)
-            .background {
-                makeBackground()
-            }
+            makeFillButton(text: text, width: nil, height: Self.height)
+        case .authentication(let text, _):
+            makeFillButton(text: text, width: .infinity, height: Self.authenticationProviderButtonHeight)
         case .text(let text):
             Text(text)
                 .apply(.medium, size: .L, color: .paleOrange)
@@ -72,9 +59,39 @@ struct AppButton: View {
     }
 
     @ViewBuilder
+    private func makeFillButton(text: String, width: CGFloat?, height: CGFloat?) -> some View {
+        ZStack {
+            Text(text)
+                .padding(.horizontal, 32)
+                .opacity(loading ? 0 : 1)
+            if loading {
+                LottieView(animation: .named("buttonLoadingAnimation"))
+                    .playing(loopMode: .loop)
+                    .scaleEffect(3)
+                    .frame(width: 50, height: height)
+                    .transition(.opacity)
+            }
+        }
+        .apply(.medium, size: .M, color: .black)
+        .frame(maxWidth: width)
+        .frame(height: height)
+        .background {
+            makeBackground()
+        }
+    }
+
+    @ViewBuilder
     private func makeBackground() -> some View {
         switch style {
         case .fill(_, let color):
+            if !isEnabled {
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(appColor(.lightGray))
+            } else {
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(color.rawValue.gradient)
+            }
+        case .authentication(_, let color):
             if !isEnabled {
                 RoundedRectangle(cornerRadius: 16)
                     .fill(appColor(.lightGray))
@@ -91,6 +108,7 @@ struct AppButton: View {
 extension AppButton {
 
     enum Style {
+        case authentication(String, BackgroundColor)
         case fill(String, BackgroundColor)
         case text(String)
     }
@@ -98,11 +116,13 @@ extension AppButton {
     enum BackgroundColor {
         case paleOrange
         case lightBlue
+        case lightGray
 
         var rawValue: Color {
             switch self {
             case .paleOrange: return appColor(.paleOrange)
             case .lightBlue: return appColor(.lightBlue)
+            case .lightGray: return appColor(.lightGray)
             }
         }
     }

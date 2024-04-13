@@ -12,12 +12,24 @@ struct ForgetPasswordView: View {
     @ObservedObject var viewModel: ForgetPasswordViewModel
 
     var body: some View {
-        ScrollView {
-            content
-                .scenePadding()
+        NavigationStack {
+            VStack(spacing: 16) {
+                ScrollView {
+                    content
+                }
+                Spacer()
+                HStack(spacing: 16) {
+                    Spacer()
+                    AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCancelTapped))
+                    AppButton(style: .fill("Send Email", .lightBlue), action: .async(viewModel.onSendEmailTapped))
+                }
+            }
+            .padding(16)
+            .navigationTitle("Restore Password")
         }
-        .applyViewBackground()
         .presentationMinimalFrame()
+        .applyViewBackground()
+
     }
 
     private var content: some View {
@@ -26,10 +38,6 @@ struct ForgetPasswordView: View {
                      subtitle: "Type your email address and we will send you a link to reset your password.")
             AppTextField(type: .email, text: $viewModel.email)
             ValidationView(validationHandler: viewModel.emailValidationHandler)
-            VStack(spacing: 16) {
-                AppButton(style: .fill("Send Email", .lightBlue), action: .async(viewModel.onSendEmailTapped))
-                AppButton(style: .text("Cancel"), action: .main(viewModel.onCancelTapped))
-            }
         }
     }
 }

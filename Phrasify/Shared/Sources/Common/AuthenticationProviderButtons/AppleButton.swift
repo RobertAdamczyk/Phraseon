@@ -18,7 +18,11 @@ struct AppleButton: View {
                               onRequest: onRequest,
                               onCompletion: onCompletion)
         .signInWithAppleButtonStyle(.white)
+        #if os(iOS)
         .frame(height: AppButton.height)
+        #else
+        .frame(height: AppButton.authenticationProviderButtonHeight)
+        #endif
         .clipShape(.rect(cornerRadius: 16))
     }
 }

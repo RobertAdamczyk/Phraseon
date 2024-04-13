@@ -47,8 +47,8 @@ struct ProfileView: View {
             }
             HStack(spacing: 16) {
                 Spacer()
-                Button("Delete Account...", action: viewModel.onDeleteAccountTapped)
-                Button("Logout", action: viewModel.onLogoutTapped)
+                AppButton(style: .fill("Delete Account", .lightGray), action: .main(viewModel.onDeleteAccountTapped))
+                AppButton(style: .fill("Logout", .lightBlue), action: .main(viewModel.onLogoutTapped))
             }
             .padding(32)
         }

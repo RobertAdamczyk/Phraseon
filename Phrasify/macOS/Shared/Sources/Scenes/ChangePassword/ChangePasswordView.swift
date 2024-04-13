@@ -22,9 +22,12 @@ struct ChangePasswordView: View {
                     default: content
                     }
                 }
-                VStack(spacing: 16) {
+                HStack(spacing: 16) {
+                    Spacer()
+                    if viewModel.shouldShowCancelButton {
+                        AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCancelButtonTapped))
+                    }
                     AppButton(style: .fill(viewModel.utility.primaryButtonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
-                    AppButton(style: .text("Cancel"), action: .main(viewModel.onCancelButtonTapped))
                 }
                 .padding(16)
             }

@@ -34,9 +34,12 @@ struct CreateProjectView: View {
                 AppTextField(type: .projectName, text: $viewModel.projectName)
             }
             Spacer()
-            AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped))
-                .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
-            AppButton(style: .text("Cancel"), action: .main(viewModel.onCloseButtonTapped))
+            HStack(spacing: 16) {
+                Spacer()
+                AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
+                AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped))
+                    .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
+            }
         }
         .padding(16)
     }

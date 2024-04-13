@@ -30,10 +30,11 @@ struct SelectBaseLanguageView: View {
                 }
                 .padding(16)
             }
-            VStack(spacing: 16) {
+            HStack(spacing: 16) {
+                Spacer()
+                AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
                 AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSaveButtonTapped))
                     .disabled(viewModel.utility.shouldButtonDisabled)
-                AppButton(style: .text("Cancel"), action: .main(viewModel.onCloseButtonTapped))
             }
             .padding(16)
         }
