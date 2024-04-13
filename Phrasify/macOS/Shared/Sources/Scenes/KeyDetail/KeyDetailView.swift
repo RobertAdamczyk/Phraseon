@@ -71,26 +71,42 @@ struct KeyDetailView: View {
         VStack(alignment: .leading, spacing: 16) {
             LanguageView(language: language, isBaseLanguage: viewModel.project.baseLanguage == language)
             VStack(alignment: .trailing, spacing: 12) {
-                Text(translation ?? "No translation into the language.")
-                    .apply(.regular, size: .S, color: .white)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                if viewModel.isLanguageEditing == language {
+                    TextField("", text: $viewModel.phraseEditingContent)
+                        .apply(.regular, size: .S, color: .white)
+                        .textFieldStyle(.roundedBorder)
+                } else {
+                    Text(translation ?? "No translation into the language.")
+                        .apply(.regular, size: .S, color: .white)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
                 HStack(spacing: 16) {
 
                     if let keyStatus = viewModel.key.status[language.rawValue], viewModel.utility.shouldShowApproveButton {
                         if keyStatus == .review && viewModel.member?.hasPermissionToApproveKey == true {
-                            ApproveButton(language: language, action: viewModel.utility.onApproveTapped)
+                            ApproveButton(text: "Approve", language: language,
+                                          action: viewModel.utility.onApproveTapped)
                         } else {
                             Text(keyStatus.localizedTitle)
                                 .apply(.regular, size: .S, color: .lightGray)
                         }
                     }
 
-                    if viewModel.member?.hasPermissionToEditContentKey == true {
-                        makeEditButton(for: language)
-                    }
-                    if let translation {
-                        makeCopyButton(for: translation)
+                    if viewModel.isLanguageEditing == language {
+                        HStack(spacing: 8) {
+                            ApproveButton(text: "Cancel", language: language,
+                                          action: viewModel.onCancelEditingTapped)
+                            ApproveButton(text: "Save", language: language,
+                                          action: viewModel.onUpdatePhraseContentTapped)
+                        }
+                    } else {
+                        if viewModel.member?.hasPermissionToEditContentKey == true {
+                            makeEditButton(for: language)
+                        }
+                        if let translation {
+                            makeCopyButton(for: translation)
+                        }
                     }
                 }
             }

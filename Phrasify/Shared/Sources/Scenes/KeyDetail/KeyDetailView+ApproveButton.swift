@@ -13,6 +13,7 @@ extension KeyDetailView {
 
     struct ApproveButton: View {
 
+        let text: String
         let language: Language
         let action: (Language) async -> Void
 
@@ -20,11 +21,12 @@ extension KeyDetailView {
 
         var body: some View {
             Button(action: executeAction) {
-                Text("Approve")
+                Text(text)
                     .apply(.regular, size: .S, color: .black)
                     .opacity(isLoading ? 0 : 1)
                     .padding(4)
                     .padding(.horizontal, 4)
+                    .frame(minWidth: 75)
                     .background {
                         RoundedRectangle(cornerRadius: 8)
                             .fill(appColor(.paleOrange).gradient)

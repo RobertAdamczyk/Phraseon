@@ -79,7 +79,8 @@ struct KeyDetailView: View {
 
                     if let keyStatus = viewModel.key.status[language.rawValue], viewModel.utility.shouldShowApproveButton {
                         if keyStatus == .review && viewModel.member?.hasPermissionToApproveKey == true {
-                            ApproveButton(language: language, action: viewModel.utility.onApproveTapped)
+                            ApproveButton(text: "Approve", language: language,
+                                          action: viewModel.utility.onApproveTapped)
                         } else {
                             Text(keyStatus.localizedTitle)
                                 .apply(.regular, size: .S, color: .lightGray)

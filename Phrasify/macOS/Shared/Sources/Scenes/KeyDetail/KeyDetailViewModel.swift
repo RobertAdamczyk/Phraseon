@@ -17,6 +17,9 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
     @Published var key: Key
     @Published var member: Member?
 
+    @Published var isLanguageEditing: Language?
+    @Published var phraseEditingContent: String = ""
+
     var utility: Utility {
         .init(coordinator: coordinator, project: project, key: key)
     }
@@ -42,11 +45,32 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
     }
 
     func onEditTranslationTapped(language: Language) {
-        // coordinator.showEditContentKey(language: language, key: key, project: project)
+        phraseEditingContent = key.translation[language.rawValue] ?? ""
+        isLanguageEditing = language
     }
 
     func onDeleteTapped() {
         // coordinator.showDeleteKeyWarning(project: project, key: key)
+    }
+
+    @MainActor
+    func onUpdatePhraseContentTapped(language: Language) async {
+        do {
+            guard let projectId = project.id, let keyId = key.id else { return }
+            try await coordinator.dependencies.cloudRepository.changeContentKey(.init(projectId: projectId,
+                                                                                      keyId: keyId,
+                                                                                      language: language,
+                                                                                      translation: phraseEditingContent))
+            isLanguageEditing = nil
+            ToastView.showSuccess(message: "Phrase content updated successfully.")
+        } catch {
+            ToastView.showGeneralError()
+        }
+    }
+
+    @MainActor
+    func onCancelEditingTapped(language: Language) async {
+        isLanguageEditing = nil
     }
 
     private func setupKeySubscriber() {
