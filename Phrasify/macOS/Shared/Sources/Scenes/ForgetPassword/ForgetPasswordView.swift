@@ -27,7 +27,7 @@ struct ForgetPasswordView: View {
             .padding(16)
             .navigationTitle("Restore Password")
         }
-        .presentationMinimalFrame()
+        .presentationFrame(.standard)
         .applyViewBackground()
 
     }

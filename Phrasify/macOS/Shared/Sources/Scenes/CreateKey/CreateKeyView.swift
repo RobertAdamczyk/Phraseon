@@ -42,7 +42,7 @@ struct CreateKeyView: View {
             .navigationTitle("Add phrase")
         }
         .onAppear(perform: makeTextFieldFocused)
-        .presentationMinimalFrame()
+        .presentationFrame(.standard)
         .applyViewBackground()
     }
 

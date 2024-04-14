@@ -36,7 +36,7 @@ struct ProfileNameView: View {
         }
         .onAppear(perform: focusNameTextField)
         .applyViewBackground()
-        .presentationMinimalFrame()
+        .presentationFrame(.standard)
     }
 
     private func focusNameTextField() {

@@ -9,8 +9,33 @@ import SwiftUI
 
 extension View {
 
-    func presentationMinimalFrame() -> some View {
-        self
-            .frame(minWidth: 700, minHeight: 500) // TODO: Maybe ideal frame ?
+    func presentationFrame(_ size: SheetSizer.Size) -> some View {
+        modifier(SheetSizer(size: size))
+    }
+}
+
+struct SheetSizer: ViewModifier {
+
+    enum Size {
+        case standard
+        case warning
+    }
+
+    fileprivate init(size: Size) {
+        self.size = size
+    }
+
+    let size: Size
+
+    func body(content: Content) -> some View {
+        switch size {
+        case .standard:
+            content
+                .frame(minWidth: 700, minHeight: 500)
+        case .warning:
+            content
+                .frame(minWidth: 300, minHeight: 200)
+                .frame(maxWidth: 500, maxHeight: 400)
+        }
     }
 }

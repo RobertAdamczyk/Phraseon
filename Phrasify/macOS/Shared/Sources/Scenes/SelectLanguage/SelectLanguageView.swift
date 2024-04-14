@@ -27,7 +27,7 @@ struct SelectLanguageView: View {
         .padding(16)
         .navigationTitle("Languages")
         .applyViewBackground()
-        .presentationMinimalFrame()
+        .presentationFrame(.standard)
     }
 
     @ViewBuilder

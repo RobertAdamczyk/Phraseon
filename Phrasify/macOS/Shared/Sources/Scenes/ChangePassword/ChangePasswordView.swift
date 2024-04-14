@@ -35,7 +35,7 @@ struct ChangePasswordView: View {
         }
         .onAppear(perform: setCurrentPasswordFocus)
         .applyViewBackground()
-        .presentationMinimalFrame()
+        .presentationFrame(.standard)
     }
 
     private var content: some View {

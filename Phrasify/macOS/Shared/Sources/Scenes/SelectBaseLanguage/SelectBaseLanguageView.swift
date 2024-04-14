@@ -40,7 +40,7 @@ struct SelectBaseLanguageView: View {
         }
         .navigationTitle("Base language")
         .applyViewBackground()
-        .presentationMinimalFrame()
+        .presentationFrame(.standard)
     }
 
     private func makeLanguageRow(for language: Language) -> some View {

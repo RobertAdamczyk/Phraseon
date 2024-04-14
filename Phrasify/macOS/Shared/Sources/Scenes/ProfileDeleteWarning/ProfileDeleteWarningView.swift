@@ -37,7 +37,7 @@ struct ProfileDeleteWarningView: View {
                 }
             }
         }
-        .presentationMinimalFrame()
+        .presentationFrame(.standard)
     }
 
     @ViewBuilder
@@ -51,6 +51,7 @@ struct ProfileDeleteWarningView: View {
                 .foregroundStyle(appColor(.paleOrange))
             Text(viewModel.informationPageTitle)
                 .apply(.bold, size: .H1, color: .white)
+            Spacer()
             VStack(alignment: .leading, spacing: 8) {
                 Label(viewModel.informationPageDescription, systemImage: "1.circle")
                     .fixedSize(horizontal: false, vertical: true)
@@ -77,6 +78,7 @@ struct ProfileDeleteWarningView: View {
                 .foregroundStyle(appColor(.paleOrange))
             Text(viewModel.deletionPageTitle)
                 .apply(.bold, size: .H1, color: .white)
+            Spacer()
             VStack(alignment: .leading, spacing: 8) {
                 Label(viewModel.deletionPageDescription1, systemImage: "1.circle")
                     .fixedSize(horizontal: false, vertical: true)

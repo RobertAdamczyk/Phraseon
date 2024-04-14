@@ -27,7 +27,7 @@ struct SelectTechnologyView: View {
         .padding(16)
         .navigationTitle("Technologies")
         .applyViewBackground()
-        .presentationMinimalFrame()
+        .presentationFrame(.standard)
     }
 
     @ViewBuilder
