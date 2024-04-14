@@ -71,6 +71,12 @@ extension ProjectCoordinator: ProjectDetailActions {
         let view: NavigationView = .keyDetail(viewModel: viewModel)
         self.navigationViews.append(view)
     }
+
+    func showDeleteKeyWarning(project: Project, key: Key) {
+        let viewModel = DeleteKeyWarningViewModel(coordinator: self, project: project, key: key)
+        let sheet: Sheet = .deleteKeyWarning(viewModel: viewModel)
+        self.presentedSheet = sheet
+    }
 }
 
 extension ProjectCoordinator {
@@ -99,11 +105,13 @@ extension ProjectCoordinator {
     enum Sheet: Identifiable {
         case createProject
         case createKey(viewModel: CreateKeyViewModel)
+        case deleteKeyWarning(viewModel: DeleteKeyWarningViewModel)
 
         var id: String {
             switch self {
             case .createProject: return "001"
             case .createKey: return "002"
+            case .deleteKeyWarning: return "003"
             }
         }
     }

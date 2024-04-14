@@ -12,7 +12,7 @@ import Domain
 
 final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
 
-    typealias KeyDetailCoordinator = Coordinator
+    typealias KeyDetailCoordinator = Coordinator & ProjectDetailActions
 
     @Published var key: Key
     @Published var member: Member?
@@ -50,7 +50,7 @@ final class KeyDetailViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
     }
 
     func onDeleteTapped() {
-        // coordinator.showDeleteKeyWarning(project: project, key: key)
+        coordinator.showDeleteKeyWarning(project: project, key: key)
     }
 
     @MainActor

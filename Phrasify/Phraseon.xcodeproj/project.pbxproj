@@ -560,6 +560,9 @@
 		55EFFE352BC9A09B00BD91EA /* KeyDetailView+ApproveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A1F2B58798D00A77F21 /* KeyDetailView+ApproveButton.swift */; };
 		55EFFE362BC9A0BA00BD91EA /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CA73F2B4EFE0C00A6C3D2 /* LanguageView.swift */; };
 		55EFFE382BCA8FBD00BD91EA /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFFE372BCA8FBD00BD91EA /* AppButton.swift */; };
+		55EFFE392BCC297F00BD91EA /* StandardWarningProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7F22B55E6F100806B4F /* StandardWarningProtocol.swift */; };
+		55EFFE3C2BCC29AA00BD91EA /* StandardWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFFE3B2BCC29AA00BD91EA /* StandardWarningView.swift */; };
+		55EFFE3E2BCC29E900BD91EA /* DeleteKeyWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7EB2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift */; };
 		55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FD140B2B97BD90006DA3E4 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14092B97BD90006DA3E4 /* AppleButton.swift */; };
@@ -864,6 +867,7 @@
 		55EFFE2F2BC99D8500BD91EA /* KeyDetailViewModel+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyDetailViewModel+Utility.swift"; sourceTree = "<group>"; };
 		55EFFE332BC9A06600BD91EA /* KeyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailView.swift; sourceTree = "<group>"; };
 		55EFFE372BCA8FBD00BD91EA /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		55EFFE3B2BCC29AA00BD91EA /* StandardWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardWarningView.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FD14092B97BD90006DA3E4 /* AppleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 		55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
@@ -999,19 +1003,10 @@
 			path = ProjectIntegration;
 			sourceTree = "<group>";
 		};
-		5505C7E72B55DD9600806B4F /* DeleteKeyWarning */ = {
-			isa = PBXGroup;
-			children = (
-				5505C7EB2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift */,
-			);
-			path = DeleteKeyWarning;
-			sourceTree = "<group>";
-		};
 		5505C7EE2B55E6CC00806B4F /* StandardWarningView */ = {
 			isa = PBXGroup;
 			children = (
 				5505C7EF2B55E6D800806B4F /* StandardWarningView.swift */,
-				5505C7F22B55E6F100806B4F /* StandardWarningProtocol.swift */,
 			);
 			path = StandardWarningView;
 			sourceTree = "<group>";
@@ -1258,6 +1253,7 @@
 		553FD2742BA5027500461FEA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55EFFE3A2BCC299C00BD91EA /* StandardWarningView */,
 				55E4FB3A2BB4EFF100D6D6DA /* PresentationFrame */,
 				55E4FB242BB4E00E00D6D6DA /* MenuItem */,
 				55AEA74A2BB0BA9100710E99 /* Toolbar */,
@@ -1730,6 +1726,7 @@
 		55BC7BAF2BA2666D00801465 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				55EFFE3D2BCC29BA00BD91EA /* StandardWarningView */,
 				552CA73E2B4EFDFC00A6C3D2 /* LanguageView */,
 				5561C5C22B65A75300C815BC /* SelectableCircle */,
 				551AA4182B33664800F0B1E2 /* Layout */,
@@ -2106,6 +2103,7 @@
 		55E4FB492BB6035400D6D6DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55EFFE3F2BCC466C00BD91EA /* DeleteKeyWarning */,
 				55EFFE2E2BC99D6800BD91EA /* KeyDetail */,
 				55EB392F2BC88C3300E3FC2E /* CreateKey */,
 				55EF971B2BC73CE600330D00 /* EnterContentKey */,
@@ -2262,6 +2260,30 @@
 			path = KeyDetail;
 			sourceTree = "<group>";
 		};
+		55EFFE3A2BCC299C00BD91EA /* StandardWarningView */ = {
+			isa = PBXGroup;
+			children = (
+				55EFFE3B2BCC29AA00BD91EA /* StandardWarningView.swift */,
+			);
+			path = StandardWarningView;
+			sourceTree = "<group>";
+		};
+		55EFFE3D2BCC29BA00BD91EA /* StandardWarningView */ = {
+			isa = PBXGroup;
+			children = (
+				5505C7F22B55E6F100806B4F /* StandardWarningProtocol.swift */,
+			);
+			path = StandardWarningView;
+			sourceTree = "<group>";
+		};
+		55EFFE3F2BCC466C00BD91EA /* DeleteKeyWarning */ = {
+			isa = PBXGroup;
+			children = (
+				5505C7EB2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift */,
+			);
+			path = DeleteKeyWarning;
+			sourceTree = "<group>";
+		};
 		55FD14082B97BD90006DA3E4 /* AuthenticationProviderButtons */ = {
 			isa = PBXGroup;
 			children = (
@@ -2296,7 +2318,6 @@
 		55FF42632B2B912300F4D523 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5505C7E72B55DD9600806B4F /* DeleteKeyWarning */,
 				5505C7E02B55C30300806B4F /* ProjectIntegration */,
 				559E2D542B4DEB920009A25A /* KeyDetail */,
 				558B74642B4DCE120041635A /* DeleteMemberWarning */,
@@ -3054,6 +3075,7 @@
 				55EB39382BC8912300E3FC2E /* ProjectDetailViewModel.swift in Sources */,
 				553FD2812BA5036500461FEA /* RootCoordinator+RootView.swift in Sources */,
 				55E4FB692BB807FA00D6D6DA /* CreateProjectViewModel+Utility.swift in Sources */,
+				55EFFE3C2BCC29AA00BD91EA /* StandardWarningView.swift in Sources */,
 				55E4FB232BB4CC1F00D6D6DA /* ProjectCoordinator.swift in Sources */,
 				55E4FB642BB6AB7D00D6D6DA /* SelectLanguageViewModel+Context.swift in Sources */,
 				55E4FB212BB4CBF200D6D6DA /* ProjectCoordinator+RootView.swift in Sources */,
@@ -3070,6 +3092,7 @@
 				553B6C962BC4946700C0C7AD /* KeyStatus+UI.swift in Sources */,
 				553B6C982BC4947C00C0C7AD /* HighlightedString+extractedText.swift in Sources */,
 				553FD28B2BA638E500461FEA /* LoginViewModel.swift in Sources */,
+				55EFFE3E2BCC29E900BD91EA /* DeleteKeyWarningViewModel.swift in Sources */,
 				55EFFE322BC99D8500BD91EA /* KeyDetailViewModel+Utility.swift in Sources */,
 				553FD2722BA4F52900461FEA /* CellBackground.swift in Sources */,
 				55EFFE352BC9A09B00BD91EA /* KeyDetailView+ApproveButton.swift in Sources */,
@@ -3091,6 +3114,7 @@
 				553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */,
 				55E4FB0E2BB20DCB00D6D6DA /* Technology+UI.swift in Sources */,
 				55EFFE2D2BC99CCC00BD91EA /* KeyDetailViewModel.swift in Sources */,
+				55EFFE392BCC297F00BD91EA /* StandardWarningProtocol.swift in Sources */,
 				559F2A0F2BC2119F00384CDC /* ProfileNameViewModel.swift in Sources */,
 				553B6C942BC4944F00C0C7AD /* ProjectDetailView+KeyRow.swift in Sources */,
 				559F2A2D2BC288CF00384CDC /* PaywallActions.swift in Sources */,

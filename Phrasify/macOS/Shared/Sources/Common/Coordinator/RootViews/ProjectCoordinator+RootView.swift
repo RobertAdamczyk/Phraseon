@@ -27,6 +27,7 @@ extension ProjectCoordinator {
                             switch $0 {
                             case .createProject: CreateProjectCoordinator.RootView(coordinator: projectCoordinator)
                             case .createKey(let viewModel): CreateKeyView(viewModel: viewModel)
+                            case .deleteKeyWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                             }
                         }
                     }
@@ -35,6 +36,7 @@ extension ProjectCoordinator {
                 switch $0 {
                 case .createProject: CreateProjectCoordinator.RootView(coordinator: projectCoordinator)
                 case .createKey(let viewModel): CreateKeyView(viewModel: viewModel)
+                case .deleteKeyWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                 }
             }
         }
