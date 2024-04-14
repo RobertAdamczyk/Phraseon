@@ -225,6 +225,9 @@
 		5574B33B2B6F114D00C9DFB9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5574B33A2B6F114D00C9DFB9 /* FirebaseStorage */; };
 		5574B33D2B6F115B00C9DFB9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5574B33C2B6F115B00C9DFB9 /* FirebaseFirestore */; };
 		5574B33F2B6F1F8400C9DFB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5574B33E2B6F1F8400C9DFB9 /* GoogleService-Info.plist */; };
+		557D36572BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D36562BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift */; };
+		557D36582BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D36562BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift */; };
+		557D36592BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D36562BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift */; };
 		557F64EC2B9E745A00D6A791 /* MockFirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557F64EB2B9E745A00D6A791 /* MockFirestoreRepository.swift */; };
 		558074412B2CF08E0041160B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
 		558074422B2CF08E0041160B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558074402B2CF08E0041160B /* Roboto-Medium.ttf */; };
@@ -563,6 +566,8 @@
 		55EFFE392BCC297F00BD91EA /* StandardWarningProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7F22B55E6F100806B4F /* StandardWarningProtocol.swift */; };
 		55EFFE3C2BCC29AA00BD91EA /* StandardWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFFE3B2BCC29AA00BD91EA /* StandardWarningView.swift */; };
 		55EFFE3E2BCC29E900BD91EA /* DeleteKeyWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7EB2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift */; };
+		55EFFE442BCC496300BD91EA /* ProjectSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFFE432BCC496300BD91EA /* ProjectSettingsView.swift */; };
+		55EFFE462BCC49A500BD91EA /* ProjectSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFFE452BCC49A500BD91EA /* ProjectSettingsViewModel.swift */; };
 		55FB5F602B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FB5F612B3E31D7004D3720 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */; };
 		55FD140B2B97BD90006DA3E4 /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD14092B97BD90006DA3E4 /* AppleButton.swift */; };
@@ -726,6 +731,7 @@
 		5570FF552B61B2920011208F /* PaywallCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		5574B3282B6F0D3900C9DFB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5574B33E2B6F1F8400C9DFB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		557D36562BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectSettingsView+SettingsItem.swift"; sourceTree = "<group>"; };
 		557F64EB2B9E745A00D6A791 /* MockFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestoreRepository.swift; sourceTree = "<group>"; };
 		558074402B2CF08E0041160B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		5580744D2B2E341B0041160B /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
@@ -868,6 +874,8 @@
 		55EFFE332BC9A06600BD91EA /* KeyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailView.swift; sourceTree = "<group>"; };
 		55EFFE372BCA8FBD00BD91EA /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		55EFFE3B2BCC29AA00BD91EA /* StandardWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardWarningView.swift; sourceTree = "<group>"; };
+		55EFFE432BCC496300BD91EA /* ProjectSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsView.swift; sourceTree = "<group>"; };
+		55EFFE452BCC49A500BD91EA /* ProjectSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsViewModel.swift; sourceTree = "<group>"; };
 		55FB5F5F2B3E31D7004D3720 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		55FD14092B97BD90006DA3E4 /* AppleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 		55FD140A2B97BD90006DA3E4 /* GoogleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
@@ -1228,6 +1236,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55EFFE422BCC495800BD91EA /* ProjectSettings */,
 				55EFFE2B2BC99CC100BD91EA /* KeyDetail */,
 				55EF97292BC741FB00330D00 /* CreateKey */,
 				55EF97102BC7347C00330D00 /* ProjectDetail */,
@@ -1501,6 +1510,14 @@
 				5505C7D92B55BAEB00806B4F /* syncScript.txt */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		557D36552BCC580B0074DA60 /* ProjectSettings */ = {
+			isa = PBXGroup;
+			children = (
+				557D36562BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift */,
+			);
+			path = ProjectSettings;
 			sourceTree = "<group>";
 		};
 		557F64EA2B9E73A900D6A791 /* Mocks */ = {
@@ -2103,6 +2120,7 @@
 		55E4FB492BB6035400D6D6DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				557D36552BCC580B0074DA60 /* ProjectSettings */,
 				55EFFE3F2BCC466C00BD91EA /* DeleteKeyWarning */,
 				55EFFE2E2BC99D6800BD91EA /* KeyDetail */,
 				55EB392F2BC88C3300E3FC2E /* CreateKey */,
@@ -2282,6 +2300,15 @@
 				5505C7EB2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift */,
 			);
 			path = DeleteKeyWarning;
+			sourceTree = "<group>";
+		};
+		55EFFE422BCC495800BD91EA /* ProjectSettings */ = {
+			isa = PBXGroup;
+			children = (
+				55EFFE432BCC496300BD91EA /* ProjectSettingsView.swift */,
+				55EFFE452BCC49A500BD91EA /* ProjectSettingsViewModel.swift */,
+			);
+			path = ProjectSettings;
 			sourceTree = "<group>";
 		};
 		55FD14082B97BD90006DA3E4 /* AuthenticationProviderButtons */ = {
@@ -2640,6 +2667,7 @@
 				5513C2522B325E7A004C1933 /* CreateProjectViewModel.swift in Sources */,
 				552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
 				5516EBD22B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
+				557D36572BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift in Sources */,
 				5505C7DE2B55BE5900806B4F /* SyncScript.swift in Sources */,
 				559F2A252BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */,
 				555458F62B8543C000DA097F /* PreviewCloudRepository.swift in Sources */,
@@ -2878,6 +2906,7 @@
 				5580744F2B2E341B0041160B /* ActivityView.swift in Sources */,
 				552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
 				5516EBD32B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
+				557D36582BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift in Sources */,
 				5505C7DF2B55BE5900806B4F /* SyncScript.swift in Sources */,
 				559F2A262BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */,
 				555458F72B8543C000DA097F /* PreviewCloudRepository.swift in Sources */,
@@ -3044,6 +3073,7 @@
 				55E4FB142BB371F400D6D6DA /* HomeCoordinator.swift in Sources */,
 				55EF443C2BAEF9E40005ACA5 /* ValidationErrorProtocol.swift in Sources */,
 				559F2A1B2BC282ED00384CDC /* ChangePasswordView.swift in Sources */,
+				557D36592BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift in Sources */,
 				55EF44382BAEF9390005ACA5 /* RegisterViewModel.swift in Sources */,
 				553FD28E2BA63DBA00461FEA /* AppDivider.swift in Sources */,
 				55E4FB2F2BB4E51000D6D6DA /* CreateProjectView.swift in Sources */,
@@ -3078,6 +3108,7 @@
 				55EFFE3C2BCC29AA00BD91EA /* StandardWarningView.swift in Sources */,
 				55E4FB232BB4CC1F00D6D6DA /* ProjectCoordinator.swift in Sources */,
 				55E4FB642BB6AB7D00D6D6DA /* SelectLanguageViewModel+Context.swift in Sources */,
+				55EFFE442BCC496300BD91EA /* ProjectSettingsView.swift in Sources */,
 				55E4FB212BB4CBF200D6D6DA /* ProjectCoordinator+RootView.swift in Sources */,
 				55E4FB2A2BB4E21100D6D6DA /* CreateProjectCoordinator.swift in Sources */,
 				55DE74342BA3AC560030C7C7 /* ViewBackground.swift in Sources */,
@@ -3116,6 +3147,7 @@
 				55EFFE2D2BC99CCC00BD91EA /* KeyDetailViewModel.swift in Sources */,
 				55EFFE392BCC297F00BD91EA /* StandardWarningProtocol.swift in Sources */,
 				559F2A0F2BC2119F00384CDC /* ProfileNameViewModel.swift in Sources */,
+				55EFFE462BCC49A500BD91EA /* ProjectSettingsViewModel.swift in Sources */,
 				553B6C942BC4944F00C0C7AD /* ProjectDetailView+KeyRow.swift in Sources */,
 				559F2A2D2BC288CF00384CDC /* PaywallActions.swift in Sources */,
 				559F2A0C2BC2103D00384CDC /* ProfileNameView.swift in Sources */,

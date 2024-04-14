@@ -21,7 +21,7 @@ struct ProfileView: View {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 32) {
                     //ImageView(viewModel: viewModel)
-                    VStack(alignment: .leading, spacing: 16) {
+                    VStack(alignment: .leading, spacing: 32) {
                         Text("Personal Info")
                             .apply(.medium, size: .M, color: .lightGray)
                         makeProfileRow(for: .email, value: viewModel.user.currentValue?.email ?? "-")
@@ -34,7 +34,7 @@ struct ProfileView: View {
                         })
                         .buttonStyle(.plain)
                     }
-                    VStack(alignment: .leading, spacing: 16) {
+                    VStack(alignment: .leading, spacing: 32) {
                         Text("Subscription")
                             .apply(.medium, size: .M, color: .lightGray)
                         Button(action: viewModel.onMembershipTapped, label: {

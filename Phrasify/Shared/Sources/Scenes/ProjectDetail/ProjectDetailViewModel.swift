@@ -106,9 +106,7 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
     }
 
     func onSettingsTapped() {
-        #if os(iOS)
         coordinator.showProjectSettings(projectUseCase: projectUseCase, projectMemberUseCase: projectMemberUseCase)
-        #endif
     }
 
     func onKeyTapped(_ key: Key) {

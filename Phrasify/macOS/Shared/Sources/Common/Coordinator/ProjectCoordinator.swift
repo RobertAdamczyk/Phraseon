@@ -77,6 +77,34 @@ extension ProjectCoordinator: ProjectDetailActions {
         let sheet: Sheet = .deleteKeyWarning(viewModel: viewModel)
         self.presentedSheet = sheet
     }
+
+    func showProjectSettings(projectUseCase: ProjectUseCase, projectMemberUseCase: ProjectMemberUseCase) {
+        let viewModel = ProjectSettingsViewModel(coordinator: self, projectUseCase: projectUseCase, projectMemberUseCase: projectMemberUseCase)
+        let view: NavigationView = .projectSettings(viewModel: viewModel)
+        self.navigationViews.append(view)
+    }
+}
+
+extension ProjectCoordinator: SelectLanguageActions {
+    func showSelectLanguage(name: String) {
+    }
+    
+    func showSelectedLanguages(project: Model.Project) {
+    }
+    
+    func showSelectBaseLanguage(name: String, languages: [Model.Language]) {
+    }
+    
+    func showSelectedBaseLanguage(project: Model.Project) {
+    }
+}
+
+extension ProjectCoordinator: SelectTechnologyActions {
+    func showSelectTechnology(name: String, languages: [Model.Language], baseLanguage: Model.Language) {
+    }
+    
+    func showSelectedTechnologies(project: Model.Project) {
+    }
 }
 
 extension ProjectCoordinator {
@@ -93,11 +121,13 @@ extension ProjectCoordinator {
 
         case projectDetail(viewModel: ProjectDetailViewModel)
         case keyDetail(viewModel: KeyDetailViewModel)
+        case projectSettings(viewModel: ProjectSettingsViewModel)
 
         var id: String {
             switch self {
             case .projectDetail: return "001"
             case .keyDetail: return "002"
+            case .projectSettings: return "003"
             }
         }
     }
