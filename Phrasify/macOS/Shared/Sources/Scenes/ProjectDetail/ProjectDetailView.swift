@@ -14,7 +14,7 @@ struct ProjectDetailView: View {
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            LazyVStack(alignment: .leading, spacing: 16) {
+            LazyVStack(alignment: .leading, spacing: 32) {
                 if viewModel.shouldShowPicker {
                     Picker("", selection: $viewModel.selectedKeysOrder) {
                         ForEach(KeysOrder.allCases, id: \.self) { bar in
@@ -64,6 +64,14 @@ struct ProjectDetailView: View {
         .overlay(alignment: .bottomTrailing, content: makeAddButton)
         .navigationTitle(viewModel.project.name)
         .applyViewBackground()
+        .toolbar {
+            ToolbarItem(placement: .destructiveAction) {
+                Button(action: viewModel.onSettingsTapped, label: {
+                    Image(systemName: "gearshape")
+                        .apply(.bold, size: .L, color: .white)
+                })
+            }
+        }
     }
 
     @ViewBuilder
