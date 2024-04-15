@@ -89,7 +89,10 @@ extension ProjectCoordinator: SelectLanguageActions {
     func showSelectLanguage(name: String) {
     }
     
-    func showSelectedLanguages(project: Model.Project) {
+    func showSelectedLanguages(project: Project) {
+        let viewModel = SelectLanguageViewModel(coordinator: self, context: .settings(project: project))
+        let view: NavigationView = .selectedLanguages(viewModel: viewModel)
+        self.navigationViews.append(view)
     }
     
     func showSelectBaseLanguage(name: String, languages: [Model.Language]) {
@@ -122,12 +125,14 @@ extension ProjectCoordinator {
         case projectDetail(viewModel: ProjectDetailViewModel)
         case keyDetail(viewModel: KeyDetailViewModel)
         case projectSettings(viewModel: ProjectSettingsViewModel)
+        case selectedLanguages(viewModel: SelectLanguageViewModel)
 
         var id: String {
             switch self {
             case .projectDetail: return "001"
             case .keyDetail: return "002"
             case .projectSettings: return "003"
+            case .selectedLanguages: return "004"
             }
         }
     }

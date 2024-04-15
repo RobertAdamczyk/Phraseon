@@ -24,7 +24,7 @@ struct SelectLanguageView: View {
             buttonView
                 .zIndex(3)
         }
-        .padding(16)
+        .padding(viewModel.isInNavigationStack ? 32 : 16)
         .navigationTitle("Languages")
         .applyViewBackground()
         .presentationFrame(.standard)
@@ -86,7 +86,7 @@ struct SelectLanguageView: View {
             AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
                 .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
         }
-        .padding(.top, 16)
+        .padding(.top, viewModel.isInNavigationStack ? 32 : 16)
     }
 
     @ViewBuilder
