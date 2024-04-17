@@ -14,7 +14,7 @@ struct ProjectDetailView: View {
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            LazyVStack(alignment: .leading, spacing: 32) {
+            LazyVStack(alignment: .leading, spacing: 24) {
                 if viewModel.shouldShowPicker {
                     Picker("", selection: $viewModel.selectedKeysOrder) {
                         ForEach(KeysOrder.allCases, id: \.self) { bar in

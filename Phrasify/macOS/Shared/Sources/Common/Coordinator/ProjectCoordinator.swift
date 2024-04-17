@@ -109,7 +109,7 @@ extension ProjectCoordinator: SelectTechnologyActions {
     func showSelectTechnology(name: String, languages: [Model.Language], baseLanguage: Model.Language) {
     }
     
-    func showSelectedTechnologies(project: Model.Project) {
+    func showSelectedTechnologies(project: Project) {
     }
 }
 

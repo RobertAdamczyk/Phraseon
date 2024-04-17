@@ -15,7 +15,7 @@ struct ProjectSettingsView: View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 32) {
-                    VStack(alignment: .leading, spacing: 32) {
+                    VStack(alignment: .leading, spacing: 24) {
                         Text("General")
                             .apply(.medium, size: .M, color: .lightGray)
                         Button(action: viewModel.onIntegrationTapped, label: {
@@ -41,7 +41,7 @@ struct ProjectSettingsView: View {
                         .buttonStyle(.plain)
                         .disabled(!(viewModel.member?.hasPermissionToChangeTechnologies == true))
                     }
-                    VStack(alignment: .leading, spacing: 32) {
+                    VStack(alignment: .leading, spacing: 24) {
                         Text("Users and permissions")
                             .apply(.medium, size: .M, color: .lightGray)
                         Button(action: viewModel.onMembersTapped, label: {
