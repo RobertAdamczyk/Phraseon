@@ -17,7 +17,7 @@ struct SelectBaseLanguageView: View {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 32) {
                     AppTitle(subtitle: "Set the base language for your project from the list of available languages. The base language serves as the primary reference for all translations.")
-                    VStack(spacing: 12) {
+                    VStack(spacing: viewModel.isInNavigationStack ? 24 : 12) {
                         ForEach(viewModel.utility.languages, id: \.self) { language in
                             Button(action: {
                                 viewModel.onLanguageTapped(language)
@@ -28,7 +28,7 @@ struct SelectBaseLanguageView: View {
                         }
                     }
                 }
-                .padding(16)
+                .padding(viewModel.isInNavigationStack ? 32 : 16)
             }
             HStack(spacing: 16) {
                 Spacer()
@@ -36,7 +36,7 @@ struct SelectBaseLanguageView: View {
                 AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSaveButtonTapped))
                     .disabled(viewModel.utility.shouldButtonDisabled)
             }
-            .padding(16)
+            .padding(viewModel.isInNavigationStack ? 32 : 16)
         }
         .navigationTitle("Base language")
         .applyViewBackground()

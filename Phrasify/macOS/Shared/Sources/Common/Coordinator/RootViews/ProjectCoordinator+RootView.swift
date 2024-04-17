@@ -23,6 +23,7 @@ extension ProjectCoordinator {
                             case .keyDetail(let viewModel): KeyDetailView(viewModel: viewModel)
                             case .projectSettings(let viewModel): ProjectSettingsView(viewModel: viewModel)
                             case .selectedLanguages(let viewModel): SelectLanguageView(viewModel: viewModel)
+                            case .selectBaseLanguage(let viewModel): SelectBaseLanguageView(viewModel: viewModel)
                             }
                         }
                         .sheet(item: $projectCoordinator.presentedSheet) {

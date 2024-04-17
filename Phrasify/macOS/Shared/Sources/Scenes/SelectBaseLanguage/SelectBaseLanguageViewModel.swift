@@ -19,6 +19,14 @@ final class SelectBaseLanguageViewModel: ObservableObject {
         .init(context: context, selectedBaseLanguage: selectedBaseLanguage)
     }
 
+    var isInNavigationStack: Bool {
+        if case .settings = context {
+            return true
+        } else {
+            return false
+        }
+    }
+
     private let coordinator: SelectBaseLanguageCoordinator
     private let context: Context
 
