@@ -24,7 +24,7 @@ struct SelectTechnologyView: View {
             buttonView
                 .zIndex(3)
         }
-        .padding(16)
+        .padding(viewModel.isInNavigationStack ? 32 : 16)
         .navigationTitle("Technologies")
         .applyViewBackground()
         .presentationFrame(.standard)
@@ -82,11 +82,13 @@ struct SelectTechnologyView: View {
     private var buttonView: some View {
         HStack(spacing: 16) {
             Spacer()
-            AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
+            if !viewModel.isInNavigationStack {
+                AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
+            }
             AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
                 .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
         }
-        .padding(.top, 16)
+        .padding(.top, viewModel.isInNavigationStack ? 32 : 16)
     }
 
     @ViewBuilder

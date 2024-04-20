@@ -110,6 +110,9 @@ extension ProjectCoordinator: SelectTechnologyActions {
     }
     
     func showSelectedTechnologies(project: Project) {
+        let viewModel = SelectTechnologyViewModel(coordinator: self, context: .settings(project: project))
+        let view: NavigationView = .selectedTechnologies(viewModel: viewModel)
+        self.navigationViews.append(view)
     }
 }
 
@@ -130,6 +133,7 @@ extension ProjectCoordinator {
         case projectSettings(viewModel: ProjectSettingsViewModel)
         case selectedLanguages(viewModel: SelectLanguageViewModel)
         case selectBaseLanguage(viewModel: SelectBaseLanguageViewModel)
+        case selectedTechnologies(viewModel: SelectTechnologyViewModel)
 
         var id: String {
             switch self {
@@ -138,6 +142,7 @@ extension ProjectCoordinator {
             case .projectSettings: return "003"
             case .selectedLanguages: return "004"
             case .selectBaseLanguage: return "005"
+            case .selectedTechnologies: return "006"
             }
         }
     }

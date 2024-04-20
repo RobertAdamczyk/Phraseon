@@ -32,7 +32,9 @@ struct SelectBaseLanguageView: View {
             }
             HStack(spacing: 16) {
                 Spacer()
-                AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
+                if !viewModel.isInNavigationStack {
+                    AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
+                }
                 AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSaveButtonTapped))
                     .disabled(viewModel.utility.shouldButtonDisabled)
             }

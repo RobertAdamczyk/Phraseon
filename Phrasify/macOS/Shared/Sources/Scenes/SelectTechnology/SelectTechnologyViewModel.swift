@@ -19,6 +19,14 @@ final class SelectTechnologyViewModel: ObservableObject {
         .init(selectedTechnologies: selectedTechnologies, context: context)
     }
 
+    var isInNavigationStack: Bool {
+        if case .settings = context {
+            return true
+        } else {
+            return false
+        }
+    }
+
     private let coordinator: SelectTechnologyCoordinator
     private let context: Context
 
