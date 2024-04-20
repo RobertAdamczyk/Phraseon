@@ -17,6 +17,10 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProt
     @Published internal var project: Project
     @Published internal var member: Member?
 
+    var utility: Utility {
+        .init(coordinator: coordinator)
+    }
+
     private let coordinator: ProjectSettingsCoordinator
     internal let projectMemberUseCase: ProjectMemberUseCase
     internal let projectUseCase: ProjectUseCase

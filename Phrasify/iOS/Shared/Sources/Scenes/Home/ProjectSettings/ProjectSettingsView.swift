@@ -45,7 +45,7 @@ struct ProjectSettingsView: View {
                         })
                         if viewModel.member?.hasPermissionToChangeOwner == true {
                             Button(action: viewModel.onOwnerTapped, label: {
-                                makeSettingsRow(for: .owner, value: "Robert Adamczyk")
+                                makeSettingsRow(for: .owner, value: viewModel.utility.ownerName)
                             })
                         }
                     }
