@@ -60,11 +60,11 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProt
     }
 
     func onLeaveProjectTapped() {
-//        if project.owner == coordinator.dependencies.authenticationRepository.userId {
-//            coordinator.showLeaveProjectInformation()
-//        } else {
-//            coordinator.showLeaveProjectWarning(project: project)
-//        }
+        if project.owner == coordinator.dependencies.authenticationRepository.userId {
+            coordinator.showLeaveProjectInformation()
+        } else {
+            coordinator.showLeaveProjectWarning(project: project)
+        }
     }
 
     func onDeleteProjectTapped() {

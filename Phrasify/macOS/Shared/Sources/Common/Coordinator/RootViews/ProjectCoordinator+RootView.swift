@@ -33,6 +33,8 @@ extension ProjectCoordinator {
                             case .createProject: CreateProjectCoordinator.RootView(coordinator: projectCoordinator)
                             case .createKey(let viewModel): CreateKeyView(viewModel: viewModel)
                             case .deleteKeyWarning(let viewModel): StandardWarningView(viewModel: viewModel)
+                            case .leaveProjectInformation(let viewModel): StandardInformationView(viewModel: viewModel)
+                            case .leaveProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                             }
                         }
                     }
@@ -42,6 +44,8 @@ extension ProjectCoordinator {
                 case .createProject: CreateProjectCoordinator.RootView(coordinator: projectCoordinator)
                 case .createKey(let viewModel): CreateKeyView(viewModel: viewModel)
                 case .deleteKeyWarning(let viewModel): StandardWarningView(viewModel: viewModel)
+                case .leaveProjectInformation(let viewModel): StandardInformationView(viewModel: viewModel)
+                case .leaveProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                 }
             }
         }

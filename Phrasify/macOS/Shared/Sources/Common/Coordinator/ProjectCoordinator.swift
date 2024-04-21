@@ -89,6 +89,18 @@ extension ProjectCoordinator: ProjectDetailActions {
         let view: NavigationView = .projectMembers(viewModel: viewModel)
         navigationViews.append(view)
     }
+
+    func showLeaveProjectInformation() {
+        let viewModel = LeaveProjectInformationViewModel(coordinator: self)
+        let sheet: Sheet = .leaveProjectInformation(viewModel: viewModel)
+        self.presentedSheet = sheet
+    }
+
+    func showLeaveProjectWarning(project: Project) {
+        let viewModel = LeaveProjectWarningViewModel(coordinator: self, project: project)
+        let sheet: Sheet = .leaveProjectWarning(viewModel: viewModel)
+        self.presentedSheet = sheet
+    }
 }
 
 extension ProjectCoordinator: SelectLanguageActions {
@@ -159,12 +171,16 @@ extension ProjectCoordinator {
         case createProject
         case createKey(viewModel: CreateKeyViewModel)
         case deleteKeyWarning(viewModel: DeleteKeyWarningViewModel)
+        case leaveProjectWarning(viewModel: LeaveProjectWarningViewModel)
+        case leaveProjectInformation(viewModel: LeaveProjectInformationViewModel)
 
         var id: String {
             switch self {
             case .createProject: return "001"
             case .createKey: return "002"
             case .deleteKeyWarning: return "003"
+            case .leaveProjectWarning: return "004"
+            case .leaveProjectInformation: return "005"
             }
         }
     }

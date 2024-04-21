@@ -16,4 +16,6 @@ protocol ProjectDetailActions {
     func showDeleteKeyWarning(project: Project, key: Key)
     func showProjectSettings(projectUseCase: ProjectUseCase, projectMemberUseCase: ProjectMemberUseCase)
     func showProjectMembers(project: Project, projectMemberUseCase: ProjectMemberUseCase)
+    func showLeaveProjectWarning(project: Project)
+    func showLeaveProjectInformation()
 }
