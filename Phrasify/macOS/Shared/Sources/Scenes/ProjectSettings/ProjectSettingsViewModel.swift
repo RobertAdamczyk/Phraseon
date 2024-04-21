@@ -12,7 +12,7 @@ import Domain
 
 final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProtocol, ProjectUseCaseProtocol {
 
-    typealias ProjectSettingsCoordinator = Coordinator & SelectLanguageActions & SelectTechnologyActions
+    typealias ProjectSettingsCoordinator = Coordinator & SelectLanguageActions & SelectTechnologyActions & ProjectDetailActions
 
     @Published internal var project: Project
     @Published internal var member: Member?
@@ -52,7 +52,7 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProt
     }
 
     func onMembersTapped() {
-        // coordinator.showProjectMembers(project: project, projectMemberUseCase: projectMemberUseCase)
+        coordinator.showProjectMembers(project: project, projectMemberUseCase: projectMemberUseCase)
     }
 
     func onOwnerTapped() {

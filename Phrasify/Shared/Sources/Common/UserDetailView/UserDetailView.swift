@@ -40,7 +40,7 @@ struct UserDetailView: View {
                     makeImage()
                 }
             }
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 8) {
                 if hasName {
                     Text(fullName)
                         .apply(.regular, size: .S, color: .white)
