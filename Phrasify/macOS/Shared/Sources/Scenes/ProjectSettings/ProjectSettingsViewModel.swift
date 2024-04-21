@@ -56,7 +56,7 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProt
     }
 
     func onOwnerTapped() {
-        // coordinator.showChangeProjectOwner(project: project)
+        coordinator.showChangeProjectOwner(project: project)
     }
 
     func onLeaveProjectTapped() {
@@ -71,5 +71,3 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProt
         coordinator.showDeleteProjectWarning(project: project)
     }
 }
-
-

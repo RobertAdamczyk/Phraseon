@@ -180,6 +180,8 @@
 		554A475A2BD527BB00A5F248 /* StandardInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7F92B55EEB900806B4F /* StandardInformationProtocol.swift */; };
 		554A475E2BD5282E00A5F248 /* StandardInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A475D2BD5282E00A5F248 /* StandardInformationView.swift */; };
 		554A475F2BD52A0300A5F248 /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
+		554A476C2BD52D1100A5F248 /* ChangeProjectOwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A476B2BD52D1100A5F248 /* ChangeProjectOwnerView.swift */; };
+		554A476E2BD52D1800A5F248 /* ChangeProjectOwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A476D2BD52D1800A5F248 /* ChangeProjectOwnerViewModel.swift */; };
 		554ADC002B9BB03C00775842 /* ProfileViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554ADBFF2B9BB03C00775842 /* ProfileViewModelTest.swift */; };
 		555458F02B85422300DA097F /* PreviewAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* PreviewAuthenticationRepository.swift */; };
 		555458F12B85422300DA097F /* PreviewAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* PreviewAuthenticationRepository.swift */; };
@@ -721,6 +723,8 @@
 		554A474F2BD3CC6100A5F248 /* ProjectMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersView.swift; sourceTree = "<group>"; };
 		554A47512BD3CC7700A5F248 /* ProjectMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMembersViewModel.swift; sourceTree = "<group>"; };
 		554A475D2BD5282E00A5F248 /* StandardInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardInformationView.swift; sourceTree = "<group>"; };
+		554A476B2BD52D1100A5F248 /* ChangeProjectOwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerView.swift; sourceTree = "<group>"; };
+		554A476D2BD52D1800A5F248 /* ChangeProjectOwnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerViewModel.swift; sourceTree = "<group>"; };
 		554ADBFF2B9BB03C00775842 /* ProfileViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTest.swift; sourceTree = "<group>"; };
 		555458EF2B85422300DA097F /* PreviewAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewAuthenticationRepository.swift; sourceTree = "<group>"; };
 		555458F22B8542DF00DA097F /* PreviewFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFirestoreRepository.swift; sourceTree = "<group>"; };
@@ -1238,6 +1242,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				554A47682BD52CEF00A5F248 /* ChangeProjectOwner */,
 				554A474E2BD3CC4F00A5F248 /* ProjectMembers */,
 				55EFFE422BCC495800BD91EA /* ProjectSettings */,
 				55EFFE2B2BC99CC100BD91EA /* KeyDetail */,
@@ -1380,6 +1385,15 @@
 				554A475D2BD5282E00A5F248 /* StandardInformationView.swift */,
 			);
 			path = StandardInformationView;
+			sourceTree = "<group>";
+		};
+		554A47682BD52CEF00A5F248 /* ChangeProjectOwner */ = {
+			isa = PBXGroup;
+			children = (
+				554A476B2BD52D1100A5F248 /* ChangeProjectOwnerView.swift */,
+				554A476D2BD52D1800A5F248 /* ChangeProjectOwnerViewModel.swift */,
+			);
+			path = ChangeProjectOwner;
 			sourceTree = "<group>";
 		};
 		555459092B854D8400DA097F /* PhraseonTests */ = {
@@ -3095,6 +3109,7 @@
 				55E4FB3F2BB5D91800D6D6DA /* SelectBaseLanguageView.swift in Sources */,
 				553B6C922BC4943800C0C7AD /* AlgoliaKey+toKey.swift in Sources */,
 				55EFFE362BC9A0BA00BD91EA /* LanguageView.swift in Sources */,
+				554A476E2BD52D1800A5F248 /* ChangeProjectOwnerViewModel.swift in Sources */,
 				55E4FB142BB371F400D6D6DA /* HomeCoordinator.swift in Sources */,
 				55EF443C2BAEF9E40005ACA5 /* ValidationErrorProtocol.swift in Sources */,
 				559F2A1B2BC282ED00384CDC /* ChangePasswordView.swift in Sources */,
@@ -3109,6 +3124,7 @@
 				55E4FB372BB4EB4A00D6D6DA /* SelectLanguageViewModel.swift in Sources */,
 				55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */,
 				55EF443D2BAEF9E60005ACA5 /* ValidationView.swift in Sources */,
+				554A476C2BD52D1100A5F248 /* ChangeProjectOwnerView.swift in Sources */,
 				553FD2902BA63EAD00461FEA /* GoogleButton.swift in Sources */,
 				55EF972B2BC7420400330D00 /* CreateKeyView.swift in Sources */,
 				553FD27D2BA502FD00461FEA /* StartCoordinator+RootView.swift in Sources */,
