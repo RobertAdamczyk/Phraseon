@@ -15,7 +15,6 @@ struct StandardWarningView<ViewModel: StandardWarningProtocol>: View {
         deletionPage
             .padding(16)
             .padding(.top, 16)
-            .presentationFrame(.warning)
             .interactiveDismissDisabled(viewModel.isLoading)
             .applyCellBackground()
     }
@@ -29,13 +28,9 @@ struct StandardWarningView<ViewModel: StandardWarningProtocol>: View {
                 .foregroundStyle(appColor(.paleOrange))
             Text(viewModel.title)
                 .apply(.bold, size: .H1, color: .white)
-            VStack(spacing: 8) {
-                Text(viewModel.subtitle)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .multilineTextAlignment(.center)
-            .apply(.regular, size: .S, color: .white)
-            Spacer(minLength: 0)
+            Text(viewModel.subtitle)
+                .multilineTextAlignment(.center)
+                .apply(.regular, size: .S, color: .white)
             HStack(spacing: 16) {
                 Spacer()
                 AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCancelTapped))

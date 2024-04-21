@@ -18,7 +18,6 @@ struct SheetSizer: ViewModifier {
 
     enum Size {
         case standard
-        case warning
     }
 
     fileprivate init(size: Size) {
@@ -32,10 +31,6 @@ struct SheetSizer: ViewModifier {
         case .standard:
             content
                 .frame(idealWidth: 700, idealHeight: 500)
-        case .warning:
-            content
-                .frame(minWidth: 300, minHeight: 200)
-                .frame(maxWidth: 500, maxHeight: 400)
         }
     }
 }

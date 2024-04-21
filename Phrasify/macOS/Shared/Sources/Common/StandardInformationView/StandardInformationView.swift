@@ -15,7 +15,6 @@ struct StandardInformationView<ViewModel: StandardInformationProtocol>: View {
         informationPage
             .padding(16)
             .padding(.top, 16)
-            .presentationFrame(.warning)
             .applyCellBackground()
     }
 
@@ -29,17 +28,13 @@ struct StandardInformationView<ViewModel: StandardInformationProtocol>: View {
                 .foregroundStyle(appColor(.paleOrange))
             Text(viewModel.title)
                 .apply(.bold, size: .H1, color: .white)
-            VStack(spacing: 8) {
-                Text(viewModel.subtitle)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .multilineTextAlignment(.center)
-            .apply(.regular, size: .S, color: .white)
+            Text(viewModel.subtitle)
+                .multilineTextAlignment(.center)
+                .apply(.regular, size: .S, color: .white)
             HStack {
                 Spacer()
                 AppButton(style: .fill("Understood", .lightBlue), action: .main(viewModel.onUnderstoodTapped))
             }
-            .padding(16)
         }
     }
 }
