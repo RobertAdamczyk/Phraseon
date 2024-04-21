@@ -35,6 +35,7 @@ extension ProjectCoordinator {
                             case .deleteKeyWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                             case .leaveProjectInformation(let viewModel): StandardInformationView(viewModel: viewModel)
                             case .leaveProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
+                            case .deleteProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                             }
                         }
                     }
@@ -46,6 +47,7 @@ extension ProjectCoordinator {
                 case .deleteKeyWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                 case .leaveProjectInformation(let viewModel): StandardInformationView(viewModel: viewModel)
                 case .leaveProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
+                case .deleteProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                 }
             }
         }

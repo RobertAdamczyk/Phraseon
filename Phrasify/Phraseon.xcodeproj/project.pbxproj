@@ -179,6 +179,7 @@
 		554A47592BD527A400A5F248 /* LeaveProjectInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7FC2B55F0AA00806B4F /* LeaveProjectInformationViewModel.swift */; };
 		554A475A2BD527BB00A5F248 /* StandardInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7F92B55EEB900806B4F /* StandardInformationProtocol.swift */; };
 		554A475E2BD5282E00A5F248 /* StandardInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A475D2BD5282E00A5F248 /* StandardInformationView.swift */; };
+		554A475F2BD52A0300A5F248 /* DeleteProjectWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B841472B4C7CA5007697AF /* DeleteProjectWarningViewModel.swift */; };
 		554ADC002B9BB03C00775842 /* ProfileViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554ADBFF2B9BB03C00775842 /* ProfileViewModelTest.swift */; };
 		555458F02B85422300DA097F /* PreviewAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* PreviewAuthenticationRepository.swift */; };
 		555458F12B85422300DA097F /* PreviewAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* PreviewAuthenticationRepository.swift */; };
@@ -2143,6 +2144,7 @@
 		55E4FB492BB6035400D6D6DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55B841432B4C7C88007697AF /* DeleteProjectWarning */,
 				55DE105A2B4B53E3001CB87F /* LeaveProject */,
 				557D36552BCC580B0074DA60 /* ProjectSettings */,
 				55EFFE3F2BCC466C00BD91EA /* DeleteKeyWarning */,
@@ -2373,7 +2375,6 @@
 				5505C7E02B55C30300806B4F /* ProjectIntegration */,
 				559E2D542B4DEB920009A25A /* KeyDetail */,
 				558B74642B4DCE120041635A /* DeleteMemberWarning */,
-				55B841432B4C7C88007697AF /* DeleteProjectWarning */,
 				55DE104C2B4AFCBA001CB87F /* ChangeProjectOwner */,
 				55DE10352B4AB3A0001CB87F /* SelectMemberRole */,
 				55DE10282B4A2898001CB87F /* InviteMember */,
@@ -3172,6 +3173,7 @@
 				55DFE43D2BA0FE1900061962 /* PhraseonApp.swift in Sources */,
 				55EF972D2BC7420B00330D00 /* CreateKeyViewModel.swift in Sources */,
 				553FD27F2BA5034A00461FEA /* StartActions.swift in Sources */,
+				554A475F2BD52A0300A5F248 /* DeleteProjectWarningViewModel.swift in Sources */,
 				55E4FB0E2BB20DCB00D6D6DA /* Technology+UI.swift in Sources */,
 				55EFFE2D2BC99CCC00BD91EA /* KeyDetailViewModel.swift in Sources */,
 				55EFFE392BCC297F00BD91EA /* StandardWarningProtocol.swift in Sources */,

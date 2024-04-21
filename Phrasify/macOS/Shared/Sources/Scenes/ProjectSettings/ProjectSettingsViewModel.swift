@@ -68,7 +68,7 @@ final class ProjectSettingsViewModel: ObservableObject, ProjectMemberUseCaseProt
     }
 
     func onDeleteProjectTapped() {
-        // coordinator.showDeleteProjectWarning(project: project)
+        coordinator.showDeleteProjectWarning(project: project)
     }
 }
 
