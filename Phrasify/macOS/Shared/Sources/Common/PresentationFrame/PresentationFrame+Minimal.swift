@@ -31,7 +31,7 @@ struct SheetSizer: ViewModifier {
         switch size {
         case .standard:
             content
-                .frame(minWidth: 700, minHeight: 500)
+                .frame(idealWidth: 700, idealHeight: 500)
         case .warning:
             content
                 .frame(minWidth: 300, minHeight: 200)
