@@ -35,7 +35,7 @@ final class ProjectMembersViewModel: ObservableObject, ProjectMemberUseCaseProto
     }
 
     func onInviteMemberTapped() {
-        // coordinator.presentInviteMember(project: project)
+        coordinator.presentInviteMember(project: project)
     }
 
     func onMemberDelete(_ member: Member) {

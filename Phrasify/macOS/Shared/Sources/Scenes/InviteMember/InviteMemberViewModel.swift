@@ -1,8 +1,8 @@
 //
 //  InviteMemberViewModel.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 07.01.24.
+//  Created by Robert Adamczyk on 22.04.24.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import Model
 
 final class InviteMemberViewModel: ObservableObject {
 
-    typealias InviteMemberCoordinator = Coordinator & FullScreenCoverActions & SelectMemberRoleActions
+    typealias InviteMemberCoordinator = Coordinator & SheetActions & SelectMemberRoleActions
 
     @Published var email: String = ""
 
@@ -44,6 +44,7 @@ final class InviteMemberViewModel: ObservableObject {
     }
 
     func onCloseButtonTapped() {
-        coordinator.dismissFullScreenCover()
+        coordinator.dismissSheet()
     }
 }
+

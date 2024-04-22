@@ -19,6 +19,13 @@ final class SelectMemberRoleViewModel: ObservableObject {
         .init(context: context, selectedRole: selectedRole)
     }
 
+    var isInNavigationStack: Bool {
+        switch context {
+        case .members: return false
+        case .invite: return true
+        }
+    }
+
     private let project: Project
     private let context: Context
     private let coordinator: SelectMemberRoleCoordinator

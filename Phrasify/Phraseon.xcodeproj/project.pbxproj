@@ -499,6 +499,13 @@
 		55E017AB2BD6FE68008773F7 /* SelectMemberRoleViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E017A82BD6FE68008773F7 /* SelectMemberRoleViewModel+Utility.swift */; };
 		55E017AC2BD6FF48008773F7 /* SelectMemberRoleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */; };
 		55E017AD2BD703B1008773F7 /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
+		55E017AF2BD7050C008773F7 /* InviteMemberCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E017AE2BD7050C008773F7 /* InviteMemberCoordinator.swift */; };
+		55E017B12BD70589008773F7 /* InviteMemberCoordinator+RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E017B02BD70589008773F7 /* InviteMemberCoordinator+RootView.swift */; };
+		55E017B42BD70629008773F7 /* InviteMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E017B32BD70629008773F7 /* InviteMemberView.swift */; };
+		55E017B62BD7062F008773F7 /* InviteMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E017B52BD7062F008773F7 /* InviteMemberViewModel.swift */; };
+		55E017B92BD70A1F008773F7 /* InviteMemberViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E017B82BD70A1F008773F7 /* InviteMemberViewModel+Utility.swift */; };
+		55E017BA2BD70A1F008773F7 /* InviteMemberViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E017B82BD70A1F008773F7 /* InviteMemberViewModel+Utility.swift */; };
+		55E017BB2BD70A1F008773F7 /* InviteMemberViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E017B82BD70A1F008773F7 /* InviteMemberViewModel+Utility.swift */; };
 		55E4FB092BB20D1000D6D6DA /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB082BB20D1000D6D6DA /* ProjectsView.swift */; };
 		55E4FB0B2BB20D1F00D6D6DA /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB0A2BB20D1F00D6D6DA /* ProjectsViewModel.swift */; };
 		55E4FB0E2BB20DCB00D6D6DA /* Technology+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */; };
@@ -859,6 +866,11 @@
 		55E017A12BD6FE1B008773F7 /* SelectMemberRoleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMemberRoleViewModel.swift; sourceTree = "<group>"; };
 		55E017A42BD6FE5E008773F7 /* SelectMemberRoleViewModel+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectMemberRoleViewModel+Context.swift"; sourceTree = "<group>"; };
 		55E017A82BD6FE68008773F7 /* SelectMemberRoleViewModel+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectMemberRoleViewModel+Utility.swift"; sourceTree = "<group>"; };
+		55E017AE2BD7050C008773F7 /* InviteMemberCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteMemberCoordinator.swift; sourceTree = "<group>"; };
+		55E017B02BD70589008773F7 /* InviteMemberCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InviteMemberCoordinator+RootView.swift"; sourceTree = "<group>"; };
+		55E017B32BD70629008773F7 /* InviteMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteMemberView.swift; sourceTree = "<group>"; };
+		55E017B52BD7062F008773F7 /* InviteMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteMemberViewModel.swift; sourceTree = "<group>"; };
+		55E017B82BD70A1F008773F7 /* InviteMemberViewModel+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InviteMemberViewModel+Utility.swift"; sourceTree = "<group>"; };
 		55E4FB082BB20D1000D6D6DA /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		55E4FB0A2BB20D1F00D6D6DA /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		55E4FB0F2BB2305300D6D6DA /* ProjectsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsActions.swift; sourceTree = "<group>"; };
@@ -1256,6 +1268,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55E017B22BD7061F008773F7 /* InviteMember */,
 				55E0179E2BD6FDF2008773F7 /* SelectMemberRole */,
 				554A47682BD52CEF00A5F248 /* ChangeProjectOwner */,
 				554A474E2BD3CC4F00A5F248 /* ProjectMembers */,
@@ -1308,6 +1321,7 @@
 				55E4FB1C2BB4CB7D00D6D6DA /* ProfileCoordinator.swift */,
 				55E4FB222BB4CC1F00D6D6DA /* ProjectCoordinator.swift */,
 				55E4FB292BB4E21100D6D6DA /* CreateProjectCoordinator.swift */,
+				55E017AE2BD7050C008773F7 /* InviteMemberCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1321,6 +1335,7 @@
 				55E4FB1E2BB4CBAF00D6D6DA /* ProfileCoordinator+RootView.swift */,
 				55E4FB202BB4CBF200D6D6DA /* ProjectCoordinator+RootView.swift */,
 				55E4FB2B2BB4E25500D6D6DA /* CreateProjectCoordinator+RootView.swift */,
+				55E017B02BD70589008773F7 /* InviteMemberCoordinator+RootView.swift */,
 			);
 			path = RootViews;
 			sourceTree = "<group>";
@@ -2092,6 +2107,23 @@
 			path = SelectMemberRole;
 			sourceTree = "<group>";
 		};
+		55E017B22BD7061F008773F7 /* InviteMember */ = {
+			isa = PBXGroup;
+			children = (
+				55E017B32BD70629008773F7 /* InviteMemberView.swift */,
+				55E017B52BD7062F008773F7 /* InviteMemberViewModel.swift */,
+			);
+			path = InviteMember;
+			sourceTree = "<group>";
+		};
+		55E017B72BD70A12008773F7 /* InviteMember */ = {
+			isa = PBXGroup;
+			children = (
+				55E017B82BD70A1F008773F7 /* InviteMemberViewModel+Utility.swift */,
+			);
+			path = InviteMember;
+			sourceTree = "<group>";
+		};
 		55E4FB072BB20D0400D6D6DA /* Projects */ = {
 			isa = PBXGroup;
 			children = (
@@ -2191,6 +2223,7 @@
 		55E4FB492BB6035400D6D6DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55E017B72BD70A12008773F7 /* InviteMember */,
 				558B74642B4DCE120041635A /* DeleteMemberWarning */,
 				55E017A32BD6FE52008773F7 /* SelectMemberRole */,
 				55B841432B4C7C88007697AF /* DeleteProjectWarning */,
@@ -2715,6 +2748,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E017B92BD70A1F008773F7 /* InviteMemberViewModel+Utility.swift in Sources */,
 				551AA4132B335D2400F0B1E2 /* SelectLanguageViewModel.swift in Sources */,
 				5516EBAF2B3F2D5700C558B1 /* KeyStatus+UI.swift in Sources */,
 				55FF42652B2B912B00F4D523 /* HomeView.swift in Sources */,
@@ -2956,6 +2990,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E017BA2BD70A1F008773F7 /* InviteMemberViewModel+Utility.swift in Sources */,
 				551AA4142B335D2400F0B1E2 /* SelectLanguageViewModel.swift in Sources */,
 				5516EBB02B3F2D5700C558B1 /* KeyStatus+UI.swift in Sources */,
 				55FF42662B2B912B00F4D523 /* HomeView.swift in Sources */,
@@ -3174,6 +3209,7 @@
 				559F2A342BC28A6D00384CDC /* PaywallView.swift in Sources */,
 				55EF44392BAEF9DD0005ACA5 /* PasswordValidationHandler.swift in Sources */,
 				55E4FB262BB4E01B00D6D6DA /* MenuItem.swift in Sources */,
+				55E017B62BD7062F008773F7 /* InviteMemberViewModel.swift in Sources */,
 				55E4FB2C2BB4E25500D6D6DA /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55AEA7512BB0CB6500710E99 /* ForgetPasswordViewModel.swift in Sources */,
 				55E4FB3C2BB4F01100D6D6DA /* PresentationFrame+Minimal.swift in Sources */,
@@ -3194,6 +3230,7 @@
 				55EFFE442BCC496300BD91EA /* ProjectSettingsView.swift in Sources */,
 				55E4FB212BB4CBF200D6D6DA /* ProjectCoordinator+RootView.swift in Sources */,
 				55E4FB2A2BB4E21100D6D6DA /* CreateProjectCoordinator.swift in Sources */,
+				55E017BB2BD70A1F008773F7 /* InviteMemberViewModel+Utility.swift in Sources */,
 				55DE74342BA3AC560030C7C7 /* ViewBackground.swift in Sources */,
 				55AEA7532BB0D16D00710E99 /* NavigationActions.swift in Sources */,
 				55E4FB602BB6AB7600D6D6DA /* SelectLanguageViewModel+Utility.swift in Sources */,
@@ -3239,6 +3276,7 @@
 				559F2A0F2BC2119F00384CDC /* ProfileNameViewModel.swift in Sources */,
 				55E017AC2BD6FF48008773F7 /* SelectMemberRoleActions.swift in Sources */,
 				55EFFE462BCC49A500BD91EA /* ProjectSettingsViewModel.swift in Sources */,
+				55E017B12BD70589008773F7 /* InviteMemberCoordinator+RootView.swift in Sources */,
 				553B6C942BC4944F00C0C7AD /* ProjectDetailView+KeyRow.swift in Sources */,
 				559F2A2D2BC288CF00384CDC /* PaywallActions.swift in Sources */,
 				559F2A0C2BC2103D00384CDC /* ProfileNameView.swift in Sources */,
@@ -3253,11 +3291,13 @@
 				554A475A2BD527BB00A5F248 /* StandardInformationProtocol.swift in Sources */,
 				553B6C912BC4942900C0C7AD /* Member+Permissions.swift in Sources */,
 				55E4FB5B2BB6191900D6D6DA /* SelectBaseLanguage+Context.swift in Sources */,
+				55E017B42BD70629008773F7 /* InviteMemberView.swift in Sources */,
 				559F2A322BC28A0700384CDC /* PaywallViewModel.swift in Sources */,
 				55CB62A22BBB629D00A879C3 /* ProfileView.swift in Sources */,
 				553FD2792BA502AE00461FEA /* RootCoordinator.swift in Sources */,
 				55EF443A2BAEF9E00005ACA5 /* EmailValidationHandler.swift in Sources */,
 				559F2A222BC2833400384CDC /* ChangePasswordViewModel+Utility.swift in Sources */,
+				55E017AF2BD7050C008773F7 /* InviteMemberCoordinator.swift in Sources */,
 				5530A52B2BACE3FF00B6B9D3 /* ActivityView.swift in Sources */,
 				559F2A132BC211DE00384CDC /* ProfileNameViewModel+Utility.swift in Sources */,
 				559F2A272BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */,

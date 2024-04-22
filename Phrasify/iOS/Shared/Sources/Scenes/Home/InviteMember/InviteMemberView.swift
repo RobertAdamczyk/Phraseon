@@ -29,7 +29,7 @@ struct InviteMemberView: View {
                 .padding(16)
             }
             AppButton(style: .fill("Continue", .lightBlue), action: .async(viewModel.onContinueTapped))
-                .disabled(viewModel.shouldPrimaryButtonDisabled)
+                .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
                 .padding(16)
         }
         .onAppear(perform: focusTextField)

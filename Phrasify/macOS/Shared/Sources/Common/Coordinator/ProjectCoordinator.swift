@@ -119,6 +119,10 @@ extension ProjectCoordinator: ProjectDetailActions {
         let sheet: Sheet = .deleteMemberWarning(viewModel: viewModel)
         self.presentedSheet = sheet
     }
+
+    func presentInviteMember(project: Project) {
+        self.presentedSheet = .inviteMember(project)
+    }
 }
 
 extension ProjectCoordinator: SelectLanguageActions {
@@ -206,6 +210,7 @@ extension ProjectCoordinator {
         case changeProjectOwner(viewModel: ChangeProjectOwnerViewModel)
         case selectMemberRole(viewModel: SelectMemberRoleViewModel)
         case deleteMemberWarning(viewModel: DeleteMemberWarningViewModel)
+        case inviteMember(Project)
 
         var id: String {
             switch self {
@@ -218,6 +223,7 @@ extension ProjectCoordinator {
             case .changeProjectOwner: return "007"
             case .selectMemberRole: return "008"
             case .deleteMemberWarning: return "009"
+            case .inviteMember: return "010"
             }
         }
     }
