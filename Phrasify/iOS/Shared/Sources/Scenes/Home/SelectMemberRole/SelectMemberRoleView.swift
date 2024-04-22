@@ -16,7 +16,7 @@ struct SelectMemberRole: View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 32) {
-                    if let user = viewModel.user {
+                    if let user = viewModel.utility.user {
                         UserDetailView(email: user.email, name: user.name, surname: user.surname, photoUrl: user.photoUrl)
                     }
                     AppTitle(subtitle: "Assign a role to define how users will interact with the project. Each role comes with different permissions and access levels.")
@@ -32,8 +32,8 @@ struct SelectMemberRole: View {
                 }
                 .padding(16)
             }
-            AppButton(style: .fill(viewModel.buttonText, .lightBlue), action: .async(viewModel.onSaveButtonTapped))
-                .disabled(viewModel.shouldButtonDisabled)
+            AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSaveButtonTapped))
+                .disabled(viewModel.utility.shouldButtonDisabled)
                 .padding(16)
         }
         .navigationTitle("Choose role")

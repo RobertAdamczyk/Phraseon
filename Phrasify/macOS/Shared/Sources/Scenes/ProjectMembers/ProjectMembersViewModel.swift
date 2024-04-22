@@ -12,7 +12,7 @@ import Domain
 
 final class ProjectMembersViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
 
-    typealias ProjectMembersCoordinator = Coordinator
+    typealias ProjectMembersCoordinator = Coordinator & SelectMemberRoleActions
 
     @Published var members: [Member] = []
     @Published var member: Member?
@@ -46,10 +46,7 @@ final class ProjectMembersViewModel: ObservableObject, ProjectMemberUseCaseProto
     }
 
     func onMemberEdit(_ member: Member) {
-//        DispatchQueue.main.async { [weak self] in
-//            guard let self else { return }
-//            coordinator.showSelectMemberRole(member: member, project: project)
-//        }
+        coordinator.showSelectMemberRole(member: member, project: project)
     }
 
     private func setupMembersSubscriber() {

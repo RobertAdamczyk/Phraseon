@@ -37,6 +37,7 @@ extension ProjectCoordinator {
                             case .leaveProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                             case .deleteProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                             case .changeProjectOwner(let viewModel): ChangeProjectOwnerView(viewModel: viewModel)
+                            case .selectMemberRole(let viewModel): SelectMemberRole(viewModel: viewModel)
                             }
                         }
                     }
@@ -50,6 +51,7 @@ extension ProjectCoordinator {
                 case .leaveProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                 case .deleteProjectWarning(let viewModel): StandardWarningView(viewModel: viewModel)
                 case .changeProjectOwner(let viewModel): ChangeProjectOwnerView(viewModel: viewModel)
+                case .selectMemberRole(let viewModel): SelectMemberRole(viewModel: viewModel)
                 }
             }
         }

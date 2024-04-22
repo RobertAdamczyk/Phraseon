@@ -1,8 +1,8 @@
 //
 //  SelectMemberRoleViewModel.swift
-//  Phraseon
+//  Phraseon_InHouse_MacOS
 //
-//  Created by Robert Adamczyk on 07.01.24.
+//  Created by Robert Adamczyk on 22.04.24.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import Domain
 
 final class SelectMemberRoleViewModel: ObservableObject {
 
-    typealias SelectMemberRoleCoordinator = Coordinator & FullScreenCoverActions & NavigationActions
+    typealias SelectMemberRoleCoordinator = Coordinator & SheetActions
 
     @Published var selectedRole: Role?
 
@@ -36,6 +36,10 @@ final class SelectMemberRoleViewModel: ObservableObject {
         selectedRole = role
     }
 
+    func onCancelButtonTapped() {
+        coordinator.dismissSheet()
+    }
+
     @MainActor
     func onSaveButtonTapped() async {
         guard let userId = utility.user?.id, let projectId = project.id, let selectedRole else { return }
@@ -45,13 +49,13 @@ final class SelectMemberRoleViewModel: ObservableObject {
                 try await coordinator.dependencies.cloudRepository.changeMemberRole(.init(userId: userId,
                                                                                           projectId: projectId,
                                                                                           role: selectedRole))
-                coordinator.popView()
+                coordinator.dismissSheet()
                 ToastView.showSuccess(message: "Member role successfully changed to \(selectedRole.title).")
             case .invite:
                 try await coordinator.dependencies.cloudRepository.addProjectMember(.init(userId: userId,
                                                                                           projectId: projectId,
                                                                                           role: selectedRole))
-                coordinator.dismissFullScreenCover()
+                coordinator.dismissSheet()
                 ToastView.showSuccess(message: "Member successfully invited with the role of \(selectedRole.title).")
             }
 

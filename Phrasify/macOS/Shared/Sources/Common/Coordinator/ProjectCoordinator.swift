@@ -146,6 +146,17 @@ extension ProjectCoordinator: SelectTechnologyActions {
     }
 }
 
+extension ProjectCoordinator: SelectMemberRoleActions {
+    func showSelectMemberRole(email: String, project: Project, user: User) {
+    }
+    
+    func showSelectMemberRole(member: Member, project: Project) {
+        let viewModel = SelectMemberRoleViewModel(coordinator: self, project: project, context: .members(member: member))
+        let sheet: Sheet = .selectMemberRole(viewModel: viewModel)
+        self.presentedSheet = sheet
+    }
+}
+
 extension ProjectCoordinator {
 
     enum NavigationView: Identifiable, Equatable, Hashable {
@@ -187,6 +198,7 @@ extension ProjectCoordinator {
         case leaveProjectInformation(viewModel: LeaveProjectInformationViewModel)
         case deleteProjectWarning(viewModel: DeleteProjectWarningViewModel)
         case changeProjectOwner(viewModel: ChangeProjectOwnerViewModel)
+        case selectMemberRole(viewModel: SelectMemberRoleViewModel)
 
         var id: String {
             switch self {
@@ -197,6 +209,7 @@ extension ProjectCoordinator {
             case .leaveProjectInformation: return "005"
             case .deleteProjectWarning: return "006"
             case .changeProjectOwner: return "007"
+            case .selectMemberRole: return "008"
             }
         }
     }
