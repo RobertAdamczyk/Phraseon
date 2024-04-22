@@ -24,18 +24,9 @@ struct ProjectMembersView: View {
 
                             ForEach(membersOfRole, id: \.self) { member in
                                 UserDetailView(email: member.email, name: member.name, surname: member.surname, photoUrl: member.photoUrl)
-//                                SwipeAction(cornerRadius: 8) {
-//
-//                                } actions: {
-//                                    Action(tint: appColor(.lightGray), icon: "square.and.pencil",
-//                                           isEnabled: viewModel.member?.hasPermissionToManageMembers == true && member.role != .owner) {
-//                                        viewModel.onMemberEdit(member)
-//                                    }
-//                                    Action(tint: appColor(.red), icon: "trash.fill",
-//                                           isEnabled: viewModel.member?.hasPermissionToManageMembers == true && member.role != .owner) {
-//                                        viewModel.onMemberDelete(member)
-//                                    }
-//                                }
+                                    .overlay(alignment: .bottomTrailing) {
+                                        makeEditButtons(member: member)
+                                    }
                             }
                         }
                     }
@@ -53,6 +44,33 @@ struct ProjectMembersView: View {
         }
         .navigationTitle("Members")
         .applyViewBackground()
+    }
+
+    private func makeEditButtons(member: Member) -> some View {
+        HStack(spacing: 16) {
+            if viewModel.member?.hasPermissionToManageMembers == true && member.role != .owner {
+                Button {
+                    viewModel.onMemberEdit(member)
+                } label: {
+                    Image(systemName: "square.and.pencil")
+                        .resizable()
+                        .frame(width: 22, height: 22)
+                        .apply(.medium, size: .M, color: .paleOrange)
+                }
+                .buttonStyle(.plain)
+                Button {
+                    viewModel.onMemberDelete(member)
+                } label: {
+                    Image(systemName: "trash")
+                        .resizable()
+                        .frame(width: 20, height: 22)
+                        .apply(.medium, size: .M, color: .paleOrange)
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(8)
+        .padding(.horizontal, 8)
     }
 }
 
