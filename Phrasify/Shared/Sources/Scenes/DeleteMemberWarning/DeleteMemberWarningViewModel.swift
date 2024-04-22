@@ -11,7 +11,7 @@ import Domain
 
 final class DeleteMemberWarningViewModel: StandardWarningProtocol {
 
-    typealias DeleteMemberWarningCoordinator = Coordinator & SheetActions & NavigationActions
+    typealias DeleteMemberWarningCoordinator = Coordinator & SheetActions
 
     @Published var isLoading: Bool = false
 

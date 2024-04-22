@@ -12,7 +12,7 @@ import Domain
 
 final class ProjectMembersViewModel: ObservableObject, ProjectMemberUseCaseProtocol {
 
-    typealias ProjectMembersCoordinator = Coordinator & SelectMemberRoleActions
+    typealias ProjectMembersCoordinator = Coordinator & SelectMemberRoleActions & ProjectDetailActions
 
     @Published var members: [Member] = []
     @Published var member: Member?
@@ -39,10 +39,7 @@ final class ProjectMembersViewModel: ObservableObject, ProjectMemberUseCaseProto
     }
 
     func onMemberDelete(_ member: Member) {
-//        DispatchQueue.main.async { [weak self] in
-//            guard let self else { return }
-//            coordinator.showDeleteMemberWarning(project: project, member: member)
-//        }
+        coordinator.showDeleteMemberWarning(project: project, member: member)
     }
 
     func onMemberEdit(_ member: Member) {

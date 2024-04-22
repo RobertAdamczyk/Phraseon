@@ -20,4 +20,5 @@ protocol ProjectDetailActions {
     func showLeaveProjectInformation()
     func showDeleteProjectWarning(project: Project)
     func showChangeProjectOwner(project: Project)
+    func showDeleteMemberWarning(project: Project, member: Member)
 }

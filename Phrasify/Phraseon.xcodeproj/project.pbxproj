@@ -498,6 +498,7 @@
 		55E017AA2BD6FE68008773F7 /* SelectMemberRoleViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E017A82BD6FE68008773F7 /* SelectMemberRoleViewModel+Utility.swift */; };
 		55E017AB2BD6FE68008773F7 /* SelectMemberRoleViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E017A82BD6FE68008773F7 /* SelectMemberRoleViewModel+Utility.swift */; };
 		55E017AC2BD6FF48008773F7 /* SelectMemberRoleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE103C2B4AB508001CB87F /* SelectMemberRoleActions.swift */; };
+		55E017AD2BD703B1008773F7 /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		55E4FB092BB20D1000D6D6DA /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB082BB20D1000D6D6DA /* ProjectsView.swift */; };
 		55E4FB0B2BB20D1F00D6D6DA /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4FB0A2BB20D1F00D6D6DA /* ProjectsViewModel.swift */; };
 		55E4FB0E2BB20DCB00D6D6DA /* Technology+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBB52B3F2EF900C558B1 /* Technology+UI.swift */; };
@@ -2190,6 +2191,7 @@
 		55E4FB492BB6035400D6D6DA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				558B74642B4DCE120041635A /* DeleteMemberWarning */,
 				55E017A32BD6FE52008773F7 /* SelectMemberRole */,
 				55B841432B4C7C88007697AF /* DeleteProjectWarning */,
 				55DE105A2B4B53E3001CB87F /* LeaveProject */,
@@ -2421,7 +2423,6 @@
 			children = (
 				5505C7E02B55C30300806B4F /* ProjectIntegration */,
 				559E2D542B4DEB920009A25A /* KeyDetail */,
-				558B74642B4DCE120041635A /* DeleteMemberWarning */,
 				55DE104C2B4AFCBA001CB87F /* ChangeProjectOwner */,
 				55DE10352B4AB3A0001CB87F /* SelectMemberRole */,
 				55DE10282B4A2898001CB87F /* InviteMember */,
@@ -3184,6 +3185,7 @@
 				5530A52D2BACE41500B6B9D3 /* Activitable.swift in Sources */,
 				55DE74262BA39CA30030C7C7 /* Coordinator.swift in Sources */,
 				55EB39382BC8912300E3FC2E /* ProjectDetailViewModel.swift in Sources */,
+				55E017AD2BD703B1008773F7 /* DeleteMemberWarningViewModel.swift in Sources */,
 				553FD2812BA5036500461FEA /* RootCoordinator+RootView.swift in Sources */,
 				55E4FB692BB807FA00D6D6DA /* CreateProjectViewModel+Utility.swift in Sources */,
 				55EFFE3C2BCC29AA00BD91EA /* StandardWarningView.swift in Sources */,
