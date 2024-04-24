@@ -52,12 +52,12 @@ final class ProfileViewModel: ObservableObject, UserDomainProtocol {
         coordinator.presentPaywall()
     }
 
-//    func uploadProfileImage(_ uiImage: UIImage) async throws {
-//        guard let userId, let data = uiImage.jpegData(compressionQuality: 0.1) else { return }
-//        _ = try await coordinator.dependencies.storageRepository.uploadImage(path: .userImage(fileName: userId), imageData: data)
-//        let url = try await coordinator.dependencies.storageRepository.downloadURL(for: .userImage(fileName: userId))
-//        try await coordinator.dependencies.firestoreRepository.setProfilePhotoUrl(userId: userId, photoUrl: url.absoluteString)
-//    }
+    func uploadProfileImage(_ uiImage: NSImage) async throws {
+        guard let userId, let data = uiImage.tiffRepresentation else { return }
+        _ = try await coordinator.dependencies.storageRepository.uploadImage(path: .userImage(fileName: userId), imageData: data)
+        let url = try await coordinator.dependencies.storageRepository.downloadURL(for: .userImage(fileName: userId))
+        try await coordinator.dependencies.firestoreRepository.setProfilePhotoUrl(userId: userId, photoUrl: url.absoluteString)
+    }
 
     @MainActor
     func onLogoutTapped() {

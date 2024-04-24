@@ -20,7 +20,7 @@ struct ProfileView: View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 32) {
-                    //ImageView(viewModel: viewModel)
+                    ImageView(viewModel: viewModel)
                     VStack(alignment: .leading, spacing: 32) {
                         Text("Personal Info")
                             .apply(.medium, size: .M, color: .lightGray)
