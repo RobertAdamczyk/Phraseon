@@ -11,16 +11,18 @@ struct AppDivider: View {
 
     private let text: String?
     private let color: Color
+    private let height: CGFloat
 
-    init(with text: String? = nil, color: Color = appColor(.lightGray)) {
+    init(with text: String? = nil, color: Color = appColor(.lightGray), height: CGFloat = 2) {
         self.text = text
         self.color = color
+        self.height = height
     }
 
     var body: some View {
         HStack(spacing: 0) {
             Rectangle()
-                .frame(height: 2)
+                .frame(height: height)
                 .foregroundStyle(color)
             if let text {
                 Text(text)
@@ -28,7 +30,7 @@ struct AppDivider: View {
                     .apply(.semibold, size: .L, color: .lightGray)
             }
             Rectangle()
-                .frame(height: 2)
+                .frame(height: height)
                 .foregroundStyle(color)
         }
     }
