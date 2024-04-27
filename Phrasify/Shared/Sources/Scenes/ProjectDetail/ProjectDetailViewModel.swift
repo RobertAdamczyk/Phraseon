@@ -102,7 +102,6 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         #else
         coordinator.showCreateKey(project: project, context: .create)
         #endif
-
     }
 
     func onSettingsTapped() {

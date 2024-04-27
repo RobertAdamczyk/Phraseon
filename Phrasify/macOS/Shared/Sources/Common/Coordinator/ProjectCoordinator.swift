@@ -123,6 +123,12 @@ extension ProjectCoordinator: ProjectDetailActions {
     func presentInviteMember(project: Project) {
         self.presentedSheet = .inviteMember(project)
     }
+
+    func showProjectIntegration(project: Project) {
+        let viewModel = ProjectIntegrationViewModel(coordinator: self, project: project)
+        let view: NavigationView = .projectIntegration(viewModel: viewModel)
+        self.navigationViews.append(view)
+    }
 }
 
 extension ProjectCoordinator: SelectLanguageActions {
@@ -186,6 +192,7 @@ extension ProjectCoordinator {
         case selectBaseLanguage(viewModel: SelectBaseLanguageViewModel)
         case selectedTechnologies(viewModel: SelectTechnologyViewModel)
         case projectMembers(viewModel: ProjectMembersViewModel)
+        case projectIntegration(viewModel: ProjectIntegrationViewModel)
 
         var id: String {
             switch self {
@@ -196,6 +203,7 @@ extension ProjectCoordinator {
             case .selectBaseLanguage: return "005"
             case .selectedTechnologies: return "006"
             case .projectMembers: return "007"
+            case .projectIntegration: return "008"
             }
         }
     }

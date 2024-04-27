@@ -366,6 +366,8 @@
 		559F2A412BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A3E2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift */; };
 		559F2A422BC3522F00384CDC /* ProfileNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516EBDE2B4326EB00C558B1 /* ProfileNameViewModel.swift */; };
 		559F2A432BC3524B00384CDC /* ProfileNameViewModel+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F2A102BC211DE00384CDC /* ProfileNameViewModel+Utility.swift */; };
+		55A34D592BDB0EB500854FD9 /* ProjectIntegrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A34D582BDB0EB500854FD9 /* ProjectIntegrationView.swift */; };
+		55A34D5B2BDB0EBB00854FD9 /* ProjectIntegrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A34D5A2BDB0EBB00854FD9 /* ProjectIntegrationViewModel.swift */; };
 		55A7B3502B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3512B45D4130051BCF0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		55A7B3542B45DB920051BCF0 /* ProfileDeleteWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */; };
@@ -805,6 +807,8 @@
 		559F2A362BC2A09F00384CDC /* PaywallViewModel+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallViewModel+Utility.swift"; sourceTree = "<group>"; };
 		559F2A3A2BC2A0F500384CDC /* PaywallViewModel+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallViewModel+State.swift"; sourceTree = "<group>"; };
 		559F2A3E2BC2A1D500384CDC /* PaywallViewModel+PlanFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallViewModel+PlanFeature.swift"; sourceTree = "<group>"; };
+		55A34D582BDB0EB500854FD9 /* ProjectIntegrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationView.swift; sourceTree = "<group>"; };
+		55A34D5A2BDB0EBB00854FD9 /* ProjectIntegrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationViewModel.swift; sourceTree = "<group>"; };
 		55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Image.swift"; sourceTree = "<group>"; };
 		55A7B3532B45DB920051BCF0 /* ProfileDeleteWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningView.swift; sourceTree = "<group>"; };
 		55A7B3562B45DBCC0051BCF0 /* ProfileDeleteWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModel.swift; sourceTree = "<group>"; };
@@ -1275,6 +1279,7 @@
 		553FD2732BA5026F00461FEA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55A34D572BDB0EAA00854FD9 /* ProjectIntegration */,
 				55E017B22BD7061F008773F7 /* InviteMember */,
 				55E0179E2BD6FDF2008773F7 /* SelectMemberRole */,
 				554A47682BD52CEF00A5F248 /* ChangeProjectOwner */,
@@ -1737,6 +1742,15 @@
 				553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */,
 			);
 			path = Paywall;
+			sourceTree = "<group>";
+		};
+		55A34D572BDB0EAA00854FD9 /* ProjectIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				55A34D582BDB0EB500854FD9 /* ProjectIntegrationView.swift */,
+				55A34D5A2BDB0EBB00854FD9 /* ProjectIntegrationViewModel.swift */,
+			);
+			path = ProjectIntegration;
 			sourceTree = "<group>";
 		};
 		55A7B3522B45DB750051BCF0 /* ProfileDeleteWarning */ = {
@@ -3211,6 +3225,7 @@
 				557D36592BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift in Sources */,
 				55EF44382BAEF9390005ACA5 /* RegisterViewModel.swift in Sources */,
 				553FD28E2BA63DBA00461FEA /* AppDivider.swift in Sources */,
+				55A34D592BDB0EB500854FD9 /* ProjectIntegrationView.swift in Sources */,
 				554A47582BD5274200A5F248 /* LeaveProjectWarningViewModel.swift in Sources */,
 				55E4FB2F2BB4E51000D6D6DA /* CreateProjectView.swift in Sources */,
 				559F2A2A2BC2882400384CDC /* PaywallView+SubscriptionCell.swift in Sources */,
@@ -3264,6 +3279,7 @@
 				553B6C962BC4946700C0C7AD /* KeyStatus+UI.swift in Sources */,
 				553B6C982BC4947C00C0C7AD /* HighlightedString+extractedText.swift in Sources */,
 				554A475E2BD5282E00A5F248 /* StandardInformationView.swift in Sources */,
+				55A34D5B2BDB0EBB00854FD9 /* ProjectIntegrationViewModel.swift in Sources */,
 				554A474D2BD3C67800A5F248 /* ProjectSettingsViewModel+Utility.swift in Sources */,
 				554A47592BD527A400A5F248 /* LeaveProjectInformationViewModel.swift in Sources */,
 				553FD28B2BA638E500461FEA /* LoginViewModel.swift in Sources */,
