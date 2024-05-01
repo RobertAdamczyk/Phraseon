@@ -15,7 +15,7 @@ struct ProjectIntegrationView: View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 24) {
-                    AppTitle(subtitle: "Choose the directory where localization files will be saved for quick translation key updates.")
+                    AppTitle(subtitle: "You can synchronize translation keys with your app project on the project page using the \"Sync phrases\" button. \n\nHere, you can set the default paths to the translation directories for your app for each technology.")
                         .padding(.bottom, 8)
                     ForEach(viewModel.technologies, id: \.self) { technology in
                         VStack(alignment: .leading, spacing: 16) {
