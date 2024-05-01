@@ -275,7 +275,6 @@
 		5590F24F2B78F1FF008AAC7C /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 5590F24E2B78F1FF008AAC7C /* Zip */; };
 		5590F2962B797B93008AAC7C /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 5590F2952B797B93008AAC7C /* Zip */; };
 		5599490B2BD9B38A002F0DB0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
-		5599490C2BD9B3BB002F0DB0 /* ProfileView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A7B34F2B45D4130051BCF0 /* ProfileView+Image.swift */; };
 		5599490F2BD9B4C8002F0DB0 /* ImageTransferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5599490E2BD9B4C8002F0DB0 /* ImageTransferable.swift */; };
 		559949112BD9B4F0002F0DB0 /* PhotoPickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559949102BD9B4F0002F0DB0 /* PhotoPickerHandler.swift */; };
 		559949132BD9B529002F0DB0 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559949122BD9B529002F0DB0 /* PhotoPickerView.swift */; };
@@ -3008,7 +3007,6 @@
 				559F29E12BC161E000384CDC /* ProjectDetailActions.swift in Sources */,
 				559F29E32BC161F400384CDC /* PasswordValidationHandler.swift in Sources */,
 				559F2A232BC2833400384CDC /* ChangePasswordViewModel+Utility.swift in Sources */,
-				5599490C2BD9B3BB002F0DB0 /* ProfileView+Image.swift in Sources */,
 				559F29BF2BC15FDC00384CDC /* Coordinator.swift in Sources */,
 				559F29D42BC1611700384CDC /* ToastView+Display.swift in Sources */,
 				550550022B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift in Sources */,

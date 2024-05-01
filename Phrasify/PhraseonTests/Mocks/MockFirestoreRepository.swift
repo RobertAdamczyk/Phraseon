@@ -83,4 +83,8 @@ final class MockFirestoreRepository: FirestoreRepository {
         self.calledUserId = userId
         self.calledPhotoUrl = photoUrl
     }
+
+    func getAllKeys(projectId: String) async throws -> [Key] {
+        []
+    }
 }
