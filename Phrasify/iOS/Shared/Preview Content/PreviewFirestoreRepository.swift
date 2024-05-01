@@ -65,4 +65,8 @@ final class PreviewFirestoreRepository: FirestoreRepository {
     func setProfilePhotoUrl(userId: UserID, photoUrl: String) async throws {
         // empty
     }
+
+    func getAllKeys(projectId: String) async throws -> [Key] {
+        []
+    }
 }

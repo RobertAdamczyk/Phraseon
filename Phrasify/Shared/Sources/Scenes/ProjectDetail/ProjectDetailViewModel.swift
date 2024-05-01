@@ -24,7 +24,9 @@ final class ProjectDetailViewModel: ObservableObject, ProjectMemberUseCaseProtoc
         case notFound
     }
 
+    #if os(macOS)
     lazy var syncManager: LocalizationSyncManager = .init(projectUseCase: projectUseCase, coordinator: coordinator)
+    #endif
 
     @Published var selectedKeysOrder: KeysOrder = .alphabetically
     @Published var searchText = ""
