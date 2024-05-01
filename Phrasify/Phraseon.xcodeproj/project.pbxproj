@@ -267,6 +267,7 @@
 		558ACFBD2B7192D500741793 /* AlgoliaSearchClient in Frameworks */ = {isa = PBXBuildFile; productRef = 558ACFBC2B7192D500741793 /* AlgoliaSearchClient */; };
 		558B74692B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
 		558B746A2B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */; };
+		558E11482BE2CC7A00DEC292 /* LocalizationSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558E11472BE2CC7A00DEC292 /* LocalizationSyncManager.swift */; };
 		55909A202B58798D00A77F21 /* KeyDetailView+ApproveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A1F2B58798D00A77F21 /* KeyDetailView+ApproveButton.swift */; };
 		55909A212B58798D00A77F21 /* KeyDetailView+ApproveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A1F2B58798D00A77F21 /* KeyDetailView+ApproveButton.swift */; };
 		55909A232B58946400A77F21 /* Member+Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A222B58946400A77F21 /* Member+Permissions.swift */; };
@@ -787,6 +788,7 @@
 		55826AA42B34FD5F00233D90 /* CreateKeyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeyCoordinator.swift; sourceTree = "<group>"; };
 		55826AAA2B34FDF900233D90 /* CreateKeyCoordinator+RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateKeyCoordinator+RootView.swift"; sourceTree = "<group>"; };
 		558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMemberWarningViewModel.swift; sourceTree = "<group>"; };
+		558E11472BE2CC7A00DEC292 /* LocalizationSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSyncManager.swift; sourceTree = "<group>"; };
 		55909A1F2B58798D00A77F21 /* KeyDetailView+ApproveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyDetailView+ApproveButton.swift"; sourceTree = "<group>"; };
 		55909A222B58946400A77F21 /* Member+Permissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member+Permissions.swift"; sourceTree = "<group>"; };
 		5599490E2BD9B4C8002F0DB0 /* ImageTransferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransferable.swift; sourceTree = "<group>"; };
@@ -1310,6 +1312,7 @@
 		553FD2742BA5027500461FEA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				558E11462BE2CC6E00DEC292 /* LocalizationSyncManager */,
 				5599490D2BD9B4BA002F0DB0 /* PhotoPicker */,
 				554A475C2BD5282400A5F248 /* StandardInformationView */,
 				55EFFE3A2BCC299C00BD91EA /* StandardWarningView */,
@@ -1652,6 +1655,14 @@
 				558B74682B4DCE3A0041635A /* DeleteMemberWarningViewModel.swift */,
 			);
 			path = DeleteMemberWarning;
+			sourceTree = "<group>";
+		};
+		558E11462BE2CC6E00DEC292 /* LocalizationSyncManager */ = {
+			isa = PBXGroup;
+			children = (
+				558E11472BE2CC7A00DEC292 /* LocalizationSyncManager.swift */,
+			);
+			path = LocalizationSyncManager;
 			sourceTree = "<group>";
 		};
 		5599490D2BD9B4BA002F0DB0 /* PhotoPicker */ = {
@@ -3234,6 +3245,7 @@
 				55E4FB372BB4EB4A00D6D6DA /* SelectLanguageViewModel.swift in Sources */,
 				55E92BA42BAA3DEB0014174E /* ToastView+Display.swift in Sources */,
 				55EF443D2BAEF9E60005ACA5 /* ValidationView.swift in Sources */,
+				558E11482BE2CC7A00DEC292 /* LocalizationSyncManager.swift in Sources */,
 				554A476C2BD52D1100A5F248 /* ChangeProjectOwnerView.swift in Sources */,
 				553FD2902BA63EAD00461FEA /* GoogleButton.swift in Sources */,
 				55EF972B2BC7420400330D00 /* CreateKeyView.swift in Sources */,

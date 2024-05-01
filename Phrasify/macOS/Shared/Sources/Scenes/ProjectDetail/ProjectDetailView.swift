@@ -56,7 +56,8 @@ struct ProjectDetailView: View {
                 .scrollTargetLayout()
                 .padding(32)
             }
-            HStack {
+            HStack(spacing: 8) {
+                syncContent
                 Spacer()
                 AppButton(style: .fill("Add phrase", .lightBlue), action: .main(viewModel.onAddButtonTapped))
                     .opacity(viewModel.shouldShowAddButton ? 1 : 0)
@@ -78,6 +79,24 @@ struct ProjectDetailView: View {
                         .apply(.bold, size: .L, color: .white)
                 })
             }
+        }
+    }
+
+    @ViewBuilder
+    private var syncContent: some View {
+        AppButton(style: .fill("Sync phrases", .lightBlue), action: .async(viewModel.syncManager.synchronizeKeys))
+        VStack(alignment: .leading, spacing: 4) {
+            Text("For selected technology:")
+                .apply(.regular, size: .S, color: .lightGray)
+                .padding(.horizontal, 8)
+            Picker("", selection: $viewModel.syncManager.selectedTechnology) {
+                ForEach(Technology.allCases, id: \.self) { technology in
+                    Text("\(technology.title)")
+                }
+            }
+            .pickerStyle(.menu)
+            .frame(width: 128)
+            .tint(appColor(.lightBlue))
         }
     }
 

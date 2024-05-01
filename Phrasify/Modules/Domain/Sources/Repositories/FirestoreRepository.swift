@@ -23,6 +23,8 @@ public protocol FirestoreRepository {
 
     func getKeysPublisher(projectId: String, keysOrder: KeysOrder, limit: Int) -> AnyPublisher<[Key], Error>
 
+    func getAllKeys(projectId: String) async throws -> [Key]
+
     func getKeyPublisher(projectId: String, keyId: String) -> AnyPublisher<Key?, Error>
 
     func getUserPublisher(userId: UserID) -> AnyPublisher<User?, Error>
@@ -121,6 +123,15 @@ public final class FirestoreRepositoryImpl: FirestoreRepository {
                      return error
                  }
                  .eraseToAnyPublisher()
+    }
+
+    public func getAllKeys(projectId: String) async throws -> [Key] {
+        let ref = db.collection(Collections.projects.rawValue).document(projectId).collection(Collections.keys.rawValue)
+        let querySnapshot = try await ref.getDocuments()
+        let keys = try querySnapshot.documents.compactMap { (document) -> Key? in
+            try document.data(as: Key.self)
+        }
+        return keys
     }
 
     public func getKeyPublisher(projectId: String, keyId: String) -> AnyPublisher<Key?, Error> {
