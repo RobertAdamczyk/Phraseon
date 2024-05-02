@@ -15,61 +15,16 @@ struct ProjectIntegrationView: View {
         VStack(spacing: 0) {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 32) {
-                    AppTitle(subtitle: "To integrate your project with translations, download the script that updates phrase localizations by fetching translations from Phraseon and saving them into your project directories.")
-                    VStack(alignment: .leading, spacing: 16) {
-                        Label("Pre-requisites", systemImage: "1.circle")
-                            .apply(.medium, size: .M, color: .lightGray)
-                        VStack(alignment: .leading, spacing: 16) {
-                            Text("Ensure ") + Text("curl").bold() + Text(" and ") + Text("jq").bold() + Text(" are installed on your system.")
-                        }
-                        .apply(.regular, size: .M, color: .white)
-                        .padding(8)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .applyCellBackground()
-                    }
-                    VStack(alignment: .leading, spacing: 16) {
-                        Label("Configure the Script", systemImage: "2.circle")
-                            .apply(.medium, size: .M, color: .lightGray)
-                        VStack(alignment: .leading, spacing: 16) {
-                            Text("Open the script in a text editor.")
-                            Text("Locate the line RELATIVE_PATH=\"/YOUR_PATH/TO_LOCALIZATIONS\"")
-                            Text("Replace with the actual path where you want the localization files to be stored.")
-                        }
-                        .apply(.regular, size: .M, color: .white)
-                        .padding(8)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .applyCellBackground()
-                    }
-                    VStack(alignment: .leading, spacing: 16) {
-                        Label("Running the Script", systemImage: "3.circle")
-                            .apply(.medium, size: .M, color: .lightGray)
-                        VStack(alignment: .leading, spacing: 16) {
-                            Text("Open a terminal window")
-                            Text("Navigate to the directory containing the script.")
-                            Text("Execute the script by typing \"sh syncPhrases.sh\" and pressing Enter.")
-                            Text("The script checks for network connectivity. If offline, it will exit without synchronizing.")
-                        }
-                        .apply(.regular, size: .M, color: .white)
-                        .padding(8)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .applyCellBackground()
-                    }
-
+                    AppTitle(subtitle: "To fully harness the capabilities of our translation key management system, please download our macOS application.\n\nThe iOS version allows you to view and manage your translation keys on-the-go, but synchronization with development environments like Xcode, Android Studio, and other platforms can only be conducted through our macOS app.")
                 }
                 .padding(16)
             }
             VStack(spacing: 16) {
-                AppButton(style: .fill("Export Script", .lightBlue), action: .main(viewModel.onExportTapped))
-                Text("The script currently only supports Xcode projects and operates exclusively on macOS.")
-                    .apply(.medium, size: .S, color: .lightGray)
-                    .frame(maxWidth: .infinity)
-                    .multilineTextAlignment(.center)
+                AppButton(style: .fill("Understood", .lightBlue), action: .main(viewModel.onUnderstoodTapped))
             }
             .padding(16)
         }
         .navigationTitle("Integration")
-        .fileExporter(isPresented: $viewModel.shouldShowExportSheet, document: viewModel.syncScriptFile,
-                      contentType: .zip, onCompletion: viewModel.onExportCompletion)
         .applyViewBackground()
     }
 }

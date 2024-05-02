@@ -27,10 +27,6 @@
 		55054FFE2B9FC559006E06B1 /* MockStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55054FFD2B9FC559006E06B1 /* MockStorageRepository.swift */; };
 		550550002B9FC5A7006E06B1 /* MockSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55054FFF2B9FC5A7006E06B1 /* MockSearchRepository.swift */; };
 		550550022B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550550012B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift */; };
-		5505C7DA2B55BAEB00806B4F /* syncScript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5505C7D92B55BAEB00806B4F /* syncScript.txt */; };
-		5505C7DB2B55BAEB00806B4F /* syncScript.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5505C7D92B55BAEB00806B4F /* syncScript.txt */; };
-		5505C7DE2B55BE5900806B4F /* SyncScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7DD2B55BE5900806B4F /* SyncScript.swift */; };
-		5505C7DF2B55BE5900806B4F /* SyncScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7DD2B55BE5900806B4F /* SyncScript.swift */; };
 		5505C7E22B55C32A00806B4F /* ProjectIntegrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */; };
 		5505C7E32B55C32A00806B4F /* ProjectIntegrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */; };
 		5505C7E52B55C33100806B4F /* ProjectIntegrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505C7E42B55C33100806B4F /* ProjectIntegrationViewModel.swift */; };
@@ -667,8 +663,6 @@
 		55054FFD2B9FC559006E06B1 /* MockStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageRepository.swift; sourceTree = "<group>"; };
 		55054FFF2B9FC5A7006E06B1 /* MockSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchRepository.swift; sourceTree = "<group>"; };
 		550550012B9FC6E4006E06B1 /* ProfileNameViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameViewModelTest.swift; sourceTree = "<group>"; };
-		5505C7D92B55BAEB00806B4F /* syncScript.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = syncScript.txt; sourceTree = "<group>"; };
-		5505C7DD2B55BE5900806B4F /* SyncScript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncScript.swift; sourceTree = "<group>"; };
 		5505C7E12B55C32A00806B4F /* ProjectIntegrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationView.swift; sourceTree = "<group>"; };
 		5505C7E42B55C33100806B4F /* ProjectIntegrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectIntegrationViewModel.swift; sourceTree = "<group>"; };
 		5505C7EB2B55DDAF00806B4F /* DeleteKeyWarningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteKeyWarningViewModel.swift; sourceTree = "<group>"; };
@@ -1049,14 +1043,6 @@
 				550537932B44C0270077912D /* PhotoPickerHandler.swift */,
 			);
 			path = PhotoPicker;
-			sourceTree = "<group>";
-		};
-		5505C7DC2B55BE4C00806B4F /* SyncScript */ = {
-			isa = PBXGroup;
-			children = (
-				5505C7DD2B55BE5900806B4F /* SyncScript.swift */,
-			);
-			path = SyncScript;
 			sourceTree = "<group>";
 		};
 		5505C7E02B55C30300806B4F /* ProjectIntegration */ = {
@@ -1587,7 +1573,6 @@
 			isa = PBXGroup;
 			children = (
 				55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */,
-				5505C7D92B55BAEB00806B4F /* syncScript.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1910,7 +1895,6 @@
 				55028A0B2B7ECB9800C786D9 /* AppUpdate */,
 				5505C7F52B55EE9700806B4F /* StandardInformationView */,
 				5505C7EE2B55E6CC00806B4F /* StandardWarningView */,
-				5505C7DC2B55BE4C00806B4F /* SyncScript */,
 				55B8414A2B4C9AF3007697AF /* SwipeAction */,
 				5505378F2B44C0080077912D /* PhotoPicker */,
 				55FF428E2B2BB34200F4D523 /* Toast */,
@@ -2733,7 +2717,6 @@
 				5574B3292B6F0D3900C9DFB9 /* GoogleService-Info.plist in Resources */,
 				55CADF382B75881400D04365 /* secrets.json in Resources */,
 				558074412B2CF08E0041160B /* Roboto-Medium.ttf in Resources */,
-				5505C7DA2B55BAEB00806B4F /* syncScript.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2754,7 +2737,6 @@
 				55CADF322B7576CF00D04365 /* secrets.json in Resources */,
 				55C278F42B2A3F3A005144F1 /* RethinkSans-Medium.ttf in Resources */,
 				55C278F52B2A3F3A005144F1 /* RethinkSans-Regular.ttf in Resources */,
-				5505C7DB2B55BAEB00806B4F /* syncScript.txt in Resources */,
 				5567E6C82B6F8D8300C9EDFF /* Phraseon_InHouse.storekit in Resources */,
 				55028A0A2B7EB58F00C786D9 /* RemoteConfigDefaults.plist in Resources */,
 				55CB629D2BBB5FC000A879C3 /* FirebaseSecrets.plist in Resources */,
@@ -2818,7 +2800,6 @@
 				552CA7432B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
 				5516EBD22B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				557D36572BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift in Sources */,
-				5505C7DE2B55BE5900806B4F /* SyncScript.swift in Sources */,
 				559F2A252BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */,
 				555458F62B8543C000DA097F /* PreviewCloudRepository.swift in Sources */,
 				55EB39312BC88C4100E3FC2E /* CreateKeyViewModel+Utility.swift in Sources */,
@@ -3060,7 +3041,6 @@
 				552CA7442B4F2D6800A6C3D2 /* EnterContentKeyActions.swift in Sources */,
 				5516EBD32B40D2FD00C558B1 /* ProfileViewModel.swift in Sources */,
 				557D36582BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift in Sources */,
-				5505C7DF2B55BE5900806B4F /* SyncScript.swift in Sources */,
 				559F2A262BC2839600384CDC /* ChangePasswordViewModel+State.swift in Sources */,
 				555458F72B8543C000DA097F /* PreviewCloudRepository.swift in Sources */,
 				55EB39322BC88C4100E3FC2E /* CreateKeyViewModel+Utility.swift in Sources */,

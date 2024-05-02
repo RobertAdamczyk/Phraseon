@@ -10,13 +10,7 @@ import Model
 
 final class ProjectIntegrationViewModel: ObservableObject {
 
-    typealias ProjectIntegrationCoordinator = Coordinator
-
-    @Published var shouldShowExportSheet: Bool = false
-
-    var syncScriptFile: SyncScript? {
-        .init(userId: coordinator.dependencies.authenticationRepository.userId, projectId: project.id)
-    }
+    typealias ProjectIntegrationCoordinator = Coordinator & NavigationActions
 
     private let project: Project
     private let coordinator: ProjectIntegrationCoordinator
@@ -26,11 +20,7 @@ final class ProjectIntegrationViewModel: ObservableObject {
         self.project = project
     }
 
-    func onExportTapped() {
-        shouldShowExportSheet = true
-    }
-
-    func onExportCompletion(result: Result<URL, Error>) {
-        print(result)
+    func onUnderstoodTapped() {
+        coordinator.popView()
     }
 }
