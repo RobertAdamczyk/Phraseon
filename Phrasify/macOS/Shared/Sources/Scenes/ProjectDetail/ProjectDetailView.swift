@@ -137,7 +137,12 @@ struct ProjectDetailView: View {
             AppButton(style: .fill("Add phrase", .lightBlue), action: .main(viewModel.onAddButtonTapped))
                 .opacity(viewModel.shouldShowAddButton ? 1 : 0)
         }
-        .padding(32)
+        .padding(.horizontal, 32)
+        .padding(.vertical, 24)
         .background(.regularMaterial)
+        .overlay(alignment: .top) {
+            Rectangle().frame(height: 1)
+                .foregroundStyle(appColor(.black))
+        }
     }
 }
