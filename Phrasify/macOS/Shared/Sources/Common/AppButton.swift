@@ -11,7 +11,7 @@ import Lottie
 struct AppButton: View {
 
     static let height: CGFloat = 40
-    static let authenticationProviderButtonHeight: CGFloat = 54
+    static let authenticationProviderButtonHeight: CGFloat = 32
 
     let style: Style
     let action: Action

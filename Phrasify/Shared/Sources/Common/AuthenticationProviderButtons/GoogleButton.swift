@@ -23,13 +23,25 @@ struct GoogleButton: View {
 
     private let text: String = "Continue with Google"
 
+    private var fontSize: CGFloat {
+        #if os(iOS)
+            return 20
+        #else
+            return 12
+        #endif
+    }
+
     var body: some View {
         Button(action: action) {
             HStack(spacing: 12) {
                 Spacer()
                 Image(.googleIcon)
+                    #if os(macOS)
+                    .resizable()
+                    .frame(width: 12, height: 12)
+                    #endif
                 Text(text)
-                    .font(.custom("Roboto-Medium", fixedSize: 20))
+                    .font(.custom("Roboto-Medium", fixedSize: fontSize))
                     .foregroundStyle(fontColor)
                 Spacer()
             }
