@@ -12,4 +12,5 @@ public enum Target: String {
     case live = "Phraseon_Live_iOS.app"
     case inHouse = "Phraseon_InHouse_iOS.app"
     case inHouseMacOS = "Phraseon_InHouse_MacOS.app"
+    case liveMacOS = "Phraseon_Live_MacOS.app"
 }

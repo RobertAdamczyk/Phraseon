@@ -48,14 +48,14 @@ public enum SubscriptionPlan: Codable, CaseIterable {
 
     private static var currentMonthlyId: String {
         return switch TargetConfiguration.shared.currentTarget {
-        case .live: "robert.adamczyk.phraseon.live.subscription.plan.monthly"
+        case .live, .liveMacOS: "robert.adamczyk.phraseon.live.subscription.plan.monthly"
         case .inHouse, .inHouseMacOS: "robert.adamczyk.phraseon.inhouse.subscription.plan.monthly"
         }
     }
 
     private static var currentYearlyId: String {
         return switch TargetConfiguration.shared.currentTarget {
-        case .live: "robert.adamczyk.phraseon.live.subscription.plan.yearly"
+        case .live, .liveMacOS: "robert.adamczyk.phraseon.live.subscription.plan.yearly"
         case .inHouse, .inHouseMacOS: "robert.adamczyk.phraseon.inhouse.subscription.plan.yearly"
         }
     }
