@@ -13,57 +13,50 @@ struct ProjectDetailView: View {
     @ObservedObject var viewModel: ProjectDetailViewModel
 
     var body: some View {
-        VStack(spacing: 32) {
-            ScrollView(showsIndicators: false) {
-                LazyVStack(alignment: .leading, spacing: 24) {
-                    if viewModel.shouldShowPicker {
-                        Picker("", selection: $viewModel.selectedKeysOrder) {
-                            ForEach(KeysOrder.allCases, id: \.self) { bar in
-                                Text(bar.title)
-                                    .tag(bar)
-                            }
+        ScrollView(showsIndicators: false) {
+            LazyVStack(alignment: .leading, spacing: 24) {
+                if viewModel.shouldShowPicker {
+                    Picker("", selection: $viewModel.selectedKeysOrder) {
+                        ForEach(KeysOrder.allCases, id: \.self) { bar in
+                            Text(bar.title)
+                                .tag(bar)
                         }
-                        .labelsHidden()
-                        .pickerStyle(.segmented)
-                        .padding(.bottom, 16)
                     }
-
-                    switch viewModel.state {
-                    case .loaded(let keys):
-                        ForEach(keys, id: \.self) { key in
-                            Button {
-                                viewModel.onKeyTapped(key)
-                            } label: {
-                                KeyRow(key: key, shouldShowReviewStatus: viewModel.shouldShowReviewStatus)
-                            }
-                            .buttonStyle(.plain)
-                            .onAppear {
-                                viewModel.onKeyAppear(key)
-                            }
-                        }
-                    case .searched(let keys):
-                        ForEach(keys, id: \.self.objectID) { key in
-                            Button {
-                                viewModel.onAlgoliaKeyTapped(key)
-                            } label: {
-                                AlgoliaKeyRow(key: key, shouldShowReviewStatus: viewModel.shouldShowReviewStatus)
-                            }
-                            .buttonStyle(.plain)
-                        }
-                    default: EmptyView()
-                    }
+                    .labelsHidden()
+                    .pickerStyle(.segmented)
+                    .padding(.bottom, 16)
                 }
-                .scrollTargetLayout()
-                .padding(32)
+
+                switch viewModel.state {
+                case .loaded(let keys):
+                    ForEach(keys, id: \.self) { key in
+                        Button {
+                            viewModel.onKeyTapped(key)
+                        } label: {
+                            KeyRow(key: key, shouldShowReviewStatus: viewModel.shouldShowReviewStatus)
+                        }
+                        .buttonStyle(.plain)
+                        .onAppear {
+                            viewModel.onKeyAppear(key)
+                        }
+                    }
+                case .searched(let keys):
+                    ForEach(keys, id: \.self.objectID) { key in
+                        Button {
+                            viewModel.onAlgoliaKeyTapped(key)
+                        } label: {
+                            AlgoliaKeyRow(key: key, shouldShowReviewStatus: viewModel.shouldShowReviewStatus)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                default: EmptyView()
+                }
+                Spacer().frame(height: 100)
             }
-            HStack(spacing: 8) {
-                syncContent
-                Spacer()
-                AppButton(style: .fill("Add phrase", .lightBlue), action: .main(viewModel.onAddButtonTapped))
-                    .opacity(viewModel.shouldShowAddButton ? 1 : 0)
-            }
+            .scrollTargetLayout()
             .padding(32)
         }
+        .overlay(alignment: .bottom, content: makeButtons)
         .opacity(viewModel.shouldShowContent ? 1 : 0)
         .overlay(content: makeNotFoundViewIfNeeded)
         .searchable(text: $viewModel.searchText, isPresented: $viewModel.isSearchPresented)
@@ -104,6 +97,7 @@ struct ProjectDetailView: View {
     private func makeLoadingIfNeeded() -> some View {
         if case .loading = viewModel.state {
             LoadingDotsView()
+                .frame(height: 200)
                 .ignoresSafeArea()
         }
     }
@@ -134,5 +128,16 @@ struct ProjectDetailView: View {
                                    description: Text("Unable to load data. Please try again."))
             .ignoresSafeArea()
         }
+    }
+
+    private func makeButtons() -> some View {
+        HStack(spacing: 8) {
+            syncContent
+            Spacer()
+            AppButton(style: .fill("Add phrase", .lightBlue), action: .main(viewModel.onAddButtonTapped))
+                .opacity(viewModel.shouldShowAddButton ? 1 : 0)
+        }
+        .padding(32)
+        .background(.regularMaterial)
     }
 }
