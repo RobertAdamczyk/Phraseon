@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1530"
+   LastUpgradeVersion = "1520"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES"
-      buildArchitectures = "Automatic">
+      buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -15,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "555CC2DA2BE6E515008AC1B5"
-               BuildableName = "Phraseon_Live_MacOS.app"
-               BlueprintName = "Phraseon_Live_MacOS"
+               BlueprintIdentifier = "55DFE4392BA0FE1900061962"
+               BuildableName = "Phraseon_InHouse_macOS.app"
+               BlueprintName = "Phraseon_InHouse_macOS"
                ReferencedContainer = "container:Phraseon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +43,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "555CC2DA2BE6E515008AC1B5"
-            BuildableName = "Phraseon_Live_MacOS.app"
-            BlueprintName = "Phraseon_Live_MacOS"
+            BlueprintIdentifier = "55DFE4392BA0FE1900061962"
+            BuildableName = "Phraseon_InHouse_macOS.app"
+            BlueprintName = "Phraseon_InHouse_macOS"
             ReferencedContainer = "container:Phraseon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +60,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "555CC2DA2BE6E515008AC1B5"
-            BuildableName = "Phraseon_Live_MacOS.app"
-            BlueprintName = "Phraseon_Live_MacOS"
+            BlueprintIdentifier = "55DFE4392BA0FE1900061962"
+            BuildableName = "Phraseon_InHouse_macOS.app"
+            BlueprintName = "Phraseon_InHouse_macOS"
             ReferencedContainer = "container:Phraseon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
