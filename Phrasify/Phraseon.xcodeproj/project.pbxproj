@@ -371,6 +371,8 @@
 		555CC3A72BE6E6E6008AC1B5 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 555CC3A62BE6E6E6008AC1B5 /* secrets.json */; };
 		555CC3AA2BE6E724008AC1B5 /* FirebaseSecrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 555CC3A82BE6E724008AC1B5 /* FirebaseSecrets.plist */; };
 		555CC3AB2BE6E724008AC1B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 555CC3A92BE6E724008AC1B5 /* GoogleService-Info.plist */; };
+		555CC3AE2BE74C68008AC1B5 /* ActionBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555CC3AD2BE74C68008AC1B5 /* ActionBottomBar.swift */; };
+		555CC3AF2BE74C68008AC1B5 /* ActionBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555CC3AD2BE74C68008AC1B5 /* ActionBottomBar.swift */; };
 		5561C5C42B65A76500C815BC /* SelectableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561C5C32B65A76500C815BC /* SelectableCircle.swift */; };
 		5561C5C52B65A76500C815BC /* SelectableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5561C5C32B65A76500C815BC /* SelectableCircle.swift */; };
 		5567E6C82B6F8D8300C9EDFF /* Phraseon_InHouse.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 5567E6C72B6F8D8300C9EDFF /* Phraseon_InHouse.storekit */; };
@@ -935,6 +937,7 @@
 		555CC3A62BE6E6E6008AC1B5 /* secrets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		555CC3A82BE6E724008AC1B5 /* FirebaseSecrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirebaseSecrets.plist; sourceTree = "<group>"; };
 		555CC3A92BE6E724008AC1B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		555CC3AD2BE74C68008AC1B5 /* ActionBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBottomBar.swift; sourceTree = "<group>"; };
 		5561C5C32B65A76500C815BC /* SelectableCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCircle.swift; sourceTree = "<group>"; };
 		5567E6C72B6F8D8300C9EDFF /* Phraseon_InHouse.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Phraseon_InHouse.storekit; sourceTree = "<group>"; };
 		5567E6CE2B6F925A00C9EDFF /* Phraseon_Live.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Phraseon_Live.storekit; sourceTree = "<group>"; };
@@ -1495,6 +1498,7 @@
 		553FD2742BA5027500461FEA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				555CC3AC2BE74C5B008AC1B5 /* ActionBottomBar */,
 				558E11462BE2CC6E00DEC292 /* LocalizationSyncManager */,
 				5599490D2BD9B4BA002F0DB0 /* PhotoPicker */,
 				554A475C2BD5282400A5F248 /* StandardInformationView */,
@@ -1681,6 +1685,14 @@
 				555CC3A92BE6E724008AC1B5 /* GoogleService-Info.plist */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		555CC3AC2BE74C5B008AC1B5 /* ActionBottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				555CC3AD2BE74C68008AC1B5 /* ActionBottomBar.swift */,
+			);
+			path = ActionBottomBar;
 			sourceTree = "<group>";
 		};
 		5561C5C22B65A75300C815BC /* SelectableCircle */ = {
@@ -3424,6 +3436,7 @@
 				555CC36E2BE6E515008AC1B5 /* StandardInformationProtocol.swift in Sources */,
 				555CC36F2BE6E515008AC1B5 /* Member+Permissions.swift in Sources */,
 				555CC3702BE6E515008AC1B5 /* SelectBaseLanguage+Context.swift in Sources */,
+				555CC3AF2BE74C68008AC1B5 /* ActionBottomBar.swift in Sources */,
 				555CC3712BE6E515008AC1B5 /* InviteMemberView.swift in Sources */,
 				555CC3722BE6E515008AC1B5 /* PaywallViewModel.swift in Sources */,
 				555CC3732BE6E515008AC1B5 /* ProfileView.swift in Sources */,
@@ -3757,6 +3770,7 @@
 				554A475A2BD527BB00A5F248 /* StandardInformationProtocol.swift in Sources */,
 				553B6C912BC4942900C0C7AD /* Member+Permissions.swift in Sources */,
 				55E4FB5B2BB6191900D6D6DA /* SelectBaseLanguage+Context.swift in Sources */,
+				555CC3AE2BE74C68008AC1B5 /* ActionBottomBar.swift in Sources */,
 				55E017B42BD70629008773F7 /* InviteMemberView.swift in Sources */,
 				559F2A322BC28A0700384CDC /* PaywallViewModel.swift in Sources */,
 				55CB62A22BBB629D00A879C3 /* ProfileView.swift in Sources */,

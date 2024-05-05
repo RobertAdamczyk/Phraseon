@@ -51,12 +51,17 @@ struct ProjectDetailView: View {
                     }
                 default: EmptyView()
                 }
-                Spacer().frame(height: 100)
             }
             .scrollTargetLayout()
             .padding(32)
+            .padding(.bottom, ActionBottomBarConstants.height)
         }
-        .overlay(alignment: .bottom, content: makeButtons)
+        .makeActionBottomBar(padding: .large, content: {
+            syncContent
+            Spacer()
+            AppButton(style: .fill("Add phrase", .lightBlue), action: .main(viewModel.onAddButtonTapped))
+                .opacity(viewModel.shouldShowAddButton ? 1 : 0)
+        })
         .opacity(viewModel.shouldShowContent ? 1 : 0)
         .overlay(content: makeNotFoundViewIfNeeded)
         .searchable(text: $viewModel.searchText, isPresented: $viewModel.isSearchPresented)
@@ -127,22 +132,6 @@ struct ProjectDetailView: View {
                                    systemImage: "exclamationmark.circle.fill",
                                    description: Text("Unable to load data. Please try again."))
             .ignoresSafeArea()
-        }
-    }
-
-    private func makeButtons() -> some View {
-        HStack(spacing: 8) {
-            syncContent
-            Spacer()
-            AppButton(style: .fill("Add phrase", .lightBlue), action: .main(viewModel.onAddButtonTapped))
-                .opacity(viewModel.shouldShowAddButton ? 1 : 0)
-        }
-        .padding(.horizontal, 32)
-        .padding(.vertical, 24)
-        .background(.regularMaterial)
-        .overlay(alignment: .top) {
-            Rectangle().frame(height: 1)
-                .foregroundStyle(appColor(.black))
         }
     }
 }

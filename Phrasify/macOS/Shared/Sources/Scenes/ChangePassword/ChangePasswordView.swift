@@ -15,21 +15,22 @@ struct ChangePasswordView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 0) {
-                ScrollView(showsIndicators: false) {
+            ScrollView(showsIndicators: false) {
+                ZStack {
                     switch viewModel.state {
                     case .unavailable: unavailableContent
                     default: content
                     }
                 }
-                HStack(spacing: 16) {
-                    Spacer()
-                    if viewModel.shouldShowCancelButton {
-                        AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCancelButtonTapped))
-                    }
-                    AppButton(style: .fill(viewModel.utility.primaryButtonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
-                }
                 .padding(16)
+                .padding(.bottom, ActionBottomBarConstants.height)
+            }
+            .makeActionBottomBar(padding: .small) {
+                Spacer()
+                if viewModel.shouldShowCancelButton {
+                    AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCancelButtonTapped))
+                }
+                AppButton(style: .fill(viewModel.utility.primaryButtonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
             }
             .navigationTitle(viewModel.utility.navigationTitle)
         }
@@ -64,7 +65,6 @@ struct ChangePasswordView: View {
             ValidationView(validationHandler: viewModel.passwordValidationHandler)
         }
         .animation(.easeInOut, value: viewModel.state)
-        .padding(16)
     }
 
     private var unavailableContent: some View {
@@ -74,9 +74,7 @@ struct ChangePasswordView: View {
             Text(viewModel.utility.unavailableContentMessage)
                 .apply(.regular, size: .S, color: .white)
                 .multilineTextAlignment(.leading)
-                .frame(idealWidth: 400)
         }
-        .padding(16)
     }
 
     private func setCurrentPasswordFocus() {

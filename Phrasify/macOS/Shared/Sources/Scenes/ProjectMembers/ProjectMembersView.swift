@@ -13,35 +13,33 @@ struct ProjectMembersView: View {
     @ObservedObject var viewModel: ProjectMembersViewModel
 
     var body: some View {
-        VStack(spacing: 0) {
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading, spacing: 24) {
-                    ForEach(Role.allCases, id: \.self) { role in
-                        if let membersOfRole = viewModel.groupedMembers[role], !membersOfRole.isEmpty {
-                            Text(role.sectionTitle)
-                                .apply(.medium, size: .M, color: .lightGray)
-                                .padding(.top, role == .owner ? 0 : 16)
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .leading, spacing: 24) {
+                ForEach(Role.allCases, id: \.self) { role in
+                    if let membersOfRole = viewModel.groupedMembers[role], !membersOfRole.isEmpty {
+                        Text(role.sectionTitle)
+                            .apply(.medium, size: .M, color: .lightGray)
+                            .padding(.top, role == .owner ? 0 : 16)
 
-                            ForEach(membersOfRole, id: \.self) { member in
-                                UserDetailView(email: member.email, name: member.name, surname: member.surname, photoUrl: member.photoUrl)
-                                    .overlay(alignment: .bottomTrailing) {
-                                        makeEditButtons(member: member)
-                                    }
-                            }
+                        ForEach(membersOfRole, id: \.self) { member in
+                            UserDetailView(email: member.email, name: member.name, surname: member.surname, photoUrl: member.photoUrl)
+                                .overlay(alignment: .bottomTrailing) {
+                                    makeEditButtons(member: member)
+                                }
                         }
                     }
-                    Spacer()
                 }
-                .padding(32)
             }
-            if viewModel.member?.hasPermissionToManageMembers == true {
-                HStack {
-                    Spacer()
-                    AppButton(style: .fill("Invite member", .lightBlue), action: .main(viewModel.onInviteMemberTapped))
-                }
-                .padding(32)
-            }
+            .padding(32)
+            .padding(.bottom, ActionBottomBarConstants.height)
         }
+        .makeActionBottomBar(padding: .large, content: {
+            if viewModel.member?.hasPermissionToManageMembers == true {
+                Spacer()
+                AppButton(style: .fill("Invite member", .lightBlue), action: .main(viewModel.onInviteMemberTapped))
+            }
+        })
+        .opacity(viewModel.members.isEmpty ? 0 : 1) // It can be deleted when we have loading indicator on this page.
         .navigationTitle("Members")
         .applyViewBackground()
     }

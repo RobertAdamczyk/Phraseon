@@ -13,33 +13,31 @@ struct SelectBaseLanguageView: View {
     @ObservedObject var viewModel: SelectBaseLanguageViewModel
 
     var body: some View {
-        VStack(spacing: 0) {
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 32) {
-                    AppTitle(subtitle: "Set the base language for your project from the list of available languages. The base language serves as the primary reference for all translations.")
-                    VStack(spacing: viewModel.isInNavigationStack ? 24 : 12) {
-                        ForEach(viewModel.utility.languages, id: \.self) { language in
-                            Button(action: {
-                                viewModel.onLanguageTapped(language)
-                            }, label: {
-                                makeLanguageRow(for: language)
-                            })
-                            .buttonStyle(.plain)
-                        }
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 32) {
+                AppTitle(subtitle: "Set the base language for your project from the list of available languages. The base language serves as the primary reference for all translations.")
+                VStack(spacing: viewModel.isInNavigationStack ? 24 : 12) {
+                    ForEach(viewModel.utility.languages, id: \.self) { language in
+                        Button(action: {
+                            viewModel.onLanguageTapped(language)
+                        }, label: {
+                            makeLanguageRow(for: language)
+                        })
+                        .buttonStyle(.plain)
                     }
                 }
-                .padding(viewModel.isInNavigationStack ? 32 : 16)
-            }
-            HStack(spacing: 16) {
-                Spacer()
-                if !viewModel.isInNavigationStack {
-                    AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
-                }
-                AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSaveButtonTapped))
-                    .disabled(viewModel.utility.shouldButtonDisabled)
             }
             .padding(viewModel.isInNavigationStack ? 32 : 16)
+            .padding(.bottom, ActionBottomBarConstants.height)
         }
+        .makeActionBottomBar(padding: viewModel.isInNavigationStack ? .large : .small, content: {
+            Spacer()
+            if !viewModel.isInNavigationStack {
+                AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
+            }
+            AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onSaveButtonTapped))
+                .disabled(viewModel.utility.shouldButtonDisabled)
+        })
         .navigationTitle("Base language")
         .applyViewBackground()
         .presentationFrame(.standard)

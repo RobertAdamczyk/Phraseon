@@ -21,10 +21,17 @@ struct SelectTechnologyView: View {
                 .zIndex(1)
             verticalScrollView
                 .zIndex(0)
-            buttonView
-                .zIndex(3)
         }
         .padding(viewModel.isInNavigationStack ? 32 : 16)
+        .padding(.bottom, ActionBottomBarConstants.height)
+        .makeActionBottomBar(padding: viewModel.isInNavigationStack ? .large : .small, content: {
+            Spacer()
+            if !viewModel.isInNavigationStack {
+                AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
+            }
+            AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
+                .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
+        })
         .navigationTitle("Technologies")
         .applyViewBackground()
         .presentationFrame(.standard)
@@ -76,19 +83,6 @@ struct SelectTechnologyView: View {
         }
         .scrollClipDisabled(true)
         .applyCellBackground()
-    }
-
-    @ViewBuilder
-    private var buttonView: some View {
-        HStack(spacing: 16) {
-            Spacer()
-            if !viewModel.isInNavigationStack {
-                AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
-            }
-            AppButton(style: .fill(viewModel.utility.buttonText, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
-                .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
-        }
-        .padding(.top, viewModel.isInNavigationStack ? 32 : 16)
     }
 
     @ViewBuilder

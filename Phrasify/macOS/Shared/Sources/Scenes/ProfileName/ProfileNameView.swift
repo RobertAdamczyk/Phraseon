@@ -15,22 +15,20 @@ struct ProfileNameView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 0) {
-                ScrollView(showsIndicators: false) {
-                    VStack(spacing: 16) {
-                        AppTextField(type: .name, text: $viewModel.name)
-                            .focused($focusedTextField, equals: .name)
-                        AppTextField(type: .surname, text: $viewModel.surname)
-                            .focused($focusedTextField, equals: .surname)
-                    }
-                    .padding(16)
-                }
-                HStack(spacing: 16) {
-                    Spacer()
-                    AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCancelButtonTapped))
-                    AppButton(style: .fill(viewModel.utility.saveButtonTitle, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 16) {
+                    AppTextField(type: .name, text: $viewModel.name)
+                        .focused($focusedTextField, equals: .name)
+                    AppTextField(type: .surname, text: $viewModel.surname)
+                        .focused($focusedTextField, equals: .surname)
                 }
                 .padding(16)
+                .padding(.bottom, ActionBottomBarConstants.height)
+            }
+            .makeActionBottomBar(padding: .small) {
+                Spacer()
+                AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCancelButtonTapped))
+                AppButton(style: .fill(viewModel.utility.saveButtonTitle, .lightBlue), action: .async(viewModel.onPrimaryButtonTapped))
             }
             .navigationTitle(viewModel.utility.navigationTitle)
         }

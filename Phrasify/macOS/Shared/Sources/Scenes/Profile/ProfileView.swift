@@ -17,41 +17,39 @@ struct ProfileView: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 32) {
-                    ImageView(viewModel: viewModel)
-                    VStack(alignment: .leading, spacing: 32) {
-                        Text("Personal Info")
-                            .apply(.medium, size: .M, color: .lightGray)
-                        makeProfileRow(for: .email, value: viewModel.user.currentValue?.email ?? "-")
-                        Button(action: viewModel.onNameTapped, label: {
-                            makeProfileRow(for: .name, value: viewModel.utility.userName)
-                        })
-                        .buttonStyle(.plain)
-                        Button(action: viewModel.onPasswordTapped, label: {
-                            makeProfileRow(for: .password, value: "********")
-                        })
-                        .buttonStyle(.plain)
-                    }
-                    VStack(alignment: .leading, spacing: 32) {
-                        Text("Subscription")
-                            .apply(.medium, size: .M, color: .lightGray)
-                        Button(action: viewModel.onMembershipTapped, label: {
-                            makeProfileRow(for: .membership, value: viewModel.utility.subscriptionValidUntil)
-                        })
-                        .buttonStyle(.plain)
-                    }
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 32) {
+                ImageView(viewModel: viewModel)
+                VStack(alignment: .leading, spacing: 32) {
+                    Text("Personal Info")
+                        .apply(.medium, size: .M, color: .lightGray)
+                    makeProfileRow(for: .email, value: viewModel.user.currentValue?.email ?? "-")
+                    Button(action: viewModel.onNameTapped, label: {
+                        makeProfileRow(for: .name, value: viewModel.utility.userName)
+                    })
+                    .buttonStyle(.plain)
+                    Button(action: viewModel.onPasswordTapped, label: {
+                        makeProfileRow(for: .password, value: "********")
+                    })
+                    .buttonStyle(.plain)
                 }
-                .padding(32)
-            }
-            HStack(spacing: 16) {
-                Spacer()
-                AppButton(style: .fill("Delete Account", .lightGray), action: .main(viewModel.onDeleteAccountTapped))
-                AppButton(style: .fill("Logout", .lightBlue), action: .main(viewModel.onLogoutTapped))
+                VStack(alignment: .leading, spacing: 32) {
+                    Text("Subscription")
+                        .apply(.medium, size: .M, color: .lightGray)
+                    Button(action: viewModel.onMembershipTapped, label: {
+                        makeProfileRow(for: .membership, value: viewModel.utility.subscriptionValidUntil)
+                    })
+                    .buttonStyle(.plain)
+                }
             }
             .padding(32)
+            .padding(.bottom, ActionBottomBarConstants.height)
         }
+        .makeActionBottomBar(padding: .large, content: {
+            Spacer()
+            AppButton(style: .fill("Delete Account", .lightGray), action: .main(viewModel.onDeleteAccountTapped))
+            AppButton(style: .fill("Logout", .lightBlue), action: .main(viewModel.onLogoutTapped))
+        })
         .opacity(viewModel.utility.shouldShowContent ? 1 : 0)
         .navigationTitle("Profile")
         .disabled(viewModel.utility.shouldInteractionDisabled)

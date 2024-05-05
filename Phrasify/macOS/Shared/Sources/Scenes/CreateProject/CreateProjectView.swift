@@ -22,6 +22,12 @@ struct CreateProjectView: View {
                 content
             }
         }
+        .makeActionBottomBar(padding: .small, content: {
+            Spacer()
+            AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
+            AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped))
+                .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
+        })
         .navigationTitle("Create a new project")
         .applyViewBackground()
         .presentationFrame(.standard)
@@ -34,14 +40,9 @@ struct CreateProjectView: View {
                 AppTextField(type: .projectName, text: $viewModel.projectName)
             }
             Spacer()
-            HStack(spacing: 16) {
-                Spacer()
-                AppButton(style: .fill("Cancel", .lightGray), action: .main(viewModel.onCloseButtonTapped))
-                AppButton(style: .fill("Continue", .lightBlue), action: .main(viewModel.onContinueButtonTapped))
-                    .disabled(viewModel.utility.shouldPrimaryButtonDisabled)
-            }
         }
         .padding(16)
+        .padding(.bottom, ActionBottomBarConstants.height)
     }
 }
 
