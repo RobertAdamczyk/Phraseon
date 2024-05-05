@@ -1,0 +1,88 @@
+%PDF-1.7
+
+1 0 obj
+  << /Length 2 0 R
+     /Range [ 0.000000 1.000000 0.000000 1.000000 0.000000 1.000000 ]
+     /Domain [ 0.000000 1.000000 ]
+     /FunctionType 4
+  >>
+stream
+{  0.180392 exch 0.180392 exch 0.180392 exch dup 0.000000 gt { exch pop exch pop exch pop dup 0.000000 sub -0.027451 mul 0.180392 add exch dup 0.000000 sub -0.027451 mul 0.180392 add exch dup 0.000000 sub -0.027451 mul 0.180392 add exch } if dup 0.579932 gt { exch pop exch pop exch pop dup 0.579932 sub -0.027451 mul 0.164472 add exch dup 0.579932 sub -0.027451 mul 0.164472 add exch dup 0.579932 sub -0.027451 mul 0.164472 add exch } if dup 1.000000 gt { exch pop exch pop exch pop 0.152941 exch 0.152941 exch 0.152941 exch } if pop }
+endstream
+endobj
+
+2 0 obj
+  536
+endobj
+
+3 0 obj
+  << /Pattern << /P1 << /Matrix [ 0.000000 -1024.000000 1024.000000 0.000000 -1024.000000 1024.000000 ]
+                        /Shading << /Coords [ 0.000000 0.000000 1.000000 0.000000 ]
+                                    /ColorSpace /DeviceRGB
+                                    /Function 1 0 R
+                                    /Domain [ 0.000000 1.000000 ]
+                                    /ShadingType 2
+                                    /Extend [ true true ]
+                                 >>
+                        /PatternType 2
+                        /Type /Pattern
+                     >> >> >>
+endobj
+
+4 0 obj
+  << /Filter /FlateDecode
+     /Length 5 0 R
+  >>
+stream
+x•”ÍT!…÷<kiª
+(Øª‰ÛQŸÀÜŒÑ¤{‰Ïï¹ôª3½pH']÷õ§Om_?ğ¿¹ÓúÚİoG!öáã0ŞOëõÜ4¶‹;=|yyüó´ëœÈ?oOnÎSä4ì‹³_Ö>ßÌÌÍç¥3Ãì³ûé~¸'÷åCŒeÊ œ¹"¹V†‘c«1İF–cæÅP‘P(q®9HÍZÄç<—æµrÁÍİÅg§ÚÅ$[Lq-^§Yº<ÛXÃ‡µç{~~&öë¸9¹öLÃz;³;dî„Ó8æpÄDKc3Ù[¿¹ Iå‰‚ÆP„Dw¿åìÑµ\*<İŠµ+±vj^\N¡EU¢EC„P/#qdJU¹&ßB¬œjC02“{Bm*·¼Ï%”œ ¼P‚A‚±uA>™v/„ÍUjñT‚$*±z­cVÊØ²œáĞZcQCÑV–l)Ò€?Œƒ‰”Wl/.4ïPhŞR"ÍÇ~Ir°ÌCsß³X×¤¢±Ğ•ÆLm_)"©`Og;»%CE+â4˜PCücx"˜‰PĞšëƒÄâ¨ìP3Â,¨qÆ	{‡¿±Ô=ë©!™ƒ+¬Gçt¼§k`MÇZŒ+ÄbêÀ°Ø–æÀ¥@A^-ëm‡œ²…›[½e0ŞÙ†Ïvåœû4%Ã4%Óí¬Ğ¯JH‚iwnûñò¢¨ıJqò‘cÒ˜Uêw¯T@	í†Ë
+Wû-<î|ĞVñó¨-îœâÚaóĞGVWD#àšEQJ7œ…§™ğF]zÓL†+ŞšÂµ`Å1.&Úöwï]øşÕ€|2
+endstream
+endobj
+
+5 0 obj
+  639
+endobj
+
+6 0 obj
+  << /Annots []
+     /Type /Page
+     /MediaBox [ 0.000000 0.000000 1024.000000 1024.000000 ]
+     /Resources 3 0 R
+     /Contents 4 0 R
+     /Parent 7 0 R
+  >>
+endobj
+
+7 0 obj
+  << /Kids [ 6 0 R ]
+     /Count 1
+     /Type /Pages
+  >>
+endobj
+
+8 0 obj
+  << /Pages 7 0 R
+     /Type /Catalog
+  >>
+endobj
+
+xref
+0 9
+0000000000 65535 f
+0000000010 00000 n
+0000000730 00000 n
+0000000752 00000 n
+0000001386 00000 n
+0000002109 00000 n
+0000002131 00000 n
+0000002308 00000 n
+0000002382 00000 n
+trailer
+<< /ID [ (some) (id) ]
+   /Root 8 0 R
+   /Size 9
+>>
+startxref
+2441
+%%EOF

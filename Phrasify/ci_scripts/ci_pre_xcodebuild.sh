@@ -17,9 +17,13 @@ if [ ! -z "$CI_TEST_DESTINATION_RUNTIME" ]; then
     exit 0
 fi
 
-FOLDER_NAME=$(echo "$CI_XCODE_SCHEME" | sed "s/_$CI_PRODUCT_PLATFORM//")
+# Add "_Live" to CI_PRODUCT for live builds.
+if [[ "$CI_PRODUCT" == "Phraseon" ]]; then
+    CI_PRODUCT="${CI_PRODUCT}_Live"
+fi
+
 # Write a JSON File containing all the environment variables and secrets.
-secretsFilePath="../$CI_PRODUCT_PLATFORM/$FOLDER_NAME/Resources/secrets.json"
+secretsFilePath="../$CI_PRODUCT_PLATFORM/$CI_PRODUCT/Resources/secrets.json"
 printf "{\"ALGOLIA_APP_ID\":\"%s\",\"ALGOLIA_SEARCH_KEY\":\"%s\"}" "$ALGOLIA_APP_ID" "$ALGOLIA_SEARCH_KEY" >> "$secretsFilePath"
 
 # Check if the file was created

@@ -20,6 +20,12 @@ extension RootCoordinator {
                 } else if rootCoordinator.isLoggedIn == false {
                     StartCoordinator.RootView(coordinator: rootCoordinator)
                 }
+                if let updateInfo = rootCoordinator.updateInfo {
+                    AppUpdateView(title: updateInfo.title,
+                                  message: updateInfo.message,
+                                  confirmButtonText: updateInfo.confirmButtonText,
+                                  url: updateInfo.url)
+                }
             }
         }
     }

@@ -9,8 +9,8 @@ import Foundation
 
 public enum Target: String {
 
-    case live = "Phraseon_Live_iOS.app"
-    case inHouse = "Phraseon_InHouse_iOS.app"
-    case inHouseMacOS = "Phraseon_InHouse_macOS.app"
-    case liveMacOS = "Phraseon_Live_macOS.app"
+    case live = "Phraseon_Live_iOS"
+    case inHouse = "Phraseon_InHouse_iOS"
+    case inHouseMacOS = "Phraseon_InHouse_macOS"
+    case liveMacOS = "Phraseon_Live_macOS"
 }
