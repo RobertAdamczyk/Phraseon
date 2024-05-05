@@ -931,7 +931,7 @@
 		555459082B854D8300DA097F /* PhraseonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhraseonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		555459132B854FD600DA097F /* StartViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModelTest.swift; sourceTree = "<group>"; };
 		555459152B8551DE00DA097F /* MockDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDependencies.swift; sourceTree = "<group>"; };
-		555CC39D2BE6E515008AC1B5 /* Phraseon_Live_MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon_Live_MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		555CC39D2BE6E515008AC1B5 /* Phraseon_Live_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon_Live_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555CC3A22BE6E627008AC1B5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555CC3A42BE6E675008AC1B5 /* InfoSecrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InfoSecrets.plist; sourceTree = "<group>"; };
 		555CC3A62BE6E6E6008AC1B5 /* secrets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
@@ -1049,7 +1049,7 @@
 		55DFE4302BA0E3D700061962 /* ChangePasswordViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModelTest.swift; sourceTree = "<group>"; };
 		55DFE4322BA0F28B00061962 /* ProfileDeleteWarningViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeleteWarningViewModelTest.swift; sourceTree = "<group>"; };
 		55DFE4342BA0F4B300061962 /* MockCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCloudRepository.swift; sourceTree = "<group>"; };
-		55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon_InHouse_MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phraseon_InHouse_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DFE43C2BA0FE1900061962 /* PhraseonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseonApp.swift; sourceTree = "<group>"; };
 		55DFE4432BA0FE1C00061962 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		55DFE4452BA0FE1C00061962 /* Phraseon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phraseon.entitlements; sourceTree = "<group>"; };
@@ -1381,8 +1381,8 @@
 				552785BE2B27A5120098FE95 /* Phraseon_Live_iOS.app */,
 				55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse_iOS.app */,
 				555459082B854D8300DA097F /* PhraseonTests.xctest */,
-				55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_MacOS.app */,
-				555CC39D2BE6E515008AC1B5 /* Phraseon_Live_MacOS.app */,
+				55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_macOS.app */,
+				555CC39D2BE6E515008AC1B5 /* Phraseon_Live_macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2823,9 +2823,9 @@
 			productReference = 555459082B854D8300DA097F /* PhraseonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		555CC2DA2BE6E515008AC1B5 /* Phraseon_Live_MacOS */ = {
+		555CC2DA2BE6E515008AC1B5 /* Phraseon_Live_macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 555CC39A2BE6E515008AC1B5 /* Build configuration list for PBXNativeTarget "Phraseon_Live_MacOS" */;
+			buildConfigurationList = 555CC39A2BE6E515008AC1B5 /* Build configuration list for PBXNativeTarget "Phraseon_Live_macOS" */;
 			buildPhases = (
 				555CC2E82BE6E515008AC1B5 /* Sources */,
 				555CC3842BE6E515008AC1B5 /* Frameworks */,
@@ -2835,7 +2835,7 @@
 			);
 			dependencies = (
 			);
-			name = Phraseon_Live_MacOS;
+			name = Phraseon_Live_macOS;
 			packageProductDependencies = (
 				555CC2DB2BE6E515008AC1B5 /* Common */,
 				555CC2DC2BE6E515008AC1B5 /* Domain */,
@@ -2848,7 +2848,7 @@
 				555CC2E62BE6E515008AC1B5 /* CachedAsyncImage */,
 			);
 			productName = Phraseon_InHouse_MacOS;
-			productReference = 555CC39D2BE6E515008AC1B5 /* Phraseon_Live_MacOS.app */;
+			productReference = 555CC39D2BE6E515008AC1B5 /* Phraseon_Live_macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse_iOS */ = {
@@ -2886,9 +2886,9 @@
 			productReference = 55C278FC2B2A3F3A005144F1 /* Phraseon_InHouse_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		55DFE4392BA0FE1900061962 /* Phraseon_InHouse_MacOS */ = {
+		55DFE4392BA0FE1900061962 /* Phraseon_InHouse_macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55DFE4462BA0FE1C00061962 /* Build configuration list for PBXNativeTarget "Phraseon_InHouse_MacOS" */;
+			buildConfigurationList = 55DFE4462BA0FE1C00061962 /* Build configuration list for PBXNativeTarget "Phraseon_InHouse_macOS" */;
 			buildPhases = (
 				55DFE4362BA0FE1900061962 /* Sources */,
 				55DFE4372BA0FE1900061962 /* Frameworks */,
@@ -2898,7 +2898,7 @@
 			);
 			dependencies = (
 			);
-			name = Phraseon_InHouse_MacOS;
+			name = Phraseon_InHouse_macOS;
 			packageProductDependencies = (
 				55EC29B42BA26B8F003D6F4C /* Common */,
 				55EC29B62BA26B8F003D6F4C /* Domain */,
@@ -2911,7 +2911,7 @@
 				55CB62A82BBB63CB00A879C3 /* CachedAsyncImage */,
 			);
 			productName = Phraseon_InHouse_MacOS;
-			productReference = 55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_MacOS.app */;
+			productReference = 55DFE43A2BA0FE1900061962 /* Phraseon_InHouse_macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2959,8 +2959,8 @@
 			targets = (
 				552785BD2B27A5120098FE95 /* Phraseon_Live_iOS */,
 				55C278DB2B2A3F3A005144F1 /* Phraseon_InHouse_iOS */,
-				55DFE4392BA0FE1900061962 /* Phraseon_InHouse_MacOS */,
-				555CC2DA2BE6E515008AC1B5 /* Phraseon_Live_MacOS */,
+				55DFE4392BA0FE1900061962 /* Phraseon_InHouse_macOS */,
+				555CC2DA2BE6E515008AC1B5 /* Phraseon_Live_macOS */,
 				555459072B854D8300DA097F /* PhraseonTests */,
 			);
 		};
@@ -4275,7 +4275,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		555CC39A2BE6E515008AC1B5 /* Build configuration list for PBXNativeTarget "Phraseon_Live_MacOS" */ = {
+		555CC39A2BE6E515008AC1B5 /* Build configuration list for PBXNativeTarget "Phraseon_Live_macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				555CC39B2BE6E515008AC1B5 /* Debug */,
@@ -4293,7 +4293,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55DFE4462BA0FE1C00061962 /* Build configuration list for PBXNativeTarget "Phraseon_InHouse_MacOS" */ = {
+		55DFE4462BA0FE1C00061962 /* Build configuration list for PBXNativeTarget "Phraseon_InHouse_macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55DFE4472BA0FE1C00061962 /* Debug */,
