@@ -8,6 +8,8 @@
 import Foundation
 import FirebaseFirestoreSwift
 
+public typealias ProjectID = String
+
 public struct Project: Codable, Hashable {
 
     @DocumentID public var id: String?

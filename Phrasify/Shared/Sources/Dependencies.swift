@@ -17,4 +17,5 @@ struct Dependencies {
     let userDomain: UserDomain
     let searchRepository: SearchRepository
     let configurationRepository: ConfigurationRepository
+    let localizationSyncRepository: LocalizationSyncRepository
 }

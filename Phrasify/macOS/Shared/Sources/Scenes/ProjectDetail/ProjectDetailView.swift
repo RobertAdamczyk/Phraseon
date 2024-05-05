@@ -56,13 +56,13 @@ struct ProjectDetailView: View {
             .padding(32)
             .padding(.bottom, ActionBottomBarConstants.height)
         }
+        .opacity(viewModel.shouldShowContent ? 1 : 0)
         .makeActionBottomBar(padding: .large, content: {
             syncContent
             Spacer()
             AppButton(style: .fill("Add phrase", .lightBlue), action: .main(viewModel.onAddButtonTapped))
                 .opacity(viewModel.shouldShowAddButton ? 1 : 0)
         })
-        .opacity(viewModel.shouldShowContent ? 1 : 0)
         .overlay(content: makeNotFoundViewIfNeeded)
         .searchable(text: $viewModel.searchText, isPresented: $viewModel.isSearchPresented)
         .overlay(content: makeLoadingIfNeeded)
@@ -103,6 +103,7 @@ struct ProjectDetailView: View {
         if case .loading = viewModel.state {
             LoadingDotsView()
                 .frame(height: 200)
+                .padding(.bottom, ActionBottomBarConstants.height)
                 .ignoresSafeArea()
         }
     }
@@ -113,6 +114,7 @@ struct ProjectDetailView: View {
             ContentUnavailableView("Currently there are no phrases",
                                    systemImage: "nosign",
                                    description: Text("Add your first phrase."))
+            .padding(.bottom, ActionBottomBarConstants.height)
             .ignoresSafeArea()
         }
     }
@@ -121,6 +123,7 @@ struct ProjectDetailView: View {
     private func makeNotFoundViewIfNeeded() -> some View {
         if case .notFound = viewModel.state {
             ContentUnavailableView.search
+                .padding(.bottom, ActionBottomBarConstants.height)
                 .ignoresSafeArea()
         }
     }
@@ -131,6 +134,7 @@ struct ProjectDetailView: View {
             ContentUnavailableView("Error Occurred",
                                    systemImage: "exclamationmark.circle.fill",
                                    description: Text("Unable to load data. Please try again."))
+            .padding(.bottom, ActionBottomBarConstants.height)
             .ignoresSafeArea()
         }
     }
