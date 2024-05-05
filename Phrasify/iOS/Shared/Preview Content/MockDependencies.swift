@@ -18,7 +18,8 @@ struct MockDependencies {
                                                   userDomain: .init(firestoreRepository: PreviewFirestoreRepository(),
                                                                     authenticationRepository: PreviewAuthenticationRepository()),
                                                   searchRepository: PreviewSearchRepository(),
-                                                  configurationRepository: PreviewConfigurationRepository())
+                                                  configurationRepository: PreviewConfigurationRepository(),
+                                                  localizationSyncRepository: PreviewLocalizationSyncRepository())
 
     static func makeDependencies(authenticationRepository: AuthenticationRepository = PreviewAuthenticationRepository(),
                                  firestoreRepository: FirestoreRepository = PreviewFirestoreRepository(),
@@ -26,7 +27,8 @@ struct MockDependencies {
                                  storageRepository: StorageRepository = PreviewStorageRepository(),
                                  storeKitRepository: StoreKitRepository = PreviewStoreKitRepository(),
                                  searchRepository: SearchRepository = PreviewSearchRepository(),
-                                 configurationRepository: ConfigurationRepository = PreviewConfigurationRepository()) -> Dependencies {
+                                 configurationRepository: ConfigurationRepository = PreviewConfigurationRepository(),
+                                 localizationSyncRepository: LocalizationSyncRepository = PreviewLocalizationSyncRepository()) -> Dependencies {
         return .init(authenticationRepository: authenticationRepository,
                      firestoreRepository: firestoreRepository,
                      cloudRepository: cloudRepository,
@@ -34,6 +36,7 @@ struct MockDependencies {
                      storeKitRepository: storeKitRepository,
                      userDomain: .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository),
                      searchRepository: searchRepository,
-                     configurationRepository: configurationRepository)
+                     configurationRepository: configurationRepository,
+                     localizationSyncRepository: localizationSyncRepository)
     }
 }

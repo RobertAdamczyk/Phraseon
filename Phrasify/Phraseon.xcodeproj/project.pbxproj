@@ -24,6 +24,9 @@
 		550359CA2BE79F8400158D5F /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359C82BE79F8400158D5F /* AppUpdateHandler.swift */; };
 		550359CB2BE79F8400158D5F /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359C82BE79F8400158D5F /* AppUpdateHandler.swift */; };
 		550359CC2BE79F8400158D5F /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359C82BE79F8400158D5F /* AppUpdateHandler.swift */; };
+		550359CE2BE80AA400158D5F /* PreviewLocalizationSyncRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359CD2BE80AA400158D5F /* PreviewLocalizationSyncRepository.swift */; };
+		550359CF2BE80AA400158D5F /* PreviewLocalizationSyncRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359CD2BE80AA400158D5F /* PreviewLocalizationSyncRepository.swift */; };
+		550359D22BE80AA400158D5F /* PreviewLocalizationSyncRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359CD2BE80AA400158D5F /* PreviewLocalizationSyncRepository.swift */; };
 		5505378A2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		5505378B2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		550537912B44C0170077912D /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537902B44C0170077912D /* PhotoPickerView.swift */; };
@@ -841,6 +844,7 @@
 		5502D9372B868B2800A0B110 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		550359C22BE79F5D00158D5F /* AppUpdateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUpdateView.swift; sourceTree = "<group>"; };
 		550359C82BE79F8400158D5F /* AppUpdateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateHandler.swift; sourceTree = "<group>"; };
+		550359CD2BE80AA400158D5F /* PreviewLocalizationSyncRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLocalizationSyncRepository.swift; sourceTree = "<group>"; };
 		550537892B4492670077912D /* NavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActions.swift; sourceTree = "<group>"; };
 		550537902B44C0170077912D /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		550537932B44C0270077912D /* PhotoPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerHandler.swift; sourceTree = "<group>"; };
@@ -1416,6 +1420,7 @@
 				555458FB2B85483000DA097F /* PreviewStoreKitRepository.swift */,
 				555458FE2B854A4D00DA097F /* PreviewSearchRepository.swift */,
 				555459012B854B0600DA097F /* PreviewConfigurationRepository.swift */,
+				550359CD2BE80AA400158D5F /* PreviewLocalizationSyncRepository.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -3089,6 +3094,7 @@
 				55DE102A2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				55E4FB5E2BB6AB7600D6D6DA /* SelectLanguageViewModel+Utility.swift in Sources */,
 				5516EBBC2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
+				550359CE2BE80AA400158D5F /* PreviewLocalizationSyncRepository.swift in Sources */,
 				55DE10232B48D016001CB87F /* ProjectMembersView.swift in Sources */,
 				5505C7F02B55E6D800806B4F /* StandardWarningView.swift in Sources */,
 				5580744E2B2E341B0041160B /* ActivityView.swift in Sources */,
@@ -3281,6 +3287,7 @@
 				559F29CD2BC160B500384CDC /* PreviewStoreKitRepository.swift in Sources */,
 				55D63DEF2B87F2E80002DAE3 /* ForgetPasswordViewModelTest.swift in Sources */,
 				559F29E12BC161E000384CDC /* ProjectDetailActions.swift in Sources */,
+				550359D22BE80AA400158D5F /* PreviewLocalizationSyncRepository.swift in Sources */,
 				559F29E32BC161F400384CDC /* PasswordValidationHandler.swift in Sources */,
 				559F2A232BC2833400384CDC /* ChangePasswordViewModel+Utility.swift in Sources */,
 				559F29BF2BC15FDC00384CDC /* Coordinator.swift in Sources */,
@@ -3496,6 +3503,7 @@
 				55DE102B2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				55E4FB5F2BB6AB7600D6D6DA /* SelectLanguageViewModel+Utility.swift in Sources */,
 				5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
+				550359CF2BE80AA400158D5F /* PreviewLocalizationSyncRepository.swift in Sources */,
 				55DE10242B48D016001CB87F /* ProjectMembersView.swift in Sources */,
 				5505C7F12B55E6D800806B4F /* StandardWarningView.swift in Sources */,
 				55C278DE2B2A3F3A005144F1 /* AppColor.swift in Sources */,

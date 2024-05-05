@@ -32,6 +32,7 @@ final class RootCoordinator: ObservableObject, Coordinator {
         let userDomain: UserDomain = .init(firestoreRepository: firestoreRepository, authenticationRepository: authenticationRepository)
         let searchRepository: SearchRepository = SearchRepositoryImpl()
         let configurationRepository: ConfigurationRepository = ConfigurationRepositoryImpl()
+        let localizationSyncRepository: LocalizationSyncRepository = LocalizationSyncRepositoryImpl()
         dependencies = .init(authenticationRepository: authenticationRepository,
                              firestoreRepository: firestoreRepository,
                              cloudRepository: cloudRepository,
@@ -39,7 +40,8 @@ final class RootCoordinator: ObservableObject, Coordinator {
                              storeKitRepository: storeKitRepository,
                              userDomain: userDomain,
                              searchRepository: searchRepository,
-                             configurationRepository: configurationRepository)
+                             configurationRepository: configurationRepository,
+                             localizationSyncRepository: localizationSyncRepository)
         appUpdateHandler = .init(configurationRepository: configurationRepository)
         setupSubscriptions()
     }
