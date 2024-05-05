@@ -18,18 +18,16 @@ struct AppUpdateView: View {
         ZStack {
             appColor(.black).opacity(0.6).ignoresSafeArea()
             VStack(spacing: 0) {
-                if let image = UIImage(named: "AppIcon") {
-                    Image(uiImage: image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 64)
-                        .clipShape(Circle())
-                        .padding(2)
-                        .background {
-                            Circle()
-                                .fill(appColor(.lightGray))
-                        }
-                }
+                Image(.logo)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 64)
+                    .clipShape(Circle())
+                    .padding(2)
+                    .background {
+                        Circle()
+                            .fill(appColor(.lightGray))
+                    }
                 VStack(spacing: 32) {
                     VStack(spacing: 16) {
                         Text(title)
@@ -41,7 +39,11 @@ struct AppUpdateView: View {
                     VStack(spacing: 16) {
                         AppButton(style: .fill(confirmButtonText, .lightBlue), action: .main({
                             guard let url = URL(string: url) else { return }
+                            #if os(macOS)
+                            NSWorkspace.shared.open(url)
+                            #else
                             UIApplication.shared.open(url)
+                            #endif
                         }))
                     }
                 }
@@ -52,15 +54,3 @@ struct AppUpdateView: View {
         }
     }
 }
-
-#if DEBUG
-#Preview {
-    ZStack {
-        HomeView(coordinator: PreviewCoordinator())
-        AppUpdateView(title: "Beta Finished",
-                      message: "Thank you for beta testing. Please look forward to the final app release!",
-                      confirmButtonText: "Understood",
-                      url: "http://www.google.com")
-    }
-}
-#endif

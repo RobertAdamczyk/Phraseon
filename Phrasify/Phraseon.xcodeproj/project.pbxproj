@@ -16,6 +16,14 @@
 		55028A0E2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */; };
 		5502D9352B868B0300A0B110 /* ci_pre_xcodebuild.sh in Resources */ = {isa = PBXBuildFile; fileRef = 55CADF2D2B7571F800D04365 /* ci_pre_xcodebuild.sh */; };
 		5502D9382B868B2800A0B110 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502D9372B868B2800A0B110 /* LoginViewModelTest.swift */; };
+		550359C42BE79F5D00158D5F /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359C22BE79F5D00158D5F /* AppUpdateView.swift */; };
+		550359C52BE79F5D00158D5F /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359C22BE79F5D00158D5F /* AppUpdateView.swift */; };
+		550359C62BE79F5D00158D5F /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359C22BE79F5D00158D5F /* AppUpdateView.swift */; };
+		550359C72BE79F5D00158D5F /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359C22BE79F5D00158D5F /* AppUpdateView.swift */; };
+		550359C92BE79F8400158D5F /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359C82BE79F8400158D5F /* AppUpdateHandler.swift */; };
+		550359CA2BE79F8400158D5F /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359C82BE79F8400158D5F /* AppUpdateHandler.swift */; };
+		550359CB2BE79F8400158D5F /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359C82BE79F8400158D5F /* AppUpdateHandler.swift */; };
+		550359CC2BE79F8400158D5F /* AppUpdateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550359C82BE79F8400158D5F /* AppUpdateHandler.swift */; };
 		5505378A2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		5505378B2B4492670077912D /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537892B4492670077912D /* NavigationActions.swift */; };
 		550537912B44C0170077912D /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550537902B44C0170077912D /* PhotoPickerView.swift */; };
@@ -117,8 +125,6 @@
 		553722B12B631DC40061CF52 /* ViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722AF2B631DC40061CF52 /* ViewBackground.swift */; };
 		553722B32B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */; };
 		553722B42B631EF20061CF52 /* PaywallView+SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */; };
-		5539D7582B7FD22100BDA216 /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539D7572B7FD22000BDA216 /* AppUpdateView.swift */; };
-		5539D7592B7FD22100BDA216 /* AppUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539D7572B7FD22000BDA216 /* AppUpdateView.swift */; };
 		5539D75B2B8006D900BDA216 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 5539D75A2B8006D900BDA216 /* FirebaseRemoteConfig */; };
 		553B6C912BC4942900C0C7AD /* Member+Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55909A222B58946400A77F21 /* Member+Permissions.swift */; };
 		553B6C922BC4943800C0C7AD /* AlgoliaKey+toKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EC1722B7898D20079E754 /* AlgoliaKey+toKey.swift */; };
@@ -833,6 +839,8 @@
 		55028A082B7EB58F00C786D9 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		55028A0C2B7ECBAA00C786D9 /* AppUpdateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateHandler.swift; sourceTree = "<group>"; };
 		5502D9372B868B2800A0B110 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
+		550359C22BE79F5D00158D5F /* AppUpdateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUpdateView.swift; sourceTree = "<group>"; };
+		550359C82BE79F8400158D5F /* AppUpdateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateHandler.swift; sourceTree = "<group>"; };
 		550537892B4492670077912D /* NavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationActions.swift; sourceTree = "<group>"; };
 		550537902B44C0170077912D /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		550537932B44C0270077912D /* PhotoPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerHandler.swift; sourceTree = "<group>"; };
@@ -887,7 +895,6 @@
 		553722AC2B631DA00061CF52 /* CellBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBackground.swift; sourceTree = "<group>"; };
 		553722AF2B631DC40061CF52 /* ViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBackground.swift; sourceTree = "<group>"; };
 		553722B22B631EF20061CF52 /* PaywallView+SubscriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaywallView+SubscriptionCell.swift"; sourceTree = "<group>"; };
-		5539D7572B7FD22000BDA216 /* AppUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateView.swift; sourceTree = "<group>"; };
 		553F1BCB2B28EF6B0071A099 /* PreviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCoordinator.swift; sourceTree = "<group>"; };
 		553F1BCD2B28FD890071A099 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 		553F1BCF2B28FDD70071A099 /* AppDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDivider.swift; sourceTree = "<group>"; };
@@ -1227,10 +1234,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		55028A0B2B7ECB9800C786D9 /* AppUpdate */ = {
+		550359C32BE79F5D00158D5F /* AppUpdate */ = {
 			isa = PBXGroup;
 			children = (
-				5539D7572B7FD22000BDA216 /* AppUpdateView.swift */,
+				550359C22BE79F5D00158D5F /* AppUpdateView.swift */,
+				550359C82BE79F8400158D5F /* AppUpdateHandler.swift */,
 			);
 			path = AppUpdate;
 			sourceTree = "<group>";
@@ -2076,6 +2084,7 @@
 		55BC7BAF2BA2666D00801465 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				550359C32BE79F5D00158D5F /* AppUpdate */,
 				554A475B2BD527D400A5F248 /* StandardInformationView */,
 				55DE103F2B4ABF8F001CB87F /* UserDetailView */,
 				55EFFE3D2BCC29BA00BD91EA /* StandardWarningView */,
@@ -2131,7 +2140,6 @@
 			isa = PBXGroup;
 			children = (
 				55C278CC2B2A2DA1005144F1 /* AppButton.swift */,
-				55028A0B2B7ECB9800C786D9 /* AppUpdate */,
 				5505C7F52B55EE9700806B4F /* StandardInformationView */,
 				5505C7EE2B55E6CC00806B4F /* StandardWarningView */,
 				55B8414A2B4C9AF3007697AF /* SwipeAction */,
@@ -3074,8 +3082,10 @@
 				55FF428C2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				5505C7F72B55EEAA00806B4F /* StandardInformationView.swift in Sources */,
 				55406C5D2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */,
+				550359C92BE79F8400158D5F /* AppUpdateHandler.swift in Sources */,
 				55C278DA2B2A2F99005144F1 /* AppColor.swift in Sources */,
 				55FE51BA2B5D95BA0084617F /* SelectBaseLanguageViewModel.swift in Sources */,
+				550359C42BE79F5D00158D5F /* AppUpdateView.swift in Sources */,
 				55DE102A2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				55E4FB5E2BB6AB7600D6D6DA /* SelectLanguageViewModel+Utility.swift in Sources */,
 				5516EBBC2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
@@ -3098,7 +3108,6 @@
 				553F1BE32B29080B0071A099 /* LoginViewModel.swift in Sources */,
 				5513C2482B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,
 				55826A942B34D5F100233D90 /* ProjectDetailView.swift in Sources */,
-				5539D7582B7FD22100BDA216 /* AppUpdateView.swift in Sources */,
 				553F1BCC2B28EF6B0071A099 /* PreviewCoordinator.swift in Sources */,
 				5513C24B2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55028A0D2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */,
@@ -3328,6 +3337,7 @@
 				555CC3022BE6E515008AC1B5 /* ChangePasswordView.swift in Sources */,
 				555CC3032BE6E515008AC1B5 /* ProjectSettingsView+SettingsItem.swift in Sources */,
 				555CC3042BE6E515008AC1B5 /* RegisterViewModel.swift in Sources */,
+				550359C72BE79F5D00158D5F /* AppUpdateView.swift in Sources */,
 				555CC3052BE6E515008AC1B5 /* AppDivider.swift in Sources */,
 				555CC3062BE6E515008AC1B5 /* ProjectIntegrationView.swift in Sources */,
 				555CC3072BE6E515008AC1B5 /* LeaveProjectWarningViewModel.swift in Sources */,
@@ -3394,6 +3404,7 @@
 				555CC3442BE6E515008AC1B5 /* KeyDetailView+ApproveButton.swift in Sources */,
 				555CC3452BE6E515008AC1B5 /* SelectMemberRoleViewModel.swift in Sources */,
 				555CC3462BE6E515008AC1B5 /* StartCoordinator.swift in Sources */,
+				550359CC2BE79F8400158D5F /* AppUpdateHandler.swift in Sources */,
 				555CC3472BE6E515008AC1B5 /* ProjectDetailActions.swift in Sources */,
 				555CC3482BE6E515008AC1B5 /* CreateProjectViewModel.swift in Sources */,
 				555CC3492BE6E515008AC1B5 /* LoginView.swift in Sources */,
@@ -3478,8 +3489,10 @@
 				55FF428D2B2BB2DD00F4D523 /* ToastView.swift in Sources */,
 				5505C7F82B55EEAA00806B4F /* StandardInformationView.swift in Sources */,
 				55406C5E2B8B32E700B03E9D /* ProjectDetailActions.swift in Sources */,
+				550359CA2BE79F8400158D5F /* AppUpdateHandler.swift in Sources */,
 				55C278DD2B2A3F3A005144F1 /* SetPasswordView.swift in Sources */,
 				55FE51BB2B5D95BA0084617F /* SelectBaseLanguageViewModel.swift in Sources */,
+				550359C52BE79F5D00158D5F /* AppUpdateView.swift in Sources */,
 				55DE102B2B4A28B0001CB87F /* InviteMemberView.swift in Sources */,
 				55E4FB5F2BB6AB7600D6D6DA /* SelectLanguageViewModel+Utility.swift in Sources */,
 				5516EBBD2B3F33B000C558B1 /* KeysOrder+UI.swift in Sources */,
@@ -3503,7 +3516,6 @@
 				55C278E32B2A3F3A005144F1 /* LoginViewModel.swift in Sources */,
 				5513C2492B325DB1004C1933 /* CreateProjectCoordinator.swift in Sources */,
 				55826A952B34D5F100233D90 /* ProjectDetailView.swift in Sources */,
-				5539D7592B7FD22100BDA216 /* AppUpdateView.swift in Sources */,
 				55C278E42B2A3F3A005144F1 /* PreviewCoordinator.swift in Sources */,
 				5513C24C2B325DEE004C1933 /* CreateProjectCoordinator+RootView.swift in Sources */,
 				55028A0E2B7ECBAA00C786D9 /* AppUpdateHandler.swift in Sources */,
@@ -3662,6 +3674,7 @@
 				559F2A1B2BC282ED00384CDC /* ChangePasswordView.swift in Sources */,
 				557D36592BCC581E0074DA60 /* ProjectSettingsView+SettingsItem.swift in Sources */,
 				55EF44382BAEF9390005ACA5 /* RegisterViewModel.swift in Sources */,
+				550359C62BE79F5D00158D5F /* AppUpdateView.swift in Sources */,
 				553FD28E2BA63DBA00461FEA /* AppDivider.swift in Sources */,
 				55A34D592BDB0EB500854FD9 /* ProjectIntegrationView.swift in Sources */,
 				554A47582BD5274200A5F248 /* LeaveProjectWarningViewModel.swift in Sources */,
@@ -3728,6 +3741,7 @@
 				55EFFE352BC9A09B00BD91EA /* KeyDetailView+ApproveButton.swift in Sources */,
 				55E017A22BD6FE1B008773F7 /* SelectMemberRoleViewModel.swift in Sources */,
 				553FD27B2BA502DC00461FEA /* StartCoordinator.swift in Sources */,
+				550359CB2BE79F8400158D5F /* AppUpdateHandler.swift in Sources */,
 				55EB39352BC88E2700E3FC2E /* ProjectDetailActions.swift in Sources */,
 				55E4FB312BB4E52400D6D6DA /* CreateProjectViewModel.swift in Sources */,
 				553FD2892BA638DD00461FEA /* LoginView.swift in Sources */,
