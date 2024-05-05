@@ -12,21 +12,31 @@ import Model
 
 final class LocalizationSyncManager {
 
-    @AppStorage("selectedTechnology") var selectedTechnology: Technology = .swift
-    @AppStorage("swiftPath") private var swiftPath: String = ""
+    @Published var selectedTechnology: Technology = .swift
+
+    private var projectId: String? {
+        projectUseCase.project.id
+    }
 
     private var keys: [Key] = []
     private let coordinator: ProjectDetailViewModel.ProjectDetailCoordinator
     private let projectUseCase: ProjectUseCase
 
+    private var localizationSyncRepository: LocalizationSyncRepository {
+        coordinator.dependencies.localizationSyncRepository
+    }
+
     init(projectUseCase: ProjectUseCase, coordinator: ProjectDetailViewModel.ProjectDetailCoordinator) {
         self.coordinator = coordinator
         self.projectUseCase = projectUseCase
+        if let projectId, let selectedTechnology = localizationSyncRepository.getSelectedTechnology(for: projectId) {
+            self.selectedTechnology = selectedTechnology
+        }
     }
 
     @MainActor
     func synchronizeKeys() async {
-        guard let projectId = projectUseCase.project.id else { return }
+        guard let projectId else { return }
         do {
             keys = try await coordinator.dependencies.firestoreRepository.getAllKeys(projectId: projectId)
             openPanel()
@@ -45,13 +55,24 @@ final class LocalizationSyncManager {
         openPanel.canChooseDirectories = true
         openPanel.canCreateDirectories = true
         openPanel.allowsMultipleSelection = false
-        openPanel.directoryURL = URL(string: swiftPath)
+        if let projectId, let technologyPathString = localizationSyncRepository.getPath(for: .init(technology: selectedTechnology,
+                                                                                                   projectId: projectId)){
+            openPanel.directoryURL = URL(string: technologyPathString)
+        }
 
         openPanel.begin { [weak self] response in
             if response == .OK {
                 guard let folderURL = openPanel.url else { return }
+                self?.saveUrlIfNeeded(folderURL)
                 self?.saveLocalizationFiles(at: folderURL)
             }
+        }
+    }
+
+    private func saveUrlIfNeeded(_ url: URL) {
+        guard let projectId else { return }
+        if localizationSyncRepository.getPath(for: .init(technology: selectedTechnology, projectId: projectId)) == nil {
+            localizationSyncRepository.setPath(url.absoluteString, for: .init(technology: selectedTechnology, projectId: projectId))
         }
     }
 
