@@ -46,9 +46,15 @@ final class AppUpdateHandler {
         let decoder = JSONDecoder()
         let updates = try? decoder.decode(Updates.self, from: data)
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let platform: String = {
+            switch TargetConfiguration.shared.currentTarget {
+            case .live, .inHouse: return "iOS-"
+            case .inHouseMacOS, .liveMacOS: return "macOS-"
+            }
+        }()
         let testFlightSuffix = Bundle.main.appStoreReceiptURL?.lastPathComponent == "sandboxReceipt" ? "_TF" : ""
 
-        if let appVersion, let updateInfo = updates?[appVersion + testFlightSuffix] {
+        if let appVersion, let updateInfo = updates?[platform + appVersion + testFlightSuffix] {
             self.updateInfo = updateInfo
         } else {
             self.updateInfo = nil
