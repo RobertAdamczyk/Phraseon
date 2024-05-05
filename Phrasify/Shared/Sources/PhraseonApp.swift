@@ -14,7 +14,8 @@ import GoogleSignIn
 struct PhraseonApp: App {
 
     init() {
-        guard let target = Target(rawValue: Bundle.main.bundleURL.lastPathComponent) else { fatalError("Target not found !") }
+        guard let targetName = Bundle.main.infoDictionary?["TargetName"] as? String,
+              let target = Target(rawValue: targetName) else { fatalError("Target not found !") }
         TargetConfiguration.shared.setup(target: target)
         Secrets.shared.setup(path: Bundle.main.path(forResource: "secrets", ofType: "json"))
         configureFirebase()
