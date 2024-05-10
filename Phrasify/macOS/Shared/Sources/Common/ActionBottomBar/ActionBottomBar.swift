@@ -10,10 +10,12 @@ import SwiftUI
 private struct ActionBottomBar<Content: View>: View {
 
     private var padding: ActionBottomBarConstants.Padding
+    private var shouldVisible: Bool
     private var content: Content
 
-    init(padding: ActionBottomBarConstants.Padding, @ViewBuilder content: () -> Content) {
+    init(padding: ActionBottomBarConstants.Padding, shouldVisible: Bool, @ViewBuilder content: () -> Content) {
         self.padding = padding
+        self.shouldVisible = shouldVisible
         self.content = content()
     }
 
@@ -28,14 +30,17 @@ private struct ActionBottomBar<Content: View>: View {
             Rectangle().frame(height: 1)
                 .foregroundStyle(appColor(.black))
         }
+        .opacity(shouldVisible ? 1 : 0)
     }
 }
 
 extension View {
-    func makeActionBottomBar<V>(padding: ActionBottomBarConstants.Padding, @ViewBuilder content: () -> V) -> some View where V : View {
+    func makeActionBottomBar<V>(padding: ActionBottomBarConstants.Padding, 
+                                shouldVisible: Bool = true,
+                                @ViewBuilder content: () -> V) -> some View where V : View {
         self
             .overlay(alignment: .bottom) {
-                ActionBottomBar(padding: padding, content: {
+                ActionBottomBar(padding: padding, shouldVisible: shouldVisible, content: {
                     content()
                 })
             }

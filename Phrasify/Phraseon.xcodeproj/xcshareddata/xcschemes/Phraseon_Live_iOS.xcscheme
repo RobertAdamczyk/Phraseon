@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "552785BD2B27A5120098FE95"
-               BuildableName = "Phraseon_Live_iOS.app"
+               BuildableName = "Phraseon.app"
                BlueprintName = "Phraseon_Live_iOS"
                ReferencedContainer = "container:Phraseon.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "552785BD2B27A5120098FE95"
-            BuildableName = "Phraseon_Live_iOS.app"
+            BuildableName = "Phraseon.app"
             BlueprintName = "Phraseon_Live_iOS"
             ReferencedContainer = "container:Phraseon.xcodeproj">
          </BuildableReference>
@@ -74,7 +74,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "552785BD2B27A5120098FE95"
-            BuildableName = "Phraseon_Live_iOS.app"
+            BuildableName = "Phraseon.app"
             BlueprintName = "Phraseon_Live_iOS"
             ReferencedContainer = "container:Phraseon.xcodeproj">
          </BuildableReference>

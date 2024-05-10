@@ -33,11 +33,9 @@ struct ProjectMembersView: View {
             .padding(32)
             .padding(.bottom, ActionBottomBarConstants.height)
         }
-        .makeActionBottomBar(padding: .large, content: {
-            if viewModel.member?.hasPermissionToManageMembers == true {
-                Spacer()
-                AppButton(style: .fill("Invite member", .lightBlue), action: .main(viewModel.onInviteMemberTapped))
-            }
+        .makeActionBottomBar(padding: .large, shouldVisible: viewModel.member?.hasPermissionToManageMembers == true, content: {
+            Spacer()
+            AppButton(style: .fill("Invite member", .lightBlue), action: .main(viewModel.onInviteMemberTapped))
         })
         .opacity(viewModel.members.isEmpty ? 0 : 1) // It can be deleted when we have loading indicator on this page.
         .navigationTitle("Members")
