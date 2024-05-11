@@ -14,6 +14,7 @@ final class ProjectIntegrationViewModel: ObservableObject {
     typealias ProjectIntegrationCoordinator = Coordinator
 
     @Published var swiftPath: String = ""
+    @Published var kotlinPath: String = ""
 
     var technologies: [Technology] {
         project.technologies
@@ -26,10 +27,15 @@ final class ProjectIntegrationViewModel: ObservableObject {
     init(coordinator: ProjectIntegrationCoordinator, project: Project) {
         self.coordinator = coordinator
         self.project = project
-        if let projectId = project.id,
-           let swiftPath = coordinator.dependencies.localizationSyncRepository.getPath(for: .init(technology: .swift, 
-                                                                                                  projectId: projectId)) {
-            self.swiftPath = swiftPath
+        if let projectId = project.id {
+            if let swiftPath = coordinator.dependencies.localizationSyncRepository.getPath(for: .init(technology: .swift,
+                                                                                                      projectId: projectId)) {
+                self.swiftPath = swiftPath
+            }
+            if let kotlinPath = coordinator.dependencies.localizationSyncRepository.getPath(for: .init(technology: .kotlin,
+                                                                                                       projectId: projectId)) {
+                self.kotlinPath = kotlinPath
+            }
         }
         setupSubscribers()
     }
@@ -49,6 +55,7 @@ final class ProjectIntegrationViewModel: ObservableObject {
             if let url = folderPicker.urls.first, response == .OK {
                 switch technology {
                 case .swift: self?.swiftPath = url.absoluteString
+                case .kotlin: self?.kotlinPath = url.absoluteString
                 }
             }
         }
@@ -59,6 +66,13 @@ final class ProjectIntegrationViewModel: ObservableObject {
         $swiftPath
             .sink { [weak self] path in
                 self?.coordinator.dependencies.localizationSyncRepository.setPath(path, for: .init(technology: .swift, 
+                                                                                                   projectId: projectId))
+            }
+            .store(in: cancelBag)
+
+        $kotlinPath
+            .sink { [weak self] path in
+                self?.coordinator.dependencies.localizationSyncRepository.setPath(path, for: .init(technology: .kotlin,
                                                                                                    projectId: projectId))
             }
             .store(in: cancelBag)
