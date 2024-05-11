@@ -188,6 +188,8 @@
 		554A476C2BD52D1100A5F248 /* ChangeProjectOwnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A476B2BD52D1100A5F248 /* ChangeProjectOwnerView.swift */; };
 		554A476E2BD52D1800A5F248 /* ChangeProjectOwnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A476D2BD52D1800A5F248 /* ChangeProjectOwnerViewModel.swift */; };
 		554ADC002B9BB03C00775842 /* ProfileViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554ADBFF2B9BB03C00775842 /* ProfileViewModelTest.swift */; };
+		555331A42BEEC8ED00BB24B4 /* ProjectDetailView+SyncContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555331A32BEEC8ED00BB24B4 /* ProjectDetailView+SyncContentView.swift */; };
+		555331A52BEEC8ED00BB24B4 /* ProjectDetailView+SyncContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555331A32BEEC8ED00BB24B4 /* ProjectDetailView+SyncContentView.swift */; };
 		555458F02B85422300DA097F /* PreviewAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* PreviewAuthenticationRepository.swift */; };
 		555458F12B85422300DA097F /* PreviewAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458EF2B85422300DA097F /* PreviewAuthenticationRepository.swift */; };
 		555458F32B8542DF00DA097F /* PreviewFirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555458F22B8542DF00DA097F /* PreviewFirestoreRepository.swift */; };
@@ -932,6 +934,7 @@
 		554A476B2BD52D1100A5F248 /* ChangeProjectOwnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerView.swift; sourceTree = "<group>"; };
 		554A476D2BD52D1800A5F248 /* ChangeProjectOwnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProjectOwnerViewModel.swift; sourceTree = "<group>"; };
 		554ADBFF2B9BB03C00775842 /* ProfileViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTest.swift; sourceTree = "<group>"; };
+		555331A32BEEC8ED00BB24B4 /* ProjectDetailView+SyncContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectDetailView+SyncContentView.swift"; sourceTree = "<group>"; };
 		555458EF2B85422300DA097F /* PreviewAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewAuthenticationRepository.swift; sourceTree = "<group>"; };
 		555458F22B8542DF00DA097F /* PreviewFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFirestoreRepository.swift; sourceTree = "<group>"; };
 		555458F52B8543C000DA097F /* PreviewCloudRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCloudRepository.swift; sourceTree = "<group>"; };
@@ -2610,6 +2613,7 @@
 			isa = PBXGroup;
 			children = (
 				55EF97112BC7348900330D00 /* ProjectDetailView.swift */,
+				555331A32BEEC8ED00BB24B4 /* ProjectDetailView+SyncContentView.swift */,
 			);
 			path = ProjectDetail;
 			sourceTree = "<group>";
@@ -3444,6 +3448,7 @@
 				555CC3642BE6E515008AC1B5 /* ProjectMembersView.swift in Sources */,
 				555CC3652BE6E515008AC1B5 /* AppButton.swift in Sources */,
 				555CC3662BE6E515008AC1B5 /* SelectTechnologyView.swift in Sources */,
+				555331A52BEEC8ED00BB24B4 /* ProjectDetailView+SyncContentView.swift in Sources */,
 				555CC3672BE6E515008AC1B5 /* PhotoPickerHandler.swift in Sources */,
 				555CC3682BE6E515008AC1B5 /* SelectTechnologyViewModel+Context.swift in Sources */,
 				555CC3692BE6E515008AC1B5 /* LoadingDotsView.swift in Sources */,
@@ -3782,6 +3787,7 @@
 				554A47502BD3CC6100A5F248 /* ProjectMembersView.swift in Sources */,
 				55EFFE382BCA8FBD00BD91EA /* AppButton.swift in Sources */,
 				55E4FB462BB5DC9D00D6D6DA /* SelectTechnologyView.swift in Sources */,
+				555331A42BEEC8ED00BB24B4 /* ProjectDetailView+SyncContentView.swift in Sources */,
 				559949112BD9B4F0002F0DB0 /* PhotoPickerHandler.swift in Sources */,
 				55E4FB522BB6047B00D6D6DA /* SelectTechnologyViewModel+Context.swift in Sources */,
 				5530A52C2BACE40A00B6B9D3 /* LoadingDotsView.swift in Sources */,

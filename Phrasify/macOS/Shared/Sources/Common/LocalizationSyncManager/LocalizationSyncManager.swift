@@ -9,10 +9,20 @@ import Foundation
 import SwiftUI
 import Domain
 import Model
+import Common
 
-final class LocalizationSyncManager {
+final class LocalizationSyncManager: ObservableObject {
 
-    @Published var selectedTechnology: Technology = .swift
+    @Published var selectedTechnology: Technology?
+    @Published var project: Project
+
+    var shouldSyncButtonDisabled: Bool {
+        selectedTechnology == nil
+    }
+
+    var technologies: [Technology] {
+        project.technologies
+    }
 
     private var projectId: String? {
         projectUseCase.project.id
@@ -21,6 +31,7 @@ final class LocalizationSyncManager {
     private var keys: [Key] = []
     private let coordinator: ProjectDetailViewModel.ProjectDetailCoordinator
     private let projectUseCase: ProjectUseCase
+    private let cancelBag = CancelBag()
 
     private var localizationSyncRepository: LocalizationSyncRepository {
         coordinator.dependencies.localizationSyncRepository
@@ -29,9 +40,10 @@ final class LocalizationSyncManager {
     init(projectUseCase: ProjectUseCase, coordinator: ProjectDetailViewModel.ProjectDetailCoordinator) {
         self.coordinator = coordinator
         self.projectUseCase = projectUseCase
-        if let projectId, let selectedTechnology = localizationSyncRepository.getSelectedTechnology(for: projectId) {
-            self.selectedTechnology = selectedTechnology
-        }
+        self.project = projectUseCase.project
+        projectUseCase.$project.assign(to: &$project)
+        setupSelectedTechnologySubscriber()
+        setupProjectSubscriber()
     }
 
     @MainActor
@@ -46,6 +58,32 @@ final class LocalizationSyncManager {
         }
     }
 
+    private func setupSelectedTechnologySubscriber() {
+        guard let projectId = project.id else { return }
+        $selectedTechnology
+            .sink { [weak self] technology in
+                guard let technology else { return }
+                self?.coordinator.dependencies.localizationSyncRepository.setSelectedTechnology(technology, for: projectId)
+            }
+            .store(in: cancelBag)
+    }
+
+    private func setupProjectSubscriber() {
+        $project
+            .sink { [weak self] project in
+                DispatchQueue.main.async { [weak self] in
+                    guard let self else { return }
+                    if let projectId, let selectedTechnology = localizationSyncRepository.getSelectedTechnology(for: projectId),
+                       technologies.contains(selectedTechnology) {
+                        self.selectedTechnology = selectedTechnology
+                    } else {
+                        self.selectedTechnology = nil
+                    }
+                }
+            }
+            .store(in: cancelBag)
+    }
+
     @MainActor
     private func openPanel() {
         let openPanel = NSOpenPanel()
@@ -55,8 +93,9 @@ final class LocalizationSyncManager {
         openPanel.canChooseDirectories = true
         openPanel.canCreateDirectories = true
         openPanel.allowsMultipleSelection = false
-        if let projectId, let technologyPathString = localizationSyncRepository.getPath(for: .init(technology: selectedTechnology,
-                                                                                                   projectId: projectId)){
+        if let projectId, let selectedTechnology,
+           let technologyPathString = localizationSyncRepository.getPath(for: .init(technology: selectedTechnology,
+                                                                                    projectId: projectId)){
             openPanel.directoryURL = URL(string: technologyPathString)
         }
 
@@ -70,15 +109,17 @@ final class LocalizationSyncManager {
     }
 
     private func saveUrlIfNeeded(_ url: URL) {
-        guard let projectId else { return }
+        guard let projectId, let selectedTechnology else { return }
         if localizationSyncRepository.getPath(for: .init(technology: selectedTechnology, projectId: projectId)) == nil {
             localizationSyncRepository.setPath(url.absoluteString, for: .init(technology: selectedTechnology, projectId: projectId))
         }
     }
 
     private func saveLocalizationFiles(at folderURL: URL) {
+        guard let selectedTechnology else { return }
         switch selectedTechnology {
         case .swift: saveLocalizationSwiftFiles(at: folderURL)
+        case .kotlin: saveLocalizationKotlinFiles(at: folderURL)
         }
     }
 
@@ -106,6 +147,43 @@ final class LocalizationSyncManager {
                     }
                     return partialResult
                 }
+
+                try content.write(to: fileURL, atomically: true, encoding: .utf8)
+            } catch {
+                ToastView.showGeneralError()
+            }
+        }
+    }
+
+    private func saveLocalizationKotlinFiles(at folderURL: URL) {
+        let languages = projectUseCase.project.languages
+        let baseLanguage = projectUseCase.project.baseLanguage
+        for lang in languages {
+            let localeFolderName = {
+                if lang == baseLanguage {
+                    return "values"
+                }
+                switch lang {
+                case .english: return "values-en"
+                case .portugueseEuropean: return "values-pt"
+                case .portugueseBrazilian: return "values-rBR"
+                case .mandarinChineseSimplified: return "values-zh-rCN"
+                default: return "values-\(lang.rawValue.lowercased())"
+                }
+            }()
+            let localeFolderURL = folderURL.appendingPathComponent(localeFolderName, isDirectory: true)
+
+            do {
+                try FileManager.default.createDirectory(at: localeFolderURL, withIntermediateDirectories: true, attributes: nil)
+                let fileURL = localeFolderURL.appendingPathComponent("strings.xml")
+
+                // Create the content of the strings.xml file for the current language
+                let content = keys.reduce("<resources>\n") { partialResult, key in
+                    if let translation = key.translation[lang.rawValue], let keyId = key.id {
+                        return partialResult + "    <string name=\"\(keyId)\">\(translation)</string>\n"
+                    }
+                    return partialResult
+                } + "</resources>\n"
 
                 try content.write(to: fileURL, atomically: true, encoding: .utf8)
             } catch {

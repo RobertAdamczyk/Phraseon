@@ -13,7 +13,7 @@ extension Technology {
     var title: String {
         switch self {
         case .swift: "Swift"
-        // case .kotlin: "Kotlin"
+        case .kotlin: "Kotlin"
         }
     }
 }

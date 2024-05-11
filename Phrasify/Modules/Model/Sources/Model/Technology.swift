@@ -9,5 +9,5 @@ import Foundation
 
 public enum Technology: String, CaseIterable, Codable {
     case swift = "SWIFT"
-    // case kotlin = "KOTLIN"
+    case kotlin = "KOTLIN"
 }
